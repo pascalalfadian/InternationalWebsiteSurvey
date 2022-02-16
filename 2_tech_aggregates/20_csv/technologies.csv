@@ -1,0 +1,2459 @@
+app,num_unversioned,num_versioned
+jQuery,106411,10512137
+WordPress,3029169,5466896
+core-js,61841,5305290
+jQuery Migrate,215585,4018209
+Yoast SEO,971324,3288197
+Bootstrap,895283,3244569
+jQuery UI,61580,2880877
+Facebook Pixel,85103,2532888
+PHP,4823834,2446033
+Nginx,6136571,1385151
+Modernizr,319590,1379389
+WooCommerce,202626,1354584
+Contact Form 7,435873,1184676
+Lodash,60580,1134882
+FancyBox,32854,992342
+Apache,2806965,927993
+Revslider,187396,858168
+Site Kit,0,701810
+IIS,354771,640750
+Underscore.js,137444,608357
+Moment.js,56712,576324
+styled-components,4386,452654
+Elementor,185536,430844
+MonsterInsights,168396,426584
+MediaElement.js,78,415633
+GSAP,472335,407044
+Microsoft ASP.NET,561866,358518
+Polyfill,0,349582
+React,721292,318106
+Google PageSpeed,10323,302160
+Hammer.js,41205,296574
+WebToffee GDPR Cookie Consent,56916,296223
+RequireJS,26957,266430
+OpenSSL,0,243646
+Typekit,159706,215734
+Handlebars,18539,206212
+YUI,516,189467
+ExactMetrics,60770,185054
+Yoast SEO Premium,2,183789
+Drupal,54659,181498
+All in One SEO Pack,0,178536
+Autoptimize,7994,172752
+ZURB Foundation,85894,169485
+Backbone.js,32492,164455
+Gravity Forms,63964,161464
+Vue.js,213306,160488
+AngularJS,12646,151870
+Mustache,1446,144166
+Cookie Notice,19458,142538
+Complianz,108,142482
+MooTools,1919,139216
+jQuery Mobile,11191,136534
+MailChimp for WordPress,95658,132836
+Popper,491,131930
+Extendify,0,131762
+DataTables,5664,129473
+Facebook Chat Plugin,26048,128852
+FingerprintJS,43502,122476
+Squarespace,386,122022
+Squarespace Commerce,334,122022
+Divi,303314,112600
+Google Tag Manager for WordPress,25603,106823
+Varnish,221529,105959
+Astra,26973,101101
+JivoChat,4523,98676
+Angular,6665,91101
+VideoJS,51158,90041
+Firebase,1837,84873
+AddToAny Share Buttons,9395,82754
+WPMU DEV Smush,8903,79946
+Slick,924030,79509
+Stripe,6525,77660
+anime.js,0,76950
+WPForms,16596,76703
+MailChimp for WooCommerce,7856,75753
+Leaflet,31844,73620
+Livefyre,30017,73620
+Prototype,7615,73418
+Magento,36936,70847
+Dojo,6772,70313
+Hello Elementor,3042,70236
+Kakao,18201,70132
+Responsive Lightbox & Gallery,25040,67462
+W3 Total Cache,313954,66450
+Flywheel,0,65556
+Sentry,417402,65274
+Histats,1871,60895
+GeneratePress,6426,59974
+NextGEN Gallery,920,57294
+Browser-Update.org,5330,55254
+WooCommerce Multilingual,7264,54798
+Photo Gallery,15474,47626
+SiteOrigin Page Builder,54462,46542
+Gatsby,1632,45896
+Adobe Target,720,45150
+ProfilePress,9109,44759
+EmbedPlus,4907,42899
+a3 Lazy Load,38352,41255
+OpenResty,239309,40375
+Knockout.js,0,39463
+Translate WordPress,4884,39378
+OceanWP,11438,37946
+web-vitals,272254,36606
+Raphael,165,36349
+MediaWiki,214,36003
+Smartsupp,360,34609
+Duda,5723,32795
+Microsoft Clarity,223463,31772
+TinyMCE,872,30247
+Gutenberg,14444,29128
+Smile,0,28995
+D3,1627,27386
+Segment,16457,27080
+WP Rocket,627910,27006
+Highcharts,738,26248
+Recent Posts Widget With Thumbnails,3380,25935
+Snap.svg,147,22898
+Kendo UI,840,22676
+CKEditor,24744,22118
+Marketo,724,21818
+MathJax,276,21622
+Shopware,59,21322
+Marionette.js,1472,20867
+GoDaddy Website Builder,296,20149
+CodeMirror,2146,19791
+WooCommerce Blocks,2822,19705
+Affirm,332,19262
+WP Google Map Plugin,8804,19182
+XRegExp,84,18064
+Treasure Data,287,17879
+AOS,173924,17861
+Alpine.js,1329,17792
+Mapbox GL JS,4252,17734
+Super Socializer,984,17560
+mod_ssl,4,17538
+SweetAlert2,104714,17371
+EasyDigitalDownloads,0,17280
+ColorMag,935,16831
+ReCaptcha v2 for Contact Form 7,3737,16560
+Redux,1,16078
+React Redux,0,15887
+Chart.js,192758,15694
+Popup Maker,89937,15526
+Phusion Passenger,19485,15442
+SiteOrigin Widgets Bundle,12950,15300
+FrontPage,617,14927
+Algolia,22298,14883
+three.js,834,14675
+Fourthwall,2378,14601
+Apollo,3308,14463
+Joomla,202346,14385
+WooCommerce PayPal Checkout Payment Gateway,17721,14089
+Usercentrics,21645,13770
+script.aculo.us,22964,13542
+Fresco,0,13481
+ResponsiveVoice,0,12840
+Doofinder,4766,12724
+SpurIT,3141,12631
+Neve,1532,12508
+DNN,4209,12372
+BuddyPress,1993,12233
+PDF.js,6705,11719
+Heap,148,11464
+Ninja Forms,5891,11441
+mod_perl,0,11130
+VWO,26054,11076
+WebNode,210,10558
+MyWebsite,0,10372
+Python,383201,10341
+AppDynamics,774,10258
+Open Journal Systems,1315,10141
+Breadcrumb NavXT,0,10134
+Perl,3895,9779
+Bootstrap Icons,3518,9421
+Mixpanel,25262,9394
+Intersection Observer,1622,9374
+SharpSpring,161,9364
+Hugo,19,9089
+SkyVerge,1770,8895
+Ember.js,220,8887
+Microsoft SharePoint,2493,8870
+mod_jk,60,8870
+Ghost,84,8488
+Braintree,2142,8165
+mod_dav,2,7723
+Liferay,6237,7584
+Press Hueman,4689,7282
+vBulletin,1385,7152
+Dotdigital,42,7070
+Sitefinity,0,7043
+Kadence WP Kadence,2669,7016
+WooCommerce PayPal Payments,1386,6980
+Hestia,399,6972
+Axios,101256,6782
+OptinMonster plugin,2272,6757
+LoyaltyLion,0,6752
+Astra Widgets,372,6736
+mod_wsgi,0,6560
+CallRail,32064,6451
+Lightning,1757,6434
+EasyEngine,8,6388
+Microsoft HTTPAPI,0,6349
+JavaServer Pages,29,6339
+Talkable,0,6294
+Nagich,0,6277
+Apple Business Chat,8,6171
+Concrete CMS,3075,6083
+FooPlugins FooGallery,1746,6074
+ExtJS,1226,5854
+Debian,149201,5804
+Re:amaze,297,5635
+Pendo,18,5509
+Meteor,318,5430
+Welcart,440,5344
+SPIP,1004,5276
+Shortcodes Ultimate,22757,5274
+MyLiveChat,129,5212
+Ideasoft,0,5191
+Caldera Forms,1265,5058
+Plyr,55511,4962
+Enable,2114,4898
+Mobirise,0,4770
+Braze,738,4704
+Nette Framework,14945,4697
+Supersized,3178,4599
+Discourse,12,4493
+Press Customizr,1180,4471
+Buy me a coffee,4594,4320
+Jekyll,1343,4138
+AudioEye,24973,4110
+Volusion,2,4078
+Colibri WP,1212,4042
+Sensors Data,4867,4017
+Socket.io,34461,3985
+Blocksy,1843,3918
+Fomo,44,3915
+Thimatic,0,3826
+gunicorn,1573,3684
+hCaptcha,0,3509
+SpeedCurve,589,3489
+PressMaximum Customify,1093,3357
+Klevu,38,3346
+Marketo Forms,0,3309
+OpenLayers,2993,3309
+PIXIjs,640,3304
+uLogin,0,3261
+Dynamicweb,608,3230
+Commanders Act TrustCommander,0,3110
+NVD3,121,3036
+Bloomreach Search & Merchandising,7324,2976
+Genesys Cloud,1929,2955
+WebSite X5,1913,2878
+WebEngage,192,2818
+mod_python,0,2811
+GetSocial,1198,2790
+jQuery-pjax,21982,2708
+Microsoft Word,16557,2679
+Segment Consent Manager ,0,2627
+Gutenberg Blocks,1261,2613
+Exponea,18,2607
+Nosto,5470,2588
+Okendo,2425,2573
+Next.js,158612,2534
+Page Builder Framework,156,2452
+Discuz! X,1738,2443
+Conekta,262,2390
+SteelHouse,7,2341
+SMF,0,2315
+lighttpd,767,2244
+Quicklink,5980,2160
+Resin,0,2104
+Patreon,51418,2064
+OXID eShop Enterprise Edition,0,2026
+KaTeX,1017,2016
+Kadence WP Virtue,668,2015
+Akismet,268,1984
+Advanced Custom Fields,1121,1943
+Affilae,0,1902
+Tailwind CSS,0,1901
+KineticJS,3281,1852
+Nukeviet CMS,332,1829
+Queue-it,48,1786
+GoDaddy Primer,71,1769
+History,0,1733
+Docusaurus,1232,1710
+Graphene,262,1698
+MysteryThemes News Portal,83,1678
+Jetty,70,1676
+OXID eShop Community Edition,0,1643
+Outlook Web App,74,1581
+amCharts,5626,1562
+Angular Material,9049,1425
+Apollo13Themes Rife,195,1420
+Hexo,92,1397
+Flask,0,1392
+WorldShopping,0,1380
+Mura CMS,0,1370
+Lytics,1053,1359
+Extole,16,1352
+Google Maps,577788,1318
+Miva,94,1314
+jQuery DevBridge Autocomplete,61,1296
+Material Design Lite,43270,1287
+PriceSpider,899,1274
+Vue Storefront,0,1234
+Polymer,15,1219
+Neos Flow,21,1213
+Chargebee,7,1156
+Font Awesome,3387641,1152
+EPrints,7,1151
+CodeIgniter,87392,1135
+Trix,0,1134
+Unbxd,2,1126
+Klickly,0,1113
+emBlue,2006,1088
+JBoss Application Server,185,1082
+Neos CMS,70,1077
+Wordfence Login Security,354,1058
+Highstock,1,1057
+Cryout Creations Fluida,88,1019
+Candid Themes Fairy,112,1004
+Baidu Maps,0,986
+Rollbar,0,972
+Gridsome,0,937
+Naver Maps,437,933
+DreamWeaver,118002,933
+Oracle Application Server,10,929
+Futurio,50,912
+PubGuru,109,906
+Blue Triangle,234,886
+mod_fastcgi,1421,833
+Ant Design,20034,832
+PopularFX,38,816
+Hogan.js,10398,814
+MkDocs,0,809
+JBoss Web,0,807
+RockRMS,0,795
+Okta,132,795
+Cryout Creations Mantra,158,786
+Adyen,0,779
+Cryout Creations Parabola,225,765
+Iamport,141,759
+JavaServer Faces,7306,756
+Ionic,5336,750
+Findify,288,744
+Bsale,201,738
+Zend,82,731
+Adobe GoLive,562,726
+Bronto,3798,726
+GoDaddy Go,84,717
+Sinatra,95,714
+Uploadcare,2728,713
+Fast Checkout,5,708
+Apache Traffic Server,11962,703
+Koha,32,701
+Sulu,2,699
+Plotly,5,695
+GoJS,0,692
+A-Frame,16,661
+The Theme Foundry Make,164,655
+mParticle,2756,653
+Yett,3977,651
+Botble CMS,118,648
+Loja Virtual,289,646
+Bluefish,13,638
+Optimove,135,632
+HiConversion,71,622
+Themebeez Orchid Store,149,610
+WEBDEV,148,601
+Auth0 Lock,0,593
+OutTheBoxThemes Panoramic,78,582
+Auth0,0,569
+Phaser,0,546
+CSSIgniter Olsen Light,50,544
+Legal Monster,2,544
+Auryc,0,532
+Umbraco,349,531
+Vaadin,103,523
+Fork Awesome,322,522
+Olapic,7,513
+Atlassian Confluence,593,511
+RichRelevance,3,500
+GlassFish,845,498
+HHVM,9,454
+Recurly,5477,451
+Theme Vision Agama,220,447
+StackPath,13503,438
+Contenido,0,438
+Transifex,0,413
+Accessible360,163,404
+Snipcart,103,382
+Fanplayr,6,380
+Envo Storefront,23,380
+Synerise,0,372
+Envo eCommerce,19,366
+LINE Login,314,365
+Raptor,118,363
+Chamilo,0,358
+GeneXus,77,350
+Howler.js,11888,348
+Ckan,8,343
+Chevereto,5,338
+ClientJS,11242,330
+Smartstore,62,320
+Themes4Wp Bulk,8,316
+GrowingIO,1104,312
+imperia CMS,90,297
+OpenUI5,2,296
+Catberry.js,0,292
+Oracle Web Cache,8,291
+Cryout Creations Bravada,15,277
+Oracle Commerce Cloud,39,276
+snigel AdConsent,0,275
+FlexCMP,6,275
+Apache Tomcat,32096,275
+Typecho,8,274
+GitBook,19,271
+TornadoServer,0,268
+Contensis,0,268
+Envo Shop,18,265
+OpinionLab,1154,262
+Sphinx,2731,256
+Elm,0,254
+phpwind,156,252
+ExitIntel,10,206
+Airship,0,202
+Advally,2,200
+Sarka-SPIP,1,199
+Leanplum,54,196
+Blossom Travel,81,190
+Wair,6,178
+SegmentStream,0,175
+Karma,0,175
+React Router,0,174
+Sub2Tech,2,174
+CMSimple,59,173
+Kooboo CMS,52,167
+Beyable,53,161
+Highlight.js,49504,151
+FreeBSD,10018,149
+Quick.CMS,345,147
+Checkout.com,1196,147
+X-Cart,2045,128
+Wordfence,114,126
+Shoprunner,738,125
+Quick.Cart,312,121
+Split,90,120
+MochiKit,27,118
+Clipboard.js,139105,117
+GOV.UK Frontend,590,109
+Social9,432,108
+PersonaClick,2,102
+VuePress,0,102
+Serendipity,2,100
+CherryPy,5,100
+Air360,0,95
+Coppermine,0,92
+Recapture,754,92
+MoinMoin,38,87
+Danneo CMS,0,86
+ThemeGrill eStore,653,82
+MobX,27416,79
+mod_auth_pam,15,78
+Dancer,0,74
+Warp,0,74
+Microsoft Excel,31,73
+Kooomo,12,72
+True Fit,41,71
+Adabra,2,68
+Akka HTTP,2,66
+DocFX,2,66
+Kapture CRM,40,66
+Microsoft Publisher,5,62
+Reveal.js,1151,62
+Adobe RoboHelp,10,59
+JavaScript Infovis Toolkit,261,58
+jComponent,0,58
+ReDoc,0,58
+Lift,4,57
+Roadiz CMS,12,54
+Backdrop,772,53
+decimal.js,3107,52
+Halo,0,52
+WebGUI,57,51
+Aegea,0,51
+Wink,18284,48
+Scalefast,0,46
+Hiawatha,0,45
+Semantic UI,11112,43
+Cherokee,20,42
+AOLserver,0,42
+Trac,20,41
+Sellfy,0,41
+Postpay,704,40
+Doxygen,16,39
+Branch,29808,38
+Stylitics,44,38
+MODX,9075,37
+Koken,0,36
+AsciiDoc,0,36
+Totango,319,34
+thttpd,0,34
+Segmanta,32,32
+iWeb,7,31
+Bokeh,107,31
+IBM HTTP Server,306,30
+TwistedWeb,79,27
+VAPTCHA,22,27
+Pay It Later,5,27
+Choices,484566,26
+Coaster CMS,0,26
+WP Maintenance Mode,58,25
+Invenio,54,25
+Gallery,64,24
+Loop54,192,24
+TiddlyWiki,16,24
+Swell,118,23
+cgit,0,23
+Atlassian Bitbucket,0,23
+Immutable.js,2074,21
+Breinify,0,20
+PHPFusion,281,19
+SpotX,990,19
+OroCommerce,15,17
+otrs,37,17
+Mangeznotez,4,16
+Inveon,37,14
+SAP Upscale Commerce,0,14
+Draft.js,0,13
+Open Classifieds,0,12
+uKnowva,9,12
+wisyCMS,0,12
+Public CMS,0,11
+GX WebManager,42,10
+BrowserCMS,0,10
+Fusion Ads,1,10
+Indy,12,10
+RankMath SEO,424,10
+SimpleHTTP,0,9
+JAlbum,3,9
+ZoodPay,32,9
+Exhibit,1323,9
+Atlassian Jira,1048,9
+Bynder,2,8
+CppCMS,0,8
+mini_httpd,0,8
+Bugzilla,11,7
+Blade,0,6
+LinkSmart,9,6
+AMP for WordPress,6259,6
+Apptus,124,6
+ef.js,85,5
+Yaws,34,5
+InfernoJS,16,5
+Kohana,437,4
+BrainSINS,53,4
+Jenkins,0,4
+Formitable,1556,4
+Laterpay,0,4
+Skedify,0,4
+ImpressPages,783,4
+Planet,473,4
+Gogs,11,3
+XSLT,25,3
+SquirrelMail,47,3
+Gitea,60,3
+Saber,0,2
+Oracle Commerce,893,2
+CouchDB,0,2
+Lua,738,2
+Taggbox,832,2
+Blessing Skin,0,2
+Erlang,0,2
+Linkedin Sign-in,24941,2
+Wizpay,0,2
+Swagger UI,81,2
+Bonfire,198,2
+Atlassian FishEye,0,1
+Artifactory Web Server,0,1
+Microsoft PowerPoint,12,1
+nghttpx - HTTP/2 proxy,1,1
+Virtuoso,2,1
+Yii,28523,0
+AWIN,26052,0
+Less,6312,0
+Mono,333,0
+Syte,638,0
+Tray,11398,0
+Zoho,6524,0
+Zyro,466,0
+Basic,714,0
+Drift,13071,0
+Ko-fi,10490,0
+Loja2,269,0
+Prism,49195,0
+Quill,9514,0
+Soisy,476,0
+Wurfl,3111,0
+ipify,12121,0
+3dCart,6846,0
+A8.net,20596,0
+Act-On,3256,0
+Akamai,111261,0
+Arc XP,1930,0
+Bubble,1828,0
+Docker,3506,0
+Fedora,2735,0
+Forter,4458,0
+Gambio,3626,0
+Gemius,40641,0
+Geniee,9472,0
+HeadJS,18419,0
+Lagoon,1047,0
+Pardot,31396,0
+SeQura,1712,0
+Seravo,5368,0
+Sezzle,20938,0
+Spring,5628,0
+TurfJS,960,0
+VP-ASP,191,0
+AddThis,208906,0
+Admitad,6100,0
+Attraqt,310,0
+Aurelia,1253,0
+BugHerd,8400,0
+Embedly,3077,0
+Haravan,4550,0
+Mapplic,1165,0
+Percona,23396,0
+SMSBump,4052,0
+Sublime,2011,0
+TrackJs,4580,0
+Websale,269,0
+iubenda,54128,0
+Aruba.it,72834,0
+Calendly,7787,0
+Callbell,1256,0
+Clerk.io,3500,0
+DokuWiki,1271,0
+FilePond,568,0
+FreakOut,27351,0
+Ionicons,115920,0
+JTL Shop,6468,0
+Livewire,9954,0
+NetSuite,1760,0
+Outbrain,64896,0
+Periodic,80,0
+ShopGold,2076,0
+Simplero,238,0
+Stimulus,117022,0
+Swiftype,2297,0
+UserLike,3324,0
+mod_rack,536,0
+Adobe DTM,6908,0
+Apple Pay,141432,0
+CleverTap,5440,0
+ClickTale,2083,0
+Craft CMS,15483,0
+Freshchat,10062,0
+KQS.store,438,0
+LiveZilla,3001,0
+Mediavine,17536,0
+New Relic,287405,0
+Pressable,3562,0
+Refersion,18468,0
+SaleCycle,969,0
+ShinyStat,7496,0
+Slimbox 2,6973,0
+Teachable,5259,0
+ZingChart,262,0
+Carbon Ads,1005,0
+Carts Guru,2294,0
+HikeOrders,669,0
+InstantCMS,581,0
+LiveIntent,18242,0
+LivePerson,11754,0
+Optimizely,61174,0
+PostgreSQL,8855,0
+PushEngage,2886,0
+Reddit Ads,14465,0
+Statically,3842,0
+TestFreaks,219,0
+AccuWeather,3577,0
+AddShoppers,8044,0
+Digistore24,1457,0
+Omniconvert,766,0
+Prefix-Free,13537,0
+Rocket.Chat,579,0
+Statcounter,69001,0
+prettyPhoto,431641,0
+CoverManager,712,0
+Custom Fonts,71756,0
+Google Sites,6417,0
+InstantClick,14414,0
+Java Servlet,7349,0
+JoomShopping,2343,0
+LiveRamp DPM,932,0
+Lucky Orange,7924,0
+Shopify Chat,33153,0
+Apache Wicket,2149,0
+Cookie Script,12574,0
+Froala Editor,30377,0
+Mercado Shops,9205,0
+Retail Rocket,3779,0
+Twenty Twelve,12280,0
+WP-Royal Ashe,4095,0
+Wix eCommerce,80808,0
+Yandex.Direct,38419,0
+Facebook Login,1327558,0
+Freshworks CRM,6369,0
+Clearbit Reveal,746,0
+Crisp Live Chat,15098,0
+HubSpot CMS Hub,22401,0
+Litespeed Cache,283466,0
+LyraThemes Kale,2157,0
+Moment Timezone,7431,0
+Oracle Infinity,914,0
+Astute Solutions,6756,0
+Oxi Social Login,4746,0
+Twenty Seventeen,28791,0
+Google App Engine,12858,0
+Twenty Twenty-One,14232,0
+Acquia Site Studio,1484,0
+Booking.com widget,1089,0
+Amazon Web Services,635345,0
+SeedProd Coming Soon,1880,0
+ExtendThemes Calliope,32,0
+Microsoft Advertising,270451,0
+WordPress Super Cache,367672,0
+Cookie Information plugin,45228,0
+Salesforce Commerce Cloud,7847,0
+PayPal Marketing Solutions,101728,0
+ShortPixel Image Optimizer,3954,0
+Adobe Experience Platform Identity Service,79274,0
+Colorlib Travelify,869,0
+Amazon ECS,308,0
+uPortal,90,0
+Accessibly,1036,0
+Superspeed,221,0
+Zaraz,1801,0
+GitLab,1194,0
+OpenStreetMap,1505,0
+Checkfront,528,0
+eSSENTIAL Accessibility,945,0
+ThemeGrill Accelerate,1444,0
+OutSystems,602,0
+ikiwiki,29,0
+SAP,506,0
+SiteMinder,1474,0
+PHPDebugBar,233,0
+Booksy,266,0
+Allyable,228,0
+Zinrelo,587,0
+HelpDocs,912,0
+Narrativ,391,0
+PayKickStart,318,0
+Question2Answer,785,0
+ReviewSolicitors,194,0
+Catch Themes Fotografie,212,0
+phpMyAdmin,6,0
+JS Charts,75,0
+BrightInfo,134,0
+CoconutSoftware,58,0
+Pelican,132,0
+git,94,0
+Pace,338,0
+Vue.ai,70,0
+Amaya,29,0
+TownNews,2664,0
+Bloomreach,1537,0
+Sitevision CMS,1161,0
+Vigbo,725,0
+Weblium,376,0
+sNews,25,0
+Corebine,68,0
+Pagekit,56,0
+Spryker,212,0
+Meebo,13,0
+Mulberry,198,0
+Sqreen,3992,0
+MTCaptcha,188,0
+Mollom,113,0
+WildJar,1075,0
+WebMetric,36,0
+Ackee,93,0
+Zoey,205,0
+Wikinggruppen,970,0
+DigitalRiver,360,0
+Sana Commerce,719,0
+LogiCommerce,203,0
+Fastcommerce,209,0
+Craft Commerce,1208,0
+StackCommerce,172,0
+Voracio,28,0
+GetMeAShop,174,0
+Nacelle,34,0
+Powergap,266,0
+Fortune3,37,0
+Ada,1407,0
+Audiohook,428,0
+DoubleClick Campaign Manager (DCM),9420,0
+AdBridg,367,0
+OpenBSD httpd,93,0
+CrownPeak,272,0
+JobberBase,57,0
+ownCloud,13,0
+Highstreet,40,0
+MDUI,274,0
+OneAll,4199,0
+2B Advice,136,0
+Conversant Consent Tool,1043,0
+Partial.ly,86,0
+Coinbase Commerce,331,0
+CitrusPay,184,0
+DHTMLX,570,0
+Hushly,167,0
+Buyapowa,57,0
+Zenfolio,220,0
+Bokun,56,0
+Tamara,126,0
+Phabricator,120,0
+Syndeca,20,0
+WebsiteBaker,40,0
+Graffiti CMS,14,0
+SiteVibes,21,0
+OneAPM,35,0
+ThriveCart,68,0
+Sellacious,16,0
+Cleverbridge,37,0
+TakeDrop,21,0
+Uvicorn,94,0
+CoConstruct,8,0
+Misskey,10,0
+Lieferando,1870,0
+Wangsu,5,0
+Melis Platform,24,0
+SQLite,39,0
+Yahoo Advertising,11,0
+Sivuviidakko,5,0
+Elcodi,10,0
+Incapsula,3,0
+SplittyPay,8,0
+Batflat,31,0
+commercetools,10,0
+Zeleris,4,0
+papaya CMS,2,0
+hantana,42,0
+Griddo,4,0
+Shoppiko,3,0
+Grafana,2,0
+Ensi,4,0
+NTLM,2,0
+Kibana,4,0
+Hetzner,4,0
+Justo,2,0
+Coinhave,2,0
+Neos CMS ,2,0
+Pingoteam,1,0
+Stack Analytix,2,0
+CalendarHero,1,0
+Javadoc,2,0
+K2,4871,0
+CFML,3192,0
+Grin,3090,0
+Riot,4149,0
+sIFR,588,0
+CIVIC,6465,0
+Caddy,11724,0
+Ecwid,5944,0
+Jimdo,23013,0
+OpenX,137848,0
+Rebuy,3230,0
+SiteW,181,0
+Vimeo,285167,0
+WHMCS,1874,0
+cdnjs,1194006,0
+punBB,171,0
+Adloox,632,0
+Bablic,1123,0
+Blazor,1080,0
+Cxense,18260,0
+Evidon,11151,0
+Fathom,4680,0
+Gauges,3891,0
+GumGum,8754,0
+Kajabi,5211,0
+Loggly,4477,0
+Nativo,29752,0
+Pixnet,23312,0
+VDX.tv,3583,0
+Web2py,670,0
+AdOcean,5029,0
+Aimtell,1904,0
+AlloyUI,13042,0
+Bitcoin,6114,0
+DatoCMS,1613,0
+Gorgias,8495,0
+Insider,4384,0
+Jetshop,441,0
+Klaviyo,141227,0
+Laravel,117626,0
+OpenGSE,331081,0
+Pingdom,17805,0
+Popmenu,6592,0
+Prismic,4162,0
+Select2,531616,0
+Simplo7,902,0
+Sirdata,34449,0
+Taboola,65497,0
+Tengine,25683,0
+Wagtail,4366,0
+AdonisJS,344,0
+Bluecore,2420,0
+F5 BigIP,2764,0
+Fork CMS,351,0
+MoEngage,2194,0
+Nextsale,1682,0
+Ochanoko,2127,0
+OptiMonk,24650,0
+Parse.ly,8153,0
+PureCars,4338,0
+Reservio,1280,0
+Signifyd,8296,0
+SoteShop,1316,0
+VK Pixel,113830,0
+@sulu/web,113,0
+Albacross,7590,0
+Amazon S3,72608,0
+Boomerang,875776,0
+CloudCart,895,0
+Cloudways,18274,0
+Ensighten,9026,0
+FirstHive,71,0
+Hello Bar,11222,0
+JW Player,38761,0
+Mailmunch,59954,0
+OpenTable,4900,0
+Qualtrics,8634,0
+SWFObject,159846,0
+SalesFire,3666,0
+Tessitura,757,0
+yellow.ai,561,0
+Contentful,13103,0
+Inspectlet,10123,0
+Postscript,6856,0
+PrestaShop,119993,0
+Salesforce,18245,0
+SnapWidget,19033,0
+Suiteshare,609,0
+SweetAlert,59671,0
+Trustpilot,78267,0
+Understrap,4881,0
+VWO Engage,3344,0
+jQuery CDN,700254,0
+Awesomplete,2724,0
+ColorMeShop,10092,0
+ConvertFlow,4272,0
+Elastic APM,27552,0
+Kentico CMS,12329,0
+October CMS,7833,0
+Quora Pixel,5666,0
+SALESmanago,13562,0
+Searchanise,14179,0
+TruValidate,8008,0
+WP-Optimize,89388,0
+WidgetWhats,1768,0
+ElasticSuite,4692,0
+LiveRamp PCM,2326,0
+RevolverMaps,5347,0
+Searchspring,1534,0
+SoundManager,25506,0
+scrollreveal,45277,0
+Apple Sign-in,6600,0
+Genesis theme,48139,0
+MakeShopKorea,4069,0
+ReferralCandy,1868,0
+Swiper Slider,1170271,0
+Verizon Media,2357,0
+WP-Royal Bard,1473,0
+Smart Slider 3,52351,0
+CMS Made Simple,1295,0
+DataLife Engine,19684,0
+Draftpress HFCM,44609,0
+Formidable Form,64942,0
+Rubicon Project,148122,0
+Megagroup CMS.S3,5175,0
+Quantcast Choice,49152,0
+Simple Analytics,1087,0
+ThemezHut HitMag,3449,0
+Webriti Busiprof,352,0
+Acuity Scheduling,2457,0
+ClustrMaps Widget,2956,0
+MyWebsite Creator,38514,0
+SyntaxHighlighter,10321,0
+Themeansar Newsup,3917,0
+jQuery Sparklines,5301,0
+AFThemes CoverNews,2582,0
+Amazon Advertising,166270,0
+FameThemes Screenr,646,0
+Open Web Analytics,12941,0
+SAP Commerce Cloud,5886,0
+ThemeGrill ColorMag,18143,0
+ThemeGrill Spacious,3864,0
+ARI Network Services,1273,0
+Theme Horse NewsCard,2222,0
+eBay Partner Network,3374,0
+DoubleClick Floodlight,2224,0
+ExtendThemes Highlight,544,0
+Google Hosted Libraries,1914850,0
+Tiki Wiki CMS Groupware,1500,0
+Twitter Emoji (Twemoji),2711280,0
+HulkApps Age Verification,1521,0
+Tealium Consent Management,3259,0
+Cloudflare Browser Insights,303045,0
+Commanders Act TagCommander,5507,0
+HubSpot Cookie Policy Banner,27451,0
+MysteryThemes News Portal Lite,70,0
+Oracle Dynamic Monitoring Service,3111,0
+Occasion,70,0
+Raygun,9582,0
+Zmags Creator,423,0
+MyBB,1905,0
+YUI Doc,1268,0
+Atome,1220,0
+Octopress,170,0
+Tencent Waterproof Wall,1476,0
+Affiliate B,4642,0
+Sniply,160,0
+IntenseDebate,530,0
+Scissor Themes Writee,363,0
+Affiliate Future,469,0
+ThemeZee Donovan,1875,0
+Target2Sell,350,0
+GoDaddy Escapade,196,0
+ThemeGrill Radiate,617,0
+Speedimize,163,0
+Colorlib Activello,1008,0
+Bookero,133,0
+Siteglide,212,0
+PayJustNow,355,0
+Theme Freesia ShoppingCart,555,0
+NodeBB,307,0
+Brandfolder,137,0
+SpurIT Abandoned Cart Reminder,85,0
+Paidy,308,0
+Nuqlium,28,0
+Rickshaw,247,0
+SlickStack,134,0
+Theme Freesia Photograph,154,0
+BySide,398,0
+SiteJabber,36,0
+Ushahidi,6,0
+XMB,13,0
+Bunny,1281,0
+ArvanCloud,195,0
+Movable Type,1030,0
+Cargo,806,0
+Lithium,655,0
+Squiz Matrix,1516,0
+Varbase,401,0
+EPiServer,353,0
+Indexhibit,17,0
+Simplébo,112,0
+MaxSite CMS,220,0
+Twilight CMS,9,0
+Posterous,4,0
+Chatango,2297,0
+ManyContacts,100,0
+Snoobi,759,0
+Oracle Recommendations On Demand,339,0
+Splitbee,335,0
+Noddus,142,0
+TotalCode,55,0
+xtCommerce,1084,0
+NEO - Omnichannel Commerce Platform,336,0
+Ubercart,256,0
+RedCart,54,0
+My Food Link,193,0
+k-eCommerce,298,0
+Projesoft,73,0
+Tencent QQ,1109,0
+Zoko,535,0
+Dealer Spike,6920,0
+Titan,269,0
+Project Wonderful,153,0
+Chitika,119,0
+Cluep,159,0
+Lotus Domino,1800,0
+SvelteKit,214,0
+Redmine,250,0
+Mopinion,663,0
+Asana,252,0
+Frontity,362,0
+AngularDart,78,0
+Revel,19,0
+Mojolicious,112,0
+Macaron,16,0
+eucookie.eu,259,0
+TRUENDO,371,0
+Seers,294,0
+WebFactory Under Construction,762,0
+ChargeAfter,92,0
+PushPushGo,1419,0
+Wigzo,319,0
+C,23,0
+Gitiles,35,0
+ShellInABox,2,0
+DERAK.CLOUD,38,0
+Telescope,58,0
+Lede,26,0
+Essent SiteBuilder Pro,54,0
+TomatoCart,51,0
+Simbel,2,0
+Arastta,28,0
+Solusquare OmniCommerce Cloud,38,0
+Xonic,6,0
+Blip.tv,12,0
+Prediggo,32,0
+Percussion,30,0
+iEXExchanger,8,0
+Yepcomm,44,0
+vibecommerce,4,0
+Veoxa,8,0
+Dailymotion,22,0
+Heartland Payment Systems,116,0
+WPCacheOn,18,0
+ForoshGostar,22,0
+Kemal,16,0
+ABOUT YOU Commerce Suite,14,0
+Firepush,4,0
+Crypto-Loot,4,0
+Dotclear,15,0
+GEOvendas,8,0
+augmented-ui,20,0
+Bikayi,95,0
+SolidPixels,6,0
+Service Provider Pro,2,0
+Airform,2,0
+Shoplo,4,0
+SunOS,2,0
+Monkey HTTP Server,5,0
+MadAdsMedia,1,0
+ZK,442,0
+EKM,2043,0
+IPB,7473,0
+Zip,10620,0
+Java,974909,0
+Moat,210018,0
+Skai,8135,0
+Tail,5584,0
+VTEX,6961,0
+Envoy,83233,0
+Ezoic,59770,0
+Feefo,5411,0
+Issuu,40610,0
+Scala,4530,0
+Sprig,860,0
+Teads,8609,0
+Tidio,90374,0
+XOOPS,1715,0
+Bizweb,4000,0
+Cafe24,19715,0
+Chorus,754,0
+Disqus,42691,0
+Fastly,59868,0
+Heroku,41091,0
+Izooto,6302,0
+Moodle,26645,0
+Paddle,1175,0
+Pixlee,1274,0
+Sanity,2316,0
+TurnTo,261,0
+Vercel,20378,0
+Weebly,38497,0
+Weglot,19279,0
+Woopra,2911,0
+Zipkin,4394,0
+jqPlot,1160,0
+parcel,88838,0
+AD EBiS,12032,0
+Emotion,205654,0
+Engagio,483,0
+Netlify,69226,0
+Ometria,1570,0
+Raychat,701,0
+Shoptet,11509,0
+Tealium,69746,0
+Twitter,503681,0
+UserWay,47210,0
+YouTube,977510,0
+iPresta,112,0
+webpack,674419,0
+33Across,160476,0
+CoinHive,70,0
+Paths.js,628,0
+Printful,13032,0
+Sortable,3716,0
+SpeedKit,941,0
+UserZoom,726,0
+Yieldify,1298,0
+Zoominfo,10567,0
+comScore,142758,0
+Amplitude,13810,0
+Autopilot,10941,0
+Azure CDN,4038,0
+CartStack,5959,0
+Chartbeat,14521,0
+CookieHub,4339,0
+Cookiebot,103308,0
+Fireblade,8709,0
+Flocktory,6538,0
+INFOnline,3720,0
+LogRocket,5014,0
+MailChimp,1004746,0
+Media.net,66005,0
+Permutive,6557,0
+Podsights,3811,0
+RackCache,17534,0
+SHE Media,2548,0
+AlertifyJS,10831,0
+Covet.pics,15200,0
+Element UI,29769,0
+EthicalAds,2093,0
+FareHarbor,11922,0
+Help Scout,12760,0
+Sendinblue,36030,0
+Strikingly,1787,0
+Tiendanube,11006,0
+TypeScript,115431,0
+Adobe Flash,31426,0
+CookieFirst,6816,0
+Future Shop,1705,0
+LottieFiles,34457,0
+ParkingCrew,7420,0
+ElasticPress,604,0
+HCL Commerce,1260,0
+OWL Carousel,1093994,0
+OptinMonster,35205,0
+particles.js,54399,0
+Avis Verifies,10844,0
+MyOnlineStore,3017,0
+Twenty Eleven,4906,0
+Getsitecontrol,25022,0
+ShoppingFeeder,1138,0
+aThemes Astrid,657,0
+Klarna Checkout,96171,0
+Provide Support,2668,0
+Campaign Monitor,15502,0
+Constant Contact,67022,0
+Google Analytics,8672479,0
+HashThemes Total,9357,0
+ThemeGrill Flash,2296,0
+Google Web Server,2216,0
+HubSpot Analytics,144218,0
+WordPress Default,1642,0
+Oracle HTTP Server,1974,0
+Snowplow Analytics,320174,0
+Themegraphy Graphy,586,0
+MachoThemes NewsMag,6067,0
+ThemeZee Wellington,1000,0
+Themonic Iconic One,2922,0
+Google Cloud Storage,3232,0
+Google Publisher Tag,381527,0
+Linkedin Insight Tag,238149,0
+AndersNoren Hemingway,790,0
+HulkApps Form Builder,11891,0
+ExtendThemes Mesmerize,3180,0
+Google Remarketing Tag,4096926,0
+WhatsApp Business Chat,746929,0
+Imagely NextGEN Gallery,89628,0
+Essential Addons for Elementor,43931,0
+SAP Customer Data Cloud Sign-in,4242,0
+Adobe Experience Platform Launch,66206,0
+Akamai Web Application Protector,2184,0
+BlueConic,3721,0
+UserVoice,2822,0
+Mobify,1852,0
+Booxi,176,0
+FluxBB,108,0
+npm,8,0
+Wufoo,1653,0
+Scalapay,1454,0
+LayBuy,2208,0
+Payflex,806,0
+Simon,253,0
+SpurIT Loyalty App,516,0
+Catch Themes Catch Box,734,0
+Colorlib Illdy,488,0
+OpenPay,1130,0
+Tiqets,918,0
+Trustspot,820,0
+Rezgo,196,0
+Accesso,756,0
+BeyondMenu,366,0
+Dokeos,10,0
+Wiki.js,189,0
+GoDaddy Uptown Style,243,0
+Viral Loops,677,0
+WoowUp,193,0
+Bookingkit,122,0
+Fit Analytics,122,0
+Bookatable,540,0
+Regiondo,242,0
+jQTouch,189,0
+BookDinners,79,0
+PayBright,210,0
+Sencha Touch,136,0
+Meeting Scheduler,16,0
+FAST ESP,269,0
+StoryStream,81,0
+Appointy,127,0
+MaxCDN,130,0
+ApostropheCMS,497,0
+SDL Tridion,1265,0
+OpenNemas,235,0
+Mambo,63,0
+GetSimple CMS,137,0
+DedeCMS,363,0
+Green Valley CMS,130,0
+Cotonti,83,0
+Solodev,105,0
+e107,350,0
+LiveStreet CMS,420,0
+Virgool,23,0
+Zinnia,15,0
+wpCache,3768,0
+Whooshkaa,22,0
+DailyKarma,830,0
+StorifyMe,330,0
+Proximis,26,0
+MyBlogLog,19,0
+RapidSec,239,0
+ClickHeat,599,0
+ClearSale,1852,0
+OneStat,208,0
+Yahoo! Web Analytics,147,0
+Lucene,351,0
+Shoporama,75,0
+Abicart,1399,0
+Borderfree,270,0
+Sylius,348,0
+SoftTr,428,0
+Cococart,28,0
+Sellix,55,0
+Comandia,40,0
+Bold Chat,2449,0
+AnyClip,272,0
+Admo.tv,240,0
+Unruly,693,0
+The Arena Group,252,0
+OpenWeb,206,0
+Mongrel,36,0
+ServiceNow,2396,0
+Tapcart,1270,0
+GoAnywhere,35,0
+Acquia Content Hub,190,0
+Libravatar,8,0
+Classy,165,0
+Flutter,241,0
+GOV.UK Template,421,0
+Clarity,455,0
+Shiny,70,0
+IBM DataPower,615,0
+Raspbian,179,0
+Yoast Duplicate Post,258,0
+Payl8r,186,0
+Xpresslane,95,0
+Marked,3828,0
+Essential JS 2,384,0
+Rockerbox,977,0
+Acquia Campaign Factory,213,0
+Maxemail,126,0
+ZestMoney,118,0
+Fact Finder,22,0
+Mynetcap,2,0
+Eleanor CMS,13,0
+GrocerKey,110,0
+Blesta,24,0
+Subbly,50,0
+LimeChat,49,0
+Boba.js,29,0
+Webix,121,0
+Phenomic,16,0
+Apache JSPWiki,23,0
+Svbtle,7,0
+Selly,12,0
+MasterkinG32 Framework,9,0
+core-js%203.20.3%2CjQuery%201.10.2,2,0
+Pagevamp,47,0
+Caast.tv,16,0
+Bigware,3,0
+Gumstack,23,0
+Feedback Fish,35,0
+Smartling,32,0
+TerriaJS,15,0
+Workarea,5,0
+Koa,8,0
+JSEcoin,25,0
+Combeenation,4,0
+TRISOshop,18,0
+PHP%205.4.45,2,0
+AdInfinity,2,0
+Reinvigorate,5,0
+Protovis,8,0
+Azion,5,0
+Sazito,8,0
+Forte,4,0
+i30con,2,0
+Go,11820,0
+Ahoy,23632,0
+Base,1334,0
+Blue,2657,0
+CNZZ,23649,0
+Twik,990,0
+UNIX,87374,0
+Bulma,6713,0
+EX.CO,1075,0
+Klaro,8340,0
+Kount,2498,0
+Plesk,510704,0
+Plone,4927,0
+Ramda,2138,0
+UIKit,91502,0
+Unpkg,279408,0
+phpBB,13678,0
+ATSHOP,88,0
+Adally,232,0
+Aweber,13168,0
+Contao,10763,0
+Didomi,42430,0
+Elevar,3006,0
+Gentoo,4808,0
+Hotjar,489487,0
+Layer0,198,0
+Loqate,3386,0
+Mautic,12557,0
+Oxygen,19874,0
+Pagely,5642,0
+Prebid,196138,0
+Recart,1265,0
+Shanon,540,0
+Square,7762,0
+Svelte,12454,0
+Tatari,839,0
+Yottaa,4800,0
+Axeptio,12094,0
+CakePHP,19672,0
+Decibel,3550,0
+Envybox,17180,0
+Flat UI,1511,0
+GraphQL,18193,0
+Jetpack,318714,0
+Kestrel,13244,0
+List.js,20133,0
+MariaDB,26774,0
+Nestify,415,0
+OpenCms,1369,0
+Phoenix,2083,0
+Pojo.me,20045,0
+Rise.ai,10042,0
+Salsify,192,0
+Slimbox,3199,0
+Upserve,1827,0
+AB Tasty,7603,0
+AdThrive,7279,0
+AddToAny,141103,0
+CCV Shop,1944,0
+CreateJS,3112,0
+ExoClick,12874,0
+Flickity,232286,0
+Global-e,1747,0
+Judge.me,41413,0
+JuicyAds,10587,0
+Lightbox,715381,0
+Mono.net,5083,0
+OpenCart,26925,0
+Polylang,8254,0
+Pushnami,1666,0
+Razorpay,2655,0
+Shop Pay,212114,0
+Sitecore,12419,0
+Unbounce,30244,0
+Webgains,3242,0
+Wisepops,17390,0
+Woostify,1202,0
+Zen Cart,2461,0
+jsDelivr,853240,0
+wpBakery,1042360,0
+Clickbank,2292,0
+Customily,405,0
+Dynatrace,17679,0
+Facil-iti,442,0
+Friendbuy,1360,0
+LiveAgent,4351,0
+Octane AI,5882,0
+Rewardful,1430,0
+Simpli.fi,23804,0
+reCAPTCHA,1249040,0
+Adverticum,2230,0
+Amazon Pay,54044,0
+Cloudflare,2355887,0
+ConveyThis,789,0
+Cross Sell,3502,0
+District M,7302,0
+Google Pay,121983,0
+Liquid Web,5162,0
+Mouse Flow,25997,0
+PencilBlue,856,0
+RD Station,34225,0
+SiteGround,167270,0
+SnapEngage,3953,0
+TablePress,122112,0
+osCommerce,6267,0
+uRemediate,849,0
+LoginRadius,1032,0
+IdoSell Shop,4231,0
+Instant.Page,18138,0
+Kotisivukone,580,0
+Liveinternet,163493,0
+SilverStripe,5572,0
+TrafficStars,4456,0
+Zendesk Chat,54093,0
+ContentSquare,13302,0
+ThemezHut Bam,2050,0
+ValueCommerce,27488,0
+WP-Statistics,37718,0
+WordPress.com,115665,0
+ActiveCampaign,102294,0
+Boost Commerce,29240,0
+Loja Integrada,11578,0
+Quantum Metric,2078,0
+TN Express Web,757,0
+Twenty Sixteen,15379,0
+Windows Server,1016608,0
+Bootstrap Table,3427,0
+Drupal Commerce,2351,0
+GoDaddy Lyrical,183,0
+Google Font API,6067084,0
+Naver Analytics,72254,0
+Twenty Fourteen,9376,0
+Colorlib Shapely,1076,0
+GoDaddy CoBlocks,31112,0
+WP Fastest Cache,238884,0
+ThemeZee Poseidon,1200,0
+Colorlib Sparkling,3198,0
+Google Tag Manager,6681802,0
+Moove GDPR Consent,89658,0
+Tripadviser.Widget,17441,0
+Chinese Menu Online,2398,0
+AT Internet Analyzer,10675,0
+Kibo Personalization,5044,0
+Acquia Cloud Platform,23396,0
+Acquia Personalization,1556,0
+Adobe Audience Manager,10282,0
+Salesforce Service Cloud,14546,0
+Salesforce Audience Studio,34392,0
+Shopify Consent Management,8157,0
+Think Up Themes Consulting,2191,0
+Woltlab Community Framework,1960,0
+Accessibility Toolbar Plugin,504,0
+SpurIT Recurring Payments App,1505,0
+Baidu Analytics (百度统计),56582,0
+Cloudflare Network Error Logging,1300863,0
+TableBooker,422,0
+aThemes Airi,925,0
+TomTom Maps,161,0
+Atlassian Jira Issue Collector,822,0
+Theme4Press Evolve,1169,0
+Service Management Group,183,0
+JANet,473,0
+Coinimp,296,0
+BiteSpeed,708,0
+SpiceThemes SpicePress,528,0
+OnePage Express,865,0
+hoolah,726,0
+Contently,140,0
+Vanilla,599,0
+Yelp Reservations,717,0
+Intercom Articles,994,0
+Ambassador,300,0
+Mastodon,143,0
+shine.js,426,0
+Usizy,145,0
+Zeotap,1425,0
+Four,988,0
+SplitIt,752,0
+mobicred,590,0
+ThreatMetrix,956,0
+Canto,192,0
+Divido,160,0
+XWiki,30,0
+KueskiPay,330,0
+Contlo,190,0
+Yandex.Cloud CDN,1131,0
+TwicPics,486,0
+eZ Publish,6272,0
+MemberStack,694,0
+PHP-Nuke,208,0
+Business Catalyst,135,0
+MotoCMS,777,0
+Koala Framework,138,0
+Subrion,82,0
+eZ Platform,422,0
+SiteEdit,256,0
+Smartstore Page Builder,91,0
+Hotaru CMS,2,0
+Yelp Review Badge,1583,0
+eKomi,2797,0
+Solve Media,276,0
+IBM Coremetrics,114,0
+KISSmetrics,2012,0
+W3Counter,1189,0
+Mint,249,0
+Tealeaf,80,0
+Solr,351,0
+Oxatis,983,0
+The Hut Group,672,0
+Commerce7,364,0
+Smartstore biz,70,0
+Xanario,96,0
+MyCashFlow,1184,0
+Estore Shopserve,344,0
+T-Soft,200,0
+CubeCart,294,0
+JShop,109,0
+VirtueMart,254,0
+Shopatron,64,0
+KobiMaster,200,0
+CloudSuite,95,0
+Solvvy,501,0
+CoRover,135,0
+AdScale,1314,0
+Yieldlab,282,0
+snigel AdEngine,508,0
+FirstImpression.io,573,0
+Starlet,66,0
+Remix,112,0
+Websocket,221,0
+Whatfix,541,0
+CopyPoison,203,0
+SobiPro,160,0
+Bambuser,88,0
+ApexPages,3309,0
+Boats Group,162,0
+GOV.UK Elements,71,0
+Milligram,198,0
+Uscreen,446,0
+Onfido,96,0
+Sails.js,786,0
+Uniconsent,182,0
+Really Simple CAPTCHA,67,0
+WebFactory Maintenance,1183,0
+SiteGuard WP Plugin,164,0
+Omise,464,0
+Customer.io,1748,0
+Vizury,260,0
+SEMrush,45,0
+Inertia,128,0
+MysteryThemes News Portal Mag,41,0
+SitePad,282,0
+SeamlessCMS,34,0
+VIVVO,61,0
+SPDY,46,0
+LOU,35,0
+LightMon Engine,4,0
+Avasize,11,0
+Fynd Platform,16,0
+Picturepark,29,0
+Swagify,41,0
+Etherpad,4,0
+Minero.cc,16,0
+ImpressCMS,10,0
+SmartSite,11,0
+Acquia Customer Data Platform,4,0
+Fabric,8,0
+Anetwork,27,0
+RCMS,63,0
+Flyspray,3,0
+CacheFly,6,0
+Website Creator,16,0
+Matomo%20Analytics,2,0
+Saly,4,0
+Webzi,1,0
+i-MSCP,3,0
+LocalFocus,2,0
+Akinon,2,0
+RDoc,1,0
+Artifactory,1,0
+Arc,3244,0
+JSS,130678,0
+Dart,1110,0
+Fera,3868,0
+Keap,4966,0
+Neto,2244,0
+Play,4469,0
+Resy,3814,0
+SUSE,2054,0
+Sift,22560,0
+Trbo,1338,0
+Visa,194417,0
+AdOpt,5287,0
+Azure,124519,0
+Coveo,3844,0
+Cufon,21154,0
+Piano,5905,0
+Privy,61686,0
+Ryviu,6629,0
+Slice,2277,0
+Tilda,32400,0
+Zanox,540,0
+Adform,29651,0
+Czater,2235,0
+Eloqua,10686,0
+Irroba,1026,0
+Jalios,256,0
+Podium,18512,0
+Shogun,21319,0
+Shoper,13804,0
+Tumblr,26309,0
+Ubuntu,403163,0
+cPanel,165,0
+ePages,6534,0
+Birdeye,3842,0
+Comm100,2838,0
+DTScout,76186,0
+Datadog,57902,0
+Imperva,46238,0
+Instana,12450,0
+Justuno,9942,0
+Konduto,2318,0
+MaxMind,5606,0
+Metrilo,2002,0
+PayFast,1385,0
+PushOwl,13115,0
+PyroCMS,505,0
+RightJS,6483,0
+Shopify,405508,0
+UMI.CMS,2150,0
+Verloop,159,0
+Wheelio,3610,0
+Zone.js,96347,0
+clickio,1212,0
+Afterpay,50350,0
+AppNexus,261824,0
+Bitrix24,29103,0
+CareCart,2594,0
+Datadome,3071,0
+Etracker,13188,0
+Freespee,938,0
+Leadinfo,3603,0
+Medallia,12177,0
+OneTrust,125312,0
+PubMatic,186210,0
+Pure CSS,13565,0
+Pygments,3114,0
+Qualaroo,1005,0
+Sailthru,19137,0
+TrustArc,9309,0
+TrustYou,1012,0
+total.js,63,0
+Attentive,28004,0
+Infolinks,7200,0
+Instapage,2214,0
+NitroPack,19942,0
+Nuvemshop,9502,0
+Pinterest,9401,0
+Pipedrive,4690,0
+Plausible,8659,0
+Pure Chat,10196,0
+Skimlinks,61159,0
+Webtrends,2747,0
+Affiliatly,6477,0
+Amazon ALB,360121,0
+Amazon EC2,20067,0
+Amazon ELB,24621,0
+Big Cartel,1933,0
+Builder.io,304,0
+BuySellAds,2812,0
+Centminmod,10918,0
+Glyphicons,13434,0
+Mastercard,194367,0
+SoundCloud,10634,0
+SummerCart,9881,0
+TripleLift,32339,0
+Turbolinks,18408,0
+Xtremepush,780,0
+AccessTrade,3774,0
+Bazaarvoice,11872,0
+BigCommerce,25957,0
+EmbedSocial,3116,0
+Platform.sh,9626,0
+Twitter Ads,628944,0
+WP-PageNavi,102859,0
+ClickFunnels,4676,0
+GetYourGuide,3705,0
+Google Cloud,87504,0
+PowerReviews,2553,0
+Creativ.eMail,21050,0
+Google Charts,19642,0
+Luigi’s Box,5576,0
+Ruby on Rails,172070,0
+WordPress VIP,3282,0
+Estore Compare,3755,0
+Google Sign-in,147161,0
+Helix Ultimate,34100,0
+Oracle BlueKai,16680,0
+plentyShop LTS,1820,0
+Adobe Analytics,89105,0
+Perzonalization,265,0
+Schedule Engine,401,0
+Site Search 360,3179,0
+Smart Ad Server,14448,0
+Twenty Thirteen,7084,0
+AT Internet XiTi,1580,0
+Digital Showroom,328,0
+Oracle Maxymiser,2728,0
+UltimatelySocial,24671,0
+AdRoll CMP System,49996,0
+Amazon Associates,32447,0
+Amazon Cloudfront,247699,0
+Google My Business,12135,0
+Matomo Tag Manager,8074,0
+Redis Object Cache,18966,0
+SiteOrigin Vantage,5003,0
+ThemeIsle Menu Icons,29920,0
+AndersNoren Lovecraft,592,0
+Menufy Online Ordering,1673,0
+Shopify Product Reviews,83590,0
+Hotjar Incoming Feedback,18109,0
+Themebeez Cream Magazine,1714,0
+Acquia Cloud Site Factory,9228,0
+Alexa Certified Site Metrics,53214,0
+Smash Balloon Instagram Feed,183985,0
+Salesforce Interaction Studio,4686,0
+HulkApps Infinite Product Options,6277,0
+Lootly,556,0
+SpotHopper,5034,0
+Listrak,5046,0
+ExtendThemes Materialis,526,0
+Tabby,1234,0
+aThemes Hiero,527,0
+CyberChimps Responsive,3194,0
+Mews,639,0
+Reflektion,271,0
+Beans,430,0
+Clinch,120,0
+Instabot,2610,0
+Enigma,626,0
+Podia,1136,0
+GroupBy,175,0
+SmugMug,529,0
+Appcues,1971,0
+Recite Me,355,0
+Pico,442,0
+Theme Horse Attitude,411,0
+Rezdy,648,0
+Humm,160,0
+Blackbaud Luminate Online,2187,0
+inSided,186,0
+Blitz,1374,0
+Dito,496,0
+Orankl,96,0
+Make-Sense,72,0
+LiveHelp,512,0
+DivideBuy,268,0
+Hostmeapp,210,0
+Resmio,298,0
+CDN77,360,0
+Statamic,1093,0
+Cratejoy,682,0
+LocomotiveCMS,208,0
+Live Story,132,0
+Brownie,72,0
+SIMsite,61,0
+PlatformOS,350,0
+webEdition,306,0
+Amiro.CMS,241,0
+OpenText Web Solutions,22,0
+Textpattern CMS,78,0
+Gravitec,3155,0
+ProvenExpert,3522,0
+Daily Deals,299,0
+Cloverly,165,0
+Salesfloor,32,0
+Tencent Analytics (腾讯分析),336,0
+GoatCounter,375,0
+Analysys Ark,107,0
+GoStats,293,0
+Kibo Commerce,182,0
+Aero Commerce,79,0
+Modified,150,0
+Afosto,104,0
+OrderYOYO,150,0
+Loja Mestre,85,0
+GrandNode,81,0
+Vidazoo,156,0
+Amobee,1781,0
+Cross Pixel,1049,0
+Level 5,327,0
+MyWebsite Now,422,0
+SublimeVideo,77,0
+Azure AD B2C,736,0
+Scientific Linux,550,0
+Newspack,457,0
+Limit Login Attempts Reloaded,110,0
+Pagar.me,1302,0
+Bolt Payments,424,0
+Convertcart,561,0
+Kartra,790,0
+Twitter Flight,293,0
+Foswiki,50,0
+Apigee,27,0
+Airee,67,0
+Crobox,93,0
+SPNEGO,5,0
+AfterBuy,167,0
+Inventrue,30,0
+Buildertrend,62,0
+MantisBT,5,0
+StimulusReflex,17,0
+Wirecard,47,0
+phpSQLiteCMS,8,0
+Aircall,8,0
+Adcash,42,0
+NSW Design System,57,0
+Censhare,29,0
+Apisearch,23,0
+db-ip,47,0
+CPG Dragonfly,24,0
+Indico,3,0
+LEPTON,11,0
+Strapdown.js,9,0
+Naver RUA,12,0
+RainLoop,27,0
+JET Enterprise,18,0
+Squadded,10,0
+HrFlow.ai,2,0
+Koobi,1,0
+deepMiner,4,0
+MizbanCloud,1,0
+Commerce.js,4,0
+enduro.js,2,0
+Shopery,2,0
+Huberway Analytics,2,0
+YouTrack,3,0
+Huberway,2,0
+eCaupo,3,0
+Metomic,2,0
+ipstack,2,0
+MGPanel,1,0
+BEM,3241,0
+Addi,240,0
+LKQD,2163,0
+MGID,18232,0
+Ruby,179424,0
+RxJS,16911,0
+ADFOX,66962,0
+Babel,590036,0
+Dokan,2988,0
+Muuri,2677,0
+Olark,8695,0
+Phlox,3377,0
+Po.st,5140,0
+Redis,18966,0
+Sovrn,6137,0
+USWDS,903,0
+Umami,1095,0
+Xajax,2332,0
+Zakra,3193,0
+Zonos,3155,0
+CentOS,168125,0
+Clicky,23522,0
+Cowboy,18054,0
+Day.js,30736,0
+Impact,9328,0
+Medium,10081,0
+Preact,326540,0
+Sapper,723,0
+Satori,1844,0
+Signal,16420,0
+Sizmek,13226,0
+Trengo,2637,0
+Zimbra,2466,0
+AdRiver,4964,0
+Admixer,2797,0
+Blogger,328595,0
+CS Cart,7871,0
+GoCache,3572,0
+Isotope,884152,0
+J2Store,2292,0
+Mermaid,612,0
+MongoDB,3093,0
+Nuxt.js,210536,0
+Picreel,1390,0
+Rakuten,5260,0
+Resengo,576,0
+Stamped,25690,0
+Symfony,23823,0
+Tawk.to,145208,0
+Ticimax,4327,0
+Vuetify,12281,0
+Webflow,48350,0
+XenForo,13444,0
+math.js,3571,0
+Bentobox,13200,0
+EdgeCast,452,0
+Intercom,79756,0
+Kustomer,1842,0
+ManyChat,21036,0
+Omnisend,67036,0
+Optimise,3224,0
+Pantheon,26774,0
+Recharge,15261,0
+Scorpion,1883,0
+Site24x7,1760,0
+Storeden,504,0
+Texthelp,2934,0
+ThinkPHP,2712,0
+UpSellit,2533,0
+Webtrekk,3317,0
+Appsflyer,3641,0
+Blueshift,720,0
+CookieYes,239269,0
+Cooladata,4155,0
+ExpertRec,410,0
+FullStory,20562,0
+Kameleoon,2000,0
+LiteSpeed,586386,0
+Pepperjam,2354,0
+Vimeo OTT,688,0
+Automizely,17299,0
+Brightcove,2040,0
+Cloudinary,59756,0
+Django CMS,4205,0
+Fastspring,248,0
+Hyperspeed,327,0
+Moguta.CMS,1180,0
+Profitwell,3145,0
+Section.io,3350,0
+Snap Pixel,58656,0
+Wunderkind,3653,0
+Ali Reviews,5952,0
+GetResponse,12012,0
+Kiwi Sizing,9817,0
+Niagahoster,19673,0
+Ad Lightning,5171,0
+HubSpot Chat,52591,0
+LaunchDarkly,15715,0
+TikTok Pixel,131656,0
+TrueCommerce,229,0
+XpressEngine,1967,0
+theTradeDesk,52409,0
+Elasticsearch,14482,0
+Open AdStream,1620,0
+Trusted Shops,29092,0
+Twenty Twenty,18970,0
+eWAY Payments,1719,0
+plentymarkets,1820,0
+Menufy Website,1596,0
+Strato Website,3149,0
+Yandex.Metrika,612436,0
+Zoho PageSense,13048,0
+Amazon Webstore,820,0
+Google Optimize,279846,0
+Materialize CSS,23619,0
+SharpSpring Ads,12766,0
+Sovrn//Commerce,78208,0
+Spotify Widgets,9409,0
+Twenty Nineteen,8451,0
+Adobe ColdFusion,2924,0
+American Express,174863,0
+Yahoo! Ecommerce,1953,0
+Quantcast Measure,183601,0
+Twitter Analytics,127491,0
+Cart Functionality,2652472,0
+Cookie Information,34985,0
+Post Affiliate Pro,5617,0
+Yahoo! Tag Manager,314,0
+EWWW Image Optimizer,86544,0
+Twitter typeahead.js,34250,0
+Ultimate GDPR & CCPA,7170,0
+Tealium AudienceStream,3177,0
+Google Customer Reviews,28602,0
+HulkApps Product Reviews,672,0
+Pinterest Conversion Tag,168926,0
+WEN Themes Education Hub,2417,0
+Cloudflare Bot Management,682043,0
+DoubleClick Ad Exchange (AdX),72626,0
+Google Call Conversion Tracking,81477,0
+DoubleClick for Publishers (DFP),136941,0
+Guestonline,247,0
+Convert,7400,0
+Satori Studio Bento,428,0
+RoundCube,1205,0
+AndersNoren Fukasawa,356,0
+FalguniThemes Nisarg,885,0
+TableCheck,230,0
+e-goi,3870,0
+Kaira Vogue,899,0
+AndersNoren Baskerville,826,0
+vcita,4426,0
+PeerTube,218,0
+Theme Freesia Edge,625,0
+Geo Targetly,280,0
+Tagboard,295,0
+ThemeGrill Cenote,623,0
+Frontify,184,0
+WEN Themes Signify Dark,321,0
+Weaver Xtreme,983,0
+LatitudePay,481,0
+Aprimo,284,0
+Handtalk,279,0
+RevLifter,317,0
+Actito,566,0
+ExtendThemes EmpowerWP,396,0
+AndersNoren Hitchcock,142,0
+Iluria,744,0
+FlagSmith,116,0
+Newspack by Automattic,271,0
+AdaSiteCompliance,284,0
+Frosmo,1082,0
+Image Relay,49,0
+TWiki,21,0
+keep. archeevo,29,0
+Gerrit,36,0
+Setmore,510,0
+Support Hero,334,0
+Upvoty,41,0
+Jumbo,200,0
+etika,15,0
+Tencent Cloud,1734,0
+KeyCDN,456,0
+Bolt CMS,983,0
+Vignette,55,0
+Amplience,582,0
+Shuttle,175,0
+RebelMouse,168,0
+WebsPlanet,448,0
+ContentBox,34,0
+Yandex.Cloud,1131,0
+Atlassian Statuspage,1738,0
+Glitch,128,0
+Hashnode,203,0
+Tamago,47,0
+Errorception,571,0
+Site Meter,1231,0
+ChannelAdvisor,1248,0
+Countly,449,0
+ip-label,180,0
+Imweb,3409,0
+Intershop,960,0
+Pattern by Etsy,652,0
+EasyStore,1141,0
+Fbits,622,0
+AmeriCommerce,669,0
+Shoppy,44,0
+Selz,81,0
+Spree,630,0
+Shopcada,139,0
+StoreHippo,131,0
+Chekkit,256,0
+Primis,1494,0
+Broadstreet,1512,0
+Dianomi,197,0
+Spotify Web API,183,0
+Homestead,867,0
+GOV.UK Toolkit,214,0
+Hund.io,35,0
+Kirki Customizer Framework,761,0
+WooCommerce Stripe Payment Gateway,127,0
+SpurIT Partial Payments App,822,0
+WorldPay,877,0
+Visa Checkout,375,0
+Cybersource,472,0
+Amex Express Checkout,117,0
+PayWhirl,84,0
+Moon,73,0
+Athena Search,8,0
+Editor.js,190,0
+Epoch,28,0
+phpCMS,17,0
+eDokan,7,0
+RevJet,45,0
+Astro,68,0
+Grab Pay Later,14,0
+Mattermost,4,0
+Sympa,8,0
+Komodo CMS,3,0
+Sirclo,55,0
+Onshop,14,0
+Partytown,14,0
+Includable,7,0
+AlternC,2,0
+Taiga,3,0
+Hypercorn,7,0
+Synology DiskStation,2,0
+Spinnakr,6,0
+Kamva,2,0
+eClass,7,0
+CrossBox,4,0
+AquilaCMS,4,0
+2017,2,0
+Captch Me,2,0
+Sotel,1,0
+ Flow Neos,2,0
+Facebook%20Login,2,0
+AMP,121608,0
+Wix,384170,0
+Grav,1139,0
+Hero,419,0
+Loox,60748,0
+Odoo,8598,0
+POWR,42430,0
+Peek,2292,0
+Sumo,52018,0
+Zope,2236,0
+Zozo,3686,0
+MySQL,4566706,0
+Najva,809,0
+Oribi,8905,0
+Osano,186027,0
+Route,7925,0
+Turbo,1452,0
+Venmo,110270,0
+WebAR,284,0
+Yotpo,71400,0
+Zepto,26516,0
+AdRoll,105136,0
+BowNow,3103,0
+Chatra,10950,0
+Criteo,519658,0
+Darwin,61,0
+Django,40383,0
+Gladly,654,0
+Gumlet,761,0
+Kinsta,69644,0
+MainAd,426,0
+Navegg,8431,0
+PayPal,476559,0
+Reddit,67,0
+STUDIO,1147,0
+Sucuri,70386,0
+Termly,2464,0
+Wistia,27495,0
+Zocdoc,885,0
+amoCRM,3770,0
+BugSnag,24548,0
+Chaport,908,0
+EC-CUBE,7021,0
+Emarsys,10528,0
+Express,178452,0
+Growave,13510,0
+HubSpot,160788,0
+Marchex,11316,0
+Node.js,275445,0
+PageFly,5471,0
+Pimcore,6974,0
+Red Hat,22870,0
+TypePad,1426,0
+Ueeshop,696,0
+WordAds,74936,0
+Zendesk,223146,0
+xCharts,800,0
+Aplazame,3716,0
+Blueknow,246,0
+Facebook,3501370,0
+GoAffPro,18077,0
+Gravatar,186295,0
+LiveChat,50625,0
+MindBody,2554,0
+OrbitFox,21586,0
+ResDiary,1555,0
+Scoop.it,832,0
+Sellingo,293,0
+Shopline,7105,0
+Sky-Shop,800,0
+i-mobile,7693,0
+1C-Bitrix,175498,0
+AccessiBe,34240,0
+Addsearch,2148,0
+Beeketing,4992,0
+Crazy Egg,69530,0
+Dreamdata,7352,0
+Foursixty,3685,0
+LazySizes,1152618,0
+OneSignal,232910,0
+PagSeguro,1043,0
+Riskified,4982,0
+ShareThis,188941,0
+SiteSpect,855,0
+TVSquared,7409,0
+TYPO3 CMS,64594,0
+Thinkific,2034,0
+UsableNet,526,0
+WP Engine,323108,0
+mod_rails,537,0
+ConvertKit,17562,0
+FlexSlider,90867,0
+GTranslate,106406,0
+Jumpseller,2472,0
+MetaSlider,61447,0
+OXID eShop,840,0
+PerimeterX,2272,0
+RapidSpike,382,0
+RevenueHut,3232,0
+SevenRooms,2224,0
+Twenty Ten,3742,0
+UserReport,3134,0
+VerifyPass,3022,0
+a-blog cms,1458,0
+Booking.com,4848,0
+GetFeedback,4270,0
+LiveJournal,7547,0
+Movable Ink,4252,0
+Orchard CMS,1435,0
+SVG Support,17718,0
+animate.css,901926,0
+nopCommerce,8192,0
+DoubleVerify,4248,0
+Facebook Pay,45380,0
+GitHub Pages,26043,0
+Sharethrough,3431,0
+Tradedoubler,2035,0
+Akamai mPulse,83244,0
+Dynamic Yield,6352,0
+PixelYourSite,155444,0
+RecoverMyCart,12080,0
+Smarter Click,2365,0
+Square Online,6710,0
+Twitch Player,17674,0
+Borlabs Cookie,68398,0
+Google AdSense,1356224,0
+Twenty Fifteen,8306,0
+aThemes Sydney,8230,0
+ClickDimensions,3667,0
+Lightspeed eCom,10308,0
+Visual Composer,7087,0
+WP Puzzle Basic,1812,0
+ExpressionEngine,9360,0
+Matomo Analytics,370631,0
+iThemes Security,7668,0
+Login with Amazon,11555,0
+Akamai Bot Manager,70536,0
+Fat-Free Framework,1327,0
+Google Web Toolkit,19146,0
+FameThemes OnePress,4965,0
+Integral Ad Science,29816,0
+Rakuten Advertising,5256,0
+Spring for creators,1374,0
+The Events Calendar,51856,0
+Themeansar Newsberg,583,0
+Google Code Prettify,28428,0
+CareCart Sales Pop Up,13458,0
+Adobe Experience Manager,33399,0
+Think Up Themes Minamaze,504,0
+Norton Shopping Guarantee,1015,0
+Trustindex Google Reviews,28944,0
+Google Ads Conversion Tracking,1512896,0
+Elementor Header & Footer Builder,45600,0
+Google Analytics Enhanced eCommerce,394969,0
+Microsoft Ajax Content Delivery Network,61713,0
+aThemes Moesia,351,0
+ArcGIS API for JavaScript,1616,0
+PhotoShelter for Brands,615,0
+Chili Piper,517,0
+Qubit,926,0
+EqualWeb,3374,0
+Timify,406,0
+Stackla,868,0
+Bread,1618,0
+Mention Me,338,0
+WalkMe,1560,0
+Flarum,486,0
+FinanceAds,281,0
+Reevoo,212,0
+4-Tell,111,0
+Duopana,236,0
+Thefork,813,0
+ContentStudio,206,0
+U-KOMI,125,0
+Fasterize,309,0
+Simplero Websites,126,0
+Stitches,440,0
+Jahia DX,636,0
+Enyo,38,0
+Eveve,178,0
+SaaSquatch,186,0
+BoldGrid,4056,0
+Thelia,1372,0
+Brightspot,1295,0
+Strapi,40,0
+Voog.com Website Builder,852,0
+Contentstack,553,0
+HCL Digital Experience,1318,0
+DM Polopoly,235,0
+Ametys,255,0
+microCMS,255,0
+Enjin CMS,133,0
+Pligg,205,0
+Proximis Unified Commerce,284,0
+pirobase CMS,31,0
+Yandex.Messenger,1956,0
+Ruby Receptionists,333,0
+user.com,21,0
+Rudderstack,718,0
+SalesReps.io,312,0
+Foxy.io,879,0
+e-Shop Commerce,523,0
+Visualsoft,1568,0
+Robin,809,0
+Freshop,460,0
+Shopaholic,108,0
+Orckestra,121,0
+Commerce Server,164,0
+PhotoShelter,124,0
+Flow,150,0
+Wix Answers,153,0
+Kevel,867,0
+Adalyser,1068,0
+Advert Stream,205,0
+HTTP/2,463,0
+SOBI 2,101,0
+Jive,62,0
+OnUniverse,74,0
+Frontastic,44,0
+Asciinema,128,0
+osTicket,380,0
+HulkApps GDPR/CCPA Compliance Manager,1158,0
+Verifone,63,0
+Google Wallet,126,0
+basket.js,682,0
+MAJIN,414,0
+Iterable,227,0
+Haskell,74,0
+Pretty Links,64,0
+YaBB,18,0
+Pleroma,6,0
+WikkaWiki,15,0
+Storyblok,18,0
+RBS Change,80,0
+Jitsi,52,0
+Imber,92,0
+actionhero.js,6,0
+CoinHive Captcha,28,0
+Sellsy,50,0
+Get Satisfaction,45,0
+Dukaan,89,0
+Jirafe,42,0
+Methode,25,0
+PizzaNetz,14,0
+eSyndiCat,11,0
+Cosmoshop,8,0
+XAMPP,1,0
+Translucide,6,0
+ Jim,1,0
+Mozard Suite,2,0
+Xeora,2,0
+v2.7.4,2,0
