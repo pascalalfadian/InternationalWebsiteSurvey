@@ -5,7 +5,7 @@ LANGUAGE js AS r"""
         return NULL;
     }
 """;
-SELECT isSupportedSingle('7.4', '>= 8.1', 'PHP', ARRAY(SELECT AS STRUCT * FROM `avian-current-603.InternationalWebsiteSurvey.technologies`)) FROM `httparchive.technologies.2023_01_01_*` LIMIT 10;
+SELECT isSupportedSingle('7.4', '>= 8.1', 'PHP', ARRAY(SELECT AS STRUCT * FROM `avian-current-603.InternationalWebsiteSurveyUS.technologies`)) FROM `httparchive.technologies.2023_01_01_*` LIMIT 10;
 
 # Loading of library to array of struct
 SELECT ARRAY(SELECT AS STRUCT * FROM `avian-current-603.InternationalWebsiteSurvey.technologies`);
