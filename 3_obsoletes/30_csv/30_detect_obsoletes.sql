@@ -8,20 +8,51 @@ LANGUAGE js AS r"""
 		return 'WARN: unidentified current version after separation: ' + currentVersion + ' (supported: ' + technologyName + ' ' + supportedVersion + ')';
 	}
 	if (supportedVersion === '-') {
-		return "FALSE";
+		return 'FALSE';
 	}
+	let operator = '', operand = '';
 	if (supportedVersion.substr(0, 2) === '>=') {
-		let operator = '>=';
-		let operand = supportedVersion.substr(2).trim();
+		operator = '>=';
+		operand = supportedVersion.substr(2).trim();
 	} else if (supportedVersion.substr(0, 1) === '>') {
-		let operator = '>';
-		let operand = supportedVersion.substr(1).trim();
+		operator = '>';
+		operand = supportedVersion.substr(1).trim();
 	} else {
-		let operator = '=';
-		let operand = supportedVersion;
+		operator = '=';
+		operand = supportedVersion;
 	}
 
-	return "TRUE";
+	arrOperand = operand.split('.');
+	arrCurrentVersion = currentVersion.split('.');
+	arrOperand.forEach(function(o, i) {
+		if (i >= arrCurrentVersion.length) {
+			return NULL;
+		}
+		if (!(/^d+$/.test(arrOperand[i])) || !(/^d+$/.test(arrCurrentVersion[i]))) {
+			return 'FAIL: Error while checking current version ' + currentVersion + ' vs supported version ' + supportedVersion + ' (non integer version: ' + arrOperand[i] + ' or ' + arrCurrentVersion[i];
+		}
+		switch (operator) {
+		case '=':
+			if (arrOperand[i] === arrCurrentVersion[i]) {
+				// void, pass
+			} else {
+				return FALSE;
+			}
+			break;
+		case '>':
+		case '>=':
+			if (parseInt(arrCurrentVersion[i]) > parseInt(arrOperand[i])) {
+				return 'TRUE';
+			} else if (parseInt(arrCurrentVersion[i]) > parseInt(arrOperand[i])) {
+				// void, check next version component
+			} else {
+				return 'FALSE';
+			}
+			break;
+		}
+	});
+
+	return 'TRUE';
 """;
 SELECT isSupportedSingle('7.4', '>= 8.1', 'PHP', ARRAY(SELECT AS STRUCT * FROM `avian-current-603.InternationalWebsiteSurveyUS.technologies`)) FROM `httparchive.technologies.2023_01_01_*` LIMIT 10;
 
