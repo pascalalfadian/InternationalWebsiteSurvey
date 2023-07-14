@@ -19,28 +19,28 @@ LANGUAGE js AS r"""
   versionChecks = supportedVersion.split(',');
   versionChecks.forEach(function(versionCheck) {
   	versionCheck = versionCheck.trim();
-  	if (versionCheck === '.' || !(/^[\d.]+$/.test(versionCheck))) {
-				return 'WARN: unidentified current version after separation: ' + versionCheck + ' (supported: ' + technologyName + ' ' + supportedVersion + ')';
+  	if (currentVersion === '.' || !(/^[\d.]+$/.test(currentVersion))) {
+				return 'WARN: unidentified current version after separation: ' + currentVersion + ' (supported: ' + technologyName + ' ' + versionCheck + ')';
 		}
 		let operator = '', operand = '';
-		if (supportedVersion.substr(0, 2) === '>=') {
+		if (versionCheck.substr(0, 2) === '>=') {
 			operator = '>=';
-			operand = supportedVersion.substr(2).trim();
-		} else if (supportedVersion.substr(0, 1) === '>') {
+			operand = versionCheck.substr(2).trim();
+		} else if (versionCheck.substr(0, 1) === '>') {
 			operator = '>';
-			operand = supportedVersion.substr(1).trim();
+			operand = versionCheck.substr(1).trim();
 		} else {
 			operator = '=';
-			operand = supportedVersion;
+			operand = versionCheck;
 		}
 		arrOperand = operand.split('.');
-		arrCurrentVersion = versionCheck.split('.');
+		arrCurrentVersion = currentVersion.split('.');
 		arrOperand.forEach(function(o, i) {
 			if (i >= arrCurrentVersion.length) {
 				return NULL;
 			}
 			if (!(/^d+$/.test(arrOperand[i])) || !(/^d+$/.test(arrCurrentVersion[i]))) {
-				return 'FAIL: Error while checking current version ' + versionCheck + ' vs supported version ' + supportedVersion + ' (non integer version: ' + arrOperand[i] + ' or ' + arrCurrentVersion[i];
+				return 'FAIL: Error while checking current version ' + currentVersion + ' vs supported version ' + versionCheck + ' (non integer version: ' + arrOperand[i] + ' or ' + arrCurrentVersion[i];
 			}
 			switch (operator) {
 			case '=':
