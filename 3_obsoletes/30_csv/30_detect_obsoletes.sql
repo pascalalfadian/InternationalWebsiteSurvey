@@ -17,8 +17,8 @@ LANGUAGE js AS r"""
   }
   currentVersion = newCurrentVersion;
   versionChecks = supportedVersion.split(',');
-  versionChecks.forEach(function(versionCheck) {
-  	versionCheck = versionCheck.trim();
+  for (let i = 0; i < versionChecks.length; i++) {
+  	versionCheck = versionChecks[i].trim();
   	if (currentVersion === '.' || !(/^[\d.]+$/.test(currentVersion))) {
 				return 'WARN: unidentified current version after separation: ' + currentVersion + ' (supported: ' + technologyName + ' ' + versionCheck + ')';
 		}
@@ -35,16 +35,16 @@ LANGUAGE js AS r"""
 		}
 		arrOperand = operand.split('.');
 		arrCurrentVersion = currentVersion.split('.');
-		arrOperand.forEach(function(o, i) {
-			if (i >= arrCurrentVersion.length) {
+		for (let j = 0; j < arrOperand.length; j++) {
+			if (j >= arrCurrentVersion.length) {
 				return NULL;
 			}
-			if (!(/^d+$/.test(arrOperand[i])) || !(/^d+$/.test(arrCurrentVersion[i]))) {
-				return 'FAIL: Error while checking current version ' + currentVersion + ' vs supported version ' + versionCheck + ' (non integer version: ' + arrOperand[i] + ' or ' + arrCurrentVersion[i];
+			if (!(/^\d+$/.test(arrOperand[j])) || !(/^\d+$/.test(arrCurrentVersion[j]))) {
+				return 'FAIL: Error while checking current version ' + currentVersion + ' vs supported version ' + versionCheck + ' (non integer version: ' + arrOperand[j] + ' or ' + arrCurrentVersion[j] + ')';
 			}
 			switch (operator) {
 			case '=':
-				if (arrOperand[i] === arrCurrentVersion[i]) {
+				if (arrOperand[j] === arrCurrentVersion[j]) {
 					// void, pass
 				} else {
 					return 'FALSE';
@@ -52,20 +52,22 @@ LANGUAGE js AS r"""
 				break;
 			case '>':
 			case '>=':
-				if (parseInt(arrCurrentVersion[i]) > parseInt(arrOperand[i])) {
+				if (operator === '>' && parseInt(arrCurrentVersion[j]) > parseInt(arrOperand[j])) {
 					return 'TRUE';
-				} else if (parseInt(arrCurrentVersion[i]) > parseInt(arrOperand[i])) {
+				} else if (operator === '>=' && parseInt(arrCurrentVersion[j]) >= parseInt(arrOperand[j])) {
+					return 'TRUE';
+        } else if (parseInt(arrCurrentVersion[j]) === parseInt(arrOperand[j])) {
 					// void, check next version component
 				} else {
 					return 'FALSE';
 				}
 				break;
 			}
-		});
-  });
+		};
+  };
 	return 'FAIL: Non-conclusive while checking current version ' + currentVersion + ' vs supported version ' + supportedVersion;
 """;
-SELECT isSupported('7.4', '>= 8.1', 'PHP', ARRAY(SELECT AS STRUCT * FROM `avian-current-603.InternationalWebsiteSurveyUS.technologies`)) FROM `httparchive.technologies.2023_01_01_*` LIMIT 10;
+SELECT isSupported('7.4', '>= 8.1', 'PHP', ARRAY(SELECT AS STRUCT * FROM `avian-current-603.InternationalWebsiteSurveyUS.technologies`)) FROM `httparchive.technologies.2023_01_01_*` LIMIT 1;
 
 # Loading of library to array of struct
 SELECT ARRAY(SELECT AS STRUCT * FROM `avian-current-603.InternationalWebsiteSurveyUS.technologies`);
