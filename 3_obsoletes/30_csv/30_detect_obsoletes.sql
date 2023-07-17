@@ -1,4 +1,4 @@
-CREATE TEMP FUNCTION isSupported(currentVersion STRING, supportedVersion STRING, technologyName STRING, supportedVersions ARRAY<STRUCT<name STRING,num_sites INT64,num_unversioned INT64,num_versioned INT64,website STRING,min_supported_version STRING,min_supported_version_eol STRING,min_supported_version_reference STRING>>)
+CREATE OR REPLACE FUNCTION InternationalWebsiteSurveyUS.isSupported(currentVersion STRING, supportedVersion STRING, technologyName STRING)
 RETURNS STRING
 LANGUAGE js AS r"""
 	if (!currentVersion || !supportedVersion || supportedVersion === '?') {
@@ -67,7 +67,10 @@ LANGUAGE js AS r"""
   };
 	return 'FAIL: Non-conclusive while checking current version ' + currentVersion + ' vs supported version ' + supportedVersion;
 """;
-SELECT isSupported('7.4', '>= 8.1', 'PHP', ARRAY(SELECT AS STRUCT * FROM `avian-current-603.InternationalWebsiteSurveyUS.technologies`)) FROM `httparchive.technologies.2023_01_01_*` LIMIT 1;
+SELECT InternationalWebsiteSurvey.isSupported('7.4', '>= 8.1', 'PHP') FROM `httparchive.technologies.2023_01_01_*` LIMIT 1;
 
 # Loading of library to array of struct
 SELECT ARRAY(SELECT AS STRUCT * FROM `avian-current-603.InternationalWebsiteSurveyUS.technologies`);
+
+# Warning: may cause large bills
+SELECT url, app, min_supported_version FROM `httparchive.technologies.2023_01_01_*` LEFT JOIN `avian-current-603.InternationalWebsiteSurveyUS.technologies` ON `httparchive.technologies.2023_01_01_*`.app = `avian-current-603.InternationalWebsiteSurveyUS.technologies`.name WHERE min_supported_version != '?';
