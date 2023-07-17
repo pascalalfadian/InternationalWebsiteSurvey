@@ -13,14 +13,16 @@ LANGUAGE js AS r"""
   }
   newCurrentVersion = currentVersion.replace(/^([0-9.]*)([^.0-9]*)$/, '$1')
   if (supportedVersion !== '-' && (newCurrentVersion === '.' || !(/^[\d.]+$/.test(currentVersion)))) {
-    return 'WARN: unidentified current version: ' + currentVersion + '(supported: ' + technologyName + ' ' + supportedVersion + ')';
+    // return 'WARN: unidentified current version: ' + currentVersion + ' (supported: ' + technologyName + ' ' + supportedVersion + ')';
+    return 'Non-conclusive';
   }
   currentVersion = newCurrentVersion;
   versionChecks = supportedVersion.split(',');
   for (let i = 0; i < versionChecks.length; i++) {
   	versionCheck = versionChecks[i].trim();
   	if (currentVersion === '.' || !(/^[\d.]+$/.test(currentVersion))) {
-				return 'WARN: unidentified current version after separation: ' + currentVersion + ' (supported: ' + technologyName + ' ' + versionCheck + ')';
+				// return 'WARN: unidentified current version after separation: ' + currentVersion + ' (supported: ' + technologyName + ' ' + versionCheck + ')';
+				return 'Non-conclusive';
 		}
 		let operator = '', operand = '';
 		if (versionCheck.substr(0, 2) === '>=') {
@@ -63,14 +65,17 @@ LANGUAGE js AS r"""
 				}
 				break;
 			}
-		};
-  };
+		}
+		if (operator === '>=') {
+			return 'Supported';
+		}
+		if (operator === '>' && arrCurrentVersion.length > arrOperand.length) {
+			return 'Supported';
+		}
+		if (operator === '=' && arrCurrentVersion.let === arrOperand.length) {
+			return 'Supported';
+		}
+		return 'Unsupported';
+  }
 	return 'FAIL: Non-conclusive while checking current version ' + currentVersion + ' vs supported version ' + supportedVersion;
 """;
-SELECT InternationalWebsiteSurvey.isSupported('7.4', '>= 8.1', 'PHP') FROM `httparchive.technologies.2023_01_01_*` LIMIT 1;
-
-# Loading of library to array of struct
-SELECT ARRAY(SELECT AS STRUCT * FROM `avian-current-603.InternationalWebsiteSurveyUS.technologies`);
-
-# Warning: may cause large bills
-SELECT url, app, min_supported_version FROM `httparchive.technologies.2023_01_01_*` LEFT JOIN `avian-current-603.InternationalWebsiteSurveyUS.technologies` ON `httparchive.technologies.2023_01_01_*`.app = `avian-current-603.InternationalWebsiteSurveyUS.technologies`.name WHERE min_supported_version != '?';
