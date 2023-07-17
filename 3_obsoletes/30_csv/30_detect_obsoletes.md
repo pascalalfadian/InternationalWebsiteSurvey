@@ -1,12 +1,12 @@
 # Overall Technologies Used
 
-* Supported: 865
-* Unsupported: 1508
-* Non-conclusive: 1409
+* Supported: 43.720.871
+* Unsupported: 36.284.319
+* Non-conclusive: 432.824.110
 * Not-versioned: 130.584.642
 
 <details>
-<sumary>SQL queries</sumary>
+<summary>SQL queries</summary>
 
 ```sql
 #Supported, Unsupported, Non-conclusive

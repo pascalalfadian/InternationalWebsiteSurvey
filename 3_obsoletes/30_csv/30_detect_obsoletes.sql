@@ -8,7 +8,7 @@ LANGUAGE js AS r"""
     return 'Unsupported';
   }
   if (currentVersion === 'squeeze' && technologyName === 'Debian') {
-    return "WARN: codename 'squeeze' renamed to 6.0 for Debian";
+    // return "WARN: codename 'squeeze' renamed to 6.0 for Debian";
     currentVersion = '6.0';
   }
   newCurrentVersion = currentVersion.replace(/^([0-9.]*)([^.0-9]*)$/, '$1')
@@ -42,7 +42,8 @@ LANGUAGE js AS r"""
 				return 'Non-conclusive';
 			}
 			if (!(/^\d+$/.test(arrOperand[j])) || !(/^\d+$/.test(arrCurrentVersion[j]))) {
-				return 'FAIL: Error while checking current version ' + currentVersion + ' vs supported version ' + versionCheck + ' (non integer version: ' + arrOperand[j] + ' or ' + arrCurrentVersion[j] + ')';
+				// return 'FAIL: Error while checking current version ' + currentVersion + ' vs supported version ' + versionCheck + ' (non integer version: ' + arrOperand[j] + ' or ' + arrCurrentVersion[j] + ')';
+				return 'Non-conclusive';
 			}
 			switch (operator) {
 			case '=':
