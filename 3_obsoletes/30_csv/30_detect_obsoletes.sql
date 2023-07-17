@@ -2,7 +2,7 @@ CREATE OR REPLACE FUNCTION InternationalWebsiteSurveyUS.isSupported(currentVersi
 RETURNS STRING
 LANGUAGE js AS r"""
 	if (!currentVersion || !supportedVersion || supportedVersion === '?') {
-		return NULL;
+		return null;
 	}
   if (currentVersion.indexOf('alpha') !== -1 || currentVersion.indexOf('beta') !== -1 || supportedVersion === '-') {
     return 'FALSE';
@@ -37,7 +37,7 @@ LANGUAGE js AS r"""
 		arrCurrentVersion = currentVersion.split('.');
 		for (let j = 0; j < arrOperand.length; j++) {
 			if (j >= arrCurrentVersion.length) {
-				return NULL;
+				return null;
 			}
 			if (!(/^\d+$/.test(arrOperand[j])) || !(/^\d+$/.test(arrCurrentVersion[j]))) {
 				return 'FAIL: Error while checking current version ' + currentVersion + ' vs supported version ' + versionCheck + ' (non integer version: ' + arrOperand[j] + ' or ' + arrCurrentVersion[j] + ')';
