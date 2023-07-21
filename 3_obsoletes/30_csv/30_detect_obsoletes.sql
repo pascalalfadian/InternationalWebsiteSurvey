@@ -1,9 +1,12 @@
 CREATE OR REPLACE FUNCTION InternationalWebsiteSurveyUS.isSupported(currentVersion STRING, supportedVersion STRING, technologyName STRING)
 RETURNS STRING
 LANGUAGE js AS r"""
-	if (!currentVersion || !supportedVersion || supportedVersion === '?') {
-		return 'Non-conclusive';
-	}
+  if (!currentVersion) {
+    return 'Not-versioned';
+  }
+  if (!currentVersion || !supportedVersion || supportedVersion === '?') {
+    return 'Non-conclusive';
+  }
   if (currentVersion.indexOf('alpha') !== -1 || currentVersion.indexOf('beta') !== -1 || supportedVersion === '-') {
     return 'Unsupported';
   }
