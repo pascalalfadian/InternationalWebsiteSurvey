@@ -19,7 +19,6 @@ SELECT InternationalWebsiteSurveyUS.isSupported(info, min_supported_version, app
 <summary>SQL queries</summary>
 
 ```sql
-# Supported, Unsupported, Non-conclusive
 SELECT InternationalWebsiteSurveyUS.isSupported(info, min_supported_version, app) as supported, app, COUNT(app) AS total FROM `httparchive.technologies.2023_01_01_*` LEFT JOIN `avian-current-603.InternationalWebsiteSurveyUS.technologies` ON `httparchive.technologies.2023_01_01_*`.app = `avian-current-603.InternationalWebsiteSurveyUS.technologies`.name LEFT JOIN `httparchive.summary_pages.2023_01_01_*` ON `httparchive.summary_pages.2023_01_01_*`.url = `httparchive.technologies.2023_01_01_*`.url WHERE rank <= 1000 GROUP BY supported, app;
 ```
 </details>
@@ -41,7 +40,7 @@ SELECT `httparchive.summary_pages.2023_01_01_*`.url AS url, COUNTIF(Internationa
 </details>
 
 | url                                 | Supported | Unsupported | Non-conclusive | Not-versioned |
-|-------------------------------------|-----------|-------------|----------------|---------------|
+|-------------------------------------|----------:|------------:|---------------:|--------------:|
 | 18comic.vip                         | 0         | 8           | 4              | 36            |
 | 1stkissmanga.io                     | 24        | 4           | 12             | 80            |
 | 1xnxx.health                        | 1         | 1           | 1              | 5             |
@@ -957,20 +956,42 @@ SELECT `httparchive.summary_pages.2023_01_01_*`.url AS url, COUNTIF(Internationa
 
 # of unsupported technologies per site (bins)
 
-|   Rank    | 0 unsupported  | 1 unsups | 2 unsups | 3 unsups | 4+ unsups |
-| --------- | -------------- | -------- | -------- | -------- | --------- | 
-| 1-150     |             56 |       58 |       26 |        9 |         1 |
-| 151-300   |             52 |       55 |       29 |       12 |         2 |
-| 301-450   |             59 |       43 |       32 |       10 |         6 |
-| 451-600   |             56 |       48 |       22 |       21 |         3 |
-| 601-750   |             59 |       58 |       22 |       10 |         1 |
-| 751-900   |             68 |       44 |       25 |        8 |         5 |
-| 901-1050  |             65 |       42 |       30 |       10 |         3 |
-| 1051-1200 |             56 |       46 |       34 |       10 |         4 |
-| 1201-1350 |             50 |       57 |       31 |       11 |         1 |
-| 1351-1500 |             62 |       46 |       29 |       11 |         2 |
+<details>
+<summary>SQL queries</summary>
+
+```sql
+# Save as unsupporteds table
+SELECT `httparchive.summary_pages.2023_01_01_*`.url AS url, COUNTIF(InternationalWebsiteSurveyUS.isSupported(info, min_supported_version, app) = 'Unsupported') AS Unsupported, AVG(rank) AS url_rank FROM `httparchive.technologies.2023_01_01_*` LEFT JOIN `avian-current-603.InternationalWebsiteSurveyUS.technologies` ON `httparchive.technologies.2023_01_01_*`.app = `avian-current-603.InternationalWebsiteSurveyUS.technologies`.name LEFT JOIN `httparchive.summary_pages.2023_01_01_*` ON `httparchive.summary_pages.2023_01_01_*`.url = `httparchive.technologies.2023_01_01_*`.url GROUP BY url;
+# Then do this
+SELECT ROUND(url_rank) as `Rank`, COUNTIF(Unsupported = 0) AS `0 unsupported`, COUNTIF(Unsupported = 1) AS `1 unsups`, COUNTIF(Unsupported = 2) AS `2 unsups`, COUNTIF(Unsupported = 3) AS `3 unsups`, COUNTIF(Unsupported >= 4) AS `4+ unsups` FROM `avian-current-603.InternationalWebsiteSurveyUS.unsupporteds` GROUP BY url_rank ORDER BY `Rank`;
+```
+</details>
+
+| Rank       | 0 unsupported | 1 unsups | 2 unsups | 3 unsups | 4+ unsups |
+|-----------:|--------------:|---------:|---------:|---------:|----------:|
+| 1000.0     | 472           | 78       | 61       | 9        | 292       |
+| 5000.0     | 1720          | 230      | 213      | 33       | 1432      |
+| 10000.0    | 2028          | 276      | 258      | 43       | 1954      |
+| 50000.0    | 15170         | 1736     | 1668     | 323      | 17737     |
+| 100000.0   | 17921         | 2031     | 1754     | 322      | 23939     |
+| 500000.0   | 132611        | 14023    | 11825    | 2361     | 209208    |
+| 1000000.0  | 158455        | 16402    | 14152    | 3532     | 274478    |
+| 5000000.0  | 1232289       | 218677   | 172057   | 67446    | 2105496   |
+| 10000000.0 | 1595443       | 490437   | 327960   | 154903   | 2216236   |
+| 50000000.0 | 2639938       | 780159   | 450957   | 197963   | 3168854   |
 
 # Top 15 popular technologies
+
+<details>
+<summary>SQL queries</summary>
+
+```sql
+# Save as top50populartechs table
+SELECT COUNT(app) AS num_sites, app FROM `httparchive.technologies.2023_01_01_*` GROUP BY app ORDER BY num_sites DESC LIMIT 50;
+# Then do this
+# TODO
+```
+</details>
 
 | num_sites |        Name        |   Supported    |  Unsupported   | Non-conclusive | Not-versioned  |
 | --------- | ------------------ | -------------- | -------------- | -------------- | -------------- |
