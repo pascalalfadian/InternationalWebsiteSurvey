@@ -1123,6 +1123,24 @@ ORDER BY num_sites DESC;
 
 # Interesting technologies
 
+<details>
+<summary>SQL queries</summary>
+
+```sql
+SELECT
+  app,
+  info,
+  COUNT(info) AS count,
+  InternationalWebsiteSurveyUS.isSupported(info, min_supported_version, app) AS is_supported
+FROM `httparchive.technologies.2023_01_01_*`
+  LEFT JOIN `avian-current-603.InternationalWebsiteSurveyUS.technologies` ON `httparchive.technologies.2023_01_01_*`.app = `avian-current-603.InternationalWebsiteSurveyUS.technologies`.name
+  LEFT JOIN `httparchive.summary_pages.2023_01_01_*` ON `httparchive.summary_pages.2023_01_01_*`.url = `httparchive.technologies.2023_01_01_*`.url
+WHERE app IN ('jQuery', 'jQuery Migrate', 'PHP', 'Font Awesome', 'jQuery UI', 'WordPress', 'Lodash', 'Underscore.js', 'Nginx', 'Modernizr', 'Apache', 'Yoast SEO' ,'FancyBox')
+GROUP BY info, min_supported_version, app
+ORDER BY app, info;
+```
+</details>
+
 ## jQuery
 
 |    version     | count | is_supported |
