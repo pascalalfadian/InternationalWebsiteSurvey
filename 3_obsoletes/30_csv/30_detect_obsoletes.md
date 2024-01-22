@@ -954,7 +954,7 @@ SELECT `httparchive.summary_pages.2023_01_01_*`.url AS url, COUNTIF(Internationa
 | zoro.to                             | 8         | 0           | 0              | 32            |
 | zozo.jp                             | 4         | 4           | 12             | 126           |
 
-# of unsupported technologies per site (bins)
+# # of unsupported technologies per site (bins)
 
 <details>
 <summary>SQL queries</summary>
