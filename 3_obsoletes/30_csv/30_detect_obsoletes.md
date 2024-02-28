@@ -57,24 +57,20 @@ SELECT `httparchive.summary_pages.2022_02_01_*`.url AS url, COUNTIF(Internationa
 
 ```sql
 # Save as unsupporteds table
-SELECT `httparchive.summary_pages.2023_01_01_*`.url AS url, COUNTIF(InternationalWebsiteSurveyUS.isSupported(info, min_supported_version, app) = 'Unsupported') AS Unsupported, AVG(rank) AS url_rank FROM `httparchive.technologies.2023_01_01_*` LEFT JOIN `avian-current-603.InternationalWebsiteSurveyUS.technologies` ON `httparchive.technologies.2023_01_01_*`.app = `avian-current-603.InternationalWebsiteSurveyUS.technologies`.name LEFT JOIN `httparchive.summary_pages.2023_01_01_*` ON `httparchive.summary_pages.2023_01_01_*`.url = `httparchive.technologies.2023_01_01_*`.url GROUP BY url;
+SELECT `httparchive.summary_pages.2022_02_01_*`.url AS url, COUNTIF(InternationalWebsiteSurveyUS.isSupported(info, min_supported_version, app) = 'Unsupported') AS Unsupported, AVG(rank) AS url_rank FROM `httparchive.technologies.2022_02_01_*` LEFT JOIN `avian-current-603.InternationalWebsiteSurveyUS.technologies` ON `httparchive.technologies.2022_02_01_*`.app = `avian-current-603.InternationalWebsiteSurveyUS.technologies`.name LEFT JOIN `httparchive.summary_pages.2022_02_01_*` ON `httparchive.summary_pages.2022_02_01_*`.url = `httparchive.technologies.2022_02_01_*`.url GROUP BY url;
 # Then do this
-SELECT ROUND(url_rank) as `Rank`, COUNTIF(Unsupported = 0) AS `0 unsupported`, COUNTIF(Unsupported = 1) AS `1 unsups`, COUNTIF(Unsupported = 2) AS `2 unsups`, COUNTIF(Unsupported = 3) AS `3 unsups`, COUNTIF(Unsupported >= 4) AS `4+ unsups` FROM `avian-current-603.InternationalWebsiteSurveyUS.unsupporteds` GROUP BY url_rank ORDER BY `Rank`;
+SELECT ROUND(url_rank) as `Rank`, COUNTIF(Unsupported = 0)/COUNT(Unsupported) AS `0 unsupported`, COUNTIF(Unsupported = 1)/COUNT(Unsupported) AS `1 unsups`, COUNTIF(Unsupported = 2)/COUNT(Unsupported) AS `2 unsups`, COUNTIF(Unsupported = 3) AS `3 unsups`, COUNTIF(Unsupported >= 4)/COUNT(Unsupported) AS `4+ unsups`, COUNT(Unsupported) AS total FROM `avian-current-603.InternationalWebsiteSurveyUS.unsupporteds` GROUP BY url_rank ORDER BY `Rank`;
 ```
 </details>
 
-| Rank       | 0 unsupported | 1 unsups | 2 unsups | 3 unsups | 4+ unsups |
-|-----------:|--------------:|---------:|---------:|---------:|----------:|
-| 1000.0     | 472           | 78       | 61       | 9        | 292       |
-| 5000.0     | 1720          | 230      | 213      | 33       | 1432      |
-| 10000.0    | 2028          | 276      | 258      | 43       | 1954      |
-| 50000.0    | 15170         | 1736     | 1668     | 323      | 17737     |
-| 100000.0   | 17921         | 2031     | 1754     | 322      | 23939     |
-| 500000.0   | 132611        | 14023    | 11825    | 2361     | 209208    |
-| 1000000.0  | 158455        | 16402    | 14152    | 3532     | 274478    |
-| 5000000.0  | 1232289       | 218677   | 172057   | 67446    | 2105496   |
-| 10000000.0 | 1595443       | 490437   | 327960   | 154903   | 2216236   |
-| 50000000.0 | 2639938       | 780159   | 450957   | 197963   | 3168854   |
+| Rank       | 0 unsupported       | 1 unsups             | 2 unsups             | 3 unsups | 4+ unsups           | total   |
+|------------|---------------------|----------------------|----------------------|----------|---------------------|---------|
+|            | 0.0                 | 0.0                  | 0.0                  | 1        | 0.0                 | 1       |
+| 1000.0     | 0.44739638682252925 | 0.073326248671625932 | 0.07970244420828905  | 8        | 0.39107332624867164 | 941     |
+| 10000.0    | 0.350058207217695   | 0.051571594877764845 | 0.066938300349243307 | 100      | 0.519790454016298   | 8590    |
+| 100000.0   | 0.28363762422001387 | 0.033568292119251213 | 0.042269470764964179 | 878      | 0.63037901548416919 | 86540   |
+| 1000000.0  | 0.22415723063632625 | 0.026182191481049076 | 0.0320987343135424   | 8444     | 0.70788731071130273 | 872807  |
+| 10000000.0 | 0.22061244177546491 | 0.12442777027764852  | 0.10330856551855569  | 446165   | 0.48958701529400389 | 7188765 |
 
 # Top 50 popular technologies
 
