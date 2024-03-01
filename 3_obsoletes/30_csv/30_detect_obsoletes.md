@@ -34,21 +34,23 @@ SELECT InternationalWebsiteSurveyUS.isSupported(info, min_supported_version, app
 <summary>SQL queries</summary>
 
 ```sql
-SELECT `httparchive.summary_pages.2022_02_01_*`.url AS url, COUNTIF(InternationalWebsiteSurveyUS.isSupported(info, min_supported_version, app) = 'Supported') AS Supported, COUNTIF(InternationalWebsiteSurveyUS.isSupported(info, min_supported_version, app) = 'Unsupported') AS Unsupported, COUNTIF(InternationalWebsiteSurveyUS.isSupported(info, min_supported_version, app) = 'Non-conclusive') AS `Non-conclusive`, COUNTIF(InternationalWebsiteSurveyUS.isSupported(info, min_supported_version, app) = 'Not-versioned') AS `Not-versioned` FROM `httparchive.technologies.2022_02_01_*` LEFT JOIN `avian-current-603.InternationalWebsiteSurveyUS.technologies2023` ON `httparchive.technologies.2022_02_01_*`.app = `avian-current-603.InternationalWebsiteSurveyUS.technologies2023`.name LEFT JOIN `httparchive.summary_pages.2022_02_01_*` ON `httparchive.summary_pages.2022_02_01_*`.url = `httparchive.technologies.2022_02_01_*`.url WHERE `httparchive.summary_pages.2022_02_01_*`.url IN ('https://hochi.news/', 'https://www.alphapolis.co.jp/', 'https://www.banesconline.com', 'https://manatoki114.net/', 'https://quizizz.com', 'https://m.999.md/', 'https://www.youjizz.com/', 'https://pornolaba.mobi/', 'https://www.tjk.org/', 'https://search.seznam.cz/') GROUP BY `httparchive.summary_pages.2022_02_01_*`.url;
+SELECT `httparchive.summary_pages.2023_01_01_*`.url AS url, COUNTIF(InternationalWebsiteSurveyUS.isSupported(info, min_supported_version, app) = 'Supported') AS Supported, COUNTIF(InternationalWebsiteSurveyUS.isSupported(info, min_supported_version, app) = 'Unsupported') AS Unsupported, COUNTIF(InternationalWebsiteSurveyUS.isSupported(info, min_supported_version, app) = 'Non-conclusive') AS `Non-conclusive`, COUNTIF(InternationalWebsiteSurveyUS.isSupported(info, min_supported_version, app) = 'Not-versioned') AS `Not-versioned` FROM `httparchive.technologies.2023_01_01_*` LEFT JOIN `avian-current-603.InternationalWebsiteSurveyUS.technologies2023` ON `httparchive.technologies.2023_01_01_*`.app = `avian-current-603.InternationalWebsiteSurveyUS.technologies2023`.name LEFT JOIN `httparchive.summary_pages.2023_01_01_*` ON `httparchive.summary_pages.2023_01_01_*`.url = `httparchive.technologies.2023_01_01_*`.url WHERE `httparchive.summary_pages.2023_01_01_*`.url IN ('https://www.pakistanipornx.com/', 'https://www.gov.br/', 'https://tecno.servicewebly.com/', 'https://bbs.animanch.com/', 'https://www.google.co.th/', 'https://igram.io/', 'https://clever.com/', 'https://veja.abril.com.br/', 'https://m.gsmarena.com/', 'https://www.amazon.co.jp/') GROUP BY `httparchive.summary_pages.2023_01_01_*`.url;
 ```
 
 </details>
 
-| url                           | Supported | Unsupported | Non-conclusive | Not-versioned |
-|-------------------------------|-----------|-------------|----------------|---------------|
-| https://hochi.news/           | 8         | 0           | 0              | 92            |
-| https://www.alphapolis.co.jp/ | 8         | 0           | 4              | 84            |
-| https://manatoki114.net/      | 0         | 12          | 8              | 50            |
-| https://m.999.md/             | 0         | 3           | 3              | 14            |
-| https://www.youjizz.com/      | 4         | 4           | 0              | 22            |
-| https://pornolaba.mobi/       | 0         | 1           | 0              | 4             |
-| https://www.tjk.org/          | 0         | 4           | 0              | 4             |
-| https://search.seznam.cz/     | 4         | 0           | 4              | 8             |
+| url                             | Supported | Unsupported | Non-conclusive | Not-versioned |
+|---------------------------------|-----------|-------------|----------------|---------------|
+| https://www.pakistanipornx.com/ | 0         | 1           | 0              | 6             |
+| https://www.gov.br/             | 0         | 8           | 20             | 40            |
+| https://tecno.servicewebly.com/ | 0         | 1           | 2              | 10            |
+| https://bbs.animanch.com/       | 12        | 0           | 4              | 62            |
+| https://www.google.co.th/       | 0         | 0           | 0              | 12            |
+| https://igram.io/               | 4         | 0           | 8              | 48            |
+| https://clever.com/             | 1         | 2           | 2              | 24            |
+| https://veja.abril.com.br/      | 4         | 0           | 4              | 138           |
+| https://m.gsmarena.com/         | 1         | 1           | 0              | 24            |
+| https://www.amazon.co.jp/       | 4         | 0           | 0              | 32            |
 
 # # of unsupported technologies per site (bins)
 
@@ -56,21 +58,26 @@ SELECT `httparchive.summary_pages.2022_02_01_*`.url AS url, COUNTIF(Internationa
 <summary>SQL queries</summary>
 
 ```sql
-# Save as unsupporteds table
-SELECT `httparchive.summary_pages.2022_02_01_*`.url AS url, COUNTIF(InternationalWebsiteSurveyUS.isSupported(info, min_supported_version, app) = 'Unsupported') AS Unsupported, AVG(rank) AS url_rank FROM `httparchive.technologies.2022_02_01_*` LEFT JOIN `avian-current-603.InternationalWebsiteSurveyUS.technologies2023` ON `httparchive.technologies.2022_02_01_*`.app = `avian-current-603.InternationalWebsiteSurveyUS.technologies2023`.name LEFT JOIN `httparchive.summary_pages.2022_02_01_*` ON `httparchive.summary_pages.2022_02_01_*`.url = `httparchive.technologies.2022_02_01_*`.url GROUP BY url;
+# Save as unsupporteds2023 table
+SELECT `httparchive.summary_pages.2023_01_01_*`.url AS url, COUNTIF(InternationalWebsiteSurveyUS.isSupported(info, min_supported_version, app) = 'Unsupported') AS Unsupported, AVG(rank) AS url_rank FROM `httparchive.technologies.2023_01_01_*` LEFT JOIN `avian-current-603.InternationalWebsiteSurveyUS.technologies2023` ON `httparchive.technologies.2023_01_01_*`.app = `avian-current-603.InternationalWebsiteSurveyUS.technologies2023`.name LEFT JOIN `httparchive.summary_pages.2023_01_01_*` ON `httparchive.summary_pages.2023_01_01_*`.url = `httparchive.technologies.2023_01_01_*`.url GROUP BY url;
 # Then do this
-SELECT ROUND(url_rank) as `Rank`, ROUND(COUNTIF(Unsupported = 0)/COUNT(Unsupported),5) AS `0 unsupported`, ROUND(COUNTIF(Unsupported = 1)/COUNT(Unsupported),5) AS `1 unsups`, ROUND(COUNTIF(Unsupported = 2)/COUNT(Unsupported),5) AS `2 unsups`, ROUND(COUNTIF(Unsupported = 3)/COUNT(Unsupported),5) AS `3 unsups`, ROUND(COUNTIF(Unsupported >= 4)/COUNT(Unsupported),5) AS `4+ unsups`, COUNT(Unsupported) AS total FROM `avian-current-603.InternationalWebsiteSurveyUS.unsupporteds` GROUP BY url_rank ORDER BY `Rank`;
+SELECT ROUND(url_rank) as `Rank`, ROUND(COUNTIF(Unsupported = 0)/COUNT(Unsupported),5) AS `0 unsupported`, ROUND(COUNTIF(Unsupported = 1)/COUNT(Unsupported),5) AS `1 unsups`, ROUND(COUNTIF(Unsupported = 2)/COUNT(Unsupported),5) AS `2 unsups`, ROUND(COUNTIF(Unsupported = 3)/COUNT(Unsupported),5) AS `3 unsups`, ROUND(COUNTIF(Unsupported >= 4)/COUNT(Unsupported),5) AS `4+ unsups`, COUNT(Unsupported) AS total FROM `avian-current-603.InternationalWebsiteSurveyUS.unsupporteds2023` GROUP BY url_rank ORDER BY `Rank`;
 ```
 </details>
 
-| Rank       | 0 unsupported | 1 unsups | 2 unsups | 3 unsups | 4+ unsups | total   |
-|-----------:|--------------:|---------:|---------:|---------:|----------:|--------:|
-|            | 0.0           | 0.0      | 0.0      | 1.0      | 0.0       | 1       |
-| 1000.0     | 0.4474        | 0.07333  | 0.0797   | 0.0085   | 0.39107   | 941     |
-| 10000.0    | 0.35006       | 0.05157  | 0.06694  | 0.01164  | 0.51979   | 8590    |
-| 100000.0   | 0.28364       | 0.03357  | 0.04227  | 0.01015  | 0.63038   | 86540   |
-| 1000000.0  | 0.22416       | 0.02618  | 0.0321   | 0.00967  | 0.70789   | 872807  |
-| 10000000.0 | 0.22061       | 0.12443  | 0.10331  | 0.06206  | 0.48959   | 7188765 |
+| Rank     | 0 unsupported | 1 unsups | 2 unsups | 3 unsups | 4+ unsups | total   |
+|---------:|--------------:|---------:|---------:|---------:|----------:|--------:|
+|          | 0.0           | 0.0      | 0.0      | 0.0      | 1.0       | 1       |
+| 1000     | 0.51754       | 0.08553  | 0.06689  | 0.00987  | 0.32018   | 912     |
+| 5000     | 0.47409       | 0.0634   | 0.05871  | 0.0091   | 0.39471   | 3628    |
+| 10000    | 0.44483       | 0.06054  | 0.05659  | 0.00943  | 0.4286    | 4559    |
+| 50000    | 0.41407       | 0.04739  | 0.0455   | 0.00884  | 0.4842    | 36634   |
+| 100000   | 0.38987       | 0.04418  | 0.03814  | 0.00703  | 0.52079   | 45967   |
+| 500000   | 0.35835       | 0.03788  | 0.03196  | 0.0064   | 0.56541   | 370028  |
+| 1000000  | 0.33925       | 0.0351   | 0.03033  | 0.00757  | 0.58776   | 467019  |
+| 5000000  | 0.32457       | 0.0576   | 0.04534  | 0.01777  | 0.55471   | 3795965 |
+| 10000000 | 0.33335       | 0.10249  | 0.06855  | 0.03239  | 0.46322   | 4784979 |
+| 50000000 | 0.36466       | 0.10778  | 0.06232  | 0.02736  | 0.43788   | 7237871 |
 
 # Top 15 popular technologies
 
@@ -78,41 +85,42 @@ SELECT ROUND(url_rank) as `Rank`, ROUND(COUNTIF(Unsupported = 0)/COUNT(Unsupport
 <summary>SQL queries</summary>
 
 ```sql
-# Save as top15populartechs table
-SELECT COUNT(app) AS num_sites, app FROM `httparchive.technologies.2022_02_01_*` GROUP BY app ORDER BY num_sites DESC LIMIT 15;
+# Save as top15populartechs2023 table
+SELECT COUNT(app) AS num_sites, app FROM `httparchive.technologies.2023_01_01_*` GROUP BY app ORDER BY num_sites DESC LIMIT 15;
 # Then do this
 SELECT
-  AVG(`avian-current-603.InternationalWebsiteSurveyUS.top15populartechs`.num_sites) AS num_sites,
-  `avian-current-603.InternationalWebsiteSurveyUS.top15populartechs`.app,
-  COUNTIF(InternationalWebsiteSurveyUS.isSupported(info, min_supported_version, `avian-current-603.InternationalWebsiteSurveyUS.top15populartechs`.app) = 'Supported') AS Supported,
-  COUNTIF(InternationalWebsiteSurveyUS.isSupported(info, min_supported_version, `avian-current-603.InternationalWebsiteSurveyUS.top15populartechs`.app) = 'Unsupported') AS Unsupported,
-  COUNTIF(InternationalWebsiteSurveyUS.isSupported(info, min_supported_version, `avian-current-603.InternationalWebsiteSurveyUS.top15populartechs`.app) = 'Non-conclusive') AS `Non-conclusive`,
-  COUNTIF(InternationalWebsiteSurveyUS.isSupported(info, min_supported_version, `avian-current-603.InternationalWebsiteSurveyUS.top15populartechs`.app) = 'Not-versioned') AS `Not-versioned`
-FROM `avian-current-603.InternationalWebsiteSurveyUS.top15populartechs`
-  LEFT JOIN `httparchive.technologies.2022_02_01_*` ON `avian-current-603.InternationalWebsiteSurveyUS.top15populartechs`.app = `httparchive.technologies.2022_02_01_*`.app
-  LEFT JOIN `avian-current-603.InternationalWebsiteSurveyUS.technologies2023` ON `httparchive.technologies.2022_02_01_*`.app = `avian-current-603.InternationalWebsiteSurveyUS.technologies2023`.name
-GROUP BY `avian-current-603.InternationalWebsiteSurveyUS.top15populartechs`.app
+  AVG(`avian-current-603.InternationalWebsiteSurveyUS.top15populartechs2023`.num_sites) AS num_sites,
+  `avian-current-603.InternationalWebsiteSurveyUS.top15populartechs2023`.app,
+  COUNTIF(InternationalWebsiteSurveyUS.isSupported(info, min_supported_version, `avian-current-603.InternationalWebsiteSurveyUS.top15populartechs2023`.app) = 'Supported') AS Supported,
+  COUNTIF(InternationalWebsiteSurveyUS.isSupported(info, min_supported_version, `avian-current-603.InternationalWebsiteSurveyUS.top15populartechs2023`.app) = 'Unsupported') AS Unsupported,
+  COUNTIF(InternationalWebsiteSurveyUS.isSupported(info, min_supported_version, `avian-current-603.InternationalWebsiteSurveyUS.top15populartechs2023`.app) = 'Non-conclusive') AS `Non-conclusive`,
+  COUNTIF(InternationalWebsiteSurveyUS.isSupported(info, min_supported_version, `avian-current-603.InternationalWebsiteSurveyUS.top15populartechs2023`.app) = 'Not-versioned') AS `Not-versioned`
+FROM `avian-current-603.InternationalWebsiteSurveyUS.top15populartechs2023`
+  LEFT JOIN `httparchive.technologies.2023_01_01_*` ON `avian-current-603.InternationalWebsiteSurveyUS.top15populartechs2023`.app = `httparchive.technologies.2023_01_01_*`.app
+  LEFT JOIN `avian-current-603.InternationalWebsiteSurveyUS.technologies2023` ON `httparchive.technologies.2023_01_01_*`.app = `avian-current-603.InternationalWebsiteSurveyUS.technologies2023`.name
+GROUP BY `avian-current-603.InternationalWebsiteSurveyUS.top15populartechs2023`.app
 ORDER BY num_sites DESC;
 ```
 </details>
 
-| num_sites  | app                    | Supported | Unsupported | Non-conclusive | Not-versioned |
-|-----------:|------------------------|----------:|------------:|---------------:|--------------:|
-| 10618548.0 | jQuery                 | 4874206   | 5637178     | 753            | 106411        |
-| 8672479.0  | Google Analytics       | 0         | 0           | 0              | 8672479       |
-| 8496065.0  | WordPress              | 590       | 5466306     | 0              | 3029169       |
-| 7521722.0  | Nginx                  | 1382539   | 2612        | 0              | 6136571       |
-| 7269867.0  | PHP                    | 56126     | 2389892     | 15             | 4823834       |
-| 6681802.0  | Google Tag Manager     | 0         | 0           | 0              | 6681802       |
-| 6067084.0  | Google Font API        | 0         | 0           | 0              | 6067084       |
-| 5367131.0  | core-js                | 4024665   | 1280621     | 4              | 61841         |
-| 4566706.0  | MySQL                  | 0         | 0           | 0              | 4566706       |
-| 4259521.0  | Yoast SEO              | 0         | 0           | 3288197        | 971324        |
-| 4233794.0  | jQuery Migrate         | 0         | 0           | 4018209        | 215585        |
-| 4139852.0  | Bootstrap              | 1158605   | 1864790     | 221174         | 895283        |
-| 4096926.0  | Google Remarketing Tag | 0         | 0           | 0              | 4096926       |
-| 3734958.0  | Apache                 | 923735    | 4247        | 11             | 2806965       |
-| 3501370.0  | Facebook               | 0         | 0           | 0              | 3501370       |
+| num_sites | app                | Supported | Unsupported | Non-conclusive | Not-versioned |
+|----------:|--------------------|----------:|------------:|---------------:|--------------:|
+| 22560775  | jQuery             | 11816688  | 10427207    | 1921           | 314959        |
+| 20137529  | WordPress          | 8452856   | 4694790     | 4              | 6989879       |
+| 17161361  | Google Analytics   | 0         | 0           | 3718945        | 13442416      |
+| 16972113  | Open Graph         | 0         | 0           | 0              | 16972113      |
+| 15985901  | PHP                | 478132    | 4734543     | 36             | 10773190      |
+| 15761927  | Nginx              | 2515246   | 3432        | 6              | 13243243      |
+| 13582859  | Google Font API    | 0         | 0           | 0              | 13582859      |
+| 11224457  | core-js            | 8833276   | 2245786     | 2846           | 142549        |
+| 10685022  | MySQL              | 0         | 0           | 0              | 10685022      |
+| 10640862  | RSS                | 0         | 0           | 0              | 10640862      |
+| 9877869   | jQuery Migrate     | 0         | 0           | 9489456        | 388413        |
+| 9442075   | Yoast SEO          | 0         | 0           | 7748643        | 1693432       |
+| 8889330   | Bootstrap          | 2564492   | 3520976     | 862641         | 1941221       |
+| 8777789   | Google Workspace   | 0         | 0           | 0              | 8777789       |
+| 8232254   | Apache HTTP Server | 1789566   | 8091        | 20             | 6434577       |
+
 
 # Top 15 popular-versioned technologies
 
@@ -124,17 +132,18 @@ ORDER BY num_sites DESC;
 ```
 </details>
 
-| num_sites  | app                    | Supported | Unsupported | Non-conclusive | Not-versioned |
-|-----------:|------------------------|----------:|------------:|---------------:|--------------:|
-| 10618548.0 | jQuery                 | 4874206   | 5637178     | 753            | 106411        |
-| 8496065.0  | WordPress              | 590       | 5466306     | 0              | 3029169       |
-| 7521722.0  | Nginx                  | 1382539   | 2612        | 0              | 6136571       |
-| 7269867.0  | PHP                    | 56126     | 2389892     | 15             | 4823834       |
-| 5367131.0  | core-js                | 4024665   | 1280621     | 4              | 61841         |
-| 4259521.0  | Yoast SEO              | 0         | 0           | 3288197        | 971324        |
-| 4233794.0  | jQuery Migrate         | 0         | 0           | 4018209        | 215585        |
-| 4139852.0  | Bootstrap              | 1158605   | 1864790     | 221174         | 895283        |
-| 3734958.0  | Apache                 | 923735    | 4247        | 11             | 2806965       |
+| num_sites | app                | Supported | Unsupported | Non-conclusive | Not-versioned |
+|----------:|--------------------|----------:|------------:|---------------:|--------------:|
+| 22560775  | jQuery             | 11816688  | 10427207    | 1921           | 314959        |
+| 20137529  | WordPress          | 8452856   | 4694790     | 4              | 6989879       |
+| 17161361  | Google Analytics   | 0         | 0           | 3718945        | 13442416      |
+| 15985901  | PHP                | 478132    | 4734543     | 36             | 10773190      |
+| 15761927  | Nginx              | 2515246   | 3432        | 6              | 13243243      |
+| 11224457  | core-js            | 8833276   | 2245786     | 2846           | 142549        |
+| 9877869   | jQuery Migrate     | 0         | 0           | 9489456        | 388413        |
+| 9442075   | Yoast SEO          | 0         | 0           | 7748643        | 1693432       |
+| 8889330   | Bootstrap          | 2564492   | 3520976     | 862641         | 1941221       |
+| 8232254   | Apache HTTP Server | 1789566   | 8091        | 20             | 6434577       |
 
 # Interesting technologies
 
