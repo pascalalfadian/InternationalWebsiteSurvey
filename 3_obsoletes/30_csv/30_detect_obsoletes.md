@@ -78,77 +78,42 @@ SELECT ROUND(url_rank) as `Rank`, ROUND(COUNTIF(Unsupported = 0)/COUNT(Unsupport
 <summary>SQL queries</summary>
 
 ```sql
-# Save as top50populartechs table
-SELECT COUNT(app) AS num_sites, app FROM `httparchive.technologies.2023_01_01_*` GROUP BY app ORDER BY num_sites DESC LIMIT 50;
+# Save as top15populartechs table
+SELECT COUNT(app) AS num_sites, app FROM `httparchive.technologies.2022_02_01_*` GROUP BY app ORDER BY num_sites DESC LIMIT 15;
 # Then do this
 SELECT
-  AVG(`avian-current-603.InternationalWebsiteSurveyUS.top50populartechs`.num_sites) AS num_sites,
-  `avian-current-603.InternationalWebsiteSurveyUS.top50populartechs`.app,
-  COUNTIF(InternationalWebsiteSurveyUS.isSupported(info, min_supported_version, `avian-current-603.InternationalWebsiteSurveyUS.top50populartechs`.app) = 'Supported') AS Supported,
-  COUNTIF(InternationalWebsiteSurveyUS.isSupported(info, min_supported_version, `avian-current-603.InternationalWebsiteSurveyUS.top50populartechs`.app) = 'Unsupported') AS Unsupported,
-  COUNTIF(InternationalWebsiteSurveyUS.isSupported(info, min_supported_version, `avian-current-603.InternationalWebsiteSurveyUS.top50populartechs`.app) = 'Non-conclusive') AS `Non-conclusive`,
-  COUNTIF(InternationalWebsiteSurveyUS.isSupported(info, min_supported_version, `avian-current-603.InternationalWebsiteSurveyUS.top50populartechs`.app) = 'Not-versioned') AS `Not-versioned`
-FROM `avian-current-603.InternationalWebsiteSurveyUS.top50populartechs`
-  LEFT JOIN `httparchive.technologies.2023_01_01_*` ON `avian-current-603.InternationalWebsiteSurveyUS.top50populartechs`.app = `httparchive.technologies.2023_01_01_*`.app
-  LEFT JOIN `avian-current-603.InternationalWebsiteSurveyUS.technologies` ON `httparchive.technologies.2023_01_01_*`.app = `avian-current-603.InternationalWebsiteSurveyUS.technologies`.name
-  LEFT JOIN `httparchive.summary_pages.2023_01_01_*` ON `httparchive.summary_pages.2023_01_01_*`.url = `httparchive.technologies.2023_01_01_*`.url
-GROUP BY `avian-current-603.InternationalWebsiteSurveyUS.top50populartechs`.app
+  AVG(`avian-current-603.InternationalWebsiteSurveyUS.top15populartechs`.num_sites) AS num_sites,
+  `avian-current-603.InternationalWebsiteSurveyUS.top15populartechs`.app,
+  COUNTIF(InternationalWebsiteSurveyUS.isSupported(info, min_supported_version, `avian-current-603.InternationalWebsiteSurveyUS.top15populartechs`.app) = 'Supported') AS Supported,
+  COUNTIF(InternationalWebsiteSurveyUS.isSupported(info, min_supported_version, `avian-current-603.InternationalWebsiteSurveyUS.top15populartechs`.app) = 'Unsupported') AS Unsupported,
+  COUNTIF(InternationalWebsiteSurveyUS.isSupported(info, min_supported_version, `avian-current-603.InternationalWebsiteSurveyUS.top15populartechs`.app) = 'Non-conclusive') AS `Non-conclusive`,
+  COUNTIF(InternationalWebsiteSurveyUS.isSupported(info, min_supported_version, `avian-current-603.InternationalWebsiteSurveyUS.top15populartechs`.app) = 'Not-versioned') AS `Not-versioned`
+FROM `avian-current-603.InternationalWebsiteSurveyUS.top15populartechs`
+  LEFT JOIN `httparchive.technologies.2022_02_01_*` ON `avian-current-603.InternationalWebsiteSurveyUS.top15populartechs`.app = `httparchive.technologies.2022_02_01_*`.app
+  LEFT JOIN `avian-current-603.InternationalWebsiteSurveyUS.technologies` ON `httparchive.technologies.2022_02_01_*`.app = `avian-current-603.InternationalWebsiteSurveyUS.technologies`.name
+  LEFT JOIN `httparchive.summary_pages.2022_02_01_*` ON `httparchive.summary_pages.2022_02_01_*`.url = `httparchive.technologies.2022_02_01_*`.url
+GROUP BY `avian-current-603.InternationalWebsiteSurveyUS.top15populartechs`.app
 ORDER BY num_sites DESC;
 ```
 </details>
 
-|num_sites |app                    |Supported|Unsupported|Non-conclusive|Not-versioned|
-|---------:|-----------------------|--------:|----------:|-------------:|------------:|
-|22560775.0|jQuery                 |21803598 |19077132   |2971          |581187       |
-|20137529.0|WordPress              |15581306 |8558666    |8             |13053702     |
-|17161361.0|Google Analytics       |0        |0          |6962962       |24854596     |
-|16972113.0|Open Graph             |0        |0          |0             |31173447     |
-|15985901.0|PHP                    |872689   |8643148    |66            |19942141     |
-|15761927.0|Nginx                  |4533114  |6260       |10            |24203662     |
-|13582859.0|Google Font API        |0        |0          |0             |24981341     |
-|11224457.0|core-js                |16416024 |4154019    |5396          |255940       |
-|10685022.0|MySQL                  |0        |0          |0             |19764698     |
-|10640862.0|RSS                    |0        |0          |0             |19479898     |
-|9877869.0 |jQuery Migrate         |0        |0          |17523910      |722930       |
-|9442075.0 |Yoast SEO              |0        |0          |14488792      |3159612      |
-|8889330.0 |Bootstrap              |4704621  |6492252    |1554326       |3568873      |
-|8777789.0 |Google Workspace       |0        |0          |0             |16507282     |
-|8232254.0 |Apache HTTP Server     |0        |0          |3334189       |11847148     |
-|7975151.0 |Cloudflare             |0        |0          |0             |14751256     |
-|7852902.0 |HSTS                   |0        |0          |0             |14495316     |
-|7366687.0 |Font Awesome           |0        |0          |3611459       |9927929      |
-|6493647.0 |jQuery UI              |4808564  |6906980    |200841        |119879       |
-|6491534.0 |Twitter Emoji (Twemoji)|0        |0          |10579386      |1328553      |
-|6314747.0 |Google Tag Manager     |0        |0          |0             |11834298     |
-|6120635.0 |Microsoft 365          |0        |0          |0             |11756688     |
-|5716682.0 |HTTP/3                 |0        |0          |0             |10409454     |
-|5360252.0 |Cart Functionality     |0        |0          |0             |10014878     |
-|4764019.0 |reCAPTCHA              |0        |0          |0             |8819597      |
-|4758406.0 |LazySizes              |0        |0          |0             |8907898      |
-|4643500.0 |Facebook Pixel         |0        |0          |8449405       |279113       |
-|3822548.0 |WooCommerce            |3296208  |2933708    |2284          |888574       |
-|3799522.0 |Contact Form 7         |0        |0          |5412842       |1622693      |
-|3736616.0 |Elementor              |0        |0          |6317174       |505562       |
-|3608686.0 |Modernizr              |0        |0          |5560750       |1154572      |
-|3581711.0 |Google Hosted Libraries|0        |0          |0             |6618665      |
-|3326048.0 |Slider Revolution      |0        |0          |1975682       |4163928      |
-|3174953.0 |Amazon Web Services    |0        |0          |0             |5856248      |
-|3059234.0 |Swiper                 |0        |0          |0             |5614226      |
-|3051524.0 |cdnjs                  |0        |0          |0             |5648459      |
-|2914077.0 |MailChimp              |0        |0          |0             |5517340      |
-|2795794.0 |Lodash                 |0        |0          |4943094       |188243       |
-|2670929.0 |YouTube                |0        |0          |0             |4981104      |
-|2533077.0 |React                  |25905    |1676175    |20            |2924546      |
-|2469014.0 |wpBakery               |0        |0          |0             |4582634      |
-|2453796.0 |Zendesk                |0        |0          |0             |4447977      |
-|2451715.0 |Facebook Login         |0        |0          |0             |4534562      |
-|2420811.0 |GSAP                   |0        |0          |1656879       |2805014      |
-|2394603.0 |OWL Carousel           |0        |0          |0             |4393918      |
-|2386123.0 |Google Maps            |0        |0          |4971          |4343124      |
-|2378385.0 |PWA                    |0        |0          |0             |4381766      |
-|2220037.0 |GoDaddy                |0        |0          |0             |4166865      |
-|2219061.0 |Google AdSense         |0        |0          |0             |3950144      |
-|2211887.0 |Slick                  |0        |0          |335339        |3785558      |
+| num_sites  | app                    | Supported | Unsupported | Non-conclusive | Not-versioned |
+|-----------:|------------------------|----------:|------------:|---------------:|--------------:|
+| 10618548.0 | jQuery                 | 8634761   | 9812088     | 1090           | 191481        |
+| 8672479.0  | Google Analytics       | 0         | 0           | 0              | 15526353      |
+| 8496065.0  | WordPress              | 1090      | 9391466     | 0              | 5477658       |
+| 7521722.0  | Nginx                  | 2420348   | 4670        | 0              | 10711934      |
+| 7269867.0  | PHP                    | 96705     | 4135767     | 23             | 8548708       |
+| 6681802.0  | Google Tag Manager     | 0         | 0           | 0              | 12024189      |
+| 6067084.0  | Google Font API        | 0         | 0           | 0              | 10588575      |
+| 5367131.0  | core-js                | 7252890   | 2266260     | 7              | 98246         |
+| 4566706.0  | MySQL                  | 0         | 0           | 0              | 8024478       |
+| 4259521.0  | Yoast SEO              | 0         | 0           | 5848420        | 1762128       |
+| 4233794.0  | jQuery Migrate         | 0         | 0           | 7025967        | 388167        |
+| 4139852.0  | Bootstrap              | 2048475   | 3296514     | 346336         | 1575564       |
+| 4096926.0  | Google Remarketing Tag | 0         | 0           | 0              | 7328469       |
+| 3734958.0  | Apache                 | 1646227   | 7696        | 19             | 4833819       |
+| 3501370.0  | Facebook               | 0         | 0           | 0              | 6320956       |
 
 # Top 50 popular-versioned technologies
 
