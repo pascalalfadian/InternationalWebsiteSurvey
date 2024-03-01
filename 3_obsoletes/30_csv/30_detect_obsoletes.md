@@ -1,15 +1,15 @@
 # Overall Technologies Used
 
-* Not-versioned: 139.926.184
-* Non-conclusive: 26.760.870
-* Unsupported: 22.988.924
-* Supported: 15.123.055
+* Not-versioned: 354.310.122
+* Non-conclusive: 76.729.656
+* Unsupported: 36.292.410
+* Supported: 45.510.437
 
 <details>
 <summary>SQL queries</summary>
 
 ```sql
-SELECT InternationalWebsiteSurveyUS.isSupported(info, min_supported_version, app) as supported, COUNT(app) AS total FROM `httparchive.technologies.2022_02_01_*` LEFT JOIN `avian-current-603.InternationalWebsiteSurveyUS.technologies` ON `httparchive.technologies.2022_02_01_*`.app = `avian-current-603.InternationalWebsiteSurveyUS.technologies`.name GROUP BY supported;
+SELECT InternationalWebsiteSurveyUS.isSupported(info, min_supported_version, app) as supported, COUNT(app) AS total FROM `httparchive.technologies.2023_01_01_*` LEFT JOIN `avian-current-603.InternationalWebsiteSurveyUS.technologies2023` ON `httparchive.technologies.2023_01_01_*`.app = `avian-current-603.InternationalWebsiteSurveyUS.technologies2023`.name GROUP BY supported;
 ```
 </details>
 
