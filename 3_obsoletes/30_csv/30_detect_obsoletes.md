@@ -72,7 +72,7 @@ SELECT ROUND(url_rank) as `Rank`, ROUND(COUNTIF(Unsupported = 0)/COUNT(Unsupport
 | 1000000.0  | 0.22416       | 0.02618  | 0.0321   | 0.00967  | 0.70789   | 872807  |
 | 10000000.0 | 0.22061       | 0.12443  | 0.10331  | 0.06206  | 0.48959   | 7188765 |
 
-# Top 50 popular technologies
+# Top 15 popular technologies
 
 <details>
 <summary>SQL queries</summary>
@@ -115,7 +115,7 @@ ORDER BY num_sites DESC;
 | 3734958.0  | Apache                 | 1646227   | 7696        | 19             | 4833819       |
 | 3501370.0  | Facebook               | 0         | 0           | 0              | 6320956       |
 
-# Top 50 popular-versioned technologies
+# Top 15 popular-versioned technologies
 
 <details>
 <summary>SQL queries</summary>
@@ -125,58 +125,17 @@ ORDER BY num_sites DESC;
 ```
 </details>
 
-|num_versioned|app                    |Supported|Unsupported|Non-conclusive|Not-versioned|
-|------------:|-----------------------|--------:|----------:|-------------:|------------:|
-|40883701     |jQuery                 |21803598 |19077132   |2971          |581187       |
-|24139980     |WordPress              |15581306 |8558666    |8             |13053702     |
-|20575439     |core-js                |16416024 |4154019    |5396          |255940       |
-|17523910     |jQuery Migrate         |0        |0          |17523910      |722930       |
-|14488792     |Yoast SEO              |0        |0          |14488792      |3159612      |
-|12751199     |Bootstrap              |4704621  |6492252    |1554326       |3568873      |
-|11916385     |jQuery UI              |4808564  |6906980    |200841        |119879       |
-|10579386     |Twitter Emoji (Twemoji)|0        |0          |10579386      |1328553      |
-|9515903      |PHP                    |872689   |8643148    |66            |19942141     |
-|8449405      |Facebook Pixel         |0        |0          |8449405       |279113       |
-|6962962      |Google Analytics       |0        |0          |6962962       |24854596     |
-|6317174      |Elementor              |0        |0          |6317174       |505562       |
-|6232200      |WooCommerce            |3296208  |2933708    |2284          |888574       |
-|5560750      |Modernizr              |0        |0          |5560750       |1154572      |
-|5412842      |Contact Form 7         |0        |0          |5412842       |1622693      |
-|4943094      |Lodash                 |0        |0          |4943094       |188243       |
-|4539384      |Nginx                  |4533114  |6260       |10            |24203662     |
-|3611459      |Font Awesome           |0        |0          |3611459       |9927929      |
-|3334189      |Apache HTTP Server     |0        |0          |3334189       |11847148     |
-|1975682      |Slider Revolution      |0        |0          |1975682       |4163928      |
-|1702100      |React                  |25905    |1676175    |20            |2924546      |
-|1656879      |GSAP                   |0        |0          |1656879       |2805014      |
-|335339       |Slick                  |0        |0          |335339        |3785558      |
-|4971         |Google Maps            |0        |0          |4971          |4343124      |
-|0            |Open Graph             |0        |0          |0             |31173447     |
-|0            |Google Font API        |0        |0          |0             |24981341     |
-|0            |MySQL                  |0        |0          |0             |19764698     |
-|0            |RSS                    |0        |0          |0             |19479898     |
-|0            |Google Workspace       |0        |0          |0             |16507282     |
-|0            |Cloudflare             |0        |0          |0             |14751256     |
-|0            |HSTS                   |0        |0          |0             |14495316     |
-|0            |Google Tag Manager     |0        |0          |0             |11834298     |
-|0            |Microsoft 365          |0        |0          |0             |11756688     |
-|0            |HTTP/3                 |0        |0          |0             |10409454     |
-|0            |Cart Functionality     |0        |0          |0             |10014878     |
-|0            |reCAPTCHA              |0        |0          |0             |8819597      |
-|0            |LazySizes              |0        |0          |0             |8907898      |
-|0            |Google Hosted Libraries|0        |0          |0             |6618665      |
-|0            |Amazon Web Services    |0        |0          |0             |5856248      |
-|0            |Swiper                 |0        |0          |0             |5614226      |
-|0            |cdnjs                  |0        |0          |0             |5648459      |
-|0            |MailChimp              |0        |0          |0             |5517340      |
-|0            |YouTube                |0        |0          |0             |4981104      |
-|0            |wpBakery               |0        |0          |0             |4582634      |
-|0            |Zendesk                |0        |0          |0             |4447977      |
-|0            |Facebook Login         |0        |0          |0             |4534562      |
-|0            |OWL Carousel           |0        |0          |0             |4393918      |
-|0            |PWA                    |0        |0          |0             |4381766      |
-|0            |GoDaddy                |0        |0          |0             |4166865      |
-|0            |Google AdSense         |0        |0          |0             |3950144      |
+| num_sites  | app                    | Supported | Unsupported | Non-conclusive | Not-versioned |
+|-----------:|------------------------|----------:|------------:|---------------:|--------------:|
+| 10618548.0 | jQuery                 | 8634761   | 9812088     | 1090           | 191481        |
+| 8496065.0  | WordPress              | 1090      | 9391466     | 0              | 5477658       |
+| 7521722.0  | Nginx                  | 2420348   | 4670        | 0              | 10711934      |
+| 7269867.0  | PHP                    | 96705     | 4135767     | 23             | 8548708       |
+| 5367131.0  | core-js                | 7252890   | 2266260     | 7              | 98246         |
+| 4259521.0  | Yoast SEO              | 0         | 0           | 5848420        | 1762128       |
+| 4233794.0  | jQuery Migrate         | 0         | 0           | 7025967        | 388167        |
+| 4139852.0  | Bootstrap              | 2048475   | 3296514     | 346336         | 1575564       |
+| 3734958.0  | Apache                 | 1646227   | 7696        | 19             | 4833819       |
 
 # Interesting technologies
 
