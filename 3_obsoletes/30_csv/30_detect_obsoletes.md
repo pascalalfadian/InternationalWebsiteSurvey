@@ -91,7 +91,6 @@ SELECT
 FROM `avian-current-603.InternationalWebsiteSurveyUS.top15populartechs`
   LEFT JOIN `httparchive.technologies.2022_02_01_*` ON `avian-current-603.InternationalWebsiteSurveyUS.top15populartechs`.app = `httparchive.technologies.2022_02_01_*`.app
   LEFT JOIN `avian-current-603.InternationalWebsiteSurveyUS.technologies` ON `httparchive.technologies.2022_02_01_*`.app = `avian-current-603.InternationalWebsiteSurveyUS.technologies`.name
-  LEFT JOIN `httparchive.summary_pages.2022_02_01_*` ON `httparchive.summary_pages.2022_02_01_*`.url = `httparchive.technologies.2022_02_01_*`.url
 GROUP BY `avian-current-603.InternationalWebsiteSurveyUS.top15populartechs`.app
 ORDER BY num_sites DESC;
 ```
@@ -99,21 +98,21 @@ ORDER BY num_sites DESC;
 
 | num_sites  | app                    | Supported | Unsupported | Non-conclusive | Not-versioned |
 |-----------:|------------------------|----------:|------------:|---------------:|--------------:|
-| 10618548.0 | jQuery                 | 8634761   | 9812088     | 1090           | 191481        |
-| 8672479.0  | Google Analytics       | 0         | 0           | 0              | 15526353      |
-| 8496065.0  | WordPress              | 1090      | 9391466     | 0              | 5477658       |
-| 7521722.0  | Nginx                  | 2420348   | 4670        | 0              | 10711934      |
-| 7269867.0  | PHP                    | 96705     | 4135767     | 23             | 8548708       |
-| 6681802.0  | Google Tag Manager     | 0         | 0           | 0              | 12024189      |
-| 6067084.0  | Google Font API        | 0         | 0           | 0              | 10588575      |
-| 5367131.0  | core-js                | 7252890   | 2266260     | 7              | 98246         |
-| 4566706.0  | MySQL                  | 0         | 0           | 0              | 8024478       |
-| 4259521.0  | Yoast SEO              | 0         | 0           | 5848420        | 1762128       |
-| 4233794.0  | jQuery Migrate         | 0         | 0           | 7025967        | 388167        |
-| 4139852.0  | Bootstrap              | 2048475   | 3296514     | 346336         | 1575564       |
-| 4096926.0  | Google Remarketing Tag | 0         | 0           | 0              | 7328469       |
-| 3734958.0  | Apache                 | 1646227   | 7696        | 19             | 4833819       |
-| 3501370.0  | Facebook               | 0         | 0           | 0              | 6320956       |
+| 10618548.0 | jQuery                 | 4874206   | 5637178     | 753            | 106411        |
+| 8672479.0  | Google Analytics       | 0         | 0           | 0              | 8672479       |
+| 8496065.0  | WordPress              | 590       | 5466306     | 0              | 3029169       |
+| 7521722.0  | Nginx                  | 1382539   | 2612        | 0              | 6136571       |
+| 7269867.0  | PHP                    | 56126     | 2389892     | 15             | 4823834       |
+| 6681802.0  | Google Tag Manager     | 0         | 0           | 0              | 6681802       |
+| 6067084.0  | Google Font API        | 0         | 0           | 0              | 6067084       |
+| 5367131.0  | core-js                | 4024665   | 1280621     | 4              | 61841         |
+| 4566706.0  | MySQL                  | 0         | 0           | 0              | 4566706       |
+| 4259521.0  | Yoast SEO              | 0         | 0           | 3288197        | 971324        |
+| 4233794.0  | jQuery Migrate         | 0         | 0           | 4018209        | 215585        |
+| 4139852.0  | Bootstrap              | 1158605   | 1864790     | 221174         | 895283        |
+| 4096926.0  | Google Remarketing Tag | 0         | 0           | 0              | 4096926       |
+| 3734958.0  | Apache                 | 923735    | 4247        | 11             | 2806965       |
+| 3501370.0  | Facebook               | 0         | 0           | 0              | 3501370       |
 
 # Top 15 popular-versioned technologies
 
@@ -127,15 +126,15 @@ ORDER BY num_sites DESC;
 
 | num_sites  | app                    | Supported | Unsupported | Non-conclusive | Not-versioned |
 |-----------:|------------------------|----------:|------------:|---------------:|--------------:|
-| 10618548.0 | jQuery                 | 8634761   | 9812088     | 1090           | 191481        |
-| 8496065.0  | WordPress              | 1090      | 9391466     | 0              | 5477658       |
-| 7521722.0  | Nginx                  | 2420348   | 4670        | 0              | 10711934      |
-| 7269867.0  | PHP                    | 96705     | 4135767     | 23             | 8548708       |
-| 5367131.0  | core-js                | 7252890   | 2266260     | 7              | 98246         |
-| 4259521.0  | Yoast SEO              | 0         | 0           | 5848420        | 1762128       |
-| 4233794.0  | jQuery Migrate         | 0         | 0           | 7025967        | 388167        |
-| 4139852.0  | Bootstrap              | 2048475   | 3296514     | 346336         | 1575564       |
-| 3734958.0  | Apache                 | 1646227   | 7696        | 19             | 4833819       |
+| 10618548.0 | jQuery                 | 4874206   | 5637178     | 753            | 106411        |
+| 8496065.0  | WordPress              | 590       | 5466306     | 0              | 3029169       |
+| 7521722.0  | Nginx                  | 1382539   | 2612        | 0              | 6136571       |
+| 7269867.0  | PHP                    | 56126     | 2389892     | 15             | 4823834       |
+| 5367131.0  | core-js                | 4024665   | 1280621     | 4              | 61841         |
+| 4259521.0  | Yoast SEO              | 0         | 0           | 3288197        | 971324        |
+| 4233794.0  | jQuery Migrate         | 0         | 0           | 4018209        | 215585        |
+| 4139852.0  | Bootstrap              | 1158605   | 1864790     | 221174         | 895283        |
+| 3734958.0  | Apache                 | 923735    | 4247        | 11             | 2806965       |
 
 # Interesting technologies
 
