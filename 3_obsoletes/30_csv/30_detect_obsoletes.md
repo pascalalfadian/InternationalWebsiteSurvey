@@ -1,7 +1,7 @@
 # Overall Technologies Used
 
-* Not-versioned: 354.310.122
-* Non-conclusive: 76.729.656
+* Not-versioned: 354.309.663
+* Non-conclusive: 76.696.178
 * Unsupported: 36.292.410
 * Supported: 45.510.437
 
@@ -11,6 +11,13 @@
 ```sql
 SELECT InternationalWebsiteSurveyUS.isSupported(info, min_supported_version, app) as supported, COUNT(app) AS total FROM `httparchive.technologies.2023_01_01_*` LEFT JOIN `avian-current-603.InternationalWebsiteSurveyUS.technologies2023` ON `httparchive.technologies.2023_01_01_*`.app = `avian-current-603.InternationalWebsiteSurveyUS.technologies2023`.name GROUP BY supported;
 ```
+
+Total should match 512.808.688 as per following query.
+
+```sql
+SELECT * FROM `httparchive.technologies.2023_01_01_*`
+```
+
 </details>
 
 # Technologies Used in Top 1.000 Websites
