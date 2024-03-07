@@ -166,7 +166,7 @@ SELECT
 FROM `httparchive.technologies.2023_01_01_*`
   LEFT JOIN `avian-current-603.InternationalWebsiteSurveyUS.technologies2023` ON `httparchive.technologies.2023_01_01_*`.app = `avian-current-603.InternationalWebsiteSurveyUS.technologies2023`.name
   LEFT JOIN `httparchive.summary_pages.2023_01_01_*` ON `httparchive.summary_pages.2023_01_01_*`.url = `httparchive.technologies.2023_01_01_*`.url
-WHERE app IN ('jQuery', 'jQuery Migrate', 'PHP', 'Font Awesome', 'jQuery UI', 'WordPress', 'Lodash', 'Underscore.js', 'Nginx', 'Modernizr', 'Apache', 'Yoast SEO' ,'FancyBox')
+WHERE app IN ('jQuery', 'WordPress', 'Google Analytics', 'PHP', 'Nginx', 'core-js', 'jQuery Migrate', 'Yoast SEO', 'Bootstrap', 'Apache HTTP Server')
 GROUP BY info, min_supported_version, app
 ORDER BY app, info;
 ```
@@ -174,2312 +174,18424 @@ ORDER BY app, info;
 
 ## jQuery
 
-| app    | info        | count   | is_supported   |
-|--------|-------------|---------|----------------|
-| jQuery |             | 581187  | Not-versioned  |
-| jQuery | .           | 2863    | Non-conclusive |
-| jQuery | ..          | 17      | Non-conclusive |
-| jQuery | .1          | 24      | Non-conclusive |
-| jQuery | .11.1       | 3       | Non-conclusive |
-| jQuery | 0           | 76      | Unsupported    |
-| jQuery | 0.0         | 4       | Unsupported    |
-| jQuery | 0.0.0       | 158     | Unsupported    |
-| jQuery | 0.0.1       | 108     | Unsupported    |
-| jQuery | 0.0.10      | 28      | Unsupported    |
-| jQuery | 0.0.12      | 16      | Unsupported    |
-| jQuery | 0.0.13      | 36      | Unsupported    |
-| jQuery | 0.0.14      | 275     | Unsupported    |
-| jQuery | 0.0.2       | 21      | Unsupported    |
-| jQuery | 0.0.22      | 4       | Unsupported    |
-| jQuery | 0.0.3       | 4       | Unsupported    |
-| jQuery | 0.0.395     | 4       | Unsupported    |
-| jQuery | 0.0.4       | 4       | Unsupported    |
-| jQuery | 0.0.7       | 19      | Unsupported    |
-| jQuery | 0.0.87      | 4       | Unsupported    |
-| jQuery | 0.0.88      | 4       | Unsupported    |
-| jQuery | 0.0.9       | 8       | Unsupported    |
-| jQuery | 0.00.0      | 1       | Unsupported    |
-| jQuery | 0.1.0       | 14880   | Unsupported    |
-| jQuery | 0.1.1       | 4       | Unsupported    |
-| jQuery | 0.1.13      | 1       | Unsupported    |
-| jQuery | 0.1.6       | 4       | Unsupported    |
-| jQuery | 0.10.2      | 36      | Unsupported    |
-| jQuery | 0.10.3      | 20      | Unsupported    |
-| jQuery | 0.11.0      | 690     | Unsupported    |
-| jQuery | 0.11.1      | 8       | Unsupported    |
-| jQuery | 0.11.4      | 33785   | Unsupported    |
-| jQuery | 0.11.6      | 8       | Unsupported    |
-| jQuery | 0.11.9      | 25      | Unsupported    |
-| jQuery | 0.117.0     | 6       | Unsupported    |
-| jQuery | 0.119.0     | 2       | Unsupported    |
-| jQuery | 0.12.0      | 197     | Unsupported    |
-| jQuery | 0.14.2      | 16      | Unsupported    |
-| jQuery | 0.14.4      | 4       | Unsupported    |
-| jQuery | 0.15.0      | 4       | Unsupported    |
-| jQuery | 0.15.1      | 4       | Unsupported    |
-| jQuery | 0.15.2      | 8       | Unsupported    |
-| jQuery | 0.16.0      | 8       | Unsupported    |
-| jQuery | 0.16.1      | 12      | Unsupported    |
-| jQuery | 0.17.0      | 1       | Unsupported    |
-| jQuery | 0.18.0      | 60      | Unsupported    |
-| jQuery | 0.18.37     | 4       | Unsupported    |
-| jQuery | 0.19.0      | 28      | Unsupported    |
-| jQuery | 0.2.1       | 31      | Unsupported    |
-| jQuery | 0.2.10      | 111     | Unsupported    |
-| jQuery | 0.2.11      | 402     | Unsupported    |
-| jQuery | 0.2.2       | 6       | Unsupported    |
-| jQuery | 0.2.6       | 46      | Unsupported    |
-| jQuery | 0.2.9       | 8       | Unsupported    |
-| jQuery | 0.20.0      | 53      | Unsupported    |
-| jQuery | 0.21.1      | 32      | Unsupported    |
-| jQuery | 0.3.1       | 44      | Unsupported    |
-| jQuery | 0.3.2       | 4       | Unsupported    |
-| jQuery | 0.3.3       | 35      | Unsupported    |
-| jQuery | 0.3.4       | 28      | Unsupported    |
-| jQuery | 0.3.5       | 3       | Unsupported    |
-| jQuery | 0.3.7       | 12      | Unsupported    |
-| jQuery | 0.3.8       | 4       | Unsupported    |
-| jQuery | 0.3.9       | 92      | Unsupported    |
-| jQuery | 0.4.0       | 36      | Unsupported    |
-| jQuery | 0.4.1       | 91      | Unsupported    |
-| jQuery | 0.4.10      | 16      | Unsupported    |
-| jQuery | 0.4.16      | 1       | Unsupported    |
-| jQuery | 0.4.2       | 11      | Unsupported    |
-| jQuery | 0.4.3       | 45      | Unsupported    |
-| jQuery | 0.5.0       | 1       | Unsupported    |
-| jQuery | 0.5.1       | 148     | Unsupported    |
-| jQuery | 0.5.2       | 21      | Unsupported    |
-| jQuery | 0.5.3       | 93      | Unsupported    |
-| jQuery | 0.5.6       | 9       | Unsupported    |
-| jQuery | 0.50.2      | 24      | Unsupported    |
-| jQuery | 0.6.0       | 38      | Unsupported    |
-| jQuery | 0.6.1       | 146     | Unsupported    |
-| jQuery | 0.6.2       | 133     | Unsupported    |
-| jQuery | 0.6.3       | 4       | Unsupported    |
-| jQuery | 0.6.8       | 4       | Unsupported    |
-| jQuery | 0.7.0       | 1546    | Unsupported    |
-| jQuery | 0.7.1       | 4       | Unsupported    |
-| jQuery | 0.7.2       | 7977    | Unsupported    |
-| jQuery | 0.75.0      | 8       | Unsupported    |
-| jQuery | 0.8.0       | 20      | Unsupported    |
-| jQuery | 0.8.12      | 8       | Unsupported    |
-| jQuery | 0.8.2       | 93      | Unsupported    |
-| jQuery | 0.8.3       | 69      | Unsupported    |
-| jQuery | 0.8.7       | 4       | Unsupported    |
-| jQuery | 0.8.9       | 9       | Unsupported    |
-| jQuery | 0.9.0       | 82      | Unsupported    |
-| jQuery | 0.9.1       | 7430    | Unsupported    |
-| jQuery | 0.9.12      | 10127   | Unsupported    |
-| jQuery | 0.9.13      | 44      | Unsupported    |
-| jQuery | 0.9.2       | 371     | Unsupported    |
-| jQuery | 0.9.3       | 292     | Unsupported    |
-| jQuery | 0.9.4       | 150     | Unsupported    |
-| jQuery | 0.9.6       | 4       | Unsupported    |
-| jQuery | 0.9.9       | 269     | Unsupported    |
-| jQuery | 0           | 1       | Unsupported    |
-| jQuery | 01.12.4     | 4       | Unsupported    |
-| jQuery | 02.2.4      | 565     | Unsupported    |
-| jQuery | 03.00.058   | 8       | Supported      |
-| jQuery | 1           | 639     | Unsupported    |
-| jQuery | 1.0         | 1       | Unsupported    |
-| jQuery | 1.0.0       | 7040    | Unsupported    |
-| jQuery | 1.0.1       | 423     | Unsupported    |
-| jQuery | 1.0.10      | 7258    | Unsupported    |
-| jQuery | 1.0.11      | 154     | Unsupported    |
-| jQuery | 1.0.12      | 1       | Unsupported    |
-| jQuery | 1.0.13      | 34      | Unsupported    |
-| jQuery | 1.0.14      | 10      | Unsupported    |
-| jQuery | 1.0.16      | 12      | Unsupported    |
-| jQuery | 1.0.17      | 466     | Unsupported    |
-| jQuery | 1.0.18      | 67      | Unsupported    |
-| jQuery | 1.0.19      | 1173    | Unsupported    |
-| jQuery | 1.0.2       | 216     | Unsupported    |
-| jQuery | 1.0.20      | 36      | Unsupported    |
-| jQuery | 1.0.21      | 756     | Unsupported    |
-| jQuery | 1.0.23      | 13      | Unsupported    |
-| jQuery | 1.0.24      | 92      | Unsupported    |
-| jQuery | 1.0.3       | 545     | Unsupported    |
-| jQuery | 1.0.4       | 1912    | Unsupported    |
-| jQuery | 1.0.49      | 9       | Unsupported    |
-| jQuery | 1.0.5       | 1180    | Unsupported    |
-| jQuery | 1.0.50      | 78      | Unsupported    |
-| jQuery | 1.0.562     | 4       | Unsupported    |
-| jQuery | 1.0.6       | 5       | Unsupported    |
-| jQuery | 1.0.7       | 3065    | Unsupported    |
-| jQuery | 1.0.72      | 2       | Unsupported    |
-| jQuery | 1.0.8       | 186     | Unsupported    |
-| jQuery | 1.0.80      | 4       | Unsupported    |
-| jQuery | 1.0.9       | 74      | Unsupported    |
-| jQuery | 1.04.3      | 8       | Unsupported    |
-| jQuery | 1.1         | 43      | Unsupported    |
-| jQuery | 1.1.0       | 13119   | Unsupported    |
-| jQuery | 1.1.1       | 662     | Unsupported    |
-| jQuery | 1.1.14      | 8       | Unsupported    |
-| jQuery | 1.1.2       | 1773    | Unsupported    |
-| jQuery | 1.1.23      | 8       | Unsupported    |
-| jQuery | 1.1.3       | 234     | Unsupported    |
-| jQuery | 1.1.3.1     | 793     | Unsupported    |
-| jQuery | 1.1.4       | 489     | Unsupported    |
-| jQuery | 1.1.5       | 37      | Unsupported    |
-| jQuery | 1.1.6       | 5       | Unsupported    |
-| jQuery | 1.1.7       | 12      | Unsupported    |
-| jQuery | 1.1.8       | 21      | Unsupported    |
-| jQuery | 1.1.94      | 10      | Unsupported    |
-| jQuery | 1.10.0      | 25996   | Unsupported    |
-| jQuery | 1.10.02     | 29      | Unsupported    |
-| jQuery | 1.10.1      | 165466  | Unsupported    |
-| jQuery | 1.10.10     | 4       | Unsupported    |
-| jQuery | 1.10.11     | 12      | Unsupported    |
-| jQuery | 1.10.12     | 8       | Unsupported    |
-| jQuery | 1.10.13     | 17      | Unsupported    |
-| jQuery | 1.10.14     | 6       | Unsupported    |
-| jQuery | 1.10.15     | 13      | Unsupported    |
-| jQuery | 1.10.16     | 22      | Unsupported    |
-| jQuery | 1.10.19     | 43      | Unsupported    |
-| jQuery | 1.10.2      | 1190080 | Unsupported    |
-| jQuery | 1.10.20     | 9       | Unsupported    |
-| jQuery | 1.10.21     | 26      | Unsupported    |
-| jQuery | 1.10.22     | 1       | Unsupported    |
-| jQuery | 1.10.24     | 18      | Unsupported    |
-| jQuery | 1.10.26192  | 8       | Unsupported    |
-| jQuery | 1.10.3      | 276     | Unsupported    |
-| jQuery | 1.10.4      | 46      | Unsupported    |
-| jQuery | 1.10.5      | 4       | Unsupported    |
-| jQuery | 1.10.7      | 1       | Unsupported    |
-| jQuery | 1.10.8      | 4       | Unsupported    |
-| jQuery | 1.1000.0    | 2       | Unsupported    |
-| jQuery | 1.102.2     | 4       | Unsupported    |
-| jQuery | 1.11        | 3       | Unsupported    |
-| jQuery | 1.11.0      | 955151  | Unsupported    |
-| jQuery | 1.11.0.     | 1       | Unsupported    |
-| jQuery | 1.11.01     | 1       | Unsupported    |
-| jQuery | 1.11.1      | 1320019 | Unsupported    |
-| jQuery | 1.11.1.     | 1       | Unsupported    |
-| jQuery | 1.11.10     | 4       | Unsupported    |
-| jQuery | 1.11.11     | 6       | Unsupported    |
-| jQuery | 1.11.12     | 17      | Unsupported    |
-| jQuery | 1.11.13     | 30      | Unsupported    |
-| jQuery | 1.11.14     | 6       | Unsupported    |
-| jQuery | 1.11.15     | 2       | Unsupported    |
-| jQuery | 1.11.2      | 581199  | Unsupported    |
-| jQuery | 1.11.22     | 1       | Unsupported    |
-| jQuery | 1.11.3      | 1152914 | Unsupported    |
-| jQuery | 1.11.3.     | 4       | Unsupported    |
-| jQuery | 1.11.33     | 8       | Unsupported    |
-| jQuery | 1.11.4      | 721     | Unsupported    |
-| jQuery | 1.11.5      | 10      | Unsupported    |
-| jQuery | 1.11.6      | 5       | Unsupported    |
-| jQuery | 1.11.99     | 4571    | Unsupported    |
-| jQuery | 1.12.       | 1       | Unsupported    |
-| jQuery | 1.12.0      | 167823  | Unsupported    |
-| jQuery | 1.12.1      | 69835   | Unsupported    |
-| jQuery | 1.12.14     | 31      | Unsupported    |
-| jQuery | 1.12.2      | 67988   | Unsupported    |
-| jQuery | 1.12.3      | 88370   | Unsupported    |
-| jQuery | 1.12.4      | 5012705 | Unsupported    |
-| jQuery | 1.12.4.     | 4       | Unsupported    |
-| jQuery | 1.12.4.3    | 221     | Unsupported    |
-| jQuery | 1.12.41     | 4       | Unsupported    |
-| jQuery | 1.12.5      | 4607    | Unsupported    |
-| jQuery | 1.12.6      | 121     | Unsupported    |
-| jQuery | 1.12.90     | 1       | Unsupported    |
-| jQuery | 1.13.0      | 2341    | Unsupported    |
-| jQuery | 1.13.1      | 8838    | Unsupported    |
-| jQuery | 1.13.14     | 4       | Unsupported    |
-| jQuery | 1.13.16     | 8       | Unsupported    |
-| jQuery | 1.13.18     | 850     | Unsupported    |
-| jQuery | 1.13.2      | 17      | Unsupported    |
-| jQuery | 1.13.4      | 577     | Unsupported    |
-| jQuery | 1.13.9      | 40      | Unsupported    |
-| jQuery | 1.14.0      | 12338   | Unsupported    |
-| jQuery | 1.14.1      | 33      | Unsupported    |
-| jQuery | 1.14.10     | 6599    | Unsupported    |
-| jQuery | 1.14.11     | 2938    | Unsupported    |
-| jQuery | 1.14.12     | 507     | Unsupported    |
-| jQuery | 1.14.13     | 691     | Unsupported    |
-| jQuery | 1.14.14     | 33      | Unsupported    |
-| jQuery | 1.14.15     | 8581    | Unsupported    |
-| jQuery | 1.14.16     | 12096   | Unsupported    |
-| jQuery | 1.14.2      | 46      | Unsupported    |
-| jQuery | 1.14.3      | 45      | Unsupported    |
-| jQuery | 1.14.4      | 4       | Unsupported    |
-| jQuery | 1.14.8      | 440     | Unsupported    |
-| jQuery | 1.14.9      | 51      | Unsupported    |
-| jQuery | 1.149.0     | 20      | Unsupported    |
-| jQuery | 1.15.0      | 9881    | Unsupported    |
-| jQuery | 1.15.1      | 3124    | Unsupported    |
-| jQuery | 1.15.4      | 1       | Unsupported    |
-| jQuery | 1.16.0      | 15351   | Unsupported    |
-| jQuery | 1.16.1      | 8       | Unsupported    |
-| jQuery | 1.17.0      | 15387   | Unsupported    |
-| jQuery | 1.18.0      | 257     | Unsupported    |
-| jQuery | 1.18.1      | 4       | Unsupported    |
-| jQuery | 1.18.15     | 8       | Unsupported    |
-| jQuery | 1.18.17     | 24      | Unsupported    |
-| jQuery | 1.18.18     | 12      | Unsupported    |
-| jQuery | 1.18.2      | 32      | Unsupported    |
-| jQuery | 1.18.3      | 6       | Unsupported    |
-| jQuery | 1.18.4      | 24      | Unsupported    |
-| jQuery | 1.18.5      | 619     | Unsupported    |
-| jQuery | 1.19.0      | 6362    | Unsupported    |
-| jQuery | 1.19.1      | 9397    | Unsupported    |
-| jQuery | 1.19.2      | 5658    | Unsupported    |
-| jQuery | 1.19.3      | 7426    | Unsupported    |
-| jQuery | 1.19.4      | 180     | Unsupported    |
-| jQuery | 1.19.5      | 2434    | Unsupported    |
-| jQuery | 1.2         | 281     | Unsupported    |
-| jQuery | 1.2.0       | 2724    | Unsupported    |
-| jQuery | 1.2.1       | 4746    | Unsupported    |
-| jQuery | 1.2.10      | 36      | Unsupported    |
-| jQuery | 1.2.11      | 40      | Unsupported    |
-| jQuery | 1.2.12      | 31      | Unsupported    |
-| jQuery | 1.2.13      | 705     | Unsupported    |
-| jQuery | 1.2.16      | 22      | Unsupported    |
-| jQuery | 1.2.17      | 1       | Unsupported    |
-| jQuery | 1.2.18      | 47      | Unsupported    |
-| jQuery | 1.2.2       | 2803    | Unsupported    |
-| jQuery | 1.2.21      | 4       | Unsupported    |
-| jQuery | 1.2.24      | 121     | Unsupported    |
-| jQuery | 1.2.25      | 9       | Unsupported    |
-| jQuery | 1.2.26      | 9       | Unsupported    |
-| jQuery | 1.2.27      | 72      | Unsupported    |
-| jQuery | 1.2.3       | 12353   | Unsupported    |
-| jQuery | 1.2.4       | 295     | Unsupported    |
-| jQuery | 1.2.42      | 1       | Unsupported    |
-| jQuery | 1.2.5       | 494     | Unsupported    |
-| jQuery | 1.2.6       | 59995   | Unsupported    |
-| jQuery | 1.2.68      | 5       | Unsupported    |
-| jQuery | 1.2.7       | 894     | Unsupported    |
-| jQuery | 1.2.8       | 2       | Unsupported    |
-| jQuery | 1.2.9       | 12      | Unsupported    |
-| jQuery | 1.20        | 2       | Unsupported    |
-| jQuery | 1.20.2      | 213     | Unsupported    |
-| jQuery | 1.20.3      | 25      | Unsupported    |
-| jQuery | 1.20.4      | 86      | Unsupported    |
-| jQuery | 1.21.0      | 38      | Unsupported    |
-| jQuery | 1.21.1      | 2       | Unsupported    |
-| jQuery | 1.21.2      | 1       | Unsupported    |
-| jQuery | 1.22.4      | 16      | Unsupported    |
-| jQuery | 1.221.0     | 26      | Unsupported    |
-| jQuery | 1.221103.1  | 4       | Unsupported    |
-| jQuery | 1.24.4      | 4       | Unsupported    |
-| jQuery | 1.3         | 2040    | Unsupported    |
-| jQuery | 1.3.0       | 405     | Unsupported    |
-| jQuery | 1.3.1       | 11276   | Unsupported    |
-| jQuery | 1.3.15      | 6       | Unsupported    |
-| jQuery | 1.3.16      | 1       | Unsupported    |
-| jQuery | 1.3.17      | 4       | Unsupported    |
-| jQuery | 1.3.18      | 29      | Unsupported    |
-| jQuery | 1.3.19      | 16      | Unsupported    |
-| jQuery | 1.3.2       | 126946  | Unsupported    |
-| jQuery | 1.3.20      | 56      | Unsupported    |
-| jQuery | 1.3.21      | 8       | Unsupported    |
-| jQuery | 1.3.26      | 8       | Unsupported    |
-| jQuery | 1.3.27      | 3       | Unsupported    |
-| jQuery | 1.3.28      | 741     | Unsupported    |
-| jQuery | 1.3.3       | 156     | Unsupported    |
-| jQuery | 1.3.32      | 8       | Unsupported    |
-| jQuery | 1.3.34      | 4       | Unsupported    |
-| jQuery | 1.3.4       | 367     | Unsupported    |
-| jQuery | 1.3.42      | 89      | Unsupported    |
-| jQuery | 1.3.43      | 108     | Unsupported    |
-| jQuery | 1.3.5       | 1442    | Unsupported    |
-| jQuery | 1.3.6       | 39      | Unsupported    |
-| jQuery | 1.3.7       | 4       | Unsupported    |
-| jQuery | 1.3.8       | 263     | Unsupported    |
-| jQuery | 1.3.9       | 384     | Unsupported    |
-| jQuery | 1.3.94      | 29      | Unsupported    |
-| jQuery | 1.33.0      | 313     | Unsupported    |
-| jQuery | 1.4         | 4785    | Unsupported    |
-| jQuery | 1.4.0       | 5615    | Unsupported    |
-| jQuery | 1.4.1       | 75254   | Unsupported    |
-| jQuery | 1.4.10      | 770     | Unsupported    |
-| jQuery | 1.4.11      | 979     | Unsupported    |
-| jQuery | 1.4.12      | 4       | Unsupported    |
-| jQuery | 1.4.13      | 14      | Unsupported    |
-| jQuery | 1.4.14      | 96      | Unsupported    |
-| jQuery | 1.4.15      | 4       | Unsupported    |
-| jQuery | 1.4.2       | 161687  | Unsupported    |
-| jQuery | 1.4.22      | 7       | Unsupported    |
-| jQuery | 1.4.27      | 71      | Unsupported    |
-| jQuery | 1.4.2:1.4.2 | 1       | Non-conclusive |
-| jQuery | 1.4.3       | 23696   | Unsupported    |
-| jQuery | 1.4.31      | 35      | Unsupported    |
-| jQuery | 1.4.32      | 7       | Unsupported    |
-| jQuery | 1.4.33      | 378     | Unsupported    |
-| jQuery | 1.4.4       | 157544  | Unsupported    |
-| jQuery | 1.4.5       | 459     | Unsupported    |
-| jQuery | 1.4.6       | 39      | Unsupported    |
-| jQuery | 1.4.7       | 87      | Unsupported    |
-| jQuery | 1.4.8       | 8       | Unsupported    |
-| jQuery | 1.4.9       | 27      | Unsupported    |
-| jQuery | 1.486.0     | 4       | Unsupported    |
-| jQuery | 1.5         | 6052    | Unsupported    |
-| jQuery | 1.5.0       | 2219    | Unsupported    |
-| jQuery | 1.5.1       | 39983   | Unsupported    |
-| jQuery | 1.5.10      | 58      | Unsupported    |
-| jQuery | 1.5.12      | 4       | Unsupported    |
-| jQuery | 1.5.13      | 1       | Unsupported    |
-| jQuery | 1.5.14      | 106     | Unsupported    |
-| jQuery | 1.5.18      | 4       | Unsupported    |
-| jQuery | 1.5.2       | 43506   | Unsupported    |
-| jQuery | 1.5.25      | 537     | Unsupported    |
-| jQuery | 1.5.3       | 17883   | Unsupported    |
-| jQuery | 1.5.4       | 47579   | Unsupported    |
-| jQuery | 1.5.5       | 35      | Unsupported    |
-| jQuery | 1.5.6       | 44      | Unsupported    |
-| jQuery | 1.5.9       | 4       | Unsupported    |
-| jQuery | 1.6         | 5352    | Unsupported    |
-| jQuery | 1.6.0       | 2043    | Unsupported    |
-| jQuery | 1.6.1       | 42528   | Unsupported    |
-| jQuery | 1.6.10      | 86      | Unsupported    |
-| jQuery | 1.6.12      | 381     | Unsupported    |
-| jQuery | 1.6.15      | 560     | Unsupported    |
-| jQuery | 1.6.16      | 45      | Unsupported    |
-| jQuery | 1.6.17      | 12      | Unsupported    |
-| jQuery | 1.6.18      | 2360    | Unsupported    |
-| jQuery | 1.6.19      | 3460    | Unsupported    |
-| jQuery | 1.6.2       | 48869   | Unsupported    |
-| jQuery | 1.6.24      | 4       | Unsupported    |
-| jQuery | 1.6.3       | 14658   | Unsupported    |
-| jQuery | 1.6.4       | 83290   | Unsupported    |
-| jQuery | 1.6.5       | 53      | Unsupported    |
-| jQuery | 1.6.6       | 8       | Unsupported    |
-| jQuery | 1.6.7       | 31      | Unsupported    |
-| jQuery | 1.6.9       | 11      | Unsupported    |
-| jQuery | 1.7         | 35419   | Unsupported    |
-| jQuery | 1.7.0       | 8847    | Unsupported    |
-| jQuery | 1.7.1       | 579599  | Unsupported    |
-| jQuery | 1.7.10      | 7809    | Unsupported    |
-| jQuery | 1.7.11      | 1242    | Unsupported    |
-| jQuery | 1.7.13      | 710     | Unsupported    |
-| jQuery | 1.7.14      | 85      | Unsupported    |
-| jQuery | 1.7.15      | 15      | Unsupported    |
-| jQuery | 1.7.18      | 1056    | Unsupported    |
-| jQuery | 1.7.19      | 3       | Unsupported    |
-| jQuery | 1.7.2       | 634405  | Unsupported    |
-| jQuery | 1.7.2.1     | 500     | Unsupported    |
-| jQuery | 1.7.20      | 472     | Unsupported    |
-| jQuery | 1.7.21      | 1059    | Unsupported    |
-| jQuery | 1.7.22      | 8       | Unsupported    |
-| jQuery | 1.7.24      | 13      | Unsupported    |
-| jQuery | 1.7.28      | 10      | Unsupported    |
-| jQuery | 1.7.2:1.7.2 | 4       | Non-conclusive |
-| jQuery | 1.7.3       | 236     | Unsupported    |
-| jQuery | 1.7.30      | 21      | Unsupported    |
-| jQuery | 1.7.31      | 12      | Unsupported    |
-| jQuery | 1.7.32      | 39      | Unsupported    |
-| jQuery | 1.7.33      | 5       | Unsupported    |
-| jQuery | 1.7.35      | 38      | Unsupported    |
-| jQuery | 1.7.4       | 356     | Unsupported    |
-| jQuery | 1.7.5       | 148     | Unsupported    |
-| jQuery | 1.7.6       | 138     | Unsupported    |
-| jQuery | 1.7.7       | 60      | Unsupported    |
-| jQuery | 1.7.8       | 7       | Unsupported    |
-| jQuery | 1.7.9       | 5736    | Unsupported    |
-| jQuery | 1.8         | 147     | Unsupported    |
-| jQuery | 1.8.0       | 48161   | Unsupported    |
-| jQuery | 1.8.1       | 117645  | Unsupported    |
-| jQuery | 1.8.10      | 5       | Unsupported    |
-| jQuery | 1.8.11      | 55      | Unsupported    |
-| jQuery | 1.8.12      | 1       | Unsupported    |
-| jQuery | 1.8.13      | 8       | Unsupported    |
-| jQuery | 1.8.16      | 21      | Unsupported    |
-| jQuery | 1.8.17      | 8       | Unsupported    |
-| jQuery | 1.8.18      | 14      | Unsupported    |
-| jQuery | 1.8.2       | 308460  | Unsupported    |
-| jQuery | 1.8.21      | 2       | Unsupported    |
-| jQuery | 1.8.23      | 25      | Unsupported    |
-| jQuery | 1.8.24      | 38      | Unsupported    |
-| jQuery | 1.8.3       | 934235  | Unsupported    |
-| jQuery | 1.8.3.      | 4       | Unsupported    |
-| jQuery | 1.8.32      | 2       | Unsupported    |
-| jQuery | 1.8.33      | 4       | Unsupported    |
-| jQuery | 1.8.4       | 102     | Unsupported    |
-| jQuery | 1.8.5       | 1       | Unsupported    |
-| jQuery | 1.8.7       | 27      | Unsupported    |
-| jQuery | 1.8.8       | 463     | Unsupported    |
-| jQuery | 1.8.9       | 4       | Unsupported    |
-| jQuery | 1.9         | 5       | Unsupported    |
-| jQuery | 1.9.0       | 97253   | Unsupported    |
-| jQuery | 1.9.02      | 8       | Unsupported    |
-| jQuery | 1.9.1       | 821142  | Unsupported    |
-| jQuery | 1.9.1.      | 1       | Unsupported    |
-| jQuery | 1.9.11      | 10      | Unsupported    |
-| jQuery | 1.9.12      | 24      | Unsupported    |
-| jQuery | 1.9.15      | 4       | Unsupported    |
-| jQuery | 1.9.17      | 2       | Unsupported    |
-| jQuery | 1.9.2       | 236     | Unsupported    |
-| jQuery | 1.9.22      | 4       | Unsupported    |
-| jQuery | 1.9.3       | 341     | Unsupported    |
-| jQuery | 1.9.4       | 108     | Unsupported    |
-| jQuery | 1.9.5       | 9       | Unsupported    |
-| jQuery | 1.9.6       | 9       | Unsupported    |
-| jQuery | 1.9.7       | 321     | Unsupported    |
-| jQuery | 1.9.9       | 8       | Unsupported    |
-| jQuery | 1.99.0      | 4       | Unsupported    |
-| jQuery | 1.99.4      | 4       | Unsupported    |
-| jQuery | 10.0.0      | 4       | Supported      |
-| jQuery | 10.0.2      | 9       | Supported      |
-| jQuery | 10.1.2      | 4       | Supported      |
-| jQuery | 10.2        | 25      | Supported      |
-| jQuery | 10.8.3      | 56      | Supported      |
-| jQuery | 100.0.0     | 5       | Supported      |
-| jQuery | 1000.12.4   | 4       | Supported      |
-| jQuery | 11.0.1      | 20      | Supported      |
-| jQuery | 11.0.6      | 20      | Supported      |
-| jQuery | 11.07.82    | 52      | Supported      |
-| jQuery | 11.1.0      | 4       | Supported      |
-| jQuery | 11.1.1      | 51      | Supported      |
-| jQuery | 11.1.3      | 12      | Supported      |
-| jQuery | 11.10.2     | 1       | Supported      |
-| jQuery | 11.11.0     | 101     | Supported      |
-| jQuery | 11.12.0     | 4       | Supported      |
-| jQuery | 11.12.4     | 4       | Supported      |
-| jQuery | 11.7.2      | 4       | Supported      |
-| jQuery | 110         | 60      | Supported      |
-| jQuery | 1102        | 1       | Supported      |
-| jQuery | 111.11.3    | 4       | Supported      |
-| jQuery | 12.0.0      | 44      | Supported      |
-| jQuery | 12.1.0      | 4       | Supported      |
-| jQuery | 123         | 88      | Supported      |
-| jQuery | 13.1.0      | 4       | Supported      |
-| jQuery | 13.2.1      | 12      | Supported      |
-| jQuery | 13.4.1      | 16      | Supported      |
-| jQuery | 14          | 1       | Supported      |
-| jQuery | 15.3.2      | 4       | Supported      |
-| jQuery | 16.10.4     | 4       | Supported      |
-| jQuery | 160         | 4       | Supported      |
-| jQuery | 161         | 4       | Supported      |
-| jQuery | 172         | 8       | Supported      |
-| jQuery | 180         | 1       | Supported      |
-| jQuery | 19.1.4      | 16      | Supported      |
-| jQuery | 2           | 56      | Unsupported    |
-| jQuery | 2.0         | 6       | Unsupported    |
-| jQuery | 2.0.0       | 38730   | Unsupported    |
-| jQuery | 2.0.1       | 2315    | Unsupported    |
-| jQuery | 2.0.10      | 8       | Unsupported    |
-| jQuery | 2.0.11      | 1       | Unsupported    |
-| jQuery | 2.0.12      | 4       | Unsupported    |
-| jQuery | 2.0.14      | 12      | Unsupported    |
-| jQuery | 2.0.19      | 50      | Unsupported    |
-| jQuery | 2.0.2       | 18789   | Unsupported    |
-| jQuery | 2.0.3       | 104923  | Unsupported    |
-| jQuery | 2.0.4       | 461     | Unsupported    |
-| jQuery | 2.0.5       | 121     | Unsupported    |
-| jQuery | 2.0.6       | 13      | Unsupported    |
-| jQuery | 2.0.60      | 1       | Unsupported    |
-| jQuery | 2.0.66      | 8       | Unsupported    |
-| jQuery | 2.0.7       | 45      | Unsupported    |
-| jQuery | 2.0.8       | 8       | Unsupported    |
-| jQuery | 2.0.9       | 8       | Unsupported    |
-| jQuery | 2.01.12     | 4       | Unsupported    |
-| jQuery | 2.1.        | 4       | Unsupported    |
-| jQuery | 2.1.0       | 86595   | Unsupported    |
-| jQuery | 2.1.04      | 1       | Unsupported    |
-| jQuery | 2.1.05      | 22      | Unsupported    |
-| jQuery | 2.1.07      | 1       | Unsupported    |
-| jQuery | 2.1.08      | 848     | Unsupported    |
-| jQuery | 2.1.1       | 473601  | Unsupported    |
-| jQuery | 2.1.10      | 20      | Unsupported    |
-| jQuery | 2.1.11      | 596     | Unsupported    |
-| jQuery | 2.1.12      | 32      | Unsupported    |
-| jQuery | 2.1.13      | 27      | Unsupported    |
-| jQuery | 2.1.15      | 231     | Unsupported    |
-| jQuery | 2.1.16      | 4       | Unsupported    |
-| jQuery | 2.1.17      | 5       | Unsupported    |
-| jQuery | 2.1.18      | 669     | Unsupported    |
-| jQuery | 2.1.2       | 2017    | Unsupported    |
-| jQuery | 2.1.27      | 12      | Unsupported    |
-| jQuery | 2.1.3       | 296850  | Unsupported    |
-| jQuery | 2.1.30      | 4       | Unsupported    |
-| jQuery | 2.1.34      | 32      | Unsupported    |
-| jQuery | 2.1.38      | 24      | Unsupported    |
-| jQuery | 2.1.4       | 554179  | Unsupported    |
-| jQuery | 2.1.41      | 2       | Unsupported    |
-| jQuery | 2.1.47      | 256     | Unsupported    |
-| jQuery | 2.1.5       | 3017    | Unsupported    |
-| jQuery | 2.1.6       | 1168    | Unsupported    |
-| jQuery | 2.1.7       | 4       | Unsupported    |
-| jQuery | 2.1.8       | 2       | Unsupported    |
-| jQuery | 2.10.1      | 58      | Unsupported    |
-| jQuery | 2.10.2      | 4       | Unsupported    |
-| jQuery | 2.10.4      | 25      | Unsupported    |
-| jQuery | 2.10.6      | 97      | Unsupported    |
-| jQuery | 2.10.8      | 4       | Unsupported    |
-| jQuery | 2.11.0      | 865     | Unsupported    |
-| jQuery | 2.11.1      | 5       | Unsupported    |
-| jQuery | 2.11.2      | 10      | Unsupported    |
-| jQuery | 2.11.3      | 8       | Unsupported    |
-| jQuery | 2.12.4      | 21      | Unsupported    |
-| jQuery | 2.14.0      | 4       | Unsupported    |
-| jQuery | 2.14.4      | 2       | Unsupported    |
-| jQuery | 2.17.0      | 10      | Unsupported    |
-| jQuery | 2.17.5      | 8       | Unsupported    |
-| jQuery | 2.18.0      | 24      | Unsupported    |
-| jQuery | 2.2         | 4       | Unsupported    |
-| jQuery | 2.2.0       | 147050  | Unsupported    |
-| jQuery | 2.2.1       | 45230   | Unsupported    |
-| jQuery | 2.2.12      | 2       | Unsupported    |
-| jQuery | 2.2.13      | 4       | Unsupported    |
-| jQuery | 2.2.14      | 2       | Unsupported    |
-| jQuery | 2.2.2       | 98990   | Unsupported    |
-| jQuery | 2.2.24      | 4       | Unsupported    |
-| jQuery | 2.2.3       | 369741  | Unsupported    |
-| jQuery | 2.2.4       | 1104850 | Unsupported    |
-| jQuery | 2.2.4.      | 4       | Unsupported    |
-| jQuery | 2.2.40      | 4       | Unsupported    |
-| jQuery | 2.2.43      | 116     | Unsupported    |
-| jQuery | 2.2.5       | 8770    | Unsupported    |
-| jQuery | 2.2.6       | 24      | Unsupported    |
-| jQuery | 2.2.8       | 36      | Unsupported    |
-| jQuery | 2.2.81      | 23      | Unsupported    |
-| jQuery | 2.22.0      | 11      | Unsupported    |
-| jQuery | 2.22.2      | 4       | Unsupported    |
-| jQuery | 2.22.3      | 1       | Unsupported    |
-| jQuery | 2.28.1      | 5       | Unsupported    |
-| jQuery | 2.29.1      | 4       | Unsupported    |
-| jQuery | 2.29.5      | 4       | Unsupported    |
-| jQuery | 2.3.0       | 57      | Unsupported    |
-| jQuery | 2.3.1       | 349     | Unsupported    |
-| jQuery | 2.3.11      | 4       | Unsupported    |
-| jQuery | 2.3.19      | 4       | Unsupported    |
-| jQuery | 2.3.2       | 322     | Unsupported    |
-| jQuery | 2.3.20      | 33      | Unsupported    |
-| jQuery | 2.3.23      | 61      | Unsupported    |
-| jQuery | 2.3.26      | 5362    | Unsupported    |
-| jQuery | 2.3.3       | 8       | Unsupported    |
-| jQuery | 2.3.36      | 16      | Unsupported    |
-| jQuery | 2.3.4       | 28      | Unsupported    |
-| jQuery | 2.3.44      | 8       | Unsupported    |
-| jQuery | 2.3.54      | 63      | Unsupported    |
-| jQuery | 2.3.6       | 4       | Unsupported    |
-| jQuery | 2.3.60      | 12      | Unsupported    |
-| jQuery | 2.3.61      | 8       | Unsupported    |
-| jQuery | 2.3.7       | 8       | Unsupported    |
-| jQuery | 2.3.73      | 16      | Unsupported    |
-| jQuery | 2.3.74      | 4       | Unsupported    |
-| jQuery | 2.3.77      | 234     | Unsupported    |
-| jQuery | 2.3.79      | 397     | Unsupported    |
-| jQuery | 2.3.9       | 4       | Unsupported    |
-| jQuery | 2.30.0      | 64      | Unsupported    |
-| jQuery | 2.30.5      | 16      | Unsupported    |
-| jQuery | 2.31.2      | 4       | Unsupported    |
-| jQuery | 2.32.0      | 4       | Unsupported    |
-| jQuery | 2.34.0      | 39      | Unsupported    |
-| jQuery | 2.38.0      | 1       | Unsupported    |
-| jQuery | 2.38.1      | 12      | Unsupported    |
-| jQuery | 2.38.2      | 53      | Unsupported    |
-| jQuery | 2.4.0       | 469     | Unsupported    |
-| jQuery | 2.4.1       | 334     | Unsupported    |
-| jQuery | 2.4.2       | 25      | Unsupported    |
-| jQuery | 2.4.3       | 6       | Unsupported    |
-| jQuery | 2.4.4       | 41      | Unsupported    |
-| jQuery | 2.4.5       | 4       | Unsupported    |
-| jQuery | 2.42.0      | 5       | Unsupported    |
-| jQuery | 2.5.0       | 86      | Unsupported    |
-| jQuery | 2.5.1       | 16      | Unsupported    |
-| jQuery | 2.5.10      | 16      | Unsupported    |
-| jQuery | 2.5.11      | 4       | Unsupported    |
-| jQuery | 2.5.12      | 5       | Unsupported    |
-| jQuery | 2.5.14      | 42      | Unsupported    |
-| jQuery | 2.5.15      | 16      | Unsupported    |
-| jQuery | 2.5.16      | 16      | Unsupported    |
-| jQuery | 2.5.17      | 25      | Unsupported    |
-| jQuery | 2.5.18      | 10      | Unsupported    |
-| jQuery | 2.5.2       | 129     | Unsupported    |
-| jQuery | 2.5.20      | 4554    | Unsupported    |
-| jQuery | 2.5.3       | 8       | Unsupported    |
-| jQuery | 2.5.4       | 10      | Unsupported    |
-| jQuery | 2.5.9       | 25      | Unsupported    |
-| jQuery | 2.50.0      | 4       | Unsupported    |
-| jQuery | 2.6.0       | 107     | Unsupported    |
-| jQuery | 2.6.1       | 385     | Unsupported    |
-| jQuery | 2.6.2       | 25      | Unsupported    |
-| jQuery | 2.6.3       | 460     | Unsupported    |
-| jQuery | 2.6.4       | 554     | Unsupported    |
-| jQuery | 2.6.6       | 14      | Unsupported    |
-| jQuery | 2.6.9       | 12      | Unsupported    |
-| jQuery | 2.61.0      | 62      | Unsupported    |
-| jQuery | 2.65.0      | 8       | Unsupported    |
-| jQuery | 2.7.0       | 189     | Unsupported    |
-| jQuery | 2.7.1       | 703     | Unsupported    |
-| jQuery | 2.7.12      | 92      | Unsupported    |
-| jQuery | 2.7.2       | 819     | Unsupported    |
-| jQuery | 2.7.4       | 20      | Unsupported    |
-| jQuery | 2.7.5       | 4       | Unsupported    |
-| jQuery | 2.7.8       | 4       | Unsupported    |
-| jQuery | 2.7.9       | 4       | Unsupported    |
-| jQuery | 2.70.0      | 175     | Unsupported    |
-| jQuery | 2.8.0       | 12      | Unsupported    |
-| jQuery | 2.8.5       | 12      | Unsupported    |
-| jQuery | 2.8.6       | 4       | Unsupported    |
-| jQuery | 2.8.8       | 1       | Unsupported    |
-| jQuery | 2.9.0       | 54      | Unsupported    |
-| jQuery | 2.9.1       | 4       | Unsupported    |
-| jQuery | 2.9.11      | 4       | Unsupported    |
-| jQuery | 2.9.2       | 5       | Unsupported    |
-| jQuery | 2.9.3       | 4       | Unsupported    |
-| jQuery | 2.9.4       | 34      | Unsupported    |
-| jQuery | 2.9.5       | 30      | Unsupported    |
-| jQuery | 2.9.6       | 16      | Unsupported    |
-| jQuery | 2.9.7       | 157     | Unsupported    |
-| jQuery | 2.9.9       | 2       | Unsupported    |
-| jQuery | 2.9999.5    | 4       | Unsupported    |
-| jQuery | 2.9999.6    | 4       | Unsupported    |
-| jQuery | 2.9999.8    | 1265    | Unsupported    |
-| jQuery | 2.9999.81   | 4       | Unsupported    |
-| jQuery | 20          | 13      | Supported      |
-| jQuery | 2010.1.416  | 4       | Supported      |
-| jQuery | 2010.1.518  | 1       | Supported      |
-| jQuery | 2010.2.825  | 1       | Supported      |
-| jQuery | 2011.01.01  | 1       | Supported      |
-| jQuery | 2011.1.315  | 13      | Supported      |
-| jQuery | 2011.2.712  | 16      | Supported      |
-| jQuery | 2011.2.914  | 1       | Supported      |
-| jQuery | 2012.07.03  | 14      | Supported      |
-| jQuery | 2012.1.214  | 19      | Supported      |
-| jQuery | 2012.1.419  | 8       | Supported      |
-| jQuery | 2012.2.607  | 23      | Supported      |
-| jQuery | 2012.2.622  | 4       | Supported      |
-| jQuery | 2013.1.219  | 10      | Supported      |
-| jQuery | 2013.1.319  | 36      | Supported      |
-| jQuery | 2013.1.514  | 8       | Supported      |
-| jQuery | 2013.2.611  | 47      | Supported      |
-| jQuery | 2013.2.716  | 29      | Supported      |
-| jQuery | 2013.2.801  | 4       | Supported      |
-| jQuery | 2013.2.918  | 17      | Supported      |
-| jQuery | 2014.1.318  | 34      | Supported      |
-| jQuery | 2014.1.415  | 23      | Supported      |
-| jQuery | 2014.1.423  | 4       | Supported      |
-| jQuery | 2014.1.528  | 8       | Supported      |
-| jQuery | 2014.1.624  | 60      | Supported      |
-| jQuery | 2014.2.716  | 25      | Supported      |
-| jQuery | 2014.2.814  | 4       | Supported      |
-| jQuery | 2015.1.318  | 8       | Supported      |
-| jQuery | 2015.1.331  | 4       | Supported      |
-| jQuery | 2015.1.408  | 10      | Supported      |
-| jQuery | 2015.1.429  | 19      | Supported      |
-| jQuery | 2015.2.624  | 33      | Supported      |
-| jQuery | 2015.2.805  | 17      | Supported      |
-| jQuery | 2015.2.902  | 20      | Supported      |
-| jQuery | 2015.3.930  | 31      | Supported      |
-| jQuery | 2016.1.112  | 40      | Supported      |
-| jQuery | 2016.1.226  | 14      | Supported      |
-| jQuery | 2016.1.412  | 115     | Supported      |
-| jQuery | 2016.2.504  | 14      | Supported      |
-| jQuery | 2016.2.607  | 4       | Supported      |
-| jQuery | 2016.2.714  | 10      | Supported      |
-| jQuery | 2016.3.914  | 28      | Supported      |
-| jQuery | 2017.07.31  | 4       | Supported      |
-| jQuery | 2017.1.118  | 26      | Supported      |
-| jQuery | 2017.1.223  | 39      | Supported      |
-| jQuery | 2017.2.504  | 487     | Supported      |
-| jQuery | 2017.2.621  | 48      | Supported      |
-| jQuery | 2017.3.913  | 8       | Supported      |
-| jQuery | 2018.1.117  | 12      | Supported      |
-| jQuery | 2018.1.131  | 4       | Supported      |
-| jQuery | 2018.1.221  | 83      | Supported      |
-| jQuery | 2018.1.503  | 1       | Supported      |
-| jQuery | 2018.2.516  | 4       | Supported      |
-| jQuery | 2018.2.620  | 27      | Supported      |
-| jQuery | 2018.3.911  | 5       | Supported      |
-| jQuery | 2019.1.115  | 13      | Supported      |
-| jQuery | 2019.1.220  | 32      | Supported      |
-| jQuery | 2019.2.514  | 9       | Supported      |
-| jQuery | 2019.2.619  | 8       | Supported      |
-| jQuery | 2019.3.917  | 57      | Supported      |
-| jQuery | 2020.1.114  | 5       | Supported      |
-| jQuery | 2020.1.219  | 15      | Supported      |
-| jQuery | 2020.1.406  | 12      | Supported      |
-| jQuery | 2020.2.513  | 31      | Supported      |
-| jQuery | 2020.2.617  | 48      | Supported      |
-| jQuery | 2020.3.915  | 9       | Supported      |
-| jQuery | 2021.1.119  | 29      | Supported      |
-| jQuery | 2021.1.224  | 28      | Supported      |
-| jQuery | 2021.1.330  | 4       | Supported      |
-| jQuery | 2021.2.616  | 56      | Supported      |
-| jQuery | 2021.3.914  | 31      | Supported      |
-| jQuery | 2022.1.119  | 6       | Supported      |
-| jQuery | 2022.1.301  | 16      | Supported      |
-| jQuery | 2022.1.412  | 4       | Supported      |
-| jQuery | 2022.2.510  | 32      | Supported      |
-| jQuery | 2022.2.621  | 17      | Supported      |
-| jQuery | 2022.224    | 6       | Supported      |
-| jQuery | 2022.25.0   | 4       | Supported      |
-| jQuery | 2022.3.913  | 17      | Supported      |
-| jQuery | 2022.4.69   | 1       | Supported      |
-| jQuery | 2022.8.19   | 4       | Supported      |
-| jQuery | 21.05.01    | 7       | Supported      |
-| jQuery | 21.12.4     | 43      | Supported      |
-| jQuery | 213         | 16      | Supported      |
-| jQuery | 22.10.20    | 4       | Supported      |
-| jQuery | 226         | 2       | Supported      |
-| jQuery | 234         | 4       | Supported      |
-| jQuery | 249         | 49      | Supported      |
-| jQuery | 25.0.2      | 13      | Supported      |
-| jQuery | 276         | 23      | Supported      |
-| jQuery | 28.4.2      | 5       | Supported      |
-| jQuery | 288         | 8       | Supported      |
-| jQuery | 3           | 25      | Supported      |
-| jQuery | 3.0.0       | 93551   | Supported      |
-| jQuery | 3.0.0.      | 4       | Supported      |
-| jQuery | 3.0.1       | 509     | Supported      |
-| jQuery | 3.0.10      | 4       | Supported      |
-| jQuery | 3.0.14      | 4       | Supported      |
-| jQuery | 3.0.19      | 12      | Supported      |
-| jQuery | 3.0.2       | 595     | Supported      |
-| jQuery | 3.0.20      | 17      | Supported      |
-| jQuery | 3.0.3       | 1143    | Supported      |
-| jQuery | 3.0.30      | 4       | Supported      |
-| jQuery | 3.0.37      | 1       | Supported      |
-| jQuery | 3.0.39      | 121     | Supported      |
-| jQuery | 3.0.4       | 106     | Supported      |
-| jQuery | 3.0.47      | 5886    | Supported      |
-| jQuery | 3.0.5       | 40      | Supported      |
-| jQuery | 3.0.6       | 4100    | Supported      |
-| jQuery | 3.0.8       | 120     | Supported      |
-| jQuery | 3.0.9       | 12      | Supported      |
-| jQuery | 3.02.04     | 5       | Supported      |
-| jQuery | 3.1.0       | 132947  | Supported      |
-| jQuery | 3.1.1       | 344709  | Supported      |
-| jQuery | 3.1.11      | 4645    | Supported      |
-| jQuery | 3.1.12      | 10149   | Supported      |
-| jQuery | 3.1.13      | 119571  | Supported      |
-| jQuery | 3.1.2       | 559     | Supported      |
-| jQuery | 3.1.20      | 3948    | Supported      |
-| jQuery | 3.1.25      | 2515    | Supported      |
-| jQuery | 3.1.27      | 8       | Supported      |
-| jQuery | 3.1.28      | 12      | Supported      |
-| jQuery | 3.1.3       | 1556    | Supported      |
-| jQuery | 3.1.4       | 186     | Supported      |
-| jQuery | 3.1.5       | 978     | Supported      |
-| jQuery | 3.1.6       | 25      | Supported      |
-| jQuery | 3.1.60      | 10      | Supported      |
-| jQuery | 3.1.62      | 7844    | Supported      |
-| jQuery | 3.1.63      | 4       | Supported      |
-| jQuery | 3.1.8       | 96      | Supported      |
-| jQuery | 3.10.2      | 50      | Supported      |
-| jQuery | 3.11.0      | 77      | Supported      |
-| jQuery | 3.11.1      | 9       | Supported      |
-| jQuery | 3.11.2      | 16      | Supported      |
-| jQuery | 3.12.4      | 8       | Supported      |
-| jQuery | 3.16.24     | 4       | Supported      |
-| jQuery | 3.2         | 3       | Supported      |
-| jQuery | 3.2.0       | 29977   | Supported      |
-| jQuery | 3.2.1       | 971706  | Supported      |
-| jQuery | 3.2.10      | 408     | Supported      |
-| jQuery | 3.2.11      | 383     | Supported      |
-| jQuery | 3.2.12      | 246     | Supported      |
-| jQuery | 3.2.18      | 8       | Supported      |
-| jQuery | 3.2.2       | 2355    | Supported      |
-| jQuery | 3.2.20      | 4       | Supported      |
-| jQuery | 3.2.3       | 56      | Supported      |
-| jQuery | 3.2.32      | 1       | Supported      |
-| jQuery | 3.2.35      | 1       | Supported      |
-| jQuery | 3.2.4       | 5       | Supported      |
-| jQuery | 3.2.5       | 2644    | Supported      |
-| jQuery | 3.2.6       | 93      | Supported      |
-| jQuery | 3.2.8       | 4       | Supported      |
-| jQuery | 3.2.9       | 256     | Supported      |
-| jQuery | 3.20.008    | 4       | Supported      |
-| jQuery | 3.20.3      | 8       | Supported      |
-| jQuery | 3.20142.45  | 4       | Supported      |
-| jQuery | 3.25.0      | 65      | Supported      |
-| jQuery | 3.3.0       | 8480    | Supported      |
-| jQuery | 3.3.1       | 1546166 | Supported      |
-| jQuery | 3.3.1.      | 44      | Supported      |
-| jQuery | 3.3.11      | 51      | Supported      |
-| jQuery | 3.3.12      | 5       | Supported      |
-| jQuery | 3.3.14      | 4       | Supported      |
-| jQuery | 3.3.2       | 3970    | Supported      |
-| jQuery | 3.3.21      | 4       | Supported      |
-| jQuery | 3.3.26      | 2       | Supported      |
-| jQuery | 3.3.28      | 37      | Supported      |
-| jQuery | 3.3.3       | 34      | Supported      |
-| jQuery | 3.3.30      | 8       | Supported      |
-| jQuery | 3.3.31      | 8       | Supported      |
-| jQuery | 3.3.4       | 1312    | Supported      |
-| jQuery | 3.3.5       | 3509    | Supported      |
-| jQuery | 3.3.6       | 17      | Supported      |
-| jQuery | 3.3.7       | 12      | Supported      |
-| jQuery | 3.3.8       | 8       | Supported      |
-| jQuery | 3.3.9       | 113     | Supported      |
-| jQuery | 3.37.0      | 1       | Supported      |
-| jQuery | 3.4.0       | 68175   | Supported      |
-| jQuery | 3.4.01      | 4       | Supported      |
-| jQuery | 3.4.1       | 1235654 | Supported      |
-| jQuery | 3.4.10      | 1       | Supported      |
-| jQuery | 3.4.11      | 4       | Supported      |
-| jQuery | 3.4.12      | 21      | Supported      |
-| jQuery | 3.4.13      | 4       | Supported      |
-| jQuery | 3.4.14      | 1       | Supported      |
-| jQuery | 3.4.16      | 1       | Supported      |
-| jQuery | 3.4.17      | 4       | Supported      |
-| jQuery | 3.4.18      | 4       | Supported      |
-| jQuery | 3.4.19      | 1       | Supported      |
-| jQuery | 3.4.2       | 381     | Supported      |
-| jQuery | 3.4.20      | 4       | Supported      |
-| jQuery | 3.4.21      | 4       | Supported      |
-| jQuery | 3.4.3       | 1       | Supported      |
-| jQuery | 3.4.4       | 10      | Supported      |
-| jQuery | 3.4.5       | 4       | Supported      |
-| jQuery | 3.4.6       | 18      | Supported      |
-| jQuery | 3.4.7       | 1       | Supported      |
-| jQuery | 3.4.8       | 1       | Supported      |
-| jQuery | 3.4.9       | 4       | Supported      |
-| jQuery | 3.5         | 74      | Supported      |
-| jQuery | 3.5.0       | 116101  | Supported      |
-| jQuery | 3.5.0.      | 4       | Supported      |
-| jQuery | 3.5.0001    | 8       | Supported      |
-| jQuery | 3.5.1       | 3080372 | Supported      |
-| jQuery | 3.5.11      | 1       | Supported      |
-| jQuery | 3.5.110003  | 4       | Supported      |
-| jQuery | 3.5.2       | 786     | Supported      |
-| jQuery | 3.5.3       | 6       | Supported      |
-| jQuery | 3.5.38      | 1       | Supported      |
-| jQuery | 3.5.4       | 14      | Supported      |
-| jQuery | 3.5.5       | 4       | Supported      |
-| jQuery | 3.5.6       | 612     | Supported      |
-| jQuery | 3.5.7       | 11320   | Supported      |
-| jQuery | 3.5.8       | 4       | Supported      |
-| jQuery | 3.51.0      | 45      | Supported      |
-| jQuery | 3.6         | 1044    | Supported      |
-| jQuery | 3.6.0       | 5776886 | Supported      |
-| jQuery | 3.6.00      | 5       | Supported      |
-| jQuery | 3.6.1       | 8060532 | Supported      |
-| jQuery | 3.6.100     | 8       | Supported      |
-| jQuery | 3.6.2       | 33909   | Supported      |
-| jQuery | 3.6.3       | 37854   | Supported      |
-| jQuery | 3.6.4       | 16      | Supported      |
-| jQuery | 3.6.5       | 1       | Supported      |
-| jQuery | 3.6.6       | 354     | Supported      |
-| jQuery | 3.6.7       | 4       | Supported      |
-| jQuery | 3.6.8       | 177     | Supported      |
-| jQuery | 3.6.9       | 5       | Supported      |
-| jQuery | 3.60        | 4       | Supported      |
-| jQuery | 3.7.0       | 113     | Supported      |
-| jQuery | 3.7.1       | 12      | Supported      |
-| jQuery | 3.7.11      | 4       | Supported      |
-| jQuery | 3.7.3       | 8       | Supported      |
-| jQuery | 3.7.4       | 4       | Supported      |
-| jQuery | 3.7.6       | 403     | Supported      |
-| jQuery | 3.7.7       | 4       | Supported      |
-| jQuery | 3.8.0       | 63      | Supported      |
-| jQuery | 3.8.1       | 7       | Supported      |
-| jQuery | 3.9.0       | 41      | Supported      |
-| jQuery | 3.9.1       | 9       | Supported      |
-| jQuery | 3.9.18      | 4       | Supported      |
-| jQuery | 3.9.3       | 4       | Supported      |
-| jQuery | 3.9.4       | 5       | Supported      |
-| jQuery | 3.9.9       | 128     | Supported      |
-| jQuery | 3.99.99     | 2756    | Supported      |
-| jQuery | 3.999.999   | 1       | Supported      |
-| jQuery | 30.1.1      | 4       | Supported      |
-| jQuery | 33.1.1      | 4       | Supported      |
-| jQuery | 33.4.1      | 4       | Supported      |
-| jQuery | 4.0.0       | 1390    | Supported      |
-| jQuery | 4.0.1       | 4433    | Supported      |
-| jQuery | 4.0.10      | 5       | Supported      |
-| jQuery | 4.0.11      | 4       | Supported      |
-| jQuery | 4.0.2       | 521     | Supported      |
-| jQuery | 4.0.26      | 52      | Supported      |
-| jQuery | 4.0.6       | 65      | Supported      |
-| jQuery | 4.0.8       | 39      | Supported      |
-| jQuery | 4.0.9       | 773     | Supported      |
-| jQuery | 4.02.0      | 4       | Supported      |
-| jQuery | 4.1.0       | 3       | Supported      |
-| jQuery | 4.1.1       | 65      | Supported      |
-| jQuery | 4.1.15      | 4       | Supported      |
-| jQuery | 4.1.2       | 122     | Supported      |
-| jQuery | 4.1.3       | 8       | Supported      |
-| jQuery | 4.1.7       | 4       | Supported      |
-| jQuery | 4.10.2      | 16      | Supported      |
-| jQuery | 4.12.2      | 4       | Supported      |
-| jQuery | 4.12.4      | 4       | Supported      |
-| jQuery | 4.14.0      | 1       | Supported      |
-| jQuery | 4.15.4      | 1       | Supported      |
-| jQuery | 4.15.5      | 5       | Supported      |
-| jQuery | 4.2.1       | 104     | Supported      |
-| jQuery | 4.2.10      | 47      | Supported      |
-| jQuery | 4.2.11      | 6       | Supported      |
-| jQuery | 4.2.12      | 28325   | Supported      |
-| jQuery | 4.2.13      | 4       | Supported      |
-| jQuery | 4.2.14      | 3932    | Supported      |
-| jQuery | 4.2.15      | 7815    | Supported      |
-| jQuery | 4.2.2       | 1238    | Supported      |
-| jQuery | 4.2.4       | 2       | Supported      |
-| jQuery | 4.2.5       | 237     | Supported      |
-| jQuery | 4.2.7       | 93      | Supported      |
-| jQuery | 4.2.9       | 12      | Supported      |
-| jQuery | 4.3.0       | 312     | Supported      |
-| jQuery | 4.3.1       | 58      | Supported      |
-| jQuery | 4.3.2       | 12      | Supported      |
-| jQuery | 4.4.0       | 4       | Supported      |
-| jQuery | 4.4.1       | 6       | Supported      |
-| jQuery | 4.5.0       | 94      | Supported      |
-| jQuery | 4.5.1       | 1       | Supported      |
-| jQuery | 4.5.12      | 4       | Supported      |
-| jQuery | 4.5.2       | 4       | Supported      |
-| jQuery | 4.5.28      | 4       | Supported      |
-| jQuery | 4.5.35      | 1       | Supported      |
-| jQuery | 4.5.4       | 4       | Supported      |
-| jQuery | 4.5.6       | 26      | Supported      |
-| jQuery | 4.5.9       | 1       | Supported      |
-| jQuery | 4.6.0       | 17      | Supported      |
-| jQuery | 4.6.2       | 4       | Supported      |
-| jQuery | 4.7.13      | 4       | Supported      |
-| jQuery | 4.7.5       | 160     | Supported      |
-| jQuery | 4.7.6       | 29      | Supported      |
-| jQuery | 4.9.12      | 4       | Supported      |
-| jQuery | 4.9.3       | 1       | Supported      |
-| jQuery | 42          | 125     | Supported      |
-| jQuery | 5           | 2       | Supported      |
-| jQuery | 5.0.0       | 50      | Supported      |
-| jQuery | 5.0.3       | 18      | Supported      |
-| jQuery | 5.0.4       | 4       | Supported      |
-| jQuery | 5.0.5       | 249     | Supported      |
-| jQuery | 5.0.6       | 114     | Supported      |
-| jQuery | 5.0.7       | 224     | Supported      |
-| jQuery | 5.1.4       | 24      | Supported      |
-| jQuery | 5.10.3      | 53      | Supported      |
-| jQuery | 5.11.1      | 1       | Supported      |
-| jQuery | 5.11.3      | 49      | Supported      |
-| jQuery | 5.11.6      | 2       | Supported      |
-| jQuery | 5.15.0      | 70      | Supported      |
-| jQuery | 5.16.2      | 4       | Supported      |
-| jQuery | 5.2.3       | 81      | Supported      |
-| jQuery | 5.2.4       | 4       | Supported      |
-| jQuery | 5.3.1       | 17      | Supported      |
-| jQuery | 5.42.1      | 8       | Supported      |
-| jQuery | 5.5.1       | 9       | Supported      |
-| jQuery | 5.5.5       | 8       | Supported      |
-| jQuery | 5.55.55     | 4       | Supported      |
-| jQuery | 5.6.1       | 1       | Supported      |
-| jQuery | 5.6.4       | 2       | Supported      |
-| jQuery | 5.9.9       | 4       | Supported      |
-| jQuery | 509         | 5       | Supported      |
-| jQuery | 6.0.1       | 8       | Supported      |
-| jQuery | 6.0.2       | 4       | Supported      |
-| jQuery | 6.0.7       | 4       | Supported      |
-| jQuery | 6.1.0       | 51      | Supported      |
-| jQuery | 6.1.1       | 4       | Supported      |
-| jQuery | 6.1.4       | 4       | Supported      |
-| jQuery | 6.1.5       | 4       | Supported      |
-| jQuery | 6.1.6       | 4       | Supported      |
-| jQuery | 6.1.8       | 139     | Supported      |
-| jQuery | 6.17.2      | 59      | Supported      |
-| jQuery | 6.18.20     | 12      | Supported      |
-| jQuery | 6.18.22     | 4       | Supported      |
-| jQuery | 6.19.3      | 8       | Supported      |
-| jQuery | 6.19.5      | 4       | Supported      |
-| jQuery | 6.2.0       | 8       | Supported      |
-| jQuery | 6.2.1       | 75      | Supported      |
-| jQuery | 6.20.2      | 16      | Supported      |
-| jQuery | 6.20.3      | 16      | Supported      |
-| jQuery | 6.21.0      | 8       | Supported      |
-| jQuery | 6.21.1      | 24      | Supported      |
-| jQuery | 6.3.50      | 4       | Supported      |
-| jQuery | 6.4.9       | 62      | Supported      |
-| jQuery | 6.6         | 10      | Supported      |
-| jQuery | 6.6.0       | 6       | Supported      |
-| jQuery | 6.6.6       | 8       | Supported      |
-| jQuery | 64          | 10      | Supported      |
-| jQuery | 7.0.0       | 35      | Supported      |
-| jQuery | 7.0.1       | 13      | Supported      |
-| jQuery | 7.0.10      | 5       | Supported      |
-| jQuery | 7.0.3       | 151     | Supported      |
-| jQuery | 7.0.5       | 26      | Supported      |
-| jQuery | 7.0.6       | 3469    | Supported      |
-| jQuery | 7.10.1      | 249     | Supported      |
-| jQuery | 7.2.2       | 36      | Supported      |
-| jQuery | 7.2.3       | 4       | Supported      |
-| jQuery | 7.3.2       | 13      | Supported      |
-| jQuery | 7.3.3       | 146     | Supported      |
-| jQuery | 7.41.3      | 16      | Supported      |
-| jQuery | 8.0.3       | 8       | Supported      |
-| jQuery | 8.1.1       | 4       | Supported      |
-| jQuery | 8.10.1      | 16      | Supported      |
-| jQuery | 8.11.0      | 91      | Supported      |
-| jQuery | 8.11.1      | 4763    | Supported      |
-| jQuery | 8.4.0       | 8       | Supported      |
-| jQuery | 8.50.07     | 56      | Supported      |
-| jQuery | 8.58.42     | 2       | Supported      |
-| jQuery | 8.6.0       | 43      | Supported      |
-| jQuery | 8.7.1       | 4       | Supported      |
-| jQuery | 8.8.8       | 2096    | Supported      |
-| jQuery | 8.9.0       | 12      | Supported      |
-| jQuery | 9           | 4       | Supported      |
-| jQuery | 9.0.0       | 93      | Supported      |
-| jQuery | 9.1.1       | 4       | Supported      |
-| jQuery | 9.10.2      | 2       | Supported      |
-| jQuery | 9.11.0      | 4       | Supported      |
-| jQuery | 9.9         | 1       | Supported      |
-| jQuery | 9.9.0       | 10      | Supported      |
-| jQuery | 9.9.9       | 683     | Supported      |
-| jQuery | 9.91.92     | 4       | Supported      |
-| jQuery | 99.9.9      | 4       | Supported      |
-| jQuery | 99.99.9     | 6       | Supported      |
-| jQuery | 999         | 538     | Supported      |
-| jQuery | 999.1.11.2  | 90      | Supported      |
-| jQuery | 999.11.1    | 4       | Supported      |
-| jQuery | \           | 5       | Non-conclusive |
-| jQuery | \1          | 50      | Non-conclusive |
-| jQuery | undefined   | 4       | Non-conclusive |
-
-## Bootstrap
-
-|    version     | count | is_supported |
-| -------------- | ----- | ------------ |
-| 2.3            |     1 | false        | 
-| 3.0            |     1 | false        | 
-| 3.1            |     4 | false        | 
-| 3.2            |    20 | false        | 
-| 3.3            |   187 | false        | 
-| 3.4            |    13 | false        | 
-| 4.0            |    25 | null         | 
-| 4.1            |    28 | true         | 
-| 4.2            |    11 | true         | 
-| 4.3            |    34 | true         | 
-| 4.4            |    10 | true         | 
-| 4.5            |     3 | true         | 
-| 5              |     1 | true         | 
-| 6              |     1 | true         | 
-| 7              |     2 | true         | 
-| 4761           |     1 | true         | 
-
-## jQuery Migrate
-
-| app            | info        | count    | is_supported   |
-|----------------|------------:|---------:|----------------|
-| jQuery Migrate |             | 722930   | Not-versioned  |
-| jQuery Migrate | .           | 217      | Non-conclusive |
-| jQuery Migrate | 0           | 58       | Non-conclusive |
-| jQuery Migrate | 0.0.0       | 29       | Non-conclusive |
-| jQuery Migrate | 0.0.1       | 8        | Non-conclusive |
-| jQuery Migrate | 0.0.2       | 1        | Non-conclusive |
-| jQuery Migrate | 0.0.4       | 1        | Non-conclusive |
-| jQuery Migrate | 0.0.5       | 4        | Non-conclusive |
-| jQuery Migrate | 0.0.7       | 4        | Non-conclusive |
-| jQuery Migrate | 0.0.9       | 4        | Non-conclusive |
-| jQuery Migrate | 0.1.8       | 4        | Non-conclusive |
-| jQuery Migrate | 0.2.58      | 12       | Non-conclusive |
-| jQuery Migrate | 0.4.1       | 4        | Non-conclusive |
-| jQuery Migrate | 0.5.0       | 4        | Non-conclusive |
-| jQuery Migrate | 0.64041100  | 2        | Non-conclusive |
-| jQuery Migrate | 0.7.12      | 12       | Non-conclusive |
-| jQuery Migrate | 0.73289000  | 2        | Non-conclusive |
-| jQuery Migrate | 1           | 12       | Non-conclusive |
-| jQuery Migrate | 193         | 2        | Non-conclusive |
-| jQuery Migrate | 4           | 4        | Non-conclusive |
-| jQuery Migrate | 407         | 26       | Non-conclusive |
-| jQuery Migrate | 7           | 8        | Non-conclusive |
-| jQuery Migrate | 8           | 17       | Non-conclusive |
-| jQuery Migrate | 1           | 4        | Non-conclusive |
-| jQuery Migrate | 01.10.2022  | 4        | Non-conclusive |
-| jQuery Migrate | 2           | 10       | Non-conclusive |
-| jQuery Migrate | 2200        | 8        | Non-conclusive |
-| jQuery Migrate | 25          | 4        | Non-conclusive |
-| jQuery Migrate | 397         | 4        | Non-conclusive |
-| jQuery Migrate | 52          | 4        | Non-conclusive |
-| jQuery Migrate | 5207        | 4        | Non-conclusive |
-| jQuery Migrate | 8269        | 4        | Non-conclusive |
-| jQuery Migrate | 87          | 1        | Non-conclusive |
-| jQuery Migrate | 1           | 728      | Non-conclusive |
-| jQuery Migrate | 1.0         | 95       | Non-conclusive |
-| jQuery Migrate | 1.0.0       | 11908    | Non-conclusive |
-| jQuery Migrate | 1.0.0.      | 8        | Non-conclusive |
-| jQuery Migrate | 1.0.0.3.5   | 4        | Non-conclusive |
-| jQuery Migrate | 1.0.0.3002  | 4        | Non-conclusive |
-| jQuery Migrate | 1.0.1       | 20       | Non-conclusive |
-| jQuery Migrate | 1.0.1.3     | 4        | Non-conclusive |
-| jQuery Migrate | 1.0.14      | 1        | Non-conclusive |
-| jQuery Migrate | 1.0.18      | 4        | Non-conclusive |
-| jQuery Migrate | 1.0.2       | 20       | Non-conclusive |
-| jQuery Migrate | 1.0.20.     | 4        | Non-conclusive |
-| jQuery Migrate | 1.0.3       | 5        | Non-conclusive |
-| jQuery Migrate | 1.0.30      | 4        | Non-conclusive |
-| jQuery Migrate | 1.0.4       | 4        | Non-conclusive |
-| jQuery Migrate | 1.0.5       | 8        | Non-conclusive |
-| jQuery Migrate | 1.0.6       | 10       | Non-conclusive |
-| jQuery Migrate | 1.0.6.02    | 1        | Non-conclusive |
-| jQuery Migrate | 1.0.6.2     | 4        | Non-conclusive |
-| jQuery Migrate | 1.0.7       | 4        | Non-conclusive |
-| jQuery Migrate | 1.0.8       | 8        | Non-conclusive |
-| jQuery Migrate | 1.00001     | 4        | Non-conclusive |
-| jQuery Migrate | 1.00006     | 4        | Non-conclusive |
-| jQuery Migrate | 1.00014     | 4        | Non-conclusive |
-| jQuery Migrate | 1.00019     | 4        | Non-conclusive |
-| jQuery Migrate | 1.0003      | 8        | Non-conclusive |
-| jQuery Migrate | 1.0008      | 8        | Non-conclusive |
-| jQuery Migrate | 1.001       | 4        | Non-conclusive |
-| jQuery Migrate | 1.0010      | 4        | Non-conclusive |
-| jQuery Migrate | 1.003       | 4        | Non-conclusive |
-| jQuery Migrate | 1.007       | 4        | Non-conclusive |
-| jQuery Migrate | 1.03.3.3.2  | 4        | Non-conclusive |
-| jQuery Migrate | 1.1         | 13       | Non-conclusive |
-| jQuery Migrate | 1.1.0       | 7220     | Non-conclusive |
-| jQuery Migrate | 1.1.0.49    | 4        | Non-conclusive |
-| jQuery Migrate | 1.1.1       | 24527    | Non-conclusive |
-| jQuery Migrate | 1.1.12759   | 4        | Non-conclusive |
-| jQuery Migrate | 1.1.19425   | 1        | Non-conclusive |
-| jQuery Migrate | 1.1.2       | 16       | Non-conclusive |
-| jQuery Migrate | 1.1.27      | 4        | Non-conclusive |
-| jQuery Migrate | 1.1.31      | 8        | Non-conclusive |
-| jQuery Migrate | 1.1.5       | 4        | Non-conclusive |
-| jQuery Migrate | 1.1.7       | 4        | Non-conclusive |
-| jQuery Migrate | 1.10        | 4        | Non-conclusive |
-| jQuery Migrate | 1.10.1      | 4        | Non-conclusive |
-| jQuery Migrate | 1.10.2      | 4        | Non-conclusive |
-| jQuery Migrate | 1.10.4      | 8        | Non-conclusive |
-| jQuery Migrate | 1.104.4     | 2        | Non-conclusive |
-| jQuery Migrate | 1.105.1     | 2        | Non-conclusive |
-| jQuery Migrate | 1.11        | 1        | Non-conclusive |
-| jQuery Migrate | 1.11.0      | 12       | Non-conclusive |
-| jQuery Migrate | 1.11.1      | 1        | Non-conclusive |
-| jQuery Migrate | 1.12.1      | 6        | Non-conclusive |
-| jQuery Migrate | 1.12.4      | 44       | Non-conclusive |
-| jQuery Migrate | 1.13.0      | 4        | Non-conclusive |
-| jQuery Migrate | 1.18133122  | 8        | Non-conclusive |
-| jQuery Migrate | 1.2         | 55       | Non-conclusive |
-| jQuery Migrate | 1.2.0       | 4569     | Non-conclusive |
-| jQuery Migrate | 1.2.1       | 571005   | Non-conclusive |
-| jQuery Migrate | 1.2.1.      | 2        | Non-conclusive |
-| jQuery Migrate | 1.2.1.1     | 4        | Non-conclusive |
-| jQuery Migrate | 1.2.1.2     | 4        | Non-conclusive |
-| jQuery Migrate | 1.2.11      | 4        | Non-conclusive |
-| jQuery Migrate | 1.2.11576   | 5        | Non-conclusive |
-| jQuery Migrate | 1.2.12      | 4        | Non-conclusive |
-| jQuery Migrate | 1.2.15152   | 1        | Non-conclusive |
-| jQuery Migrate | 1.2.2       | 87       | Non-conclusive |
-| jQuery Migrate | 1.2.22      | 4        | Non-conclusive |
-| jQuery Migrate | 1.2.3       | 16       | Non-conclusive |
-| jQuery Migrate | 1.2.4       | 4        | Non-conclusive |
-| jQuery Migrate | 1.2.41      | 4        | Non-conclusive |
-| jQuery Migrate | 1.2.9       | 4        | Non-conclusive |
-| jQuery Migrate | 1.21        | 4        | Non-conclusive |
-| jQuery Migrate | 1.24.7      | 4        | Non-conclusive |
-| jQuery Migrate | 1.291       | 1        | Non-conclusive |
-| jQuery Migrate | 1.3.0       | 23005    | Non-conclusive |
-| jQuery Migrate | 1.3.1       | 39       | Non-conclusive |
-| jQuery Migrate | 1.3.1782    | 81       | Non-conclusive |
-| jQuery Migrate | 1.3.1783    | 95       | Non-conclusive |
-| jQuery Migrate | 1.3.1784    | 3        | Non-conclusive |
-| jQuery Migrate | 1.3.1785    | 15       | Non-conclusive |
-| jQuery Migrate | 1.3.1786    | 2        | Non-conclusive |
-| jQuery Migrate | 1.3.3       | 4        | Non-conclusive |
-| jQuery Migrate | 1.3.6       | 4        | Non-conclusive |
-| jQuery Migrate | 1.33        | 4        | Non-conclusive |
-| jQuery Migrate | 1.39.0      | 4        | Non-conclusive |
-| jQuery Migrate | 1.4         | 8        | Non-conclusive |
-| jQuery Migrate | 1.4.0       | 15996    | Non-conclusive |
-| jQuery Migrate | 1.4.1       | 3148967  | Non-conclusive |
-| jQuery Migrate | 1.4.1.      | 8        | Non-conclusive |
-| jQuery Migrate | 1.4.1.77    | 4        | Non-conclusive |
-| jQuery Migrate | 1.4.10      | 21       | Non-conclusive |
-| jQuery Migrate | 1.4.18      | 4        | Non-conclusive |
-| jQuery Migrate | 1.4.2       | 1131     | Non-conclusive |
-| jQuery Migrate | 1.4.3       | 24       | Non-conclusive |
-| jQuery Migrate | 1.4.4       | 8        | Non-conclusive |
-| jQuery Migrate | 1.4.54      | 4        | Non-conclusive |
-| jQuery Migrate | 1.4.68      | 4        | Non-conclusive |
-| jQuery Migrate | 1.4.7       | 2        | Non-conclusive |
-| jQuery Migrate | 1.4.83      | 4        | Non-conclusive |
-| jQuery Migrate | 1.4.89      | 4        | Non-conclusive |
-| jQuery Migrate | 1.4.97      | 4        | Non-conclusive |
-| jQuery Migrate | 1.42111     | 4        | Non-conclusive |
-| jQuery Migrate | 1.5         | 4        | Non-conclusive |
-| jQuery Migrate | 1.5.1       | 12       | Non-conclusive |
-| jQuery Migrate | 1.5.20      | 4        | Non-conclusive |
-| jQuery Migrate | 1.5.22      | 4        | Non-conclusive |
-| jQuery Migrate | 1.5.35      | 2        | Non-conclusive |
-| jQuery Migrate | 1.5.41      | 5        | Non-conclusive |
-| jQuery Migrate | 1.5.45      | 20       | Non-conclusive |
-| jQuery Migrate | 1.5.46      | 4        | Non-conclusive |
-| jQuery Migrate | 1.5.7       | 4        | Non-conclusive |
-| jQuery Migrate | 1.546       | 4        | Non-conclusive |
-| jQuery Migrate | 1.6         | 8        | Non-conclusive |
-| jQuery Migrate | 1.6.10      | 4        | Non-conclusive |
-| jQuery Migrate | 1.6.7       | 8        | Non-conclusive |
-| jQuery Migrate | 1.617       | 2        | Non-conclusive |
-| jQuery Migrate | 1.6243      | 4        | Non-conclusive |
-| jQuery Migrate | 1.7.0       | 4        | Non-conclusive |
-| jQuery Migrate | 1.7.1       | 8        | Non-conclusive |
-| jQuery Migrate | 1.7.10      | 4        | Non-conclusive |
-| jQuery Migrate | 1.8.1       | 6        | Non-conclusive |
-| jQuery Migrate | 1.8.2       | 4        | Non-conclusive |
-| jQuery Migrate | 1.8.3       | 4        | Non-conclusive |
-| jQuery Migrate | 1.8.8       | 4        | Non-conclusive |
-| jQuery Migrate | 1.9.0       | 2        | Non-conclusive |
-| jQuery Migrate | 1.9.1       | 16       | Non-conclusive |
-| jQuery Migrate | 1.9.6       | 4        | Non-conclusive |
-| jQuery Migrate | 1.983       | 4        | Non-conclusive |
-| jQuery Migrate | 10.0.27     | 4        | Non-conclusive |
-| jQuery Migrate | 10.11.123   | 4        | Non-conclusive |
-| jQuery Migrate | 101         | 4        | Non-conclusive |
-| jQuery Migrate | 11          | 4        | Non-conclusive |
-| jQuery Migrate | 11.05171    | 2        | Non-conclusive |
-| jQuery Migrate | 11.05503    | 2        | Non-conclusive |
-| jQuery Migrate | 11.27       | 4        | Non-conclusive |
-| jQuery Migrate | 114         | 5        | Non-conclusive |
-| jQuery Migrate | 12          | 15       | Non-conclusive |
-| jQuery Migrate | 121         | 28       | Non-conclusive |
-| jQuery Migrate | 13          | 6        | Non-conclusive |
-| jQuery Migrate | 13.40.30    | 4        | Non-conclusive |
-| jQuery Migrate | 130         | 1        | Non-conclusive |
-| jQuery Migrate | 14          | 32       | Non-conclusive |
-| jQuery Migrate | 141         | 4        | Non-conclusive |
-| jQuery Migrate | 15.1        | 1        | Non-conclusive |
-| jQuery Migrate | 16          | 4        | Non-conclusive |
-| jQuery Migrate | 1672        | 4        | Non-conclusive |
-| jQuery Migrate | 1705        | 4        | Non-conclusive |
-| jQuery Migrate | 176         | 2        | Non-conclusive |
-| jQuery Migrate | 1770        | 2        | Non-conclusive |
-| jQuery Migrate | 1786        | 1        | Non-conclusive |
-| jQuery Migrate | 18.112.920  | 4        | Non-conclusive |
-| jQuery Migrate | 181         | 4        | Non-conclusive |
-| jQuery Migrate | 19          | 8        | Non-conclusive |
-| jQuery Migrate | 2           | 30       | Non-conclusive |
-| jQuery Migrate | 2.0.0       | 12       | Non-conclusive |
-| jQuery Migrate | 2.0.1       | 8        | Non-conclusive |
-| jQuery Migrate | 2.0.2       | 1        | Non-conclusive |
-| jQuery Migrate | 2.0.8       | 4        | Non-conclusive |
-| jQuery Migrate | 2.0018      | 4        | Non-conclusive |
-| jQuery Migrate | 2.1.4       | 4        | Non-conclusive |
-| jQuery Migrate | 2.1.5       | 4        | Non-conclusive |
-| jQuery Migrate | 2.1.9       | 4        | Non-conclusive |
-| jQuery Migrate | 2.2.3       | 4        | Non-conclusive |
-| jQuery Migrate | 2.2.4       | 20       | Non-conclusive |
-| jQuery Migrate | 2.3.2       | 5        | Non-conclusive |
-| jQuery Migrate | 2.3.9       | 1        | Non-conclusive |
-| jQuery Migrate | 2.44.0      | 4        | Non-conclusive |
-| jQuery Migrate | 2.6.6       | 4        | Non-conclusive |
-| jQuery Migrate | 2.62361     | 4        | Non-conclusive |
-| jQuery Migrate | 2.793       | 2        | Non-conclusive |
-| jQuery Migrate | 200         | 4        | Non-conclusive |
-| jQuery Migrate | 2018        | 16       | Non-conclusive |
-| jQuery Migrate | 2019        | 8        | Non-conclusive |
-| jQuery Migrate | 2020        | 4        | Non-conclusive |
-| jQuery Migrate | 2020.12.17  | 4        | Non-conclusive |
-| jQuery Migrate | 207         | 2        | Non-conclusive |
-| jQuery Migrate | 2089        | 1        | Non-conclusive |
-| jQuery Migrate | 21.3.11     | 8        | Non-conclusive |
-| jQuery Migrate | 210         | 4        | Non-conclusive |
-| jQuery Migrate | 214         | 4        | Non-conclusive |
-| jQuery Migrate | 215         | 4        | Non-conclusive |
-| jQuery Migrate | 22.218      | 4        | Non-conclusive |
-| jQuery Migrate | 23.3.2      | 4        | Non-conclusive |
-| jQuery Migrate | 2337        | 4        | Non-conclusive |
-| jQuery Migrate | 2408        | 4        | Non-conclusive |
-| jQuery Migrate | 25          | 14       | Non-conclusive |
-| jQuery Migrate | 2500        | 4        | Non-conclusive |
-| jQuery Migrate | 27.3.19.1   | 4        | Non-conclusive |
-| jQuery Migrate | 270         | 4        | Non-conclusive |
-| jQuery Migrate | 271         | 14       | Non-conclusive |
-| jQuery Migrate | 2748        | 4        | Non-conclusive |
-| jQuery Migrate | 281         | 1        | Non-conclusive |
-| jQuery Migrate | 3           | 73       | Non-conclusive |
-| jQuery Migrate | 3..3.2      | 8        | Non-conclusive |
-| jQuery Migrate | 3.0         | 4        | Non-conclusive |
-| jQuery Migrate | 3.0.0       | 162202   | Non-conclusive |
-| jQuery Migrate | 3.0.1       | 155200   | Non-conclusive |
-| jQuery Migrate | 3.0.11      | 4        | Non-conclusive |
-| jQuery Migrate | 3.0.2       | 1619     | Non-conclusive |
-| jQuery Migrate | 3.1.0       | 165724   | Non-conclusive |
-| jQuery Migrate | 3.1.1       | 195      | Non-conclusive |
-| jQuery Migrate | 3.2         | 1        | Non-conclusive |
-| jQuery Migrate | 3.2.0       | 20299    | Non-conclusive |
-| jQuery Migrate | 3.2.1       | 12       | Non-conclusive |
-| jQuery Migrate | 3.2.12      | 1        | Non-conclusive |
-| jQuery Migrate | 3.2.13      | 13       | Non-conclusive |
-| jQuery Migrate | 3.2.2       | 14       | Non-conclusive |
-| jQuery Migrate | 3.3.0       | 67160    | Non-conclusive |
-| jQuery Migrate | 3.3.1       | 31308    | Non-conclusive |
-| jQuery Migrate | 3.3.2       | 12987836 | Non-conclusive |
-| jQuery Migrate | 3.3.2.1     | 8        | Non-conclusive |
-| jQuery Migrate | 3.3.2.10    | 4        | Non-conclusive |
-| jQuery Migrate | 3.3.2.11    | 8        | Non-conclusive |
-| jQuery Migrate | 3.3.2.2     | 9        | Non-conclusive |
-| jQuery Migrate | 3.3.2.3     | 2        | Non-conclusive |
-| jQuery Migrate | 3.3.2.4     | 4        | Non-conclusive |
-| jQuery Migrate | 3.3.2.6     | 1        | Non-conclusive |
-| jQuery Migrate | 3.3.3       | 24335    | Non-conclusive |
-| jQuery Migrate | 3.3.7       | 4        | Non-conclusive |
-| jQuery Migrate | 3.4.0       | 88647    | Non-conclusive |
-| jQuery Migrate | 3.4.1       | 1238     | Non-conclusive |
-| jQuery Migrate | 3.5.0       | 18       | Non-conclusive |
-| jQuery Migrate | 3.5.1       | 32       | Non-conclusive |
-| jQuery Migrate | 3.5.2       | 1        | Non-conclusive |
-| jQuery Migrate | 3.6.0       | 8        | Non-conclusive |
-| jQuery Migrate | 3.6.1       | 9        | Non-conclusive |
-| jQuery Migrate | 3.7.41      | 1        | Non-conclusive |
-| jQuery Migrate | 3.8.10      | 4        | Non-conclusive |
-| jQuery Migrate | 3.8.32      | 4        | Non-conclusive |
-| jQuery Migrate | 3.8.37      | 1        | Non-conclusive |
-| jQuery Migrate | 3.9.1       | 4        | Non-conclusive |
-| jQuery Migrate | 3.9.40      | 5        | Non-conclusive |
-| jQuery Migrate | 30          | 4        | Non-conclusive |
-| jQuery Migrate | 307         | 4        | Non-conclusive |
-| jQuery Migrate | 3084        | 2        | Non-conclusive |
-| jQuery Migrate | 3091        | 4        | Non-conclusive |
-| jQuery Migrate | 31          | 1        | Non-conclusive |
-| jQuery Migrate | 332         | 14       | Non-conclusive |
-| jQuery Migrate | 34          | 2        | Non-conclusive |
-| jQuery Migrate | 340         | 4        | Non-conclusive |
-| jQuery Migrate | 36          | 4        | Non-conclusive |
-| jQuery Migrate | 3638        | 4        | Non-conclusive |
-| jQuery Migrate | 37          | 8        | Non-conclusive |
-| jQuery Migrate | 3721        | 4        | Non-conclusive |
-| jQuery Migrate | 3739        | 12       | Non-conclusive |
-| jQuery Migrate | 3772        | 4        | Non-conclusive |
-| jQuery Migrate | 38          | 1        | Non-conclusive |
-| jQuery Migrate | 3906        | 2        | Non-conclusive |
-| jQuery Migrate | 3968        | 4        | Non-conclusive |
-| jQuery Migrate | 4           | 21       | Non-conclusive |
-| jQuery Migrate | 4.0.0       | 4        | Non-conclusive |
-| jQuery Migrate | 4.0.38      | 5        | Non-conclusive |
-| jQuery Migrate | 4.1.1       | 4        | Non-conclusive |
-| jQuery Migrate | 4.1.37      | 9        | Non-conclusive |
-| jQuery Migrate | 4.2.1       | 4        | Non-conclusive |
-| jQuery Migrate | 4.2.34      | 12       | Non-conclusive |
-| jQuery Migrate | 4.3.28      | 4        | Non-conclusive |
-| jQuery Migrate | 4.3.30      | 1        | Non-conclusive |
-| jQuery Migrate | 4.4.29      | 11       | Non-conclusive |
-| jQuery Migrate | 4.4.620     | 10       | Non-conclusive |
-| jQuery Migrate | 4.4.624     | 2        | Non-conclusive |
-| jQuery Migrate | 4.5.16      | 4        | Non-conclusive |
-| jQuery Migrate | 4.5.23      | 4        | Non-conclusive |
-| jQuery Migrate | 4.5.28      | 5        | Non-conclusive |
-| jQuery Migrate | 4.5.40      | 4        | Non-conclusive |
-| jQuery Migrate | 4.5.5       | 4        | Non-conclusive |
-| jQuery Migrate | 4.5.7       | 8        | Non-conclusive |
-| jQuery Migrate | 4.5.9       | 29       | Non-conclusive |
-| jQuery Migrate | 4.5.91      | 16       | Non-conclusive |
-| jQuery Migrate | 4.6.0       | 4        | Non-conclusive |
-| jQuery Migrate | 4.6.02      | 30       | Non-conclusive |
-| jQuery Migrate | 4.6.10      | 71       | Non-conclusive |
-| jQuery Migrate | 4.6.20      | 8        | Non-conclusive |
-| jQuery Migrate | 4.6.25      | 13       | Non-conclusive |
-| jQuery Migrate | 4.6.30      | 45       | Non-conclusive |
-| jQuery Migrate | 4.6.31      | 12       | Non-conclusive |
-| jQuery Migrate | 4.6.41      | 380      | Non-conclusive |
-| jQuery Migrate | 4.6.5       | 143      | Non-conclusive |
-| jQuery Migrate | 4.6.6       | 149      | Non-conclusive |
-| jQuery Migrate | 4.6.7       | 125      | Non-conclusive |
-| jQuery Migrate | 4.6.8       | 192      | Non-conclusive |
-| jQuery Migrate | 4.6.9       | 50       | Non-conclusive |
-| jQuery Migrate | 4.6.9.01    | 4        | Non-conclusive |
-| jQuery Migrate | 4.6.9.02    | 69       | Non-conclusive |
-| jQuery Migrate | 4.7.0.02    | 194      | Non-conclusive |
-| jQuery Migrate | 4.7.2       | 187      | Non-conclusive |
-| jQuery Migrate | 4.7.25      | 34       | Non-conclusive |
-| jQuery Migrate | 4.7.3       | 346      | Non-conclusive |
-| jQuery Migrate | 4.7.31      | 1        | Non-conclusive |
-| jQuery Migrate | 4.7.5       | 4        | Non-conclusive |
-| jQuery Migrate | 4.7.60      | 4        | Non-conclusive |
-| jQuery Migrate | 4.8.1       | 4        | Non-conclusive |
-| jQuery Migrate | 4.8.21      | 9        | Non-conclusive |
-| jQuery Migrate | 4.9.10      | 4        | Non-conclusive |
-| jQuery Migrate | 4.9.12      | 4        | Non-conclusive |
-| jQuery Migrate | 4.9.19      | 8        | Non-conclusive |
-| jQuery Migrate | 4.9.21      | 4        | Non-conclusive |
-| jQuery Migrate | 4.9.22      | 86       | Non-conclusive |
-| jQuery Migrate | 4.9.24      | 4        | Non-conclusive |
-| jQuery Migrate | 4.9.4       | 4        | Non-conclusive |
-| jQuery Migrate | 4.9.5       | 4        | Non-conclusive |
-| jQuery Migrate | 4.9.7       | 4        | Non-conclusive |
-| jQuery Migrate | 4.9.8       | 28       | Non-conclusive |
-| jQuery Migrate | 4.9.9       | 8        | Non-conclusive |
-| jQuery Migrate | 41          | 4        | Non-conclusive |
-| jQuery Migrate | 41.2.1      | 4        | Non-conclusive |
-| jQuery Migrate | 4250        | 1        | Non-conclusive |
-| jQuery Migrate | 4508        | 1        | Non-conclusive |
-| jQuery Migrate | 48.4.1      | 1        | Non-conclusive |
-| jQuery Migrate | 4805        | 4        | Non-conclusive |
-| jQuery Migrate | 486         | 4        | Non-conclusive |
-| jQuery Migrate | 49          | 4        | Non-conclusive |
-| jQuery Migrate | 4902        | 4        | Non-conclusive |
-| jQuery Migrate | 5           | 36       | Non-conclusive |
-| jQuery Migrate | 5.0.18      | 20       | Non-conclusive |
-| jQuery Migrate | 5.0.2       | 4        | Non-conclusive |
-| jQuery Migrate | 5.0.8       | 4        | Non-conclusive |
-| jQuery Migrate | 5.1.12      | 4        | Non-conclusive |
-| jQuery Migrate | 5.1.13      | 4        | Non-conclusive |
-| jQuery Migrate | 5.1.15      | 30       | Non-conclusive |
-| jQuery Migrate | 5.1.4       | 4        | Non-conclusive |
-| jQuery Migrate | 5.2.12      | 1        | Non-conclusive |
-| jQuery Migrate | 5.2.17      | 24       | Non-conclusive |
-| jQuery Migrate | 5.2.2       | 494      | Non-conclusive |
-| jQuery Migrate | 5.2.9       | 4        | Non-conclusive |
-| jQuery Migrate | 5.3.14      | 53       | Non-conclusive |
-| jQuery Migrate | 5.3.2       | 9        | Non-conclusive |
-| jQuery Migrate | 5.4.1       | 6        | Non-conclusive |
-| jQuery Migrate | 5.4.10      | 4        | Non-conclusive |
-| jQuery Migrate | 5.4.12      | 44       | Non-conclusive |
-| jQuery Migrate | 5.4.2       | 5        | Non-conclusive |
-| jQuery Migrate | 5.4.4       | 4        | Non-conclusive |
-| jQuery Migrate | 5.5         | 4        | Non-conclusive |
-| jQuery Migrate | 5.5.1       | 8        | Non-conclusive |
-| jQuery Migrate | 5.5.11      | 101      | Non-conclusive |
-| jQuery Migrate | 5.5.3       | 14       | Non-conclusive |
-| jQuery Migrate | 5.5.9       | 4        | Non-conclusive |
-| jQuery Migrate | 5.6.1       | 8        | Non-conclusive |
-| jQuery Migrate | 5.6.10      | 47       | Non-conclusive |
-| jQuery Migrate | 5.7         | 1        | Non-conclusive |
-| jQuery Migrate | 5.7.2       | 8        | Non-conclusive |
-| jQuery Migrate | 5.7.8       | 50       | Non-conclusive |
-| jQuery Migrate | 5.8.1       | 24       | Non-conclusive |
-| jQuery Migrate | 5.8.2       | 48       | Non-conclusive |
-| jQuery Migrate | 5.8.4       | 1        | Non-conclusive |
-| jQuery Migrate | 5.8.5       | 4        | Non-conclusive |
-| jQuery Migrate | 5.8.6       | 204      | Non-conclusive |
-| jQuery Migrate | 5.9.2       | 8        | Non-conclusive |
-| jQuery Migrate | 5.9.3       | 25       | Non-conclusive |
-| jQuery Migrate | 5.9.5       | 59       | Non-conclusive |
-| jQuery Migrate | 50          | 8        | Non-conclusive |
-| jQuery Migrate | 5012        | 2        | Non-conclusive |
-| jQuery Migrate | 504         | 4        | Non-conclusive |
-| jQuery Migrate | 5109        | 2        | Non-conclusive |
-| jQuery Migrate | 52          | 9        | Non-conclusive |
-| jQuery Migrate | 528         | 1        | Non-conclusive |
-| jQuery Migrate | 535         | 4        | Non-conclusive |
-| jQuery Migrate | 5403        | 2        | Non-conclusive |
-| jQuery Migrate | 55          | 1        | Non-conclusive |
-| jQuery Migrate | 57          | 4        | Non-conclusive |
-| jQuery Migrate | 578         | 4        | Non-conclusive |
-| jQuery Migrate | 6           | 5        | Non-conclusive |
-| jQuery Migrate | 6.0.1       | 25       | Non-conclusive |
-| jQuery Migrate | 6.0.2       | 30       | Non-conclusive |
-| jQuery Migrate | 6.0.3       | 243      | Non-conclusive |
-| jQuery Migrate | 6.1.1       | 1043     | Non-conclusive |
-| jQuery Migrate | 6.10.60     | 1        | Non-conclusive |
-| jQuery Migrate | 6.13.14     | 4        | Non-conclusive |
-| jQuery Migrate | 6.6.4       | 12       | Non-conclusive |
-| jQuery Migrate | 6.9.29      | 4        | Non-conclusive |
-| jQuery Migrate | 6.9.34      | 4        | Non-conclusive |
-| jQuery Migrate | 60.0.0      | 4        | Non-conclusive |
-| jQuery Migrate | 62          | 4        | Non-conclusive |
-| jQuery Migrate | 6264        | 4        | Non-conclusive |
-| jQuery Migrate | 63          | 5        | Non-conclusive |
-| jQuery Migrate | 640         | 2        | Non-conclusive |
-| jQuery Migrate | 6616        | 8        | Non-conclusive |
-| jQuery Migrate | 6656        | 2        | Non-conclusive |
-| jQuery Migrate | 67          | 4        | Non-conclusive |
-| jQuery Migrate | 6794        | 2        | Non-conclusive |
-| jQuery Migrate | 691         | 1        | Non-conclusive |
-| jQuery Migrate | 7           | 34       | Non-conclusive |
-| jQuery Migrate | 7.9.11      | 4        | Non-conclusive |
-| jQuery Migrate | 71          | 1        | Non-conclusive |
-| jQuery Migrate | 717         | 1        | Non-conclusive |
-| jQuery Migrate | 72          | 4        | Non-conclusive |
-| jQuery Migrate | 721         | 4        | Non-conclusive |
-| jQuery Migrate | 7444        | 4        | Non-conclusive |
-| jQuery Migrate | 762         | 4        | Non-conclusive |
-| jQuery Migrate | 776         | 1        | Non-conclusive |
-| jQuery Migrate | 780         | 4        | Non-conclusive |
-| jQuery Migrate | 785         | 4        | Non-conclusive |
-| jQuery Migrate | 79          | 140      | Non-conclusive |
-| jQuery Migrate | 8           | 23       | Non-conclusive |
-| jQuery Migrate | 8.3.40      | 8        | Non-conclusive |
-| jQuery Migrate | 8.3.50      | 5        | Non-conclusive |
-| jQuery Migrate | 8.40.50     | 4        | Non-conclusive |
-| jQuery Migrate | 8.77.70     | 1        | Non-conclusive |
-| jQuery Migrate | 80          | 5        | Non-conclusive |
-| jQuery Migrate | 83          | 4        | Non-conclusive |
-| jQuery Migrate | 8339        | 2        | Non-conclusive |
-| jQuery Migrate | 84          | 4        | Non-conclusive |
-| jQuery Migrate | 86          | 17       | Non-conclusive |
-| jQuery Migrate | 879         | 4        | Non-conclusive |
-| jQuery Migrate | 88          | 5        | Non-conclusive |
-| jQuery Migrate | 884         | 4        | Non-conclusive |
-| jQuery Migrate | 89          | 1        | Non-conclusive |
-| jQuery Migrate | 9           | 63       | Non-conclusive |
-| jQuery Migrate | 9.0.0       | 12       | Non-conclusive |
-| jQuery Migrate | 9.7.3       | 1        | Non-conclusive |
-| jQuery Migrate | 9.9.9       | 4        | Non-conclusive |
-| jQuery Migrate | 9.9.9.02    | 4        | Non-conclusive |
-| jQuery Migrate | 9085        | 1        | Non-conclusive |
-| jQuery Migrate | 91          | 5        | Non-conclusive |
-| jQuery Migrate | 93          | 4        | Non-conclusive |
-| jQuery Migrate | 94          | 4        | Non-conclusive |
-| jQuery Migrate | 953         | 4        | Non-conclusive |
-| jQuery Migrate | 96          | 8        | Non-conclusive |
-| jQuery Migrate | 9638        | 2        | Non-conclusive |
-| jQuery Migrate | 9673        | 2        | Non-conclusive |
-| jQuery Migrate | 9695        | 4        | Non-conclusive |
-| jQuery Migrate | 9754        | 1        | Non-conclusive |
-| jQuery Migrate | 9755        | 2        | Non-conclusive |
-| jQuery Migrate | 98          | 13       | Non-conclusive |
-| jQuery Migrate | 99.4.6.41   | 4        | Non-conclusive |
-| jQuery Migrate | 998         | 1        | Non-conclusive |
-| jQuery Migrate | 999.01.01   | 4        | Non-conclusive |
-| jQuery Migrate | \1?\1:      | 41       | Non-conclusive |
-| jQuery Migrate | \1?\1:1.2.1 | 4        | Non-conclusive |
-| jQuery Migrate | \1?\1:\2    | 5        | Non-conclusive |
-| jQuery Migrate | \2          | 1025     | Non-conclusive |
-
-## PHP
-
-| app | info          | count    | is_supported   |
-|-----|--------------:|---------:|----------------|
-| PHP |               | 19942141 | Not-versioned  |
-| PHP | .             | 49       | Non-conclusive |
-| PHP | 1             | 31       | Unsupported    |
-| PHP | 1.0           | 143      | Unsupported    |
-| PHP | 1.0.1         | 4        | Unsupported    |
-| PHP | 10            | 21       | Supported      |
-| PHP | 12.0          | 1        | Supported      |
-| PHP | 12.1.0        | 4        | Supported      |
-| PHP | 20            | 9        | Supported      |
-| PHP | 22            | 5        | Supported      |
-| PHP | 3.0.11        | 4        | Unsupported    |
-| PHP | 3.0.15        | 16       | Unsupported    |
-| PHP | 3.0.16        | 1        | Unsupported    |
-| PHP | 3.0.17        | 16       | Unsupported    |
-| PHP | 3.0.18        | 161      | Unsupported    |
-| PHP | 3.0.3         | 12       | Unsupported    |
-| PHP | 3.2           | 24       | Unsupported    |
-| PHP | 4             | 15       | Unsupported    |
-| PHP | 4.0           | 2        | Unsupported    |
-| PHP | 4.0.1         | 8        | Unsupported    |
-| PHP | 4.0.2         | 4        | Unsupported    |
-| PHP | 4.0.3         | 4        | Unsupported    |
-| PHP | 4.0.4         | 24       | Unsupported    |
-| PHP | 4.0.5         | 4        | Unsupported    |
-| PHP | 4.0.6         | 57       | Unsupported    |
-| PHP | 4.1.0         | 4        | Unsupported    |
-| PHP | 4.1.1         | 15       | Unsupported    |
-| PHP | 4.1.2         | 277      | Unsupported    |
-| PHP | 4.2           | 40       | Unsupported    |
-| PHP | 4.2.0         | 28       | Unsupported    |
-| PHP | 4.2.1         | 28       | Unsupported    |
-| PHP | 4.2.2         | 79       | Unsupported    |
-| PHP | 4.2.3         | 199      | Unsupported    |
-| PHP | 4.2.4         | 16       | Unsupported    |
-| PHP | 4.3.0         | 21       | Unsupported    |
-| PHP | 4.3.1         | 148      | Unsupported    |
-| PHP | 4.3.10        | 901      | Unsupported    |
-| PHP | 4.3.11        | 1525     | Unsupported    |
-| PHP | 4.3.2         | 156      | Unsupported    |
-| PHP | 4.3.3         | 114      | Unsupported    |
-| PHP | 4.3.32        | 4        | Unsupported    |
-| PHP | 4.3.4         | 139      | Unsupported    |
-| PHP | 4.3.5         | 26       | Unsupported    |
-| PHP | 4.3.6         | 68       | Unsupported    |
-| PHP | 4.3.7         | 38       | Unsupported    |
-| PHP | 4.3.8         | 175      | Unsupported    |
-| PHP | 4.3.9         | 1173     | Unsupported    |
-| PHP | 4.4.0         | 507      | Unsupported    |
-| PHP | 4.4.1         | 574      | Unsupported    |
-| PHP | 4.4.2         | 542      | Unsupported    |
-| PHP | 4.4.29        | 1        | Unsupported    |
-| PHP | 4.4.3         | 1971     | Unsupported    |
-| PHP | 4.4.4         | 1013     | Unsupported    |
-| PHP | 4.4.5         | 28       | Unsupported    |
-| PHP | 4.4.6         | 306      | Unsupported    |
-| PHP | 4.4.7         | 1335     | Unsupported    |
-| PHP | 4.4.8         | 840      | Unsupported    |
-| PHP | 4.4.9         | 12419    | Unsupported    |
-| PHP | 4.8.2         | 12       | Unsupported    |
-| PHP | 5             | 54       | Unsupported    |
-| PHP | 5.0           | 2        | Unsupported    |
-| PHP | 5.0.1         | 12       | Unsupported    |
-| PHP | 5.0.2         | 58       | Unsupported    |
-| PHP | 5.0.3         | 39       | Unsupported    |
-| PHP | 5.0.4         | 306      | Unsupported    |
-| PHP | 5.0.5         | 77       | Unsupported    |
-| PHP | 5.1.1         | 21       | Unsupported    |
-| PHP | 5.1.2         | 479      | Unsupported    |
-| PHP | 5.1.3         | 1064     | Unsupported    |
-| PHP | 5.1.4         | 225      | Unsupported    |
-| PHP | 5.1.5         | 30       | Unsupported    |
-| PHP | 5.1.6         | 9288     | Unsupported    |
-| PHP | 5.2.0         | 1805     | Unsupported    |
-| PHP | 5.2.1         | 638      | Unsupported    |
-| PHP | 5.2.10        | 2104     | Unsupported    |
-| PHP | 5.2.11        | 1229     | Unsupported    |
-| PHP | 5.2.12        | 831      | Unsupported    |
-| PHP | 5.2.13        | 2447     | Unsupported    |
-| PHP | 5.2.14        | 1881     | Unsupported    |
-| PHP | 5.2.15        | 103      | Unsupported    |
-| PHP | 5.2.16        | 967      | Unsupported    |
-| PHP | 5.2.17        | 99892    | Unsupported    |
-| PHP | 5.2.18        | 278      | Unsupported    |
-| PHP | 5.2.2         | 153      | Unsupported    |
-| PHP | 5.2.3         | 1039     | Unsupported    |
-| PHP | 5.2.4         | 2714     | Unsupported    |
-| PHP | 5.2.5         | 2788     | Unsupported    |
-| PHP | 5.2.6         | 9992     | Unsupported    |
-| PHP | 5.2.7         | 34       | Unsupported    |
-| PHP | 5.2.8         | 6149     | Unsupported    |
-| PHP | 5.2.9         | 2511     | Unsupported    |
-| PHP | 5.3           | 630      | Unsupported    |
-| PHP | 5.3.0         | 510      | Unsupported    |
-| PHP | 5.3.1         | 641      | Unsupported    |
-| PHP | 5.3.10        | 20006    | Unsupported    |
-| PHP | 5.3.11        | 135      | Unsupported    |
-| PHP | 5.3.12        | 58       | Unsupported    |
-| PHP | 5.3.13        | 8196     | Unsupported    |
-| PHP | 5.3.14        | 753      | Unsupported    |
-| PHP | 5.3.15        | 866      | Unsupported    |
-| PHP | 5.3.16        | 664      | Unsupported    |
-| PHP | 5.3.17        | 1357     | Unsupported    |
-| PHP | 5.3.18        | 1094     | Unsupported    |
-| PHP | 5.3.19        | 800      | Unsupported    |
-| PHP | 5.3.2         | 6456     | Unsupported    |
-| PHP | 5.3.20        | 1033     | Unsupported    |
-| PHP | 5.3.21        | 919      | Unsupported    |
-| PHP | 5.3.22        | 608      | Unsupported    |
-| PHP | 5.3.23        | 1157     | Unsupported    |
-| PHP | 5.3.24        | 813      | Unsupported    |
-| PHP | 5.3.25        | 613      | Unsupported    |
-| PHP | 5.3.26        | 483      | Unsupported    |
-| PHP | 5.3.27        | 5528     | Unsupported    |
-| PHP | 5.3.28        | 9429     | Unsupported    |
-| PHP | 5.3.29        | 158157   | Unsupported    |
-| PHP | 5.3.3         | 90697    | Unsupported    |
-| PHP | 5.3.30        | 250      | Unsupported    |
-| PHP | 5.3.4         | 452      | Unsupported    |
-| PHP | 5.3.5         | 1659     | Unsupported    |
-| PHP | 5.3.6         | 3901     | Unsupported    |
-| PHP | 5.3.7         | 108      | Unsupported    |
-| PHP | 5.3.8         | 3723     | Unsupported    |
-| PHP | 5.3.9         | 507      | Unsupported    |
-| PHP | 5.3.99        | 1        | Unsupported    |
-| PHP | 5.4           | 16183    | Unsupported    |
-| PHP | 5.4.0         | 178      | Unsupported    |
-| PHP | 5.4.1         | 7        | Unsupported    |
-| PHP | 5.4.10        | 223      | Unsupported    |
-| PHP | 5.4.11        | 306      | Unsupported    |
-| PHP | 5.4.12        | 379      | Unsupported    |
-| PHP | 5.4.13        | 581      | Unsupported    |
-| PHP | 5.4.14        | 462      | Unsupported    |
-| PHP | 5.4.15        | 220      | Unsupported    |
-| PHP | 5.4.16        | 161423   | Unsupported    |
-| PHP | 5.4.17        | 779      | Unsupported    |
-| PHP | 5.4.18        | 3        | Unsupported    |
-| PHP | 5.4.19        | 563      | Unsupported    |
-| PHP | 5.4.2         | 24       | Unsupported    |
-| PHP | 5.4.20        | 665      | Unsupported    |
-| PHP | 5.4.21        | 551      | Unsupported    |
-| PHP | 5.4.22        | 478      | Unsupported    |
-| PHP | 5.4.23        | 430      | Unsupported    |
-| PHP | 5.4.24        | 1390     | Unsupported    |
-| PHP | 5.4.25        | 467      | Unsupported    |
-| PHP | 5.4.26        | 517      | Unsupported    |
-| PHP | 5.4.27        | 655      | Unsupported    |
-| PHP | 5.4.28        | 607      | Unsupported    |
-| PHP | 5.4.29        | 396      | Unsupported    |
-| PHP | 5.4.3         | 333      | Unsupported    |
-| PHP | 5.4.30        | 488      | Unsupported    |
-| PHP | 5.4.31        | 889      | Unsupported    |
-| PHP | 5.4.32        | 476      | Unsupported    |
-| PHP | 5.4.33        | 648      | Unsupported    |
-| PHP | 5.4.34        | 846      | Unsupported    |
-| PHP | 5.4.35        | 1104     | Unsupported    |
-| PHP | 5.4.36        | 1880     | Unsupported    |
-| PHP | 5.4.37        | 786      | Unsupported    |
-| PHP | 5.4.38        | 1194     | Unsupported    |
-| PHP | 5.4.39        | 1110     | Unsupported    |
-| PHP | 5.4.4         | 3798     | Unsupported    |
-| PHP | 5.4.40        | 1592     | Unsupported    |
-| PHP | 5.4.41        | 1674     | Unsupported    |
-| PHP | 5.4.42        | 509      | Unsupported    |
-| PHP | 5.4.43        | 808      | Unsupported    |
-| PHP | 5.4.44        | 853      | Unsupported    |
-| PHP | 5.4.45        | 159068   | Unsupported    |
-| PHP | 5.4.46        | 1574     | Unsupported    |
-| PHP | 5.4.5         | 196      | Unsupported    |
-| PHP | 5.4.6         | 1043     | Unsupported    |
-| PHP | 5.4.7         | 826      | Unsupported    |
-| PHP | 5.4.8         | 213      | Unsupported    |
-| PHP | 5.4.9         | 1023     | Unsupported    |
-| PHP | 5.5           | 4739     | Unsupported    |
-| PHP | 5.5.0         | 98       | Unsupported    |
-| PHP | 5.5.1         | 131      | Unsupported    |
-| PHP | 5.5.10        | 508      | Unsupported    |
-| PHP | 5.5.11        | 1223     | Unsupported    |
-| PHP | 5.5.12        | 2136     | Unsupported    |
-| PHP | 5.5.13        | 324      | Unsupported    |
-| PHP | 5.5.14        | 762      | Unsupported    |
-| PHP | 5.5.15        | 872      | Unsupported    |
-| PHP | 5.5.16        | 1512     | Unsupported    |
-| PHP | 5.5.17        | 4654     | Unsupported    |
-| PHP | 5.5.18        | 550      | Unsupported    |
-| PHP | 5.5.19        | 510      | Unsupported    |
-| PHP | 5.5.2         | 44       | Unsupported    |
-| PHP | 5.5.20        | 380      | Unsupported    |
-| PHP | 5.5.21        | 1411     | Unsupported    |
-| PHP | 5.5.22        | 3207     | Unsupported    |
-| PHP | 5.5.23        | 774      | Unsupported    |
-| PHP | 5.5.24        | 384      | Unsupported    |
-| PHP | 5.5.25        | 437      | Unsupported    |
-| PHP | 5.5.26        | 927      | Unsupported    |
-| PHP | 5.5.27        | 4491     | Unsupported    |
-| PHP | 5.5.28        | 945      | Unsupported    |
-| PHP | 5.5.29        | 530      | Unsupported    |
-| PHP | 5.5.3         | 723      | Unsupported    |
-| PHP | 5.5.30        | 2227     | Unsupported    |
-| PHP | 5.5.31        | 630      | Unsupported    |
-| PHP | 5.5.32        | 670      | Unsupported    |
-| PHP | 5.5.33        | 535      | Unsupported    |
-| PHP | 5.5.34        | 688      | Unsupported    |
-| PHP | 5.5.35        | 3631     | Unsupported    |
-| PHP | 5.5.36        | 705      | Unsupported    |
-| PHP | 5.5.37        | 1346     | Unsupported    |
-| PHP | 5.5.38        | 89011    | Unsupported    |
-| PHP | 5.5.38:5.5.38 | 4        | Non-conclusive |
-| PHP | 5.5.4         | 127      | Unsupported    |
-| PHP | 5.5.5         | 563      | Unsupported    |
-| PHP | 5.5.6         | 854      | Unsupported    |
-| PHP | 5.5.7         | 597      | Unsupported    |
-| PHP | 5.5.8         | 306      | Unsupported    |
-| PHP | 5.5.9         | 70747    | Unsupported    |
-| PHP | 5.6           | 42036    | Unsupported    |
-| PHP | 5.6.0         | 2704     | Unsupported    |
-| PHP | 5.6.1         | 816      | Unsupported    |
-| PHP | 5.6.10        | 1462     | Unsupported    |
-| PHP | 5.6.11        | 2213     | Unsupported    |
-| PHP | 5.6.12        | 873      | Unsupported    |
-| PHP | 5.6.13        | 1303     | Unsupported    |
-| PHP | 5.6.14        | 1331     | Unsupported    |
-| PHP | 5.6.15        | 1677     | Unsupported    |
-| PHP | 5.6.16        | 1823     | Unsupported    |
-| PHP | 5.6.17        | 1261     | Unsupported    |
-| PHP | 5.6.18        | 1385     | Unsupported    |
-| PHP | 5.6.19        | 2730     | Unsupported    |
-| PHP | 5.6.2         | 379      | Unsupported    |
-| PHP | 5.6.20        | 2377     | Unsupported    |
-| PHP | 5.6.21        | 5927     | Unsupported    |
-| PHP | 5.6.22        | 3131     | Unsupported    |
-| PHP | 5.6.23        | 2278     | Unsupported    |
-| PHP | 5.6.24        | 5657     | Unsupported    |
-| PHP | 5.6.25        | 5646     | Unsupported    |
-| PHP | 5.6.26        | 2582     | Unsupported    |
-| PHP | 5.6.27        | 5245     | Unsupported    |
-| PHP | 5.6.28        | 2208     | Unsupported    |
-| PHP | 5.6.29        | 4260     | Unsupported    |
-| PHP | 5.6.3         | 1213     | Unsupported    |
-| PHP | 5.6.30        | 30093    | Unsupported    |
-| PHP | 5.6.31        | 28201    | Unsupported    |
-| PHP | 5.6.32        | 8860     | Unsupported    |
-| PHP | 5.6.33        | 14985    | Unsupported    |
-| PHP | 5.6.34        | 5916     | Unsupported    |
-| PHP | 5.6.35        | 4182     | Unsupported    |
-| PHP | 5.6.36        | 31657    | Unsupported    |
-| PHP | 5.6.37        | 14367    | Unsupported    |
-| PHP | 5.6.38        | 17334    | Unsupported    |
-| PHP | 5.6.39        | 10019    | Unsupported    |
-| PHP | 5.6.4         | 633      | Unsupported    |
-| PHP | 5.6.40        | 864999   | Unsupported    |
-| PHP | 5.6.40.1      | 4        | Unsupported    |
-| PHP | 5.6.40.14     | 152      | Unsupported    |
-| PHP | 5.6.40.16     | 4        | Unsupported    |
-| PHP | 5.6.40.17     | 20       | Unsupported    |
-| PHP | 5.6.40.4      | 84       | Unsupported    |
-| PHP | 5.6.40.9      | 21       | Unsupported    |
-| PHP | 5.6.41        | 16       | Unsupported    |
-| PHP | 5.6.5         | 2364     | Unsupported    |
-| PHP | 5.6.6         | 625      | Unsupported    |
-| PHP | 5.6.7         | 2158     | Unsupported    |
-| PHP | 5.6.8         | 1227     | Unsupported    |
-| PHP | 5.6.9         | 1704     | Unsupported    |
-| PHP | 51            | 1        | Supported      |
-| PHP | 52            | 2        | Supported      |
-| PHP | 6.0           | 2        | Unsupported    |
-| PHP | 6.0.0         | 32       | Unsupported    |
-| PHP | 6.0.8         | 5        | Unsupported    |
-| PHP | 6.16.6        | 1        | Unsupported    |
-| PHP | 6.2.11        | 2        | Unsupported    |
-| PHP | 7             | 10       | Unsupported    |
-| PHP | 7.            | 4        | Unsupported    |
-| PHP | 7.0           | 40288    | Unsupported    |
-| PHP | 7.0.0         | 5397     | Unsupported    |
-| PHP | 7.0.1         | 174      | Unsupported    |
-| PHP | 7.0.10        | 1845     | Unsupported    |
-| PHP | 7.0.11        | 935      | Unsupported    |
-| PHP | 7.0.12        | 977      | Unsupported    |
-| PHP | 7.0.13        | 1085     | Unsupported    |
-| PHP | 7.0.14        | 1999     | Unsupported    |
-| PHP | 7.0.15        | 2932     | Unsupported    |
-| PHP | 7.0.16        | 1322     | Unsupported    |
-| PHP | 7.0.17        | 807      | Unsupported    |
-| PHP | 7.0.18        | 1215     | Unsupported    |
-| PHP | 7.0.19        | 968      | Unsupported    |
-| PHP | 7.0.2         | 621      | Unsupported    |
-| PHP | 7.0.20        | 1600     | Unsupported    |
-| PHP | 7.0.21        | 1738     | Unsupported    |
-| PHP | 7.0.22        | 488      | Unsupported    |
-| PHP | 7.0.23        | 1244     | Unsupported    |
-| PHP | 7.0.24        | 1714     | Unsupported    |
-| PHP | 7.0.25        | 6325     | Unsupported    |
-| PHP | 7.0.26        | 1371     | Unsupported    |
-| PHP | 7.0.27        | 17722    | Unsupported    |
-| PHP | 7.0.28        | 2366     | Unsupported    |
-| PHP | 7.0.29        | 3355     | Unsupported    |
-| PHP | 7.0.3         | 287      | Unsupported    |
-| PHP | 7.0.30        | 6140     | Unsupported    |
-| PHP | 7.0.31        | 4345     | Unsupported    |
-| PHP | 7.0.32        | 7771     | Unsupported    |
-| PHP | 7.0.33        | 243827   | Unsupported    |
-| PHP | 7.0.34        | 53       | Unsupported    |
-| PHP | 7.0.4         | 681      | Unsupported    |
-| PHP | 7.0.5         | 512      | Unsupported    |
-| PHP | 7.0.6         | 497      | Unsupported    |
-| PHP | 7.0.7         | 1584     | Unsupported    |
-| PHP | 7.0.8         | 568      | Unsupported    |
-| PHP | 7.0.9         | 1861     | Unsupported    |
-| PHP | 7.1           | 7695     | Unsupported    |
-| PHP | 7.1.0         | 947      | Unsupported    |
-| PHP | 7.1.1         | 3346     | Unsupported    |
-| PHP | 7.1.10        | 1999     | Unsupported    |
-| PHP | 7.1.11        | 1968     | Unsupported    |
-| PHP | 7.1.12        | 970      | Unsupported    |
-| PHP | 7.1.13        | 3828     | Unsupported    |
-| PHP | 7.1.14        | 2046     | Unsupported    |
-| PHP | 7.1.15        | 4020     | Unsupported    |
-| PHP | 7.1.16        | 880      | Unsupported    |
-| PHP | 7.1.17        | 1629     | Unsupported    |
-| PHP | 7.1.18        | 2980     | Unsupported    |
-| PHP | 7.1.19        | 1897     | Unsupported    |
-| PHP | 7.1.2         | 664      | Unsupported    |
-| PHP | 7.1.20        | 1465     | Unsupported    |
-| PHP | 7.1.21        | 2888     | Unsupported    |
-| PHP | 7.1.22        | 2119     | Unsupported    |
-| PHP | 7.1.23        | 1458     | Unsupported    |
-| PHP | 7.1.24        | 1460     | Unsupported    |
-| PHP | 7.1.25        | 2203     | Unsupported    |
-| PHP | 7.1.26        | 4532     | Unsupported    |
-| PHP | 7.1.27        | 1616     | Unsupported    |
-| PHP | 7.1.28        | 2684     | Unsupported    |
-| PHP | 7.1.29        | 4564     | Unsupported    |
-| PHP | 7.1.3         | 1554     | Unsupported    |
-| PHP | 7.1.30        | 5447     | Unsupported    |
-| PHP | 7.1.31        | 1493     | Unsupported    |
-| PHP | 7.1.32        | 7366     | Unsupported    |
-| PHP | 7.1.33        | 237234   | Unsupported    |
-| PHP | 7.1.33.13     | 5        | Unsupported    |
-| PHP | 7.1.33.15     | 9        | Unsupported    |
-| PHP | 7.1.33.16     | 21       | Unsupported    |
-| PHP | 7.1.33.6      | 72       | Unsupported    |
-| PHP | 7.1.34        | 96       | Unsupported    |
-| PHP | 7.1.4         | 1020     | Unsupported    |
-| PHP | 7.1.5         | 6331     | Unsupported    |
-| PHP | 7.1.6         | 822      | Unsupported    |
-| PHP | 7.1.7         | 2534     | Unsupported    |
-| PHP | 7.1.8         | 2044     | Unsupported    |
-| PHP | 7.1.9         | 1376     | Unsupported    |
-| PHP | 7.2           | 42332    | Unsupported    |
-| PHP | 7.2.0         | 1863     | Unsupported    |
-| PHP | 7.2.1         | 1298     | Unsupported    |
-| PHP | 7.2.10        | 4678     | Unsupported    |
-| PHP | 7.2.11        | 3599     | Unsupported    |
-| PHP | 7.2.12        | 4002     | Unsupported    |
-| PHP | 7.2.13        | 5690     | Unsupported    |
-| PHP | 7.2.14        | 4300     | Unsupported    |
-| PHP | 7.2.15        | 4742     | Unsupported    |
-| PHP | 7.2.16        | 3242     | Unsupported    |
-| PHP | 7.2.17        | 5602     | Unsupported    |
-| PHP | 7.2.18        | 5402     | Unsupported    |
-| PHP | 7.2.19        | 3986     | Unsupported    |
-| PHP | 7.2.2         | 2590     | Unsupported    |
-| PHP | 7.2.20        | 2894     | Unsupported    |
-| PHP | 7.2.21        | 2956     | Unsupported    |
-| PHP | 7.2.22        | 4768     | Unsupported    |
-| PHP | 7.2.23        | 6555     | Unsupported    |
-| PHP | 7.2.24        | 39320    | Unsupported    |
-| PHP | 7.2.25        | 1761     | Unsupported    |
-| PHP | 7.2.26        | 6401     | Unsupported    |
-| PHP | 7.2.27        | 4013     | Unsupported    |
-| PHP | 7.2.28        | 4633     | Unsupported    |
-| PHP | 7.2.29        | 5835     | Unsupported    |
-| PHP | 7.2.3         | 1236     | Unsupported    |
-| PHP | 7.2.30        | 5690     | Unsupported    |
-| PHP | 7.2.31        | 7179     | Unsupported    |
-| PHP | 7.2.32        | 10238    | Unsupported    |
-| PHP | 7.2.33        | 9914     | Unsupported    |
-| PHP | 7.2.34        | 560783   | Unsupported    |
-| PHP | 7.2.34.1      | 5        | Unsupported    |
-| PHP | 7.2.34.3      | 12       | Unsupported    |
-| PHP | 7.2.35        | 5        | Unsupported    |
-| PHP | 7.2.4         | 1766     | Unsupported    |
-| PHP | 7.2.5         | 3556     | Unsupported    |
-| PHP | 7.2.6         | 2764     | Unsupported    |
-| PHP | 7.2.7         | 7083     | Unsupported    |
-| PHP | 7.2.8         | 2344     | Unsupported    |
-| PHP | 7.2.9         | 2857     | Unsupported    |
-| PHP | 7.3           | 84154    | Unsupported    |
-| PHP | 7.3.0         | 2959     | Unsupported    |
-| PHP | 7.3.1         | 9143     | Unsupported    |
-| PHP | 7.3.10        | 10289    | Unsupported    |
-| PHP | 7.3.11        | 18694    | Unsupported    |
-| PHP | 7.3.12        | 5442     | Unsupported    |
-| PHP | 7.3.13        | 8220     | Unsupported    |
-| PHP | 7.3.14        | 11739    | Unsupported    |
-| PHP | 7.3.15        | 5940     | Unsupported    |
-| PHP | 7.3.16        | 7406     | Unsupported    |
-| PHP | 7.3.17        | 10628    | Unsupported    |
-| PHP | 7.3.18        | 14267    | Unsupported    |
-| PHP | 7.3.19        | 5238     | Unsupported    |
-| PHP | 7.3.2         | 13253    | Unsupported    |
-| PHP | 7.3.20        | 14083    | Unsupported    |
-| PHP | 7.3.21        | 5652     | Unsupported    |
-| PHP | 7.3.22        | 5673     | Unsupported    |
-| PHP | 7.3.23        | 14142    | Unsupported    |
-| PHP | 7.3.24        | 7005     | Unsupported    |
-| PHP | 7.3.25        | 29926    | Unsupported    |
-| PHP | 7.3.26        | 8590     | Unsupported    |
-| PHP | 7.3.27        | 30443    | Unsupported    |
-| PHP | 7.3.28        | 16999    | Unsupported    |
-| PHP | 7.3.29        | 16538    | Unsupported    |
-| PHP | 7.3.3         | 3714     | Unsupported    |
-| PHP | 7.3.30        | 10666    | Unsupported    |
-| PHP | 7.3.31        | 37181    | Unsupported    |
-| PHP | 7.3.32        | 16565    | Unsupported    |
-| PHP | 7.3.33        | 671759   | Unsupported    |
-| PHP | 7.3.34        | 12       | Unsupported    |
-| PHP | 7.3.4         | 4298     | Unsupported    |
-| PHP | 7.3.5         | 8447     | Unsupported    |
-| PHP | 7.3.6         | 5808     | Unsupported    |
-| PHP | 7.3.7         | 6550     | Unsupported    |
-| PHP | 7.3.8         | 3398     | Unsupported    |
-| PHP | 7.3.9         | 7796     | Unsupported    |
-| PHP | 7.4           | 122495   | Unsupported    |
-| PHP | 7.4.0         | 4597     | Unsupported    |
-| PHP | 7.4.1         | 8411     | Unsupported    |
-| PHP | 7.4.10        | 27260    | Unsupported    |
-| PHP | 7.4.11        | 19290    | Unsupported    |
-| PHP | 7.4.12        | 18088    | Unsupported    |
-| PHP | 7.4.13        | 34832    | Unsupported    |
-| PHP | 7.4.14        | 19900    | Unsupported    |
-| PHP | 7.4.15        | 24734    | Unsupported    |
-| PHP | 7.4.16        | 45877    | Unsupported    |
-| PHP | 7.4.17        | 4        | Unsupported    |
-| PHP | 7.4.18        | 3061     | Unsupported    |
-| PHP | 7.4.19        | 25863    | Unsupported    |
-| PHP | 7.4.2         | 4332     | Unsupported    |
-| PHP | 7.4.20        | 16595    | Unsupported    |
-| PHP | 7.4.21        | 24238    | Unsupported    |
-| PHP | 7.4.22        | 15964    | Unsupported    |
-| PHP | 7.4.23        | 22940    | Unsupported    |
-| PHP | 7.4.24        | 25384    | Unsupported    |
-| PHP | 7.4.25        | 48107    | Unsupported    |
-| PHP | 7.4.26        | 33250    | Unsupported    |
-| PHP | 7.4.27        | 72009    | Unsupported    |
-| PHP | 7.4.28        | 109945   | Unsupported    |
-| PHP | 7.4.29        | 79497    | Unsupported    |
-| PHP | 7.4.3         | 8640     | Unsupported    |
-| PHP | 7.4.30        | 333689   | Unsupported    |
-| PHP | 7.4.31        | 13       | Unsupported    |
-| PHP | 7.4.32        | 325575   | Unsupported    |
-| PHP | 7.4.33        | 2275089  | Unsupported    |
-| PHP | 7.4.4         | 4569     | Unsupported    |
-| PHP | 7.4.5         | 8379     | Unsupported    |
-| PHP | 7.4.6         | 13992    | Unsupported    |
-| PHP | 7.4.7         | 12311    | Unsupported    |
-| PHP | 7.4.8         | 14102    | Unsupported    |
-| PHP | 7.4.9         | 11507    | Unsupported    |
-| PHP | 7.5.2         | 4        | Unsupported    |
-| PHP | 7.5.6         | 1        | Unsupported    |
-| PHP | 7.7.11        | 1        | Unsupported    |
-| PHP | 7.7.3.11      | 1        | Unsupported    |
-| PHP | 7.9.3         | 4        | Unsupported    |
-| PHP | 8             | 4        | Supported      |
-| PHP | 8.0           | 15624    | Supported      |
-| PHP | 8.0.0         | 3833     | Supported      |
-| PHP | 8.0.1         | 1257     | Supported      |
-| PHP | 8.0.10        | 3149     | Supported      |
-| PHP | 8.0.11        | 3163     | Supported      |
-| PHP | 8.0.12        | 5767     | Supported      |
-| PHP | 8.0.13        | 5818     | Supported      |
-| PHP | 8.0.14        | 3502     | Supported      |
-| PHP | 8.0.15        | 8187     | Supported      |
-| PHP | 8.0.16        | 4133     | Supported      |
-| PHP | 8.0.17        | 4972     | Supported      |
-| PHP | 8.0.18        | 2991     | Supported      |
-| PHP | 8.0.19        | 4686     | Supported      |
-| PHP | 8.0.2         | 1585     | Supported      |
-| PHP | 8.0.20        | 13682    | Supported      |
-| PHP | 8.0.21        | 3819     | Supported      |
-| PHP | 8.0.22        | 4701     | Supported      |
-| PHP | 8.0.23        | 5556     | Supported      |
-| PHP | 8.0.24        | 18635    | Supported      |
-| PHP | 8.0.25        | 37469    | Supported      |
-| PHP | 8.0.26        | 321599   | Supported      |
-| PHP | 8.0.27        | 381      | Supported      |
-| PHP | 8.0.3         | 5576     | Supported      |
-| PHP | 8.0.4         | 64       | Supported      |
-| PHP | 8.0.5         | 4164     | Supported      |
-| PHP | 8.0.6         | 1126     | Supported      |
-| PHP | 8.0.7         | 9309     | Supported      |
-| PHP | 8.0.8         | 2200     | Supported      |
-| PHP | 8.0.9         | 11644    | Supported      |
-| PHP | 8.1           | 13563    | Supported      |
-| PHP | 8.1.0         | 4589     | Supported      |
-| PHP | 8.1.1         | 2138     | Supported      |
-| PHP | 8.1.10        | 7404     | Supported      |
-| PHP | 8.1.11        | 20713    | Supported      |
-| PHP | 8.1.12        | 27151    | Supported      |
-| PHP | 8.1.13        | 206937   | Supported      |
-| PHP | 8.1.14        | 452      | Supported      |
-| PHP | 8.1.2         | 3199     | Supported      |
-| PHP | 8.1.3         | 3279     | Supported      |
-| PHP | 8.1.4         | 2226     | Supported      |
-| PHP | 8.1.5         | 6908     | Supported      |
-| PHP | 8.1.6         | 6238     | Supported      |
-| PHP | 8.1.7         | 6661     | Supported      |
-| PHP | 8.1.8         | 4353     | Supported      |
-| PHP | 8.1.9         | 39565    | Supported      |
-| PHP | 8.2           | 6        | Supported      |
-| PHP | 8.2.0         | 8511     | Supported      |
-| PHP | 8.2.1         | 90       | Supported      |
-| PHP | 8.2.17        | 1        | Supported      |
-| PHP | 8.4           | 4        | Supported      |
-| PHP | 81            | 12       | Supported      |
-| PHP | 9.0           | 3        | Supported      |
-| PHP | 9.1.2         | 19       | Supported      |
-| PHP | 9.5.1         | 4        | Supported      |
-| PHP | 9.9           | 1        | Supported      |
-| PHP | 9.9.9         | 1        | Supported      |
-| PHP | 999           | 22       | Supported      |
-| PHP | \             | 1        | Non-conclusive |
-| PHP | \1            | 8        | Non-conclusive |
-| PHP | undefined     | 4        | Non-conclusive |
-
-## Font Awesome
-
-|    version     | count | is_supported |
-| -------------- | ----- | ------------ |
-| 0a9deb00ff     |     1 | null         | 
-| 1.0            |     1 | false        | 
-| 1.1            |     1 | false        | 
-| 1.2            |     1 | false        | 
-| 1.3            |     1 | false        | 
-| 1.4            |     1 | false        | 
-| 1.7            |     1 | false        | 
-| 16dd7465ed     |     1 | null         | 
-| 2.0            |     1 | false        | 
-| 2.2            |     1 | false        | 
-| 2.5            |     1 | false        | 
-| 2.6            |     2 | false        | 
-| 2.9            |     3 | false        | 
-| 3.1            |     5 | false        | 
-| 3.3            |     1 | false        | 
-| 4.0            |     2 | false        | 
-| 4.1            |     2 | false        | 
-| 4.2            |     6 | false        | 
-| 4.3            |    13 | false        | 
-| 4.4            |    10 | false        | 
-| 4.5            |     3 | false        | 
-| 4.6            |    10 | false        | 
-| 4.7            |    81 | false        | 
-| 4.9            |     2 | false        | 
-| 49bab697d6     |     1 | null         | 
-| 5.0            |     8 | true         | 
-| 5.1            |     5 | true         | 
-| 5.11           |     2 | true         | 
-| 5.12           |     2 | true         | 
-| 5.2            |     1 | true         | 
-| 5.3            |     9 | true         | 
-| 5.4            |    10 | true         | 
-| 5.5            |     1 | true         | 
-| 5.6            |     4 | true         | 
-| 5.7            |     3 | true         | 
-| 5.8            |     8 | true         | 
-| 5.9            |     3 | true         | 
-| 5575f4609      |     1 | null         | 
-| 55e6d60b35     |     1 | null         | 
-| 6.2            |     1 | true         | 
-| 0011           |     1 | true         | 
-| 64cd5ce7ff     |     1 | null         | 
-| 661c9e339a     |     1 | null         | 
-| 6ae1c35383     |     1 | null         | 
-| 7f85a56ba4     |     1 | null         | 
-| 99cd5bb5ab     |     1 | null         | 
-| cb0841ad65     |     1 | null         | 
-| dc3ded0495     |     1 | null         | 
-| e3b8af4a29     |     1 | null         | 
-| 1              |     2 | false        | 
-| 2              |     4 | false        | 
-| 3              |     1 | false        | 
-| 4              |     1 | false        | 
-| 5              |     4 | true         | 
-| 7              |     1 | true         | 
-| 8              |     1 | true         | 
-| 65             |     1 | true         | 
-| 400            |     1 | true         | 
-| 74165          |     1 | true         | 
-| 1428522744     |     1 | true         | 
-| 1570526365     |     1 | true         | 
-| 2032238454     |     1 | true         | 
-
-## jQuery UI
-
-|    version     | count | is_supported |
-| -------------- | ----- | ------------ |
-| 1.10           |    24 | null         | 
-| 1.11           |    69 | null         | 
-| 1.12           |    58 | null         | 
-| 1.7            |     1 | null         | 
-| 1.8            |     7 | null         | 
-| 1.9            |     7 | null         | 
-| @VERSION       |     3 | null         | 
+| info          | count    | is_supported   |
+|---------------|----------|----------------|
+|               | 581187   | Not-versioned  |
+| .             | 2863     | Non-conclusive |
+| ..            | 17       | Non-conclusive |
+| .1            | 24       | Non-conclusive |
+| .11.1         | 3        | Non-conclusive |
+| 0             | 76       | Unsupported    |
+| 0.0           | 4        | Unsupported    |
+| 0.0.0         | 158      | Unsupported    |
+| 0.0.1         | 108      | Unsupported    |
+| 0.0.10        | 28       | Unsupported    |
+| 0.0.12        | 16       | Unsupported    |
+| 0.0.13        | 36       | Unsupported    |
+| 0.0.14        | 275      | Unsupported    |
+| 0.0.2         | 21       | Unsupported    |
+| 0.0.22        | 4        | Unsupported    |
+| 0.0.3         | 4        | Unsupported    |
+| 0.0.395       | 4        | Unsupported    |
+| 0.0.4         | 4        | Unsupported    |
+| 0.0.7         | 19       | Unsupported    |
+| 0.0.87        | 4        | Unsupported    |
+| 0.0.88        | 4        | Unsupported    |
+| 0.0.9         | 8        | Unsupported    |
+| 0.00.0        | 1        | Unsupported    |
+| 0.1.0         | 14880    | Unsupported    |
+| 0.1.1         | 4        | Unsupported    |
+| 0.1.13        | 1        | Unsupported    |
+| 0.1.6         | 4        | Unsupported    |
+| 0.10.2        | 36       | Unsupported    |
+| 0.10.3        | 20       | Unsupported    |
+| 0.11.0        | 690      | Unsupported    |
+| 0.11.1        | 8        | Unsupported    |
+| 0.11.4        | 33785    | Unsupported    |
+| 0.11.6        | 8        | Unsupported    |
+| 0.11.9        | 25       | Unsupported    |
+| 0.117.0       | 6        | Unsupported    |
+| 0.119.0       | 2        | Unsupported    |
+| 0.12.0        | 197      | Unsupported    |
+| 0.14.2        | 16       | Unsupported    |
+| 0.14.4        | 4        | Unsupported    |
+| 0.15.0        | 4        | Unsupported    |
+| 0.15.1        | 4        | Unsupported    |
+| 0.15.2        | 8        | Unsupported    |
+| 0.16.0        | 8        | Unsupported    |
+| 0.16.1        | 12       | Unsupported    |
+| 0.17.0        | 1        | Unsupported    |
+| 0.18.0        | 60       | Unsupported    |
+| 0.18.37       | 4        | Unsupported    |
+| 0.19.0        | 28       | Unsupported    |
+| 0.2.1         | 31       | Unsupported    |
+| 0.2.10        | 111      | Unsupported    |
+| 0.2.11        | 402      | Unsupported    |
+| 0.2.2         | 6        | Unsupported    |
+| 0.2.6         | 46       | Unsupported    |
+| 0.2.9         | 8        | Unsupported    |
+| 0.20.0        | 53       | Unsupported    |
+| 0.21.1        | 32       | Unsupported    |
+| 0.3.1         | 44       | Unsupported    |
+| 0.3.2         | 4        | Unsupported    |
+| 0.3.3         | 35       | Unsupported    |
+| 0.3.4         | 28       | Unsupported    |
+| 0.3.5         | 3        | Unsupported    |
+| 0.3.7         | 12       | Unsupported    |
+| 0.3.8         | 4        | Unsupported    |
+| 0.3.9         | 92       | Unsupported    |
+| 0.4.0         | 36       | Unsupported    |
+| 0.4.1         | 91       | Unsupported    |
+| 0.4.10        | 16       | Unsupported    |
+| 0.4.16        | 1        | Unsupported    |
+| 0.4.2         | 11       | Unsupported    |
+| 0.4.3         | 45       | Unsupported    |
+| 0.5.0         | 1        | Unsupported    |
+| 0.5.1         | 148      | Unsupported    |
+| 0.5.2         | 21       | Unsupported    |
+| 0.5.3         | 93       | Unsupported    |
+| 0.5.6         | 9        | Unsupported    |
+| 0.50.2        | 24       | Unsupported    |
+| 0.6.0         | 38       | Unsupported    |
+| 0.6.1         | 146      | Unsupported    |
+| 0.6.2         | 133      | Unsupported    |
+| 0.6.3         | 4        | Unsupported    |
+| 0.6.8         | 4        | Unsupported    |
+| 0.7.0         | 1546     | Unsupported    |
+| 0.7.1         | 4        | Unsupported    |
+| 0.7.2         | 7977     | Unsupported    |
+| 0.75.0        | 8        | Unsupported    |
+| 0.8.0         | 20       | Unsupported    |
+| 0.8.12        | 8        | Unsupported    |
+| 0.8.2         | 93       | Unsupported    |
+| 0.8.3         | 69       | Unsupported    |
+| 0.8.7         | 4        | Unsupported    |
+| 0.8.9         | 9        | Unsupported    |
+| 0.9.0         | 82       | Unsupported    |
+| 0.9.1         | 7430     | Unsupported    |
+| 0.9.12        | 10127    | Unsupported    |
+| 0.9.13        | 44       | Unsupported    |
+| 0.9.2         | 371      | Unsupported    |
+| 0.9.3         | 292      | Unsupported    |
+| 0.9.4         | 150      | Unsupported    |
+| 0.9.6         | 4        | Unsupported    |
+| 0.9.9         | 269      | Unsupported    |
+| 00000         | 1        | Unsupported    |
+| 01.12.4       | 4        | Unsupported    |
+| 02.2.4        | 565      | Unsupported    |
+| 03.00.058     | 8        | Supported      |
+| 1             | 639      | Unsupported    |
+| 1.0           | 1        | Unsupported    |
+| 1.0.0         | 7040     | Unsupported    |
+| 1.0.1         | 423      | Unsupported    |
+| 1.0.10        | 7258     | Unsupported    |
+| 1.0.11        | 154      | Unsupported    |
+| 1.0.12        | 1        | Unsupported    |
+| 1.0.13        | 34       | Unsupported    |
+| 1.0.14        | 10       | Unsupported    |
+| 1.0.16        | 12       | Unsupported    |
+| 1.0.17        | 466      | Unsupported    |
+| 1.0.18        | 67       | Unsupported    |
+| 1.0.19        | 1173     | Unsupported    |
+| 1.0.2         | 216      | Unsupported    |
+| 1.0.20        | 36       | Unsupported    |
+| 1.0.21        | 756      | Unsupported    |
+| 1.0.23        | 13       | Unsupported    |
+| 1.0.24        | 92       | Unsupported    |
+| 1.0.3         | 545      | Unsupported    |
+| 1.0.4         | 1912     | Unsupported    |
+| 1.0.49        | 9        | Unsupported    |
+| 1.0.5         | 1180     | Unsupported    |
+| 1.0.50        | 78       | Unsupported    |
+| 1.0.562       | 4        | Unsupported    |
+| 1.0.6         | 5        | Unsupported    |
+| 1.0.7         | 3065     | Unsupported    |
+| 1.0.72        | 2        | Unsupported    |
+| 1.0.8         | 186      | Unsupported    |
+| 1.0.80        | 4        | Unsupported    |
+| 1.0.9         | 74       | Unsupported    |
+| 1.04.3        | 8        | Unsupported    |
+| 1.1           | 43       | Unsupported    |
+| 1.1.0         | 13119    | Unsupported    |
+| 1.1.1         | 662      | Unsupported    |
+| 1.1.14        | 8        | Unsupported    |
+| 1.1.2         | 1773     | Unsupported    |
+| 1.1.23        | 8        | Unsupported    |
+| 1.1.3         | 234      | Unsupported    |
+| 1.1.3.1       | 793      | Unsupported    |
+| 1.1.4         | 489      | Unsupported    |
+| 1.1.5         | 37       | Unsupported    |
+| 1.1.6         | 5        | Unsupported    |
+| 1.1.7         | 12       | Unsupported    |
+| 1.1.8         | 21       | Unsupported    |
+| 1.1.94        | 10       | Unsupported    |
+| 1.10.0        | 25996    | Unsupported    |
+| 1.10.02       | 29       | Unsupported    |
+| 1.10.1        | 165466   | Unsupported    |
+| 1.10.10       | 4        | Unsupported    |
+| 1.10.11       | 12       | Unsupported    |
+| 1.10.12       | 8        | Unsupported    |
+| 1.10.13       | 17       | Unsupported    |
+| 1.10.14       | 6        | Unsupported    |
+| 1.10.15       | 13       | Unsupported    |
+| 1.10.16       | 22       | Unsupported    |
+| 1.10.19       | 43       | Unsupported    |
+| 1.10.2        | 1190080  | Unsupported    |
+| 1.10.20       | 9        | Unsupported    |
+| 1.10.21       | 26       | Unsupported    |
+| 1.10.22       | 1        | Unsupported    |
+| 1.10.24       | 18       | Unsupported    |
+| 1.10.26192    | 8        | Unsupported    |
+| 1.10.3        | 276      | Unsupported    |
+| 1.10.4        | 46       | Unsupported    |
+| 1.10.5        | 4        | Unsupported    |
+| 1.10.7        | 1        | Unsupported    |
+| 1.10.8        | 4        | Unsupported    |
+| 1.1000.0      | 2        | Unsupported    |
+| 1.102.2       | 4        | Unsupported    |
+| 1.11          | 3        | Unsupported    |
+| 1.11.0        | 955151   | Unsupported    |
+| 1.11.0.       | 1        | Unsupported    |
+| 1.11.01       | 1        | Unsupported    |
+| 1.11.1        | 1320019  | Unsupported    |
+| 1.11.1.       | 1        | Unsupported    |
+| 1.11.10       | 4        | Unsupported    |
+| 1.11.11       | 6        | Unsupported    |
+| 1.11.12       | 17       | Unsupported    |
+| 1.11.13       | 30       | Unsupported    |
+| 1.11.14       | 6        | Unsupported    |
+| 1.11.15       | 2        | Unsupported    |
+| 1.11.2        | 581199   | Unsupported    |
+| 1.11.22       | 1        | Unsupported    |
+| 1.11.3        | 1152914  | Unsupported    |
+| 1.11.3.       | 4        | Unsupported    |
+| 1.11.33       | 8        | Unsupported    |
+| 1.11.4        | 721      | Unsupported    |
+| 1.11.5        | 10       | Unsupported    |
+| 1.11.6        | 5        | Unsupported    |
+| 1.11.99       | 4571     | Unsupported    |
+| 1.12.         | 1        | Unsupported    |
+| 1.12.0        | 167823   | Unsupported    |
+| 1.12.1        | 69835    | Unsupported    |
+| 1.12.14       | 31       | Unsupported    |
+| 1.12.2        | 67988    | Unsupported    |
+| 1.12.3        | 88370    | Unsupported    |
+| 1.12.4        | 5012705  | Unsupported    |
+| 1.12.4.       | 4        | Unsupported    |
+| 1.12.4.3      | 221      | Unsupported    |
+| 1.12.41       | 4        | Unsupported    |
+| 1.12.5        | 4607     | Unsupported    |
+| 1.12.6        | 121      | Unsupported    |
+| 1.12.90       | 1        | Unsupported    |
+| 1.13.0        | 2341     | Unsupported    |
+| 1.13.1        | 8838     | Unsupported    |
+| 1.13.14       | 4        | Unsupported    |
+| 1.13.16       | 8        | Unsupported    |
+| 1.13.18       | 850      | Unsupported    |
+| 1.13.2        | 17       | Unsupported    |
+| 1.13.4        | 577      | Unsupported    |
+| 1.13.9        | 40       | Unsupported    |
+| 1.14.0        | 12338    | Unsupported    |
+| 1.14.1        | 33       | Unsupported    |
+| 1.14.10       | 6599     | Unsupported    |
+| 1.14.11       | 2938     | Unsupported    |
+| 1.14.12       | 507      | Unsupported    |
+| 1.14.13       | 691      | Unsupported    |
+| 1.14.14       | 33       | Unsupported    |
+| 1.14.15       | 8581     | Unsupported    |
+| 1.14.16       | 12096    | Unsupported    |
+| 1.14.2        | 46       | Unsupported    |
+| 1.14.3        | 45       | Unsupported    |
+| 1.14.4        | 4        | Unsupported    |
+| 1.14.8        | 440      | Unsupported    |
+| 1.14.9        | 51       | Unsupported    |
+| 1.149.0       | 20       | Unsupported    |
+| 1.15.0        | 9881     | Unsupported    |
+| 1.15.1        | 3124     | Unsupported    |
+| 1.15.4        | 1        | Unsupported    |
+| 1.16.0        | 15351    | Unsupported    |
+| 1.16.1        | 8        | Unsupported    |
+| 1.17.0        | 15387    | Unsupported    |
+| 1.18.0        | 257      | Unsupported    |
+| 1.18.1        | 4        | Unsupported    |
+| 1.18.15       | 8        | Unsupported    |
+| 1.18.17       | 24       | Unsupported    |
+| 1.18.18       | 12       | Unsupported    |
+| 1.18.2        | 32       | Unsupported    |
+| 1.18.3        | 6        | Unsupported    |
+| 1.18.4        | 24       | Unsupported    |
+| 1.18.5        | 619      | Unsupported    |
+| 1.19.0        | 6362     | Unsupported    |
+| 1.19.1        | 9397     | Unsupported    |
+| 1.19.2        | 5658     | Unsupported    |
+| 1.19.3        | 7426     | Unsupported    |
+| 1.19.4        | 180      | Unsupported    |
+| 1.19.5        | 2434     | Unsupported    |
+| 1.2           | 281      | Unsupported    |
+| 1.2.0         | 2724     | Unsupported    |
+| 1.2.1         | 4746     | Unsupported    |
+| 1.2.10        | 36       | Unsupported    |
+| 1.2.11        | 40       | Unsupported    |
+| 1.2.12        | 31       | Unsupported    |
+| 1.2.13        | 705      | Unsupported    |
+| 1.2.16        | 22       | Unsupported    |
+| 1.2.17        | 1        | Unsupported    |
+| 1.2.18        | 47       | Unsupported    |
+| 1.2.2         | 2803     | Unsupported    |
+| 1.2.21        | 4        | Unsupported    |
+| 1.2.24        | 121      | Unsupported    |
+| 1.2.25        | 9        | Unsupported    |
+| 1.2.26        | 9        | Unsupported    |
+| 1.2.27        | 72       | Unsupported    |
+| 1.2.3         | 12353    | Unsupported    |
+| 1.2.4         | 295      | Unsupported    |
+| 1.2.42        | 1        | Unsupported    |
+| 1.2.5         | 494      | Unsupported    |
+| 1.2.6         | 59995    | Unsupported    |
+| 1.2.68        | 5        | Unsupported    |
+| 1.2.7         | 894      | Unsupported    |
+| 1.2.8         | 2        | Unsupported    |
+| 1.2.9         | 12       | Unsupported    |
+| 1.20          | 2        | Unsupported    |
+| 1.20.2        | 213      | Unsupported    |
+| 1.20.3        | 25       | Unsupported    |
+| 1.20.4        | 86       | Unsupported    |
+| 1.21.0        | 38       | Unsupported    |
+| 1.21.1        | 2        | Unsupported    |
+| 1.21.2        | 1        | Unsupported    |
+| 1.22.4        | 16       | Unsupported    |
+| 1.221.0       | 26       | Unsupported    |
+| 1.221103.1    | 4        | Unsupported    |
+| 1.24.4        | 4        | Unsupported    |
+| 1.3           | 2040     | Unsupported    |
+| 1.3.0         | 405      | Unsupported    |
+| 1.3.1         | 11276    | Unsupported    |
+| 1.3.15        | 6        | Unsupported    |
+| 1.3.16        | 1        | Unsupported    |
+| 1.3.17        | 4        | Unsupported    |
+| 1.3.18        | 29       | Unsupported    |
+| 1.3.19        | 16       | Unsupported    |
+| 1.3.2         | 126946   | Unsupported    |
+| 1.3.20        | 56       | Unsupported    |
+| 1.3.21        | 8        | Unsupported    |
+| 1.3.26        | 8        | Unsupported    |
+| 1.3.27        | 3        | Unsupported    |
+| 1.3.28        | 741      | Unsupported    |
+| 1.3.3         | 156      | Unsupported    |
+| 1.3.32        | 8        | Unsupported    |
+| 1.3.34        | 4        | Unsupported    |
+| 1.3.4         | 367      | Unsupported    |
+| 1.3.42        | 89       | Unsupported    |
+| 1.3.43        | 108      | Unsupported    |
+| 1.3.5         | 1442     | Unsupported    |
+| 1.3.6         | 39       | Unsupported    |
+| 1.3.7         | 4        | Unsupported    |
+| 1.3.8         | 263      | Unsupported    |
+| 1.3.9         | 384      | Unsupported    |
+| 1.3.94        | 29       | Unsupported    |
+| 1.33.0        | 313      | Unsupported    |
+| 1.4           | 4785     | Unsupported    |
+| 1.4.0         | 5615     | Unsupported    |
+| 1.4.1         | 75254    | Unsupported    |
+| 1.4.10        | 770      | Unsupported    |
+| 1.4.11        | 979      | Unsupported    |
+| 1.4.12        | 4        | Unsupported    |
+| 1.4.13        | 14       | Unsupported    |
+| 1.4.14        | 96       | Unsupported    |
+| 1.4.15        | 4        | Unsupported    |
+| 1.4.2         | 161687   | Unsupported    |
+| 1.4.22        | 7        | Unsupported    |
+| 1.4.27        | 71       | Unsupported    |
+| 1.4.2:1.4.2   | 1        | Non-conclusive |
+| 1.4.3         | 23696    | Unsupported    |
+| 1.4.31        | 35       | Unsupported    |
+| 1.4.32        | 7        | Unsupported    |
+| 1.4.33        | 378      | Unsupported    |
+| 1.4.4         | 157544   | Unsupported    |
+| 1.4.5         | 459      | Unsupported    |
+| 1.4.6         | 39       | Unsupported    |
+| 1.4.7         | 87       | Unsupported    |
+| 1.4.8         | 8        | Unsupported    |
+| 1.4.9         | 27       | Unsupported    |
+| 1.486.0       | 4        | Unsupported    |
+| 1.5           | 6052     | Unsupported    |
+| 1.5.0         | 2219     | Unsupported    |
+| 1.5.1         | 39983    | Unsupported    |
+| 1.5.10        | 58       | Unsupported    |
+| 1.5.12        | 4        | Unsupported    |
+| 1.5.13        | 1        | Unsupported    |
+| 1.5.14        | 106      | Unsupported    |
+| 1.5.18        | 4        | Unsupported    |
+| 1.5.2         | 43506    | Unsupported    |
+| 1.5.25        | 537      | Unsupported    |
+| 1.5.3         | 17883    | Unsupported    |
+| 1.5.4         | 47579    | Unsupported    |
+| 1.5.5         | 35       | Unsupported    |
+| 1.5.6         | 44       | Unsupported    |
+| 1.5.9         | 4        | Unsupported    |
+| 1.6           | 5352     | Unsupported    |
+| 1.6.0         | 2043     | Unsupported    |
+| 1.6.1         | 42528    | Unsupported    |
+| 1.6.10        | 86       | Unsupported    |
+| 1.6.12        | 381      | Unsupported    |
+| 1.6.15        | 560      | Unsupported    |
+| 1.6.16        | 45       | Unsupported    |
+| 1.6.17        | 12       | Unsupported    |
+| 1.6.18        | 2360     | Unsupported    |
+| 1.6.19        | 3460     | Unsupported    |
+| 1.6.2         | 48869    | Unsupported    |
+| 1.6.24        | 4        | Unsupported    |
+| 1.6.3         | 14658    | Unsupported    |
+| 1.6.4         | 83290    | Unsupported    |
+| 1.6.5         | 53       | Unsupported    |
+| 1.6.6         | 8        | Unsupported    |
+| 1.6.7         | 31       | Unsupported    |
+| 1.6.9         | 11       | Unsupported    |
+| 1.7           | 35419    | Unsupported    |
+| 1.7.0         | 8847     | Unsupported    |
+| 1.7.1         | 579599   | Unsupported    |
+| 1.7.10        | 7809     | Unsupported    |
+| 1.7.11        | 1242     | Unsupported    |
+| 1.7.13        | 710      | Unsupported    |
+| 1.7.14        | 85       | Unsupported    |
+| 1.7.15        | 15       | Unsupported    |
+| 1.7.18        | 1056     | Unsupported    |
+| 1.7.19        | 3        | Unsupported    |
+| 1.7.2         | 634405   | Unsupported    |
+| 1.7.2.1       | 500      | Unsupported    |
+| 1.7.20        | 472      | Unsupported    |
+| 1.7.21        | 1059     | Unsupported    |
+| 1.7.22        | 8        | Unsupported    |
+| 1.7.24        | 13       | Unsupported    |
+| 1.7.28        | 10       | Unsupported    |
+| 1.7.2:1.7.2   | 4        | Non-conclusive |
+| 1.7.3         | 236      | Unsupported    |
+| 1.7.30        | 21       | Unsupported    |
+| 1.7.31        | 12       | Unsupported    |
+| 1.7.32        | 39       | Unsupported    |
+| 1.7.33        | 5        | Unsupported    |
+| 1.7.35        | 38       | Unsupported    |
+| 1.7.4         | 356      | Unsupported    |
+| 1.7.5         | 148      | Unsupported    |
+| 1.7.6         | 138      | Unsupported    |
+| 1.7.7         | 60       | Unsupported    |
+| 1.7.8         | 7        | Unsupported    |
+| 1.7.9         | 5736     | Unsupported    |
+| 1.8           | 147      | Unsupported    |
+| 1.8.0         | 48161    | Unsupported    |
+| 1.8.1         | 117645   | Unsupported    |
+| 1.8.10        | 5        | Unsupported    |
+| 1.8.11        | 55       | Unsupported    |
+| 1.8.12        | 1        | Unsupported    |
+| 1.8.13        | 8        | Unsupported    |
+| 1.8.16        | 21       | Unsupported    |
+| 1.8.17        | 8        | Unsupported    |
+| 1.8.18        | 14       | Unsupported    |
+| 1.8.2         | 308460   | Unsupported    |
+| 1.8.21        | 2        | Unsupported    |
+| 1.8.23        | 25       | Unsupported    |
+| 1.8.24        | 38       | Unsupported    |
+| 1.8.3         | 934235   | Unsupported    |
+| 1.8.3.        | 4        | Unsupported    |
+| 1.8.32        | 2        | Unsupported    |
+| 1.8.33        | 4        | Unsupported    |
+| 1.8.4         | 102      | Unsupported    |
+| 1.8.5         | 1        | Unsupported    |
+| 1.8.7         | 27       | Unsupported    |
+| 1.8.8         | 463      | Unsupported    |
+| 1.8.9         | 4        | Unsupported    |
+| 1.9           | 5        | Unsupported    |
+| 1.9.0         | 97253    | Unsupported    |
+| 1.9.02        | 8        | Unsupported    |
+| 1.9.1         | 821142   | Unsupported    |
+| 1.9.1.        | 1        | Unsupported    |
+| 1.9.11        | 10       | Unsupported    |
+| 1.9.12        | 24       | Unsupported    |
+| 1.9.15        | 4        | Unsupported    |
+| 1.9.17        | 2        | Unsupported    |
+| 1.9.2         | 236      | Unsupported    |
+| 1.9.22        | 4        | Unsupported    |
+| 1.9.3         | 341      | Unsupported    |
+| 1.9.4         | 108      | Unsupported    |
+| 1.9.5         | 9        | Unsupported    |
+| 1.9.6         | 9        | Unsupported    |
+| 1.9.7         | 321      | Unsupported    |
+| 1.9.9         | 8        | Unsupported    |
+| 1.99.0        | 4        | Unsupported    |
+| 1.99.4        | 4        | Unsupported    |
+| 10.0.0        | 4        | Supported      |
+| 10.0.2        | 9        | Supported      |
+| 10.1.2        | 4        | Supported      |
+| 10.2          | 25       | Supported      |
+| 10.8.3        | 56       | Supported      |
+| 100.0.0       | 5        | Supported      |
+| 1000.12.4     | 4        | Supported      |
+| 11.0.1        | 20       | Supported      |
+| 11.0.6        | 20       | Supported      |
+| 11.07.82      | 52       | Supported      |
+| 11.1.0        | 4        | Supported      |
+| 11.1.1        | 51       | Supported      |
+| 11.1.3        | 12       | Supported      |
+| 11.10.2       | 1        | Supported      |
+| 11.11.0       | 101      | Supported      |
+| 11.12.0       | 4        | Supported      |
+| 11.12.4       | 4        | Supported      |
+| 11.7.2        | 4        | Supported      |
+| 110           | 60       | Supported      |
+| 1102          | 1        | Supported      |
+| 111.11.3      | 4        | Supported      |
+| 12.0.0        | 44       | Supported      |
+| 12.1.0        | 4        | Supported      |
+| 123           | 88       | Supported      |
+| 13.1.0        | 4        | Supported      |
+| 13.2.1        | 12       | Supported      |
+| 13.4.1        | 16       | Supported      |
+| 14            | 1        | Supported      |
+| 15.3.2        | 4        | Supported      |
+| 16.10.4       | 4        | Supported      |
+| 160           | 4        | Supported      |
+| 161           | 4        | Supported      |
+| 172           | 8        | Supported      |
+| 180           | 1        | Supported      |
+| 19.1.4        | 16       | Supported      |
+| 2             | 56       | Unsupported    |
+| 2.0           | 6        | Unsupported    |
+| 2.0.0         | 38730    | Unsupported    |
+| 2.0.1         | 2315     | Unsupported    |
+| 2.0.10        | 8        | Unsupported    |
+| 2.0.11        | 1        | Unsupported    |
+| 2.0.12        | 4        | Unsupported    |
+| 2.0.14        | 12       | Unsupported    |
+| 2.0.19        | 50       | Unsupported    |
+| 2.0.2         | 18789    | Unsupported    |
+| 2.0.3         | 104923   | Unsupported    |
+| 2.0.4         | 461      | Unsupported    |
+| 2.0.5         | 121      | Unsupported    |
+| 2.0.6         | 13       | Unsupported    |
+| 2.0.60        | 1        | Unsupported    |
+| 2.0.66        | 8        | Unsupported    |
+| 2.0.7         | 45       | Unsupported    |
+| 2.0.8         | 8        | Unsupported    |
+| 2.0.9         | 8        | Unsupported    |
+| 2.01.12       | 4        | Unsupported    |
+| 2.1.          | 4        | Unsupported    |
+| 2.1.0         | 86595    | Unsupported    |
+| 2.1.04        | 1        | Unsupported    |
+| 2.1.05        | 22       | Unsupported    |
+| 2.1.07        | 1        | Unsupported    |
+| 2.1.08        | 848      | Unsupported    |
+| 2.1.1         | 473601   | Unsupported    |
+| 2.1.10        | 20       | Unsupported    |
+| 2.1.11        | 596      | Unsupported    |
+| 2.1.12        | 32       | Unsupported    |
+| 2.1.13        | 27       | Unsupported    |
+| 2.1.15        | 231      | Unsupported    |
+| 2.1.16        | 4        | Unsupported    |
+| 2.1.17        | 5        | Unsupported    |
+| 2.1.18        | 669      | Unsupported    |
+| 2.1.2         | 2017     | Unsupported    |
+| 2.1.27        | 12       | Unsupported    |
+| 2.1.3         | 296850   | Unsupported    |
+| 2.1.30        | 4        | Unsupported    |
+| 2.1.34        | 32       | Unsupported    |
+| 2.1.38        | 24       | Unsupported    |
+| 2.1.4         | 554179   | Unsupported    |
+| 2.1.41        | 2        | Unsupported    |
+| 2.1.47        | 256      | Unsupported    |
+| 2.1.5         | 3017     | Unsupported    |
+| 2.1.6         | 1168     | Unsupported    |
+| 2.1.7         | 4        | Unsupported    |
+| 2.1.8         | 2        | Unsupported    |
+| 2.10.1        | 58       | Unsupported    |
+| 2.10.2        | 4        | Unsupported    |
+| 2.10.4        | 25       | Unsupported    |
+| 2.10.6        | 97       | Unsupported    |
+| 2.10.8        | 4        | Unsupported    |
+| 2.11.0        | 865      | Unsupported    |
+| 2.11.1        | 5        | Unsupported    |
+| 2.11.2        | 10       | Unsupported    |
+| 2.11.3        | 8        | Unsupported    |
+| 2.12.4        | 21       | Unsupported    |
+| 2.14.0        | 4        | Unsupported    |
+| 2.14.4        | 2        | Unsupported    |
+| 2.17.0        | 10       | Unsupported    |
+| 2.17.5        | 8        | Unsupported    |
+| 2.18.0        | 24       | Unsupported    |
+| 2.2           | 4        | Unsupported    |
+| 2.2.0         | 147050   | Unsupported    |
+| 2.2.1         | 45230    | Unsupported    |
+| 2.2.12        | 2        | Unsupported    |
+| 2.2.13        | 4        | Unsupported    |
+| 2.2.14        | 2        | Unsupported    |
+| 2.2.2         | 98990    | Unsupported    |
+| 2.2.24        | 4        | Unsupported    |
+| 2.2.3         | 369741   | Unsupported    |
+| 2.2.4         | 1104850  | Unsupported    |
+| 2.2.4.        | 4        | Unsupported    |
+| 2.2.40        | 4        | Unsupported    |
+| 2.2.43        | 116      | Unsupported    |
+| 2.2.5         | 8770     | Unsupported    |
+| 2.2.6         | 24       | Unsupported    |
+| 2.2.8         | 36       | Unsupported    |
+| 2.2.81        | 23       | Unsupported    |
+| 2.22.0        | 11       | Unsupported    |
+| 2.22.2        | 4        | Unsupported    |
+| 2.22.3        | 1        | Unsupported    |
+| 2.28.1        | 5        | Unsupported    |
+| 2.29.1        | 4        | Unsupported    |
+| 2.29.5        | 4        | Unsupported    |
+| 2.3.0         | 57       | Unsupported    |
+| 2.3.1         | 349      | Unsupported    |
+| 2.3.11        | 4        | Unsupported    |
+| 2.3.19        | 4        | Unsupported    |
+| 2.3.2         | 322      | Unsupported    |
+| 2.3.20        | 33       | Unsupported    |
+| 2.3.23        | 61       | Unsupported    |
+| 2.3.26        | 5362     | Unsupported    |
+| 2.3.3         | 8        | Unsupported    |
+| 2.3.36        | 16       | Unsupported    |
+| 2.3.4         | 28       | Unsupported    |
+| 2.3.44        | 8        | Unsupported    |
+| 2.3.54        | 63       | Unsupported    |
+| 2.3.6         | 4        | Unsupported    |
+| 2.3.60        | 12       | Unsupported    |
+| 2.3.61        | 8        | Unsupported    |
+| 2.3.7         | 8        | Unsupported    |
+| 2.3.73        | 16       | Unsupported    |
+| 2.3.74        | 4        | Unsupported    |
+| 2.3.77        | 234      | Unsupported    |
+| 2.3.79        | 397      | Unsupported    |
+| 2.3.9         | 4        | Unsupported    |
+| 2.30.0        | 64       | Unsupported    |
+| 2.30.5        | 16       | Unsupported    |
+| 2.31.2        | 4        | Unsupported    |
+| 2.32.0        | 4        | Unsupported    |
+| 2.34.0        | 39       | Unsupported    |
+| 2.38.0        | 1        | Unsupported    |
+| 2.38.1        | 12       | Unsupported    |
+| 2.38.2        | 53       | Unsupported    |
+| 2.4.0         | 469      | Unsupported    |
+| 2.4.1         | 334      | Unsupported    |
+| 2.4.2         | 25       | Unsupported    |
+| 2.4.3         | 6        | Unsupported    |
+| 2.4.4         | 41       | Unsupported    |
+| 2.4.5         | 4        | Unsupported    |
+| 2.42.0        | 5        | Unsupported    |
+| 2.5.0         | 86       | Unsupported    |
+| 2.5.1         | 16       | Unsupported    |
+| 2.5.10        | 16       | Unsupported    |
+| 2.5.11        | 4        | Unsupported    |
+| 2.5.12        | 5        | Unsupported    |
+| 2.5.14        | 42       | Unsupported    |
+| 2.5.15        | 16       | Unsupported    |
+| 2.5.16        | 16       | Unsupported    |
+| 2.5.17        | 25       | Unsupported    |
+| 2.5.18        | 10       | Unsupported    |
+| 2.5.2         | 129      | Unsupported    |
+| 2.5.20        | 4554     | Unsupported    |
+| 2.5.3         | 8        | Unsupported    |
+| 2.5.4         | 10       | Unsupported    |
+| 2.5.9         | 25       | Unsupported    |
+| 2.50.0        | 4        | Unsupported    |
+| 2.6.0         | 107      | Unsupported    |
+| 2.6.1         | 385      | Unsupported    |
+| 2.6.2         | 25       | Unsupported    |
+| 2.6.3         | 460      | Unsupported    |
+| 2.6.4         | 554      | Unsupported    |
+| 2.6.6         | 14       | Unsupported    |
+| 2.6.9         | 12       | Unsupported    |
+| 2.61.0        | 62       | Unsupported    |
+| 2.65.0        | 8        | Unsupported    |
+| 2.7.0         | 189      | Unsupported    |
+| 2.7.1         | 703      | Unsupported    |
+| 2.7.12        | 92       | Unsupported    |
+| 2.7.2         | 819      | Unsupported    |
+| 2.7.4         | 20       | Unsupported    |
+| 2.7.5         | 4        | Unsupported    |
+| 2.7.8         | 4        | Unsupported    |
+| 2.7.9         | 4        | Unsupported    |
+| 2.70.0        | 175      | Unsupported    |
+| 2.8.0         | 12       | Unsupported    |
+| 2.8.5         | 12       | Unsupported    |
+| 2.8.6         | 4        | Unsupported    |
+| 2.8.8         | 1        | Unsupported    |
+| 2.9.0         | 54       | Unsupported    |
+| 2.9.1         | 4        | Unsupported    |
+| 2.9.11        | 4        | Unsupported    |
+| 2.9.2         | 5        | Unsupported    |
+| 2.9.3         | 4        | Unsupported    |
+| 2.9.4         | 34       | Unsupported    |
+| 2.9.5         | 30       | Unsupported    |
+| 2.9.6         | 16       | Unsupported    |
+| 2.9.7         | 157      | Unsupported    |
+| 2.9.9         | 2        | Unsupported    |
+| 2.9999.5      | 4        | Unsupported    |
+| 2.9999.6      | 4        | Unsupported    |
+| 2.9999.8      | 1265     | Unsupported    |
+| 2.9999.81     | 4        | Unsupported    |
+| 20            | 13       | Supported      |
+| 2010.1.416    | 4        | Supported      |
+| 2010.1.518    | 1        | Supported      |
+| 2010.2.825    | 1        | Supported      |
+| 2011.01.01    | 1        | Supported      |
+| 2011.1.315    | 13       | Supported      |
+| 2011.2.712    | 16       | Supported      |
+| 2011.2.914    | 1        | Supported      |
+| 2012.07.03    | 14       | Supported      |
+| 2012.1.214    | 19       | Supported      |
+| 2012.1.419    | 8        | Supported      |
+| 2012.2.607    | 23       | Supported      |
+| 2012.2.622    | 4        | Supported      |
+| 2013.1.219    | 10       | Supported      |
+| 2013.1.319    | 36       | Supported      |
+| 2013.1.514    | 8        | Supported      |
+| 2013.2.611    | 47       | Supported      |
+| 2013.2.716    | 29       | Supported      |
+| 2013.2.801    | 4        | Supported      |
+| 2013.2.918    | 17       | Supported      |
+| 2014.1.318    | 34       | Supported      |
+| 2014.1.415    | 23       | Supported      |
+| 2014.1.423    | 4        | Supported      |
+| 2014.1.528    | 8        | Supported      |
+| 2014.1.624    | 60       | Supported      |
+| 2014.2.716    | 25       | Supported      |
+| 2014.2.814    | 4        | Supported      |
+| 2015.1.318    | 8        | Supported      |
+| 2015.1.331    | 4        | Supported      |
+| 2015.1.408    | 10       | Supported      |
+| 2015.1.429    | 19       | Supported      |
+| 2015.2.624    | 33       | Supported      |
+| 2015.2.805    | 17       | Supported      |
+| 2015.2.902    | 20       | Supported      |
+| 2015.3.930    | 31       | Supported      |
+| 2016.1.112    | 40       | Supported      |
+| 2016.1.226    | 14       | Supported      |
+| 2016.1.412    | 115      | Supported      |
+| 2016.2.504    | 14       | Supported      |
+| 2016.2.607    | 4        | Supported      |
+| 2016.2.714    | 10       | Supported      |
+| 2016.3.914    | 28       | Supported      |
+| 2017.07.31    | 4        | Supported      |
+| 2017.1.118    | 26       | Supported      |
+| 2017.1.223    | 39       | Supported      |
+| 2017.2.504    | 487      | Supported      |
+| 2017.2.621    | 48       | Supported      |
+| 2017.3.913    | 8        | Supported      |
+| 2018.1.117    | 12       | Supported      |
+| 2018.1.131    | 4        | Supported      |
+| 2018.1.221    | 83       | Supported      |
+| 2018.1.503    | 1        | Supported      |
+| 2018.2.516    | 4        | Supported      |
+| 2018.2.620    | 27       | Supported      |
+| 2018.3.911    | 5        | Supported      |
+| 2019.1.115    | 13       | Supported      |
+| 2019.1.220    | 32       | Supported      |
+| 2019.2.514    | 9        | Supported      |
+| 2019.2.619    | 8        | Supported      |
+| 2019.3.917    | 57       | Supported      |
+| 2020.1.114    | 5        | Supported      |
+| 2020.1.219    | 15       | Supported      |
+| 2020.1.406    | 12       | Supported      |
+| 2020.2.513    | 31       | Supported      |
+| 2020.2.617    | 48       | Supported      |
+| 2020.3.915    | 9        | Supported      |
+| 2021.1.119    | 29       | Supported      |
+| 2021.1.224    | 28       | Supported      |
+| 2021.1.330    | 4        | Supported      |
+| 2021.2.616    | 56       | Supported      |
+| 2021.3.914    | 31       | Supported      |
+| 2022.1.119    | 6        | Supported      |
+| 2022.1.301    | 16       | Supported      |
+| 2022.1.412    | 4        | Supported      |
+| 2022.2.510    | 32       | Supported      |
+| 2022.2.621    | 17       | Supported      |
+| 2022.224      | 6        | Supported      |
+| 2022.25.0     | 4        | Supported      |
+| 2022.3.913    | 17       | Supported      |
+| 2022.4.69     | 1        | Supported      |
+| 2022.8.19     | 4        | Supported      |
+| 21.05.01      | 7        | Supported      |
+| 21.12.4       | 43       | Supported      |
+| 213           | 16       | Supported      |
+| 22.10.20      | 4        | Supported      |
+| 226           | 2        | Supported      |
+| 234           | 4        | Supported      |
+| 249           | 49       | Supported      |
+| 25.0.2        | 13       | Supported      |
+| 276           | 23       | Supported      |
+| 28.4.2        | 5        | Supported      |
+| 288           | 8        | Supported      |
+| 3             | 25       | Supported      |
+| 3.0.0         | 93551    | Supported      |
+| 3.0.0.        | 4        | Supported      |
+| 3.0.1         | 509      | Supported      |
+| 3.0.10        | 4        | Supported      |
+| 3.0.14        | 4        | Supported      |
+| 3.0.19        | 12       | Supported      |
+| 3.0.2         | 595      | Supported      |
+| 3.0.20        | 17       | Supported      |
+| 3.0.3         | 1143     | Supported      |
+| 3.0.30        | 4        | Supported      |
+| 3.0.37        | 1        | Supported      |
+| 3.0.39        | 121      | Supported      |
+| 3.0.4         | 106      | Supported      |
+| 3.0.47        | 5886     | Supported      |
+| 3.0.5         | 40       | Supported      |
+| 3.0.6         | 4100     | Supported      |
+| 3.0.8         | 120      | Supported      |
+| 3.0.9         | 12       | Supported      |
+| 3.02.04       | 5        | Supported      |
+| 3.1.0         | 132947   | Supported      |
+| 3.1.1         | 344709   | Supported      |
+| 3.1.11        | 4645     | Supported      |
+| 3.1.12        | 10149    | Supported      |
+| 3.1.13        | 119571   | Supported      |
+| 3.1.2         | 559      | Supported      |
+| 3.1.20        | 3948     | Supported      |
+| 3.1.25        | 2515     | Supported      |
+| 3.1.27        | 8        | Supported      |
+| 3.1.28        | 12       | Supported      |
+| 3.1.3         | 1556     | Supported      |
+| 3.1.4         | 186      | Supported      |
+| 3.1.5         | 978      | Supported      |
+| 3.1.6         | 25       | Supported      |
+| 3.1.60        | 10       | Supported      |
+| 3.1.62        | 7844     | Supported      |
+| 3.1.63        | 4        | Supported      |
+| 3.1.8         | 96       | Supported      |
+| 3.10.2        | 50       | Supported      |
+| 3.11.0        | 77       | Supported      |
+| 3.11.1        | 9        | Supported      |
+| 3.11.2        | 16       | Supported      |
+| 3.12.4        | 8        | Supported      |
+| 3.16.24       | 4        | Supported      |
+| 3.2           | 3        | Supported      |
+| 3.2.0         | 29977    | Supported      |
+| 3.2.1         | 971706   | Supported      |
+| 3.2.10        | 408      | Supported      |
+| 3.2.11        | 383      | Supported      |
+| 3.2.12        | 246      | Supported      |
+| 3.2.18        | 8        | Supported      |
+| 3.2.2         | 2355     | Supported      |
+| 3.2.20        | 4        | Supported      |
+| 3.2.3         | 56       | Supported      |
+| 3.2.32        | 1        | Supported      |
+| 3.2.35        | 1        | Supported      |
+| 3.2.4         | 5        | Supported      |
+| 3.2.5         | 2644     | Supported      |
+| 3.2.6         | 93       | Supported      |
+| 3.2.8         | 4        | Supported      |
+| 3.2.9         | 256      | Supported      |
+| 3.20.008      | 4        | Supported      |
+| 3.20.3        | 8        | Supported      |
+| 3.20142.45    | 4        | Supported      |
+| 3.25.0        | 65       | Supported      |
+| 3.3.0         | 8480     | Supported      |
+| 3.3.1         | 1546166  | Supported      |
+| 3.3.1.        | 44       | Supported      |
+| 3.3.11        | 51       | Supported      |
+| 3.3.12        | 5        | Supported      |
+| 3.3.14        | 4        | Supported      |
+| 3.3.2         | 3970     | Supported      |
+| 3.3.21        | 4        | Supported      |
+| 3.3.26        | 2        | Supported      |
+| 3.3.28        | 37       | Supported      |
+| 3.3.3         | 34       | Supported      |
+| 3.3.30        | 8        | Supported      |
+| 3.3.31        | 8        | Supported      |
+| 3.3.4         | 1312     | Supported      |
+| 3.3.5         | 3509     | Supported      |
+| 3.3.6         | 17       | Supported      |
+| 3.3.7         | 12       | Supported      |
+| 3.3.8         | 8        | Supported      |
+| 3.3.9         | 113      | Supported      |
+| 3.37.0        | 1        | Supported      |
+| 3.4.0         | 68175    | Supported      |
+| 3.4.01        | 4        | Supported      |
+| 3.4.1         | 1235654  | Supported      |
+| 3.4.10        | 1        | Supported      |
+| 3.4.11        | 4        | Supported      |
+| 3.4.12        | 21       | Supported      |
+| 3.4.13        | 4        | Supported      |
+| 3.4.14        | 1        | Supported      |
+| 3.4.16        | 1        | Supported      |
+| 3.4.17        | 4        | Supported      |
+| 3.4.18        | 4        | Supported      |
+| 3.4.19        | 1        | Supported      |
+| 3.4.2         | 381      | Supported      |
+| 3.4.20        | 4        | Supported      |
+| 3.4.21        | 4        | Supported      |
+| 3.4.3         | 1        | Supported      |
+| 3.4.4         | 10       | Supported      |
+| 3.4.5         | 4        | Supported      |
+| 3.4.6         | 18       | Supported      |
+| 3.4.7         | 1        | Supported      |
+| 3.4.8         | 1        | Supported      |
+| 3.4.9         | 4        | Supported      |
+| 3.5           | 74       | Supported      |
+| 3.5.0         | 116101   | Supported      |
+| 3.5.0.        | 4        | Supported      |
+| 3.5.0001      | 8        | Supported      |
+| 3.5.1         | 3080372  | Supported      |
+| 3.5.11        | 1        | Supported      |
+| 3.5.110003    | 4        | Supported      |
+| 3.5.2         | 786      | Supported      |
+| 3.5.3         | 6        | Supported      |
+| 3.5.38        | 1        | Supported      |
+| 3.5.4         | 14       | Supported      |
+| 3.5.5         | 4        | Supported      |
+| 3.5.6         | 612      | Supported      |
+| 3.5.7         | 11320    | Supported      |
+| 3.5.8         | 4        | Supported      |
+| 3.51.0        | 45       | Supported      |
+| 3.6           | 1044     | Supported      |
+| 3.6.0         | 5776886  | Supported      |
+| 3.6.00        | 5        | Supported      |
+| 3.6.1         | 8060532  | Supported      |
+| 3.6.100       | 8        | Supported      |
+| 3.6.2         | 33909    | Supported      |
+| 3.6.3         | 37854    | Supported      |
+| 3.6.4         | 16       | Supported      |
+| 3.6.5         | 1        | Supported      |
+| 3.6.6         | 354      | Supported      |
+| 3.6.7         | 4        | Supported      |
+| 3.6.8         | 177      | Supported      |
+| 3.6.9         | 5        | Supported      |
+| 3.60          | 4        | Supported      |
+| 3.7.0         | 113      | Supported      |
+| 3.7.1         | 12       | Supported      |
+| 3.7.11        | 4        | Supported      |
+| 3.7.3         | 8        | Supported      |
+| 3.7.4         | 4        | Supported      |
+| 3.7.6         | 403      | Supported      |
+| 3.7.7         | 4        | Supported      |
+| 3.8.0         | 63       | Supported      |
+| 3.8.1         | 7        | Supported      |
+| 3.9.0         | 41       | Supported      |
+| 3.9.1         | 9        | Supported      |
+| 3.9.18        | 4        | Supported      |
+| 3.9.3         | 4        | Supported      |
+| 3.9.4         | 5        | Supported      |
+| 3.9.9         | 128      | Supported      |
+| 3.99.99       | 2756     | Supported      |
+| 3.999.999     | 1        | Supported      |
+| 30.1.1        | 4        | Supported      |
+| 33.1.1        | 4        | Supported      |
+| 33.4.1        | 4        | Supported      |
+| 4.0.0         | 1390     | Supported      |
+| 4.0.1         | 4433     | Supported      |
+| 4.0.10        | 5        | Supported      |
+| 4.0.11        | 4        | Supported      |
+| 4.0.2         | 521      | Supported      |
+| 4.0.26        | 52       | Supported      |
+| 4.0.6         | 65       | Supported      |
+| 4.0.8         | 39       | Supported      |
+| 4.0.9         | 773      | Supported      |
+| 4.02.0        | 4        | Supported      |
+| 4.1.0         | 3        | Supported      |
+| 4.1.1         | 65       | Supported      |
+| 4.1.15        | 4        | Supported      |
+| 4.1.2         | 122      | Supported      |
+| 4.1.3         | 8        | Supported      |
+| 4.1.7         | 4        | Supported      |
+| 4.10.2        | 16       | Supported      |
+| 4.12.2        | 4        | Supported      |
+| 4.12.4        | 4        | Supported      |
+| 4.14.0        | 1        | Supported      |
+| 4.15.4        | 1        | Supported      |
+| 4.15.5        | 5        | Supported      |
+| 4.2.1         | 104      | Supported      |
+| 4.2.10        | 47       | Supported      |
+| 4.2.11        | 6        | Supported      |
+| 4.2.12        | 28325    | Supported      |
+| 4.2.13        | 4        | Supported      |
+| 4.2.14        | 3932     | Supported      |
+| 4.2.15        | 7815     | Supported      |
+| 4.2.2         | 1238     | Supported      |
+| 4.2.4         | 2        | Supported      |
+| 4.2.5         | 237      | Supported      |
+| 4.2.7         | 93       | Supported      |
+| 4.2.9         | 12       | Supported      |
+| 4.3.0         | 312      | Supported      |
+| 4.3.1         | 58       | Supported      |
+| 4.3.2         | 12       | Supported      |
+| 4.4.0         | 4        | Supported      |
+| 4.4.1         | 6        | Supported      |
+| 4.5.0         | 94       | Supported      |
+| 4.5.1         | 1        | Supported      |
+| 4.5.12        | 4        | Supported      |
+| 4.5.2         | 4        | Supported      |
+| 4.5.28        | 4        | Supported      |
+| 4.5.35        | 1        | Supported      |
+| 4.5.4         | 4        | Supported      |
+| 4.5.6         | 26       | Supported      |
+| 4.5.9         | 1        | Supported      |
+| 4.6.0         | 17       | Supported      |
+| 4.6.2         | 4        | Supported      |
+| 4.7.13        | 4        | Supported      |
+| 4.7.5         | 160      | Supported      |
+| 4.7.6         | 29       | Supported      |
+| 4.9.12        | 4        | Supported      |
+| 4.9.3         | 1        | Supported      |
+| 42            | 125      | Supported      |
+| 5             | 2        | Supported      |
+| 5.0.0         | 50       | Supported      |
+| 5.0.3         | 18       | Supported      |
+| 5.0.4         | 4        | Supported      |
+| 5.0.5         | 249      | Supported      |
+| 5.0.6         | 114      | Supported      |
+| 5.0.7         | 224      | Supported      |
+| 5.1.4         | 24       | Supported      |
+| 5.10.3        | 53       | Supported      |
+| 5.11.1        | 1        | Supported      |
+| 5.11.3        | 49       | Supported      |
+| 5.11.6        | 2        | Supported      |
+| 5.15.0        | 70       | Supported      |
+| 5.16.2        | 4        | Supported      |
+| 5.2.3         | 81       | Supported      |
+| 5.2.4         | 4        | Supported      |
+| 5.3.1         | 17       | Supported      |
+| 5.42.1        | 8        | Supported      |
+| 5.5.1         | 9        | Supported      |
+| 5.5.5         | 8        | Supported      |
+| 5.55.55       | 4        | Supported      |
+| 5.6.1         | 1        | Supported      |
+| 5.6.4         | 2        | Supported      |
+| 5.9.9         | 4        | Supported      |
+| 509           | 5        | Supported      |
+| 6.0.1         | 8        | Supported      |
+| 6.0.2         | 4        | Supported      |
+| 6.0.7         | 4        | Supported      |
+| 6.1.0         | 51       | Supported      |
+| 6.1.1         | 4        | Supported      |
+| 6.1.4         | 4        | Supported      |
+| 6.1.5         | 4        | Supported      |
+| 6.1.6         | 4        | Supported      |
+| 6.1.8         | 139      | Supported      |
+| 6.17.2        | 59       | Supported      |
+| 6.18.20       | 12       | Supported      |
+| 6.18.22       | 4        | Supported      |
+| 6.19.3        | 8        | Supported      |
+| 6.19.5        | 4        | Supported      |
+| 6.2.0         | 8        | Supported      |
+| 6.2.1         | 75       | Supported      |
+| 6.20.2        | 16       | Supported      |
+| 6.20.3        | 16       | Supported      |
+| 6.21.0        | 8        | Supported      |
+| 6.21.1        | 24       | Supported      |
+| 6.3.50        | 4        | Supported      |
+| 6.4.9         | 62       | Supported      |
+| 6.6           | 10       | Supported      |
+| 6.6.0         | 6        | Supported      |
+| 6.6.6         | 8        | Supported      |
+| 64            | 10       | Supported      |
+| 7.0.0         | 35       | Supported      |
+| 7.0.1         | 13       | Supported      |
+| 7.0.10        | 5        | Supported      |
+| 7.0.3         | 151      | Supported      |
+| 7.0.5         | 26       | Supported      |
+| 7.0.6         | 3469     | Supported      |
+| 7.10.1        | 249      | Supported      |
+| 7.2.2         | 36       | Supported      |
+| 7.2.3         | 4        | Supported      |
+| 7.3.2         | 13       | Supported      |
+| 7.3.3         | 146      | Supported      |
+| 7.41.3        | 16       | Supported      |
+| 8.0.3         | 8        | Supported      |
+| 8.1.1         | 4        | Supported      |
+| 8.10.1        | 16       | Supported      |
+| 8.11.0        | 91       | Supported      |
+| 8.11.1        | 4763     | Supported      |
+| 8.4.0         | 8        | Supported      |
+| 8.50.07       | 56       | Supported      |
+| 8.58.42       | 2        | Supported      |
+| 8.6.0         | 43       | Supported      |
+| 8.7.1         | 4        | Supported      |
+| 8.8.8         | 2096     | Supported      |
+| 8.9.0         | 12       | Supported      |
+| 9             | 4        | Supported      |
+| 9.0.0         | 93       | Supported      |
+| 9.1.1         | 4        | Supported      |
+| 9.10.2        | 2        | Supported      |
+| 9.11.0        | 4        | Supported      |
+| 9.9           | 1        | Supported      |
+| 9.9.0         | 10       | Supported      |
+| 9.9.9         | 683      | Supported      |
+| 9.91.92       | 4        | Supported      |
+| 99.9.9        | 4        | Supported      |
+| 99.99.9       | 6        | Supported      |
+| 999           | 538      | Supported      |
+| 999.1.11.2    | 90       | Supported      |
+| 999.11.1      | 4        | Supported      |
+| \             | 5        | Non-conclusive |
+| \1            | 50       | Non-conclusive |
+| undefined     | 4        | Non-conclusive |
 
 ## WordPress
 
-|    version     | count | is_supported |
-| -------------- | ----- | ------------ |
-| .              |     3 | null         | 
-| 3.0            |     1 | false        | 
-| 4.1            |     1 | false        | 
-| 4.2            |     1 | false        | 
-| 4.6            |     1 | false        | 
-| 4.8            |     1 | false        | 
-| 4.9            |     8 | false        | 
-| 5.0            |     3 | false        | 
-| 5.1            |     5 | false        | 
-| 5.2            |     5 | false        | 
-| 5.3            |    14 | false        | 
-| 5.4            |   122 | true         | 
+| info          | count    | is_supported   |
+|---------------|----------|----------------|
+|               | 13053702 | Not-versioned  |
+| 0.0.0         | 2        | Unsupported    |
+| 1.0           | 28       | Unsupported    |
+| 1.0.8         | 10       | Unsupported    |
+| 1.1           | 16       | Unsupported    |
+| 1.2.2         | 2        | Unsupported    |
+| 1.4           | 8        | Unsupported    |
+| 1.5           | 16       | Unsupported    |
+| 1.5.1.3       | 8        | Unsupported    |
+| 1.5.2         | 16       | Unsupported    |
+| 1.9.2         | 8        | Unsupported    |
+| 10.0.0        | 8        | Supported      |
+| 10.8.2        | 8        | Supported      |
+| 10.8.3        | 8        | Supported      |
+| 100           | 8        | Supported      |
+| 100.500       | 8        | Supported      |
+| 101           | 4        | Supported      |
+| 12.0.1.3.2    | 8        | Supported      |
+| 12.18.2       | 18       | Supported      |
+| 13.37         | 8        | Supported      |
+| 14.4.41       | 8        | Supported      |
+| 15.0          | 8        | Supported      |
+| 1660          | 2        | Supported      |
+| 17.54.21      | 40       | Supported      |
+| 180           | 2        | Supported      |
+| 183           | 4        | Supported      |
+| 2.0           | 18       | Unsupported    |
+| 2.0.1         | 2        | Unsupported    |
+| 2.0.10        | 8        | Unsupported    |
+| 2.0.2         | 8        | Unsupported    |
+| 2.0.3         | 16       | Unsupported    |
+| 2.0.4         | 62       | Unsupported    |
+| 2.0.5         | 16       | Unsupported    |
+| 2.0.7         | 34       | Unsupported    |
+| 2.1           | 50       | Unsupported    |
+| 2.1.2         | 40       | Unsupported    |
+| 2.1.3         | 24       | Unsupported    |
+| 2.2           | 20       | Unsupported    |
+| 2.2.1         | 36       | Unsupported    |
+| 2.2.2         | 34       | Unsupported    |
+| 2.3           | 22       | Unsupported    |
+| 2.3.1         | 40       | Unsupported    |
+| 2.3.2         | 8        | Unsupported    |
+| 2.3.3         | 56       | Unsupported    |
+| 2.5           | 32       | Unsupported    |
+| 2.5.1         | 92       | Unsupported    |
+| 2.6           | 138      | Unsupported    |
+| 2.6.1         | 42       | Unsupported    |
+| 2.6.2         | 68       | Unsupported    |
+| 2.6.3         | 100      | Unsupported    |
+| 2.6.5         | 88       | Unsupported    |
+| 2.7           | 230      | Unsupported    |
+| 2.7.1         | 346      | Unsupported    |
+| 2.8           | 82       | Unsupported    |
+| 2.8.1         | 48       | Unsupported    |
+| 2.8.2         | 88       | Unsupported    |
+| 2.8.3         | 60       | Unsupported    |
+| 2.8.4         | 722      | Unsupported    |
+| 2.8.5         | 118      | Unsupported    |
+| 2.8.6         | 490      | Unsupported    |
+| 2.9           | 72       | Unsupported    |
+| 2.9.1         | 444      | Unsupported    |
+| 2.9.2         | 1362     | Unsupported    |
+| 2012.9        | 2        | Supported      |
+| 2022.0.1      | 2        | Supported      |
+| 2023.01       | 20       | Supported      |
+| 2023.52       | 4        | Supported      |
+| 211           | 8        | Supported      |
+| 2115          | 4        | Supported      |
+| 217           | 4        | Supported      |
+| 22.22.30      | 8        | Supported      |
+| 2270          | 4        | Supported      |
+| 2285          | 2        | Supported      |
+| 237           | 4        | Supported      |
+| 238           | 2        | Supported      |
+| 24.6.2        | 2        | Supported      |
+| 2416          | 4        | Supported      |
+| 2440          | 4        | Supported      |
+| 2563          | 4        | Supported      |
+| 2711          | 4        | Supported      |
+| 274           | 8        | Supported      |
+| 278           | 4        | Supported      |
+| 3.            | 8        | Unsupported    |
+| 3.0           | 606      | Unsupported    |
+| 3.0.1         | 1492     | Unsupported    |
+| 3.0.2         | 90       | Unsupported    |
+| 3.0.3         | 340      | Unsupported    |
+| 3.0.4         | 856      | Unsupported    |
+| 3.0.5         | 500      | Unsupported    |
+| 3.0.6         | 44       | Unsupported    |
+| 3.1           | 980      | Unsupported    |
+| 3.1.1         | 506      | Unsupported    |
+| 3.1.2         | 614      | Unsupported    |
+| 3.1.3         | 650      | Unsupported    |
+| 3.1.4         | 1272     | Unsupported    |
+| 3.14          | 8        | Unsupported    |
+| 3.2           | 168      | Unsupported    |
+| 3.2.1         | 3112     | Unsupported    |
+| 3.3           | 294      | Unsupported    |
+| 3.3.1         | 2892     | Unsupported    |
+| 3.3.2         | 1742     | Unsupported    |
+| 3.3.4.5       | 2        | Unsupported    |
+| 3.4           | 706      | Unsupported    |
+| 3.4.1         | 3318     | Unsupported    |
+| 3.4.2         | 6726     | Unsupported    |
+| 3.4.3         | 18       | Unsupported    |
+| 3.5           | 2456     | Unsupported    |
+| 3.5.1         | 9470     | Unsupported    |
+| 3.5.2         | 3188     | Unsupported    |
+| 3.5.3         | 4        | Unsupported    |
+| 3.6           | 2800     | Unsupported    |
+| 3.6.1         | 4044     | Unsupported    |
+| 3.6.2         | 8        | Unsupported    |
+| 3.7           | 76       | Unsupported    |
+| 3.7.1         | 748      | Unsupported    |
+| 3.7.1.1       | 4        | Unsupported    |
+| 3.7.10        | 12       | Unsupported    |
+| 3.7.11        | 32       | Unsupported    |
+| 3.7.12        | 2        | Unsupported    |
+| 3.7.14        | 10       | Unsupported    |
+| 3.7.15        | 18       | Unsupported    |
+| 3.7.16        | 24       | Unsupported    |
+| 3.7.17        | 2        | Unsupported    |
+| 3.7.18        | 32       | Unsupported    |
+| 3.7.19        | 2        | Unsupported    |
+| 3.7.2         | 92       | Unsupported    |
+| 3.7.21        | 8        | Unsupported    |
+| 3.7.22        | 18       | Unsupported    |
+| 3.7.25        | 2        | Unsupported    |
+| 3.7.26        | 2        | Unsupported    |
+| 3.7.27        | 24       | Unsupported    |
+| 3.7.28        | 16       | Unsupported    |
+| 3.7.29        | 8        | Unsupported    |
+| 3.7.3         | 60       | Unsupported    |
+| 3.7.30        | 2        | Unsupported    |
+| 3.7.31        | 16       | Unsupported    |
+| 3.7.32        | 18       | Unsupported    |
+| 3.7.33        | 8        | Unsupported    |
+| 3.7.34        | 26       | Unsupported    |
+| 3.7.35        | 32       | Unsupported    |
+| 3.7.36        | 202      | Unsupported    |
+| 3.7.37        | 54       | Unsupported    |
+| 3.7.38        | 90       | Unsupported    |
+| 3.7.39        | 100      | Unsupported    |
+| 3.7.4         | 74       | Unsupported    |
+| 3.7.40        | 52       | Unsupported    |
+| 3.7.41        | 2228     | Unsupported    |
+| 3.7.5         | 88       | Unsupported    |
+| 3.7.8         | 16       | Unsupported    |
+| 3.7.9         | 2        | Unsupported    |
+| 3.8           | 694      | Unsupported    |
+| 3.8.1         | 2140     | Unsupported    |
+| 3.8.10        | 64       | Unsupported    |
+| 3.8.11        | 78       | Unsupported    |
+| 3.8.12        | 34       | Unsupported    |
+| 3.8.13        | 100      | Unsupported    |
+| 3.8.14        | 36       | Unsupported    |
+| 3.8.15        | 40       | Unsupported    |
+| 3.8.16        | 52       | Unsupported    |
+| 3.8.17        | 16       | Unsupported    |
+| 3.8.18        | 74       | Unsupported    |
+| 3.8.19        | 18       | Unsupported    |
+| 3.8.2         | 356      | Unsupported    |
+| 3.8.20        | 8        | Unsupported    |
+| 3.8.21        | 34       | Unsupported    |
+| 3.8.22        | 10       | Unsupported    |
+| 3.8.24        | 10       | Unsupported    |
+| 3.8.25        | 50       | Unsupported    |
+| 3.8.26        | 56       | Unsupported    |
+| 3.8.27        | 102      | Unsupported    |
+| 3.8.28        | 18       | Unsupported    |
+| 3.8.29        | 60       | Unsupported    |
+| 3.8.3         | 786      | Unsupported    |
+| 3.8.31        | 44       | Unsupported    |
+| 3.8.32        | 46       | Unsupported    |
+| 3.8.33        | 10       | Unsupported    |
+| 3.8.34        | 80       | Unsupported    |
+| 3.8.35        | 72       | Unsupported    |
+| 3.8.36        | 1176     | Unsupported    |
+| 3.8.37        | 136      | Unsupported    |
+| 3.8.38        | 170      | Unsupported    |
+| 3.8.39        | 228      | Unsupported    |
+| 3.8.4         | 214      | Unsupported    |
+| 3.8.40        | 106      | Unsupported    |
+| 3.8.41        | 6732     | Unsupported    |
+| 3.8.5         | 232      | Unsupported    |
+| 3.8.6         | 24       | Unsupported    |
+| 3.8.7         | 6        | Unsupported    |
+| 3.8.8         | 82       | Unsupported    |
+| 3.8.9         | 22       | Unsupported    |
+| 3.9           | 766      | Unsupported    |
+| 3.9.1         | 2672     | Unsupported    |
+| 3.9.10        | 44       | Unsupported    |
+| 3.9.11        | 90       | Unsupported    |
+| 3.9.12        | 46       | Unsupported    |
+| 3.9.13        | 46       | Unsupported    |
+| 3.9.14        | 126      | Unsupported    |
+| 3.9.15        | 12       | Unsupported    |
+| 3.9.16        | 48       | Unsupported    |
+| 3.9.17        | 24       | Unsupported    |
+| 3.9.18        | 16       | Unsupported    |
+| 3.9.19        | 72       | Unsupported    |
+| 3.9.2         | 2860     | Unsupported    |
+| 3.9.20        | 32       | Unsupported    |
+| 3.9.21        | 10       | Unsupported    |
+| 3.9.22        | 12       | Unsupported    |
+| 3.9.23        | 58       | Unsupported    |
+| 3.9.24        | 90       | Unsupported    |
+| 3.9.25        | 148      | Unsupported    |
+| 3.9.26        | 68       | Unsupported    |
+| 3.9.27        | 138      | Unsupported    |
+| 3.9.28        | 16       | Unsupported    |
+| 3.9.29        | 52       | Unsupported    |
+| 3.9.3         | 406      | Unsupported    |
+| 3.9.30        | 132      | Unsupported    |
+| 3.9.31        | 44       | Unsupported    |
+| 3.9.32        | 62       | Unsupported    |
+| 3.9.33        | 112      | Unsupported    |
+| 3.9.34        | 668      | Unsupported    |
+| 3.9.35        | 460      | Unsupported    |
+| 3.9.36        | 490      | Unsupported    |
+| 3.9.37        | 396      | Unsupported    |
+| 3.9.39        | 150      | Unsupported    |
+| 3.9.4         | 8        | Unsupported    |
+| 3.9.40        | 9748     | Unsupported    |
+| 3.9.5         | 48       | Unsupported    |
+| 3.9.6         | 150      | Unsupported    |
+| 3.9.7         | 14       | Unsupported    |
+| 3.9.8         | 42       | Unsupported    |
+| 3.9.9         | 88       | Unsupported    |
+| 3031          | 4        | Supported      |
+| 353           | 4        | Supported      |
+| 3686          | 2        | Supported      |
+| 374           | 4        | Supported      |
+| 380           | 4        | Supported      |
+| 3806          | 4        | Supported      |
+| 385           | 4        | Supported      |
+| 386           | 8        | Supported      |
+| 387           | 4        | Supported      |
+| 3933          | 2        | Supported      |
+| 396           | 4        | Supported      |
+| 4             | 124      | Unsupported    |
+| 4.0           | 4166     | Unsupported    |
+| 4.0.1         | 1908     | Unsupported    |
+| 4.0.10        | 86       | Unsupported    |
+| 4.0.11        | 58       | Unsupported    |
+| 4.0.12        | 34       | Unsupported    |
+| 4.0.13        | 108      | Unsupported    |
+| 4.0.14        | 28       | Unsupported    |
+| 4.0.15        | 10       | Unsupported    |
+| 4.0.16        | 12       | Unsupported    |
+| 4.0.17        | 28       | Unsupported    |
+| 4.0.18        | 66       | Unsupported    |
+| 4.0.19        | 18       | Unsupported    |
+| 4.0.2         | 78       | Unsupported    |
+| 4.0.20        | 2        | Unsupported    |
+| 4.0.21        | 24       | Unsupported    |
+| 4.0.22        | 28       | Unsupported    |
+| 4.0.23        | 50       | Unsupported    |
+| 4.0.24        | 52       | Unsupported    |
+| 4.0.25        | 118      | Unsupported    |
+| 4.0.26        | 80       | Unsupported    |
+| 4.0.27        | 48       | Unsupported    |
+| 4.0.28        | 70       | Unsupported    |
+| 4.0.29        | 136      | Unsupported    |
+| 4.0.3         | 88       | Unsupported    |
+| 4.0.30        | 28       | Unsupported    |
+| 4.0.31        | 78       | Unsupported    |
+| 4.0.32        | 192      | Unsupported    |
+| 4.0.33        | 158      | Unsupported    |
+| 4.0.34        | 78       | Unsupported    |
+| 4.0.341       | 8        | Unsupported    |
+| 4.0.35        | 266      | Unsupported    |
+| 4.0.36        | 128      | Unsupported    |
+| 4.0.37        | 200      | Unsupported    |
+| 4.0.38        | 10902    | Unsupported    |
+| 4.0.4         | 44       | Unsupported    |
+| 4.0.5         | 222      | Unsupported    |
+| 4.0.6         | 16       | Unsupported    |
+| 4.0.7         | 76       | Unsupported    |
+| 4.0.8         | 112      | Unsupported    |
+| 4.0.9         | 68       | Unsupported    |
+| 4.1           | 2772     | Unsupported    |
+| 4.1.0.2       | 82       | Unsupported    |
+| 4.1.1         | 6716     | Unsupported    |
+| 4.1.10        | 148      | Unsupported    |
+| 4.1.11        | 58       | Unsupported    |
+| 4.1.12        | 100      | Unsupported    |
+| 4.1.13        | 202      | Unsupported    |
+| 4.1.14        | 48       | Unsupported    |
+| 4.1.15        | 82       | Unsupported    |
+| 4.1.16        | 76       | Unsupported    |
+| 4.1.18        | 138      | Unsupported    |
+| 4.1.19        | 42       | Unsupported    |
+| 4.1.2         | 314      | Unsupported    |
+| 4.1.20        | 106      | Unsupported    |
+| 4.1.21        | 36       | Unsupported    |
+| 4.1.22        | 40       | Unsupported    |
+| 4.1.23        | 52       | Unsupported    |
+| 4.1.24        | 154      | Unsupported    |
+| 4.1.25        | 76       | Unsupported    |
+| 4.1.26        | 136      | Unsupported    |
+| 4.1.27        | 56       | Unsupported    |
+| 4.1.28        | 116      | Unsupported    |
+| 4.1.29        | 86       | Unsupported    |
+| 4.1.3         | 130      | Unsupported    |
+| 4.1.30        | 68       | Unsupported    |
+| 4.1.31        | 118      | Unsupported    |
+| 4.1.32        | 216      | Unsupported    |
+| 4.1.33        | 228      | Unsupported    |
+| 4.1.34        | 152      | Unsupported    |
+| 4.1.35        | 386      | Unsupported    |
+| 4.1.36        | 306      | Unsupported    |
+| 4.1.37        | 16784    | Unsupported    |
+| 4.1.4         | 164      | Unsupported    |
+| 4.1.5         | 580      | Unsupported    |
+| 4.1.6         | 110      | Unsupported    |
+| 4.1.7         | 174      | Unsupported    |
+| 4.1.8         | 320      | Unsupported    |
+| 4.1.9         | 150      | Unsupported    |
+| 4.2           | 298      | Unsupported    |
+| 4.2.1         | 580      | Unsupported    |
+| 4.2.10        | 254      | Unsupported    |
+| 4.2.11        | 56       | Unsupported    |
+| 4.2.12        | 126      | Unsupported    |
+| 4.2.13        | 100      | Unsupported    |
+| 4.2.14        | 42       | Unsupported    |
+| 4.2.15        | 92       | Unsupported    |
+| 4.2.16        | 58       | Unsupported    |
+| 4.2.17        | 82       | Unsupported    |
+| 4.2.18        | 56       | Unsupported    |
+| 4.2.19        | 144      | Unsupported    |
+| 4.2.2         | 5438     | Unsupported    |
+| 4.2.20        | 184      | Unsupported    |
+| 4.2.21        | 192      | Unsupported    |
+| 4.2.22        | 124      | Unsupported    |
+| 4.2.23        | 182      | Unsupported    |
+| 4.2.24        | 46       | Unsupported    |
+| 4.2.25        | 96       | Unsupported    |
+| 4.2.26        | 248      | Unsupported    |
+| 4.2.27        | 22       | Unsupported    |
+| 4.2.28        | 156      | Unsupported    |
+| 4.2.29        | 278      | Unsupported    |
+| 4.2.3         | 774      | Unsupported    |
+| 4.2.30        | 394      | Unsupported    |
+| 4.2.31        | 256      | Unsupported    |
+| 4.2.32        | 444      | Unsupported    |
+| 4.2.33        | 316      | Unsupported    |
+| 4.2.34        | 22556    | Unsupported    |
+| 4.2.4         | 1428     | Unsupported    |
+| 4.2.5         | 958      | Unsupported    |
+| 4.2.6         | 154      | Unsupported    |
+| 4.2.7         | 306      | Unsupported    |
+| 4.2.8         | 206      | Unsupported    |
+| 4.2.9         | 164      | Unsupported    |
+| 4.3           | 3806     | Unsupported    |
+| 4.3.1         | 6676     | Unsupported    |
+| 4.3.1.1       | 2        | Unsupported    |
+| 4.3.10        | 54       | Unsupported    |
+| 4.3.11        | 184      | Unsupported    |
+| 4.3.12        | 74       | Unsupported    |
+| 4.3.13        | 54       | Unsupported    |
+| 4.3.14        | 76       | Unsupported    |
+| 4.3.15        | 120      | Unsupported    |
+| 4.3.16        | 156      | Unsupported    |
+| 4.3.17        | 244      | Unsupported    |
+| 4.3.18        | 182      | Unsupported    |
+| 4.3.19        | 228      | Unsupported    |
+| 4.3.2         | 372      | Unsupported    |
+| 4.3.20        | 10       | Unsupported    |
+| 4.3.21        | 138      | Unsupported    |
+| 4.3.22        | 186      | Unsupported    |
+| 4.3.23        | 92       | Unsupported    |
+| 4.3.24        | 196      | Unsupported    |
+| 4.3.25        | 346      | Unsupported    |
+| 4.3.26        | 382      | Unsupported    |
+| 4.3.27        | 246      | Unsupported    |
+| 4.3.28        | 470      | Unsupported    |
+| 4.3.29        | 382      | Unsupported    |
+| 4.3.3         | 748      | Unsupported    |
+| 4.3.30        | 25630    | Unsupported    |
+| 4.3.4         | 148      | Unsupported    |
+| 4.3.5         | 284      | Unsupported    |
+| 4.3.6         | 338      | Unsupported    |
+| 4.3.7         | 30       | Unsupported    |
+| 4.3.8         | 68       | Unsupported    |
+| 4.3.9         | 54       | Unsupported    |
+| 4.4           | 1644     | Unsupported    |
+| 4.4.1         | 2670     | Unsupported    |
+| 4.4.10        | 288      | Unsupported    |
+| 4.4.11        | 250      | Unsupported    |
+| 4.4.12        | 90       | Unsupported    |
+| 4.4.13        | 56       | Unsupported    |
+| 4.4.14        | 234      | Unsupported    |
+| 4.4.15        | 168      | Unsupported    |
+| 4.4.16        | 394      | Unsupported    |
+| 4.4.17        | 276      | Unsupported    |
+| 4.4.18        | 304      | Unsupported    |
+| 4.4.18.3      | 10       | Unsupported    |
+| 4.4.19        | 58       | Unsupported    |
+| 4.4.2         | 8048     | Unsupported    |
+| 4.4.2.1       | 8        | Unsupported    |
+| 4.4.2.4       | 10       | Unsupported    |
+| 4.4.20        | 288      | Unsupported    |
+| 4.4.21        | 376      | Unsupported    |
+| 4.4.22        | 138      | Unsupported    |
+| 4.4.23        | 260      | Unsupported    |
+| 4.4.24        | 512      | Unsupported    |
+| 4.4.25        | 720      | Unsupported    |
+| 4.4.26        | 254      | Unsupported    |
+| 4.4.27        | 894      | Unsupported    |
+| 4.4.28        | 454      | Unsupported    |
+| 4.4.29        | 41036    | Unsupported    |
+| 4.4.3         | 610      | Unsupported    |
+| 4.4.4         | 658      | Unsupported    |
+| 4.4.5         | 894      | Unsupported    |
+| 4.4.6         | 192      | Unsupported    |
+| 4.4.7         | 1368     | Unsupported    |
+| 4.4.8         | 182      | Unsupported    |
+| 4.4.9         | 70       | Unsupported    |
+| 4.5           | 1434     | Unsupported    |
+| 4.5.1         | 772      | Unsupported    |
+| 4.5.10        | 176      | Unsupported    |
+| 4.5.11        | 122      | Unsupported    |
+| 4.5.12        | 80       | Unsupported    |
+| 4.5.13        | 136      | Unsupported    |
+| 4.5.14        | 250      | Unsupported    |
+| 4.5.15        | 458      | Unsupported    |
+| 4.5.16        | 286      | Unsupported    |
+| 4.5.17        | 1194     | Unsupported    |
+| 4.5.18        | 128      | Unsupported    |
+| 4.5.19        | 234      | Unsupported    |
+| 4.5.2         | 4264     | Unsupported    |
+| 4.5.20        | 298      | Unsupported    |
+| 4.5.21        | 72       | Unsupported    |
+| 4.5.22        | 284      | Unsupported    |
+| 4.5.23        | 620      | Unsupported    |
+| 4.5.24        | 630      | Unsupported    |
+| 4.5.25        | 402      | Unsupported    |
+| 4.5.26        | 1002     | Unsupported    |
+| 4.5.27        | 512      | Unsupported    |
+| 4.5.28        | 39968    | Unsupported    |
+| 4.5.3         | 6166     | Unsupported    |
+| 4.5.4         | 1388     | Unsupported    |
+| 4.5.5         | 198      | Unsupported    |
+| 4.5.6         | 324      | Unsupported    |
+| 4.5.7         | 226      | Unsupported    |
+| 4.5.8         | 128      | Unsupported    |
+| 4.5.9         | 392      | Unsupported    |
+| 4.6           | 2014     | Unsupported    |
+| 4.6.1         | 10222    | Unsupported    |
+| 4.6.10        | 390      | Unsupported    |
+| 4.6.11        | 272      | Unsupported    |
+| 4.6.12        | 510      | Unsupported    |
+| 4.6.13        | 290      | Unsupported    |
+| 4.6.14        | 408      | Unsupported    |
+| 4.6.15        | 114      | Unsupported    |
+| 4.6.16        | 292      | Unsupported    |
+| 4.6.17        | 320      | Unsupported    |
+| 4.6.18        | 204      | Unsupported    |
+| 4.6.19        | 280      | Unsupported    |
+| 4.6.2         | 432      | Unsupported    |
+| 4.6.20        | 716      | Unsupported    |
+| 4.6.21        | 658      | Unsupported    |
+| 4.6.22        | 488      | Unsupported    |
+| 4.6.23        | 1172     | Unsupported    |
+| 4.6.24        | 618      | Unsupported    |
+| 4.6.25        | 46340    | Unsupported    |
+| 4.6.3         | 580      | Unsupported    |
+| 4.6.4         | 390      | Unsupported    |
+| 4.6.5         | 232      | Unsupported    |
+| 4.6.6         | 710      | Unsupported    |
+| 4.6.7         | 240      | Unsupported    |
+| 4.6.8         | 82       | Unsupported    |
+| 4.6.9         | 154      | Unsupported    |
+| 4.7           | 1438     | Unsupported    |
+| 4.7.          | 8        | Unsupported    |
+| 4.7.1         | 734      | Unsupported    |
+| 4.7.10        | 700      | Unsupported    |
+| 4.7.11        | 1402     | Unsupported    |
+| 4.7.12        | 788      | Unsupported    |
+| 4.7.13        | 1290     | Unsupported    |
+| 4.7.14        | 304      | Unsupported    |
+| 4.7.15        | 628      | Unsupported    |
+| 4.7.16        | 1082     | Unsupported    |
+| 4.7.17        | 408      | Unsupported    |
+| 4.7.18        | 1266     | Unsupported    |
+| 4.7.19        | 2488     | Unsupported    |
+| 4.7.2         | 9300     | Unsupported    |
+| 4.7.20        | 438      | Unsupported    |
+| 4.7.21        | 2908     | Unsupported    |
+| 4.7.22        | 1428     | Unsupported    |
+| 4.7.23        | 5140     | Unsupported    |
+| 4.7.24        | 1748     | Unsupported    |
+| 4.7.25        | 129402   | Unsupported    |
+| 4.7.3         | 9394     | Unsupported    |
+| 4.7.35        | 8        | Unsupported    |
+| 4.7.36        | 2        | Unsupported    |
+| 4.7.4         | 5174     | Unsupported    |
+| 4.7.4.1       | 8        | Unsupported    |
+| 4.7.5         | 7392     | Unsupported    |
+| 4.7.6         | 870      | Unsupported    |
+| 4.7.7         | 600      | Unsupported    |
+| 4.7.8         | 602      | Unsupported    |
+| 4.7.9         | 908      | Unsupported    |
+| 4.8           | 8680     | Unsupported    |
+| 4.8.0         | 4        | Unsupported    |
+| 4.8.1         | 7586     | Unsupported    |
+| 4.8.10        | 416      | Unsupported    |
+| 4.8.11        | 462      | Unsupported    |
+| 4.8.12        | 954      | Unsupported    |
+| 4.8.13        | 446      | Unsupported    |
+| 4.8.14        | 1076     | Unsupported    |
+| 4.8.15        | 1290     | Unsupported    |
+| 4.8.16        | 318      | Unsupported    |
+| 4.8.17        | 1952     | Unsupported    |
+| 4.8.18        | 912      | Unsupported    |
+| 4.8.19        | 2898     | Unsupported    |
+| 4.8.2         | 9944     | Unsupported    |
+| 4.8.20        | 1564     | Unsupported    |
+| 4.8.21        | 121648   | Unsupported    |
+| 4.8.3         | 5820     | Unsupported    |
+| 4.8.4         | 1654     | Unsupported    |
+| 4.8.5         | 1558     | Unsupported    |
+| 4.8.6         | 1318     | Unsupported    |
+| 4.8.7         | 1696     | Unsupported    |
+| 4.8.8         | 1120     | Unsupported    |
+| 4.8.9         | 1566     | Unsupported    |
+| 4.9           | 3678     | Unsupported    |
+| 4.9.1         | 8186     | Unsupported    |
+| 4.9.10        | 10318    | Unsupported    |
+| 4.9.11        | 1908     | Unsupported    |
+| 4.9.12        | 3726     | Unsupported    |
+| 4.9.13        | 11594    | Unsupported    |
+| 4.9.14        | 1740     | Unsupported    |
+| 4.9.15        | 4940     | Unsupported    |
+| 4.9.16        | 8098     | Unsupported    |
+| 4.9.17        | 1430     | Unsupported    |
+| 4.9.18        | 10134    | Unsupported    |
+| 4.9.19        | 17258    | Unsupported    |
+| 4.9.2         | 5532     | Unsupported    |
+| 4.9.20        | 24610    | Unsupported    |
+| 4.9.21        | 7358     | Unsupported    |
+| 4.9.22        | 500860   | Unsupported    |
+| 4.9.3         | 34320    | Unsupported    |
+| 4.9.4         | 14804    | Unsupported    |
+| 4.9.5         | 12100    | Unsupported    |
+| 4.9.6         | 16178    | Unsupported    |
+| 4.9.7         | 9154     | Unsupported    |
+| 4.9.7.0       | 8        | Unsupported    |
+| 4.9.76        | 2        | Unsupported    |
+| 4.9.8         | 55204    | Unsupported    |
+| 4.9.8.1       | 2        | Unsupported    |
+| 4.9.82        | 4        | Unsupported    |
+| 4.9.9         | 11740    | Unsupported    |
+| 4.9.9.0       | 8        | Unsupported    |
+| 4.9.9.7       | 8        | Unsupported    |
+| 4027          | 4        | Supported      |
+| 409           | 4        | Supported      |
+| 4108          | 2        | Supported      |
+| 418           | 12       | Supported      |
+| 42            | 16       | Supported      |
+| 4208          | 4        | Supported      |
+| 435           | 4        | Supported      |
+| 4355          | 4        | Supported      |
+| 446           | 2        | Supported      |
+| 4768          | 4        | Supported      |
+| 49.8          | 8        | Supported      |
+| 499           | 2        | Supported      |
+| 5             | 110      | Unsupported    |
+| 5.0           | 2442     | Unsupported    |
+| 5.0.1         | 1418     | Unsupported    |
+| 5.0.10        | 1038     | Unsupported    |
+| 5.0.11        | 1448     | Unsupported    |
+| 5.0.12        | 318      | Unsupported    |
+| 5.0.13        | 992      | Unsupported    |
+| 5.0.14        | 870      | Unsupported    |
+| 5.0.15        | 898      | Unsupported    |
+| 5.0.16        | 2230     | Unsupported    |
+| 5.0.17        | 1458     | Unsupported    |
+| 5.0.18        | 105986   | Unsupported    |
+| 5.0.2         | 3924     | Unsupported    |
+| 5.0.3         | 13010    | Unsupported    |
+| 5.0.4         | 3320     | Unsupported    |
+| 5.0.5         | 8        | Unsupported    |
+| 5.0.6         | 460      | Unsupported    |
+| 5.0.7         | 854      | Unsupported    |
+| 5.0.8         | 1136     | Unsupported    |
+| 5.0.9         | 308      | Unsupported    |
+| 5.1           | 6322     | Unsupported    |
+| 5.1.0         | 8        | Unsupported    |
+| 5.1.1         | 21290    | Unsupported    |
+| 5.1.10        | 2500     | Unsupported    |
+| 5.1.11        | 2182     | Unsupported    |
+| 5.1.12        | 1990     | Unsupported    |
+| 5.1.13        | 4956     | Unsupported    |
+| 5.1.14        | 2504     | Unsupported    |
+| 5.1.15        | 188950   | Unsupported    |
+| 5.1.2         | 828      | Unsupported    |
+| 5.1.3         | 1658     | Unsupported    |
+| 5.1.4         | 3486     | Unsupported    |
+| 5.1.5         | 1162     | Unsupported    |
+| 5.1.6         | 3490     | Unsupported    |
+| 5.1.7         | 68       | Unsupported    |
+| 5.1.8         | 3478     | Unsupported    |
+| 5.1.9         | 602      | Unsupported    |
+| 5.195         | 2        | Unsupported    |
+| 5.2           | 5142     | Unsupported    |
+| 5.2.0         | 8        | Unsupported    |
+| 5.2.1         | 7912     | Unsupported    |
+| 5.2.10        | 722      | Unsupported    |
+| 5.2.11        | 2746     | Unsupported    |
+| 5.2.12        | 1928     | Unsupported    |
+| 5.2.126       | 8        | Unsupported    |
+| 5.2.13        | 1486     | Unsupported    |
+| 5.2.14        | 2644     | Unsupported    |
+| 5.2.15        | 8324     | Unsupported    |
+| 5.2.16        | 4452     | Unsupported    |
+| 5.2.17        | 315410   | Unsupported    |
+| 5.2.2         | 25360    | Unsupported    |
+| 5.2.3         | 16012    | Unsupported    |
+| 5.2.4         | 16330    | Unsupported    |
+| 5.2.5         | 5590     | Unsupported    |
+| 5.2.5.1       | 8        | Unsupported    |
+| 5.2.6         | 1568     | Unsupported    |
+| 5.2.7         | 4072     | Unsupported    |
+| 5.2.8         | 112      | Unsupported    |
+| 5.2.9         | 4864     | Unsupported    |
+| 5.22          | 10       | Unsupported    |
+| 5.3           | 13946    | Unsupported    |
+| 5.3.1         | 2828     | Unsupported    |
+| 5.3.10        | 1510     | Unsupported    |
+| 5.3.11        | 3016     | Unsupported    |
+| 5.3.12        | 7300     | Unsupported    |
+| 5.3.13        | 5256     | Unsupported    |
+| 5.3.14        | 344726   | Unsupported    |
+| 5.3.2         | 60176    | Unsupported    |
+| 5.3.3         | 3164     | Unsupported    |
+| 5.3.4         | 5704     | Unsupported    |
+| 5.3.5         | 270      | Unsupported    |
+| 5.3.6         | 5082     | Unsupported    |
+| 5.3.7         | 852      | Unsupported    |
+| 5.3.8         | 3124     | Unsupported    |
+| 5.3.9         | 2052     | Unsupported    |
+| 5.4           | 18614    | Unsupported    |
+| 5.4.1         | 24724    | Unsupported    |
+| 5.4.10        | 10706    | Unsupported    |
+| 5.4.11        | 7554     | Unsupported    |
+| 5.4.12        | 461448   | Unsupported    |
+| 5.4.2         | 56394    | Unsupported    |
+| 5.4.2.1       | 8        | Unsupported    |
+| 5.4.3         | 562      | Unsupported    |
+| 5.4.4         | 10518    | Unsupported    |
+| 5.4.45        | 8        | Unsupported    |
+| 5.4.5         | 1556     | Unsupported    |
+| 5.4.6         | 5468     | Unsupported    |
+| 5.4.7         | 3442     | Unsupported    |
+| 5.4.8         | 2286     | Unsupported    |
+| 5.4.9         | 4188     | Unsupported    |
+| 5.41          | 8        | Unsupported    |
+| 5.42          | 32       | Unsupported    |
+| 5.5           | 12494    | Unsupported    |
+| 5.5.1         | 36860    | Unsupported    |
+| 5.5.10        | 6582     | Unsupported    |
+| 5.5.11        | 464846   | Unsupported    |
+| 5.5.2         | 1310     | Unsupported    |
+| 5.5.3         | 50434    | Unsupported    |
+| 5.5.4         | 2206     | Unsupported    |
+| 5.5.5         | 5536     | Unsupported    |
+| 5.5.6         | 3232     | Unsupported    |
+| 5.5.7         | 2054     | Unsupported    |
+| 5.5.8         | 3800     | Unsupported    |
+| 5.5.9         | 10290    | Unsupported    |
+| 5.6           | 49752    | Unsupported    |
+| 5.6.0.0       | 2        | Unsupported    |
+| 5.6.1         | 16828    | Unsupported    |
+| 5.6.10        | 414136   | Unsupported    |
+| 5.6.2         | 22480    | Unsupported    |
+| 5.6.20        | 8        | Unsupported    |
+| 5.6.3         | 1750     | Unsupported    |
+| 5.6.4         | 5370     | Unsupported    |
+| 5.6.5         | 2668     | Unsupported    |
+| 5.6.6         | 1918     | Unsupported    |
+| 5.6.7         | 3730     | Unsupported    |
+| 5.6.8         | 8736     | Unsupported    |
+| 5.6.9         | 6432     | Unsupported    |
+| 5.7           | 37336    | Unsupported    |
+| 5.7.1         | 28138    | Unsupported    |
+| 5.7.11        | 2        | Unsupported    |
+| 5.7.12        | 8        | Unsupported    |
+| 5.7.2         | 87422    | Unsupported    |
+| 5.7.21        | 4        | Unsupported    |
+| 5.7.3         | 6700     | Unsupported    |
+| 5.7.4         | 4036     | Unsupported    |
+| 5.7.5         | 6764     | Unsupported    |
+| 5.7.6         | 15356    | Unsupported    |
+| 5.7.61        | 8        | Unsupported    |
+| 5.7.7         | 9968     | Unsupported    |
+| 5.7.8         | 684570   | Unsupported    |
+| 5.8           | 57622    | Unsupported    |
+| 5.8.0         | 8        | Unsupported    |
+| 5.8.0.0       | 8        | Unsupported    |
+| 5.8.1         | 86258    | Unsupported    |
+| 5.8.10        | 10       | Unsupported    |
+| 5.8.2         | 90762    | Unsupported    |
+| 5.8.3         | 69156    | Unsupported    |
+| 5.8.38        | 8        | Unsupported    |
+| 5.8.4         | 31766    | Unsupported    |
+| 5.8.5         | 19242    | Unsupported    |
+| 5.8.6         | 1188208  | Unsupported    |
+| 5.9           | 64770    | Unsupported    |
+| 5.9.0         | 8        | Unsupported    |
+| 5.9.1         | 40354    | Unsupported    |
+| 5.9.2         | 99122    | Unsupported    |
+| 5.9.3         | 161538   | Unsupported    |
+| 5.9.3.        | 8        | Unsupported    |
+| 5.9.4         | 23036    | Unsupported    |
+| 5.9.5         | 1179424  | Unsupported    |
+| 5.9.9         | 2        | Unsupported    |
+| 500           | 8        | Supported      |
+| 5372          | 4        | Supported      |
+| 5543          | 4        | Supported      |
+| 5769          | 4        | Supported      |
+| 5808          | 4        | Supported      |
+| 6             | 492      | Supported      |
+| 6.0           | 136610   | Supported      |
+| 6.0.0.3       | 2        | Supported      |
+| 6.0.1         | 170398   | Supported      |
+| 6.0.1.002     | 8        | Supported      |
+| 6.0.2         | 296468   | Supported      |
+| 6.0.2.0.1     | 16       | Supported      |
+| 6.0.3         | 2775148  | Supported      |
+| 6.0.3.1       | 8        | Supported      |
+| 6.0.4         | 68       | Supported      |
+| 6.0.5         | 4        | Supported      |
+| 6.0.6         | 8        | Supported      |
+| 6.05441413    | 8        | Supported      |
+| 6.1           | 152586   | Supported      |
+| 6.1.1         | 12047492 | Supported      |
+| 6.1.1.        | 8        | Supported      |
+| 6.1.1.1       | 8        | Supported      |
+| 6.1.2         | 288      | Supported      |
+| 6.1.2.2.3     | 8        | Supported      |
+| 6.2           | 1000     | Supported      |
+| 6.43          | 2        | Supported      |
+| 6.6.10        | 8        | Supported      |
+| 6.6.6         | 10       | Supported      |
+| 6.9.8         | 8        | Supported      |
+| 602           | 4        | Supported      |
+| 606           | 2        | Supported      |
+| 6182          | 4        | Supported      |
+| 672           | 4        | Supported      |
+| 6927          | 4        | Supported      |
+| 7.3.5         | 10       | Supported      |
+| 7.4.7         | 8        | Supported      |
+| 7.5.2         | 2        | Supported      |
+| 7.6.12        | 8        | Supported      |
+| 7.7.77        | 8        | Supported      |
+| 7022          | 2        | Supported      |
+| 7326          | 4        | Supported      |
+| 7560          | 4        | Supported      |
+| 787           | 4        | Supported      |
+| 789           | 4        | Supported      |
+| 7960          | 2        | Supported      |
+| 8.0.1         | 8        | Supported      |
+| 8.8.0         | 8        | Supported      |
+| 8.8.8         | 8        | Supported      |
+| 8.9.11        | 8        | Supported      |
+| 8049          | 4        | Supported      |
+| 808           | 4        | Supported      |
+| 8081          | 4        | Supported      |
+| 8121          | 4        | Supported      |
+| 8239          | 4        | Supported      |
+| 8355          | 4        | Supported      |
+| 8480          | 2        | Supported      |
+| 85.36         | 8        | Supported      |
+| 8590          | 4        | Supported      |
+| 9.0           | 2        | Supported      |
+| 9.0.3         | 8        | Supported      |
+| 9.4.0         | 8        | Supported      |
+| 9.4.1         | 42       | Supported      |
+| 9.9.9         | 8        | Supported      |
+| 906           | 4        | Supported      |
+| 9241          | 4        | Supported      |
+| 9354          | 4        | Supported      |
+| 9516          | 4        | Supported      |
+| 9571          | 4        | Supported      |
+| 97            | 8        | Supported      |
+| 9715          | 4        | Supported      |
+| 9847          | 4        | Supported      |
+| 9854          | 2        | Supported      |
+| 9870          | 4        | Supported      |
+| 99.4.9.8      | 16       | Supported      |
+| 99.7.4        | 8        | Supported      |
+| 999.9         | 2        | Supported      |
+| \1            | 8        | Non-conclusive |
 
-## Lodash
+## Google Analytics
 
-|    version     | count | is_supported |
-| -------------- | ----- | ------------ |
-| 1.10           |     1 | null         | 
-| 1.4            |     3 | null         | 
-| 1.5            |     1 | null         | 
-| 1.6            |     2 | null         | 
-| 1.7            |     4 | null         | 
-| 1.8            |    37 | null         | 
-| 1.9            |     2 | null         | 
-| 2.4            |     5 | null         | 
-| 3.10           |     5 | null         | 
-| 3.1            |     2 | null         | 
-| 3.7            |     1 | null         | 
-| 4.17           |    58 | null         | 
-| 4.3            |     1 | null         | 
+| info          | count    | is_supported   |
+|---------------|----------|----------------|
+|               | 24854596 | Not-versioned  |
+| 4             | 259333   | Non-conclusive |
+| UA            | 6703627  | Non-conclusive |
+| undefined     | 2        | Non-conclusive |
 
-## Underscore.js
+## PHP
 
-|    version     | count | is_supported |
-| -------------- | ----- | ------------ |
-| 1.10           |     1 | null         | 
-| 1.4            |     3 | null         | 
-| 1.5            |     1 | null         | 
-| 1.6            |     2 | null         | 
-| 1.7            |     4 | null         | 
-| 1.8            |    37 | null         | 
-| 1.9            |     2 | null         | 
-| 2.4            |     5 | null         | 
-| 3.10           |     5 | null         | 
-| 3.1            |     2 | null         | 
-| 3.7            |     1 | null         | 
-| 4.17           |    58 | null         | 
-| 4.3            |     1 | null         | 
+| info          | count    | is_supported   |
+|---------------|----------|----------------|
+|               | 19942141 | Not-versioned  |
+| .             | 49       | Non-conclusive |
+| 1             | 31       | Unsupported    |
+| 1.0           | 143      | Unsupported    |
+| 1.0.1         | 4        | Unsupported    |
+| 10            | 21       | Supported      |
+| 12.0          | 1        | Supported      |
+| 12.1.0        | 4        | Supported      |
+| 20            | 9        | Supported      |
+| 22            | 5        | Supported      |
+| 3.0.11        | 4        | Unsupported    |
+| 3.0.15        | 16       | Unsupported    |
+| 3.0.16        | 1        | Unsupported    |
+| 3.0.17        | 16       | Unsupported    |
+| 3.0.18        | 161      | Unsupported    |
+| 3.0.3         | 12       | Unsupported    |
+| 3.2           | 24       | Unsupported    |
+| 4             | 15       | Unsupported    |
+| 4.0           | 2        | Unsupported    |
+| 4.0.1         | 8        | Unsupported    |
+| 4.0.2         | 4        | Unsupported    |
+| 4.0.3         | 4        | Unsupported    |
+| 4.0.4         | 24       | Unsupported    |
+| 4.0.5         | 4        | Unsupported    |
+| 4.0.6         | 57       | Unsupported    |
+| 4.1.0         | 4        | Unsupported    |
+| 4.1.1         | 15       | Unsupported    |
+| 4.1.2         | 277      | Unsupported    |
+| 4.2           | 40       | Unsupported    |
+| 4.2.0         | 28       | Unsupported    |
+| 4.2.1         | 28       | Unsupported    |
+| 4.2.2         | 79       | Unsupported    |
+| 4.2.3         | 199      | Unsupported    |
+| 4.2.4         | 16       | Unsupported    |
+| 4.3.0         | 21       | Unsupported    |
+| 4.3.1         | 148      | Unsupported    |
+| 4.3.10        | 901      | Unsupported    |
+| 4.3.11        | 1525     | Unsupported    |
+| 4.3.2         | 156      | Unsupported    |
+| 4.3.3         | 114      | Unsupported    |
+| 4.3.32        | 4        | Unsupported    |
+| 4.3.4         | 139      | Unsupported    |
+| 4.3.5         | 26       | Unsupported    |
+| 4.3.6         | 68       | Unsupported    |
+| 4.3.7         | 38       | Unsupported    |
+| 4.3.8         | 175      | Unsupported    |
+| 4.3.9         | 1173     | Unsupported    |
+| 4.4.0         | 507      | Unsupported    |
+| 4.4.1         | 574      | Unsupported    |
+| 4.4.2         | 542      | Unsupported    |
+| 4.4.29        | 1        | Unsupported    |
+| 4.4.3         | 1971     | Unsupported    |
+| 4.4.4         | 1013     | Unsupported    |
+| 4.4.5         | 28       | Unsupported    |
+| 4.4.6         | 306      | Unsupported    |
+| 4.4.7         | 1335     | Unsupported    |
+| 4.4.8         | 840      | Unsupported    |
+| 4.4.9         | 12419    | Unsupported    |
+| 4.8.2         | 12       | Unsupported    |
+| 5             | 54       | Unsupported    |
+| 5.0           | 2        | Unsupported    |
+| 5.0.1         | 12       | Unsupported    |
+| 5.0.2         | 58       | Unsupported    |
+| 5.0.3         | 39       | Unsupported    |
+| 5.0.4         | 306      | Unsupported    |
+| 5.0.5         | 77       | Unsupported    |
+| 5.1.1         | 21       | Unsupported    |
+| 5.1.2         | 479      | Unsupported    |
+| 5.1.3         | 1064     | Unsupported    |
+| 5.1.4         | 225      | Unsupported    |
+| 5.1.5         | 30       | Unsupported    |
+| 5.1.6         | 9288     | Unsupported    |
+| 5.2.0         | 1805     | Unsupported    |
+| 5.2.1         | 638      | Unsupported    |
+| 5.2.10        | 2104     | Unsupported    |
+| 5.2.11        | 1229     | Unsupported    |
+| 5.2.12        | 831      | Unsupported    |
+| 5.2.13        | 2447     | Unsupported    |
+| 5.2.14        | 1881     | Unsupported    |
+| 5.2.15        | 103      | Unsupported    |
+| 5.2.16        | 967      | Unsupported    |
+| 5.2.17        | 99892    | Unsupported    |
+| 5.2.18        | 278      | Unsupported    |
+| 5.2.2         | 153      | Unsupported    |
+| 5.2.3         | 1039     | Unsupported    |
+| 5.2.4         | 2714     | Unsupported    |
+| 5.2.5         | 2788     | Unsupported    |
+| 5.2.6         | 9992     | Unsupported    |
+| 5.2.7         | 34       | Unsupported    |
+| 5.2.8         | 6149     | Unsupported    |
+| 5.2.9         | 2511     | Unsupported    |
+| 5.3           | 630      | Unsupported    |
+| 5.3.0         | 510      | Unsupported    |
+| 5.3.1         | 641      | Unsupported    |
+| 5.3.10        | 20006    | Unsupported    |
+| 5.3.11        | 135      | Unsupported    |
+| 5.3.12        | 58       | Unsupported    |
+| 5.3.13        | 8196     | Unsupported    |
+| 5.3.14        | 753      | Unsupported    |
+| 5.3.15        | 866      | Unsupported    |
+| 5.3.16        | 664      | Unsupported    |
+| 5.3.17        | 1357     | Unsupported    |
+| 5.3.18        | 1094     | Unsupported    |
+| 5.3.19        | 800      | Unsupported    |
+| 5.3.2         | 6456     | Unsupported    |
+| 5.3.20        | 1033     | Unsupported    |
+| 5.3.21        | 919      | Unsupported    |
+| 5.3.22        | 608      | Unsupported    |
+| 5.3.23        | 1157     | Unsupported    |
+| 5.3.24        | 813      | Unsupported    |
+| 5.3.25        | 613      | Unsupported    |
+| 5.3.26        | 483      | Unsupported    |
+| 5.3.27        | 5528     | Unsupported    |
+| 5.3.28        | 9429     | Unsupported    |
+| 5.3.29        | 158157   | Unsupported    |
+| 5.3.3         | 90697    | Unsupported    |
+| 5.3.30        | 250      | Unsupported    |
+| 5.3.4         | 452      | Unsupported    |
+| 5.3.5         | 1659     | Unsupported    |
+| 5.3.6         | 3901     | Unsupported    |
+| 5.3.7         | 108      | Unsupported    |
+| 5.3.8         | 3723     | Unsupported    |
+| 5.3.9         | 507      | Unsupported    |
+| 5.3.99        | 1        | Unsupported    |
+| 5.4           | 16183    | Unsupported    |
+| 5.4.0         | 178      | Unsupported    |
+| 5.4.1         | 7        | Unsupported    |
+| 5.4.10        | 223      | Unsupported    |
+| 5.4.11        | 306      | Unsupported    |
+| 5.4.12        | 379      | Unsupported    |
+| 5.4.13        | 581      | Unsupported    |
+| 5.4.14        | 462      | Unsupported    |
+| 5.4.15        | 220      | Unsupported    |
+| 5.4.16        | 161423   | Unsupported    |
+| 5.4.17        | 779      | Unsupported    |
+| 5.4.18        | 3        | Unsupported    |
+| 5.4.19        | 563      | Unsupported    |
+| 5.4.2         | 24       | Unsupported    |
+| 5.4.20        | 665      | Unsupported    |
+| 5.4.21        | 551      | Unsupported    |
+| 5.4.22        | 478      | Unsupported    |
+| 5.4.23        | 430      | Unsupported    |
+| 5.4.24        | 1390     | Unsupported    |
+| 5.4.25        | 467      | Unsupported    |
+| 5.4.26        | 517      | Unsupported    |
+| 5.4.27        | 655      | Unsupported    |
+| 5.4.28        | 607      | Unsupported    |
+| 5.4.29        | 396      | Unsupported    |
+| 5.4.3         | 333      | Unsupported    |
+| 5.4.30        | 488      | Unsupported    |
+| 5.4.31        | 889      | Unsupported    |
+| 5.4.32        | 476      | Unsupported    |
+| 5.4.33        | 648      | Unsupported    |
+| 5.4.34        | 846      | Unsupported    |
+| 5.4.35        | 1104     | Unsupported    |
+| 5.4.36        | 1880     | Unsupported    |
+| 5.4.37        | 786      | Unsupported    |
+| 5.4.38        | 1194     | Unsupported    |
+| 5.4.39        | 1110     | Unsupported    |
+| 5.4.4         | 3798     | Unsupported    |
+| 5.4.40        | 1592     | Unsupported    |
+| 5.4.41        | 1674     | Unsupported    |
+| 5.4.42        | 509      | Unsupported    |
+| 5.4.43        | 808      | Unsupported    |
+| 5.4.44        | 853      | Unsupported    |
+| 5.4.45        | 159068   | Unsupported    |
+| 5.4.46        | 1574     | Unsupported    |
+| 5.4.5         | 196      | Unsupported    |
+| 5.4.6         | 1043     | Unsupported    |
+| 5.4.7         | 826      | Unsupported    |
+| 5.4.8         | 213      | Unsupported    |
+| 5.4.9         | 1023     | Unsupported    |
+| 5.5           | 4739     | Unsupported    |
+| 5.5.0         | 98       | Unsupported    |
+| 5.5.1         | 131      | Unsupported    |
+| 5.5.10        | 508      | Unsupported    |
+| 5.5.11        | 1223     | Unsupported    |
+| 5.5.12        | 2136     | Unsupported    |
+| 5.5.13        | 324      | Unsupported    |
+| 5.5.14        | 762      | Unsupported    |
+| 5.5.15        | 872      | Unsupported    |
+| 5.5.16        | 1512     | Unsupported    |
+| 5.5.17        | 4654     | Unsupported    |
+| 5.5.18        | 550      | Unsupported    |
+| 5.5.19        | 510      | Unsupported    |
+| 5.5.2         | 44       | Unsupported    |
+| 5.5.20        | 380      | Unsupported    |
+| 5.5.21        | 1411     | Unsupported    |
+| 5.5.22        | 3207     | Unsupported    |
+| 5.5.23        | 774      | Unsupported    |
+| 5.5.24        | 384      | Unsupported    |
+| 5.5.25        | 437      | Unsupported    |
+| 5.5.26        | 927      | Unsupported    |
+| 5.5.27        | 4491     | Unsupported    |
+| 5.5.28        | 945      | Unsupported    |
+| 5.5.29        | 530      | Unsupported    |
+| 5.5.3         | 723      | Unsupported    |
+| 5.5.30        | 2227     | Unsupported    |
+| 5.5.31        | 630      | Unsupported    |
+| 5.5.32        | 670      | Unsupported    |
+| 5.5.33        | 535      | Unsupported    |
+| 5.5.34        | 688      | Unsupported    |
+| 5.5.35        | 3631     | Unsupported    |
+| 5.5.36        | 705      | Unsupported    |
+| 5.5.37        | 1346     | Unsupported    |
+| 5.5.38        | 89011    | Unsupported    |
+| 5.5.38:5.5.38 | 4        | Non-conclusive |
+| 5.5.4         | 127      | Unsupported    |
+| 5.5.5         | 563      | Unsupported    |
+| 5.5.6         | 854      | Unsupported    |
+| 5.5.7         | 597      | Unsupported    |
+| 5.5.8         | 306      | Unsupported    |
+| 5.5.9         | 70747    | Unsupported    |
+| 5.6           | 42036    | Unsupported    |
+| 5.6.0         | 2704     | Unsupported    |
+| 5.6.1         | 816      | Unsupported    |
+| 5.6.10        | 1462     | Unsupported    |
+| 5.6.11        | 2213     | Unsupported    |
+| 5.6.12        | 873      | Unsupported    |
+| 5.6.13        | 1303     | Unsupported    |
+| 5.6.14        | 1331     | Unsupported    |
+| 5.6.15        | 1677     | Unsupported    |
+| 5.6.16        | 1823     | Unsupported    |
+| 5.6.17        | 1261     | Unsupported    |
+| 5.6.18        | 1385     | Unsupported    |
+| 5.6.19        | 2730     | Unsupported    |
+| 5.6.2         | 379      | Unsupported    |
+| 5.6.20        | 2377     | Unsupported    |
+| 5.6.21        | 5927     | Unsupported    |
+| 5.6.22        | 3131     | Unsupported    |
+| 5.6.23        | 2278     | Unsupported    |
+| 5.6.24        | 5657     | Unsupported    |
+| 5.6.25        | 5646     | Unsupported    |
+| 5.6.26        | 2582     | Unsupported    |
+| 5.6.27        | 5245     | Unsupported    |
+| 5.6.28        | 2208     | Unsupported    |
+| 5.6.29        | 4260     | Unsupported    |
+| 5.6.3         | 1213     | Unsupported    |
+| 5.6.30        | 30093    | Unsupported    |
+| 5.6.31        | 28201    | Unsupported    |
+| 5.6.32        | 8860     | Unsupported    |
+| 5.6.33        | 14985    | Unsupported    |
+| 5.6.34        | 5916     | Unsupported    |
+| 5.6.35        | 4182     | Unsupported    |
+| 5.6.36        | 31657    | Unsupported    |
+| 5.6.37        | 14367    | Unsupported    |
+| 5.6.38        | 17334    | Unsupported    |
+| 5.6.39        | 10019    | Unsupported    |
+| 5.6.4         | 633      | Unsupported    |
+| 5.6.40        | 864999   | Unsupported    |
+| 5.6.40.1      | 4        | Unsupported    |
+| 5.6.40.14     | 152      | Unsupported    |
+| 5.6.40.16     | 4        | Unsupported    |
+| 5.6.40.17     | 20       | Unsupported    |
+| 5.6.40.4      | 84       | Unsupported    |
+| 5.6.40.9      | 21       | Unsupported    |
+| 5.6.41        | 16       | Unsupported    |
+| 5.6.5         | 2364     | Unsupported    |
+| 5.6.6         | 625      | Unsupported    |
+| 5.6.7         | 2158     | Unsupported    |
+| 5.6.8         | 1227     | Unsupported    |
+| 5.6.9         | 1704     | Unsupported    |
+| 51            | 1        | Supported      |
+| 52            | 2        | Supported      |
+| 6.0           | 2        | Unsupported    |
+| 6.0.0         | 32       | Unsupported    |
+| 6.0.8         | 5        | Unsupported    |
+| 6.16.6        | 1        | Unsupported    |
+| 6.2.11        | 2        | Unsupported    |
+| 7             | 10       | Unsupported    |
+| 7.            | 4        | Unsupported    |
+| 7.0           | 40288    | Unsupported    |
+| 7.0.0         | 5397     | Unsupported    |
+| 7.0.1         | 174      | Unsupported    |
+| 7.0.10        | 1845     | Unsupported    |
+| 7.0.11        | 935      | Unsupported    |
+| 7.0.12        | 977      | Unsupported    |
+| 7.0.13        | 1085     | Unsupported    |
+| 7.0.14        | 1999     | Unsupported    |
+| 7.0.15        | 2932     | Unsupported    |
+| 7.0.16        | 1322     | Unsupported    |
+| 7.0.17        | 807      | Unsupported    |
+| 7.0.18        | 1215     | Unsupported    |
+| 7.0.19        | 968      | Unsupported    |
+| 7.0.2         | 621      | Unsupported    |
+| 7.0.20        | 1600     | Unsupported    |
+| 7.0.21        | 1738     | Unsupported    |
+| 7.0.22        | 488      | Unsupported    |
+| 7.0.23        | 1244     | Unsupported    |
+| 7.0.24        | 1714     | Unsupported    |
+| 7.0.25        | 6325     | Unsupported    |
+| 7.0.26        | 1371     | Unsupported    |
+| 7.0.27        | 17722    | Unsupported    |
+| 7.0.28        | 2366     | Unsupported    |
+| 7.0.29        | 3355     | Unsupported    |
+| 7.0.3         | 287      | Unsupported    |
+| 7.0.30        | 6140     | Unsupported    |
+| 7.0.31        | 4345     | Unsupported    |
+| 7.0.32        | 7771     | Unsupported    |
+| 7.0.33        | 243827   | Unsupported    |
+| 7.0.34        | 53       | Unsupported    |
+| 7.0.4         | 681      | Unsupported    |
+| 7.0.5         | 512      | Unsupported    |
+| 7.0.6         | 497      | Unsupported    |
+| 7.0.7         | 1584     | Unsupported    |
+| 7.0.8         | 568      | Unsupported    |
+| 7.0.9         | 1861     | Unsupported    |
+| 7.1           | 7695     | Unsupported    |
+| 7.1.0         | 947      | Unsupported    |
+| 7.1.1         | 3346     | Unsupported    |
+| 7.1.10        | 1999     | Unsupported    |
+| 7.1.11        | 1968     | Unsupported    |
+| 7.1.12        | 970      | Unsupported    |
+| 7.1.13        | 3828     | Unsupported    |
+| 7.1.14        | 2046     | Unsupported    |
+| 7.1.15        | 4020     | Unsupported    |
+| 7.1.16        | 880      | Unsupported    |
+| 7.1.17        | 1629     | Unsupported    |
+| 7.1.18        | 2980     | Unsupported    |
+| 7.1.19        | 1897     | Unsupported    |
+| 7.1.2         | 664      | Unsupported    |
+| 7.1.20        | 1465     | Unsupported    |
+| 7.1.21        | 2888     | Unsupported    |
+| 7.1.22        | 2119     | Unsupported    |
+| 7.1.23        | 1458     | Unsupported    |
+| 7.1.24        | 1460     | Unsupported    |
+| 7.1.25        | 2203     | Unsupported    |
+| 7.1.26        | 4532     | Unsupported    |
+| 7.1.27        | 1616     | Unsupported    |
+| 7.1.28        | 2684     | Unsupported    |
+| 7.1.29        | 4564     | Unsupported    |
+| 7.1.3         | 1554     | Unsupported    |
+| 7.1.30        | 5447     | Unsupported    |
+| 7.1.31        | 1493     | Unsupported    |
+| 7.1.32        | 7366     | Unsupported    |
+| 7.1.33        | 237234   | Unsupported    |
+| 7.1.33.13     | 5        | Unsupported    |
+| 7.1.33.15     | 9        | Unsupported    |
+| 7.1.33.16     | 21       | Unsupported    |
+| 7.1.33.6      | 72       | Unsupported    |
+| 7.1.34        | 96       | Unsupported    |
+| 7.1.4         | 1020     | Unsupported    |
+| 7.1.5         | 6331     | Unsupported    |
+| 7.1.6         | 822      | Unsupported    |
+| 7.1.7         | 2534     | Unsupported    |
+| 7.1.8         | 2044     | Unsupported    |
+| 7.1.9         | 1376     | Unsupported    |
+| 7.2           | 42332    | Unsupported    |
+| 7.2.0         | 1863     | Unsupported    |
+| 7.2.1         | 1298     | Unsupported    |
+| 7.2.10        | 4678     | Unsupported    |
+| 7.2.11        | 3599     | Unsupported    |
+| 7.2.12        | 4002     | Unsupported    |
+| 7.2.13        | 5690     | Unsupported    |
+| 7.2.14        | 4300     | Unsupported    |
+| 7.2.15        | 4742     | Unsupported    |
+| 7.2.16        | 3242     | Unsupported    |
+| 7.2.17        | 5602     | Unsupported    |
+| 7.2.18        | 5402     | Unsupported    |
+| 7.2.19        | 3986     | Unsupported    |
+| 7.2.2         | 2590     | Unsupported    |
+| 7.2.20        | 2894     | Unsupported    |
+| 7.2.21        | 2956     | Unsupported    |
+| 7.2.22        | 4768     | Unsupported    |
+| 7.2.23        | 6555     | Unsupported    |
+| 7.2.24        | 39320    | Unsupported    |
+| 7.2.25        | 1761     | Unsupported    |
+| 7.2.26        | 6401     | Unsupported    |
+| 7.2.27        | 4013     | Unsupported    |
+| 7.2.28        | 4633     | Unsupported    |
+| 7.2.29        | 5835     | Unsupported    |
+| 7.2.3         | 1236     | Unsupported    |
+| 7.2.30        | 5690     | Unsupported    |
+| 7.2.31        | 7179     | Unsupported    |
+| 7.2.32        | 10238    | Unsupported    |
+| 7.2.33        | 9914     | Unsupported    |
+| 7.2.34        | 560783   | Unsupported    |
+| 7.2.34.1      | 5        | Unsupported    |
+| 7.2.34.3      | 12       | Unsupported    |
+| 7.2.35        | 5        | Unsupported    |
+| 7.2.4         | 1766     | Unsupported    |
+| 7.2.5         | 3556     | Unsupported    |
+| 7.2.6         | 2764     | Unsupported    |
+| 7.2.7         | 7083     | Unsupported    |
+| 7.2.8         | 2344     | Unsupported    |
+| 7.2.9         | 2857     | Unsupported    |
+| 7.3           | 84154    | Unsupported    |
+| 7.3.0         | 2959     | Unsupported    |
+| 7.3.1         | 9143     | Unsupported    |
+| 7.3.10        | 10289    | Unsupported    |
+| 7.3.11        | 18694    | Unsupported    |
+| 7.3.12        | 5442     | Unsupported    |
+| 7.3.13        | 8220     | Unsupported    |
+| 7.3.14        | 11739    | Unsupported    |
+| 7.3.15        | 5940     | Unsupported    |
+| 7.3.16        | 7406     | Unsupported    |
+| 7.3.17        | 10628    | Unsupported    |
+| 7.3.18        | 14267    | Unsupported    |
+| 7.3.19        | 5238     | Unsupported    |
+| 7.3.2         | 13253    | Unsupported    |
+| 7.3.20        | 14083    | Unsupported    |
+| 7.3.21        | 5652     | Unsupported    |
+| 7.3.22        | 5673     | Unsupported    |
+| 7.3.23        | 14142    | Unsupported    |
+| 7.3.24        | 7005     | Unsupported    |
+| 7.3.25        | 29926    | Unsupported    |
+| 7.3.26        | 8590     | Unsupported    |
+| 7.3.27        | 30443    | Unsupported    |
+| 7.3.28        | 16999    | Unsupported    |
+| 7.3.29        | 16538    | Unsupported    |
+| 7.3.3         | 3714     | Unsupported    |
+| 7.3.30        | 10666    | Unsupported    |
+| 7.3.31        | 37181    | Unsupported    |
+| 7.3.32        | 16565    | Unsupported    |
+| 7.3.33        | 671759   | Unsupported    |
+| 7.3.34        | 12       | Unsupported    |
+| 7.3.4         | 4298     | Unsupported    |
+| 7.3.5         | 8447     | Unsupported    |
+| 7.3.6         | 5808     | Unsupported    |
+| 7.3.7         | 6550     | Unsupported    |
+| 7.3.8         | 3398     | Unsupported    |
+| 7.3.9         | 7796     | Unsupported    |
+| 7.4           | 122495   | Unsupported    |
+| 7.4.0         | 4597     | Unsupported    |
+| 7.4.1         | 8411     | Unsupported    |
+| 7.4.10        | 27260    | Unsupported    |
+| 7.4.11        | 19290    | Unsupported    |
+| 7.4.12        | 18088    | Unsupported    |
+| 7.4.13        | 34832    | Unsupported    |
+| 7.4.14        | 19900    | Unsupported    |
+| 7.4.15        | 24734    | Unsupported    |
+| 7.4.16        | 45877    | Unsupported    |
+| 7.4.17        | 4        | Unsupported    |
+| 7.4.18        | 3061     | Unsupported    |
+| 7.4.19        | 25863    | Unsupported    |
+| 7.4.2         | 4332     | Unsupported    |
+| 7.4.20        | 16595    | Unsupported    |
+| 7.4.21        | 24238    | Unsupported    |
+| 7.4.22        | 15964    | Unsupported    |
+| 7.4.23        | 22940    | Unsupported    |
+| 7.4.24        | 25384    | Unsupported    |
+| 7.4.25        | 48107    | Unsupported    |
+| 7.4.26        | 33250    | Unsupported    |
+| 7.4.27        | 72009    | Unsupported    |
+| 7.4.28        | 109945   | Unsupported    |
+| 7.4.29        | 79497    | Unsupported    |
+| 7.4.3         | 8640     | Unsupported    |
+| 7.4.30        | 333689   | Unsupported    |
+| 7.4.31        | 13       | Unsupported    |
+| 7.4.32        | 325575   | Unsupported    |
+| 7.4.33        | 2275089  | Unsupported    |
+| 7.4.4         | 4569     | Unsupported    |
+| 7.4.5         | 8379     | Unsupported    |
+| 7.4.6         | 13992    | Unsupported    |
+| 7.4.7         | 12311    | Unsupported    |
+| 7.4.8         | 14102    | Unsupported    |
+| 7.4.9         | 11507    | Unsupported    |
+| 7.5.2         | 4        | Unsupported    |
+| 7.5.6         | 1        | Unsupported    |
+| 7.7.11        | 1        | Unsupported    |
+| 7.7.3.11      | 1        | Unsupported    |
+| 7.9.3         | 4        | Unsupported    |
+| 8             | 4        | Supported      |
+| 8.0           | 15624    | Supported      |
+| 8.0.0         | 3833     | Supported      |
+| 8.0.1         | 1257     | Supported      |
+| 8.0.10        | 3149     | Supported      |
+| 8.0.11        | 3163     | Supported      |
+| 8.0.12        | 5767     | Supported      |
+| 8.0.13        | 5818     | Supported      |
+| 8.0.14        | 3502     | Supported      |
+| 8.0.15        | 8187     | Supported      |
+| 8.0.16        | 4133     | Supported      |
+| 8.0.17        | 4972     | Supported      |
+| 8.0.18        | 2991     | Supported      |
+| 8.0.19        | 4686     | Supported      |
+| 8.0.2         | 1585     | Supported      |
+| 8.0.20        | 13682    | Supported      |
+| 8.0.21        | 3819     | Supported      |
+| 8.0.22        | 4701     | Supported      |
+| 8.0.23        | 5556     | Supported      |
+| 8.0.24        | 18635    | Supported      |
+| 8.0.25        | 37469    | Supported      |
+| 8.0.26        | 321599   | Supported      |
+| 8.0.27        | 381      | Supported      |
+| 8.0.3         | 5576     | Supported      |
+| 8.0.4         | 64       | Supported      |
+| 8.0.5         | 4164     | Supported      |
+| 8.0.6         | 1126     | Supported      |
+| 8.0.7         | 9309     | Supported      |
+| 8.0.8         | 2200     | Supported      |
+| 8.0.9         | 11644    | Supported      |
+| 8.1           | 13563    | Supported      |
+| 8.1.0         | 4589     | Supported      |
+| 8.1.1         | 2138     | Supported      |
+| 8.1.10        | 7404     | Supported      |
+| 8.1.11        | 20713    | Supported      |
+| 8.1.12        | 27151    | Supported      |
+| 8.1.13        | 206937   | Supported      |
+| 8.1.14        | 452      | Supported      |
+| 8.1.2         | 3199     | Supported      |
+| 8.1.3         | 3279     | Supported      |
+| 8.1.4         | 2226     | Supported      |
+| 8.1.5         | 6908     | Supported      |
+| 8.1.6         | 6238     | Supported      |
+| 8.1.7         | 6661     | Supported      |
+| 8.1.8         | 4353     | Supported      |
+| 8.1.9         | 39565    | Supported      |
+| 8.2           | 6        | Supported      |
+| 8.2.0         | 8511     | Supported      |
+| 8.2.1         | 90       | Supported      |
+| 8.2.17        | 1        | Supported      |
+| 8.4           | 4        | Supported      |
+| 81            | 12       | Supported      |
+| 9.0           | 3        | Supported      |
+| 9.1.2         | 19       | Supported      |
+| 9.5.1         | 4        | Supported      |
+| 9.9           | 1        | Supported      |
+| 9.9.9         | 1        | Supported      |
+| 999           | 22       | Supported      |
+| \             | 1        | Non-conclusive |
+| \1            | 8        | Non-conclusive |
+| undefined     | 4        | Non-conclusive |
 
 ## Nginx
 
-|    version     | count | is_supported |
-| -------------- | ----- | ------------ |
-| 1.10           |    33 | false        | 
-| 1.1            |     1 | false        | 
-| 1.11           |     5 | false        | 
-| 1.12           |     8 | false        | 
-| 1.13           |     3 | false        | 
-| 1.14           |    32 | false        | 
-| 1.15           |     4 | false        | 
-| 1.16           |    19 | false        | 
-| 1.17           |     5 | false        | 
-| 1.18           |     4 | true         | 
-| 1.19           |     1 | true         | 
-| 1.4            |     1 | false        | 
-| 1.6            |     2 | false        | 
-| 1.7            |     2 | false        | 
-| 1.8            |     1 | false        | 
+| info          | count    | is_supported   |
+|---------------|----------|----------------|
+|               | 24203662 | Not-versioned  |
+| 0.4.14        | 10       | Unsupported    |
+| 0.5.14        | 16       | Unsupported    |
+| 0.5.15        | 30       | Unsupported    |
+| 0.5.16        | 4        | Unsupported    |
+| 0.5.26        | 34       | Unsupported    |
+| 0.5.31        | 44       | Unsupported    |
+| 0.5.32        | 32       | Unsupported    |
+| 0.5.33        | 76       | Unsupported    |
+| 0.5.38        | 26       | Unsupported    |
+| 0.6.29        | 16       | Unsupported    |
+| 0.6.32        | 230      | Unsupported    |
+| 0.6.35        | 32       | Unsupported    |
+| 0.6.36        | 24       | Unsupported    |
+| 0.6.38        | 34       | Unsupported    |
+| 0.6.39        | 208      | Unsupported    |
+| 0.7.19        | 168      | Unsupported    |
+| 0.7.61        | 100      | Unsupported    |
+| 0.7.62        | 34       | Unsupported    |
+| 0.7.64        | 188      | Unsupported    |
+| 0.7.65        | 434      | Unsupported    |
+| 0.7.67        | 2284     | Unsupported    |
+| 0.7.68        | 10       | Unsupported    |
+| 0.7.69        | 60       | Unsupported    |
+| 0.8.10        | 2        | Unsupported    |
+| 0.8.15        | 34       | Unsupported    |
+| 0.8.19        | 8        | Unsupported    |
+| 0.8.20        | 42       | Unsupported    |
+| 0.8.27        | 8        | Unsupported    |
+| 0.8.35        | 16       | Unsupported    |
+| 0.8.36        | 26       | Unsupported    |
+| 0.8.4         | 24       | Unsupported    |
+| 0.8.46        | 34       | Unsupported    |
+| 0.8.50        | 26       | Unsupported    |
+| 0.8.51        | 8        | Unsupported    |
+| 0.8.52        | 24       | Unsupported    |
+| 0.8.53        | 670      | Unsupported    |
+| 0.8.54        | 830      | Unsupported    |
+| 0.8.55        | 358      | Unsupported    |
+| 0.9.2         | 8        | Unsupported    |
+| 0.9.4         | 8        | Unsupported    |
+| 0.9.5         | 24       | Unsupported    |
+| 0.9.6         | 16       | Unsupported    |
+| 1             | 24       | Supported      |
+| 1.0.0         | 228      | Supported      |
+| 1.0.10        | 990      | Supported      |
+| 1.0.11        | 282      | Supported      |
+| 1.0.12        | 180      | Supported      |
+| 1.0.13        | 60       | Supported      |
+| 1.0.14        | 142      | Supported      |
+| 1.0.15        | 5298     | Supported      |
+| 1.0.2         | 4        | Supported      |
+| 1.0.4         | 84       | Supported      |
+| 1.0.5         | 118      | Supported      |
+| 1.0.6         | 274      | Supported      |
+| 1.0.7         | 4        | Supported      |
+| 1.0.8         | 58       | Supported      |
+| 1.0.9         | 88       | Supported      |
+| 1.1.0         | 66       | Supported      |
+| 1.1.1         | 82       | Supported      |
+| 1.1.10        | 2        | Supported      |
+| 1.1.14        | 98       | Supported      |
+| 1.1.19        | 6914     | Supported      |
+| 1.1.9         | 148      | Supported      |
+| 1.10.0        | 6528     | Supported      |
+| 1.10.1        | 22480    | Supported      |
+| 1.10.2        | 27906    | Supported      |
+| 1.10.3        | 238742   | Supported      |
+| 1.11          | 8        | Supported      |
+| 1.11.0        | 84       | Supported      |
+| 1.11.1        | 5526     | Supported      |
+| 1.11.10       | 1754     | Supported      |
+| 1.11.11       | 50       | Supported      |
+| 1.11.12       | 1196     | Supported      |
+| 1.11.13       | 5340     | Supported      |
+| 1.11.2        | 542      | Supported      |
+| 1.11.3        | 2018     | Supported      |
+| 1.11.4        | 276      | Supported      |
+| 1.11.5        | 1738     | Supported      |
+| 1.11.6        | 304      | Supported      |
+| 1.11.7        | 336      | Supported      |
+| 1.11.8        | 1438     | Supported      |
+| 1.11.8.1      | 8        | Supported      |
+| 1.11.9        | 4386     | Supported      |
+| 1.12.0        | 8750     | Supported      |
+| 1.12.1        | 26944    | Supported      |
+| 1.12.2        | 159466   | Supported      |
+| 1.12.59       | 4        | Supported      |
+| 1.12.76       | 4        | Supported      |
+| 1.12.77       | 2        | Supported      |
+| 1.12.78       | 48       | Supported      |
+| 1.13.0        | 622      | Supported      |
+| 1.13.1        | 1678     | Supported      |
+| 1.13.10       | 674      | Supported      |
+| 1.13.10.1     | 6        | Supported      |
+| 1.13.11       | 194      | Supported      |
+| 1.13.12       | 5682     | Supported      |
+| 1.13.2        | 196      | Supported      |
+| 1.13.2.1      | 8        | Supported      |
+| 1.13.3        | 6506     | Supported      |
+| 1.13.4        | 372      | Supported      |
+| 1.13.5        | 1802     | Supported      |
+| 1.13.6        | 5300     | Supported      |
+| 1.13.7        | 1664     | Supported      |
+| 1.13.8        | 2606     | Supported      |
+| 1.13.9        | 8904     | Supported      |
+| 1.14.0        | 342600   | Supported      |
+| 1.14.1        | 183040   | Supported      |
+| 1.14.2        | 194288   | Supported      |
+| 1.15.0        | 4422     | Supported      |
+| 1.15.0.1      | 12       | Supported      |
+| 1.15.1        | 716      | Supported      |
+| 1.15.10       | 2524     | Supported      |
+| 1.15.10.1     | 34       | Supported      |
+| 1.15.11       | 1042     | Supported      |
+| 1.15.12       | 10394    | Supported      |
+| 1.15.2        | 1732     | Supported      |
+| 1.15.3        | 2868     | Supported      |
+| 1.15.4        | 268      | Supported      |
+| 1.15.5        | 4528     | Supported      |
+| 1.15.6        | 6484     | Supported      |
+| 1.15.7        | 7492     | Supported      |
+| 1.15.8        | 26672    | Supported      |
+| 1.15.8.1      | 52       | Supported      |
+| 1.15.9        | 5332     | Supported      |
+| 1.16.0        | 53474    | Supported      |
+| 1.16.1        | 228228   | Supported      |
+| 1.17.0        | 3006     | Supported      |
+| 1.17.1        | 2514     | Supported      |
+| 1.17.1.1      | 4        | Supported      |
+| 1.17.10       | 17070    | Supported      |
+| 1.17.10.1     | 32       | Supported      |
+| 1.17.2        | 1926     | Supported      |
+| 1.17.3        | 24148    | Supported      |
+| 1.17.3.1      | 4        | Supported      |
+| 1.17.4        | 1940     | Supported      |
+| 1.17.4.1      | 8        | Supported      |
+| 1.17.5        | 3960     | Supported      |
+| 1.17.6        | 18578    | Supported      |
+| 1.17.6.1      | 36       | Supported      |
+| 1.17.7        | 3422     | Supported      |
+| 1.17.8        | 12526    | Supported      |
+| 1.17.8.1      | 36       | Supported      |
+| 1.17.9        | 5994     | Supported      |
+| 1.17.9.1      | 58       | Supported      |
+| 1.18.0        | 939624   | Supported      |
+| 1.19          | 8        | Supported      |
+| 1.19.0        | 17764    | Supported      |
+| 1.19.1        | 80956    | Supported      |
+| 1.19.1.1      | 12       | Supported      |
+| 1.19.10       | 9868     | Supported      |
+| 1.19.2        | 23686    | Supported      |
+| 1.19.3        | 8308     | Supported      |
+| 1.19.4        | 3262     | Supported      |
+| 1.19.5        | 5974     | Supported      |
+| 1.19.5.1      | 26       | Supported      |
+| 1.19.6        | 14320    | Supported      |
+| 1.19.7        | 3182     | Supported      |
+| 1.19.7.1      | 30       | Supported      |
+| 1.19.8        | 6904     | Supported      |
+| 1.19.9        | 5496     | Supported      |
+| 1.19.9.1      | 12       | Supported      |
+| 1.2.0         | 220      | Supported      |
+| 1.2.1         | 16344    | Supported      |
+| 1.2.2         | 158      | Supported      |
+| 1.2.3         | 254      | Supported      |
+| 1.2.4         | 1342     | Supported      |
+| 1.2.5         | 88       | Supported      |
+| 1.2.6         | 738      | Supported      |
+| 1.2.7         | 458      | Supported      |
+| 1.2.8         | 466      | Supported      |
+| 1.2.9         | 878      | Supported      |
+| 1.20          | 8        | Supported      |
+| 1.20.0        | 73628    | Supported      |
+| 1.20.1        | 268554   | Supported      |
+| 1.20.2        | 281672   | Supported      |
+| 1.21.0        | 15310    | Supported      |
+| 1.21.0.1      | 12       | Supported      |
+| 1.21.1        | 14144    | Supported      |
+| 1.21.1.1      | 40       | Supported      |
+| 1.21.2        | 832      | Supported      |
+| 1.21.3        | 34128    | Supported      |
+| 1.21.3.1      | 8        | Supported      |
+| 1.21.4        | 9670     | Supported      |
+| 1.21.5        | 9558     | Supported      |
+| 1.21.5.2      | 38       | Supported      |
+| 1.21.6        | 155544   | Supported      |
+| 1.21.7        | 326      | Supported      |
+| 1.21.7.2      | 24       | Supported      |
+| 1.22.0        | 141474   | Supported      |
+| 1.22.1        | 318672   | Supported      |
+| 1.22.10       | 8        | Supported      |
+| 1.23.0        | 16208    | Supported      |
+| 1.23.1        | 33232    | Supported      |
+| 1.23.1.1      | 4        | Supported      |
+| 1.23.2        | 104438   | Supported      |
+| 1.23.3        | 32250    | Supported      |
+| 1.3.0         | 36       | Supported      |
+| 1.3.1         | 8        | Supported      |
+| 1.3.11        | 72       | Supported      |
+| 1.3.12        | 2        | Supported      |
+| 1.3.13        | 26       | Supported      |
+| 1.3.14        | 24       | Supported      |
+| 1.3.15        | 28       | Supported      |
+| 1.3.6         | 8        | Supported      |
+| 1.3.7         | 10       | Supported      |
+| 1.3.8         | 26       | Supported      |
+| 1.4.0         | 86       | Supported      |
+| 1.4.1         | 1470     | Supported      |
+| 1.4.2         | 1210     | Supported      |
+| 1.4.3         | 554      | Supported      |
+| 1.4.4         | 1826     | Supported      |
+| 1.4.5         | 360      | Supported      |
+| 1.4.6         | 37168    | Supported      |
+| 1.4.7         | 1640     | Supported      |
+| 1.5.0         | 138      | Supported      |
+| 1.5.1         | 12       | Supported      |
+| 1.5.10        | 24       | Supported      |
+| 1.5.11        | 20       | Supported      |
+| 1.5.12        | 168      | Supported      |
+| 1.5.13        | 62       | Supported      |
+| 1.5.2         | 44       | Supported      |
+| 1.5.3         | 24       | Supported      |
+| 1.5.4         | 698      | Supported      |
+| 1.5.5         | 22       | Supported      |
+| 1.5.6         | 278      | Supported      |
+| 1.5.7         | 978      | Supported      |
+| 1.5.8         | 118      | Supported      |
+| 1.5.9         | 64       | Supported      |
+| 1.6.0         | 2550     | Supported      |
+| 1.6.1         | 818      | Supported      |
+| 1.6.2         | 32432    | Supported      |
+| 1.6.3         | 2614     | Supported      |
+| 1.6.4         | 16       | Supported      |
+| 1.7.0         | 90       | Supported      |
+| 1.7.1         | 14       | Supported      |
+| 1.7.10        | 170      | Supported      |
+| 1.7.11        | 66       | Supported      |
+| 1.7.11.2      | 2        | Supported      |
+| 1.7.12        | 134      | Supported      |
+| 1.7.2         | 48       | Supported      |
+| 1.7.3         | 36       | Supported      |
+| 1.7.4         | 150      | Supported      |
+| 1.7.5         | 252      | Supported      |
+| 1.7.6         | 278      | Supported      |
+| 1.7.7         | 72       | Supported      |
+| 1.7.8         | 68       | Supported      |
+| 1.7.9         | 412      | Supported      |
+| 1.8.0         | 28802    | Supported      |
+| 1.8.1         | 14592    | Supported      |
+| 1.9.0         | 90       | Supported      |
+| 1.9.1         | 104      | Supported      |
+| 1.9.10        | 192      | Supported      |
+| 1.9.11        | 180      | Supported      |
+| 1.9.12        | 600      | Supported      |
+| 1.9.13        | 306      | Supported      |
+| 1.9.14        | 272      | Supported      |
+| 1.9.15        | 1634     | Supported      |
+| 1.9.2         | 2186     | Supported      |
+| 1.9.3         | 720      | Supported      |
+| 1.9.3.1       | 2        | Supported      |
+| 1.9.4         | 154      | Supported      |
+| 1.9.5         | 416      | Supported      |
+| 1.9.6         | 408      | Supported      |
+| 1.9.7         | 418      | Supported      |
+| 1.9.8         | 12       | Supported      |
+| 1.9.9         | 1082     | Supported      |
+| 10.0          | 28       | Supported      |
+| 10.21.4       | 8        | Supported      |
+| 10.23.1       | 48       | Supported      |
+| 11.1.13.7     | 8        | Supported      |
+| 3.0           | 972      | Supported      |
+| 9.5           | 3578     | Supported      |
+| 9.99.9        | 16       | Supported      |
+| \1            | 10       | Non-conclusive |
 
-## Modernizr
+## core-js
 
-|    version     | count | is_supported |
-| -------------- | ----- | ------------ |
-| 1.7            |     1 | null         | 
-| 2.0            |     6 | null         | 
-| 2.5            |     4 | null         | 
-| 2.6            |    37 | null         | 
-| 2.7            |    18 | null         | 
-| 2.8            |    55 | null         | 
+| info          | count    | is_supported   |
+|---------------|----------|----------------|
+|               | 255940   | Not-versioned  |
+| 1             | 6        | Unsupported    |
+| 1.0.6         | 4        | Unsupported    |
+| 1.2           | 1        | Unsupported    |
+| 1.2.1         | 552      | Unsupported    |
+| 1.2.2         | 685      | Unsupported    |
+| 1.2.3         | 702      | Unsupported    |
+| 1.2.5         | 34       | Unsupported    |
+| 1.2.6         | 4144     | Unsupported    |
+| 1.7.29        | 12       | Unsupported    |
+| 2.0.0         | 9        | Unsupported    |
+| 2.0.2         | 3        | Unsupported    |
+| 2.0.3         | 94       | Unsupported    |
+| 2.1.0         | 1        | Unsupported    |
+| 2.1.1         | 29       | Unsupported    |
+| 2.1.3         | 165      | Unsupported    |
+| 2.1.4         | 75       | Unsupported    |
+| 2.1.5         | 4        | Unsupported    |
+| 2.2.1         | 800      | Unsupported    |
+| 2.2.2         | 161      | Unsupported    |
+| 2.3.0         | 56       | Unsupported    |
+| 2.4.0         | 44961    | Unsupported    |
+| 2.5.0         | 35338    | Unsupported    |
+| 2.5.1         | 295742   | Unsupported    |
+| 2.5.2         | 129      | Unsupported    |
+| 2.5.3         | 40800    | Unsupported    |
+| 2.5.4         | 2898     | Unsupported    |
+| 2.5.5         | 36165    | Unsupported    |
+| 2.5.6         | 23014    | Unsupported    |
+| 2.5.7         | 319558   | Unsupported    |
+| 2.6.0         | 6138     | Unsupported    |
+| 2.6.1         | 40527    | Unsupported    |
+| 2.6.10        | 182327   | Unsupported    |
+| 2.6.11        | 1038359  | Unsupported    |
+| 2.6.12        | 1245840  | Unsupported    |
+| 2.6.2         | 26546    | Unsupported    |
+| 2.6.3         | 90890    | Unsupported    |
+| 2.6.4         | 15961    | Unsupported    |
+| 2.6.5         | 487842   | Unsupported    |
+| 2.6.6         | 427      | Unsupported    |
+| 2.6.7         | 8272     | Unsupported    |
+| 2.6.8         | 2858     | Unsupported    |
+| 2.6.9         | 201890   | Unsupported    |
+| 3.0.0         | 4650188  | Supported      |
+| 3.0.1         | 215765   | Supported      |
+| 3.1.0         | 8099     | Supported      |
+| 3.1.1         | 51       | Supported      |
+| 3.1.2         | 590      | Supported      |
+| 3.1.3         | 149274   | Supported      |
+| 3.10.0        | 25079    | Supported      |
+| 3.10.1        | 14655    | Supported      |
+| 3.10.2        | 14518    | Supported      |
+| 3.11.0        | 655190   | Supported      |
+| 3.11.1        | 3094     | Supported      |
+| 3.11.2        | 7151     | Supported      |
+| 3.11.3        | 1131     | Supported      |
+| 3.12.0        | 2145     | Supported      |
+| 3.12.1        | 51289    | Supported      |
+| 3.13.0        | 3769     | Supported      |
+| 3.13.1        | 5639     | Supported      |
+| 3.14.0        | 81077    | Supported      |
+| 3.15.0        | 14544    | Supported      |
+| 3.15.1        | 46005    | Supported      |
+| 3.15.2        | 68520    | Supported      |
+| 3.16.0        | 10447    | Supported      |
+| 3.16.1        | 37410    | Supported      |
+| 3.16.2        | 17544    | Supported      |
+| 3.16.3        | 7835     | Supported      |
+| 3.16.4        | 2381     | Supported      |
+| 3.17.0        | 54       | Supported      |
+| 3.17.1        | 1007     | Supported      |
+| 3.17.2        | 118455   | Supported      |
+| 3.17.3        | 25127    | Supported      |
+| 3.18.0        | 20974    | Supported      |
+| 3.18.1        | 37880    | Supported      |
+| 3.18.2        | 9099     | Supported      |
+| 3.18.3        | 14240    | Supported      |
+| 3.19.0        | 203684   | Supported      |
+| 3.19.1        | 3521175  | Supported      |
+| 3.19.2        | 146382   | Supported      |
+| 3.19.3        | 47519    | Supported      |
+| 3.2.0         | 1604     | Supported      |
+| 3.2.1         | 95316    | Supported      |
+| 3.20.0        | 22294    | Supported      |
+| 3.20.1        | 21784    | Supported      |
+| 3.20.2        | 57110    | Supported      |
+| 3.20.3        | 32394    | Supported      |
+| 3.21.0        | 20858    | Supported      |
+| 3.21.1        | 136781   | Supported      |
+| 3.22.0        | 18022    | Supported      |
+| 3.22.1        | 11826    | Supported      |
+| 3.22.2        | 14701    | Supported      |
+| 3.22.3        | 10606    | Supported      |
+| 3.22.4        | 7772     | Supported      |
+| 3.22.5        | 71345    | Supported      |
+| 3.22.6        | 11578    | Supported      |
+| 3.22.7        | 19198    | Supported      |
+| 3.22.8        | 357931   | Supported      |
+| 3.23.0        | 4257     | Supported      |
+| 3.23.1        | 20578    | Supported      |
+| 3.23.2        | 36061    | Supported      |
+| 3.23.3        | 21701    | Supported      |
+| 3.23.4        | 106169   | Supported      |
+| 3.23.5        | 9072     | Supported      |
+| 3.24.0        | 20416    | Supported      |
+| 3.24.1        | 776197   | Supported      |
+| 3.25.0        | 103666   | Supported      |
+| 3.25.1        | 54564    | Supported      |
+| 3.25.2        | 54975    | Supported      |
+| 3.25.3        | 18792    | Supported      |
+| 3.25.4        | 2224     | Supported      |
+| 3.25.5        | 158336   | Supported      |
+| 3.26.0        | 1654783  | Supported      |
+| 3.26.1        | 257015   | Supported      |
+| 3.27.0        | 66884    | Supported      |
+| 3.27.1        | 32482    | Supported      |
+| 3.3.0         | 8        | Supported      |
+| 3.3.1         | 25       | Supported      |
+| 3.3.2         | 19821    | Supported      |
+| 3.3.3         | 6025     | Supported      |
+| 3.3.4         | 656      | Supported      |
+| 3.3.5         | 578      | Supported      |
+| 3.3.6         | 6973     | Supported      |
+| 3.4.0         | 6880     | Supported      |
+| 3.4.1         | 3782     | Supported      |
+| 3.4.2         | 3653     | Supported      |
+| 3.4.3         | 418      | Supported      |
+| 3.4.4         | 326      | Supported      |
+| 3.4.5         | 4573     | Supported      |
+| 3.4.6         | 88       | Supported      |
+| 3.4.7         | 2470     | Supported      |
+| 3.4.8         | 1955     | Supported      |
+| 3.5.0         | 8988     | Supported      |
+| 3.6.0         | 2835     | Supported      |
+| 3.6.1         | 13546    | Supported      |
+| 3.6.2         | 95311    | Supported      |
+| 3.6.3         | 1702     | Supported      |
+| 3.6.4         | 412489   | Supported      |
+| 3.6.5         | 769725   | Supported      |
+| 3.7.0         | 27012    | Supported      |
+| 3.8.0         | 49419    | Supported      |
+| 3.8.1         | 117102   | Supported      |
+| 3.8.2         | 14667    | Supported      |
+| 3.8.3         | 156248   | Supported      |
+| 3.9.0         | 57258    | Supported      |
+| 3.9.1         | 83114    | Supported      |
+| 47            | 4        | Supported      |
+| 9.12.05       | 95       | Supported      |
+| \             | 1        | Non-conclusive |
+| \1            | 5389     | Non-conclusive |
+| false         | 2        | Non-conclusive |
+| undefined     | 4        | Non-conclusive |
 
-## Apache
+## jQuery Migrate
 
-|    version     | count | is_supported |
-| -------------- | ----- | ------------ |
-| 2              |     2 | null         | 
-| 2.2            |    10 | false        | 
-| 2.4            |    79 | true         | 
+| info          | count    | is_supported   |
+|---------------|----------|----------------|
+|               | 722930   | Not-versioned  |
+| .             | 217      | Non-conclusive |
+| 0             | 58       | Non-conclusive |
+| 0.0.0         | 29       | Non-conclusive |
+| 0.0.1         | 8        | Non-conclusive |
+| 0.0.2         | 1        | Non-conclusive |
+| 0.0.4         | 1        | Non-conclusive |
+| 0.0.5         | 4        | Non-conclusive |
+| 0.0.7         | 4        | Non-conclusive |
+| 0.0.9         | 4        | Non-conclusive |
+| 0.1.8         | 4        | Non-conclusive |
+| 0.2.58        | 12       | Non-conclusive |
+| 0.4.1         | 4        | Non-conclusive |
+| 0.5.0         | 4        | Non-conclusive |
+| 0.64041100    | 2        | Non-conclusive |
+| 0.7.12        | 12       | Non-conclusive |
+| 0.73289000    | 2        | Non-conclusive |
+| 0000001       | 12       | Non-conclusive |
+| 00193         | 2        | Non-conclusive |
+| 004           | 4        | Non-conclusive |
+| 00407         | 26       | Non-conclusive |
+| 007           | 8        | Non-conclusive |
+| 008           | 17       | Non-conclusive |
+| 01            | 4        | Non-conclusive |
+| 01.10.2022    | 4        | Non-conclusive |
+| 02            | 10       | Non-conclusive |
+| 02200         | 8        | Non-conclusive |
+| 025           | 4        | Non-conclusive |
+| 0397          | 4        | Non-conclusive |
+| 052           | 4        | Non-conclusive |
+| 05207         | 4        | Non-conclusive |
+| 08269         | 4        | Non-conclusive |
+| 087           | 1        | Non-conclusive |
+| 1             | 728      | Non-conclusive |
+| 1.0           | 95       | Non-conclusive |
+| 1.0.0         | 11908    | Non-conclusive |
+| 1.0.0.        | 8        | Non-conclusive |
+| 1.0.0.3.5     | 4        | Non-conclusive |
+| 1.0.0.3002    | 4        | Non-conclusive |
+| 1.0.1         | 20       | Non-conclusive |
+| 1.0.1.3       | 4        | Non-conclusive |
+| 1.0.14        | 1        | Non-conclusive |
+| 1.0.18        | 4        | Non-conclusive |
+| 1.0.2         | 20       | Non-conclusive |
+| 1.0.20.       | 4        | Non-conclusive |
+| 1.0.3         | 5        | Non-conclusive |
+| 1.0.30        | 4        | Non-conclusive |
+| 1.0.4         | 4        | Non-conclusive |
+| 1.0.5         | 8        | Non-conclusive |
+| 1.0.6         | 10       | Non-conclusive |
+| 1.0.6.02      | 1        | Non-conclusive |
+| 1.0.6.2       | 4        | Non-conclusive |
+| 1.0.7         | 4        | Non-conclusive |
+| 1.0.8         | 8        | Non-conclusive |
+| 1.00001       | 4        | Non-conclusive |
+| 1.00006       | 4        | Non-conclusive |
+| 1.00014       | 4        | Non-conclusive |
+| 1.00019       | 4        | Non-conclusive |
+| 1.0003        | 8        | Non-conclusive |
+| 1.0008        | 8        | Non-conclusive |
+| 1.001         | 4        | Non-conclusive |
+| 1.0010        | 4        | Non-conclusive |
+| 1.003         | 4        | Non-conclusive |
+| 1.007         | 4        | Non-conclusive |
+| 1.03.3.3.2    | 4        | Non-conclusive |
+| 1.1           | 13       | Non-conclusive |
+| 1.1.0         | 7220     | Non-conclusive |
+| 1.1.0.49      | 4        | Non-conclusive |
+| 1.1.1         | 24527    | Non-conclusive |
+| 1.1.12759     | 4        | Non-conclusive |
+| 1.1.19425     | 1        | Non-conclusive |
+| 1.1.2         | 16       | Non-conclusive |
+| 1.1.27        | 4        | Non-conclusive |
+| 1.1.31        | 8        | Non-conclusive |
+| 1.1.5         | 4        | Non-conclusive |
+| 1.1.7         | 4        | Non-conclusive |
+| 1.10          | 4        | Non-conclusive |
+| 1.10.1        | 4        | Non-conclusive |
+| 1.10.2        | 4        | Non-conclusive |
+| 1.10.4        | 8        | Non-conclusive |
+| 1.104.4       | 2        | Non-conclusive |
+| 1.105.1       | 2        | Non-conclusive |
+| 1.11          | 1        | Non-conclusive |
+| 1.11.0        | 12       | Non-conclusive |
+| 1.11.1        | 1        | Non-conclusive |
+| 1.12.1        | 6        | Non-conclusive |
+| 1.12.4        | 44       | Non-conclusive |
+| 1.13.0        | 4        | Non-conclusive |
+| 1.18133122    | 8        | Non-conclusive |
+| 1.2           | 55       | Non-conclusive |
+| 1.2.0         | 4569     | Non-conclusive |
+| 1.2.1         | 571005   | Non-conclusive |
+| 1.2.1.        | 2        | Non-conclusive |
+| 1.2.1.1       | 4        | Non-conclusive |
+| 1.2.1.2       | 4        | Non-conclusive |
+| 1.2.11        | 4        | Non-conclusive |
+| 1.2.11576     | 5        | Non-conclusive |
+| 1.2.12        | 4        | Non-conclusive |
+| 1.2.15152     | 1        | Non-conclusive |
+| 1.2.2         | 87       | Non-conclusive |
+| 1.2.22        | 4        | Non-conclusive |
+| 1.2.3         | 16       | Non-conclusive |
+| 1.2.4         | 4        | Non-conclusive |
+| 1.2.41        | 4        | Non-conclusive |
+| 1.2.9         | 4        | Non-conclusive |
+| 1.21          | 4        | Non-conclusive |
+| 1.24.7        | 4        | Non-conclusive |
+| 1.291         | 1        | Non-conclusive |
+| 1.3.0         | 23005    | Non-conclusive |
+| 1.3.1         | 39       | Non-conclusive |
+| 1.3.1782      | 81       | Non-conclusive |
+| 1.3.1783      | 95       | Non-conclusive |
+| 1.3.1784      | 3        | Non-conclusive |
+| 1.3.1785      | 15       | Non-conclusive |
+| 1.3.1786      | 2        | Non-conclusive |
+| 1.3.3         | 4        | Non-conclusive |
+| 1.3.6         | 4        | Non-conclusive |
+| 1.33          | 4        | Non-conclusive |
+| 1.39.0        | 4        | Non-conclusive |
+| 1.4           | 8        | Non-conclusive |
+| 1.4.0         | 15996    | Non-conclusive |
+| 1.4.1         | 3148967  | Non-conclusive |
+| 1.4.1.        | 8        | Non-conclusive |
+| 1.4.1.77      | 4        | Non-conclusive |
+| 1.4.10        | 21       | Non-conclusive |
+| 1.4.18        | 4        | Non-conclusive |
+| 1.4.2         | 1131     | Non-conclusive |
+| 1.4.3         | 24       | Non-conclusive |
+| 1.4.4         | 8        | Non-conclusive |
+| 1.4.54        | 4        | Non-conclusive |
+| 1.4.68        | 4        | Non-conclusive |
+| 1.4.7         | 2        | Non-conclusive |
+| 1.4.83        | 4        | Non-conclusive |
+| 1.4.89        | 4        | Non-conclusive |
+| 1.4.97        | 4        | Non-conclusive |
+| 1.42111       | 4        | Non-conclusive |
+| 1.5           | 4        | Non-conclusive |
+| 1.5.1         | 12       | Non-conclusive |
+| 1.5.20        | 4        | Non-conclusive |
+| 1.5.22        | 4        | Non-conclusive |
+| 1.5.35        | 2        | Non-conclusive |
+| 1.5.41        | 5        | Non-conclusive |
+| 1.5.45        | 20       | Non-conclusive |
+| 1.5.46        | 4        | Non-conclusive |
+| 1.5.7         | 4        | Non-conclusive |
+| 1.546         | 4        | Non-conclusive |
+| 1.6           | 8        | Non-conclusive |
+| 1.6.10        | 4        | Non-conclusive |
+| 1.6.7         | 8        | Non-conclusive |
+| 1.617         | 2        | Non-conclusive |
+| 1.6243        | 4        | Non-conclusive |
+| 1.7.0         | 4        | Non-conclusive |
+| 1.7.1         | 8        | Non-conclusive |
+| 1.7.10        | 4        | Non-conclusive |
+| 1.8.1         | 6        | Non-conclusive |
+| 1.8.2         | 4        | Non-conclusive |
+| 1.8.3         | 4        | Non-conclusive |
+| 1.8.8         | 4        | Non-conclusive |
+| 1.9.0         | 2        | Non-conclusive |
+| 1.9.1         | 16       | Non-conclusive |
+| 1.9.6         | 4        | Non-conclusive |
+| 1.983         | 4        | Non-conclusive |
+| 10.0.27       | 4        | Non-conclusive |
+| 10.11.123     | 4        | Non-conclusive |
+| 101           | 4        | Non-conclusive |
+| 11            | 4        | Non-conclusive |
+| 11.05171      | 2        | Non-conclusive |
+| 11.05503      | 2        | Non-conclusive |
+| 11.27         | 4        | Non-conclusive |
+| 114           | 5        | Non-conclusive |
+| 12            | 15       | Non-conclusive |
+| 121           | 28       | Non-conclusive |
+| 13            | 6        | Non-conclusive |
+| 13.40.30      | 4        | Non-conclusive |
+| 130           | 1        | Non-conclusive |
+| 14            | 32       | Non-conclusive |
+| 141           | 4        | Non-conclusive |
+| 15.1          | 1        | Non-conclusive |
+| 16            | 4        | Non-conclusive |
+| 1672          | 4        | Non-conclusive |
+| 1705          | 4        | Non-conclusive |
+| 176           | 2        | Non-conclusive |
+| 1770          | 2        | Non-conclusive |
+| 1786          | 1        | Non-conclusive |
+| 18.112.920    | 4        | Non-conclusive |
+| 181           | 4        | Non-conclusive |
+| 19            | 8        | Non-conclusive |
+| 2             | 30       | Non-conclusive |
+| 2.0.0         | 12       | Non-conclusive |
+| 2.0.1         | 8        | Non-conclusive |
+| 2.0.2         | 1        | Non-conclusive |
+| 2.0.8         | 4        | Non-conclusive |
+| 2.0018        | 4        | Non-conclusive |
+| 2.1.4         | 4        | Non-conclusive |
+| 2.1.5         | 4        | Non-conclusive |
+| 2.1.9         | 4        | Non-conclusive |
+| 2.2.3         | 4        | Non-conclusive |
+| 2.2.4         | 20       | Non-conclusive |
+| 2.3.2         | 5        | Non-conclusive |
+| 2.3.9         | 1        | Non-conclusive |
+| 2.44.0        | 4        | Non-conclusive |
+| 2.6.6         | 4        | Non-conclusive |
+| 2.62361       | 4        | Non-conclusive |
+| 2.793         | 2        | Non-conclusive |
+| 200           | 4        | Non-conclusive |
+| 2018          | 16       | Non-conclusive |
+| 2019          | 8        | Non-conclusive |
+| 2020          | 4        | Non-conclusive |
+| 2020.12.17    | 4        | Non-conclusive |
+| 207           | 2        | Non-conclusive |
+| 2089          | 1        | Non-conclusive |
+| 21.3.11       | 8        | Non-conclusive |
+| 210           | 4        | Non-conclusive |
+| 214           | 4        | Non-conclusive |
+| 215           | 4        | Non-conclusive |
+| 22.218        | 4        | Non-conclusive |
+| 23.3.2        | 4        | Non-conclusive |
+| 2337          | 4        | Non-conclusive |
+| 2408          | 4        | Non-conclusive |
+| 25            | 14       | Non-conclusive |
+| 2500          | 4        | Non-conclusive |
+| 27.3.19.1     | 4        | Non-conclusive |
+| 270           | 4        | Non-conclusive |
+| 271           | 14       | Non-conclusive |
+| 2748          | 4        | Non-conclusive |
+| 281           | 1        | Non-conclusive |
+| 3             | 73       | Non-conclusive |
+| 3..3.2        | 8        | Non-conclusive |
+| 3.0           | 4        | Non-conclusive |
+| 3.0.0         | 162202   | Non-conclusive |
+| 3.0.1         | 155200   | Non-conclusive |
+| 3.0.11        | 4        | Non-conclusive |
+| 3.0.2         | 1619     | Non-conclusive |
+| 3.1.0         | 165724   | Non-conclusive |
+| 3.1.1         | 195      | Non-conclusive |
+| 3.2           | 1        | Non-conclusive |
+| 3.2.0         | 20299    | Non-conclusive |
+| 3.2.1         | 12       | Non-conclusive |
+| 3.2.12        | 1        | Non-conclusive |
+| 3.2.13        | 13       | Non-conclusive |
+| 3.2.2         | 14       | Non-conclusive |
+| 3.3.0         | 67160    | Non-conclusive |
+| 3.3.1         | 31308    | Non-conclusive |
+| 3.3.2         | 12987836 | Non-conclusive |
+| 3.3.2.1       | 8        | Non-conclusive |
+| 3.3.2.10      | 4        | Non-conclusive |
+| 3.3.2.11      | 8        | Non-conclusive |
+| 3.3.2.2       | 9        | Non-conclusive |
+| 3.3.2.3       | 2        | Non-conclusive |
+| 3.3.2.4       | 4        | Non-conclusive |
+| 3.3.2.6       | 1        | Non-conclusive |
+| 3.3.3         | 24335    | Non-conclusive |
+| 3.3.7         | 4        | Non-conclusive |
+| 3.4.0         | 88647    | Non-conclusive |
+| 3.4.1         | 1238     | Non-conclusive |
+| 3.5.0         | 18       | Non-conclusive |
+| 3.5.1         | 32       | Non-conclusive |
+| 3.5.2         | 1        | Non-conclusive |
+| 3.6.0         | 8        | Non-conclusive |
+| 3.6.1         | 9        | Non-conclusive |
+| 3.7.41        | 1        | Non-conclusive |
+| 3.8.10        | 4        | Non-conclusive |
+| 3.8.32        | 4        | Non-conclusive |
+| 3.8.37        | 1        | Non-conclusive |
+| 3.9.1         | 4        | Non-conclusive |
+| 3.9.40        | 5        | Non-conclusive |
+| 30            | 4        | Non-conclusive |
+| 307           | 4        | Non-conclusive |
+| 3084          | 2        | Non-conclusive |
+| 3091          | 4        | Non-conclusive |
+| 31            | 1        | Non-conclusive |
+| 332           | 14       | Non-conclusive |
+| 34            | 2        | Non-conclusive |
+| 340           | 4        | Non-conclusive |
+| 36            | 4        | Non-conclusive |
+| 3638          | 4        | Non-conclusive |
+| 37            | 8        | Non-conclusive |
+| 3721          | 4        | Non-conclusive |
+| 3739          | 12       | Non-conclusive |
+| 3772          | 4        | Non-conclusive |
+| 38            | 1        | Non-conclusive |
+| 3906          | 2        | Non-conclusive |
+| 3968          | 4        | Non-conclusive |
+| 4             | 21       | Non-conclusive |
+| 4.0.0         | 4        | Non-conclusive |
+| 4.0.38        | 5        | Non-conclusive |
+| 4.1.1         | 4        | Non-conclusive |
+| 4.1.37        | 9        | Non-conclusive |
+| 4.2.1         | 4        | Non-conclusive |
+| 4.2.34        | 12       | Non-conclusive |
+| 4.3.28        | 4        | Non-conclusive |
+| 4.3.30        | 1        | Non-conclusive |
+| 4.4.29        | 11       | Non-conclusive |
+| 4.4.620       | 10       | Non-conclusive |
+| 4.4.624       | 2        | Non-conclusive |
+| 4.5.16        | 4        | Non-conclusive |
+| 4.5.23        | 4        | Non-conclusive |
+| 4.5.28        | 5        | Non-conclusive |
+| 4.5.40        | 4        | Non-conclusive |
+| 4.5.5         | 4        | Non-conclusive |
+| 4.5.7         | 8        | Non-conclusive |
+| 4.5.9         | 29       | Non-conclusive |
+| 4.5.91        | 16       | Non-conclusive |
+| 4.6.0         | 4        | Non-conclusive |
+| 4.6.02        | 30       | Non-conclusive |
+| 4.6.10        | 71       | Non-conclusive |
+| 4.6.20        | 8        | Non-conclusive |
+| 4.6.25        | 13       | Non-conclusive |
+| 4.6.30        | 45       | Non-conclusive |
+| 4.6.31        | 12       | Non-conclusive |
+| 4.6.41        | 380      | Non-conclusive |
+| 4.6.5         | 143      | Non-conclusive |
+| 4.6.6         | 149      | Non-conclusive |
+| 4.6.7         | 125      | Non-conclusive |
+| 4.6.8         | 192      | Non-conclusive |
+| 4.6.9         | 50       | Non-conclusive |
+| 4.6.9.01      | 4        | Non-conclusive |
+| 4.6.9.02      | 69       | Non-conclusive |
+| 4.7.0.02      | 194      | Non-conclusive |
+| 4.7.2         | 187      | Non-conclusive |
+| 4.7.25        | 34       | Non-conclusive |
+| 4.7.3         | 346      | Non-conclusive |
+| 4.7.31        | 1        | Non-conclusive |
+| 4.7.5         | 4        | Non-conclusive |
+| 4.7.60        | 4        | Non-conclusive |
+| 4.8.1         | 4        | Non-conclusive |
+| 4.8.21        | 9        | Non-conclusive |
+| 4.9.10        | 4        | Non-conclusive |
+| 4.9.12        | 4        | Non-conclusive |
+| 4.9.19        | 8        | Non-conclusive |
+| 4.9.21        | 4        | Non-conclusive |
+| 4.9.22        | 86       | Non-conclusive |
+| 4.9.24        | 4        | Non-conclusive |
+| 4.9.4         | 4        | Non-conclusive |
+| 4.9.5         | 4        | Non-conclusive |
+| 4.9.7         | 4        | Non-conclusive |
+| 4.9.8         | 28       | Non-conclusive |
+| 4.9.9         | 8        | Non-conclusive |
+| 41            | 4        | Non-conclusive |
+| 41.2.1        | 4        | Non-conclusive |
+| 4250          | 1        | Non-conclusive |
+| 4508          | 1        | Non-conclusive |
+| 48.4.1        | 1        | Non-conclusive |
+| 4805          | 4        | Non-conclusive |
+| 486           | 4        | Non-conclusive |
+| 49            | 4        | Non-conclusive |
+| 4902          | 4        | Non-conclusive |
+| 5             | 36       | Non-conclusive |
+| 5.0.18        | 20       | Non-conclusive |
+| 5.0.2         | 4        | Non-conclusive |
+| 5.0.8         | 4        | Non-conclusive |
+| 5.1.12        | 4        | Non-conclusive |
+| 5.1.13        | 4        | Non-conclusive |
+| 5.1.15        | 30       | Non-conclusive |
+| 5.1.4         | 4        | Non-conclusive |
+| 5.2.12        | 1        | Non-conclusive |
+| 5.2.17        | 24       | Non-conclusive |
+| 5.2.2         | 494      | Non-conclusive |
+| 5.2.9         | 4        | Non-conclusive |
+| 5.3.14        | 53       | Non-conclusive |
+| 5.3.2         | 9        | Non-conclusive |
+| 5.4.1         | 6        | Non-conclusive |
+| 5.4.10        | 4        | Non-conclusive |
+| 5.4.12        | 44       | Non-conclusive |
+| 5.4.2         | 5        | Non-conclusive |
+| 5.4.4         | 4        | Non-conclusive |
+| 5.5           | 4        | Non-conclusive |
+| 5.5.1         | 8        | Non-conclusive |
+| 5.5.11        | 101      | Non-conclusive |
+| 5.5.3         | 14       | Non-conclusive |
+| 5.5.9         | 4        | Non-conclusive |
+| 5.6.1         | 8        | Non-conclusive |
+| 5.6.10        | 47       | Non-conclusive |
+| 5.7           | 1        | Non-conclusive |
+| 5.7.2         | 8        | Non-conclusive |
+| 5.7.8         | 50       | Non-conclusive |
+| 5.8.1         | 24       | Non-conclusive |
+| 5.8.2         | 48       | Non-conclusive |
+| 5.8.4         | 1        | Non-conclusive |
+| 5.8.5         | 4        | Non-conclusive |
+| 5.8.6         | 204      | Non-conclusive |
+| 5.9.2         | 8        | Non-conclusive |
+| 5.9.3         | 25       | Non-conclusive |
+| 5.9.5         | 59       | Non-conclusive |
+| 50            | 8        | Non-conclusive |
+| 5012          | 2        | Non-conclusive |
+| 504           | 4        | Non-conclusive |
+| 5109          | 2        | Non-conclusive |
+| 52            | 9        | Non-conclusive |
+| 528           | 1        | Non-conclusive |
+| 535           | 4        | Non-conclusive |
+| 5403          | 2        | Non-conclusive |
+| 55            | 1        | Non-conclusive |
+| 57            | 4        | Non-conclusive |
+| 578           | 4        | Non-conclusive |
+| 6             | 5        | Non-conclusive |
+| 6.0.1         | 25       | Non-conclusive |
+| 6.0.2         | 30       | Non-conclusive |
+| 6.0.3         | 243      | Non-conclusive |
+| 6.1.1         | 1043     | Non-conclusive |
+| 6.10.60       | 1        | Non-conclusive |
+| 6.13.14       | 4        | Non-conclusive |
+| 6.6.4         | 12       | Non-conclusive |
+| 6.9.29        | 4        | Non-conclusive |
+| 6.9.34        | 4        | Non-conclusive |
+| 60.0.0        | 4        | Non-conclusive |
+| 62            | 4        | Non-conclusive |
+| 6264          | 4        | Non-conclusive |
+| 63            | 5        | Non-conclusive |
+| 640           | 2        | Non-conclusive |
+| 6616          | 8        | Non-conclusive |
+| 6656          | 2        | Non-conclusive |
+| 67            | 4        | Non-conclusive |
+| 6794          | 2        | Non-conclusive |
+| 691           | 1        | Non-conclusive |
+| 7             | 34       | Non-conclusive |
+| 7.9.11        | 4        | Non-conclusive |
+| 71            | 1        | Non-conclusive |
+| 717           | 1        | Non-conclusive |
+| 72            | 4        | Non-conclusive |
+| 721           | 4        | Non-conclusive |
+| 7444          | 4        | Non-conclusive |
+| 762           | 4        | Non-conclusive |
+| 776           | 1        | Non-conclusive |
+| 780           | 4        | Non-conclusive |
+| 785           | 4        | Non-conclusive |
+| 79            | 140      | Non-conclusive |
+| 8             | 23       | Non-conclusive |
+| 8.3.40        | 8        | Non-conclusive |
+| 8.3.50        | 5        | Non-conclusive |
+| 8.40.50       | 4        | Non-conclusive |
+| 8.77.70       | 1        | Non-conclusive |
+| 80            | 5        | Non-conclusive |
+| 83            | 4        | Non-conclusive |
+| 8339          | 2        | Non-conclusive |
+| 84            | 4        | Non-conclusive |
+| 86            | 17       | Non-conclusive |
+| 879           | 4        | Non-conclusive |
+| 88            | 5        | Non-conclusive |
+| 884           | 4        | Non-conclusive |
+| 89            | 1        | Non-conclusive |
+| 9             | 63       | Non-conclusive |
+| 9.0.0         | 12       | Non-conclusive |
+| 9.7.3         | 1        | Non-conclusive |
+| 9.9.9         | 4        | Non-conclusive |
+| 9.9.9.02      | 4        | Non-conclusive |
+| 9085          | 1        | Non-conclusive |
+| 91            | 5        | Non-conclusive |
+| 93            | 4        | Non-conclusive |
+| 94            | 4        | Non-conclusive |
+| 953           | 4        | Non-conclusive |
+| 96            | 8        | Non-conclusive |
+| 9638          | 2        | Non-conclusive |
+| 9673          | 2        | Non-conclusive |
+| 9695          | 4        | Non-conclusive |
+| 9754          | 1        | Non-conclusive |
+| 9755          | 2        | Non-conclusive |
+| 98            | 13       | Non-conclusive |
+| 99.4.6.41     | 4        | Non-conclusive |
+| 998           | 1        | Non-conclusive |
+| 999.01.01     | 4        | Non-conclusive |
+| \1?\1:        | 41       | Non-conclusive |
+| \1?\1:1.2.1   | 4        | Non-conclusive |
+| \1?\1:\2      | 5        | Non-conclusive |
+| \2            | 1025     | Non-conclusive |
 
 ## Yoast SEO
 
-|    version     | count | is_supported |
-| -------------- | ----- | ------------ |
-| 2.1            |     1 | null         | 
-| 4.4            |     1 | null         | 
-| 4.6            |     1 | null         | 
-| 7.6            |     1 | null         | 
-| 9.4            |     1 | null         | 
-| 9.6            |     1 | null         | 
-| 11.3           |     2 | null         | 
-| 11.4           |     1 | null         | 
-| 11.5           |     1 | null         | 
-| 12.0           |     1 | null         | 
-| 12.3           |     1 | null         | 
-| 12.4           |     2 | null         | 
-| 12.6           |     1 | null         | 
-| 12.7           |     2 | null         | 
-| 12.8           |     2 | null         | 
-| 13.1           |     2 | null         | 
-| 13.2           |     2 | null         | 
-| 13.4           |     1 | null         | 
-| 13.5           |     1 | null         | 
-| 14.0           |     3 | null         | 
-| 14.2           |     3 | null         | 
-| 14.3           |     5 | null         | 
-| 14.4           |    26 | null         | 
-| 14.5           |    13 | null         | 
+| info          | count    | is_supported   |
+|---------------|----------|----------------|
+|               | 3159612  | Not-versioned  |
+| -unlimit      | 86       | Non-conclusive |
+| 0.1.8.        | 2        | Non-conclusive |
+| 0.2.1         | 20       | Non-conclusive |
+| 0.2.3.1       | 8        | Non-conclusive |
+| 0.2.3.3       | 8        | Non-conclusive |
+| 0.2.5.3       | 2        | Non-conclusive |
+| 0.2.5.4       | 24       | Non-conclusive |
+| 0.3.5         | 8        | Non-conclusive |
+| 0.4.1         | 8        | Non-conclusive |
+| 0.4.2         | 76       | Non-conclusive |
+| 1.0           | 16       | Non-conclusive |
+| 1.0.1         | 34       | Non-conclusive |
+| 1.0.2.3       | 28       | Non-conclusive |
+| 1.0.3         | 154      | Non-conclusive |
+| 1.1.2         | 28       | Non-conclusive |
+| 1.1.4         | 156      | Non-conclusive |
+| 1.1.5         | 652      | Non-conclusive |
+| 1.1.7         | 14       | Non-conclusive |
+| 1.1.9         | 142      | Non-conclusive |
+| 1.2.1         | 18       | Non-conclusive |
+| 1.2.2         | 30       | Non-conclusive |
+| 1.2.3         | 64       | Non-conclusive |
+| 1.2.4         | 24       | Non-conclusive |
+| 1.2.5         | 338      | Non-conclusive |
+| 1.2.7         | 94       | Non-conclusive |
+| 1.2.8         | 8        | Non-conclusive |
+| 1.2.8.2       | 32       | Non-conclusive |
+| 1.2.8.3       | 44       | Non-conclusive |
+| 1.2.8.4       | 186      | Non-conclusive |
+| 1.2.8.5       | 106      | Non-conclusive |
+| 1.2.8.6       | 46       | Non-conclusive |
+| 1.2.8.7       | 780      | Non-conclusive |
+| 1.3           | 16       | Non-conclusive |
+| 1.3.1.1       | 34       | Non-conclusive |
+| 1.3.2         | 10       | Non-conclusive |
+| 1.3.3         | 114      | Non-conclusive |
+| 1.3.4.1       | 190      | Non-conclusive |
+| 1.3.4.3       | 88       | Non-conclusive |
+| 1.3.4.4       | 774      | Non-conclusive |
+| 1.4.1         | 610      | Non-conclusive |
+| 1.4.10        | 178      | Non-conclusive |
+| 1.4.11        | 26       | Non-conclusive |
+| 1.4.12        | 138      | Non-conclusive |
+| 1.4.13        | 1134     | Non-conclusive |
+| 1.4.14        | 32       | Non-conclusive |
+| 1.4.15        | 888      | Non-conclusive |
+| 1.4.16        | 8        | Non-conclusive |
+| 1.4.18        | 1084     | Non-conclusive |
+| 1.4.19        | 1352     | Non-conclusive |
+| 1.4.20        | 10       | Non-conclusive |
+| 1.4.21        | 222      | Non-conclusive |
+| 1.4.22        | 586      | Non-conclusive |
+| 1.4.23        | 316      | Non-conclusive |
+| 1.4.24        | 2036     | Non-conclusive |
+| 1.4.25        | 522      | Non-conclusive |
+| 1.4.3         | 82       | Non-conclusive |
+| 1.4.4         | 230      | Non-conclusive |
+| 1.4.5         | 24       | Non-conclusive |
+| 1.4.6         | 144      | Non-conclusive |
+| 1.4.7         | 1286     | Non-conclusive |
+| 1.4.8         | 8        | Non-conclusive |
+| 1.4.9         | 8        | Non-conclusive |
+| 1.5.0         | 24       | Non-conclusive |
+| 1.5.11        | 8        | Non-conclusive |
+| 1.5.2         | 10       | Non-conclusive |
+| 1.5.2.1       | 62       | Non-conclusive |
+| 1.5.2.2       | 322      | Non-conclusive |
+| 1.5.2.3       | 46       | Non-conclusive |
+| 1.5.2.4       | 32       | Non-conclusive |
+| 1.5.2.5       | 592      | Non-conclusive |
+| 1.5.2.6       | 430      | Non-conclusive |
+| 1.5.2.7       | 370      | Non-conclusive |
+| 1.5.2.8       | 478      | Non-conclusive |
+| 1.5.3         | 136      | Non-conclusive |
+| 1.5.3.1       | 8        | Non-conclusive |
+| 1.5.3.2       | 500      | Non-conclusive |
+| 1.5.3.3       | 1220     | Non-conclusive |
+| 1.5.4.1       | 10       | Non-conclusive |
+| 1.5.4.2       | 744      | Non-conclusive |
+| 1.5.5         | 244      | Non-conclusive |
+| 1.5.5.1       | 16       | Non-conclusive |
+| 1.5.5.3       | 222      | Non-conclusive |
+| 1.5.6         | 516      | Non-conclusive |
+| 1.5.72        | 16       | Non-conclusive |
+| 1.5.74        | 40       | Non-conclusive |
+| 1.5.8         | 8        | Non-conclusive |
+| 1.6           | 298      | Non-conclusive |
+| 1.6.1         | 774      | Non-conclusive |
+| 1.6.2         | 24       | Non-conclusive |
+| 1.6.3         | 1426     | Non-conclusive |
+| 1.7           | 362      | Non-conclusive |
+| 1.7.1         | 3468     | Non-conclusive |
+| 1.7.3         | 142      | Non-conclusive |
+| 1.7.3.1       | 144      | Non-conclusive |
+| 1.7.3.3       | 592      | Non-conclusive |
+| 1.7.4         | 13654    | Non-conclusive |
+| 10.0          | 6956     | Non-conclusive |
+| 10.0-RC1      | 24       | Non-conclusive |
+| 10.0.1        | 14808    | Non-conclusive |
+| 10.1          | 516      | Non-conclusive |
+| 10.1-RC1      | 2        | Non-conclusive |
+| 10.1.1        | 1650     | Non-conclusive |
+| 10.1.2        | 2622     | Non-conclusive |
+| 10.1.3        | 15786    | Non-conclusive |
+| 11.0          | 16608    | Non-conclusive |
+| 11.0-RC2      | 16       | Non-conclusive |
+| 11.0-RC4      | 8        | Non-conclusive |
+| 11.1          | 6402     | Non-conclusive |
+| 11.1.1        | 12754    | Non-conclusive |
+| 11.2          | 1754     | Non-conclusive |
+| 11.2.1        | 17874    | Non-conclusive |
+| 11.3          | 24210    | Non-conclusive |
+| 11.4          | 18670    | Non-conclusive |
+| 11.4-RC2      | 16       | Non-conclusive |
+| 11.5          | 20710    | Non-conclusive |
+| 11.5-RC1      | 136      | Non-conclusive |
+| 11.6          | 66362    | Non-conclusive |
+| 11.6-RC5      | 24       | Non-conclusive |
+| 11.7          | 21044    | Non-conclusive |
+| 11.8          | 20684    | Non-conclusive |
+| 11.8-RC1      | 20       | Non-conclusive |
+| 11.9          | 24040    | Non-conclusive |
+| 11.9-RC5      | 8        | Non-conclusive |
+| 12.0          | 29742    | Non-conclusive |
+| 12.0-RC1      | 24       | Non-conclusive |
+| 12.1          | 28438    | Non-conclusive |
+| 12.1-RC1      | 8        | Non-conclusive |
+| 12.1-RC4      | 8        | Non-conclusive |
+| 12.2          | 30884    | Non-conclusive |
+| 12.3          | 30564    | Non-conclusive |
+| 12.3-RC1      | 10       | Non-conclusive |
+| 12.4          | 45086    | Non-conclusive |
+| 12.5          | 14742    | Non-conclusive |
+| 12.5.1        | 8894     | Non-conclusive |
+| 12.6          | 7318     | Non-conclusive |
+| 12.6-RC1      | 16       | Non-conclusive |
+| 12.6.1        | 2546     | Non-conclusive |
+| 12.6.2        | 17364    | Non-conclusive |
+| 12.7          | 4556     | Non-conclusive |
+| 12.7.1        | 34290    | Non-conclusive |
+| 12.8          | 14670    | Non-conclusive |
+| 12.8.1        | 9460     | Non-conclusive |
+| 12.9          | 982      | Non-conclusive |
+| 12.9-RC1      | 8        | Non-conclusive |
+| 12.9.1        | 28122    | Non-conclusive |
+| 13.0          | 27946    | Non-conclusive |
+| 13.0-RC1      | 2        | Non-conclusive |
+| 13.1          | 31454    | Non-conclusive |
+| 13.1-RC1      | 8        | Non-conclusive |
+| 13.2          | 39374    | Non-conclusive |
+| 13.2-RC1      | 16       | Non-conclusive |
+| 13.3          | 31548    | Non-conclusive |
+| 13.4          | 5482     | Non-conclusive |
+| 13.4-RC2      | 48       | Non-conclusive |
+| 13.4.1        | 33752    | Non-conclusive |
+| 13.5          | 29492    | Non-conclusive |
+| 13.5-RC1      | 8        | Non-conclusive |
+| 14.0          | 1898     | Non-conclusive |
+| 14.0-RC6      | 16       | Non-conclusive |
+| 14.0.1        | 1672     | Non-conclusive |
+| 14.0.2        | 3314     | Non-conclusive |
+| 14.0.3        | 570      | Non-conclusive |
+| 14.0.4        | 30792    | Non-conclusive |
+| 14.1          | 28470    | Non-conclusive |
+| 14.2          | 33652    | Non-conclusive |
+| 14.2-RC1      | 16       | Non-conclusive |
+| 14.3          | 33006    | Non-conclusive |
+| 14.3-RC1      | 8        | Non-conclusive |
+| 14.4          | 1028     | Non-conclusive |
+| 14.4-RC1      | 8        | Non-conclusive |
+| 14.4.1        | 34492    | Non-conclusive |
+| 14.5          | 42480    | Non-conclusive |
+| 14.5-RC5      | 8        | Non-conclusive |
+| 14.6          | 1800     | Non-conclusive |
+| 14.6.1        | 38534    | Non-conclusive |
+| 14.7          | 36358    | Non-conclusive |
+| 14.7-RC1      | 8        | Non-conclusive |
+| 14.8          | 15242    | Non-conclusive |
+| 14.8.1        | 17280    | Non-conclusive |
+| 14.9          | 74592    | Non-conclusive |
+| 14.9-RC2      | 2        | Non-conclusive |
+| 14.9-RC6      | 8        | Non-conclusive |
+| 15.0          | 40324    | Non-conclusive |
+| 15.0-RC8      | 8        | Non-conclusive |
+| 15.1          | 5326     | Non-conclusive |
+| 15.1-RC5      | 8        | Non-conclusive |
+| 15.1.1        | 30400    | Non-conclusive |
+| 15.2          | 20218    | Non-conclusive |
+| 15.2-RC3      | 8        | Non-conclusive |
+| 15.2.1        | 45526    | Non-conclusive |
+| 15.3          | 54328    | Non-conclusive |
+| 15.3-RC1      | 8        | Non-conclusive |
+| 15.3-RC3      | 8        | Non-conclusive |
+| 15.4          | 73932    | Non-conclusive |
+| 15.4-RC2      | 8        | Non-conclusive |
+| 15.4-RC3      | 32       | Non-conclusive |
+| 15.4-RC4      | 8        | Non-conclusive |
+| 15.5          | 65458    | Non-conclusive |
+| 15.5-RC2      | 8        | Non-conclusive |
+| 15.6          | 1184     | Non-conclusive |
+| 15.6-RC3      | 8        | Non-conclusive |
+| 15.6.1        | 878      | Non-conclusive |
+| 15.6.2        | 38822    | Non-conclusive |
+| 15.7          | 49298    | Non-conclusive |
+| 15.7-RC2      | 10       | Non-conclusive |
+| 15.7-RC3      | 16       | Non-conclusive |
+| 15.8          | 39808    | Non-conclusive |
+| 15.9          | 37898    | Non-conclusive |
+| 15.9-RC5      | 8        | Non-conclusive |
+| 15.9.1        | 25980    | Non-conclusive |
+| 15.9.2        | 37946    | Non-conclusive |
+| 16.0          | 2036     | Non-conclusive |
+| 16.0-RC2      | 2        | Non-conclusive |
+| 16.0-RC6      | 8        | Non-conclusive |
+| 16.0-RC7      | 24       | Non-conclusive |
+| 16.0.1        | 6314     | Non-conclusive |
+| 16.0.2        | 52326    | Non-conclusive |
+| 16.1          | 2690     | Non-conclusive |
+| 16.1.1        | 66780    | Non-conclusive |
+| 16.2          | 62146    | Non-conclusive |
+| 16.2-beta1    | 10       | Non-conclusive |
+| 16.3          | 47954    | Non-conclusive |
+| 16.3-beta2    | 8        | Non-conclusive |
+| 16.4          | 43992    | Non-conclusive |
+| 16.4-RC1      | 8        | Non-conclusive |
+| 16.4-RC3      | 8        | Non-conclusive |
+| 16.5          | 46514    | Non-conclusive |
+| 16.5-RC1      | 8        | Non-conclusive |
+| 16.6          | 9932     | Non-conclusive |
+| 16.6-RC1      | 24       | Non-conclusive |
+| 16.6-RC3      | 2        | Non-conclusive |
+| 16.6.1        | 35120    | Non-conclusive |
+| 16.7          | 53156    | Non-conclusive |
+| 16.7.1-RC1    | 12       | Non-conclusive |
+| 16.8          | 54738    | Non-conclusive |
+| 16.9          | 50538    | Non-conclusive |
+| 17.0          | 53032    | Non-conclusive |
+| 17.0-RC1      | 2        | Non-conclusive |
+| 17.0-RC2      | 8        | Non-conclusive |
+| 17.1          | 60600    | Non-conclusive |
+| 17.1-RC5      | 8        | Non-conclusive |
+| 17.2          | 29560    | Non-conclusive |
+| 17.2-RC3      | 8        | Non-conclusive |
+| 17.2.1        | 30964    | Non-conclusive |
+| 17.3          | 62574    | Non-conclusive |
+| 17.3-RC5      | 8        | Non-conclusive |
+| 17.3-RC9      | 8        | Non-conclusive |
+| 17.4          | 69488    | Non-conclusive |
+| 17.4-RC6      | 20       | Non-conclusive |
+| 17.5          | 72426    | Non-conclusive |
+| 17.5-RC2      | 8        | Non-conclusive |
+| 17.5-RC4      | 8        | Non-conclusive |
+| 17.6          | 69276    | Non-conclusive |
+| 17.7          | 10718    | Non-conclusive |
+| 17.7.1        | 61912    | Non-conclusive |
+| 17.8          | 129784   | Non-conclusive |
+| 17.9          | 93358    | Non-conclusive |
+| 17.9-RC7      | 8        | Non-conclusive |
+| 18.0          | 98696    | Non-conclusive |
+| 18.0-RC2      | 8        | Non-conclusive |
+| 18.1          | 100280   | Non-conclusive |
+| 18.2          | 119384   | Non-conclusive |
+| 18.3          | 114446   | Non-conclusive |
+| 18.3-RC10     | 8        | Non-conclusive |
+| 18.3-RC9      | 8        | Non-conclusive |
+| 18.4          | 2354     | Non-conclusive |
+| 18.4-RC6      | 8        | Non-conclusive |
+| 18.4.1        | 190414   | Non-conclusive |
+| 18.5          | 4096     | Non-conclusive |
+| 18.5-RC1      | 8        | Non-conclusive |
+| 18.5-RC10     | 4        | Non-conclusive |
+| 18.5.1        | 91354    | Non-conclusive |
+| 18.6          | 98848    | Non-conclusive |
+| 18.6-RC2      | 8        | Non-conclusive |
+| 18.6-RC3      | 12       | Non-conclusive |
+| 18.7          | 26214    | Non-conclusive |
+| 18.7-RC1      | 2        | Non-conclusive |
+| 18.7-RC2      | 16       | Non-conclusive |
+| 18.7-RC3      | 10       | Non-conclusive |
+| 18.8          | 72774    | Non-conclusive |
+| 18.9          | 121528   | Non-conclusive |
+| 18.9-RC1      | 8        | Non-conclusive |
+| 19.0          | 122590   | Non-conclusive |
+| 19.0-RC5      | 2        | Non-conclusive |
+| 19.1          | 133112   | Non-conclusive |
+| 19.1-RC1      | 10       | Non-conclusive |
+| 19.1-RC2      | 2        | Non-conclusive |
+| 19.1-RC6      | 8        | Non-conclusive |
+| 19.1-RC7      | 8        | Non-conclusive |
+| 19.1-RC9      | 2        | Non-conclusive |
+| 19.10         | 979036   | Non-conclusive |
+| 19.11         | 810942   | Non-conclusive |
+| 19.11-RC6     | 16       | Non-conclusive |
+| 19.11-RC7     | 8        | Non-conclusive |
+| 19.11-RC8     | 80       | Non-conclusive |
+| 19.12         | 618750   | Non-conclusive |
+| 19.12-RC1     | 8        | Non-conclusive |
+| 19.12-RC10    | 16       | Non-conclusive |
+| 19.12-RC6     | 8        | Non-conclusive |
+| 19.12-RC7     | 16       | Non-conclusive |
+| 19.12-RC9     | 8        | Non-conclusive |
+| 19.13         | 4868850  | Non-conclusive |
+| 19.14-RC1     | 16       | Non-conclusive |
+| 19.14-RC2     | 8        | Non-conclusive |
+| 19.14-RC3     | 62       | Non-conclusive |
+| 19.14-RC4     | 40       | Non-conclusive |
+| 19.14-RC5     | 8        | Non-conclusive |
+| 19.2          | 131988   | Non-conclusive |
+| 19.2-RC9      | 8        | Non-conclusive |
+| 19.3          | 142170   | Non-conclusive |
+| 19.3-RC14     | 8        | Non-conclusive |
+| 19.3-RC3      | 8        | Non-conclusive |
+| 19.3.7        | 8        | Non-conclusive |
+| 19.4          | 251976   | Non-conclusive |
+| 19.5          | 2664     | Non-conclusive |
+| 19.5-RC5      | 16       | Non-conclusive |
+| 19.5-RC6      | 10       | Non-conclusive |
+| 19.5.1        | 130730   | Non-conclusive |
+| 19.5.1-RC1    | 8        | Non-conclusive |
+| 19.6          | 107030   | Non-conclusive |
+| 19.6-RC9      | 8        | Non-conclusive |
+| 19.6.1        | 261656   | Non-conclusive |
+| 19.7          | 9064     | Non-conclusive |
+| 19.7-RC1      | 8        | Non-conclusive |
+| 19.7-RC13     | 8        | Non-conclusive |
+| 19.7-RC14     | 8        | Non-conclusive |
+| 19.7-RC15     | 24       | Non-conclusive |
+| 19.7-RC2      | 8        | Non-conclusive |
+| 19.7.1        | 240026   | Non-conclusive |
+| 19.7.1-RC8    | 2        | Non-conclusive |
+| 19.7.2        | 94510    | Non-conclusive |
+| 19.8          | 292074   | Non-conclusive |
+| 19.8-RC10     | 2        | Non-conclusive |
+| 19.8-RC3      | 16       | Non-conclusive |
+| 19.8-RC8      | 8        | Non-conclusive |
+| 19.9          | 375394   | Non-conclusive |
+| 19.9-RC1      | 8        | Non-conclusive |
+| 19.9-RC5      | 24       | Non-conclusive |
+| 2.0           | 616      | Non-conclusive |
+| 2.0.1         | 2330     | Non-conclusive |
+| 2.1           | 96       | Non-conclusive |
+| 2.1.1         | 8140     | Non-conclusive |
+| 2.2           | 248      | Non-conclusive |
+| 2.2.1         | 6464     | Non-conclusive |
+| 2.3           | 150      | Non-conclusive |
+| 2.3.1         | 122      | Non-conclusive |
+| 2.3.2         | 2466     | Non-conclusive |
+| 2.3.3         | 68       | Non-conclusive |
+| 2.3.4         | 7124     | Non-conclusive |
+| 2.3.4.3       | 10       | Non-conclusive |
+| 2.3.4.4       | 26       | Non-conclusive |
+| 2.3.42        | 8        | Non-conclusive |
+| 2.3.5         | 13676    | Non-conclusive |
+| 20            | 4        | Non-conclusive |
+| 20.0-RC2      | 10       | Non-conclusive |
+| 20.0-RC3      | 4        | Non-conclusive |
+| 3.0           | 62       | Non-conclusive |
+| 3.0.1         | 204      | Non-conclusive |
+| 3.0.2         | 8        | Non-conclusive |
+| 3.0.3         | 976      | Non-conclusive |
+| 3.0.4         | 940      | Non-conclusive |
+| 3.0.5         | 56       | Non-conclusive |
+| 3.0.6         | 4434     | Non-conclusive |
+| 3.0.7         | 15064    | Non-conclusive |
+| 3.1           | 1948     | Non-conclusive |
+| 3.1.1         | 5564     | Non-conclusive |
+| 3.1.2         | 9974     | Non-conclusive |
+| 3.2           | 68       | Non-conclusive |
+| 3.2.1         | 350      | Non-conclusive |
+| 3.2.2         | 16       | Non-conclusive |
+| 3.2.3         | 1914     | Non-conclusive |
+| 3.2.4         | 1850     | Non-conclusive |
+| 3.2.5         | 11180    | Non-conclusive |
+| 3.3.0         | 390      | Non-conclusive |
+| 3.3.1         | 1516     | Non-conclusive |
+| 3.3.2         | 3270     | Non-conclusive |
+| 3.3.3         | 16       | Non-conclusive |
+| 3.3.4         | 5210     | Non-conclusive |
+| 3.4           | 4116     | Non-conclusive |
+| 3.4.1         | 1606     | Non-conclusive |
+| 3.4.2         | 9796     | Non-conclusive |
+| 3.5           | 8154     | Non-conclusive |
+| 3.6           | 2250     | Non-conclusive |
+| 3.6.1         | 2782     | Non-conclusive |
+| 3.7.0         | 3150     | Non-conclusive |
+| 3.7.1         | 6324     | Non-conclusive |
+| 3.8           | 8668     | Non-conclusive |
+| 3.9           | 6126     | Non-conclusive |
+| 4.0           | 2808     | Non-conclusive |
+| 4.0.2         | 8800     | Non-conclusive |
+| 4.1           | 6660     | Non-conclusive |
+| 4.2           | 1118     | Non-conclusive |
+| 4.2.1         | 7524     | Non-conclusive |
+| 4.3           | 8934     | Non-conclusive |
+| 4.4           | 13688    | Non-conclusive |
+| 4.5           | 10746    | Non-conclusive |
+| 4.6           | 9358     | Non-conclusive |
+| 4.7           | 3642     | Non-conclusive |
+| 4.7.1         | 7328     | Non-conclusive |
+| 4.8           | 7262     | Non-conclusive |
+| 4.9           | 15866    | Non-conclusive |
+| 5.0           | 318      | Non-conclusive |
+| 5.0.1         | 3274     | Non-conclusive |
+| 5.0.2         | 5904     | Non-conclusive |
+| 5.1           | 7312     | Non-conclusive |
+| 5.2           | 7384     | Non-conclusive |
+| 5.3           | 72       | Non-conclusive |
+| 5.3.1         | 392      | Non-conclusive |
+| 5.3.2         | 2342     | Non-conclusive |
+| 5.3.3         | 4644     | Non-conclusive |
+| 5.4           | 8972     | Non-conclusive |
+| 5.4.1         | 624      | Non-conclusive |
+| 5.4.2         | 3014     | Non-conclusive |
+| 5.5           | 1980     | Non-conclusive |
+| 5.5.1         | 6988     | Non-conclusive |
+| 5.6           | 2392     | Non-conclusive |
+| 5.6.1         | 6298     | Non-conclusive |
+| 5.7           | 812      | Non-conclusive |
+| 5.7.1         | 15524    | Non-conclusive |
+| 5.8           | 18566    | Non-conclusive |
+| 5.9           | 24       | Non-conclusive |
+| 5.9.1         | 3214     | Non-conclusive |
+| 5.9.2         | 156      | Non-conclusive |
+| 5.9.3         | 5848     | Non-conclusive |
+| 6.0           | 8248     | Non-conclusive |
+| 6.1           | 854      | Non-conclusive |
+| 6.1.1         | 11076    | Non-conclusive |
+| 6.2           | 16786    | Non-conclusive |
+| 6.3           | 3446     | Non-conclusive |
+| 6.3.1         | 11164    | Non-conclusive |
+| 7.0           | 738      | Non-conclusive |
+| 7.0.1         | 1396     | Non-conclusive |
+| 7.0.2         | 2404     | Non-conclusive |
+| 7.0.3         | 7574     | Non-conclusive |
+| 7.1           | 10062    | Non-conclusive |
+| 7.2           | 10980    | Non-conclusive |
+| 7.3           | 9244     | Non-conclusive |
+| 7.3-RC1       | 18       | Non-conclusive |
+| 7.4           | 664      | Non-conclusive |
+| 7.4.1         | 984      | Non-conclusive |
+| 7.4.2         | 8000     | Non-conclusive |
+| 7.5           | 1000     | Non-conclusive |
+| 7.5.1         | 13912    | Non-conclusive |
+| 7.5.3         | 5928     | Non-conclusive |
+| 7.6           | 2590     | Non-conclusive |
+| 7.6.1         | 15602    | Non-conclusive |
+| 7.7           | 1588     | Non-conclusive |
+| 7.7-RC1       | 8        | Non-conclusive |
+| 7.7.1         | 2086     | Non-conclusive |
+| 7.7.2         | 1948     | Non-conclusive |
+| 7.7.3         | 6500     | Non-conclusive |
+| 7.8           | 11114    | Non-conclusive |
+| 7.9           | 13024    | Non-conclusive |
+| 7.9.1         | 6996     | Non-conclusive |
+| 8.0           | 11848    | Non-conclusive |
+| 8.1           | 5042     | Non-conclusive |
+| 8.1.1         | 2642     | Non-conclusive |
+| 8.1.2         | 4918     | Non-conclusive |
+| 8.2           | 8482     | Non-conclusive |
+| 8.2.1         | 4310     | Non-conclusive |
+| 8.3           | 13996    | Non-conclusive |
+| 8.3-RC1       | 2        | Non-conclusive |
+| 8.3.5         | 128      | Non-conclusive |
+| 8.4           | 14654    | Non-conclusive |
+| 8.4-RC1       | 12       | Non-conclusive |
+| 9.0           | 650      | Non-conclusive |
+| 9.0.1         | 1542     | Non-conclusive |
+| 9.0.2         | 5870     | Non-conclusive |
+| 9.0.3         | 6846     | Non-conclusive |
+| 9.1           | 18198    | Non-conclusive |
+| 9.2           | 7344     | Non-conclusive |
+| 9.2-RC1       | 8        | Non-conclusive |
+| 9.2-RC3       | 2        | Non-conclusive |
+| 9.2.1         | 32732    | Non-conclusive |
+| 9.3           | 17530    | Non-conclusive |
+| 9.3-RC3       | 16       | Non-conclusive |
+| 9.4           | 16708    | Non-conclusive |
+| 9.5           | 25206    | Non-conclusive |
+| 9.5-beta1     | 8        | Non-conclusive |
+| 9.6           | 18520    | Non-conclusive |
+| 9.6-beta1     | 16       | Non-conclusive |
+| 9.7           | 18948    | Non-conclusive |
+| 9.7-beta1     | 8        | Non-conclusive |
+| 99            | 10       | Non-conclusive |
+| 99.3          | 8        | Non-conclusive |
+| 999.3.5       | 8        | Non-conclusive |
+| \1            | 12       | Non-conclusive |
 
-## Moment.js
+## Bootstrap
 
-|    version     | count | is_supported |
-| -------------- | ----- | ------------ |
-| 1.2            |     2 | null         | 
-| 2.10           |     5 | null         | 
-| 2.1            |     1 | null         | 
-| 2.11           |     3 | null         | 
-| 2.12           |     1 | null         | 
-| 2.13           |     1 | null         | 
-| 2.15           |     1 | null         | 
-| 2.17           |     2 | null         | 
-| 2.18           |     3 | null         | 
-| 2.19           |     2 | null         | 
-| 2.20           |     1 | null         | 
-| 2.21           |     3 | null         | 
-| 2.22           |    10 | null         | 
-| 2.23           |     1 | null         | 
-| 2.24           |    15 | null         | 
-| 2.26           |     2 | null         | 
-| 2.27           |     1 | null         | 
-| 2.5            |     1 | null         | 
-| 2.6            |     1 | null         | 
-| 2.8            |     1 | null         | 
-| 2.9            |     6 | null         | 
+| info          | count    | is_supported   |
+|---------------|----------|----------------|
+|               | 3568873  | Not-versioned  |
+| #             | 1        | Non-conclusive |
+| *             | 5        | Non-conclusive |
+| **            | 1        | Non-conclusive |
+| *.*.*         | 14       | Non-conclusive |
+| ....          | 4        | Non-conclusive |
+| 0             | 1882     | Unsupported    |
+| 0-0-1         | 1946     | Non-conclusive |
+| 0-0-2         | 8        | Non-conclusive |
+| 0-09901       | 4        | Non-conclusive |
+| 0-11-0        | 4        | Non-conclusive |
+| 0-13-0        | 8        | Non-conclusive |
+| 0-5           | 1        | Non-conclusive |
+| 0-5-3         | 8        | Non-conclusive |
+| 0.0           | 3        | Unsupported    |
+| 0.0-2         | 7        | Non-conclusive |
+| 0.0.0         | 13       | Unsupported    |
+| 0.0.0-beta    | 4        | Unsupported    |
+| 0.0.1         | 32       | Unsupported    |
+| 0.0.11        | 59       | Unsupported    |
+| 0.0.2         | 21       | Unsupported    |
+| 0.0.26        | 8        | Unsupported    |
+| 0.0.292       | 4        | Unsupported    |
+| 0.0.31        | 9        | Unsupported    |
+| 0.0.32        | 1        | Unsupported    |
+| 0.0.338       | 20       | Unsupported    |
+| 0.0.4         | 4        | Unsupported    |
+| 0.0.57        | 39       | Unsupported    |
+| 0.0.7         | 4        | Unsupported    |
+| 0.0.88        | 4        | Unsupported    |
+| 0.0037-39     | 4        | Non-conclusive |
+| 0.07d229      | 1        | Non-conclusive |
+| 0.1           | 42       | Unsupported    |
+| 0.1.0         | 73       | Unsupported    |
+| 0.1.1         | 5        | Unsupported    |
+| 0.1.2         | 8        | Unsupported    |
+| 0.1.28        | 13       | Unsupported    |
+| 0.1.3         | 5        | Unsupported    |
+| 0.1.66        | 16       | Unsupported    |
+| 0.1.70        | 4        | Unsupported    |
+| 0.1.72        | 6        | Unsupported    |
+| 0.1.84        | 4        | Unsupported    |
+| 0.1.85        | 26       | Unsupported    |
+| 0.10          | 37       | Unsupported    |
+| 0.10.0        | 1114     | Unsupported    |
+| 0.10.1        | 13       | Unsupported    |
+| 0.10.2        | 118      | Unsupported    |
+| 0.10.3        | 108      | Unsupported    |
+| 0.11.0        | 1483     | Unsupported    |
+| 0.11.1        | 9        | Unsupported    |
+| 0.11.2        | 318      | Unsupported    |
+| 0.11.5        | 1254     | Unsupported    |
+| 0.11.7        | 4        | Unsupported    |
+| 0.11.8        | 52       | Unsupported    |
+| 0.11.9        | 3620     | Unsupported    |
+| 0.12          | 4        | Unsupported    |
+| 0.12.0        | 3687     | Unsupported    |
+| 0.12.1        | 1464     | Unsupported    |
+| 0.12.3        | 4        | Unsupported    |
+| 0.13.0        | 871      | Unsupported    |
+| 0.13.1        | 70       | Unsupported    |
+| 0.13.2        | 116      | Unsupported    |
+| 0.13.3        | 455      | Unsupported    |
+| 0.13.4        | 425      | Unsupported    |
+| 0.13.41       | 4        | Unsupported    |
+| 0.13.9        | 1        | Unsupported    |
+| 0.14.0        | 42       | Unsupported    |
+| 0.14.1        | 120      | Unsupported    |
+| 0.14.2        | 217      | Unsupported    |
+| 0.14.3        | 1228     | Unsupported    |
+| 0.1435        | 4        | Unsupported    |
+| 0.15          | 8        | Unsupported    |
+| 0.155         | 4        | Unsupported    |
+| 0.16.6        | 4        | Unsupported    |
+| 0.162+3       | 2        | Non-conclusive |
+| 0.2           | 24       | Unsupported    |
+| 0.2-1         | 8        | Non-conclusive |
+| 0.2-120       | 12       | Non-conclusive |
+| 0.2.0         | 103      | Unsupported    |
+| 0.2.1         | 47       | Unsupported    |
+| 0.2.16        | 8        | Unsupported    |
+| 0.2.22        | 9        | Unsupported    |
+| 0.2.5         | 47       | Unsupported    |
+| 0.2.6         | 22       | Unsupported    |
+| 0.22.3        | 4        | Unsupported    |
+| 0.25.1        | 1        | Unsupported    |
+| 0.27.3        | 4        | Unsupported    |
+| 0.27.6        | 9        | Unsupported    |
+| 0.28          | 8        | Unsupported    |
+| 0.28a960      | 4        | Non-conclusive |
+| 0.29.3        | 5        | Unsupported    |
+| 0.29.4        | 4        | Unsupported    |
+| 0.3           | 5        | Unsupported    |
+| 0.3-9         | 4        | Non-conclusive |
+| 0.3.0         | 62       | Unsupported    |
+| 0.3.1         | 4        | Unsupported    |
+| 0.3.12        | 1        | Unsupported    |
+| 0.3.2         | 4        | Unsupported    |
+| 0.3.6         | 4        | Unsupported    |
+| 0.3.9         | 2        | Unsupported    |
+| 0.30.0        | 4        | Unsupported    |
+| 0.30.2        | 4        | Unsupported    |
+| 0.30.3        | 4        | Unsupported    |
+| 0.30.5        | 4        | Unsupported    |
+| 0.30.6        | 4        | Unsupported    |
+| 0.31.0        | 2        | Unsupported    |
+| 0.31.1        | 4        | Unsupported    |
+| 0.31.2        | 12       | Unsupported    |
+| 0.31.3        | 4        | Unsupported    |
+| 0.31.5        | 181      | Unsupported    |
+| 0.32.1        | 33       | Unsupported    |
+| 0.32.4        | 1163     | Unsupported    |
+| 0.33.0        | 16       | Unsupported    |
+| 0.33.1        | 37375    | Unsupported    |
+| 0.376         | 1        | Unsupported    |
+| 0.4.0         | 38       | Unsupported    |
+| 0.4.1         | 3        | Unsupported    |
+| 0.4.10        | 4        | Unsupported    |
+| 0.4.2         | 30       | Unsupported    |
+| 0.4.3         | 8        | Unsupported    |
+| 0.4.4         | 4        | Unsupported    |
+| 0.4.5         | 296      | Unsupported    |
+| 0.4.7         | 5        | Unsupported    |
+| 0.4b404       | 1        | Non-conclusive |
+| 0.5           | 49       | Unsupported    |
+| 0.5-2         | 4        | Non-conclusive |
+| 0.5.0         | 129      | Unsupported    |
+| 0.5.1         | 103      | Unsupported    |
+| 0.5.10        | 156      | Unsupported    |
+| 0.5.2         | 444      | Unsupported    |
+| 0.5.3         | 607      | Unsupported    |
+| 0.5.5         | 8        | Unsupported    |
+| 0.5.7         | 4        | Unsupported    |
+| 0.5.8         | 8        | Unsupported    |
+| 0.5.9         | 12       | Unsupported    |
+| 0.6           | 10       | Unsupported    |
+| 0.6.0         | 155      | Unsupported    |
+| 0.6.1         | 8        | Unsupported    |
+| 0.68.3        | 4        | Unsupported    |
+| 0.7.0         | 79       | Unsupported    |
+| 0.7.3         | 1        | Unsupported    |
+| 0.8           | 14       | Unsupported    |
+| 0.8.0         | 1850     | Unsupported    |
+| 0.8.1         | 3        | Unsupported    |
+| 0.8.2         | 44       | Unsupported    |
+| 0.9.0         | 162      | Unsupported    |
+| 0.9.1         | 5        | Unsupported    |
+| 0.9.10        | 107      | Unsupported    |
+| 0.9.13        | 1023     | Unsupported    |
+| 0.9.14        | 36       | Unsupported    |
+| 0.9.15        | 2081     | Unsupported    |
+| 0.9.16        | 125      | Unsupported    |
+| 0.9.3         | 4        | Unsupported    |
+| 0.9.4         | 57       | Unsupported    |
+| 0.9.54        | 4        | Unsupported    |
+| 0.9.7         | 1        | Unsupported    |
+| 0.95          | 4        | Unsupported    |
+| 00            | 24       | Unsupported    |
+| 00-35-151     | 4        | Non-conclusive |
+| 00-35-377     | 4        | Non-conclusive |
+| 0000000259    | 4        | Supported      |
+| 000114        | 4        | Supported      |
+| 000217        | 4        | Supported      |
+| 0003          | 4        | Unsupported    |
+| 000469ff      | 4        | Non-conclusive |
+| 0005          | 4        | Supported      |
+| 000a0d87      | 4        | Non-conclusive |
+| 000b1d87      | 4        | Non-conclusive |
+| 000f8ea       | 4        | Non-conclusive |
+| 000f9         | 1        | Non-conclusive |
+| 001           | 6        | Unsupported    |
+| 0019          | 4        | Supported      |
+| 002           | 164      | Unsupported    |
+| 00200         | 1        | Supported      |
+| 002060        | 1        | Supported      |
+| 00234         | 4        | Supported      |
+| 003           | 14       | Unsupported    |
+| 003fb4a6      | 4        | Non-conclusive |
+| 005           | 2        | Supported      |
+| 0081C6        | 4        | Non-conclusive |
+| 00840b41      | 4        | Non-conclusive |
+| 008e4373      | 4        | Non-conclusive |
+| 009           | 4        | Supported      |
+| 009474ef70    | 4        | Non-conclusive |
+| 00950         | 2        | Supported      |
+| 009b1d73      | 4        | Non-conclusive |
+| 00I7E7        | 4        | Non-conclusive |
+| 00_14_03      | 225      | Non-conclusive |
+| 00b87c889c    | 4        | Non-conclusive |
+| 00bfb61e      | 4        | Non-conclusive |
+| 00c926b       | 4        | Non-conclusive |
+| 00db00a5      | 5        | Non-conclusive |
+| 00e67d51      | 2        | Non-conclusive |
+| 00e8259f      | 5        | Non-conclusive |
+| 00ea9a5e      | 4        | Non-conclusive |
+| 01            | 139      | Unsupported    |
+| 01-02-2019    | 4        | Non-conclusive |
+| 01.01.56      | 1        | Unsupported    |
+| 01114a52      | 1        | Non-conclusive |
+| 011d0efa      | 4        | Non-conclusive |
+| 011e82b2      | 1        | Non-conclusive |
+| 01341e0f      | 8        | Non-conclusive |
+| 013c5327      | 4        | Non-conclusive |
+| 013ef06c      | 4        | Non-conclusive |
+| 0159af54      | 1        | Non-conclusive |
+| 017-9         | 18       | Non-conclusive |
+| 017a04        | 1        | Non-conclusive |
+| 017b243f      | 1        | Non-conclusive |
+| 017f1771      | 4        | Non-conclusive |
+| 017f659       | 4        | Non-conclusive |
+| 0190f03       | 4        | Non-conclusive |
+| 019ab133eb    | 1        | Non-conclusive |
+| 019eb238      | 4        | Non-conclusive |
+| 01_04_01      | 4        | Non-conclusive |
+| 01a1887ade    | 1        | Non-conclusive |
+| 01b0ae90      | 5        | Non-conclusive |
+| 01b2          | 1        | Non-conclusive |
+| 01bab557      | 5        | Non-conclusive |
+| 01bad397f7    | 4        | Non-conclusive |
+| 01c280a7      | 5        | Non-conclusive |
+| 01c30dff      | 2        | Non-conclusive |
+| 01cb1daf63    | 1        | Non-conclusive |
+| 01cc8fd7      | 4        | Non-conclusive |
+| 01ce2a726d    | 4        | Non-conclusive |
+| 01d4eac1      | 1        | Non-conclusive |
+| 01d90e1248    | 1        | Non-conclusive |
+| 01e9c66092    | 4        | Non-conclusive |
+| 01z4          | 1        | Non-conclusive |
+| 02            | 57       | Unsupported    |
+| 02-17-002     | 4        | Non-conclusive |
+| 02184         | 4        | Supported      |
+| 021b339a90    | 4        | Non-conclusive |
+| 022           | 1        | Supported      |
+| 0225          | 4        | Supported      |
+| 0226d4af      | 1        | Non-conclusive |
+| 023           | 3        | Supported      |
+| 0232          | 4        | Supported      |
+| 0235          | 17       | Supported      |
+| 023b3876bb    | 4        | Non-conclusive |
+| 023d39c6      | 1        | Non-conclusive |
+| 023e972d3b    | 4        | Non-conclusive |
+| 023f9fda      | 1        | Non-conclusive |
+| 0243adb3      | 4        | Non-conclusive |
+| 02443         | 4        | Supported      |
+| 0247c17f      | 4        | Non-conclusive |
+| 025           | 4        | Supported      |
+| 0250ad96d1    | 2        | Non-conclusive |
+| 0255-0a1      | 4        | Non-conclusive |
+| 025bb06a      | 4        | Non-conclusive |
+| 0280d44507    | 4        | Non-conclusive |
+| 02862b2e      | 4        | Non-conclusive |
+| 02A0Q5        | 2        | Non-conclusive |
+| 02_05_00      | 4        | Non-conclusive |
+| 02aa4dbe      | 4        | Non-conclusive |
+| 02adc6cc      | 1        | Non-conclusive |
+| 02ba2199      | 2        | Non-conclusive |
+| 02d14bcb      | 4        | Non-conclusive |
+| 02d74cb0      | 1        | Non-conclusive |
+| 02ee1e7b      | 4        | Non-conclusive |
+| 03            | 32       | Unsupported    |
+| 03-18-132     | 4        | Non-conclusive |
+| 03.09.2021    | 5        | Unsupported    |
+| 03.2021       | 1        | Unsupported    |
+| 0309b5de      | 1        | Non-conclusive |
+| 031f1f59      | 1        | Non-conclusive |
+| 0330          | 1        | Supported      |
+| 0332a941      | 4        | Non-conclusive |
+| 0333c460      | 4        | Non-conclusive |
+| 034           | 4        | Supported      |
+| 0340ef8e      | 4        | Non-conclusive |
+| 0344b69212    | 4        | Non-conclusive |
+| 034f64f       | 5        | Non-conclusive |
+| 03547         | 4        | Supported      |
+| 035a6840      | 8        | Non-conclusive |
+| 037           | 4        | Supported      |
+| 03846b33      | 4        | Non-conclusive |
+| 038d1704      | 4        | Non-conclusive |
+| 039           | 5        | Supported      |
+| 0393e8a5      | 4        | Non-conclusive |
+| 03_03_06      | 8        | Non-conclusive |
+| 03_03_07      | 115      | Non-conclusive |
+| 03a466a042    | 4        | Non-conclusive |
+| 03a8f4        | 2        | Non-conclusive |
+| 03a941f3      | 5        | Non-conclusive |
+| 03ad0feb      | 2        | Non-conclusive |
+| 03b3          | 1        | Non-conclusive |
+| 03c1a5f1      | 4        | Non-conclusive |
+| 03c3ecaa      | 1        | Non-conclusive |
+| 03c9ccb0      | 4        | Non-conclusive |
+| 03d4fd25      | 7        | Non-conclusive |
+| 03e2          | 14       | Non-conclusive |
+| 04            | 6        | Supported      |
+| 04-2015       | 4        | Non-conclusive |
+| 04-26-000     | 4        | Non-conclusive |
+| 04-42-378     | 4        | Non-conclusive |
+| 04.03         | 1        | Supported      |
+| 04.20.00      | 4        | Supported      |
+| 04022         | 5        | Supported      |
+| 04031         | 4        | Supported      |
+| 040b5345      | 4        | Non-conclusive |
+| 043           | 45       | Supported      |
+| 043b8fed      | 4        | Non-conclusive |
+| 044           | 3        | Supported      |
+| 044b7288      | 4        | Non-conclusive |
+| 0459fde9      | 4        | Non-conclusive |
+| 046e36c4      | 4        | Non-conclusive |
+| 0483ef59      | 4        | Non-conclusive |
+| 048a1473      | 4        | Non-conclusive |
+| 049           | 5        | Supported      |
+| 049eb1e0      | 4        | Non-conclusive |
+| 04_01_03      | 156      | Non-conclusive |
+| 04_05_00      | 4        | Non-conclusive |
+| 04aca1f4      | 12       | Non-conclusive |
+| 04b86c60      | 4        | Non-conclusive |
+| 04ba0029      | 4        | Non-conclusive |
+| 04d8454       | 4        | Non-conclusive |
+| 04d89db0a5    | 4        | Non-conclusive |
+| 04fb721c      | 1        | Non-conclusive |
+| 05            | 13       | Supported      |
+| 05023         | 4        | Supported      |
+| 0503a260      | 4        | Non-conclusive |
+| 0508          | 4        | Supported      |
+| 050fef58      | 4        | Non-conclusive |
+| 0521          | 8        | Supported      |
+| 05221         | 4        | Supported      |
+| 0528          | 4        | Supported      |
+| 0542c1da      | 4        | Non-conclusive |
+| 0569          | 4        | Supported      |
+| 056a2071      | 4        | Non-conclusive |
+| 056ba0a5      | 180      | Non-conclusive |
+| 0582cca3      | 4        | Non-conclusive |
+| 059d0307      | 4        | Non-conclusive |
+| 059e9619c8    | 2        | Non-conclusive |
+| 05_02_00      | 1        | Non-conclusive |
+| 05b6eaec      | 1        | Non-conclusive |
+| 05bf1af2      | 4        | Non-conclusive |
+| 05c6944747    | 1        | Non-conclusive |
+| 05cd4bf9      | 8        | Non-conclusive |
+| 05fa970       | 4        | Non-conclusive |
+| 05s55         | 2        | Non-conclusive |
+| 06            | 4        | Supported      |
+| 06-2019       | 4        | Non-conclusive |
+| 06028d63      | 1        | Non-conclusive |
+| 0617e8b3      | 1        | Non-conclusive |
+| 063           | 4        | Supported      |
+| 063bbbed      | 4        | Non-conclusive |
+| 063f4826      | 1        | Non-conclusive |
+| 0640b5db      | 4        | Non-conclusive |
+| 0654b7ee      | 1        | Non-conclusive |
+| 066           | 4        | Supported      |
+| 06709b62      | 2        | Non-conclusive |
+| 067d0bf0      | 1        | Non-conclusive |
+| 068           | 4        | Supported      |
+| 06822c9       | 4        | Non-conclusive |
+| 0694dc3357    | 4        | Non-conclusive |
+| 069ac721      | 4        | Non-conclusive |
+| 06b12f8       | 2        | Non-conclusive |
+| 06c7bf1e      | 4        | Non-conclusive |
+| 06c827ce      | 4        | Non-conclusive |
+| 06e2b307      | 4        | Non-conclusive |
+| 06f44bd1      | 4        | Non-conclusive |
+| 07            | 6        | Supported      |
+| 07061e84      | 4        | Non-conclusive |
+| 070af7be      | 1        | Non-conclusive |
+| 070ca885      | 4        | Non-conclusive |
+| 0710b428      | 4        | Non-conclusive |
+| 0717bdd0      | 1        | Non-conclusive |
+| 0726cbdbe9    | 1        | Non-conclusive |
+| 072f8         | 4        | Non-conclusive |
+| 073           | 4        | Supported      |
+| 0748d57cbc    | 4        | Non-conclusive |
+| 0753          | 4        | Supported      |
+| 077b704a      | 2        | Non-conclusive |
+| 077d7842      | 4        | Non-conclusive |
+| 07852f41      | 4        | Non-conclusive |
+| 078fd0c0      | 4        | Non-conclusive |
+| 07992c58      | 4        | Non-conclusive |
+| 07G66         | 4        | Non-conclusive |
+| 07_200        | 1        | Non-conclusive |
+| 07a2cde5      | 4        | Non-conclusive |
+| 07ace8f6      | 4        | Non-conclusive |
+| 07c2f03       | 4        | Non-conclusive |
+| 07cd979b      | 4        | Non-conclusive |
+| 07d60895      | 4        | Non-conclusive |
+| 07d688c       | 4        | Non-conclusive |
+| 07fdb517      | 1        | Non-conclusive |
+| 08            | 16       | Supported      |
+| 08-42-163     | 4        | Non-conclusive |
+| 08.06.2022    | 8        | Supported      |
+| 080           | 8        | Supported      |
+| 08028e75      | 30       | Non-conclusive |
+| 080f080f      | 1        | Non-conclusive |
+| 0811          | 1        | Supported      |
+| 0818a2dd      | 4        | Non-conclusive |
+| 0822          | 4        | Supported      |
+| 0839          | 8        | Supported      |
+| 0841a5c3      | 4        | Non-conclusive |
+| 08547cff      | 4        | Non-conclusive |
+| 0876d6bd      | 4        | Non-conclusive |
+| 08852         | 1        | Supported      |
+| 088b3a73      | 1        | Non-conclusive |
+| 089           | 11       | Supported      |
+| 0891f1b       | 4        | Non-conclusive |
+| 08ac6892      | 4        | Non-conclusive |
+| 08b1          | 4        | Non-conclusive |
+| 08bcf7cb      | 1        | Non-conclusive |
+| 08beead9      | 5        | Non-conclusive |
+| 08dd9a91      | 3        | Non-conclusive |
+| 08e1          | 1        | Non-conclusive |
+| 08e19b41      | 4        | Non-conclusive |
+| 08e8564e      | 4        | Non-conclusive |
+| 08f7          | 4        | Non-conclusive |
+| 08f79fa4      | 4        | Non-conclusive |
+| 08f8257c      | 4        | Non-conclusive |
+| 09            | 34       | Supported      |
+| 092b2426      | 1        | Non-conclusive |
+| 093ec12d      | 1        | Non-conclusive |
+| 094fe975      | 8        | Non-conclusive |
+| 0958c9a9      | 4        | Non-conclusive |
+| 09647d8f      | 1        | Non-conclusive |
+| 096e8cff3d    | 4        | Non-conclusive |
+| 097           | 9        | Supported      |
+| 0972          | 6        | Supported      |
+| 0988f86a      | 4        | Non-conclusive |
+| 098c8         | 4        | Non-conclusive |
+| 098fb9dc      | 8        | Non-conclusive |
+| 099dc3bf      | 4        | Non-conclusive |
+| 09b4817b      | 4        | Non-conclusive |
+| 09b7a1b7      | 4        | Non-conclusive |
+| 09b8d14       | 8        | Non-conclusive |
+| 09ba6d8a      | 4        | Non-conclusive |
+| 09c27299      | 4        | Non-conclusive |
+| 09ce9e62f3    | 4        | Non-conclusive |
+| 09cfd1b2      | 4        | Non-conclusive |
+| 09d747c4      | 8        | Non-conclusive |
+| 0A5           | 4        | Non-conclusive |
+| 0B6           | 2        | Non-conclusive |
+| 0D6           | 5        | Non-conclusive |
+| 0D9           | 4        | Non-conclusive |
+| 0F44          | 6        | Non-conclusive |
+| 0F5           | 2        | Non-conclusive |
+| 0F83          | 4        | Non-conclusive |
+| 0G1           | 2        | Non-conclusive |
+| 0M3G2         | 6        | Non-conclusive |
+| 0P6           | 4        | Non-conclusive |
+| 0Q11          | 2        | Non-conclusive |
+| 0Q47K9        | 1        | Non-conclusive |
+| 0U7           | 4        | Non-conclusive |
+| 0U8           | 1        | Non-conclusive |
+| 0W72V0        | 1        | Non-conclusive |
+| 0X7           | 2        | Non-conclusive |
+| 0Z2           | 2        | Non-conclusive |
+| 0Z7X6         | 4        | Non-conclusive |
+| 0_10_2        | 4        | Non-conclusive |
+| 0_10_7        | 8        | Non-conclusive |
+| 0_11_0        | 1        | Non-conclusive |
+| 0_11_1        | 5        | Non-conclusive |
+| 0_11_2        | 4        | Non-conclusive |
+| 0_11_3        | 9        | Non-conclusive |
+| 0_12_0        | 21       | Non-conclusive |
+| 0_12_2        | 6        | Non-conclusive |
+| 0_13_1        | 4        | Non-conclusive |
+| 0_3a303       | 1        | Non-conclusive |
+| 0_4           | 1        | Non-conclusive |
+| 0_62f189      | 2        | Non-conclusive |
+| 0_6512f8      | 2        | Non-conclusive |
+| 0_6_1         | 4        | Non-conclusive |
+| 0_9_2         | 8        | Non-conclusive |
+| 0a14f6e3      | 4        | Non-conclusive |
+| 0a19132d      | 8        | Non-conclusive |
+| 0a2113e       | 4        | Non-conclusive |
+| 0a219c55      | 8        | Non-conclusive |
+| 0a23627b17    | 4        | Non-conclusive |
+| 0a293ac4      | 4        | Non-conclusive |
+| 0a32f282      | 1        | Non-conclusive |
+| 0a4d1436      | 4        | Non-conclusive |
+| 0a5cc581      | 4        | Non-conclusive |
+| 0a64bb7c      | 5        | Non-conclusive |
+| 0a73cf17      | 4        | Non-conclusive |
+| 0a74          | 1        | Non-conclusive |
+| 0a8bfffa      | 4        | Non-conclusive |
+| 0a8dec5d      | 4        | Non-conclusive |
+| 0a900a90      | 1        | Non-conclusive |
+| 0a91          | 4        | Non-conclusive |
+| 0a93efe1      | 2        | Non-conclusive |
+| 0a956980      | 4        | Non-conclusive |
+| 0a991fb4      | 4        | Non-conclusive |
+| 0aae82e6      | 4        | Non-conclusive |
+| 0ab60eb1      | 4        | Non-conclusive |
+| 0acad94f      | 1        | Non-conclusive |
+| 0af13cf       | 4        | Non-conclusive |
+| 0afa85b8      | 4        | Non-conclusive |
+| 0b090b75      | 8        | Non-conclusive |
+| 0b11313e      | 4        | Non-conclusive |
+| 0b113e5f      | 4        | Non-conclusive |
+| 0b2d615b      | 1        | Non-conclusive |
+| 0b41d9bc      | 4        | Non-conclusive |
+| 0b457937      | 4        | Non-conclusive |
+| 0b464b9d      | 2        | Non-conclusive |
+| 0b477         | 5        | Non-conclusive |
+| 0b4bdd0a      | 1        | Non-conclusive |
+| 0b6821cd      | 4        | Non-conclusive |
+| 0b6f7a5f      | 4        | Non-conclusive |
+| 0b70ec5b      | 4        | Non-conclusive |
+| 0b7e2fa9      | 1        | Non-conclusive |
+| 0b9a2b07      | 2        | Non-conclusive |
+| 0b9f2c01      | 4        | Non-conclusive |
+| 0bb56965      | 4        | Non-conclusive |
+| 0bd0c32e      | 1        | Non-conclusive |
+| 0befade4      | 4        | Non-conclusive |
+| 0bf30bf3      | 4        | Non-conclusive |
+| 0bfd3f20      | 4        | Non-conclusive |
+| 0bfd637b      | 1        | Non-conclusive |
+| 0bfdad13      | 4        | Non-conclusive |
+| 0c06b68       | 5        | Non-conclusive |
+| 0c1671768d    | 4        | Non-conclusive |
+| 0c224914      | 4        | Non-conclusive |
+| 0c5de036      | 1        | Non-conclusive |
+| 0c62f92b      | 1        | Non-conclusive |
+| 0c76f097      | 4        | Non-conclusive |
+| 0c7b42c2      | 4        | Non-conclusive |
+| 0c831db0      | 4        | Non-conclusive |
+| 0c8509b       | 2        | Non-conclusive |
+| 0c90f583      | 4        | Non-conclusive |
+| 0cacf1e2      | 1        | Non-conclusive |
+| 0ccdde21      | 4        | Non-conclusive |
+| 0cf12202      | 4        | Non-conclusive |
+| 0cfdd406      | 4        | Non-conclusive |
+| 0d0           | 19       | Non-conclusive |
+| 0d1735f3      | 4        | Non-conclusive |
+| 0d1f3a3b      | 4        | Non-conclusive |
+| 0d2059e6      | 4        | Non-conclusive |
+| 0d228999      | 8        | Non-conclusive |
+| 0d2ee4ef      | 8        | Non-conclusive |
+| 0d3ee16f      | 4        | Non-conclusive |
+| 0d3f5700      | 4        | Non-conclusive |
+| 0d42d43       | 4        | Non-conclusive |
+| 0d4dd086      | 1        | Non-conclusive |
+| 0d51030       | 4        | Non-conclusive |
+| 0d56c93a      | 1        | Non-conclusive |
+| 0d67f491      | 1        | Non-conclusive |
+| 0d69          | 1        | Non-conclusive |
+| 0d6d27a8      | 1        | Non-conclusive |
+| 0d72d903      | 4        | Non-conclusive |
+| 0d84c0b4      | 4        | Non-conclusive |
+| 0d88a3fd      | 4        | Non-conclusive |
+| 0d9054c       | 4        | Non-conclusive |
+| 0d9620c8      | 4        | Non-conclusive |
+| 0d99f48f      | 4        | Non-conclusive |
+| 0daf9fad      | 1        | Non-conclusive |
+| 0dcb1b45      | 4        | Non-conclusive |
+| 0dd6512c      | 8062     | Non-conclusive |
+| 0ddf8171      | 4        | Non-conclusive |
+| 0de8585c      | 4        | Non-conclusive |
+| 0de8f093      | 1        | Non-conclusive |
+| 0dec99f       | 4        | Non-conclusive |
+| 0e01e4        | 4        | Non-conclusive |
+| 0e20a6c1      | 1        | Non-conclusive |
+| 0e210ad96c    | 8        | Non-conclusive |
+| 0e247695ec    | 7        | Non-conclusive |
+| 0e276043cc    | 9        | Non-conclusive |
+| 0e2e0dd0      | 4        | Non-conclusive |
+| 0e3a8ac       | 2        | Non-conclusive |
+| 0e49b623      | 4        | Non-conclusive |
+| 0e51793e      | 3        | Non-conclusive |
+| 0e6b2b14      | 1        | Non-conclusive |
+| 0e7a4453      | 4        | Non-conclusive |
+| 0e924faf      | 1        | Non-conclusive |
+| 0e97dd1f      | 8        | Non-conclusive |
+| 0e9f9c77      | 4        | Non-conclusive |
+| 0ea41ed       | 4        | Non-conclusive |
+| 0ea81f15      | 4        | Non-conclusive |
+| 0ee9743312    | 16       | Non-conclusive |
+| 0ee9835       | 4        | Non-conclusive |
+| 0ef2acbd      | 4        | Non-conclusive |
+| 0efbbd5f      | 31854    | Non-conclusive |
+| 0f09cc15      | 4        | Non-conclusive |
+| 0f1365e416    | 4        | Non-conclusive |
+| 0f18a4723c    | 1        | Non-conclusive |
+| 0f322237      | 1        | Non-conclusive |
+| 0f34          | 1        | Non-conclusive |
+| 0f3747b0      | 4        | Non-conclusive |
+| 0f74571       | 4        | Non-conclusive |
+| 0f8e35bd8b    | 4        | Non-conclusive |
+| 0f912191      | 4        | Non-conclusive |
+| 0f9a7516      | 1        | Non-conclusive |
+| 0fa3edf       | 4        | Non-conclusive |
+| 0fa5626d      | 1        | Non-conclusive |
+| 0fb85b7f      | 4        | Non-conclusive |
+| 0fc14667      | 4        | Non-conclusive |
+| 0fcec204      | 4        | Non-conclusive |
+| 0fd25da2      | 8        | Non-conclusive |
+| 0fe132b5      | 4        | Non-conclusive |
+| 0fe91b7f      | 4        | Non-conclusive |
+| 0ff436be      | 4        | Non-conclusive |
+| 0ff84728      | 4        | Non-conclusive |
+| 0ffc27bd      | 1        | Non-conclusive |
+| 0ffe8d4e      | 4        | Non-conclusive |
+| 0g1           | 1        | Non-conclusive |
+| 0i7           | 8        | Non-conclusive |
+| 0k2           | 1        | Non-conclusive |
+| 0m8           | 1        | Non-conclusive |
+| 0n5a4         | 4        | Non-conclusive |
+| 0v7           | 2        | Non-conclusive |
+| 0w0           | 4        | Non-conclusive |
+| 0x8           | 2        | Non-conclusive |
+| 0y7b4         | 2        | Non-conclusive |
+| 1             | 7714     | Unsupported    |
+| 1%81          | 4        | Non-conclusive |
+| 1-0           | 10       | Non-conclusive |
+| 1-00e537      | 4        | Non-conclusive |
+| 1-0d036       | 4        | Non-conclusive |
+| 1-0e682       | 4        | Non-conclusive |
+| 1-1           | 8        | Non-conclusive |
+| 1-10          | 8        | Non-conclusive |
+| 1-10-16       | 4        | Non-conclusive |
+| 1-10-9        | 1        | Non-conclusive |
+| 1-11-2        | 4        | Non-conclusive |
+| 1-12-0        | 8        | Non-conclusive |
+| 1-12-1        | 4        | Non-conclusive |
+| 1-12-4        | 11       | Non-conclusive |
+| 1-13-2        | 21       | Non-conclusive |
+| 1-13-9        | 25       | Non-conclusive |
+| 1-14-0        | 4        | Non-conclusive |
+| 1-18092018    | 1        | Non-conclusive |
+| 1-19c6        | 4        | Non-conclusive |
+| 1-1e8         | 4        | Non-conclusive |
+| 1-25f33       | 4        | Non-conclusive |
+| 1-27e39       | 4        | Non-conclusive |
+| 1-2d16        | 4        | Non-conclusive |
+| 1-3           | 5        | Non-conclusive |
+| 1-3-10        | 20       | Non-conclusive |
+| 1-3-9         | 165      | Non-conclusive |
+| 1-4-1         | 21       | Non-conclusive |
+| 1-4.5         | 4        | Non-conclusive |
+| 1-40307810    | 8        | Non-conclusive |
+| 1-47f3        | 8        | Non-conclusive |
+| 1-5-0         | 8        | Non-conclusive |
+| 1-5-1         | 1        | Non-conclusive |
+| 1-5814e5      | 4        | Non-conclusive |
+| 1-6-1         | 647      | Non-conclusive |
+| 1-60f01       | 4        | Non-conclusive |
+| 1-7           | 4        | Non-conclusive |
+| 1-7-1         | 4        | Non-conclusive |
+| 1-7e1         | 4        | Non-conclusive |
+| 1-8-1         | 4        | Non-conclusive |
+| 1-9-1         | 4        | Non-conclusive |
+| 1-9b7         | 4        | Non-conclusive |
+| 1-9f4         | 8        | Non-conclusive |
+| 1.0           | 295      | Unsupported    |
+| 1.0-5098      | 4        | Non-conclusive |
+| 1.0.0         | 1208     | Unsupported    |
+| 1.0.0-rc.0    | 117      | Non-conclusive |
+| 1.0.1         | 979      | Unsupported    |
+| 1.0.10        | 4        | Unsupported    |
+| 1.0.101       | 17       | Unsupported    |
+| 1.0.1057      | 2        | Unsupported    |
+| 1.0.1097      | 1        | Unsupported    |
+| 1.0.11        | 1        | Unsupported    |
+| 1.0.1175      | 4        | Unsupported    |
+| 1.0.1188      | 1        | Unsupported    |
+| 1.0.12        | 4        | Unsupported    |
+| 1.0.123       | 4        | Unsupported    |
+| 1.0.13        | 12       | Unsupported    |
+| 1.0.1325      | 1        | Unsupported    |
+| 1.0.1394      | 2        | Unsupported    |
+| 1.0.14        | 4        | Unsupported    |
+| 1.0.15        | 6        | Unsupported    |
+| 1.0.17        | 3        | Unsupported    |
+| 1.0.18        | 23       | Unsupported    |
+| 1.0.19        | 8        | Unsupported    |
+| 1.0.2         | 387      | Unsupported    |
+| 1.0.20        | 8        | Unsupported    |
+| 1.0.21        | 9        | Unsupported    |
+| 1.0.2143      | 8        | Unsupported    |
+| 1.0.22        | 4        | Unsupported    |
+| 1.0.24        | 1        | Unsupported    |
+| 1.0.25        | 4        | Unsupported    |
+| 1.0.26        | 13       | Unsupported    |
+| 1.0.2646      | 1        | Unsupported    |
+| 1.0.269       | 4        | Unsupported    |
+| 1.0.27        | 4        | Unsupported    |
+| 1.0.28        | 1        | Unsupported    |
+| 1.0.29        | 11       | Unsupported    |
+| 1.0.3         | 238      | Unsupported    |
+| 1.0.30        | 35       | Unsupported    |
+| 1.0.31        | 4        | Unsupported    |
+| 1.0.32        | 1        | Unsupported    |
+| 1.0.330       | 4        | Unsupported    |
+| 1.0.35        | 4        | Unsupported    |
+| 1.0.382       | 1        | Unsupported    |
+| 1.0.39        | 5        | Unsupported    |
+| 1.0.3963      | 4        | Unsupported    |
+| 1.0.4         | 63       | Unsupported    |
+| 1.0.402       | 2        | Unsupported    |
+| 1.0.405       | 8        | Unsupported    |
+| 1.0.42        | 13       | Unsupported    |
+| 1.0.429       | 1        | Unsupported    |
+| 1.0.43        | 4        | Unsupported    |
+| 1.0.45        | 4        | Unsupported    |
+| 1.0.451       | 8        | Unsupported    |
+| 1.0.46        | 4        | Unsupported    |
+| 1.0.462       | 1        | Unsupported    |
+| 1.0.47        | 4        | Unsupported    |
+| 1.0.5         | 28       | Unsupported    |
+| 1.0.50        | 4        | Unsupported    |
+| 1.0.51        | 4        | Unsupported    |
+| 1.0.511       | 4        | Unsupported    |
+| 1.0.53        | 4        | Unsupported    |
+| 1.0.533       | 4        | Unsupported    |
+| 1.0.54        | 1        | Unsupported    |
+| 1.0.546       | 4        | Unsupported    |
+| 1.0.551       | 4        | Unsupported    |
+| 1.0.562       | 4        | Unsupported    |
+| 1.0.57        | 4        | Unsupported    |
+| 1.0.572       | 1        | Unsupported    |
+| 1.0.573       | 4        | Unsupported    |
+| 1.0.576       | 1        | Unsupported    |
+| 1.0.58        | 4        | Unsupported    |
+| 1.0.596       | 4        | Unsupported    |
+| 1.0.6         | 28       | Unsupported    |
+| 1.0.607       | 1        | Unsupported    |
+| 1.0.64        | 4        | Unsupported    |
+| 1.0.67        | 8        | Unsupported    |
+| 1.0.68        | 4        | Unsupported    |
+| 1.0.7         | 5        | Unsupported    |
+| 1.0.70        | 5        | Unsupported    |
+| 1.0.716       | 1        | Unsupported    |
+| 1.0.718       | 5        | Unsupported    |
+| 1.0.722       | 1        | Unsupported    |
+| 1.0.73        | 4        | Unsupported    |
+| 1.0.784       | 4        | Unsupported    |
+| 1.0.8         | 11       | Unsupported    |
+| 1.0.80        | 4        | Unsupported    |
+| 1.0.813       | 4        | Unsupported    |
+| 1.0.82        | 4        | Unsupported    |
+| 1.0.8397      | 2        | Unsupported    |
+| 1.0.843       | 1        | Unsupported    |
+| 1.0.86        | 4        | Unsupported    |
+| 1.0.864       | 4        | Unsupported    |
+| 1.0.87        | 4        | Unsupported    |
+| 1.0.876       | 2        | Unsupported    |
+| 1.0.88        | 4        | Unsupported    |
+| 1.0.880       | 4        | Unsupported    |
+| 1.0.9         | 62       | Unsupported    |
+| 1.0.93        | 4        | Unsupported    |
+| 1.0.939       | 1        | Unsupported    |
+| 1.0.94        | 1        | Unsupported    |
+| 1.0.946       | 5        | Unsupported    |
+| 1.0.96        | 1        | Unsupported    |
+| 1.0.965       | 4        | Unsupported    |
+| 1.0.993       | 4        | Unsupported    |
+| 1.00          | 8        | Unsupported    |
+| 1.002         | 22       | Unsupported    |
+| 1.0037        | 4        | Unsupported    |
+| 1.03.2014     | 4        | Unsupported    |
+| 1.05          | 1        | Unsupported    |
+| 1.09          | 4        | Unsupported    |
+| 1.0b3         | 4        | Non-conclusive |
+| 1.1           | 166      | Unsupported    |
+| 1.1.0         | 1117     | Unsupported    |
+| 1.1.1         | 121      | Unsupported    |
+| 1.1.11        | 4        | Unsupported    |
+| 1.1.13        | 8        | Unsupported    |
+| 1.1.14        | 4        | Unsupported    |
+| 1.1.18        | 13       | Unsupported    |
+| 1.1.19        | 8        | Unsupported    |
+| 1.1.2         | 476      | Unsupported    |
+| 1.1.21        | 1        | Unsupported    |
+| 1.1.22        | 4        | Unsupported    |
+| 1.1.23        | 4        | Unsupported    |
+| 1.1.26        | 8        | Unsupported    |
+| 1.1.27        | 4        | Unsupported    |
+| 1.1.28        | 4        | Unsupported    |
+| 1.1.3         | 187      | Unsupported    |
+| 1.1.30        | 1        | Unsupported    |
+| 1.1.32        | 4        | Unsupported    |
+| 1.1.33        | 4        | Unsupported    |
+| 1.1.34        | 4        | Unsupported    |
+| 1.1.36        | 1        | Unsupported    |
+| 1.1.37        | 2        | Unsupported    |
+| 1.1.38        | 4        | Unsupported    |
+| 1.1.4         | 45       | Unsupported    |
+| 1.1.43        | 4        | Unsupported    |
+| 1.1.5         | 76       | Unsupported    |
+| 1.1.50        | 4        | Unsupported    |
+| 1.1.51        | 4        | Unsupported    |
+| 1.1.53        | 1        | Unsupported    |
+| 1.1.54        | 4        | Unsupported    |
+| 1.1.56        | 4        | Unsupported    |
+| 1.1.58        | 4        | Unsupported    |
+| 1.1.6         | 42       | Unsupported    |
+| 1.1.63        | 4        | Unsupported    |
+| 1.1.68        | 4        | Unsupported    |
+| 1.1.69        | 8        | Unsupported    |
+| 1.1.7         | 1        | Unsupported    |
+| 1.1.76        | 1        | Unsupported    |
+| 1.1.8         | 9        | Unsupported    |
+| 1.1.81        | 2        | Unsupported    |
+| 1.1.82        | 4        | Unsupported    |
+| 1.1.83        | 4        | Unsupported    |
+| 1.1.85        | 4        | Unsupported    |
+| 1.1.88        | 4        | Unsupported    |
+| 1.1.9         | 9        | Unsupported    |
+| 1.1.92        | 4        | Unsupported    |
+| 1.1.94        | 4        | Unsupported    |
+| 1.1.96        | 4        | Unsupported    |
+| 1.1.98        | 4        | Unsupported    |
+| 1.1.99        | 4        | Unsupported    |
+| 1.10          | 16       | Unsupported    |
+| 1.10.0        | 2657     | Unsupported    |
+| 1.10.1        | 216      | Unsupported    |
+| 1.10.11       | 4        | Unsupported    |
+| 1.10.12       | 12       | Unsupported    |
+| 1.10.14       | 107      | Unsupported    |
+| 1.10.15       | 11       | Unsupported    |
+| 1.10.16       | 13       | Unsupported    |
+| 1.10.18       | 8        | Unsupported    |
+| 1.10.19       | 8        | Unsupported    |
+| 1.10.2        | 1308     | Unsupported    |
+| 1.10.20       | 12       | Unsupported    |
+| 1.10.21       | 1        | Unsupported    |
+| 1.10.24       | 9        | Unsupported    |
+| 1.10.3        | 251      | Unsupported    |
+| 1.10.4        | 129      | Unsupported    |
+| 1.10.41       | 29       | Unsupported    |
+| 1.10.5        | 4        | Unsupported    |
+| 1.10.8        | 4        | Unsupported    |
+| 1.10.9        | 13       | Unsupported    |
+| 1.10.9216     | 16       | Unsupported    |
+| 1.11          | 115      | Unsupported    |
+| 1.11.0        | 1086     | Unsupported    |
+| 1.11.1        | 2161     | Unsupported    |
+| 1.11.2        | 1793     | Unsupported    |
+| 1.11.3        | 1745     | Unsupported    |
+| 1.11.4        | 25       | Unsupported    |
+| 1.11.8        | 20       | Unsupported    |
+| 1.12.0        | 341      | Unsupported    |
+| 1.12.1        | 3335     | Unsupported    |
+| 1.12.13       | 2        | Unsupported    |
+| 1.12.14       | 1        | Unsupported    |
+| 1.12.2        | 2468     | Unsupported    |
+| 1.12.3        | 361      | Unsupported    |
+| 1.12.4        | 6179     | Unsupported    |
+| 1.12.5        | 137      | Unsupported    |
+| 1.12.9        | 56       | Unsupported    |
+| 1.13.0        | 508      | Unsupported    |
+| 1.13.1        | 1800     | Unsupported    |
+| 1.13.10       | 1001     | Unsupported    |
+| 1.13.11       | 413      | Unsupported    |
+| 1.13.12       | 1229     | Unsupported    |
+| 1.13.13       | 4        | Unsupported    |
+| 1.13.14       | 8033     | Unsupported    |
+| 1.13.15       | 125      | Unsupported    |
+| 1.13.16       | 101      | Unsupported    |
+| 1.13.17       | 693      | Unsupported    |
+| 1.13.18       | 5502     | Unsupported    |
+| 1.13.2        | 2716     | Unsupported    |
+| 1.13.20       | 34       | Unsupported    |
+| 1.13.3        | 285      | Unsupported    |
+| 1.13.4        | 9        | Unsupported    |
+| 1.13.5        | 398      | Unsupported    |
+| 1.13.6        | 83       | Unsupported    |
+| 1.13.7        | 180      | Unsupported    |
+| 1.13.8        | 85       | Unsupported    |
+| 1.13.9        | 4080     | Unsupported    |
+| 1.14          | 4        | Unsupported    |
+| 1.14.0        | 2075     | Unsupported    |
+| 1.14.1        | 4        | Unsupported    |
+| 1.14.13       | 4        | Unsupported    |
+| 1.14.16       | 21       | Unsupported    |
+| 1.14.2        | 88       | Unsupported    |
+| 1.14.3        | 32       | Unsupported    |
+| 1.14.4        | 1        | Unsupported    |
+| 1.14.7        | 180      | Unsupported    |
+| 1.15          | 4        | Unsupported    |
+| 1.15.0        | 20       | Unsupported    |
+| 1.15.2        | 14       | Unsupported    |
+| 1.15.3        | 19       | Unsupported    |
+| 1.15.4        | 88       | Unsupported    |
+| 1.15.5        | 216      | Unsupported    |
+| 1.16.0        | 292      | Unsupported    |
+| 1.16.09       | 1        | Unsupported    |
+| 1.16.1        | 25       | Unsupported    |
+| 1.16.2        | 1        | Unsupported    |
+| 1.16.3        | 5        | Unsupported    |
+| 1.16.4        | 4        | Unsupported    |
+| 1.16.8        | 6        | Unsupported    |
+| 1.16.9        | 1910     | Unsupported    |
+| 1.1620        | 4        | Unsupported    |
+| 1.17.0        | 1        | Unsupported    |
+| 1.17.1        | 98       | Unsupported    |
+| 1.17.2        | 1        | Unsupported    |
+| 1.18.0        | 87       | Unsupported    |
+| 1.18.1        | 66       | Unsupported    |
+| 1.18.2        | 58       | Unsupported    |
+| 1.18.3        | 261      | Unsupported    |
+| 1.19.0        | 8        | Unsupported    |
+| 1.19.1        | 92       | Unsupported    |
+| 1.2           | 57       | Unsupported    |
+| 1.2.0         | 449      | Unsupported    |
+| 1.2.1         | 420      | Unsupported    |
+| 1.2.10        | 70       | Unsupported    |
+| 1.2.1021      | 2        | Unsupported    |
+| 1.2.11        | 189      | Unsupported    |
+| 1.2.13        | 8        | Unsupported    |
+| 1.2.2         | 74       | Unsupported    |
+| 1.2.3         | 38       | Unsupported    |
+| 1.2.39        | 4        | Unsupported    |
+| 1.2.4         | 275      | Unsupported    |
+| 1.2.5         | 252      | Unsupported    |
+| 1.2.51        | 4        | Unsupported    |
+| 1.2.59        | 1        | Unsupported    |
+| 1.2.6         | 69       | Unsupported    |
+| 1.2.65        | 32       | Unsupported    |
+| 1.2.7         | 110      | Unsupported    |
+| 1.2.9         | 54       | Unsupported    |
+| 1.20.0        | 4        | Unsupported    |
+| 1.20.1        | 12       | Unsupported    |
+| 1.20.2        | 82       | Unsupported    |
+| 1.206.0       | 4        | Unsupported    |
+| 1.21.0        | 62       | Unsupported    |
+| 1.21.1        | 65       | Unsupported    |
+| 1.21.2        | 21       | Unsupported    |
+| 1.215         | 4        | Unsupported    |
+| 1.221103.1    | 4        | Unsupported    |
+| 1.224         | 4        | Unsupported    |
+| 1.24          | 1        | Unsupported    |
+| 1.25.0        | 8        | Unsupported    |
+| 1.27.1        | 5        | Unsupported    |
+| 1.28.29       | 12       | Unsupported    |
+| 1.3           | 446      | Unsupported    |
+| 1.3.0         | 2166     | Unsupported    |
+| 1.3.09        | 4        | Unsupported    |
+| 1.3.1         | 371      | Unsupported    |
+| 1.3.10        | 12       | Unsupported    |
+| 1.3.15        | 4        | Unsupported    |
+| 1.3.17        | 24       | Unsupported    |
+| 1.3.18        | 6        | Unsupported    |
+| 1.3.19        | 4        | Unsupported    |
+| 1.3.2         | 595      | Unsupported    |
+| 1.3.22        | 4        | Unsupported    |
+| 1.3.23        | 8        | Unsupported    |
+| 1.3.29        | 4        | Unsupported    |
+| 1.3.3         | 584      | Unsupported    |
+| 1.3.4         | 120      | Unsupported    |
+| 1.3.5         | 13       | Unsupported    |
+| 1.3.6         | 36       | Unsupported    |
+| 1.3.7         | 725      | Unsupported    |
+| 1.3.8         | 134      | Unsupported    |
+| 1.3.91        | 4        | Unsupported    |
+| 1.3.96        | 1        | Unsupported    |
+| 1.3.99        | 4        | Unsupported    |
+| 1.33          | 4        | Unsupported    |
+| 1.34.0        | 1        | Unsupported    |
+| 1.34.3        | 6        | Unsupported    |
+| 1.34.4        | 5        | Unsupported    |
+| 1.34.9        | 2        | Unsupported    |
+| 1.35.3        | 5        | Unsupported    |
+| 1.35.4        | 23       | Unsupported    |
+| 1.36          | 4        | Unsupported    |
+| 1.36.2        | 4        | Unsupported    |
+| 1.4           | 16       | Unsupported    |
+| 1.4.0         | 418      | Unsupported    |
+| 1.4.1         | 1288     | Unsupported    |
+| 1.4.11        | 4        | Unsupported    |
+| 1.4.13        | 4        | Unsupported    |
+| 1.4.2         | 20       | Unsupported    |
+| 1.4.3         | 29       | Unsupported    |
+| 1.4.33        | 5        | Unsupported    |
+| 1.4.4         | 8        | Unsupported    |
+| 1.4.5         | 47       | Unsupported    |
+| 1.4.6         | 1        | Unsupported    |
+| 1.4.7         | 5        | Unsupported    |
+| 1.4.9         | 4        | Unsupported    |
+| 1.46          | 8        | Unsupported    |
+| 1.47          | 4        | Unsupported    |
+| 1.5           | 9        | Unsupported    |
+| 1.5.0         | 452      | Unsupported    |
+| 1.5.1         | 122      | Unsupported    |
+| 1.5.14        | 6        | Unsupported    |
+| 1.5.18        | 4        | Unsupported    |
+| 1.5.2         | 24       | Unsupported    |
+| 1.5.3         | 14       | Unsupported    |
+| 1.5.4         | 93       | Unsupported    |
+| 1.5.6         | 1        | Unsupported    |
+| 1.5.7         | 4        | Unsupported    |
+| 1.5.9         | 9        | Unsupported    |
+| 1.52          | 8        | Unsupported    |
+| 1.55.0        | 8        | Unsupported    |
+| 1.6           | 262      | Unsupported    |
+| 1.6.0         | 573      | Unsupported    |
+| 1.6.1         | 490      | Unsupported    |
+| 1.6.16        | 2        | Unsupported    |
+| 1.6.2         | 697      | Unsupported    |
+| 1.6.3         | 290      | Unsupported    |
+| 1.6.30        | 96       | Unsupported    |
+| 1.6.4         | 1713     | Unsupported    |
+| 1.6.5         | 467      | Unsupported    |
+| 1.6.6         | 14       | Unsupported    |
+| 1.6.7         | 2        | Unsupported    |
+| 1.6.818       | 4        | Unsupported    |
+| 1.6.9         | 4        | Unsupported    |
+| 1.65          | 4        | Unsupported    |
+| 1.68d686      | 1        | Non-conclusive |
+| 1.7           | 15       | Unsupported    |
+| 1.7.0         | 221      | Unsupported    |
+| 1.7.1         | 1911     | Unsupported    |
+| 1.7.10        | 8        | Unsupported    |
+| 1.7.11        | 17       | Unsupported    |
+| 1.7.12        | 53       | Unsupported    |
+| 1.7.13        | 8        | Unsupported    |
+| 1.7.15        | 4        | Unsupported    |
+| 1.7.2         | 133      | Unsupported    |
+| 1.7.20        | 4        | Unsupported    |
+| 1.7.3         | 77       | Unsupported    |
+| 1.7.4         | 21       | Unsupported    |
+| 1.7.5         | 112      | Unsupported    |
+| 1.7.6         | 11       | Unsupported    |
+| 1.7.7         | 4        | Unsupported    |
+| 1.7.8         | 4        | Unsupported    |
+| 1.7.9         | 20       | Unsupported    |
+| 1.72.4        | 13       | Unsupported    |
+| 1.72.5        | 1        | Unsupported    |
+| 1.724.1       | 7        | Unsupported    |
+| 1.8           | 8        | Unsupported    |
+| 1.8.0         | 2249     | Unsupported    |
+| 1.8.1         | 160      | Unsupported    |
+| 1.8.13        | 42       | Unsupported    |
+| 1.8.15        | 4        | Unsupported    |
+| 1.8.16        | 157      | Unsupported    |
+| 1.8.17        | 4        | Unsupported    |
+| 1.8.18        | 8        | Unsupported    |
+| 1.8.19        | 13       | Unsupported    |
+| 1.8.2         | 202      | Unsupported    |
+| 1.8.21        | 8        | Unsupported    |
+| 1.8.22        | 4        | Unsupported    |
+| 1.8.23        | 16       | Unsupported    |
+| 1.8.3         | 2111     | Unsupported    |
+| 1.8.5         | 11       | Unsupported    |
+| 1.8.6         | 8        | Unsupported    |
+| 1.8.7         | 8        | Unsupported    |
+| 1.8.8         | 6        | Unsupported    |
+| 1.9           | 13       | Unsupported    |
+| 1.9.0         | 6527     | Unsupported    |
+| 1.9.1         | 589      | Unsupported    |
+| 1.9.10        | 5        | Unsupported    |
+| 1.9.13        | 3        | Unsupported    |
+| 1.9.2         | 161      | Unsupported    |
+| 1.9.25        | 9        | Unsupported    |
+| 1.9.3         | 937      | Unsupported    |
+| 1.9.4         | 459      | Unsupported    |
+| 1.9.5         | 8        | Unsupported    |
+| 1.9.6         | 15       | Unsupported    |
+| 1.9.7         | 30       | Unsupported    |
+| 1.9.8         | 13       | Unsupported    |
+| 1.92020-11    | 1        | Non-conclusive |
+| 1/5.0         | 1        | Non-conclusive |
+| 10            | 18188    | Supported      |
+| 10-14-335     | 4        | Non-conclusive |
+| 10-2020       | 4        | Non-conclusive |
+| 10-30-000     | 2        | Non-conclusive |
+| 10.0.0        | 360      | Supported      |
+| 10.0.2        | 247      | Supported      |
+| 10.10         | 4        | Supported      |
+| 10.141        | 4        | Supported      |
+| 10.153        | 2        | Supported      |
+| 10.154        | 4        | Supported      |
+| 10.2.0        | 164      | Supported      |
+| 10.2.1        | 53       | Supported      |
+| 10.2.2        | 41       | Supported      |
+| 10.2.3        | 38       | Supported      |
+| 10.3.1        | 4        | Supported      |
+| 10.3.2        | 14       | Supported      |
+| 10.3.3        | 10       | Supported      |
+| 10.4.0        | 4        | Supported      |
+| 10.4.1        | 1        | Supported      |
+| 10.4.2        | 26       | Supported      |
+| 10.5.0        | 5        | Supported      |
+| 10.5.11       | 8        | Supported      |
+| 10.5.13       | 2        | Supported      |
+| 10.5.15       | 4        | Supported      |
+| 10.5.21       | 4        | Supported      |
+| 10.6.0        | 27       | Supported      |
+| 10.6.1        | 1508     | Supported      |
+| 10.6.2        | 1195     | Supported      |
+| 10.6.3        | 4        | Supported      |
+| 10.7.5        | 4        | Supported      |
+| 10.9.1        | 8        | Supported      |
+| 100           | 48       | Supported      |
+| 1000          | 12       | Supported      |
+| 1001          | 8        | Supported      |
+| 1001_5        | 4        | Non-conclusive |
+| 1004          | 2        | Supported      |
+| 1007          | 4        | Supported      |
+| 1009          | 1        | Supported      |
+| 100_1         | 2        | Non-conclusive |
+| 100_2453      | 4        | Non-conclusive |
+| 100_38c7      | 2        | Non-conclusive |
+| 100_3c26      | 2        | Non-conclusive |
+| 100_3e7       | 3        | Non-conclusive |
+| 100_506726    | 2        | Non-conclusive |
+| 100_68b20     | 2        | Non-conclusive |
+| 100_6e513     | 1        | Non-conclusive |
+| 101           | 17       | Supported      |
+| 1012.4        | 2        | Supported      |
+| 1016_95a9     | 4        | Non-conclusive |
+| 1018          | 4        | Supported      |
+| 101_03974     | 2        | Non-conclusive |
+| 101_04a2      | 4        | Non-conclusive |
+| 101_061       | 2        | Non-conclusive |
+| 101_2         | 4        | Non-conclusive |
+| 101_2641      | 2        | Non-conclusive |
+| 101_2a2501    | 2        | Non-conclusive |
+| 101_3000f0    | 2        | Non-conclusive |
+| 101_3b530     | 4        | Non-conclusive |
+| 101_44a16     | 4        | Non-conclusive |
+| 101_575f0     | 2        | Non-conclusive |
+| 101_631a07    | 4        | Non-conclusive |
+| 101_63995     | 1        | Non-conclusive |
+| 101_736       | 2        | Non-conclusive |
+| 101_7f5860    | 2        | Non-conclusive |
+| 101_810       | 1        | Non-conclusive |
+| 101_8f0       | 4        | Non-conclusive |
+| 101_93d9      | 1        | Non-conclusive |
+| 101_9458a0    | 4        | Non-conclusive |
+| 101f5c08      | 4        | Non-conclusive |
+| 102           | 5        | Supported      |
+| 1020          | 1        | Supported      |
+| 1023          | 8        | Supported      |
+| 1023_35a45    | 2        | Non-conclusive |
+| 1024          | 9        | Supported      |
+| 1025-2        | 4        | Non-conclusive |
+| 1025_6268     | 4        | Non-conclusive |
+| 1028_8f3      | 2        | Non-conclusive |
+| 1029_8f3      | 2        | Non-conclusive |
+| 102_0b9642    | 4        | Non-conclusive |
+| 102_1601a4    | 2        | Non-conclusive |
+| 102_1c1       | 2        | Non-conclusive |
+| 102_3036e1    | 4        | Non-conclusive |
+| 102_33        | 2        | Non-conclusive |
+| 102_3d35      | 4        | Non-conclusive |
+| 102_40f6      | 2        | Non-conclusive |
+| 102_51        | 1        | Non-conclusive |
+| 102_51c99     | 2        | Non-conclusive |
+| 102_5f1134    | 2        | Non-conclusive |
+| 102_62        | 1        | Non-conclusive |
+| 102_6d967     | 2        | Non-conclusive |
+| 102_85a13     | 2        | Non-conclusive |
+| 102_8748      | 2        | Non-conclusive |
+| 102ff935      | 4        | Non-conclusive |
+| 103           | 25       | Supported      |
+| 1030_4f5      | 2        | Non-conclusive |
+| 1033          | 4        | Supported      |
+| 1034_72       | 1        | Non-conclusive |
+| 1035_006      | 4        | Non-conclusive |
+| 1038_9d7      | 2        | Non-conclusive |
+| 1039db68      | 4        | Non-conclusive |
+| 103_1         | 1        | Non-conclusive |
+| 103_20b88     | 2        | Non-conclusive |
+| 103_2b876     | 2        | Non-conclusive |
+| 103_2c07      | 4        | Non-conclusive |
+| 103_3373      | 2        | Non-conclusive |
+| 103_3902      | 2        | Non-conclusive |
+| 103_3b65      | 4        | Non-conclusive |
+| 103_3d9       | 2        | Non-conclusive |
+| 103_4441      | 2        | Non-conclusive |
+| 103_44850     | 2        | Non-conclusive |
+| 103_4c9157    | 2        | Non-conclusive |
+| 103_6126      | 1        | Non-conclusive |
+| 103_6d5014    | 2        | Non-conclusive |
+| 103_771f3     | 2        | Non-conclusive |
+| 103_7f12      | 2        | Non-conclusive |
+| 103_85        | 2        | Non-conclusive |
+| 103_8e20      | 4        | Non-conclusive |
+| 103_9         | 2        | Non-conclusive |
+| 103_93        | 2        | Non-conclusive |
+| 103_9582      | 2        | Non-conclusive |
+| 104           | 2        | Supported      |
+| 1041          | 1        | Supported      |
+| 104_03f7      | 4        | Non-conclusive |
+| 104_0c728     | 4        | Non-conclusive |
+| 104_1e1445    | 2        | Non-conclusive |
+| 104_23366     | 2        | Non-conclusive |
+| 104_3667d8    | 4        | Non-conclusive |
+| 104_48085     | 2        | Non-conclusive |
+| 104_485       | 2        | Non-conclusive |
+| 104_48f3      | 4        | Non-conclusive |
+| 104_525       | 2        | Non-conclusive |
+| 104_526       | 2        | Non-conclusive |
+| 104_812240    | 2        | Non-conclusive |
+| 104_8412      | 2        | Non-conclusive |
+| 104_9c5273    | 4        | Non-conclusive |
+| 104_9e36      | 4        | Non-conclusive |
+| 105           | 8        | Supported      |
+| 1053          | 2        | Supported      |
+| 1055_57       | 2        | Non-conclusive |
+| 1057_0e8      | 1        | Non-conclusive |
+| 1059          | 1        | Supported      |
+| 1059_2f55     | 2        | Non-conclusive |
+| 105_0d9       | 4        | Non-conclusive |
+| 105_0e6       | 2        | Non-conclusive |
+| 105_190d4     | 1        | Non-conclusive |
+| 105_5         | 1        | Non-conclusive |
+| 105_55        | 2        | Non-conclusive |
+| 105_570       | 2        | Non-conclusive |
+| 105_6a2       | 4        | Non-conclusive |
+| 105_6b32      | 2        | Non-conclusive |
+| 105_6d941     | 2        | Non-conclusive |
+| 105_7         | 2        | Non-conclusive |
+| 105_7b8       | 2        | Non-conclusive |
+| 105_8f455     | 2        | Non-conclusive |
+| 105_930126    | 4        | Non-conclusive |
+| 105_96        | 2        | Non-conclusive |
+| 106           | 19       | Supported      |
+| 1060          | 1        | Supported      |
+| 1062          | 4        | Supported      |
+| 1063_2c943    | 1        | Non-conclusive |
+| 106_0e1858    | 1        | Non-conclusive |
+| 106_0f3       | 4        | Non-conclusive |
+| 106_117       | 4        | Non-conclusive |
+| 106_1c63      | 1        | Non-conclusive |
+| 106_4d8582    | 2        | Non-conclusive |
+| 106_604a96    | 4        | Non-conclusive |
+| 106_670e54    | 2        | Non-conclusive |
+| 106_69c6      | 4        | Non-conclusive |
+| 106_6b0       | 2        | Non-conclusive |
+| 106_6b74      | 2        | Non-conclusive |
+| 106_703d7     | 2        | Non-conclusive |
+| 106_846       | 2        | Non-conclusive |
+| 106_8b1       | 4        | Non-conclusive |
+| 106_90a40     | 1        | Non-conclusive |
+| 106_96        | 4        | Non-conclusive |
+| 106b82e       | 1        | Non-conclusive |
+| 106c3b47      | 4        | Non-conclusive |
+| 107           | 16       | Supported      |
+| 1072_94       | 1        | Non-conclusive |
+| 1079_1d69     | 2        | Non-conclusive |
+| 1079_5a1      | 2        | Non-conclusive |
+| 107_0c08      | 2        | Non-conclusive |
+| 107_1         | 2        | Non-conclusive |
+| 107_1e53      | 2        | Non-conclusive |
+| 107_455       | 2        | Non-conclusive |
+| 107_4b2       | 2        | Non-conclusive |
+| 107_5         | 2        | Non-conclusive |
+| 107_6a32      | 1        | Non-conclusive |
+| 107_6b17      | 4        | Non-conclusive |
+| 107_7368a0    | 4        | Non-conclusive |
+| 107_75b4      | 4        | Non-conclusive |
+| 107_8         | 2        | Non-conclusive |
+| 108           | 20       | Supported      |
+| 1080          | 16       | Supported      |
+| 1083          | 4        | Supported      |
+| 1087_15a14    | 4        | Non-conclusive |
+| 108_039       | 2        | Non-conclusive |
+| 108_11        | 2        | Non-conclusive |
+| 108_17        | 2        | Non-conclusive |
+| 108_3704e5    | 4        | Non-conclusive |
+| 108_3f31      | 2        | Non-conclusive |
+| 108_532e49    | 2        | Non-conclusive |
+| 108_5b40      | 2        | Non-conclusive |
+| 108_6         | 8        | Non-conclusive |
+| 108_779       | 2        | Non-conclusive |
+| 108_781a34    | 2        | Non-conclusive |
+| 108_887f6     | 4        | Non-conclusive |
+| 108_9a1       | 2        | Non-conclusive |
+| 109           | 14       | Supported      |
+| 1091ef4a      | 8        | Non-conclusive |
+| 1094_80       | 4        | Non-conclusive |
+| 1096          | 4        | Supported      |
+| 1097_4e8      | 2        | Non-conclusive |
+| 1098_3d987    | 2        | Non-conclusive |
+| 109_0f0067    | 4        | Non-conclusive |
+| 109_1         | 4        | Non-conclusive |
+| 109_29        | 2        | Non-conclusive |
+| 109_2e0200    | 2        | Non-conclusive |
+| 109_3f13      | 2        | Non-conclusive |
+| 109_6c6       | 2        | Non-conclusive |
+| 109_70496     | 2        | Non-conclusive |
+| 109_7a34      | 4        | Non-conclusive |
+| 109_8         | 2        | Non-conclusive |
+| 109_8a4       | 2        | Non-conclusive |
+| 10S5          | 4        | Non-conclusive |
+| 10_018a9      | 2        | Non-conclusive |
+| 10_021        | 1        | Non-conclusive |
+| 10_0249       | 4        | Non-conclusive |
+| 10_02f6       | 2        | Non-conclusive |
+| 10_044        | 2        | Non-conclusive |
+| 10_0_4        | 2        | Non-conclusive |
+| 10_0d9        | 2        | Non-conclusive |
+| 10_0e7        | 4        | Non-conclusive |
+| 10_0f7        | 2        | Non-conclusive |
+| 10_11c1       | 1        | Non-conclusive |
+| 10_15_0       | 6        | Non-conclusive |
+| 10_20         | 2        | Non-conclusive |
+| 10_209a6      | 2        | Non-conclusive |
+| 10_230a01     | 2        | Non-conclusive |
+| 10_2f42       | 1        | Non-conclusive |
+| 10_354e597    | 1        | Non-conclusive |
+| 10_3f60       | 1        | Non-conclusive |
+| 10_4          | 3        | Non-conclusive |
+| 10_41d878     | 2        | Non-conclusive |
+| 10_421        | 2        | Non-conclusive |
+| 10_4466d80    | 2        | Non-conclusive |
+| 10_47         | 1        | Non-conclusive |
+| 10_479b567    | 2        | Non-conclusive |
+| 10_495e1      | 2        | Non-conclusive |
+| 10_4984       | 1        | Non-conclusive |
+| 10_553f6      | 4        | Non-conclusive |
+| 10_56c9101    | 2        | Non-conclusive |
+| 10_58516      | 2        | Non-conclusive |
+| 10_590        | 1        | Non-conclusive |
+| 10_5e2478     | 1        | Non-conclusive |
+| 10_5f04       | 1        | Non-conclusive |
+| 10_6570       | 2        | Non-conclusive |
+| 10_67         | 2        | Non-conclusive |
+| 10_6a93       | 1        | Non-conclusive |
+| 10_6b248      | 2        | Non-conclusive |
+| 10_6c49       | 2        | Non-conclusive |
+| 10_7          | 2        | Non-conclusive |
+| 10_72f6       | 2        | Non-conclusive |
+| 10_73         | 1        | Non-conclusive |
+| 10_732        | 2        | Non-conclusive |
+| 10_77d598     | 1        | Non-conclusive |
+| 10_7938       | 2        | Non-conclusive |
+| 10_8          | 4        | Non-conclusive |
+| 10_803d91     | 2        | Non-conclusive |
+| 10_83         | 4        | Non-conclusive |
+| 10_86b9       | 4        | Non-conclusive |
+| 10_88546      | 2        | Non-conclusive |
+| 10_89d20      | 1        | Non-conclusive |
+| 10_8d2        | 4        | Non-conclusive |
+| 10_9290c34    | 4        | Non-conclusive |
+| 10_95d899     | 4        | Non-conclusive |
+| 10_9d8        | 2        | Non-conclusive |
+| 10a92003      | 4        | Non-conclusive |
+| 10c328eb      | 4        | Non-conclusive |
+| 10c54915      | 5        | Non-conclusive |
+| 10c696f0e1    | 4        | Non-conclusive |
+| 10cfc9fc      | 4        | Non-conclusive |
+| 10e4ef32      | 1        | Non-conclusive |
+| 10ec65a       | 4        | Non-conclusive |
+| 10f2916d      | 1        | Non-conclusive |
+| 11            | 658      | Supported      |
+| 11-01-241     | 4        | Non-conclusive |
+| 11-07-20      | 8        | Non-conclusive |
+| 11-45-606     | 4        | Non-conclusive |
+| 11-47-720     | 4        | Non-conclusive |
+| 11-5.0        | 4        | Non-conclusive |
+| 11.0.2        | 802      | Supported      |
+| 11.3.0        | 2        | Supported      |
+| 11.31         | 4        | Supported      |
+| 11.5.7        | 1        | Supported      |
+| 110           | 15       | Supported      |
+| 1102          | 8        | Supported      |
+| 1102_70c5     | 2        | Non-conclusive |
+| 1103_7        | 4        | Non-conclusive |
+| 1105_81       | 4        | Non-conclusive |
+| 1107          | 13       | Supported      |
+| 110_0a83      | 2        | Non-conclusive |
+| 110_2         | 4        | Non-conclusive |
+| 110_21123     | 2        | Non-conclusive |
+| 110_27        | 4        | Non-conclusive |
+| 110_3983      | 2        | Non-conclusive |
+| 110_6         | 2        | Non-conclusive |
+| 110_68f5      | 2        | Non-conclusive |
+| 110_75c8      | 2        | Non-conclusive |
+| 111           | 32       | Supported      |
+| 1111          | 4        | Supported      |
+| 1113          | 4        | Supported      |
+| 1116          | 4        | Supported      |
+| 111_20        | 2        | Non-conclusive |
+| 111_27f3      | 2        | Non-conclusive |
+| 111_302f2     | 1        | Non-conclusive |
+| 111_5b3       | 2        | Non-conclusive |
+| 111_869c0     | 2        | Non-conclusive |
+| 111_9e4       | 4        | Non-conclusive |
+| 112           | 18       | Supported      |
+| 1123          | 16       | Supported      |
+| 1125e6ec      | 4        | Non-conclusive |
+| 1128_86       | 2        | Non-conclusive |
+| 112_0         | 2        | Non-conclusive |
+| 112_10a89     | 2        | Non-conclusive |
+| 112_169       | 2        | Non-conclusive |
+| 112_214       | 4        | Non-conclusive |
+| 112_3         | 2        | Non-conclusive |
+| 112_3f80      | 2        | Non-conclusive |
+| 112_440074    | 2        | Non-conclusive |
+| 112_5         | 2        | Non-conclusive |
+| 112_5d8       | 2        | Non-conclusive |
+| 112_7a6       | 4        | Non-conclusive |
+| 112_7f15      | 2        | Non-conclusive |
+| 113           | 15       | Supported      |
+| 1135_694      | 2        | Non-conclusive |
+| 1135_84b00    | 2        | Non-conclusive |
+| 1136_9e7      | 2        | Non-conclusive |
+| 1137_17338    | 4        | Non-conclusive |
+| 113_019       | 2        | Non-conclusive |
+| 113_17        | 2        | Non-conclusive |
+| 113_1d860     | 4        | Non-conclusive |
+| 113_31        | 2        | Non-conclusive |
+| 113_36856     | 2        | Non-conclusive |
+| 113_4360      | 4        | Non-conclusive |
+| 113_43976     | 2        | Non-conclusive |
+| 113_44c0      | 4        | Non-conclusive |
+| 113_4e97      | 4        | Non-conclusive |
+| 113_66f0      | 2        | Non-conclusive |
+| 113_8         | 4        | Non-conclusive |
+| 114           | 6        | Supported      |
+| 1140          | 1        | Supported      |
+| 1140_2        | 2        | Non-conclusive |
+| 1140_9b52     | 2        | Non-conclusive |
+| 1141          | 2        | Supported      |
+| 1141_93890    | 2        | Non-conclusive |
+| 1145_1        | 4        | Non-conclusive |
+| 1146          | 2        | Supported      |
+| 1146_3        | 4        | Non-conclusive |
+| 1146_6        | 2        | Non-conclusive |
+| 1146_78       | 4        | Non-conclusive |
+| 114_0d80      | 2        | Non-conclusive |
+| 114_1c3262    | 2        | Non-conclusive |
+| 114_1f99      | 1        | Non-conclusive |
+| 114_291e1     | 4        | Non-conclusive |
+| 114_3c0       | 2        | Non-conclusive |
+| 114_5a3       | 4        | Non-conclusive |
+| 114_678a4     | 2        | Non-conclusive |
+| 114_7         | 2        | Non-conclusive |
+| 115           | 12       | Supported      |
+| 1150          | 12       | Supported      |
+| 1150eab5      | 4        | Non-conclusive |
+| 1151_07       | 2        | Non-conclusive |
+| 115_0e574     | 2        | Non-conclusive |
+| 115_1         | 8        | Non-conclusive |
+| 115_235a5     | 2        | Non-conclusive |
+| 115_3         | 4        | Non-conclusive |
+| 115_40        | 2        | Non-conclusive |
+| 115_449b2     | 1        | Non-conclusive |
+| 115_516b4     | 2        | Non-conclusive |
+| 115_7e19      | 2        | Non-conclusive |
+| 115_9c1       | 1        | Non-conclusive |
+| 116           | 16       | Supported      |
+| 1161_827      | 2        | Non-conclusive |
+| 1168          | 4        | Supported      |
+| 116_116e5     | 4        | Non-conclusive |
+| 116_16        | 2        | Non-conclusive |
+| 116_23f829    | 2        | Non-conclusive |
+| 116_3         | 2        | Non-conclusive |
+| 116_31        | 2        | Non-conclusive |
+| 116_43        | 2        | Non-conclusive |
+| 116_4b78      | 2        | Non-conclusive |
+| 116_5         | 2        | Non-conclusive |
+| 116_526       | 1        | Non-conclusive |
+| 116_6c73      | 2        | Non-conclusive |
+| 116_74e7      | 2        | Non-conclusive |
+| 116ce5dc      | 4        | Non-conclusive |
+| 117           | 9        | Supported      |
+| 1170          | 1900     | Supported      |
+| 1173          | 2        | Supported      |
+| 1176          | 4        | Supported      |
+| 1176_70       | 4        | Non-conclusive |
+| 1179_28       | 4        | Non-conclusive |
+| 117_057d0     | 2        | Non-conclusive |
+| 117_0b0       | 2        | Non-conclusive |
+| 117_1425b5    | 2        | Non-conclusive |
+| 117_159247    | 2        | Non-conclusive |
+| 117_212e8     | 2        | Non-conclusive |
+| 117_3         | 4        | Non-conclusive |
+| 117_370407    | 2        | Non-conclusive |
+| 117_444       | 4        | Non-conclusive |
+| 117_5c938     | 2        | Non-conclusive |
+| 117_641       | 1        | Non-conclusive |
+| 118           | 9        | Supported      |
+| 1180          | 8        | Supported      |
+| 1181_35c65    | 4        | Non-conclusive |
+| 1183          | 2        | Supported      |
+| 1183_18       | 4        | Non-conclusive |
+| 1183_9c8      | 2        | Non-conclusive |
+| 1186          | 6        | Supported      |
+| 1186_11       | 4        | Non-conclusive |
+| 1186_7e26     | 2        | Non-conclusive |
+| 1188_34a18    | 2        | Non-conclusive |
+| 118_195181    | 2        | Non-conclusive |
+| 118_1a5       | 2        | Non-conclusive |
+| 118_2105      | 4        | Non-conclusive |
+| 118_247       | 2        | Non-conclusive |
+| 118_298       | 2        | Non-conclusive |
+| 118_3f6       | 2        | Non-conclusive |
+| 118_4         | 4        | Non-conclusive |
+| 118_4a12      | 2        | Non-conclusive |
+| 118_4e787     | 2        | Non-conclusive |
+| 118_610c3     | 4        | Non-conclusive |
+| 118_7         | 6        | Non-conclusive |
+| 118_70f777    | 4        | Non-conclusive |
+| 118_7a331     | 2        | Non-conclusive |
+| 118_934e63    | 2        | Non-conclusive |
+| 118f4334-5    | 4        | Non-conclusive |
+| 118fc03244    | 8        | Non-conclusive |
+| 119           | 38       | Supported      |
+| 1193          | 4        | Supported      |
+| 1199          | 4        | Supported      |
+| 1199_2        | 4        | Non-conclusive |
+| 119_0         | 2        | Non-conclusive |
+| 119_16c654    | 4        | Non-conclusive |
+| 119_1f38      | 2        | Non-conclusive |
+| 119_36c4      | 2        | Non-conclusive |
+| 119_465       | 4        | Non-conclusive |
+| 119_608       | 2        | Non-conclusive |
+| 119_9         | 1        | Non-conclusive |
+| 119_9808d3    | 4        | Non-conclusive |
+| 119afcb6      | 4        | Non-conclusive |
+| 11_022        | 1        | Non-conclusive |
+| 11_0338b2     | 2        | Non-conclusive |
+| 11_0f9        | 2        | Non-conclusive |
+| 11_1048f47    | 2        | Non-conclusive |
+| 11_165        | 1        | Non-conclusive |
+| 11_1b866      | 1        | Non-conclusive |
+| 11_22         | 4        | Non-conclusive |
+| 11_23f46      | 8        | Non-conclusive |
+| 11_260e2      | 4        | Non-conclusive |
+| 11_26c03      | 4        | Non-conclusive |
+| 11_27793      | 2        | Non-conclusive |
+| 11_32b6361    | 4        | Non-conclusive |
+| 11_356        | 1        | Non-conclusive |
+| 11_366        | 4        | Non-conclusive |
+| 11_382c6      | 1        | Non-conclusive |
+| 11_3a65967    | 4        | Non-conclusive |
+| 11_3b0        | 2        | Non-conclusive |
+| 11_4          | 2        | Non-conclusive |
+| 11_42f19      | 2        | Non-conclusive |
+| 11_438        | 2        | Non-conclusive |
+| 11_44d545     | 2        | Non-conclusive |
+| 11_48d3202    | 2        | Non-conclusive |
+| 11_4f8        | 2        | Non-conclusive |
+| 11_50d2       | 1        | Non-conclusive |
+| 11_59999      | 1        | Non-conclusive |
+| 11_6          | 2        | Non-conclusive |
+| 11_60         | 4        | Non-conclusive |
+| 11_618c3      | 2        | Non-conclusive |
+| 11_66518b0    | 2        | Non-conclusive |
+| 11_6925b27    | 2        | Non-conclusive |
+| 11_6d38       | 2        | Non-conclusive |
+| 11_722d64     | 2        | Non-conclusive |
+| 11_74c54      | 4        | Non-conclusive |
+| 11_776        | 2        | Non-conclusive |
+| 11_7e5        | 2        | Non-conclusive |
+| 11_85816      | 1        | Non-conclusive |
+| 11_9383a5     | 4        | Non-conclusive |
+| 11_947        | 2        | Non-conclusive |
+| 11_9c751      | 2        | Non-conclusive |
+| 11a37f07      | 1        | Non-conclusive |
+| 11a65f4f      | 1        | Non-conclusive |
+| 11a8          | 5        | Non-conclusive |
+| 11ad5edf      | 8        | Non-conclusive |
+| 11b27d19      | 1        | Non-conclusive |
+| 11b3120c      | 1        | Non-conclusive |
+| 11b560b3      | 8        | Non-conclusive |
+| 11b8          | 5        | Non-conclusive |
+| 11c37b7c      | 5        | Non-conclusive |
+| 11c6f63433    | 4        | Non-conclusive |
+| 11cbe071      | 1        | Non-conclusive |
+| 11eebf9c      | 4        | Non-conclusive |
+| 11f75ecf      | 4        | Non-conclusive |
+| 11f7d608      | 4        | Non-conclusive |
+| 12            | 476      | Supported      |
+| 12-07-2022    | 4        | Non-conclusive |
+| 12-08-39      | 4        | Non-conclusive |
+| 12-1200       | 23       | Non-conclusive |
+| 12-31-551     | 4        | Non-conclusive |
+| 12-36-000     | 4        | Non-conclusive |
+| 12.07-6397    | 9        | Non-conclusive |
+| 12.1.0        | 4        | Supported      |
+| 120           | 207      | Supported      |
+| 1200          | 239      | Supported      |
+| 1200x250      | 8        | Non-conclusive |
+| 1202          | 6        | Supported      |
+| 1205          | 2        | Supported      |
+| 1207          | 28       | Supported      |
+| 1209          | 6        | Supported      |
+| 120_0c35      | 4        | Non-conclusive |
+| 120_262a27    | 2        | Non-conclusive |
+| 120_2c09      | 4        | Non-conclusive |
+| 120_5         | 2        | Non-conclusive |
+| 120_55a4      | 2        | Non-conclusive |
+| 120_57e02     | 4        | Non-conclusive |
+| 120_77d598    | 1        | Non-conclusive |
+| 120_8         | 1        | Non-conclusive |
+| 120_8a5       | 2        | Non-conclusive |
+| 120_9b3       | 2        | Non-conclusive |
+| 120_9b6       | 2        | Non-conclusive |
+| 121           | 53       | Supported      |
+| 1210          | 8        | Supported      |
+| 1210_519a2    | 2        | Non-conclusive |
+| 1214          | 2        | Supported      |
+| 121_0e7       | 4        | Non-conclusive |
+| 121_11e73     | 4        | Non-conclusive |
+| 121_2397      | 2        | Non-conclusive |
+| 121_26f147    | 4        | Non-conclusive |
+| 121_333d4     | 2        | Non-conclusive |
+| 121_39a53     | 2        | Non-conclusive |
+| 121_650       | 2        | Non-conclusive |
+| 121_7c3       | 4        | Non-conclusive |
+| 121_82        | 2        | Non-conclusive |
+| 121_877d70    | 2        | Non-conclusive |
+| 122           | 8        | Supported      |
+| 1221          | 1        | Supported      |
+| 122_022       | 2        | Non-conclusive |
+| 122_0a3       | 4        | Non-conclusive |
+| 122_1020e9    | 2        | Non-conclusive |
+| 122_158a9     | 2        | Non-conclusive |
+| 122_1d5       | 2        | Non-conclusive |
+| 122_296       | 4        | Non-conclusive |
+| 122_34c9      | 4        | Non-conclusive |
+| 122_618a3     | 2        | Non-conclusive |
+| 122_634b6     | 2        | Non-conclusive |
+| 122_8a30      | 2        | Non-conclusive |
+| 122_8c3       | 2        | Non-conclusive |
+| 122cec32      | 4        | Non-conclusive |
+| 123           | 23       | Supported      |
+| 1231_60       | 4        | Non-conclusive |
+| 1233          | 4        | Supported      |
+| 1234_90f1     | 2        | Non-conclusive |
+| 1236_1e31     | 4        | Non-conclusive |
+| 1238          | 4        | Supported      |
+| 123_0         | 4        | Non-conclusive |
+| 123_0d7       | 2        | Non-conclusive |
+| 123_0d701     | 2        | Non-conclusive |
+| 123_195181    | 12       | Non-conclusive |
+| 123_3         | 6        | Non-conclusive |
+| 123_31b664    | 1        | Non-conclusive |
+| 123_3f6       | 12       | Non-conclusive |
+| 123_7035      | 2        | Non-conclusive |
+| 123_76b0      | 4        | Non-conclusive |
+| 123_91e4      | 2        | Non-conclusive |
+| 123_92742     | 4        | Non-conclusive |
+| 123efa7f      | 4        | Non-conclusive |
+| 123f3f61      | 1        | Non-conclusive |
+| 124           | 4        | Supported      |
+| 1245_11c35    | 4        | Non-conclusive |
+| 1247c4f8      | 4        | Non-conclusive |
+| 124_195181    | 2        | Non-conclusive |
+| 124_357c97    | 4        | Non-conclusive |
+| 124_3b72      | 2        | Non-conclusive |
+| 124_3c13      | 2        | Non-conclusive |
+| 124_3f6       | 2        | Non-conclusive |
+| 124_42246     | 1        | Non-conclusive |
+| 124_55b0      | 2        | Non-conclusive |
+| 124_9e2       | 1        | Non-conclusive |
+| 125           | 21       | Supported      |
+| 125.1.3       | 4        | Supported      |
+| 1250_82985    | 2        | Non-conclusive |
+| 1250_95a9     | 2        | Non-conclusive |
+| 1251          | 2        | Supported      |
+| 1255df93      | 1        | Non-conclusive |
+| 1256          | 4        | Supported      |
+| 1257_06       | 2        | Non-conclusive |
+| 1259_16923    | 2        | Non-conclusive |
+| 1259_94       | 2        | Non-conclusive |
+| 125_0         | 4        | Non-conclusive |
+| 125_2f420     | 2        | Non-conclusive |
+| 125_45        | 2        | Non-conclusive |
+| 125_58        | 2        | Non-conclusive |
+| 125_5e49      | 6        | Non-conclusive |
+| 125_5f79      | 1        | Non-conclusive |
+| 125_63        | 4        | Non-conclusive |
+| 125_72        | 2        | Non-conclusive |
+| 125_76c6      | 2        | Non-conclusive |
+| 125_89e59     | 2        | Non-conclusive |
+| 125_8d8680    | 4        | Non-conclusive |
+| 125_903f6     | 2        | Non-conclusive |
+| 125_99d8      | 2        | Non-conclusive |
+| 125be4ce      | 8        | Non-conclusive |
+| 126           | 9        | Supported      |
+| 1260          | 1        | Supported      |
+| 1266cf0b      | 4        | Non-conclusive |
+| 126_0f80      | 4        | Non-conclusive |
+| 126_385913    | 4        | Non-conclusive |
+| 126_3f5175    | 2        | Non-conclusive |
+| 126_5e49      | 2        | Non-conclusive |
+| 126_6737b0    | 2        | Non-conclusive |
+| 126_678a4     | 4        | Non-conclusive |
+| 126_7d0       | 2        | Non-conclusive |
+| 126_7e376     | 1        | Non-conclusive |
+| 126_9         | 4        | Non-conclusive |
+| 127           | 18       | Supported      |
+| 1276_3        | 2        | Non-conclusive |
+| 1276_9329     | 2        | Non-conclusive |
+| 1279_84e4     | 2        | Non-conclusive |
+| 127_000568    | 2        | Non-conclusive |
+| 127_10016     | 4        | Non-conclusive |
+| 127_1066      | 2        | Non-conclusive |
+| 127_2866      | 2        | Non-conclusive |
+| 127_2b83      | 2        | Non-conclusive |
+| 127_35e16     | 5        | Non-conclusive |
+| 127_370f4     | 2        | Non-conclusive |
+| 127_48c36     | 4        | Non-conclusive |
+| 127_5c090     | 1        | Non-conclusive |
+| 127_70        | 4        | Non-conclusive |
+| 127_75a19     | 2        | Non-conclusive |
+| 127_8568      | 2        | Non-conclusive |
+| 127_8b1032    | 2        | Non-conclusive |
+| 127f37d7      | 8        | Non-conclusive |
+| 128           | 12       | Supported      |
+| 1280_84e4     | 2        | Non-conclusive |
+| 128_0d4       | 1        | Non-conclusive |
+| 128_33265     | 2        | Non-conclusive |
+| 128_51d51     | 2        | Non-conclusive |
+| 128_67c759    | 2        | Non-conclusive |
+| 128_76        | 4        | Non-conclusive |
+| 128_9279f9    | 2        | Non-conclusive |
+| 129           | 11       | Supported      |
+| 1293aaee      | 4        | Non-conclusive |
+| 1298c22b92    | 4        | Non-conclusive |
+| 129_087b1     | 4        | Non-conclusive |
+| 129_35e16     | 4        | Non-conclusive |
+| 129_3d9       | 4        | Non-conclusive |
+| 129_4e268     | 4        | Non-conclusive |
+| 129_51        | 4        | Non-conclusive |
+| 129_560       | 2        | Non-conclusive |
+| 129_59877     | 4        | Non-conclusive |
+| 129_618a3     | 1        | Non-conclusive |
+| 129_67c759    | 2        | Non-conclusive |
+| 129_721       | 2        | Non-conclusive |
+| 129_8         | 2        | Non-conclusive |
+| 129e8a22      | 4        | Non-conclusive |
+| 12_022        | 2        | Non-conclusive |
+| 12_0220       | 2        | Non-conclusive |
+| 12_076        | 2        | Non-conclusive |
+| 12_076c022    | 1        | Non-conclusive |
+| 12_082        | 4        | Non-conclusive |
+| 12_0d55       | 4        | Non-conclusive |
+| 12_0d9        | 2        | Non-conclusive |
+| 12_1          | 4        | Non-conclusive |
+| 12_117        | 1        | Non-conclusive |
+| 12_193a46     | 1        | Non-conclusive |
+| 12_2          | 3        | Non-conclusive |
+| 12_2017       | 1        | Non-conclusive |
+| 12_22246      | 4        | Non-conclusive |
+| 12_260a75     | 2        | Non-conclusive |
+| 12_28-16      | 4        | Non-conclusive |
+| 12_29c86      | 2        | Non-conclusive |
+| 12_2a186      | 2        | Non-conclusive |
+| 12_2f177      | 4        | Non-conclusive |
+| 12_30c28      | 4        | Non-conclusive |
+| 12_3_13       | 4        | Non-conclusive |
+| 12_3d0349     | 2        | Non-conclusive |
+| 12_3d9        | 2        | Non-conclusive |
+| 12_3f870      | 4        | Non-conclusive |
+| 12_41287      | 2        | Non-conclusive |
+| 12_430        | 1        | Non-conclusive |
+| 12_4d708      | 1        | Non-conclusive |
+| 12_5078178    | 2        | Non-conclusive |
+| 12_52         | 2        | Non-conclusive |
+| 12_5271c57    | 4        | Non-conclusive |
+| 12_548d473    | 2        | Non-conclusive |
+| 12_5620       | 2        | Non-conclusive |
+| 12_56c9101    | 2        | Non-conclusive |
+| 12_582        | 4        | Non-conclusive |
+| 12_59         | 2        | Non-conclusive |
+| 12_5c9530     | 2        | Non-conclusive |
+| 12_5d30892    | 4        | Non-conclusive |
+| 12_5f6        | 1        | Non-conclusive |
+| 12_618a3      | 2        | Non-conclusive |
+| 12_63420b3    | 4        | Non-conclusive |
+| 12_65a64      | 1        | Non-conclusive |
+| 12_6a87       | 4        | Non-conclusive |
+| 12_6b28       | 4        | Non-conclusive |
+| 12_6d49       | 1        | Non-conclusive |
+| 12_71         | 2        | Non-conclusive |
+| 12_727657     | 2        | Non-conclusive |
+| 12_732        | 2        | Non-conclusive |
+| 12_8          | 4        | Non-conclusive |
+| 12_80         | 4        | Non-conclusive |
+| 12_814        | 2        | Non-conclusive |
+| 12_8a91       | 2        | Non-conclusive |
+| 12_8a96426    | 1        | Non-conclusive |
+| 12_8b424      | 4        | Non-conclusive |
+| 12_95898b9    | 4        | Non-conclusive |
+| 12_9b3        | 2        | Non-conclusive |
+| 12_9d0639     | 2        | Non-conclusive |
+| 12_9e40       | 2        | Non-conclusive |
+| 12a32d52      | 1        | Non-conclusive |
+| 12cc4dc7      | 1        | Non-conclusive |
+| 12cc7d89      | 4        | Non-conclusive |
+| 12d6d940      | 4        | Non-conclusive |
+| 12e4c5c6      | 4        | Non-conclusive |
+| 12e8b561      | 4        | Non-conclusive |
+| 13            | 312      | Supported      |
+| 13-4690472    | 8        | Non-conclusive |
+| 13-50-000     | 4        | Non-conclusive |
+| 13.14-2022    | 1        | Non-conclusive |
+| 13.52.0       | 9        | Supported      |
+| 130           | 10       | Supported      |
+| 1300          | 1        | Supported      |
+| 1303_8        | 4        | Non-conclusive |
+| 1305_3        | 4        | Non-conclusive |
+| 130_1         | 2        | Non-conclusive |
+| 130_125d21    | 2        | Non-conclusive |
+| 130_1523      | 2        | Non-conclusive |
+| 130_179186    | 4        | Non-conclusive |
+| 130_379       | 4        | Non-conclusive |
+| 130_4924      | 2        | Non-conclusive |
+| 130_6         | 4        | Non-conclusive |
+| 130_601984    | 1        | Non-conclusive |
+| 130_678e6     | 4        | Non-conclusive |
+| 130_98b18     | 4        | Non-conclusive |
+| 130_9c41      | 4        | Non-conclusive |
+| 130a254       | 1        | Non-conclusive |
+| 130b13ee      | 1        | Non-conclusive |
+| 131           | 22       | Supported      |
+| 1310          | 1        | Supported      |
+| 1313          | 4        | Supported      |
+| 1314          | 4        | Supported      |
+| 1316de9b      | 4        | Non-conclusive |
+| 1317_1        | 2        | Non-conclusive |
+| 1317_7        | 4        | Non-conclusive |
+| 1319b0e8      | 16       | Non-conclusive |
+| 131_1         | 2        | Non-conclusive |
+| 131_25a08     | 2        | Non-conclusive |
+| 131_3         | 2        | Non-conclusive |
+| 131_30        | 2        | Non-conclusive |
+| 131_4         | 2        | Non-conclusive |
+| 131_5         | 1        | Non-conclusive |
+| 131_5c54      | 4        | Non-conclusive |
+| 131_6f19      | 4        | Non-conclusive |
+| 131_9c1       | 2        | Non-conclusive |
+| 132           | 43       | Supported      |
+| 1321bce       | 4        | Non-conclusive |
+| 1325_73f48    | 4        | Non-conclusive |
+| 1326deea      | 1        | Non-conclusive |
+| 132_0e8       | 2        | Non-conclusive |
+| 132c0e51      | 4        | Non-conclusive |
+| 133           | 22       | Supported      |
+| 1332_3c6      | 2        | Non-conclusive |
+| 1335_3c6      | 2        | Non-conclusive |
+| 133_17960     | 2        | Non-conclusive |
+| 133_39782     | 4        | Non-conclusive |
+| 133_4194f4    | 1        | Non-conclusive |
+| 133_5         | 2        | Non-conclusive |
+| 133_5e4       | 4        | Non-conclusive |
+| 133_656a6     | 1        | Non-conclusive |
+| 133_8e4066    | 2        | Non-conclusive |
+| 133_8e57      | 2        | Non-conclusive |
+| 134           | 10       | Supported      |
+| 1340e75f      | 4        | Non-conclusive |
+| 1340f3bf      | 1        | Non-conclusive |
+| 1342_402      | 2        | Non-conclusive |
+| 1343_402      | 2        | Non-conclusive |
+| 134_0         | 4        | Non-conclusive |
+| 134_03d2      | 2        | Non-conclusive |
+| 134_0426      | 2        | Non-conclusive |
+| 134_0a46      | 4        | Non-conclusive |
+| 134_0b128     | 2        | Non-conclusive |
+| 134_0e205     | 4        | Non-conclusive |
+| 134_17f78     | 2        | Non-conclusive |
+| 134_40        | 1        | Non-conclusive |
+| 134_57e7      | 4        | Non-conclusive |
+| 134_66        | 2        | Non-conclusive |
+| 134_79        | 2        | Non-conclusive |
+| 134_84        | 4        | Non-conclusive |
+| 134_8789e7    | 4        | Non-conclusive |
+| 134_9455      | 2        | Non-conclusive |
+| 135           | 15       | Supported      |
+| 1350          | 2        | Supported      |
+| 1350_1b6      | 2        | Non-conclusive |
+| 135_02e9      | 2        | Non-conclusive |
+| 135_04        | 2        | Non-conclusive |
+| 135_081       | 2        | Non-conclusive |
+| 135_09f5      | 5        | Non-conclusive |
+| 135_1         | 2        | Non-conclusive |
+| 135_12c8      | 2        | Non-conclusive |
+| 135_161f17    | 2        | Non-conclusive |
+| 135_18a4      | 2        | Non-conclusive |
+| 135_1a09      | 2        | Non-conclusive |
+| 135_3         | 2        | Non-conclusive |
+| 135_315d1     | 2        | Non-conclusive |
+| 135_52a31     | 2        | Non-conclusive |
+| 135_53f8      | 2        | Non-conclusive |
+| 135_6         | 1        | Non-conclusive |
+| 135_6c7       | 1        | Non-conclusive |
+| 135_91        | 2        | Non-conclusive |
+| 135_98f0      | 2        | Non-conclusive |
+| 135_9d63      | 2        | Non-conclusive |
+| 136           | 18       | Supported      |
+| 1360          | 2        | Supported      |
+| 1360_069      | 2        | Non-conclusive |
+| 1360_76715    | 2        | Non-conclusive |
+| 1362_75       | 4        | Non-conclusive |
+| 1363_62       | 2        | Non-conclusive |
+| 1363_9e62     | 2        | Non-conclusive |
+| 1369_77a4     | 4        | Non-conclusive |
+| 136_1c249     | 1        | Non-conclusive |
+| 136_2634b4    | 1        | Non-conclusive |
+| 136_2e9730    | 2        | Non-conclusive |
+| 136_4a23      | 2        | Non-conclusive |
+| 136_4f1858    | 4        | Non-conclusive |
+| 136_688e05    | 4        | Non-conclusive |
+| 136_772b1     | 2        | Non-conclusive |
+| 136_86e9      | 1        | Non-conclusive |
+| 136_96905     | 2        | Non-conclusive |
+| 136e096a      | 2        | Non-conclusive |
+| 137           | 5        | Supported      |
+| 1373_0        | 4        | Non-conclusive |
+| 1376          | 2        | Supported      |
+| 1378_66       | 4        | Non-conclusive |
+| 137_0288      | 1        | Non-conclusive |
+| 137_1         | 2        | Non-conclusive |
+| 137_1a6       | 4        | Non-conclusive |
+| 137_1d874     | 4        | Non-conclusive |
+| 137_2e6       | 4        | Non-conclusive |
+| 137_3f179     | 4        | Non-conclusive |
+| 137_4         | 2        | Non-conclusive |
+| 137_630       | 4        | Non-conclusive |
+| 137_65b1      | 4        | Non-conclusive |
+| 137_67        | 2        | Non-conclusive |
+| 137_77330     | 1        | Non-conclusive |
+| 137_818       | 2        | Non-conclusive |
+| 137_96c4      | 2        | Non-conclusive |
+| 137f4cc2      | 4        | Non-conclusive |
+| 138           | 11       | Supported      |
+| 1385_4f206    | 2        | Non-conclusive |
+| 1385_6c49     | 2        | Non-conclusive |
+| 1385_7c5      | 2        | Non-conclusive |
+| 1386          | 2        | Supported      |
+| 1386_268c0    | 2        | Non-conclusive |
+| 1388          | 2        | Supported      |
+| 138_0409e1    | 4        | Non-conclusive |
+| 138_072       | 2        | Non-conclusive |
+| 138_1595      | 2        | Non-conclusive |
+| 138_195181    | 2        | Non-conclusive |
+| 138_2         | 2        | Non-conclusive |
+| 138_3766      | 2        | Non-conclusive |
+| 138_3f6       | 2        | Non-conclusive |
+| 138_56        | 2        | Non-conclusive |
+| 138_58516     | 2        | Non-conclusive |
+| 138_5c7       | 2        | Non-conclusive |
+| 138_6236d5    | 2        | Non-conclusive |
+| 138_66743     | 2        | Non-conclusive |
+| 138_6c300     | 2        | Non-conclusive |
+| 138_8c0       | 4        | Non-conclusive |
+| 138_9f1887    | 4        | Non-conclusive |
+| 139           | 2        | Supported      |
+| 1394_28155    | 2        | Non-conclusive |
+| 1394f4ea      | 1        | Non-conclusive |
+| 1395_28155    | 2        | Non-conclusive |
+| 1396_34       | 2        | Non-conclusive |
+| 1396_69       | 2        | Non-conclusive |
+| 139_29545     | 2        | Non-conclusive |
+| 139_5e49      | 6        | Non-conclusive |
+| 139_609       | 4        | Non-conclusive |
+| 139_7e383     | 4        | Non-conclusive |
+| 13_002e3      | 4        | Non-conclusive |
+| 13_04e68      | 2        | Non-conclusive |
+| 13_08a170     | 1        | Non-conclusive |
+| 13_0a4        | 1        | Non-conclusive |
+| 13_0b15       | 2        | Non-conclusive |
+| 13_0b87       | 2        | Non-conclusive |
+| 13_0b9642     | 1        | Non-conclusive |
+| 13_1          | 2        | Non-conclusive |
+| 13_119b244    | 2        | Non-conclusive |
+| 13_12         | 4        | Non-conclusive |
+| 13_1465       | 2        | Non-conclusive |
+| 13_1a3        | 2        | Non-conclusive |
+| 13_2          | 4        | Non-conclusive |
+| 13_216        | 1        | Non-conclusive |
+| 13_217        | 2        | Non-conclusive |
+| 13_2b876      | 2        | Non-conclusive |
+| 13_2c320      | 2        | Non-conclusive |
+| 13_3          | 1        | Non-conclusive |
+| 13_3332d56    | 1        | Non-conclusive |
+| 13_33c959     | 2        | Non-conclusive |
+| 13_35b59      | 4        | Non-conclusive |
+| 13_383        | 2        | Non-conclusive |
+| 13_3d88429    | 2        | Non-conclusive |
+| 13_3f3        | 2        | Non-conclusive |
+| 13_47d7       | 2        | Non-conclusive |
+| 13_49d8       | 8        | Non-conclusive |
+| 13_5          | 2        | Non-conclusive |
+| 13_52544      | 1        | Non-conclusive |
+| 13_585d387    | 4        | Non-conclusive |
+| 13_5e43       | 4        | Non-conclusive |
+| 13_6          | 2        | Non-conclusive |
+| 13_6692c03    | 1        | Non-conclusive |
+| 13_679        | 4        | Non-conclusive |
+| 13_68         | 2        | Non-conclusive |
+| 13_68183      | 2        | Non-conclusive |
+| 13_6a9979     | 2        | Non-conclusive |
+| 13_6b2499     | 2        | Non-conclusive |
+| 13_6f997      | 1        | Non-conclusive |
+| 13_73         | 1        | Non-conclusive |
+| 13_732        | 4        | Non-conclusive |
+| 13_7339b72    | 2        | Non-conclusive |
+| 13_77         | 2        | Non-conclusive |
+| 13_787        | 2        | Non-conclusive |
+| 13_790d68     | 2        | Non-conclusive |
+| 13_7b0        | 2        | Non-conclusive |
+| 13_7b81       | 4        | Non-conclusive |
+| 13_7f12       | 2        | Non-conclusive |
+| 13_7f71       | 2        | Non-conclusive |
+| 13_814966     | 1        | Non-conclusive |
+| 13_81b4       | 4        | Non-conclusive |
+| 13_8821a1     | 1        | Non-conclusive |
+| 13_895        | 2        | Non-conclusive |
+| 13_8c91       | 2        | Non-conclusive |
+| 13_930d699    | 4        | Non-conclusive |
+| 13_98f0       | 2        | Non-conclusive |
+| 13_9f8        | 1        | Non-conclusive |
+| 13a5114b      | 1        | Non-conclusive |
+| 13bb05a5      | 4        | Non-conclusive |
+| 13c0ee4f      | 4        | Non-conclusive |
+| 13c21         | 4        | Non-conclusive |
+| 13c535ed      | 1        | Non-conclusive |
+| 13f63af5      | 4        | Non-conclusive |
+| 13f7          | 8        | Non-conclusive |
+| 14            | 319      | Supported      |
+| 14-11-2022    | 4        | Non-conclusive |
+| 14.16         | 4        | Supported      |
+| 14.3          | 1        | Supported      |
+| 140           | 8        | Supported      |
+| 1401a31c      | 4        | Non-conclusive |
+| 1403_07       | 2        | Non-conclusive |
+| 1403_824      | 2        | Non-conclusive |
+| 1405          | 4        | Supported      |
+| 1406          | 2        | Supported      |
+| 1407_30       | 2        | Non-conclusive |
+| 140_057       | 2        | Non-conclusive |
+| 140_1c788     | 1        | Non-conclusive |
+| 140_1d8       | 2        | Non-conclusive |
+| 140_2         | 2        | Non-conclusive |
+| 140_21        | 1        | Non-conclusive |
+| 140_47        | 4        | Non-conclusive |
+| 140_5e49      | 2        | Non-conclusive |
+| 140_63587     | 2        | Non-conclusive |
+| 140_7d2       | 2        | Non-conclusive |
+| 141           | 20       | Supported      |
+| 1415          | 2        | Supported      |
+| 1415_4a65     | 4        | Non-conclusive |
+| 1417_04833    | 2        | Non-conclusive |
+| 1419          | 2        | Supported      |
+| 141_019f9     | 2        | Non-conclusive |
+| 141_039a7     | 2        | Non-conclusive |
+| 141_0973      | 4        | Non-conclusive |
+| 141_28        | 2        | Non-conclusive |
+| 141_3d4       | 5        | Non-conclusive |
+| 141_522       | 2        | Non-conclusive |
+| 141_9         | 2        | Non-conclusive |
+| 141_94        | 2        | Non-conclusive |
+| 141_9e68      | 2        | Non-conclusive |
+| 141c5fd4      | 1        | Non-conclusive |
+| 141ca063      | 4        | Non-conclusive |
+| 142           | 9        | Supported      |
+| 1421cb3a      | 1        | Non-conclusive |
+| 1426          | 6        | Supported      |
+| 142_01b9      | 2        | Non-conclusive |
+| 142_19        | 2        | Non-conclusive |
+| 142_1f10      | 4        | Non-conclusive |
+| 142_2b9       | 2        | Non-conclusive |
+| 142_3e5697    | 2        | Non-conclusive |
+| 142_58516     | 2        | Non-conclusive |
+| 142_63b9      | 4        | Non-conclusive |
+| 142_67634     | 2        | Non-conclusive |
+| 142_9b64      | 4        | Non-conclusive |
+| 143           | 14       | Supported      |
+| 1436          | 2        | Supported      |
+| 1437_59b46    | 4        | Non-conclusive |
+| 1437_957e4    | 2        | Non-conclusive |
+| 143_1015c3    | 2        | Non-conclusive |
+| 143_2d1       | 2        | Non-conclusive |
+| 143_311       | 4        | Non-conclusive |
+| 143_7a2       | 2        | Non-conclusive |
+| 143_7a841     | 2        | Non-conclusive |
+| 143_9b5       | 2        | Non-conclusive |
+| 143b2         | 1        | Non-conclusive |
+| 144           | 9        | Supported      |
+| 1440/4.3      | 199      | Non-conclusive |
+| 1444          | 4        | Supported      |
+| 1448_216      | 4        | Non-conclusive |
+| 144_056e1     | 2        | Non-conclusive |
+| 144_22        | 2        | Non-conclusive |
+| 144_2361      | 2        | Non-conclusive |
+| 144_3         | 2        | Non-conclusive |
+| 144_304c4     | 2        | Non-conclusive |
+| 144_3c24      | 2        | Non-conclusive |
+| 144_510       | 4        | Non-conclusive |
+| 144_584f7     | 2        | Non-conclusive |
+| 144_602a6     | 2        | Non-conclusive |
+| 144_6b83      | 4        | Non-conclusive |
+| 144_741       | 4        | Non-conclusive |
+| 144_7e4       | 2        | Non-conclusive |
+| 144_922a19    | 4        | Non-conclusive |
+| 144_9b97      | 2        | Non-conclusive |
+| 145           | 11       | Supported      |
+| 1454_9041     | 4        | Non-conclusive |
+| 145_188       | 4        | Non-conclusive |
+| 145_4         | 2        | Non-conclusive |
+| 145_40016     | 4        | Non-conclusive |
+| 145_55e41     | 1        | Non-conclusive |
+| 145_5f9       | 2        | Non-conclusive |
+| 145_72        | 2        | Non-conclusive |
+| 145_79d016    | 2        | Non-conclusive |
+| 145_86        | 4        | Non-conclusive |
+| 145b0044      | 1        | Non-conclusive |
+| 145f648c      | 1        | Non-conclusive |
+| 146           | 8        | Supported      |
+| 1460          | 4        | Supported      |
+| 146_02        | 2        | Non-conclusive |
+| 146_030c2     | 2        | Non-conclusive |
+| 146_1c432     | 2        | Non-conclusive |
+| 146_2c2831    | 2        | Non-conclusive |
+| 146_2e2       | 2        | Non-conclusive |
+| 146_4357      | 2        | Non-conclusive |
+| 146_56c0      | 2        | Non-conclusive |
+| 146_5e49      | 2        | Non-conclusive |
+| 146_5f439     | 4        | Non-conclusive |
+| 146_8482      | 2        | Non-conclusive |
+| 146_9424      | 2        | Non-conclusive |
+| 146_9f76      | 2        | Non-conclusive |
+| 147           | 4        | Supported      |
+| 1479_0        | 2        | Non-conclusive |
+| 1479_0a1      | 2        | Non-conclusive |
+| 1479_7b802    | 2        | Non-conclusive |
+| 147_1         | 1        | Non-conclusive |
+| 147_2         | 4        | Non-conclusive |
+| 147_27c8      | 4        | Non-conclusive |
+| 147_284d95    | 4        | Non-conclusive |
+| 147_67e03     | 2        | Non-conclusive |
+| 147_7379      | 2        | Non-conclusive |
+| 147_7a4       | 2        | Non-conclusive |
+| 147_7c3582    | 2        | Non-conclusive |
+| 147_829b08    | 1        | Non-conclusive |
+| 147_8520e4    | 2        | Non-conclusive |
+| 147_9c4       | 2        | Non-conclusive |
+| 147a57cb      | 4        | Non-conclusive |
+| 148           | 31       | Supported      |
+| 1480-3        | 4        | Non-conclusive |
+| 1481          | 4        | Supported      |
+| 148_6b734     | 2        | Non-conclusive |
+| 149           | 6        | Supported      |
+| 149_1782      | 4        | Non-conclusive |
+| 149_335       | 1        | Non-conclusive |
+| 149_3f2045    | 2        | Non-conclusive |
+| 149_5d6       | 2        | Non-conclusive |
+| 149_5f12      | 2        | Non-conclusive |
+| 149_8         | 2        | Non-conclusive |
+| 149a1fd7      | 4        | Non-conclusive |
+| 149b6         | 1        | Non-conclusive |
+| 14_0          | 4        | Non-conclusive |
+| 14_02226      | 2        | Non-conclusive |
+| 14_030        | 4        | Non-conclusive |
+| 14_04_14      | 4        | Non-conclusive |
+| 14_06         | 4        | Non-conclusive |
+| 14_07332d9    | 4        | Non-conclusive |
+| 14_07734      | 2        | Non-conclusive |
+| 14_099f8      | 2        | Non-conclusive |
+| 14_10         | 2        | Non-conclusive |
+| 14_130f4      | 1        | Non-conclusive |
+| 14_1b851      | 4        | Non-conclusive |
+| 14_1f20       | 2        | Non-conclusive |
+| 14_2          | 2        | Non-conclusive |
+| 14_22         | 2        | Non-conclusive |
+| 14_236f53     | 2        | Non-conclusive |
+| 14_268b3      | 1        | Non-conclusive |
+| 14_27a2       | 2        | Non-conclusive |
+| 14_28f0       | 4        | Non-conclusive |
+| 14_299533     | 9        | Non-conclusive |
+| 14_2a6        | 4        | Non-conclusive |
+| 14_3          | 6        | Non-conclusive |
+| 14_371        | 1        | Non-conclusive |
+| 14_37c5711    | 1        | Non-conclusive |
+| 14_3964706    | 2        | Non-conclusive |
+| 14_3d2635     | 2        | Non-conclusive |
+| 14_4          | 6        | Non-conclusive |
+| 14_423        | 1        | Non-conclusive |
+| 14_47         | 2        | Non-conclusive |
+| 14_4997a70    | 2        | Non-conclusive |
+| 14_49f5639    | 2        | Non-conclusive |
+| 14_4a7        | 1        | Non-conclusive |
+| 14_4d384      | 4        | Non-conclusive |
+| 14_4d6        | 4        | Non-conclusive |
+| 14_5423d3     | 2        | Non-conclusive |
+| 14_5761c9     | 2        | Non-conclusive |
+| 14_59         | 2        | Non-conclusive |
+| 14_5d30892    | 1        | Non-conclusive |
+| 14_5e62016    | 1        | Non-conclusive |
+| 14_62         | 1        | Non-conclusive |
+| 14_62a8       | 2        | Non-conclusive |
+| 14_66         | 2        | Non-conclusive |
+| 14_6b248      | 2        | Non-conclusive |
+| 14_6c8        | 2        | Non-conclusive |
+| 14_6e6        | 2        | Non-conclusive |
+| 14_6e758      | 2        | Non-conclusive |
+| 14_7          | 1        | Non-conclusive |
+| 14_79675      | 2        | Non-conclusive |
+| 14_7b2        | 2        | Non-conclusive |
+| 14_8          | 2        | Non-conclusive |
+| 14_8271d75    | 2        | Non-conclusive |
+| 14_870        | 4        | Non-conclusive |
+| 14_8d7        | 1        | Non-conclusive |
+| 14_96         | 2        | Non-conclusive |
+| 14_985c91     | 4        | Non-conclusive |
+| 14_9b07       | 2        | Non-conclusive |
+| 14a00505      | 1        | Non-conclusive |
+| 14a3456       | 4        | Non-conclusive |
+| 14a61532      | 4        | Non-conclusive |
+| 14b016d6      | 1        | Non-conclusive |
+| 14b93         | 4        | Non-conclusive |
+| 14ba909a      | 4        | Non-conclusive |
+| 14c81aea11    | 4        | Non-conclusive |
+| 14dcf7ca      | 1        | Non-conclusive |
+| 14dedaa0      | 4        | Non-conclusive |
+| 14ea6b45b     | 4        | Non-conclusive |
+| 14ff5cc8      | 4        | Non-conclusive |
+| 15            | 661      | Supported      |
+| 15-48-000     | 4        | Non-conclusive |
+| 15.0.6        | 4        | Supported      |
+| 15.12.0       | 2        | Supported      |
+| 15.7.5        | 5        | Supported      |
+| 150           | 10       | Supported      |
+| 1501          | 8        | Supported      |
+| 1507_01       | 8        | Non-conclusive |
+| 1508          | 4        | Supported      |
+| 150_0e48      | 2        | Non-conclusive |
+| 150_1b4       | 2        | Non-conclusive |
+| 150_27f131    | 4        | Non-conclusive |
+| 150_287       | 2        | Non-conclusive |
+| 150_2d3       | 4        | Non-conclusive |
+| 150_3         | 2        | Non-conclusive |
+| 150_3a28      | 2        | Non-conclusive |
+| 150_3d2       | 2        | Non-conclusive |
+| 150_4e7       | 2        | Non-conclusive |
+| 150_6962      | 4        | Non-conclusive |
+| 150_86        | 4        | Non-conclusive |
+| 150_8a0       | 4        | Non-conclusive |
+| 150_9f168     | 2        | Non-conclusive |
+| 150_9f244     | 2        | Non-conclusive |
+| 150a7c80      | 4        | Non-conclusive |
+| 151           | 8        | Supported      |
+| 1514          | 1        | Supported      |
+| 1514_7426     | 4        | Non-conclusive |
+| 1517          | 2        | Supported      |
+| 1517_9        | 2        | Non-conclusive |
+| 151_12        | 4        | Non-conclusive |
+| 151_12e9      | 2        | Non-conclusive |
+| 151_23954     | 2        | Non-conclusive |
+| 151_30        | 2        | Non-conclusive |
+| 151_48e9      | 2        | Non-conclusive |
+| 151_5e49      | 2        | Non-conclusive |
+| 151_6b8       | 1        | Non-conclusive |
+| 151_7622      | 4        | Non-conclusive |
+| 151_84f65     | 4        | Non-conclusive |
+| 151_8e0       | 4        | Non-conclusive |
+| 151_9c01      | 4        | Non-conclusive |
+| 151b287e      | 4        | Non-conclusive |
+| 152           | 13       | Supported      |
+| 1522_822e4    | 4        | Non-conclusive |
+| 1522e76a      | 1        | Non-conclusive |
+| 1528b597      | 1        | Non-conclusive |
+| 152_12f59     | 2        | Non-conclusive |
+| 152_2         | 2        | Non-conclusive |
+| 152_413       | 2        | Non-conclusive |
+| 152_58b9      | 2        | Non-conclusive |
+| 152_7         | 2        | Non-conclusive |
+| 152_730       | 2        | Non-conclusive |
+| 152_86        | 2        | Non-conclusive |
+| 152aa677      | 4        | Non-conclusive |
+| 153_0a8       | 1        | Non-conclusive |
+| 153_55f13     | 4        | Non-conclusive |
+| 153_642b0     | 4        | Non-conclusive |
+| 153_9         | 2        | Non-conclusive |
+| 153c0d34      | 4        | Non-conclusive |
+| 154           | 17       | Supported      |
+| 1540          | 6        | Supported      |
+| 1543          | 2        | Supported      |
+| 1544_38b29    | 4        | Non-conclusive |
+| 1548          | 1        | Supported      |
+| 154_07        | 2        | Non-conclusive |
+| 154_0a058     | 1        | Non-conclusive |
+| 154_10        | 2        | Non-conclusive |
+| 154_2e23      | 2        | Non-conclusive |
+| 154_3469f3    | 4        | Non-conclusive |
+| 154_5476      | 4        | Non-conclusive |
+| 154_71        | 2        | Non-conclusive |
+| 154_811e6     | 2        | Non-conclusive |
+| 155           | 11       | Supported      |
+| 1552_0e195    | 2        | Non-conclusive |
+| 1553_1        | 2        | Non-conclusive |
+| 155_1f9413    | 2        | Non-conclusive |
+| 155_417f08    | 2        | Non-conclusive |
+| 155_46f793    | 2        | Non-conclusive |
+| 155_4a90      | 2        | Non-conclusive |
+| 155_4d632     | 2        | Non-conclusive |
+| 155_684a86    | 2        | Non-conclusive |
+| 155_76        | 4        | Non-conclusive |
+| 155_7b31      | 4        | Non-conclusive |
+| 155_9f5       | 2        | Non-conclusive |
+| 155d4606      | 1        | Non-conclusive |
+| 156           | 11       | Supported      |
+| 1560_4905     | 4        | Non-conclusive |
+| 1562_51677    | 2        | Non-conclusive |
+| 156_1d2       | 2        | Non-conclusive |
+| 156_1e867     | 2        | Non-conclusive |
+| 156_3         | 2        | Non-conclusive |
+| 156_3e1       | 2        | Non-conclusive |
+| 156_3f87      | 2        | Non-conclusive |
+| 156_747       | 4        | Non-conclusive |
+| 156_77a4      | 2        | Non-conclusive |
+| 156_7d51      | 4        | Non-conclusive |
+| 156_7d5801    | 4        | Non-conclusive |
+| 156a423c      | 1        | Non-conclusive |
+| 157           | 11       | Supported      |
+| 1572_81a06    | 4        | Non-conclusive |
+| 1574f171      | 8        | Non-conclusive |
+| 157_2         | 2        | Non-conclusive |
+| 157_24        | 2        | Non-conclusive |
+| 157_2f071     | 1        | Non-conclusive |
+| 157_55a955    | 4        | Non-conclusive |
+| 157_7791      | 2        | Non-conclusive |
+| 157_8         | 2        | Non-conclusive |
+| 157_98553     | 2        | Non-conclusive |
+| 158           | 14       | Supported      |
+| 1583_7c2      | 2        | Non-conclusive |
+| 158_02d1      | 4        | Non-conclusive |
+| 158_3         | 2        | Non-conclusive |
+| 158_3221c1    | 2        | Non-conclusive |
+| 158_3e4       | 4        | Non-conclusive |
+| 158_40d8      | 4        | Non-conclusive |
+| 158_4600      | 2        | Non-conclusive |
+| 158_7020c1    | 4        | Non-conclusive |
+| 158_78        | 4        | Non-conclusive |
+| 159           | 2        | Supported      |
+| 1596_9        | 2        | Non-conclusive |
+| 159_0a4       | 4        | Non-conclusive |
+| 159_17899     | 2        | Non-conclusive |
+| 159_2         | 2        | Non-conclusive |
+| 159_3f0       | 4        | Non-conclusive |
+| 159_563       | 2        | Non-conclusive |
+| 159_7         | 4        | Non-conclusive |
+| 159_71        | 1        | Non-conclusive |
+| 159_9c1       | 2        | Non-conclusive |
+| 15_0          | 7        | Non-conclusive |
+| 15_0d57       | 2        | Non-conclusive |
+| 15_0d9        | 2        | Non-conclusive |
+| 15_1          | 4        | Non-conclusive |
+| 15_113924     | 2        | Non-conclusive |
+| 15_16         | 1        | Non-conclusive |
+| 15_18         | 4        | Non-conclusive |
+| 15_18507      | 2        | Non-conclusive |
+| 15_1e51       | 2        | Non-conclusive |
+| 15_201b8      | 2        | Non-conclusive |
+| 15_277        | 2        | Non-conclusive |
+| 15_29178      | 4        | Non-conclusive |
+| 15_2967d85    | 1        | Non-conclusive |
+| 15_311612     | 4        | Non-conclusive |
+| 15_33         | 2        | Non-conclusive |
+| 15_35         | 4        | Non-conclusive |
+| 15_354e597    | 2        | Non-conclusive |
+| 15_379        | 2        | Non-conclusive |
+| 15_38498b0    | 4        | Non-conclusive |
+| 15_3c43       | 2        | Non-conclusive |
+| 15_3c624      | 2        | Non-conclusive |
+| 15_40         | 1        | Non-conclusive |
+| 15_41b0664    | 2        | Non-conclusive |
+| 15_4480       | 2        | Non-conclusive |
+| 15_47         | 2        | Non-conclusive |
+| 15_4c1502     | 1        | Non-conclusive |
+| 15_56c9101    | 2        | Non-conclusive |
+| 15_56d26      | 2        | Non-conclusive |
+| 15_5c0        | 4        | Non-conclusive |
+| 15_5d30892    | 7        | Non-conclusive |
+| 15_6110a1     | 2        | Non-conclusive |
+| 15_624        | 1        | Non-conclusive |
+| 15_64         | 2        | Non-conclusive |
+| 15_66e6       | 4        | Non-conclusive |
+| 15_68         | 2        | Non-conclusive |
+| 15_6a03       | 4        | Non-conclusive |
+| 15_6c06388    | 2        | Non-conclusive |
+| 15_6d1915     | 4        | Non-conclusive |
+| 15_738        | 3        | Non-conclusive |
+| 15_7a3        | 4        | Non-conclusive |
+| 15_7b1        | 2        | Non-conclusive |
+| 15_7b76225    | 2        | Non-conclusive |
+| 15_80e830     | 1        | Non-conclusive |
+| 15_812a170    | 4        | Non-conclusive |
+| 15_85447      | 2        | Non-conclusive |
+| 15_88         | 2        | Non-conclusive |
+| 15_880d2      | 2        | Non-conclusive |
+| 15_881e958    | 4        | Non-conclusive |
+| 15_8c0392     | 1        | Non-conclusive |
+| 15_8d6        | 1        | Non-conclusive |
+| 15_8e6        | 4        | Non-conclusive |
+| 15_904510     | 4        | Non-conclusive |
+| 15_94         | 2        | Non-conclusive |
+| 15_959f6      | 2        | Non-conclusive |
+| 15_96         | 4        | Non-conclusive |
+| 15_97         | 8        | Non-conclusive |
+| 15_9875f21    | 2        | Non-conclusive |
+| 15a5          | 1        | Non-conclusive |
+| 15ae19cf      | 1        | Non-conclusive |
+| 15d9f814      | 1        | Non-conclusive |
+| 15f853b6      | 1        | Non-conclusive |
+| 15x1200       | 1        | Non-conclusive |
+| 15x1280v22    | 23       | Non-conclusive |
+| 15x1280v23    | 4        | Non-conclusive |
+| 16            | 578      | Supported      |
+| 16-44-372     | 4        | Non-conclusive |
+| 16-58-563     | 4        | Non-conclusive |
+| 160           | 6        | Supported      |
+| 1600_108      | 2        | Non-conclusive |
+| 1600a8b2      | 8        | Non-conclusive |
+| 1601_01       | 4        | Non-conclusive |
+| 1602a63b      | 1        | Non-conclusive |
+| 1606_2        | 2        | Non-conclusive |
+| 1608          | 1        | Supported      |
+| 160_3         | 2        | Non-conclusive |
+| 160_5         | 2        | Non-conclusive |
+| 160_6         | 2        | Non-conclusive |
+| 160_60        | 4        | Non-conclusive |
+| 160_761c26    | 4        | Non-conclusive |
+| 160_79d7      | 4        | Non-conclusive |
+| 160e384b      | 4        | Non-conclusive |
+| 161           | 10       | Supported      |
+| 1610          | 4        | Supported      |
+| 1615_113      | 2        | Non-conclusive |
+| 1615f1        | 16       | Non-conclusive |
+| 1617          | 1        | Supported      |
+| 1619f58f      | 4        | Non-conclusive |
+| 161_056       | 2        | Non-conclusive |
+| 161_0d39      | 2        | Non-conclusive |
+| 161_119       | 1        | Non-conclusive |
+| 161_2f4       | 4        | Non-conclusive |
+| 161_3         | 2        | Non-conclusive |
+| 161_3c263     | 2        | Non-conclusive |
+| 161_5048      | 4        | Non-conclusive |
+| 161_6656      | 4        | Non-conclusive |
+| 161_8         | 4        | Non-conclusive |
+| 162           | 2        | Supported      |
+| 1628af82      | 8        | Non-conclusive |
+| 162_4c9       | 4        | Non-conclusive |
+| 162_63272     | 1        | Non-conclusive |
+| 162_635       | 2        | Non-conclusive |
+| 162_6d98      | 2        | Non-conclusive |
+| 163           | 7        | Supported      |
+| 1634          | 2        | Supported      |
+| 1634_801      | 2        | Non-conclusive |
+| 1635          | 2        | Supported      |
+| 1636_6        | 2        | Non-conclusive |
+| 1637          | 4        | Supported      |
+| 1637_4c89     | 4        | Non-conclusive |
+| 1638          | 2        | Supported      |
+| 163_0f6       | 2        | Non-conclusive |
+| 163_3c03      | 4        | Non-conclusive |
+| 163_42        | 4        | Non-conclusive |
+| 163_66e3      | 2        | Non-conclusive |
+| 164           | 18       | Supported      |
+| 1641ecd0      | 4        | Non-conclusive |
+| 1644b1c3      | 4        | Non-conclusive |
+| 1645          | 4        | Supported      |
+| 164_12        | 2        | Non-conclusive |
+| 164_21c4      | 2        | Non-conclusive |
+| 164_2b03      | 4        | Non-conclusive |
+| 164_2d7       | 4        | Non-conclusive |
+| 164_3         | 4        | Non-conclusive |
+| 164_4         | 2        | Non-conclusive |
+| 164_4c657     | 2        | Non-conclusive |
+| 164_5260      | 2        | Non-conclusive |
+| 164_708       | 4        | Non-conclusive |
+| 164_82f863    | 2        | Non-conclusive |
+| 164c70b0      | 4        | Non-conclusive |
+| 165           | 8        | Supported      |
+| 1652_7b86     | 1        | Non-conclusive |
+| 1658_722      | 10       | Non-conclusive |
+| 165_2         | 4        | Non-conclusive |
+| 165_2c3       | 2        | Non-conclusive |
+| 165_304       | 2        | Non-conclusive |
+| 165_30c28     | 2        | Non-conclusive |
+| 165_35e16     | 1        | Non-conclusive |
+| 165_409f21    | 4        | Non-conclusive |
+| 165_45        | 2        | Non-conclusive |
+| 165_87        | 4        | Non-conclusive |
+| 165_9         | 2        | Non-conclusive |
+| 166           | 12       | Supported      |
+| 1664_216      | 2        | Non-conclusive |
+| 1664_722      | 4        | Non-conclusive |
+| 1669_2        | 2        | Non-conclusive |
+| 1669_6c83     | 2        | Non-conclusive |
+| 166_35e16     | 12       | Non-conclusive |
+| 166_3b5       | 4        | Non-conclusive |
+| 166_4e8       | 1        | Non-conclusive |
+| 166_987e4     | 4        | Non-conclusive |
+| 167           | 9        | Supported      |
+| 1671_53c2     | 4        | Non-conclusive |
+| 1672_098b2    | 2        | Non-conclusive |
+| 1675_8a2      | 2        | Non-conclusive |
+| 167_086f8     | 1        | Non-conclusive |
+| 167_50        | 4        | Non-conclusive |
+| 167ab7b5      | 4        | Non-conclusive |
+| 168           | 6        | Supported      |
+| 1680          | 9        | Supported      |
+| 1684          | 4        | Supported      |
+| 1685_21c76    | 2        | Non-conclusive |
+| 168_2c75      | 2        | Non-conclusive |
+| 168_3375      | 2        | Non-conclusive |
+| 168_53        | 1        | Non-conclusive |
+| 168_5e49      | 8        | Non-conclusive |
+| 168_7e537     | 2        | Non-conclusive |
+| 168_9         | 4        | Non-conclusive |
+| 168abfb2      | 1        | Non-conclusive |
+| 168dfc70      | 1        | Non-conclusive |
+| 169           | 4        | Supported      |
+| 1692          | 2        | Supported      |
+| 1692_9c868    | 2        | Non-conclusive |
+| 169_26        | 4        | Non-conclusive |
+| 169_38b62     | 2        | Non-conclusive |
+| 169_4         | 1        | Non-conclusive |
+| 169_47        | 2        | Non-conclusive |
+| 169_5e49      | 4        | Non-conclusive |
+| 169_6143b7    | 2        | Non-conclusive |
+| 169_62c7      | 2        | Non-conclusive |
+| 169_652       | 2        | Non-conclusive |
+| 169_70170     | 2        | Non-conclusive |
+| 169_80        | 4        | Non-conclusive |
+| 169_829a08    | 2        | Non-conclusive |
+| 16_0          | 4        | Non-conclusive |
+| 16_053c167    | 2        | Non-conclusive |
+| 16_0973       | 2        | Non-conclusive |
+| 16_11         | 1        | Non-conclusive |
+| 16_11c957     | 2        | Non-conclusive |
+| 16_1268       | 2        | Non-conclusive |
+| 16_163d59     | 2        | Non-conclusive |
+| 16_1e3        | 2        | Non-conclusive |
+| 16_2738a36    | 4        | Non-conclusive |
+| 16_2f99       | 2        | Non-conclusive |
+| 16_3          | 4        | Non-conclusive |
+| 16_38498b0    | 4        | Non-conclusive |
+| 16_3a4        | 2        | Non-conclusive |
+| 16_4          | 2        | Non-conclusive |
+| 16_40e219     | 1        | Non-conclusive |
+| 16_4209c3     | 4        | Non-conclusive |
+| 16_49         | 4        | Non-conclusive |
+| 16_4941106    | 4        | Non-conclusive |
+| 16_5091d37    | 4        | Non-conclusive |
+| 16_5289       | 2        | Non-conclusive |
+| 16_5c433      | 2        | Non-conclusive |
+| 16_5d0        | 2        | Non-conclusive |
+| 16_5d30892    | 4        | Non-conclusive |
+| 16_609d927    | 4        | Non-conclusive |
+| 16_61013a4    | 4        | Non-conclusive |
+| 16_6124828    | 4        | Non-conclusive |
+| 16_6278       | 1        | Non-conclusive |
+| 16_636a97     | 4        | Non-conclusive |
+| 16_6c588      | 2        | Non-conclusive |
+| 16_6f12       | 4        | Non-conclusive |
+| 16_6f9        | 1        | Non-conclusive |
+| 16_7          | 2        | Non-conclusive |
+| 16_72411d2    | 2        | Non-conclusive |
+| 16_732        | 2        | Non-conclusive |
+| 16_7339b72    | 2        | Non-conclusive |
+| 16_7493772    | 4        | Non-conclusive |
+| 16_775        | 1        | Non-conclusive |
+| 16_7a00       | 4        | Non-conclusive |
+| 16_7a3        | 4        | Non-conclusive |
+| 16_7b7293     | 2        | Non-conclusive |
+| 16_8          | 2        | Non-conclusive |
+| 16_871e3      | 2        | Non-conclusive |
+| 16_88a8       | 4        | Non-conclusive |
+| 16_88e1       | 2        | Non-conclusive |
+| 16_8a96426    | 6        | Non-conclusive |
+| 16_8f5        | 2        | Non-conclusive |
+| 16_9500d9     | 1        | Non-conclusive |
+| 16_97         | 1        | Non-conclusive |
+| 16_9704b7     | 4        | Non-conclusive |
+| 16a08075      | 4        | Non-conclusive |
+| 16a2633345    | 8        | Non-conclusive |
+| 16a431ce      | 8        | Non-conclusive |
+| 16aa1ef3      | 1        | Non-conclusive |
+| 16aa704       | 4        | Non-conclusive |
+| 16ac07bf      | 1        | Non-conclusive |
+| 16b6-3        | 4        | Non-conclusive |
+| 16b69d61fa    | 8        | Non-conclusive |
+| 16cf9f1e      | 4        | Non-conclusive |
+| 16d0121e      | 1        | Non-conclusive |
+| 16d4e8ed      | 1        | Non-conclusive |
+| 16eebbb2      | 4        | Non-conclusive |
+| 16ef40b456    | 4        | Non-conclusive |
+| 16x1200       | 4        | Non-conclusive |
+| 17            | 1761     | Supported      |
+| 17-21-535     | 8        | Non-conclusive |
+| 17.6.1        | 4        | Supported      |
+| 17.8.5        | 1        | Supported      |
+| 170           | 2        | Supported      |
+| 1701f80d      | 2        | Non-conclusive |
+| 170_0         | 2        | Non-conclusive |
+| 170_10        | 4        | Non-conclusive |
+| 170_1e5       | 2        | Non-conclusive |
+| 170_2         | 2        | Non-conclusive |
+| 170_2a65      | 2        | Non-conclusive |
+| 170_5d09      | 4        | Non-conclusive |
+| 170_6b0       | 2        | Non-conclusive |
+| 170_9c5884    | 4        | Non-conclusive |
+| 170d456d      | 4        | Non-conclusive |
+| 171           | 8        | Supported      |
+| 1713_1        | 2        | Non-conclusive |
+| 1713_2        | 4        | Non-conclusive |
+| 171_0         | 4        | Non-conclusive |
+| 171_18e0      | 2        | Non-conclusive |
+| 171_1d1652    | 2        | Non-conclusive |
+| 171_30        | 1        | Non-conclusive |
+| 171_347d4     | 2        | Non-conclusive |
+| 171_37        | 1        | Non-conclusive |
+| 171_3f80      | 2        | Non-conclusive |
+| 171_5b3       | 2        | Non-conclusive |
+| 171_814       | 2        | Non-conclusive |
+| 172           | 11       | Supported      |
+| 1721e479      | 4        | Non-conclusive |
+| 1726          | 2        | Supported      |
+| 172_203       | 2        | Non-conclusive |
+| 172_21        | 2        | Non-conclusive |
+| 172_313       | 1        | Non-conclusive |
+| 172_35401     | 2        | Non-conclusive |
+| 172_66        | 4        | Non-conclusive |
+| 172_6f8       | 1        | Non-conclusive |
+| 172_80c2      | 4        | Non-conclusive |
+| 172_90a272    | 2        | Non-conclusive |
+| 172_94a43     | 2        | Non-conclusive |
+| 172b1         | 4        | Non-conclusive |
+| 172d40fc      | 4        | Non-conclusive |
+| 173           | 34       | Supported      |
+| 1738          | 4        | Supported      |
+| 173_2f737     | 2        | Non-conclusive |
+| 173_4d50      | 2        | Non-conclusive |
+| 173_6         | 2        | Non-conclusive |
+| 173_8         | 2        | Non-conclusive |
+| 173_843e8     | 1        | Non-conclusive |
+| 173_928373    | 2        | Non-conclusive |
+| 173_931       | 4        | Non-conclusive |
+| 174           | 4        | Supported      |
+| 1742f54e      | 4        | Non-conclusive |
+| 174_014f1     | 2        | Non-conclusive |
+| 174_17e7      | 4        | Non-conclusive |
+| 174_21        | 2        | Non-conclusive |
+| 174_2a52      | 4        | Non-conclusive |
+| 174_3b4691    | 2        | Non-conclusive |
+| 174_3f5       | 2        | Non-conclusive |
+| 174_41b065    | 2        | Non-conclusive |
+| 174_453f6     | 2        | Non-conclusive |
+| 174_565       | 2        | Non-conclusive |
+| 174_5e4       | 4        | Non-conclusive |
+| 174_5f5       | 2        | Non-conclusive |
+| 174_6a8072    | 2        | Non-conclusive |
+| 174_6b0       | 2        | Non-conclusive |
+| 174_7         | 2        | Non-conclusive |
+| 174_72        | 1        | Non-conclusive |
+| 174_8b8       | 2        | Non-conclusive |
+| 174_91c9      | 2        | Non-conclusive |
+| 175           | 5        | Supported      |
+| 1753_8a018    | 1        | Non-conclusive |
+| 175_3         | 2        | Non-conclusive |
+| 175_39        | 4        | Non-conclusive |
+| 175_3f5       | 2        | Non-conclusive |
+| 175_46        | 2        | Non-conclusive |
+| 175_5a108     | 2        | Non-conclusive |
+| 175_5e49      | 2        | Non-conclusive |
+| 175_6a8       | 4        | Non-conclusive |
+| 175_6e0       | 2        | Non-conclusive |
+| 175_92b8      | 2        | Non-conclusive |
+| 176           | 7        | Supported      |
+| 1762_2f6      | 2        | Non-conclusive |
+| 1767f881      | 1        | Non-conclusive |
+| 1768f09e      | 4        | Non-conclusive |
+| 1769          | 1        | Supported      |
+| 176_0         | 2        | Non-conclusive |
+| 176_37a9      | 2        | Non-conclusive |
+| 176_643e07    | 2        | Non-conclusive |
+| 177           | 10       | Supported      |
+| 1774          | 2        | Supported      |
+| 177_02b940    | 2        | Non-conclusive |
+| 177_19a044    | 4        | Non-conclusive |
+| 177_201a04    | 2        | Non-conclusive |
+| 177_51d1      | 2        | Non-conclusive |
+| 177_70f338    | 2        | Non-conclusive |
+| 177e4a20      | 4        | Non-conclusive |
+| 178           | 9        | Supported      |
+| 1781_73e93    | 4        | Non-conclusive |
+| 1783          | 2        | Supported      |
+| 1783_543      | 2        | Non-conclusive |
+| 1786_269      | 1        | Non-conclusive |
+| 178_16a606    | 2        | Non-conclusive |
+| 178_2         | 2        | Non-conclusive |
+| 178_32c2      | 2        | Non-conclusive |
+| 178_3b8       | 2        | Non-conclusive |
+| 178_465582    | 4        | Non-conclusive |
+| 178_4c0297    | 1        | Non-conclusive |
+| 178_67c702    | 2        | Non-conclusive |
+| 178_7         | 2        | Non-conclusive |
+| 179           | 18       | Supported      |
+| 1790_47       | 4        | Non-conclusive |
+| 1790c90b      | 4        | Non-conclusive |
+| 1799ecb       | 4        | Non-conclusive |
+| 179_1         | 4        | Non-conclusive |
+| 179_1808c4    | 2        | Non-conclusive |
+| 179_8         | 2        | Non-conclusive |
+| 179_9         | 4        | Non-conclusive |
+| 179_94e3      | 1        | Non-conclusive |
+| 179b55c8      | 4        | Non-conclusive |
+| 17_010        | 2        | Non-conclusive |
+| 17_0330c27    | 1        | Non-conclusive |
+| 17_041e77     | 2        | Non-conclusive |
+| 17_0d8        | 1        | Non-conclusive |
+| 17_1          | 2        | Non-conclusive |
+| 17_112        | 1        | Non-conclusive |
+| 17_1465       | 2        | Non-conclusive |
+| 17_149a70     | 2        | Non-conclusive |
+| 17_16207      | 4        | Non-conclusive |
+| 17_212        | 4        | Non-conclusive |
+| 17_221c0      | 2        | Non-conclusive |
+| 17_2335217    | 2        | Non-conclusive |
+| 17_2544f7     | 2        | Non-conclusive |
+| 17_263c3      | 2        | Non-conclusive |
+| 17_2857c34    | 2        | Non-conclusive |
+| 17_2900a33    | 4        | Non-conclusive |
+| 17_2b9        | 1        | Non-conclusive |
+| 17_2e77412    | 2        | Non-conclusive |
+| 17_339a80     | 4        | Non-conclusive |
+| 17_3510       | 2        | Non-conclusive |
+| 17_388e352    | 1        | Non-conclusive |
+| 17_3e805      | 1        | Non-conclusive |
+| 17_40e76      | 2        | Non-conclusive |
+| 17_40e982     | 2        | Non-conclusive |
+| 17_46         | 4        | Non-conclusive |
+| 17_50         | 2        | Non-conclusive |
+| 17_515        | 2        | Non-conclusive |
+| 17_563        | 2        | Non-conclusive |
+| 17_57a91      | 1        | Non-conclusive |
+| 17_5c01       | 2        | Non-conclusive |
+| 17_5f0164     | 4        | Non-conclusive |
+| 17_614a15     | 2        | Non-conclusive |
+| 17_62d9       | 1        | Non-conclusive |
+| 17_67304c7    | 2        | Non-conclusive |
+| 17_678a4      | 2        | Non-conclusive |
+| 17_6904       | 2        | Non-conclusive |
+| 17_6b248      | 2        | Non-conclusive |
+| 17_6c091      | 2        | Non-conclusive |
+| 17_6e5        | 2        | Non-conclusive |
+| 17_7          | 1        | Non-conclusive |
+| 17_732        | 8        | Non-conclusive |
+| 17_7339b72    | 2        | Non-conclusive |
+| 17_74805      | 2        | Non-conclusive |
+| 17_78d5       | 4        | Non-conclusive |
+| 17_78f382     | 4        | Non-conclusive |
+| 17_8          | 4        | Non-conclusive |
+| 17_827c0      | 4        | Non-conclusive |
+| 17_82881      | 2        | Non-conclusive |
+| 17_8c0        | 4        | Non-conclusive |
+| 17_8c338      | 4        | Non-conclusive |
+| 17_8d0        | 2        | Non-conclusive |
+| 17_90         | 4        | Non-conclusive |
+| 17_90a91      | 2        | Non-conclusive |
+| 17_919f645    | 4        | Non-conclusive |
+| 17_92         | 4        | Non-conclusive |
+| 17_9d52484    | 2        | Non-conclusive |
+| 17a3a14       | 4        | Non-conclusive |
+| 17a43bc0      | 4        | Non-conclusive |
+| 17abb7b4      | 4        | Non-conclusive |
+| 17b5d600      | 1        | Non-conclusive |
+| 17b6dac8      | 4        | Non-conclusive |
+| 17bcb53e      | 1        | Non-conclusive |
+| 17bfd5b6      | 4        | Non-conclusive |
+| 17d1099e      | 4        | Non-conclusive |
+| 17d284d7      | 4        | Non-conclusive |
+| 17d78086      | 4        | Non-conclusive |
+| 17f47d07      | 4        | Non-conclusive |
+| 17f511fe      | 4        | Non-conclusive |
+| 17f9012b      | 4        | Non-conclusive |
+| 17fb7e0f      | 5        | Non-conclusive |
+| 18            | 2894     | Supported      |
+| 18-08-2021    | 4        | Non-conclusive |
+| 18-44-000     | 4        | Non-conclusive |
+| 18.0500000    | 12       | Supported      |
+| 18.0501000    | 9        | Supported      |
+| 18.0502000    | 24       | Supported      |
+| 18.0503000    | 6        | Supported      |
+| 18.0504000    | 27       | Supported      |
+| 18.0505000    | 13       | Supported      |
+| 18.0506000    | 4        | Supported      |
+| 18.0507000    | 8        | Supported      |
+| 18.0511000    | 6        | Supported      |
+| 18.0514000    | 16       | Supported      |
+| 18.1100000    | 20       | Supported      |
+| 18.1101000    | 19       | Supported      |
+| 18.1102000    | 44       | Supported      |
+| 18.1103000    | 13       | Supported      |
+| 18.1104000    | 44       | Supported      |
+| 18.1105000    | 74       | Supported      |
+| 18.1106000    | 13       | Supported      |
+| 18.1107000    | 1        | Supported      |
+| 18.1108000    | 28       | Supported      |
+| 18.1109000    | 4        | Supported      |
+| 18.1110000    | 12       | Supported      |
+| 18.1111000    | 12       | Supported      |
+| 18.1112000    | 4        | Supported      |
+| 18.1113000    | 4        | Supported      |
+| 18.1115000    | 4        | Supported      |
+| 18.1116000    | 16       | Supported      |
+| 18.1200031    | 8        | Supported      |
+| 180           | 9        | Supported      |
+| 1801          | 4        | Supported      |
+| 1802          | 2        | Supported      |
+| 1804_34d8     | 2        | Non-conclusive |
+| 180_26a9      | 4        | Non-conclusive |
+| 180_3         | 2        | Non-conclusive |
+| 180_6a40      | 2        | Non-conclusive |
+| 181           | 1        | Supported      |
+| 1812_4e82     | 2        | Non-conclusive |
+| 1813_4e82     | 2        | Non-conclusive |
+| 181_1119      | 4        | Non-conclusive |
+| 181_572416    | 1        | Non-conclusive |
+| 181_97f5      | 4        | Non-conclusive |
+| 182           | 9        | Supported      |
+| 1823_376      | 2        | Non-conclusive |
+| 182_06e6      | 2        | Non-conclusive |
+| 182_1a5       | 2        | Non-conclusive |
+| 182_8         | 4        | Non-conclusive |
+| 183           | 6        | Supported      |
+| 1834          | 4        | Supported      |
+| 183_0         | 4        | Non-conclusive |
+| 183_2         | 4        | Non-conclusive |
+| 183_28b92     | 1        | Non-conclusive |
+| 183_2d99      | 4        | Non-conclusive |
+| 183_3         | 4        | Non-conclusive |
+| 183_3e2160    | 4        | Non-conclusive |
+| 183a6674      | 1        | Non-conclusive |
+| 184           | 14       | Supported      |
+| 1845          | 24       | Supported      |
+| 184_34        | 2        | Non-conclusive |
+| 184_41        | 1        | Non-conclusive |
+| 184_681       | 2        | Non-conclusive |
+| 184_8c6       | 2        | Non-conclusive |
+| 184_96        | 1        | Non-conclusive |
+| 184_9e0       | 4        | Non-conclusive |
+| 184a7307      | 4        | Non-conclusive |
+| 185           | 8        | Supported      |
+| 1852          | 8        | Supported      |
+| 185_166       | 2        | Non-conclusive |
+| 185_17        | 2        | Non-conclusive |
+| 185_3f79      | 2        | Non-conclusive |
+| 185_56        | 2        | Non-conclusive |
+| 185_74245     | 2        | Non-conclusive |
+| 185bb9e6      | 4        | Non-conclusive |
+| 186           | 1        | Supported      |
+| 1860c21b      | 4        | Non-conclusive |
+| 1862b138      | 1        | Non-conclusive |
+| 1868          | 4        | Supported      |
+| 186_297       | 2        | Non-conclusive |
+| 186_6f52      | 2        | Non-conclusive |
+| 186_747d7     | 2        | Non-conclusive |
+| 186_753d62    | 4        | Non-conclusive |
+| 186_89759     | 2        | Non-conclusive |
+| 187           | 4        | Supported      |
+| 1871          | 3        | Supported      |
+| 1873_4c06     | 2        | Non-conclusive |
+| 1873_9        | 2        | Non-conclusive |
+| 187_0770f5    | 2        | Non-conclusive |
+| 187_19        | 1        | Non-conclusive |
+| 187_4         | 4        | Non-conclusive |
+| 187b5         | 1        | Non-conclusive |
+| 187fcb55      | 1        | Non-conclusive |
+| 188           | 13       | Supported      |
+| 188_00188     | 4        | Non-conclusive |
+| 188_09c565    | 2        | Non-conclusive |
+| 188_16f436    | 2        | Non-conclusive |
+| 188_26b9      | 2        | Non-conclusive |
+| 188_49        | 4        | Non-conclusive |
+| 189           | 6        | Supported      |
+| 1890c0ad      | 1        | Non-conclusive |
+| 1894b703      | 4        | Non-conclusive |
+| 1896_2        | 4        | Non-conclusive |
+| 1898_2a65     | 2        | Non-conclusive |
+| 189_13a194    | 4        | Non-conclusive |
+| 189_60a9      | 4        | Non-conclusive |
+| 189_92        | 2        | Non-conclusive |
+| 18_00151      | 2        | Non-conclusive |
+| 18_00a2       | 2        | Non-conclusive |
+| 18_01615      | 1        | Non-conclusive |
+| 18_04853      | 1        | Non-conclusive |
+| 18_08867f2    | 4        | Non-conclusive |
+| 18_14f40      | 1        | Non-conclusive |
+| 18_155b0      | 2        | Non-conclusive |
+| 18_1639f8     | 2        | Non-conclusive |
+| 18_172d4      | 2        | Non-conclusive |
+| 18_2          | 1        | Non-conclusive |
+| 18_244e44     | 2        | Non-conclusive |
+| 18_2754       | 1        | Non-conclusive |
+| 18_3          | 1        | Non-conclusive |
+| 18_30c28      | 2        | Non-conclusive |
+| 18_3249372    | 4        | Non-conclusive |
+| 18_3864       | 2        | Non-conclusive |
+| 18_3a0        | 2        | Non-conclusive |
+| 18_428c1      | 2        | Non-conclusive |
+| 18_43a60      | 2        | Non-conclusive |
+| 18_47         | 4        | Non-conclusive |
+| 18_4729       | 2        | Non-conclusive |
+| 18_4a37382    | 4        | Non-conclusive |
+| 18_54         | 1        | Non-conclusive |
+| 18_56c9101    | 1        | Non-conclusive |
+| 18_58127d0    | 2        | Non-conclusive |
+| 18_5a400      | 1        | Non-conclusive |
+| 18_5b80       | 4        | Non-conclusive |
+| 18_5d30892    | 8        | Non-conclusive |
+| 18_5f72324    | 4        | Non-conclusive |
+| 18_631        | 4        | Non-conclusive |
+| 18_6c523      | 2        | Non-conclusive |
+| 18_6c9        | 2        | Non-conclusive |
+| 18_7          | 2        | Non-conclusive |
+| 18_7609f39    | 2        | Non-conclusive |
+| 18_7b778      | 2        | Non-conclusive |
+| 18_7c0        | 2        | Non-conclusive |
+| 18_7d9433     | 1        | Non-conclusive |
+| 18_8d1        | 2        | Non-conclusive |
+| 18_9          | 3        | Non-conclusive |
+| 18_913f03     | 4        | Non-conclusive |
+| 18_93341f1    | 4        | Non-conclusive |
+| 18_96f263     | 4        | Non-conclusive |
+| 18_9a221      | 1        | Non-conclusive |
+| 18bed2e5      | 16       | Non-conclusive |
+| 18c20d89      | 4        | Non-conclusive |
+| 18ccd556      | 4        | Non-conclusive |
+| 18e68051      | 4        | Non-conclusive |
+| 18e78f8f      | 4        | Non-conclusive |
+| 18ee90d9      | 4        | Non-conclusive |
+| 18f49b45      | 8        | Non-conclusive |
+| 18fc040b      | 4        | Non-conclusive |
+| 19            | 176      | Supported      |
+| 19.0500000    | 8        | Supported      |
+| 19.0501000    | 9        | Supported      |
+| 19.0502000    | 16       | Supported      |
+| 19.0503000    | 5        | Supported      |
+| 19.0504000    | 86       | Supported      |
+| 19.0504002    | 4        | Supported      |
+| 19.0505000    | 5        | Supported      |
+| 19.0506000    | 4        | Supported      |
+| 19.0507000    | 16       | Supported      |
+| 19.0508000    | 9        | Supported      |
+| 19.0512000    | 4        | Supported      |
+| 19.0513000    | 4        | Supported      |
+| 19.0514000    | 12       | Supported      |
+| 19.0516000    | 4        | Supported      |
+| 19.0517000    | 20       | Supported      |
+| 19.1          | 1        | Supported      |
+| 19.11.22      | 1        | Supported      |
+| 19.1100000    | 22       | Supported      |
+| 19.1101000    | 8        | Supported      |
+| 19.1102000    | 34       | Supported      |
+| 19.1102001    | 5        | Supported      |
+| 19.1103000    | 21       | Supported      |
+| 19.1104000    | 13       | Supported      |
+| 19.1105000    | 16       | Supported      |
+| 19.1106000    | 63       | Supported      |
+| 19.1107000    | 12       | Supported      |
+| 19.1108000    | 31       | Supported      |
+| 19.1109000    | 30       | Supported      |
+| 19.1110000    | 4        | Supported      |
+| 19.1111000    | 17       | Supported      |
+| 19.1112000    | 4        | Supported      |
+| 19.1114000    | 4        | Supported      |
+| 19.1115000    | 5        | Supported      |
+| 19.1116000    | 5        | Supported      |
+| 19.1117000    | 4        | Supported      |
+| 19.1119000    | 4        | Supported      |
+| 19.1121000    | 4        | Supported      |
+| 19.1122000    | 8        | Supported      |
+| 19.1123000    | 20       | Supported      |
+| 19.1126000    | 4        | Supported      |
+| 19.1127000    | 8        | Supported      |
+| 19.1129000    | 38       | Supported      |
+| 19.16         | 45       | Supported      |
+| 190           | 10       | Supported      |
+| 1905          | 1        | Supported      |
+| 190_0         | 2        | Non-conclusive |
+| 190_177c1     | 1        | Non-conclusive |
+| 190_469       | 2        | Non-conclusive |
+| 190_662       | 1        | Non-conclusive |
+| 190_6d45      | 2        | Non-conclusive |
+| 191           | 1        | Supported      |
+| 1910          | 2        | Supported      |
+| 1910_55a1     | 2        | Non-conclusive |
+| 1912_38       | 4        | Non-conclusive |
+| 1912_8e165    | 2        | Non-conclusive |
+| 1913          | 2        | Supported      |
+| 1914          | 4        | Supported      |
+| 1918_2f17     | 2        | Non-conclusive |
+| 1919          | 1        | Supported      |
+| 191_28e1      | 4        | Non-conclusive |
+| 191_34f3      | 2        | Non-conclusive |
+| 191_4c12      | 2        | Non-conclusive |
+| 191_59a2      | 4        | Non-conclusive |
+| 191_93c30     | 2        | Non-conclusive |
+| 191_9e82      | 2        | Non-conclusive |
+| 191f89cb      | 1        | Non-conclusive |
+| 192           | 7        | Supported      |
+| 1921          | 2        | Supported      |
+| 192_4476      | 1        | Non-conclusive |
+| 192_6c75      | 4        | Non-conclusive |
+| 192_9         | 8        | Non-conclusive |
+| 193           | 4        | Supported      |
+| 1930          | 2        | Supported      |
+| 193_125364    | 4        | Non-conclusive |
+| 193_529f5     | 4        | Non-conclusive |
+| 193_54c7      | 1        | Non-conclusive |
+| 194           | 24       | Supported      |
+| 1945          | 2        | Supported      |
+| 1945_07       | 2        | Non-conclusive |
+| 194_16        | 2        | Non-conclusive |
+| 194_1b8       | 4        | Non-conclusive |
+| 194_4b725     | 4        | Non-conclusive |
+| 194_5272e8    | 2        | Non-conclusive |
+| 194_61f61     | 4        | Non-conclusive |
+| 194dad8e      | 4        | Non-conclusive |
+| 195           | 14       | Supported      |
+| 1954          | 4        | Supported      |
+| 195_1d15      | 2        | Non-conclusive |
+| 195_31f403    | 2        | Non-conclusive |
+| 195_6         | 4        | Non-conclusive |
+| 195_673661    | 2        | Non-conclusive |
+| 195_958a07    | 4        | Non-conclusive |
+| 195_96b6      | 4        | Non-conclusive |
+| 195c66c249    | 32       | Non-conclusive |
+| 195ff43b      | 4        | Non-conclusive |
+| 196           | 3        | Supported      |
+| 1961          | 4        | Supported      |
+| 1963          | 1        | Supported      |
+| 1964_06971    | 4        | Non-conclusive |
+| 1967_46339    | 2        | Non-conclusive |
+| 1969_46339    | 2        | Non-conclusive |
+| 196_0d9       | 1        | Non-conclusive |
+| 196_310       | 2        | Non-conclusive |
+| 196_32b626    | 4        | Non-conclusive |
+| 196_4         | 2        | Non-conclusive |
+| 196_6a9       | 2        | Non-conclusive |
+| 196_7993      | 2        | Non-conclusive |
+| 196_8c6       | 2        | Non-conclusive |
+| 196_8e653     | 2        | Non-conclusive |
+| 196d31ab      | 4        | Non-conclusive |
+| 197           | 5        | Supported      |
+| 197-3         | 62       | Non-conclusive |
+| 1970          | 4        | Supported      |
+| 1974          | 2        | Supported      |
+| 1974_7540     | 2        | Non-conclusive |
+| 197_0c9       | 2        | Non-conclusive |
+| 197_4e74      | 2        | Non-conclusive |
+| 197_765       | 2        | Non-conclusive |
+| 197_7b85      | 2        | Non-conclusive |
+| 197fb097      | 4        | Non-conclusive |
+| 198           | 1        | Supported      |
+| 198-0         | 6        | Non-conclusive |
+| 1989de09      | 2        | Non-conclusive |
+| 1989ebd0      | 4        | Non-conclusive |
+| 198_19a6      | 8        | Non-conclusive |
+| 198_1e6160    | 4        | Non-conclusive |
+| 198_5d44      | 2        | Non-conclusive |
+| 198_6f5       | 2        | Non-conclusive |
+| 198a044e      | 4        | Non-conclusive |
+| 199           | 12       | Supported      |
+| 1991_8a73     | 4        | Non-conclusive |
+| 1996          | 2        | Supported      |
+| 199_1049      | 2        | Non-conclusive |
+| 199_2e1899    | 3        | Non-conclusive |
+| 199_474c7     | 2        | Non-conclusive |
+| 199_9a1       | 1        | Non-conclusive |
+| 199a2d3d      | 4        | Non-conclusive |
+| 199e5a91      | 1        | Non-conclusive |
+| 19_034962     | 2        | Non-conclusive |
+| 19_0a02       | 2        | Non-conclusive |
+| 19_0c9        | 2        | Non-conclusive |
+| 19_0f423      | 2        | Non-conclusive |
+| 19_11         | 2        | Non-conclusive |
+| 19_134c30     | 4        | Non-conclusive |
+| 19_1429       | 2        | Non-conclusive |
+| 19_149        | 4        | Non-conclusive |
+| 19_173e2      | 4        | Non-conclusive |
+| 19_1a00       | 4        | Non-conclusive |
+| 19_1c42060    | 2        | Non-conclusive |
+| 19_21         | 2        | Non-conclusive |
+| 19_226b2      | 2        | Non-conclusive |
+| 19_23612      | 4        | Non-conclusive |
+| 19_24934e1    | 2        | Non-conclusive |
+| 19_2a6        | 1        | Non-conclusive |
+| 19_2b7494     | 2        | Non-conclusive |
+| 19_2c86952    | 2        | Non-conclusive |
+| 19_313        | 4        | Non-conclusive |
+| 19_363682     | 4        | Non-conclusive |
+| 19_37d99      | 1        | Non-conclusive |
+| 19_39         | 1        | Non-conclusive |
+| 19_47e4       | 2        | Non-conclusive |
+| 19_48         | 2        | Non-conclusive |
+| 19_4a6        | 2        | Non-conclusive |
+| 19_4b1        | 4        | Non-conclusive |
+| 19_508b33     | 2        | Non-conclusive |
+| 19_51c66      | 4        | Non-conclusive |
+| 19_53f9       | 2        | Non-conclusive |
+| 19_5f51       | 2        | Non-conclusive |
+| 19_60         | 6        | Non-conclusive |
+| 19_60f58      | 2        | Non-conclusive |
+| 19_640        | 2        | Non-conclusive |
+| 19_6877f5     | 2        | Non-conclusive |
+| 19_693f6      | 2        | Non-conclusive |
+| 19_69d1       | 1        | Non-conclusive |
+| 19_6b25       | 2        | Non-conclusive |
+| 19_6f0        | 4        | Non-conclusive |
+| 19_6f9        | 1        | Non-conclusive |
+| 19_7          | 2        | Non-conclusive |
+| 19_70b989     | 2        | Non-conclusive |
+| 19_7412       | 2        | Non-conclusive |
+| 19_74130      | 2        | Non-conclusive |
+| 19_75859a6    | 2        | Non-conclusive |
+| 19_7b29       | 4        | Non-conclusive |
+| 19_7f2        | 4        | Non-conclusive |
+| 19_86a0316    | 2        | Non-conclusive |
+| 19_88         | 1        | Non-conclusive |
+| 19_882b26     | 2        | Non-conclusive |
+| 19_899e585    | 4        | Non-conclusive |
+| 19_8f6        | 2        | Non-conclusive |
+| 19_9082216    | 2        | Non-conclusive |
+| 19_9b7        | 2        | Non-conclusive |
+| 19b27b3d      | 4        | Non-conclusive |
+| 19b47224      | 1        | Non-conclusive |
+| 19b9ee24      | 5        | Non-conclusive |
+| 19bdc00e      | 4        | Non-conclusive |
+| 19da10a4      | 8        | Non-conclusive |
+| 19f1362e      | 4        | Non-conclusive |
+| 1B2M2         | 26       | Non-conclusive |
+| 1B8           | 4        | Non-conclusive |
+| 1C5t4         | 1        | Non-conclusive |
+| 1C6g02        | 4        | Non-conclusive |
+| 1D0           | 1        | Non-conclusive |
+| 1F518         | 1        | Non-conclusive |
+| 1G4p2         | 1        | Non-conclusive |
+| 1J9C0         | 2        | Non-conclusive |
+| 1K7           | 4        | Non-conclusive |
+| 1K70          | 4        | Non-conclusive |
+| 1Q0P4         | 4        | Non-conclusive |
+| 1R7           | 4        | Non-conclusive |
+| 1S31N0        | 1        | Non-conclusive |
+| 1T4           | 2        | Non-conclusive |
+| 1T5b9         | 2        | Non-conclusive |
+| 1U6           | 2        | Non-conclusive |
+| 1U9           | 4        | Non-conclusive |
+| 1W2b109       | 4        | Non-conclusive |
+| 1Z0           | 4        | Non-conclusive |
+| 1Z2A3         | 4        | Non-conclusive |
+| 1_00          | 1        | Non-conclusive |
+| 1_03680d8     | 4        | Non-conclusive |
+| 1_0_0         | 12       | Non-conclusive |
+| 1_0_19        | 11       | Non-conclusive |
+| 1_0_2         | 15       | Non-conclusive |
+| 1_0_20        | 10       | Non-conclusive |
+| 1_0_21        | 20       | Non-conclusive |
+| 1_0_22        | 64       | Non-conclusive |
+| 1_0_23        | 135      | Non-conclusive |
+| 1_0_24        | 4        | Non-conclusive |
+| 1_0_25        | 9        | Non-conclusive |
+| 1_0_3         | 1        | Non-conclusive |
+| 1_0_5         | 4        | Non-conclusive |
+| 1_1           | 8        | Non-conclusive |
+| 1_11851       | 2        | Non-conclusive |
+| 1_11_0        | 8        | Non-conclusive |
+| 1_11_2        | 4        | Non-conclusive |
+| 1_12          | 9        | Non-conclusive |
+| 1_12-4        | 4        | Non-conclusive |
+| 1_12_3        | 1        | Non-conclusive |
+| 1_12_4        | 1        | Non-conclusive |
+| 1_131         | 1        | Non-conclusive |
+| 1_13_2        | 4        | Non-conclusive |
+| 1_13_9        | 4        | Non-conclusive |
+| 1_14_0        | 4        | Non-conclusive |
+| 1_1_0         | 69       | Non-conclusive |
+| 1_1c773       | 2        | Non-conclusive |
+| 1_2022-12     | 4        | Non-conclusive |
+| 1_27          | 4        | Non-conclusive |
+| 1_2_0         | 78       | Non-conclusive |
+| 1_2_1         | 249      | Non-conclusive |
+| 1_2_2         | 550      | Non-conclusive |
+| 1_3           | 4        | Non-conclusive |
+| 1_3493        | 2        | Non-conclusive |
+| 1_43357       | 2        | Non-conclusive |
+| 1_44b3727     | 2        | Non-conclusive |
+| 1_4_0         | 4        | Non-conclusive |
+| 1_541a1       | 2        | Non-conclusive |
+| 1_553e5       | 2        | Non-conclusive |
+| 1_5707e87     | 2        | Non-conclusive |
+| 1_699a06      | 4        | Non-conclusive |
+| 1_6_1         | 4        | Non-conclusive |
+| 1_6_7         | 1        | Non-conclusive |
+| 1_6b248       | 1        | Non-conclusive |
+| 1_7572b7      | 2        | Non-conclusive |
+| 1_781f7       | 4        | Non-conclusive |
+| 1_790e86      | 4        | Non-conclusive |
+| 1_7_0         | 4        | Non-conclusive |
+| 1_8           | 4        | Non-conclusive |
+| 1_82          | 4        | Non-conclusive |
+| 1_82193       | 2        | Non-conclusive |
+| 1_87444c46    | 2        | Non-conclusive |
+| 1_8_2         | 8        | Non-conclusive |
+| 1_922f4311    | 1        | Non-conclusive |
+| 1_942f4872    | 1        | Non-conclusive |
+| 1_9b17        | 2        | Non-conclusive |
+| 1a019ec1      | 4        | Non-conclusive |
+| 1a075d9c      | 1        | Non-conclusive |
+| 1a084921      | 1        | Non-conclusive |
+| 1a16f9a1      | 4        | Non-conclusive |
+| 1a2a64af      | 1        | Non-conclusive |
+| 1a3339        | 4        | Non-conclusive |
+| 1a35          | 1        | Non-conclusive |
+| 1a394e88      | 4        | Non-conclusive |
+| 1a4           | 4        | Non-conclusive |
+| 1a476e0c      | 4        | Non-conclusive |
+| 1a4aa3e4      | 2        | Non-conclusive |
+| 1a50a708      | 4        | Non-conclusive |
+| 1a52779       | 4        | Non-conclusive |
+| 1a5fa3a       | 4        | Non-conclusive |
+| 1a6d41fe      | 1        | Non-conclusive |
+| 1a6d58c8fa    | 5        | Non-conclusive |
+| 1a6ed0f5      | 4        | Non-conclusive |
+| 1a8bef57      | 1        | Non-conclusive |
+| 1a9           | 4        | Non-conclusive |
+| 1a9342d2      | 5        | Non-conclusive |
+| 1a99b4a8      | 5        | Non-conclusive |
+| 1abeef08      | 1        | Non-conclusive |
+| 1ac7a823      | 1        | Non-conclusive |
+| 1acd5662      | 4        | Non-conclusive |
+| 1ad61424      | 1        | Non-conclusive |
+| 1adc3c0b      | 1        | Non-conclusive |
+| 1ae0e64754    | 4        | Non-conclusive |
+| 1af0683b      | 4        | Non-conclusive |
+| 1af822dc      | 4        | Non-conclusive |
+| 1afb804a      | 2        | Non-conclusive |
+| 1b009f1eee    | 8        | Non-conclusive |
+| 1b0171        | 1        | Non-conclusive |
+| 1b03a8f5      | 4        | Non-conclusive |
+| 1b06bd0       | 4        | Non-conclusive |
+| 1b091528      | 4        | Non-conclusive |
+| 1b135351      | 4        | Non-conclusive |
+| 1b1490d0      | 4        | Non-conclusive |
+| 1b19bed2      | 2        | Non-conclusive |
+| 1b1cae47      | 1        | Non-conclusive |
+| 1b1cef61      | 4        | Non-conclusive |
+| 1b37e257      | 4        | Non-conclusive |
+| 1b68          | 4        | Non-conclusive |
+| 1b6903b1      | 1        | Non-conclusive |
+| 1b7cf6c       | 5        | Non-conclusive |
+| 1b83          | 2        | Non-conclusive |
+| 1b9-22        | 4        | Non-conclusive |
+| 1b911d7f      | 4        | Non-conclusive |
+| 1bacc444      | 1        | Non-conclusive |
+| 1bae6af0      | 1        | Non-conclusive |
+| 1bb18a8       | 4        | Non-conclusive |
+| 1bba1bba      | 8        | Non-conclusive |
+| 1bbaf866      | 4        | Non-conclusive |
+| 1bbd60a       | 4        | Non-conclusive |
+| 1bd88101      | 4        | Non-conclusive |
+| 1bdcc417      | 1        | Non-conclusive |
+| 1bdec893      | 4        | Non-conclusive |
+| 1bfee5a1      | 8        | Non-conclusive |
+| 1c02c8d7      | 8        | Non-conclusive |
+| 1c042049      | 1        | Non-conclusive |
+| 1c1a03db      | 4        | Non-conclusive |
+| 1c22cd3d      | 4        | Non-conclusive |
+| 1c30bec4      | 4        | Non-conclusive |
+| 1c372f8a61    | 9        | Non-conclusive |
+| 1c616db4      | 4        | Non-conclusive |
+| 1c6f4de7      | 4        | Non-conclusive |
+| 1c808746      | 8        | Non-conclusive |
+| 1c868026      | 4        | Non-conclusive |
+| 1c8bad08      | 2        | Non-conclusive |
+| 1c9           | 4        | Non-conclusive |
+| 1c92168a24    | 1        | Non-conclusive |
+| 1ca3932e      | 1        | Non-conclusive |
+| 1caa0e2e      | 1        | Non-conclusive |
+| 1caafc16      | 4        | Non-conclusive |
+| 1cbc5291      | 4        | Non-conclusive |
+| 1cbefc50      | 2        | Non-conclusive |
+| 1cc9a6830d    | 4        | Non-conclusive |
+| 1cdf9649      | 4        | Non-conclusive |
+| 1ce1e4826a    | 4        | Non-conclusive |
+| 1ce3c556      | 4        | Non-conclusive |
+| 1cfbd1da      | 1        | Non-conclusive |
+| 1cffd8ed      | 1        | Non-conclusive |
+| 1d0           | 4        | Non-conclusive |
+| 1d0edb7f      | 2        | Non-conclusive |
+| 1d283615      | 4        | Non-conclusive |
+| 1d289d53      | 4        | Non-conclusive |
+| 1d28b2d0      | 4        | Non-conclusive |
+| 1d2f7e4       | 4        | Non-conclusive |
+| 1d36019f      | 4        | Non-conclusive |
+| 1d492         | 4        | Non-conclusive |
+| 1d4fad59      | 4        | Non-conclusive |
+| 1d5b03db      | 8        | Non-conclusive |
+| 1d5bfc45      | 8        | Non-conclusive |
+| 1d5e5         | 4        | Non-conclusive |
+| 1d80da20      | 4        | Non-conclusive |
+| 1d9b9c84      | 8        | Non-conclusive |
+| 1d9bea84      | 2        | Non-conclusive |
+| 1dac62a5      | 4        | Non-conclusive |
+| 1daeac8b      | 4        | Non-conclusive |
+| 1db1fbdb      | 1        | Non-conclusive |
+| 1db55f196a    | 4        | Non-conclusive |
+| 1dc1a92c      | 4        | Non-conclusive |
+| 1dcbe805      | 4        | Non-conclusive |
+| 1dd38d33      | 1        | Non-conclusive |
+| 1dd4b7ba      | 4        | Non-conclusive |
+| 1ddd0de3      | 5        | Non-conclusive |
+| 1df62123a6    | 4        | Non-conclusive |
+| 1e064290      | 4        | Non-conclusive |
+| 1e088a6f      | 4        | Non-conclusive |
+| 1e2           | 8        | Non-conclusive |
+| 1e202cf8      | 4        | Non-conclusive |
+| 1e26e18d      | 4        | Non-conclusive |
+| 1e288c74      | 4        | Non-conclusive |
+| 1e36d01e      | 2        | Non-conclusive |
+| 1e3b6e6c      | 4        | Non-conclusive |
+| 1e3bda72      | 5        | Non-conclusive |
+| 1e506         | 1        | Non-conclusive |
+| 1e6049ae      | 1        | Non-conclusive |
+| 1e7           | 4        | Non-conclusive |
+| 1e79          | 9        | Non-conclusive |
+| 1e86          | 1        | Non-conclusive |
+| 1e959e89      | 1        | Non-conclusive |
+| 1e998174      | 4        | Non-conclusive |
+| 1ea0e7d6      | 4        | Non-conclusive |
+| 1eb31861      | 4        | Non-conclusive |
+| 1ec6cb59      | 1        | Non-conclusive |
+| 1ec8cbb2      | 4        | Non-conclusive |
+| 1eca3a3c      | 1        | Non-conclusive |
+| 1ed87fd0      | 4        | Non-conclusive |
+| 1ed96497      | 1        | Non-conclusive |
+| 1edaa386      | 4        | Non-conclusive |
+| 1eefb9b5      | 4        | Non-conclusive |
+| 1f080190      | 4        | Non-conclusive |
+| 1f2           | 2        | Non-conclusive |
+| 1f206edd      | 12       | Non-conclusive |
+| 1f32935e      | 1        | Non-conclusive |
+| 1f3e9d17      | 4        | Non-conclusive |
+| 1f4065a812    | 8        | Non-conclusive |
+| 1f4471ed      | 223      | Non-conclusive |
+| 1f48cdc0      | 2        | Non-conclusive |
+| 1f5           | 4        | Non-conclusive |
+| 1f53          | 5        | Non-conclusive |
+| 1f53c0a0      | 4        | Non-conclusive |
+| 1f55effc      | 4324     | Non-conclusive |
+| 1f5816bde1    | 4        | Non-conclusive |
+| 1f6           | 4        | Non-conclusive |
+| 1f6ee00239    | 4        | Non-conclusive |
+| 1f6f1243      | 4        | Non-conclusive |
+| 1f70b7e9      | 1        | Non-conclusive |
+| 1f788c43      | 8        | Non-conclusive |
+| 1f9           | 17       | Non-conclusive |
+| 1f9116ee25    | 4        | Non-conclusive |
+| 1f964994      | 4        | Non-conclusive |
+| 1f9d575       | 4        | Non-conclusive |
+| 1f9e37ce      | 1        | Non-conclusive |
+| 1fa0e7b0      | 4        | Non-conclusive |
+| 1fb0531f      | 4        | Non-conclusive |
+| 1fb5e12f      | 8        | Non-conclusive |
+| 1fbc1884      | 4        | Non-conclusive |
+| 1fbdfe9e2d    | 4        | Non-conclusive |
+| 1fc022c6c5    | 1        | Non-conclusive |
+| 1fc4c663      | 1        | Non-conclusive |
+| 1fd074f6      | 4        | Non-conclusive |
+| 1fd3ab6642    | 1        | Non-conclusive |
+| 1h0           | 4        | Non-conclusive |
+| 1k0q8         | 4        | Non-conclusive |
+| 1n0397        | 4        | Non-conclusive |
+| 1q9B2         | 4        | Non-conclusive |
+| 1r0           | 4        | Non-conclusive |
+| 1s0           | 4        | Non-conclusive |
+| 1u4           | 1        | Non-conclusive |
+| 1u58          | 2        | Non-conclusive |
+| 1v3N7         | 1        | Non-conclusive |
+| 1v9           | 2        | Non-conclusive |
+| 1x10x0        | 4        | Non-conclusive |
+| 1x6           | 4        | Non-conclusive |
+| 1x66          | 8        | Non-conclusive |
+| 1y4J1         | 4        | Non-conclusive |
+| 1z4d3         | 4        | Non-conclusive |
+| 2             | 35237    | Unsupported    |
+| 2%2           | 2        | Non-conclusive |
+| 2%80          | 4        | Non-conclusive |
+| 2-0-27        | 8        | Non-conclusive |
+| 2-1-0         | 4        | Non-conclusive |
+| 2-1.0         | 12       | Non-conclusive |
+| 2-1.61        | 4        | Non-conclusive |
+| 2-16-0        | 4        | Non-conclusive |
+| 2-2           | 4        | Non-conclusive |
+| 2-2-4         | 4        | Non-conclusive |
+| 2-2.11        | 2        | Non-conclusive |
+| 2-2.2         | 6        | Non-conclusive |
+| 2-2.3         | 12       | Non-conclusive |
+| 2-2014        | 4        | Non-conclusive |
+| 2-3-1         | 12       | Non-conclusive |
+| 2-3-2         | 5        | Non-conclusive |
+| 2-3.4         | 25       | Non-conclusive |
+| 2-3.5         | 5        | Non-conclusive |
+| 2-4.0         | 4        | Non-conclusive |
+| 2-5           | 2        | Non-conclusive |
+| 2-5P2         | 10       | Non-conclusive |
+| 2-5f6         | 2        | Non-conclusive |
+| 2-7           | 4        | Non-conclusive |
+| 2-8           | 1        | Non-conclusive |
+| 2-8-2         | 4        | Non-conclusive |
+| 2.0           | 268      | Unsupported    |
+| 2.0.0         | 395      | Unsupported    |
+| 2.0.1         | 280      | Unsupported    |
+| 2.0.10        | 474      | Unsupported    |
+| 2.0.11        | 90       | Unsupported    |
+| 2.0.12        | 9        | Unsupported    |
+| 2.0.13        | 5        | Unsupported    |
+| 2.0.14        | 6        | Unsupported    |
+| 2.0.15        | 184      | Unsupported    |
+| 2.0.16        | 20       | Unsupported    |
+| 2.0.18        | 448      | Unsupported    |
+| 2.0.19        | 4        | Unsupported    |
+| 2.0.2         | 240      | Unsupported    |
+| 2.0.21        | 12       | Unsupported    |
+| 2.0.23        | 8        | Unsupported    |
+| 2.0.24        | 21       | Unsupported    |
+| 2.0.25        | 4        | Unsupported    |
+| 2.0.26        | 19       | Unsupported    |
+| 2.0.27        | 76       | Unsupported    |
+| 2.0.279       | 4        | Unsupported    |
+| 2.0.28        | 1        | Unsupported    |
+| 2.0.3         | 646      | Unsupported    |
+| 2.0.4         | 368      | Unsupported    |
+| 2.0.5         | 24       | Unsupported    |
+| 2.0.6         | 319      | Unsupported    |
+| 2.0.7         | 4        | Unsupported    |
+| 2.0.8         | 2        | Unsupported    |
+| 2.0.9         | 18       | Unsupported    |
+| 2.06          | 2        | Unsupported    |
+| 2.1           | 32       | Unsupported    |
+| 2.1.0         | 392      | Unsupported    |
+| 2.1.06        | 4        | Unsupported    |
+| 2.1.1         | 3208     | Unsupported    |
+| 2.1.10        | 41       | Unsupported    |
+| 2.1.11        | 12       | Unsupported    |
+| 2.1.12        | 30       | Unsupported    |
+| 2.1.13        | 39       | Unsupported    |
+| 2.1.17        | 653      | Unsupported    |
+| 2.1.18        | 17       | Unsupported    |
+| 2.1.19        | 37       | Unsupported    |
+| 2.1.2         | 65       | Unsupported    |
+| 2.1.20        | 1        | Unsupported    |
+| 2.1.22        | 4        | Unsupported    |
+| 2.1.23        | 14       | Unsupported    |
+| 2.1.24        | 191      | Unsupported    |
+| 2.1.25        | 150      | Unsupported    |
+| 2.1.27        | 34       | Unsupported    |
+| 2.1.3         | 661      | Unsupported    |
+| 2.1.30        | 16       | Unsupported    |
+| 2.1.4         | 661      | Unsupported    |
+| 2.1.5         | 66       | Unsupported    |
+| 2.1.6         | 11       | Unsupported    |
+| 2.1.7         | 17       | Unsupported    |
+| 2.1.9         | 15       | Unsupported    |
+| 2.10.0        | 76       | Unsupported    |
+| 2.10.1        | 5        | Unsupported    |
+| 2.10.2        | 22       | Unsupported    |
+| 2.10.4        | 1        | Unsupported    |
+| 2.11.0        | 4        | Unsupported    |
+| 2.11.5        | 4        | Unsupported    |
+| 2.12.1        | 2        | Unsupported    |
+| 2.13.0        | 24       | Unsupported    |
+| 2.13.1        | 5        | Unsupported    |
+| 2.14.0        | 12       | Unsupported    |
+| 2.15.0        | 31       | Unsupported    |
+| 2.16.0        | 8        | Unsupported    |
+| 2.165.0       | 4        | Unsupported    |
+| 2.17.0        | 66       | Unsupported    |
+| 2.18.1        | 48       | Unsupported    |
+| 2.19.0        | 24       | Unsupported    |
+| 2.2           | 13       | Unsupported    |
+| 2.2.0         | 1472     | Unsupported    |
+| 2.2.1         | 1176     | Unsupported    |
+| 2.2.2         | 3017     | Unsupported    |
+| 2.2.27        | 4        | Unsupported    |
+| 2.2.3         | 78       | Unsupported    |
+| 2.2.4         | 209      | Unsupported    |
+| 2.2.5         | 99       | Unsupported    |
+| 2.2.6         | 566      | Unsupported    |
+| 2.2.7         | 10       | Unsupported    |
+| 2.2.8         | 29       | Unsupported    |
+| 2.2.9         | 4        | Unsupported    |
+| 2.20.1        | 8        | Unsupported    |
+| 2.21          | 4        | Unsupported    |
+| 2.21.1        | 1        | Unsupported    |
+| 2.21.2        | 131      | Unsupported    |
+| 2.22.0        | 18       | Unsupported    |
+| 2.23.1        | 29       | Unsupported    |
+| 2.27.0        | 86       | Unsupported    |
+| 2.3           | 170      | Unsupported    |
+| 2.3.0         | 1028     | Unsupported    |
+| 2.3.1         | 14660    | Unsupported    |
+| 2.3.11        | 57       | Unsupported    |
+| 2.3.2         | 11089    | Unsupported    |
+| 2.3.26        | 4        | Unsupported    |
+| 2.3.3         | 55       | Unsupported    |
+| 2.3.4         | 12       | Unsupported    |
+| 2.3.5         | 91       | Unsupported    |
+| 2.3.6         | 2        | Unsupported    |
+| 2.3.7         | 122      | Unsupported    |
+| 2.3.79        | 8        | Unsupported    |
+| 2.3.8         | 4        | Unsupported    |
+| 2.31.3        | 4        | Unsupported    |
+| 2.4           | 4        | Unsupported    |
+| 2.4.0         | 262      | Unsupported    |
+| 2.4.1         | 106      | Unsupported    |
+| 2.4.2         | 4        | Unsupported    |
+| 2.4.21        | 16       | Unsupported    |
+| 2.4.3         | 4        | Unsupported    |
+| 2.4.4         | 83       | Unsupported    |
+| 2.4.5         | 4        | Unsupported    |
+| 2.45.2        | 4        | Unsupported    |
+| 2.5           | 4        | Unsupported    |
+| 2.5.0         | 3464     | Unsupported    |
+| 2.5.1         | 28       | Unsupported    |
+| 2.5.2         | 27       | Unsupported    |
+| 2.5.21        | 1        | Unsupported    |
+| 2.5.3         | 26       | Unsupported    |
+| 2.5.4         | 18       | Unsupported    |
+| 2.5.5         | 13       | Unsupported    |
+| 2.5.6         | 47       | Unsupported    |
+| 2.5.7         | 8        | Unsupported    |
+| 2.5.9         | 4        | Unsupported    |
+| 2.51          | 4        | Unsupported    |
+| 2.58          | 4        | Unsupported    |
+| 2.6           | 59       | Unsupported    |
+| 2.6.0         | 8        | Unsupported    |
+| 2.6.1         | 36       | Unsupported    |
+| 2.6.13        | 4        | Unsupported    |
+| 2.6.2         | 600      | Unsupported    |
+| 2.6.3         | 37       | Unsupported    |
+| 2.6.4         | 6        | Unsupported    |
+| 2.6.5         | 2        | Unsupported    |
+| 2.6.7         | 4        | Unsupported    |
+| 2.601.0       | 5        | Unsupported    |
+| 2.64401b4     | 4        | Non-conclusive |
+| 2.6c3         | 12       | Non-conclusive |
+| 2.7           | 4        | Unsupported    |
+| 2.7.0         | 4        | Unsupported    |
+| 2.7.1         | 169      | Unsupported    |
+| 2.7.2         | 9        | Unsupported    |
+| 2.7.3         | 8        | Unsupported    |
+| 2.7.5         | 4        | Unsupported    |
+| 2.7.6         | 1        | Unsupported    |
+| 2.7.8         | 4        | Unsupported    |
+| 2.718.5       | 1        | Unsupported    |
+| 2.74          | 2        | Unsupported    |
+| 2.8.0         | 8        | Unsupported    |
+| 2.8.10        | 12       | Unsupported    |
+| 2.8.2         | 1        | Unsupported    |
+| 2.8.3         | 1013     | Unsupported    |
+| 2.8.8         | 6        | Unsupported    |
+| 2.9           | 4        | Unsupported    |
+| 2.9.0         | 76       | Unsupported    |
+| 2.9.13        | 4        | Unsupported    |
+| 2.9.2         | 21       | Unsupported    |
+| 2.9.22        | 8        | Unsupported    |
+| 2.96          | 4        | Unsupported    |
+| 2/2.8         | 5        | Non-conclusive |
+| 2/3.5         | 13       | Non-conclusive |
+| 2/6.11        | 1997     | Non-conclusive |
+| 20            | 739      | Supported      |
+| 20%20%20      | 29       | Non-conclusive |
+| 20-32-095     | 4        | Non-conclusive |
+| 20.0500000    | 8        | Supported      |
+| 20.0501000    | 8        | Supported      |
+| 20.0502000    | 26       | Supported      |
+| 20.0503000    | 20       | Supported      |
+| 20.0504000    | 32       | Supported      |
+| 20.0505000    | 20       | Supported      |
+| 20.0506000    | 41       | Supported      |
+| 20.0507000    | 21       | Supported      |
+| 20.0508000    | 33       | Supported      |
+| 20.0509001    | 4        | Supported      |
+| 20.0510000    | 16       | Supported      |
+| 20.0511000    | 16       | Supported      |
+| 20.0512000    | 12       | Supported      |
+| 20.0513000    | 4        | Supported      |
+| 20.0514000    | 9        | Supported      |
+| 20.0515000    | 4        | Supported      |
+| 20.0516000    | 4        | Supported      |
+| 20.0517000    | 9        | Supported      |
+| 20.0518000    | 137      | Supported      |
+| 20.1100000    | 32       | Supported      |
+| 20.1101000    | 1        | Supported      |
+| 20.1102000    | 20       | Supported      |
+| 20.1102001    | 4        | Supported      |
+| 20.1103000    | 20       | Supported      |
+| 20.1104000    | 51       | Supported      |
+| 20.1105000    | 17       | Supported      |
+| 20.1106000    | 51       | Supported      |
+| 20.1107000    | 8        | Supported      |
+| 20.1108000    | 28       | Supported      |
+| 20.1109000    | 26       | Supported      |
+| 20.1109001    | 2        | Supported      |
+| 20.1110000    | 22       | Supported      |
+| 20.1111000    | 17       | Supported      |
+| 20.1111002    | 4        | Supported      |
+| 20.1112000    | 22       | Supported      |
+| 20.1113000    | 4        | Supported      |
+| 20.1114000    | 4        | Supported      |
+| 20.1115000    | 4        | Supported      |
+| 20.1117000    | 17       | Supported      |
+| 20.1118000    | 13       | Supported      |
+| 20.1119000    | 49       | Supported      |
+| 20.4.06       | 1        | Supported      |
+| 20.6550       | 12       | Supported      |
+| 20.7          | 1        | Supported      |
+| 20/3.3        | 8        | Non-conclusive |
+| 200           | 2        | Supported      |
+| 200_02        | 2        | Non-conclusive |
+| 200_16d4      | 4        | Non-conclusive |
+| 200_21f192    | 2        | Non-conclusive |
+| 200_7399b2    | 2        | Non-conclusive |
+| 200_9f4       | 4        | Non-conclusive |
+| 200ae372      | 4        | Non-conclusive |
+| 201           | 1        | Supported      |
+| 2010_78       | 3        | Non-conclusive |
+| 2010_8        | 2        | Non-conclusive |
+| 2012-2022     | 8        | Non-conclusive |
+| 2013          | 8        | Supported      |
+| 2013-12-02    | 12       | Non-conclusive |
+| 2013.01       | 1        | Supported      |
+| 2013.03.12    | 4        | Supported      |
+| 2013.3.12     | 2        | Supported      |
+| 2014          | 16       | Supported      |
+| 2014-08b3     | 4        | Non-conclusive |
+| 2014-48d29    | 9        | Non-conclusive |
+| 2015          | 96       | Supported      |
+| 2015-05-05    | 6        | Non-conclusive |
+| 2015-05-19    | 6        | Non-conclusive |
+| 2015-09-02    | 1        | Non-conclusive |
+| 2015.05.01    | 4        | Supported      |
+| 2015.916a3    | 8        | Non-conclusive |
+| 2015/02/04    | 8        | Non-conclusive |
+| 2015G02R02    | 63       | Non-conclusive |
+| 2015_1-10     | 1        | Non-conclusive |
+| 2015_1-183    | 1        | Non-conclusive |
+| 2015_1-547    | 4        | Non-conclusive |
+| 2015_1-590    | 4        | Non-conclusive |
+| 2015_1-666    | 1        | Non-conclusive |
+| 2015_1-7      | 4        | Non-conclusive |
+| 2015_1-799    | 4        | Non-conclusive |
+| 2015_1-8      | 1        | Non-conclusive |
+| 2015_1-9      | 4        | Non-conclusive |
+| 2015_1-929    | 9        | Non-conclusive |
+| 2016          | 61       | Supported      |
+| 2016-03-30    | 4        | Non-conclusive |
+| 2016-06-01    | 4        | Non-conclusive |
+| 2016-10-21    | 8        | Non-conclusive |
+| 2016-11-28    | 4        | Non-conclusive |
+| 2016-12-27    | 4        | Non-conclusive |
+| 2016.08.08    | 4        | Supported      |
+| 2016_87e32    | 4        | Non-conclusive |
+| 2017          | 60       | Supported      |
+| 2017-06-15    | 4        | Non-conclusive |
+| 2017-08-15    | 5        | Non-conclusive |
+| 2017.08.15    | 1        | Supported      |
+| 2017_03_22    | 4        | Non-conclusive |
+| 2018          | 96       | Supported      |
+| 2018-04-17    | 4        | Non-conclusive |
+| 2018-07-17    | 4        | Non-conclusive |
+| 2018-10-08    | 14       | Non-conclusive |
+| 2018-11-09    | 1        | Non-conclusive |
+| 2018-12-28    | 4        | Non-conclusive |
+| 2018.3599     | 4        | Supported      |
+| 2018_05_30    | 4        | Non-conclusive |
+| 2018v2        | 5        | Non-conclusive |
+| 2019          | 28       | Supported      |
+| 2019-01-08    | 4        | Non-conclusive |
+| 2019-01-18    | 12       | Non-conclusive |
+| 2019-05-31    | 4        | Non-conclusive |
+| 2019-06-06    | 4        | Non-conclusive |
+| 2019-07-18    | 4        | Non-conclusive |
+| 2019-07-29    | 4        | Non-conclusive |
+| 2019-08-06    | 4        | Non-conclusive |
+| 2019-12-31    | 4        | Non-conclusive |
+| 2019_01       | 8        | Non-conclusive |
+| 201_02a413    | 4        | Non-conclusive |
+| 201_22921     | 2        | Non-conclusive |
+| 202           | 17       | Supported      |
+| 202.1.4       | 1        | Supported      |
+| 202.3         | 1        | Supported      |
+| 202.7.1       | 4        | Supported      |
+| 2020          | 81       | Supported      |
+| 2020-01-10    | 4        | Non-conclusive |
+| 2020-01-24    | 4        | Non-conclusive |
+| 2020-04-20    | 4        | Non-conclusive |
+| 2020-05-20    | 4        | Non-conclusive |
+| 2020-06-01    | 4        | Non-conclusive |
+| 2020-1        | 4        | Non-conclusive |
+| 2020.07.09    | 4        | Supported      |
+| 2020.7.12     | 4        | Supported      |
+| 2020_01_11    | 4        | Non-conclusive |
+| 2020_2f30     | 1        | Non-conclusive |
+| 2020_604      | 2        | Non-conclusive |
+| 2021          | 70       | Supported      |
+| 2021-02-23    | 2        | Non-conclusive |
+| 2021-04-01    | 4        | Non-conclusive |
+| 2021-05-17    | 4        | Non-conclusive |
+| 2021-09-05    | 4        | Non-conclusive |
+| 2021-10-12    | 4        | Non-conclusive |
+| 2021-11-04    | 1        | Non-conclusive |
+| 2021-12-13    | 4        | Non-conclusive |
+| 2021-12-14    | 8        | Non-conclusive |
+| 2021-12-15    | 1        | Non-conclusive |
+| 2021-12-17    | 8        | Non-conclusive |
+| 2021.46.1     | 1        | Supported      |
+| 2021_05_19    | 4        | Non-conclusive |
+| 2021v2        | 4        | Non-conclusive |
+| 2022          | 32       | Supported      |
+| 2022-01-09    | 4        | Non-conclusive |
+| 2022-01-10    | 8        | Non-conclusive |
+| 2022-01-17    | 4        | Non-conclusive |
+| 2022-01-24    | 4        | Non-conclusive |
+| 2022-02-17    | 4        | Non-conclusive |
+| 2022-04-01    | 4        | Non-conclusive |
+| 2022-04-05    | 4        | Non-conclusive |
+| 2022-05-16    | 4        | Non-conclusive |
+| 2022-06-10    | 12       | Non-conclusive |
+| 2022-06-15    | 4        | Non-conclusive |
+| 2022-06-20    | 4        | Non-conclusive |
+| 2022-06-23    | 8        | Non-conclusive |
+| 2022-08-23    | 49       | Non-conclusive |
+| 2022-08-25    | 4        | Non-conclusive |
+| 2022-09-05    | 4        | Non-conclusive |
+| 2022-09-07    | 4        | Non-conclusive |
+| 2022-09-09    | 4        | Non-conclusive |
+| 2022-09-14    | 17       | Non-conclusive |
+| 2022-09-28    | 8        | Non-conclusive |
+| 2022-10-20    | 12       | Non-conclusive |
+| 2022-10-24    | 12       | Non-conclusive |
+| 2022-10-25    | 4        | Non-conclusive |
+| 2022-10-26    | 8        | Non-conclusive |
+| 2022-11-08    | 6        | Non-conclusive |
+| 2022-11-11    | 6        | Non-conclusive |
+| 2022-11-21    | 4        | Non-conclusive |
+| 2022-11-23    | 8        | Non-conclusive |
+| 2022-11-26    | 12       | Non-conclusive |
+| 2022-11-28    | 4        | Non-conclusive |
+| 2022-11-29    | 20       | Non-conclusive |
+| 2022-11-30    | 12       | Non-conclusive |
+| 2022-12-01    | 4        | Non-conclusive |
+| 2022-12-07    | 28       | Non-conclusive |
+| 2022-12-09    | 4        | Non-conclusive |
+| 2022-12-12    | 40       | Non-conclusive |
+| 2022-12-13    | 4        | Non-conclusive |
+| 2022-12-14    | 8        | Non-conclusive |
+| 2022-12-15    | 12       | Non-conclusive |
+| 2022-12-19    | 4        | Non-conclusive |
+| 2022-12-21    | 73       | Non-conclusive |
+| 2022-12-23    | 4        | Non-conclusive |
+| 2022-12-27    | 8        | Non-conclusive |
+| 2022-12-28    | 1        | Non-conclusive |
+| 2022.1        | 4        | Supported      |
+| 2022.25.0     | 4        | Supported      |
+| 2022.4.0      | 9        | Supported      |
+| 2022.9690     | 2        | Supported      |
+| 2022.9750     | 2        | Supported      |
+| 2022.9786     | 2        | Supported      |
+| 2022DEC       | 20       | Non-conclusive |
+| 2022_03       | 6        | Non-conclusive |
+| 2022_03_28    | 1        | Non-conclusive |
+| 2022_05_30    | 4        | Non-conclusive |
+| 2022_06_02    | 4        | Non-conclusive |
+| 2022_06_07    | 4        | Non-conclusive |
+| 2022_11_23    | 4        | Non-conclusive |
+| 2022_12_02    | 8        | Non-conclusive |
+| 2022_12_17    | 4        | Non-conclusive |
+| 2022_12_29    | 5        | Non-conclusive |
+| 2022_3        | 4        | Non-conclusive |
+| 2022_5        | 2        | Non-conclusive |
+| 2022_6        | 2        | Non-conclusive |
+| 2022_6f80     | 2        | Non-conclusive |
+| 2022v3        | 4        | Non-conclusive |
+| 2023          | 88       | Supported      |
+| 2023-01-03    | 4        | Non-conclusive |
+| 2024_7622     | 4        | Non-conclusive |
+| 202_0a7       | 4        | Non-conclusive |
+| 202_13d28     | 4        | Non-conclusive |
+| 202_446       | 2        | Non-conclusive |
+| 202_5         | 5        | Non-conclusive |
+| 202_52036     | 2        | Non-conclusive |
+| 202_701       | 2        | Non-conclusive |
+| 202_93        | 2        | Non-conclusive |
+| 203           | 16       | Supported      |
+| 203%20        | 123      | Non-conclusive |
+| 203.0         | 5        | Supported      |
+| 203.0.2       | 4        | Supported      |
+| 203.2.0       | 5        | Supported      |
+| 203.3.2       | 1        | Supported      |
+| 203.3.5       | 8        | Supported      |
+| 203.3.6       | 32       | Supported      |
+| 203.3.7       | 24       | Supported      |
+| 203.4         | 8        | Supported      |
+| 2038          | 2        | Supported      |
+| 2038_8d8      | 2        | Non-conclusive |
+| 203a992       | 2        | Non-conclusive |
+| 204           | 43       | Supported      |
+| 204%20        | 32       | Non-conclusive |
+| 204.0.0       | 12       | Supported      |
+| 204.1         | 8        | Supported      |
+| 204.1.0       | 4        | Supported      |
+| 204.1.1       | 4        | Supported      |
+| 204.1.2       | 2        | Supported      |
+| 204.3         | 12       | Supported      |
+| 204.3.1       | 12       | Supported      |
+| 204.4.1       | 1        | Supported      |
+| 204.5.0       | 4        | Supported      |
+| 204.5.3       | 8        | Supported      |
+| 204.5.4       | 4        | Supported      |
+| 204.6.0       | 1        | Supported      |
+| 2043f01       | 4        | Non-conclusive |
+| 204_13c606    | 2        | Non-conclusive |
+| 204cb015      | 1        | Non-conclusive |
+| 205           | 14       | Supported      |
+| 205%2         | 4        | Non-conclusive |
+| 205%20v2      | 8        | Non-conclusive |
+| 205%29        | 8        | Non-conclusive |
+| 205.0.1       | 1        | Supported      |
+| 205.0.2       | 10       | Supported      |
+| 205.0.3       | 4        | Supported      |
+| 205.2.2       | 20       | Supported      |
+| 2050          | 1        | Supported      |
+| 2053d40a      | 4        | Non-conclusive |
+| 205_073c24    | 4        | Non-conclusive |
+| 205_3c1       | 2        | Non-conclusive |
+| 205_416b55    | 2        | Non-conclusive |
+| 205_6f5       | 2        | Non-conclusive |
+| 205_7647      | 2        | Non-conclusive |
+| 205_9360      | 2        | Non-conclusive |
+| 206           | 4        | Supported      |
+| 2066          | 2        | Supported      |
+| 2068_9665     | 2        | Non-conclusive |
+| 206_46f3      | 2        | Non-conclusive |
+| 206_50a63     | 2        | Non-conclusive |
+| 206_536       | 2        | Non-conclusive |
+| 206_5f07      | 4        | Non-conclusive |
+| 206_6d490     | 2        | Non-conclusive |
+| 206_757       | 2        | Non-conclusive |
+| 207           | 4        | Supported      |
+| 207_4         | 4        | Non-conclusive |
+| 207_8         | 2        | Non-conclusive |
+| 207b886f      | 1        | Non-conclusive |
+| 207c2         | 1        | Non-conclusive |
+| 208           | 5        | Supported      |
+| 2085_1b02     | 4        | Non-conclusive |
+| 208_110e7     | 4        | Non-conclusive |
+| 208_2f2       | 4        | Non-conclusive |
+| 208_98d84     | 2        | Non-conclusive |
+| 209           | 9        | Supported      |
+| 209_1b21      | 2        | Non-conclusive |
+| 209_20        | 4        | Non-conclusive |
+| 209_3         | 4        | Non-conclusive |
+| 209_6         | 2        | Non-conclusive |
+| 209_7119      | 2        | Non-conclusive |
+| 209c8045      | 4        | Non-conclusive |
+| 20@5.0        | 2        | Non-conclusive |
+| 20V4.0        | 12       | Non-conclusive |
+| 20V4.1        | 8        | Non-conclusive |
+| 20_0          | 6        | Non-conclusive |
+| 20_01         | 4        | Non-conclusive |
+| 20_04d1       | 2        | Non-conclusive |
+| 20_056025     | 4        | Non-conclusive |
+| 20_05650f4    | 2        | Non-conclusive |
+| 20_07964f0    | 2        | Non-conclusive |
+| 20_092a572    | 2        | Non-conclusive |
+| 20_0a937      | 2        | Non-conclusive |
+| 20_1          | 8        | Non-conclusive |
+| 20_10         | 2        | Non-conclusive |
+| 20_119c3      | 2        | Non-conclusive |
+| 20_1a8767     | 4        | Non-conclusive |
+| 20_2          | 2        | Non-conclusive |
+| 20_2a333      | 2        | Non-conclusive |
+| 20_31         | 1        | Non-conclusive |
+| 20_32b6361    | 2        | Non-conclusive |
+| 20_354e597    | 2        | Non-conclusive |
+| 20_35e192     | 2        | Non-conclusive |
+| 20_38109c2    | 2        | Non-conclusive |
+| 20_3a1        | 2        | Non-conclusive |
+| 20_3b64       | 1        | Non-conclusive |
+| 20_3c2        | 6        | Non-conclusive |
+| 20_4          | 1        | Non-conclusive |
+| 20_40b955     | 4        | Non-conclusive |
+| 20_44f31      | 2        | Non-conclusive |
+| 20_459e2      | 2        | Non-conclusive |
+| 20_4923       | 1        | Non-conclusive |
+| 20_4d2        | 1        | Non-conclusive |
+| 20_51a5852    | 2        | Non-conclusive |
+| 20_51e911     | 2        | Non-conclusive |
+| 20_5b614      | 2        | Non-conclusive |
+| 20_5d8230     | 2        | Non-conclusive |
+| 20_678a4      | 4        | Non-conclusive |
+| 20_6a1        | 1        | Non-conclusive |
+| 20_7          | 5        | Non-conclusive |
+| 20_732        | 2        | Non-conclusive |
+| 20_7339b72    | 2        | Non-conclusive |
+| 20_74042      | 2        | Non-conclusive |
+| 20_7493772    | 2        | Non-conclusive |
+| 20_78c0380    | 2        | Non-conclusive |
+| 20_79e2       | 2        | Non-conclusive |
+| 20_8          | 4        | Non-conclusive |
+| 20_83a7       | 2        | Non-conclusive |
+| 20_85         | 2        | Non-conclusive |
+| 20_85c5       | 2        | Non-conclusive |
+| 20_8821a1     | 1        | Non-conclusive |
+| 20_9          | 3        | Non-conclusive |
+| 20_95c74      | 1        | Non-conclusive |
+| 20_9758       | 1        | Non-conclusive |
+| 20_9d08       | 1        | Non-conclusive |
+| 20_9e1        | 4        | Non-conclusive |
+| 20_9f88       | 4        | Non-conclusive |
+| 20a65586      | 2        | Non-conclusive |
+| 20c24359      | 4        | Non-conclusive |
+| 20d3c83f5e    | 1        | Non-conclusive |
+| 20d887d0      | 4        | Non-conclusive |
+| 20e2468b      | 4        | Non-conclusive |
+| 20e2680e      | 5        | Non-conclusive |
+| 20e495ea      | 4        | Non-conclusive |
+| 20ed59f6      | 4        | Non-conclusive |
+| 20f1ca20      | 1        | Non-conclusive |
+| 20fd20fd      | 4        | Non-conclusive |
+| 20u9          | 1        | Non-conclusive |
+| 20v3.0        | 4        | Non-conclusive |
+| 20v3.3        | 54       | Non-conclusive |
+| 20v4.1        | 8        | Non-conclusive |
+| 20v4.3        | 8        | Non-conclusive |
+| 20v4.5        | 16       | Non-conclusive |
+| 20v5.0        | 8        | Non-conclusive |
+| 20v5.2        | 4        | Non-conclusive |
+| 21            | 295      | Supported      |
+| 21-06-000     | 4        | Non-conclusive |
+| 21-11-2021    | 4        | Non-conclusive |
+| 21.03.22      | 4        | Supported      |
+| 21.0500000    | 34       | Supported      |
+| 21.0501003    | 41       | Supported      |
+| 21.0502000    | 17       | Supported      |
+| 21.0502003    | 34       | Supported      |
+| 21.0503001    | 54       | Supported      |
+| 21.0504000    | 41       | Supported      |
+| 21.0505003    | 100      | Supported      |
+| 21.0507000    | 20       | Supported      |
+| 21.0508000    | 93       | Supported      |
+| 21.0509000    | 12       | Supported      |
+| 21.0510000    | 26       | Supported      |
+| 21.0511000    | 81       | Supported      |
+| 21.0512000    | 8        | Supported      |
+| 21.0513000    | 16       | Supported      |
+| 21.0514000    | 270      | Supported      |
+| 21.0515000    | 9        | Supported      |
+| 21.0516000    | 4        | Supported      |
+| 21.0517000    | 12       | Supported      |
+| 21.0518000    | 28       | Supported      |
+| 21.0519000    | 8        | Supported      |
+| 21.0520000    | 6        | Supported      |
+| 21.0521000    | 30       | Supported      |
+| 21.1.5        | 1        | Supported      |
+| 21.1.6        | 5        | Supported      |
+| 21.1100000    | 14       | Supported      |
+| 21.1101000    | 39       | Supported      |
+| 21.1101016    | 5        | Supported      |
+| 21.1102000    | 49       | Supported      |
+| 21.1103000    | 26       | Supported      |
+| 21.1103001    | 13       | Supported      |
+| 21.1104000    | 12       | Supported      |
+| 21.1104001    | 24       | Supported      |
+| 21.1104002    | 5        | Supported      |
+| 21.1105000    | 124      | Supported      |
+| 21.1106000    | 45       | Supported      |
+| 21.1109000    | 75       | Supported      |
+| 21.1110000    | 46       | Supported      |
+| 21.1110900    | 4        | Supported      |
+| 21.1111000    | 179      | Supported      |
+| 21.1112000    | 28       | Supported      |
+| 21.1113000    | 131      | Supported      |
+| 21.1114000    | 82       | Supported      |
+| 21.2          | 8        | Supported      |
+| 21.4          | 10       | Supported      |
+| 210           | 16       | Supported      |
+| 210_0437      | 4        | Non-conclusive |
+| 210_3         | 2        | Non-conclusive |
+| 210_30086     | 2        | Non-conclusive |
+| 210_52f8      | 2        | Non-conclusive |
+| 210_6         | 2        | Non-conclusive |
+| 210_6922      | 2        | Non-conclusive |
+| 210_6f728     | 2        | Non-conclusive |
+| 211           | 8        | Supported      |
+| 2110          | 1        | Supported      |
+| 2112_77e5     | 4        | Non-conclusive |
+| 211_146       | 2        | Non-conclusive |
+| 211_28        | 2        | Non-conclusive |
+| 211_5091      | 2        | Non-conclusive |
+| 211_655       | 2        | Non-conclusive |
+| 212           | 20       | Supported      |
+| 2123_80       | 4        | Non-conclusive |
+| 2127_4        | 4        | Non-conclusive |
+| 212_44        | 2        | Non-conclusive |
+| 212_5         | 2        | Non-conclusive |
+| 212d7826      | 4        | Non-conclusive |
+| 212ec69e      | 4        | Non-conclusive |
+| 213           | 2        | Supported      |
+| 2130          | 2        | Supported      |
+| 2130_0c1      | 2        | Non-conclusive |
+| 213_0         | 2        | Non-conclusive |
+| 213_00e57     | 1        | Non-conclusive |
+| 213_1547      | 4        | Non-conclusive |
+| 213_26f46     | 4        | Non-conclusive |
+| 213_62        | 4        | Non-conclusive |
+| 214_1         | 2        | Non-conclusive |
+| 214_12        | 2        | Non-conclusive |
+| 214_4         | 2        | Non-conclusive |
+| 214_41e7      | 4        | Non-conclusive |
+| 214_6         | 2        | Non-conclusive |
+| 215           | 10       | Supported      |
+| 215-220       | 4        | Non-conclusive |
+| 2156_722      | 4        | Non-conclusive |
+| 2157          | 4        | Supported      |
+| 2159          | 6        | Supported      |
+| 215_04d7      | 2        | Non-conclusive |
+| 215_0724      | 2        | Non-conclusive |
+| 215_206       | 2        | Non-conclusive |
+| 215_72        | 2        | Non-conclusive |
+| 215_88c333    | 2        | Non-conclusive |
+| 216           | 4        | Supported      |
+| 2160_4        | 4        | Non-conclusive |
+| 2162_3d88     | 4        | Non-conclusive |
+| 2165a6c4      | 4        | Non-conclusive |
+| 2169_0        | 2        | Non-conclusive |
+| 2169_1f0      | 2        | Non-conclusive |
+| 216_3         | 2        | Non-conclusive |
+| 216_3a486     | 2        | Non-conclusive |
+| 216_49f1      | 2        | Non-conclusive |
+| 217           | 8        | Supported      |
+| 2174          | 4        | Supported      |
+| 2176_82f72    | 4        | Non-conclusive |
+| 2179          | 4        | Supported      |
+| 217_2b3       | 2        | Non-conclusive |
+| 217_3d645     | 4        | Non-conclusive |
+| 217_5         | 2        | Non-conclusive |
+| 217_563       | 2        | Non-conclusive |
+| 217_613a3     | 2        | Non-conclusive |
+| 217_8         | 4        | Non-conclusive |
+| 217_802f5     | 4        | Non-conclusive |
+| 217_8e5       | 1        | Non-conclusive |
+| 217_9701      | 2        | Non-conclusive |
+| 217df0f7      | 4        | Non-conclusive |
+| 218           | 2        | Supported      |
+| 218_0954a3    | 4        | Non-conclusive |
+| 218_0a465     | 2        | Non-conclusive |
+| 218_6e63      | 2        | Non-conclusive |
+| 218_8         | 4        | Non-conclusive |
+| 218_9         | 1        | Non-conclusive |
+| 218c9b6557    | 4        | Non-conclusive |
+| 218cbdb7b4    | 4        | Non-conclusive |
+| 219           | 4        | Supported      |
+| 2194da9f      | 8        | Non-conclusive |
+| 219_1         | 2        | Non-conclusive |
+| 219_30        | 2        | Non-conclusive |
+| 219_42        | 4        | Non-conclusive |
+| 219_450c00    | 2        | Non-conclusive |
+| 219_66a0      | 2        | Non-conclusive |
+| 21_090f063    | 2        | Non-conclusive |
+| 21_1          | 2        | Non-conclusive |
+| 21_11b6       | 1        | Non-conclusive |
+| 21_14c968     | 2        | Non-conclusive |
+| 21_16615      | 2        | Non-conclusive |
+| 21_2          | 2        | Non-conclusive |
+| 21_2254       | 2        | Non-conclusive |
+| 21_268c825    | 2        | Non-conclusive |
+| 21_277e26     | 2        | Non-conclusive |
+| 21_2a14       | 2        | Non-conclusive |
+| 21_3          | 12       | Non-conclusive |
+| 21_339a80     | 2        | Non-conclusive |
+| 21_33b1       | 5        | Non-conclusive |
+| 21_354e597    | 1        | Non-conclusive |
+| 21_385        | 4        | Non-conclusive |
+| 21_399        | 4        | Non-conclusive |
+| 21_4          | 4        | Non-conclusive |
+| 21_44b325     | 2        | Non-conclusive |
+| 21_4a5        | 2        | Non-conclusive |
+| 21_4b03       | 4        | Non-conclusive |
+| 21_4d38764    | 4        | Non-conclusive |
+| 21_563f92     | 1        | Non-conclusive |
+| 21_58         | 4        | Non-conclusive |
+| 21_588e5      | 4        | Non-conclusive |
+| 21_5a6        | 2        | Non-conclusive |
+| 21_5e40523    | 1        | Non-conclusive |
+| 21_600158     | 2        | Non-conclusive |
+| 21_60e4248    | 2        | Non-conclusive |
+| 21_622        | 2        | Non-conclusive |
+| 21_6d9        | 1        | Non-conclusive |
+| 21_7          | 4        | Non-conclusive |
+| 21_713        | 2        | Non-conclusive |
+| 21_72         | 4        | Non-conclusive |
+| 21_775b6      | 2        | Non-conclusive |
+| 21_7979e65    | 2        | Non-conclusive |
+| 21_79a4       | 1        | Non-conclusive |
+| 21_7a2        | 2        | Non-conclusive |
+| 21_8          | 3        | Non-conclusive |
+| 21_83         | 2        | Non-conclusive |
+| 21_8362       | 2        | Non-conclusive |
+| 21_88a1       | 2        | Non-conclusive |
+| 21_8a96426    | 1        | Non-conclusive |
+| 21_8d54       | 1        | Non-conclusive |
+| 21_94b740     | 2        | Non-conclusive |
+| 21_95a6       | 2        | Non-conclusive |
+| 21_98c49      | 2        | Non-conclusive |
+| 21_9a86       | 2        | Non-conclusive |
+| 21aa1b49      | 4        | Non-conclusive |
+| 21bbfadd      | 2        | Non-conclusive |
+| 21cc5c72      | 8        | Non-conclusive |
+| 21cfbdf4      | 4        | Non-conclusive |
+| 21ef5fee      | 1        | Non-conclusive |
+| 21f44029      | 4        | Non-conclusive |
+| 21fb0401      | 4        | Non-conclusive |
+| 22            | 347      | Supported      |
+| 22-12         | 4        | Non-conclusive |
+| 22-27-041     | 1        | Non-conclusive |
+| 22-45-000     | 8        | Non-conclusive |
+| 22-52-195     | 4        | Non-conclusive |
+| 22-6-2022     | 4        | Non-conclusive |
+| 22.0500000    | 25       | Supported      |
+| 22.0502000    | 6        | Supported      |
+| 22.0503000    | 38       | Supported      |
+| 22.0504000    | 82       | Supported      |
+| 22.0505000    | 61       | Supported      |
+| 22.0505004    | 4        | Supported      |
+| 22.0506000    | 155      | Supported      |
+| 22.0507000    | 382      | Supported      |
+| 22.1100000    | 85       | Supported      |
+| 22.1100001    | 1        | Supported      |
+| 22.16         | 1        | Supported      |
+| 220           | 8        | Supported      |
+| 220_5         | 1        | Non-conclusive |
+| 220_503       | 4        | Non-conclusive |
+| 220_69        | 2        | Non-conclusive |
+| 220_6c0       | 2        | Non-conclusive |
+| 220_7588      | 4        | Non-conclusive |
+| 220aabe6      | 4        | Non-conclusive |
+| 221           | 5        | Supported      |
+| 221_08e1      | 2        | Non-conclusive |
+| 221_67d76     | 4        | Non-conclusive |
+| 221b5fe4      | 4        | Non-conclusive |
+| 222           | 52       | Supported      |
+| 2222          | 4        | Supported      |
+| 2225          | 2        | Supported      |
+| 2225_5a7      | 2        | Non-conclusive |
+| 222_2f7       | 2        | Non-conclusive |
+| 222_4         | 1        | Non-conclusive |
+| 222_6b10      | 1        | Non-conclusive |
+| 222_757d0     | 1        | Non-conclusive |
+| 222_873       | 4        | Non-conclusive |
+| 222_8b7       | 2        | Non-conclusive |
+| 223           | 10       | Supported      |
+| 2230          | 4        | Supported      |
+| 2231_987d9    | 4        | Non-conclusive |
+| 2235          | 4        | Supported      |
+| 223_2720      | 4        | Non-conclusive |
+| 223_499       | 4        | Non-conclusive |
+| 223_6d9735    | 2        | Non-conclusive |
+| 223f9ad3      | 4        | Non-conclusive |
+| 224           | 12       | Supported      |
+| 2245cf7c      | 4        | Non-conclusive |
+| 2246_388      | 4        | Non-conclusive |
+| 2249f82b      | 1        | Non-conclusive |
+| 224_10        | 4        | Non-conclusive |
+| 224_21c6      | 1        | Non-conclusive |
+| 224_77d291    | 2        | Non-conclusive |
+| 224_835       | 4        | Non-conclusive |
+| 224_90        | 4        | Non-conclusive |
+| 225           | 4        | Supported      |
+| 225_288       | 2        | Non-conclusive |
+| 225_3e2       | 4        | Non-conclusive |
+| 225_78        | 4        | Non-conclusive |
+| 225_87b958    | 1        | Non-conclusive |
+| 225_90d841    | 2        | Non-conclusive |
+| 2262          | 2        | Supported      |
+| 2262_2f1      | 2        | Non-conclusive |
+| 226_13        | 4        | Non-conclusive |
+| 226_25831     | 2        | Non-conclusive |
+| 226_3b866     | 1        | Non-conclusive |
+| 226_450506    | 2        | Non-conclusive |
+| 226_572       | 4        | Non-conclusive |
+| 226_8926      | 2        | Non-conclusive |
+| 226_960       | 2        | Non-conclusive |
+| 226ad37       | 4        | Non-conclusive |
+| 227           | 7        | Supported      |
+| 2278b7a1      | 4        | Non-conclusive |
+| 227_236557    | 1        | Non-conclusive |
+| 227_294e0     | 1        | Non-conclusive |
+| 227_32        | 1        | Non-conclusive |
+| 227_3d4       | 4        | Non-conclusive |
+| 227_736       | 2        | Non-conclusive |
+| 227_9c4734    | 1        | Non-conclusive |
+| 227ad455      | 1        | Non-conclusive |
+| 228           | 6        | Supported      |
+| 228_17c9      | 2        | Non-conclusive |
+| 228_262       | 4        | Non-conclusive |
+| 228_732       | 4        | Non-conclusive |
+| 228_75d905    | 2        | Non-conclusive |
+| 229           | 1        | Supported      |
+| 229_1c856     | 2        | Non-conclusive |
+| 229_529f5     | 4        | Non-conclusive |
+| 229_53558     | 4        | Non-conclusive |
+| 229_6469      | 2        | Non-conclusive |
+| 22_09d88      | 1        | Non-conclusive |
+| 22_0a48062    | 1        | Non-conclusive |
+| 22_0e7        | 2        | Non-conclusive |
+| 22_105a85     | 1        | Non-conclusive |
+| 22_11a222     | 2        | Non-conclusive |
+| 22_127f2      | 4        | Non-conclusive |
+| 22_1321b0     | 2        | Non-conclusive |
+| 22_17675      | 2        | Non-conclusive |
+| 22_1e5        | 2        | Non-conclusive |
+| 22_1f262      | 4        | Non-conclusive |
+| 22_2          | 2        | Non-conclusive |
+| 22_268        | 2        | Non-conclusive |
+| 22_269        | 1        | Non-conclusive |
+| 22_29d9       | 2        | Non-conclusive |
+| 22_2d35       | 2        | Non-conclusive |
+| 22_3          | 6        | Non-conclusive |
+| 22_30c28      | 2        | Non-conclusive |
+| 22_319502     | 2        | Non-conclusive |
+| 22_33c5285    | 4        | Non-conclusive |
+| 22_3464       | 2        | Non-conclusive |
+| 22_3797a1     | 2        | Non-conclusive |
+| 22_3c2        | 2        | Non-conclusive |
+| 22_3d47013    | 1        | Non-conclusive |
+| 22_3f01       | 4        | Non-conclusive |
+| 22_4          | 3        | Non-conclusive |
+| 22_4344b2     | 1        | Non-conclusive |
+| 22_452a6      | 2        | Non-conclusive |
+| 22_45c32      | 2        | Non-conclusive |
+| 22_470f60     | 2        | Non-conclusive |
+| 22_4b22       | 2        | Non-conclusive |
+| 22_50d2       | 1        | Non-conclusive |
+| 22_52b15      | 1        | Non-conclusive |
+| 22_55         | 2        | Non-conclusive |
+| 22_5645       | 2        | Non-conclusive |
+| 22_58         | 2        | Non-conclusive |
+| 22_622a21     | 2        | Non-conclusive |
+| 22_668a1      | 1        | Non-conclusive |
+| 22_6950b4     | 2        | Non-conclusive |
+| 22_6b0        | 2        | Non-conclusive |
+| 22_6e3        | 2        | Non-conclusive |
+| 22_70d8       | 2        | Non-conclusive |
+| 22_736b5      | 2        | Non-conclusive |
+| 22_7718       | 2        | Non-conclusive |
+| 22_7c6        | 1        | Non-conclusive |
+| 22_7c63       | 2        | Non-conclusive |
+| 22_7d09       | 2        | Non-conclusive |
+| 22_7e3210     | 2        | Non-conclusive |
+| 22_8b6        | 2        | Non-conclusive |
+| 22_9          | 2        | Non-conclusive |
+| 22_92598d9    | 2        | Non-conclusive |
+| 22_944b3      | 1        | Non-conclusive |
+| 22_946785     | 2        | Non-conclusive |
+| 22_959f0      | 2        | Non-conclusive |
+| 22_97         | 2        | Non-conclusive |
+| 22_97a3       | 2        | Non-conclusive |
+| 22_9a75928    | 4        | Non-conclusive |
+| 22_9a799      | 1        | Non-conclusive |
+| 22_9e4        | 2        | Non-conclusive |
+| 22_9e7        | 2        | Non-conclusive |
+| 22de0a12      | 4        | Non-conclusive |
+| 22ef9ab       | 1        | Non-conclusive |
+| 22f7f13a98    | 4        | Non-conclusive |
+| 22fc3ad9      | 4        | Non-conclusive |
+| 23            | 738      | Supported      |
+| 23-17-000     | 4        | Non-conclusive |
+| 23.10.2015    | 4        | Supported      |
+| 230_2         | 2        | Non-conclusive |
+| 230_2003      | 4        | Non-conclusive |
+| 230_2920e1    | 4        | Non-conclusive |
+| 230fc3ba      | 1        | Non-conclusive |
+| 231           | 34       | Supported      |
+| 2318bf59      | 1        | Non-conclusive |
+| 231_085a5     | 2        | Non-conclusive |
+| 231_3547b4    | 4        | Non-conclusive |
+| 231_49a5      | 2        | Non-conclusive |
+| 231_56a113    | 2        | Non-conclusive |
+| 231_69f21     | 2        | Non-conclusive |
+| 231_96949     | 2        | Non-conclusive |
+| 232           | 168      | Supported      |
+| 2322          | 1        | Supported      |
+| 2323d4fc      | 4        | Non-conclusive |
+| 232_3         | 4        | Non-conclusive |
+| 232_5a10      | 2        | Non-conclusive |
+| 232ae7cb      | 4        | Non-conclusive |
+| 232fe20f      | 2        | Non-conclusive |
+| 233           | 4        | Supported      |
+| 2335d71a      | 1        | Non-conclusive |
+| 2336_69b5     | 2        | Non-conclusive |
+| 233_596b1     | 2        | Non-conclusive |
+| 233_5f80      | 2        | Non-conclusive |
+| 233_6052      | 2        | Non-conclusive |
+| 233_70b3      | 2        | Non-conclusive |
+| 234           | 3        | Supported      |
+| 2348cbcc      | 4        | Non-conclusive |
+| 2348d13e      | 1        | Non-conclusive |
+| 234_20c5      | 2        | Non-conclusive |
+| 234_292030    | 2        | Non-conclusive |
+| 234_6b3       | 2        | Non-conclusive |
+| 235           | 4        | Supported      |
+| 235_0         | 2        | Non-conclusive |
+| 235_1         | 4        | Non-conclusive |
+| 235_28        | 4        | Non-conclusive |
+| 235_5         | 2        | Non-conclusive |
+| 235_954384    | 2        | Non-conclusive |
+| 236           | 12       | Supported      |
+| 2367          | 2        | Supported      |
+| 236_8         | 2        | Non-conclusive |
+| 237           | 8        | Supported      |
+| 237_00        | 2        | Non-conclusive |
+| 237_02e36     | 2        | Non-conclusive |
+| 237_0f8       | 2        | Non-conclusive |
+| 237_2b9613    | 2        | Non-conclusive |
+| 237_34        | 1        | Non-conclusive |
+| 237_38e604    | 2        | Non-conclusive |
+| 237_44        | 4        | Non-conclusive |
+| 237_900815    | 2        | Non-conclusive |
+| 237_90e73     | 2        | Non-conclusive |
+| 237_93e5      | 4        | Non-conclusive |
+| 238_15        | 4        | Non-conclusive |
+| 238_21        | 4        | Non-conclusive |
+| 238_4b6       | 4        | Non-conclusive |
+| 238_65        | 2        | Non-conclusive |
+| 238_732       | 4        | Non-conclusive |
+| 238_96a9      | 2        | Non-conclusive |
+| 238c501e54    | 4        | Non-conclusive |
+| 239           | 2        | Supported      |
+| 2392b496      | 4        | Non-conclusive |
+| 2393c5e4      | 9        | Non-conclusive |
+| 239_7b3947    | 2        | Non-conclusive |
+| 239_80e671    | 2        | Non-conclusive |
+| 239_820       | 4        | Non-conclusive |
+| 239_898a90    | 8        | Non-conclusive |
+| 23_0          | 2        | Non-conclusive |
+| 23_00         | 2        | Non-conclusive |
+| 23_02d440     | 2        | Non-conclusive |
+| 23_043        | 2        | Non-conclusive |
+| 23_06f240     | 2        | Non-conclusive |
+| 23_0a02       | 1        | Non-conclusive |
+| 23_0b6        | 4        | Non-conclusive |
+| 23_0f276      | 2        | Non-conclusive |
+| 23_11a222     | 8        | Non-conclusive |
+| 23_11a241     | 4        | Non-conclusive |
+| 23_12         | 4        | Non-conclusive |
+| 23_17122      | 2        | Non-conclusive |
+| 23_172f3      | 2        | Non-conclusive |
+| 23_2          | 4        | Non-conclusive |
+| 23_20         | 1        | Non-conclusive |
+| 23_2210c5     | 4        | Non-conclusive |
+| 23_2a79       | 4        | Non-conclusive |
+| 23_2d6        | 2        | Non-conclusive |
+| 23_2e6        | 1        | Non-conclusive |
+| 23_3          | 4        | Non-conclusive |
+| 23_305a44     | 1        | Non-conclusive |
+| 23_30c28      | 1        | Non-conclusive |
+| 23_34827d8    | 2        | Non-conclusive |
+| 23_3890c6     | 2        | Non-conclusive |
+| 23_39a4       | 2        | Non-conclusive |
+| 23_3c43589    | 2        | Non-conclusive |
+| 23_44569f3    | 2        | Non-conclusive |
+| 23_4566       | 4        | Non-conclusive |
+| 23_4d47       | 4        | Non-conclusive |
+| 23_585d387    | 2        | Non-conclusive |
+| 23_58a6       | 1        | Non-conclusive |
+| 23_5c6319     | 2        | Non-conclusive |
+| 23_64         | 1        | Non-conclusive |
+| 23_69         | 2        | Non-conclusive |
+| 23_6b32       | 4        | Non-conclusive |
+| 23_6c3        | 2        | Non-conclusive |
+| 23_6c6119     | 4        | Non-conclusive |
+| 23_6c95       | 4        | Non-conclusive |
+| 23_7          | 6        | Non-conclusive |
+| 23_727657     | 2        | Non-conclusive |
+| 23_72e34      | 2        | Non-conclusive |
+| 23_7339b72    | 2        | Non-conclusive |
+| 23_746f82     | 2        | Non-conclusive |
+| 23_774        | 2        | Non-conclusive |
+| 23_7b506      | 4        | Non-conclusive |
+| 23_8          | 2        | Non-conclusive |
+| 23_81a9       | 2        | Non-conclusive |
+| 23_865c32     | 5        | Non-conclusive |
+| 23_9          | 12       | Non-conclusive |
+| 23_90f4       | 4        | Non-conclusive |
+| 23_943c4      | 2        | Non-conclusive |
+| 23_969e117    | 4        | Non-conclusive |
+| 23_98a1       | 2        | Non-conclusive |
+| 23_9c6409     | 2        | Non-conclusive |
+| 23_9e9        | 4        | Non-conclusive |
+| 23_9f3        | 2        | Non-conclusive |
+| 23b1e6bf      | 4        | Non-conclusive |
+| 23bbf896      | 4        | Non-conclusive |
+| 23c3          | 1        | Non-conclusive |
+| 23cba67a      | 8        | Non-conclusive |
+| 23ceb80b      | 4        | Non-conclusive |
+| 23dab082      | 4        | Non-conclusive |
+| 23e0ccc       | 4        | Non-conclusive |
+| 24            | 1155     | Supported      |
+| 24-04-961     | 4        | Non-conclusive |
+| 24-06-22      | 10       | Non-conclusive |
+| 24-43-060     | 4        | Non-conclusive |
+| 24-45-000     | 4        | Non-conclusive |
+| 24-55-051     | 4        | Non-conclusive |
+| 24.0.1        | 2        | Supported      |
+| 24.1.5        | 4        | Supported      |
+| 240           | 4        | Supported      |
+| 240_331       | 2        | Non-conclusive |
+| 240_53c8      | 4        | Non-conclusive |
+| 240_8a121     | 2        | Non-conclusive |
+| 241           | 10       | Supported      |
+| 2412bc60      | 12       | Non-conclusive |
+| 241_13        | 2        | Non-conclusive |
+| 241_2         | 2        | Non-conclusive |
+| 241_2a531     | 1        | Non-conclusive |
+| 241_30088     | 4        | Non-conclusive |
+| 241_4f61      | 1        | Non-conclusive |
+| 242           | 8        | Supported      |
+| 242_10        | 2        | Non-conclusive |
+| 242_2c1       | 2        | Non-conclusive |
+| 242_2e3       | 2        | Non-conclusive |
+| 242_471       | 2        | Non-conclusive |
+| 242_5         | 1        | Non-conclusive |
+| 242_9125      | 2        | Non-conclusive |
+| 243           | 8        | Supported      |
+| 2430_5e78     | 4        | Non-conclusive |
+| 243_086       | 2        | Non-conclusive |
+| 243_236557    | 2        | Non-conclusive |
+| 243_42        | 4        | Non-conclusive |
+| 243_4c56      | 2        | Non-conclusive |
+| 243_623       | 2        | Non-conclusive |
+| 243_8d8       | 2        | Non-conclusive |
+| 244           | 3        | Supported      |
+| 2447          | 1        | Supported      |
+| 244_1845      | 1        | Non-conclusive |
+| 244_5         | 2        | Non-conclusive |
+| 244_7110      | 4        | Non-conclusive |
+| 244_84a771    | 2        | Non-conclusive |
+| 2450_92845    | 2        | Non-conclusive |
+| 2456_92845    | 2        | Non-conclusive |
+| 245_311964    | 2        | Non-conclusive |
+| 245_4         | 2        | Non-conclusive |
+| 245_53d88     | 2        | Non-conclusive |
+| 245_8b9315    | 2        | Non-conclusive |
+| 245c0cd       | 4        | Non-conclusive |
+| 2462          | 4        | Supported      |
+| 2465          | 2        | Supported      |
+| 2465_57b44    | 2        | Non-conclusive |
+| 246_41        | 2        | Non-conclusive |
+| 246_9         | 2        | Non-conclusive |
+| 247           | 6        | Supported      |
+| 247_6         | 2        | Non-conclusive |
+| 247_84a771    | 2        | Non-conclusive |
+| 247c651       | 4        | Non-conclusive |
+| 248_211a6     | 4        | Non-conclusive |
+| 248_3372      | 4        | Non-conclusive |
+| 248_558       | 4        | Non-conclusive |
+| 249           | 2        | Supported      |
+| 2494d26       | 4        | Non-conclusive |
+| 249_220b1     | 1        | Non-conclusive |
+| 249_26c5      | 4        | Non-conclusive |
+| 249_295c7     | 2        | Non-conclusive |
+| 249_52d74     | 2        | Non-conclusive |
+| 249_99        | 2        | Non-conclusive |
+| 24_0          | 2        | Non-conclusive |
+| 24_01222      | 2        | Non-conclusive |
+| 24_05         | 2        | Non-conclusive |
+| 24_05b84      | 2        | Non-conclusive |
+| 24_06a8       | 2        | Non-conclusive |
+| 24_093e22     | 2        | Non-conclusive |
+| 24_096        | 2        | Non-conclusive |
+| 24_09a86      | 4        | Non-conclusive |
+| 24_0b99       | 2        | Non-conclusive |
+| 24_1101a70    | 2        | Non-conclusive |
+| 24_14         | 1        | Non-conclusive |
+| 24_16         | 4        | Non-conclusive |
+| 24_19d9       | 2        | Non-conclusive |
+| 24_1a75       | 4        | Non-conclusive |
+| 24_1c878      | 2        | Non-conclusive |
+| 24_212d6      | 4        | Non-conclusive |
+| 24_21f0       | 2        | Non-conclusive |
+| 24_26c5       | 2        | Non-conclusive |
+| 24_2a6        | 1        | Non-conclusive |
+| 24_2c9        | 4        | Non-conclusive |
+| 24_2e07       | 2        | Non-conclusive |
+| 24_3          | 2        | Non-conclusive |
+| 24_3074       | 1        | Non-conclusive |
+| 24_310        | 4        | Non-conclusive |
+| 24_35c7       | 2        | Non-conclusive |
+| 24_36         | 4        | Non-conclusive |
+| 24_374a29     | 4        | Non-conclusive |
+| 24_375153     | 2        | Non-conclusive |
+| 24_38d9       | 2        | Non-conclusive |
+| 24_3b0110     | 1        | Non-conclusive |
+| 24_4          | 1        | Non-conclusive |
+| 24_40         | 2        | Non-conclusive |
+| 24_49         | 2        | Non-conclusive |
+| 24_49a1       | 2        | Non-conclusive |
+| 24_4b5678     | 2        | Non-conclusive |
+| 24_4f8        | 2        | Non-conclusive |
+| 24_501b96     | 2        | Non-conclusive |
+| 24_50329      | 2        | Non-conclusive |
+| 24_534        | 2        | Non-conclusive |
+| 24_6          | 5        | Non-conclusive |
+| 24_600158     | 2        | Non-conclusive |
+| 24_64604      | 2        | Non-conclusive |
+| 24_654        | 2        | Non-conclusive |
+| 24_664c4      | 2        | Non-conclusive |
+| 24_67         | 2        | Non-conclusive |
+| 24_680861     | 1        | Non-conclusive |
+| 24_68d2       | 4        | Non-conclusive |
+| 24_70c323     | 2        | Non-conclusive |
+| 24_722760     | 2        | Non-conclusive |
+| 24_726e9      | 2        | Non-conclusive |
+| 24_77d598     | 1        | Non-conclusive |
+| 24_789a7      | 4        | Non-conclusive |
+| 24_7a16       | 2        | Non-conclusive |
+| 24_7d4773     | 2        | Non-conclusive |
+| 24_7e6962     | 1        | Non-conclusive |
+| 24_8          | 1        | Non-conclusive |
+| 24_8020571    | 2        | Non-conclusive |
+| 24_8806       | 2        | Non-conclusive |
+| 24_89         | 2        | Non-conclusive |
+| 24_9          | 2        | Non-conclusive |
+| 24_9216       | 2        | Non-conclusive |
+| 24_92e7       | 2        | Non-conclusive |
+| 24_964d9      | 2        | Non-conclusive |
+| 24_97f20      | 2        | Non-conclusive |
+| 24_9a4        | 2        | Non-conclusive |
+| 24_9c5        | 2        | Non-conclusive |
+| 24_9f98       | 2        | Non-conclusive |
+| 24a17605      | 4        | Non-conclusive |
+| 24ad2bf2      | 1        | Non-conclusive |
+| 24ae3655      | 1        | Non-conclusive |
+| 24b2          | 5        | Non-conclusive |
+| 24ce4271      | 4        | Non-conclusive |
+| 24d1e821d8    | 4        | Non-conclusive |
+| 24d4529b      | 9        | Non-conclusive |
+| 24d5104b      | 4        | Non-conclusive |
+| 24d75d64      | 4        | Non-conclusive |
+| 25            | 121      | Supported      |
+| 25-04-000     | 4        | Non-conclusive |
+| 25-31-039     | 4        | Non-conclusive |
+| 2502_8        | 2        | Non-conclusive |
+| 2503_8        | 2        | Non-conclusive |
+| 2504_8        | 1        | Non-conclusive |
+| 250_0b5167    | 4        | Non-conclusive |
+| 250e1e59      | 1        | Non-conclusive |
+| 251           | 6        | Supported      |
+| 2512          | 4        | Supported      |
+| 251_95a9      | 4        | Non-conclusive |
+| 251cb4b311    | 4        | Non-conclusive |
+| 251d7080      | 4        | Non-conclusive |
+| 252           | 10       | Supported      |
+| 2520          | 2        | Supported      |
+| 2528a8b6      | 4        | Non-conclusive |
+| 252F4.0       | 4        | Non-conclusive |
+| 252_0f87      | 2        | Non-conclusive |
+| 252_2f2       | 2        | Non-conclusive |
+| 252_5774      | 4        | Non-conclusive |
+| 252_9e80      | 2        | Non-conclusive |
+| 252f366e      | 4        | Non-conclusive |
+| 253           | 8        | Supported      |
+| 2533          | 4        | Supported      |
+| 253_5a91      | 2        | Non-conclusive |
+| 253_82        | 4        | Non-conclusive |
+| 253e820-0     | 2        | Non-conclusive |
+| 253e820-03    | 4        | Non-conclusive |
+| 253e820-1     | 4        | Non-conclusive |
+| 253e820-16    | 4        | Non-conclusive |
+| 253e820-2     | 5        | Non-conclusive |
+| 253e820-26    | 4        | Non-conclusive |
+| 253e820-3     | 4        | Non-conclusive |
+| 253e820-34    | 1        | Non-conclusive |
+| 253e820-4     | 25       | Non-conclusive |
+| 253e820-41    | 4        | Non-conclusive |
+| 253e820-45    | 1        | Non-conclusive |
+| 253e820-53    | 5        | Non-conclusive |
+| 253e820-58    | 4        | Non-conclusive |
+| 253e820-6     | 4        | Non-conclusive |
+| 253e820-68    | 4        | Non-conclusive |
+| 253e820-7     | 12       | Non-conclusive |
+| 253e820-71    | 1        | Non-conclusive |
+| 253e820-8     | 14       | Non-conclusive |
+| 253e820-80    | 5        | Non-conclusive |
+| 253e820-81    | 4        | Non-conclusive |
+| 253e820-9     | 14       | Non-conclusive |
+| 253e820-92    | 8        | Non-conclusive |
+| 253e820-96    | 4        | Non-conclusive |
+| 253e820-98    | 8        | Non-conclusive |
+| 254           | 19       | Supported      |
+| 2543_2d41     | 4        | Non-conclusive |
+| 2547acd6      | 4        | Non-conclusive |
+| 254_0272      | 4        | Non-conclusive |
+| 254_3         | 1        | Non-conclusive |
+| 254a7c25      | 4        | Non-conclusive |
+| 254d817b      | 4        | Non-conclusive |
+| 255           | 8        | Supported      |
+| 2554_72       | 2        | Non-conclusive |
+| 2558_51       | 4        | Non-conclusive |
+| 255_1c664     | 4        | Non-conclusive |
+| 255_2         | 1        | Non-conclusive |
+| 255a79a9ff    | 1        | Non-conclusive |
+| 255c4de0      | 4        | Non-conclusive |
+| 256           | 12       | Supported      |
+| 2574_46       | 2        | Non-conclusive |
+| 257_2d3       | 2        | Non-conclusive |
+| 257_68d7      | 2        | Non-conclusive |
+| 257_799       | 2        | Non-conclusive |
+| 257_85b67     | 4        | Non-conclusive |
+| 257_9a41      | 2        | Non-conclusive |
+| 257edfcd      | 8        | Non-conclusive |
+| 257efeb       | 4        | Non-conclusive |
+| 258           | 5        | Supported      |
+| 2582_46       | 2        | Non-conclusive |
+| 2584e17e      | 4        | Non-conclusive |
+| 258_2         | 4        | Non-conclusive |
+| 258_2e3       | 2        | Non-conclusive |
+| 258_471       | 2        | Non-conclusive |
+| 258_9         | 4        | Non-conclusive |
+| 258ef059      | 4        | Non-conclusive |
+| 2590a53       | 4        | Non-conclusive |
+| 2597_6        | 2        | Non-conclusive |
+| 2599_3c3      | 2        | Non-conclusive |
+| 25_0          | 2        | Non-conclusive |
+| 25_04         | 1        | Non-conclusive |
+| 25_04a2       | 2        | Non-conclusive |
+| 25_07         | 4        | Non-conclusive |
+| 25_09         | 1        | Non-conclusive |
+| 25_0c8        | 2        | Non-conclusive |
+| 25_17122      | 2        | Non-conclusive |
+| 25_17a25      | 2        | Non-conclusive |
+| 25_1b8        | 2        | Non-conclusive |
+| 25_236f53     | 2        | Non-conclusive |
+| 25_25521      | 4        | Non-conclusive |
+| 25_2a1429     | 1        | Non-conclusive |
+| 25_2a3        | 4        | Non-conclusive |
+| 25_2b4        | 2        | Non-conclusive |
+| 25_2e7        | 4        | Non-conclusive |
+| 25_2f12654    | 2        | Non-conclusive |
+| 25_309c252    | 4        | Non-conclusive |
+| 25_31         | 2        | Non-conclusive |
+| 25_4          | 1        | Non-conclusive |
+| 25_4447       | 2        | Non-conclusive |
+| 25_47e8       | 2        | Non-conclusive |
+| 25_4a557      | 2        | Non-conclusive |
+| 25_4c47       | 2        | Non-conclusive |
+| 25_4c523      | 1        | Non-conclusive |
+| 25_5          | 6        | Non-conclusive |
+| 25_538e6      | 4        | Non-conclusive |
+| 25_56c2       | 2        | Non-conclusive |
+| 25_56d051     | 1        | Non-conclusive |
+| 25_58         | 2        | Non-conclusive |
+| 25_5a3615     | 2        | Non-conclusive |
+| 25_5e35       | 4        | Non-conclusive |
+| 25_5f89       | 4        | Non-conclusive |
+| 25_6          | 2        | Non-conclusive |
+| 25_61         | 2        | Non-conclusive |
+| 25_63b783     | 2        | Non-conclusive |
+| 25_63c86      | 2        | Non-conclusive |
+| 25_64         | 4        | Non-conclusive |
+| 25_642        | 2        | Non-conclusive |
+| 25_66571e8    | 1        | Non-conclusive |
+| 25_69         | 2        | Non-conclusive |
+| 25_6b0        | 4        | Non-conclusive |
+| 25_6b248      | 2        | Non-conclusive |
+| 25_7          | 2        | Non-conclusive |
+| 25_70b0190    | 2        | Non-conclusive |
+| 25_73         | 2        | Non-conclusive |
+| 25_74         | 1        | Non-conclusive |
+| 25_75c8       | 2        | Non-conclusive |
+| 25_766        | 2        | Non-conclusive |
+| 25_776b90     | 4        | Non-conclusive |
+| 25_78         | 2        | Non-conclusive |
+| 25_7d1        | 2        | Non-conclusive |
+| 25_8393a29    | 1        | Non-conclusive |
+| 25_9c36       | 2        | Non-conclusive |
+| 25e71cff      | 1        | Non-conclusive |
+| 25f52ef7      | 4        | Non-conclusive |
+| 26            | 732      | Supported      |
+| 26-30-000     | 5        | Non-conclusive |
+| 26-41-139     | 4        | Non-conclusive |
+| 26.1.5        | 4        | Supported      |
+| 26.2.18       | 4        | Supported      |
+| 26.5          | 1        | Supported      |
+| 260           | 4        | Supported      |
+| 260_1d7       | 2        | Non-conclusive |
+| 260_9         | 2        | Non-conclusive |
+| 260a290a      | 1        | Non-conclusive |
+| 260da51b      | 1        | Non-conclusive |
+| 261           | 6        | Supported      |
+| 2616d356      | 4        | Non-conclusive |
+| 261_0b6445    | 4        | Non-conclusive |
+| 261_0d026     | 1        | Non-conclusive |
+| 261_4f00      | 2        | Non-conclusive |
+| 261_528       | 2        | Non-conclusive |
+| 261_9b3       | 2        | Non-conclusive |
+| 261_9c67      | 2        | Non-conclusive |
+| 261z3h5       | 1        | Non-conclusive |
+| 262           | 4        | Supported      |
+| 262_075       | 4        | Non-conclusive |
+| 263           | 2        | Supported      |
+| 2631          | 9        | Supported      |
+| 2632          | 2        | Supported      |
+| 263_23896     | 2        | Non-conclusive |
+| 263_41748     | 2        | Non-conclusive |
+| 263_495e1     | 2        | Non-conclusive |
+| 263_5         | 4        | Non-conclusive |
+| 263_8         | 1        | Non-conclusive |
+| 263_84e8      | 2        | Non-conclusive |
+| 263_85d846    | 4        | Non-conclusive |
+| 263_8a07      | 2        | Non-conclusive |
+| 263_9d8       | 2        | Non-conclusive |
+| 264           | 4        | Supported      |
+| 2649_90c5     | 2        | Non-conclusive |
+| 264_47        | 2        | Non-conclusive |
+| 2658_0        | 4        | Non-conclusive |
+| 265_30f7      | 4        | Non-conclusive |
+| 265_6         | 4        | Non-conclusive |
+| 266           | 4        | Supported      |
+| 266_6a3725    | 2        | Non-conclusive |
+| 266_6e70      | 4        | Non-conclusive |
+| 266_73973     | 2        | Non-conclusive |
+| 266_79d979    | 2        | Non-conclusive |
+| 266_922       | 4        | Non-conclusive |
+| 267           | 4        | Supported      |
+| 2673_18b1     | 2        | Non-conclusive |
+| 267_35e87     | 4        | Non-conclusive |
+| 267aa490      | 4        | Non-conclusive |
+| 267d3111      | 4        | Non-conclusive |
+| 268           | 3        | Supported      |
+| 2686ba5d      | 1        | Non-conclusive |
+| 268_0a48      | 4        | Non-conclusive |
+| 268_31        | 4        | Non-conclusive |
+| 268_34        | 2        | Non-conclusive |
+| 268_5c2       | 4        | Non-conclusive |
+| 268_78f8      | 2        | Non-conclusive |
+| 268da939      | 4        | Non-conclusive |
+| 269           | 4        | Supported      |
+| 269_0         | 4        | Non-conclusive |
+| 269_56f4      | 2        | Non-conclusive |
+| 26_09         | 2        | Non-conclusive |
+| 26_0973       | 2        | Non-conclusive |
+| 26_0a059      | 1        | Non-conclusive |
+| 26_0c509      | 2        | Non-conclusive |
+| 26_0f8        | 2        | Non-conclusive |
+| 26_1          | 4        | Non-conclusive |
+| 26_129        | 2        | Non-conclusive |
+| 26_2          | 4        | Non-conclusive |
+| 26_210403     | 2        | Non-conclusive |
+| 26_2b876      | 1        | Non-conclusive |
+| 26_2e12       | 2        | Non-conclusive |
+| 26_2f2        | 4        | Non-conclusive |
+| 26_322139     | 2        | Non-conclusive |
+| 26_354e597    | 2        | Non-conclusive |
+| 26_357e3      | 2        | Non-conclusive |
+| 26_4          | 8        | Non-conclusive |
+| 26_45a351     | 1        | Non-conclusive |
+| 26_48304      | 2        | Non-conclusive |
+| 26_5          | 6        | Non-conclusive |
+| 26_54b6       | 1        | Non-conclusive |
+| 26_55         | 2        | Non-conclusive |
+| 26_5b0        | 4        | Non-conclusive |
+| 26_5d401      | 4        | Non-conclusive |
+| 26_5e87       | 1        | Non-conclusive |
+| 26_61f320     | 4        | Non-conclusive |
+| 26_6228266    | 2        | Non-conclusive |
+| 26_639a3      | 4        | Non-conclusive |
+| 26_65c4       | 2        | Non-conclusive |
+| 26_68         | 2        | Non-conclusive |
+| 26_6c89       | 4        | Non-conclusive |
+| 26_6f5        | 4        | Non-conclusive |
+| 26_7          | 4        | Non-conclusive |
+| 26_71a9       | 2        | Non-conclusive |
+| 26_77d80      | 2        | Non-conclusive |
+| 26_7d371      | 4        | Non-conclusive |
+| 26_813b3      | 4        | Non-conclusive |
+| 26_819        | 2        | Non-conclusive |
+| 26_87c9       | 4        | Non-conclusive |
+| 26_88c135     | 2        | Non-conclusive |
+| 26_8c5        | 4        | Non-conclusive |
+| 26_96a472     | 2        | Non-conclusive |
+| 26_9e7        | 2        | Non-conclusive |
+| 26a8          | 4        | Non-conclusive |
+| 26ba04d       | 4        | Non-conclusive |
+| 26bad78fa7    | 4        | Non-conclusive |
+| 26c26502      | 4        | Non-conclusive |
+| 26dc911       | 2        | Non-conclusive |
+| 26e15466b5    | 4        | Non-conclusive |
+| 26e37e8d      | 4        | Non-conclusive |
+| 26e9c5fe      | 4        | Non-conclusive |
+| 26f4a386      | 4        | Non-conclusive |
+| 27            | 203      | Supported      |
+| 27.6          | 4        | Supported      |
+| 270           | 4        | Supported      |
+| 2703aa31      | 4        | Non-conclusive |
+| 270_28        | 2        | Non-conclusive |
+| 270_2a38      | 2        | Non-conclusive |
+| 270_32b8      | 4        | Non-conclusive |
+| 270_6d8       | 1        | Non-conclusive |
+| 270_89b9      | 2        | Non-conclusive |
+| 271           | 3        | Supported      |
+| 2716          | 1        | Supported      |
+| 271_052092    | 1        | Non-conclusive |
+| 271_25e63     | 4        | Non-conclusive |
+| 271_4a81      | 2        | Non-conclusive |
+| 271_501       | 4        | Non-conclusive |
+| 272           | 8        | Supported      |
+| 272_087       | 2        | Non-conclusive |
+| 272_626f8     | 2        | Non-conclusive |
+| 272_82f08     | 2        | Non-conclusive |
+| 272f4122      | 1        | Non-conclusive |
+| 273           | 10       | Supported      |
+| 2733_18b1     | 2        | Non-conclusive |
+| 273_1d5       | 2        | Non-conclusive |
+| 273_7f220     | 2        | Non-conclusive |
+| 273c1960      | 4        | Non-conclusive |
+| 274           | 10       | Supported      |
+| 274_0d3       | 2        | Non-conclusive |
+| 274_450c1     | 2        | Non-conclusive |
+| 274e7f1       | 4        | Non-conclusive |
+| 275           | 2        | Supported      |
+| 275_101f0     | 4        | Non-conclusive |
+| 275_5f1320    | 1        | Non-conclusive |
+| 276           | 4        | Supported      |
+| 2767_10       | 2        | Non-conclusive |
+| 2767_35174    | 2        | Non-conclusive |
+| 276_087f0     | 2        | Non-conclusive |
+| 276_13c9      | 1        | Non-conclusive |
+| 276_1c65      | 4        | Non-conclusive |
+| 276_71060     | 2        | Non-conclusive |
+| 276_7f621     | 4        | Non-conclusive |
+| 276_9a35      | 2        | Non-conclusive |
+| 277           | 4        | Supported      |
+| 2771beef      | 10       | Non-conclusive |
+| 2778fca3      | 4        | Non-conclusive |
+| 277_1c110     | 4        | Non-conclusive |
+| 277_43f864    | 1        | Non-conclusive |
+| 277_5         | 2        | Non-conclusive |
+| 277_609       | 4        | Non-conclusive |
+| 278           | 10       | Supported      |
+| 278_7d1       | 2        | Non-conclusive |
+| 278_9b30      | 2        | Non-conclusive |
+| 278a302e      | 4        | Non-conclusive |
+| 279_5e6       | 4        | Non-conclusive |
+| 27_00b190     | 2        | Non-conclusive |
+| 27_02a1       | 2        | Non-conclusive |
+| 27_05         | 2        | Non-conclusive |
+| 27_095        | 1        | Non-conclusive |
+| 27_0d94       | 2        | Non-conclusive |
+| 27_1          | 2        | Non-conclusive |
+| 27_16c1       | 2        | Non-conclusive |
+| 27_18         | 4        | Non-conclusive |
+| 27_184e71     | 1        | Non-conclusive |
+| 27_185e831    | 2        | Non-conclusive |
+| 27_18f4       | 4        | Non-conclusive |
+| 27_19e4633    | 1        | Non-conclusive |
+| 27_1b095      | 4        | Non-conclusive |
+| 27_2          | 1        | Non-conclusive |
+| 27_21e2       | 2        | Non-conclusive |
+| 27_2a14       | 1        | Non-conclusive |
+| 27_2d09       | 4        | Non-conclusive |
+| 27_2f03191    | 4        | Non-conclusive |
+| 27_35555      | 1        | Non-conclusive |
+| 27_3817       | 2        | Non-conclusive |
+| 27_44e581     | 2        | Non-conclusive |
+| 27_46d92      | 2        | Non-conclusive |
+| 27_496d853    | 2        | Non-conclusive |
+| 27_4997a70    | 2        | Non-conclusive |
+| 27_4b81       | 4        | Non-conclusive |
+| 27_4b83       | 2        | Non-conclusive |
+| 27_4e45       | 4        | Non-conclusive |
+| 27_50c1641    | 4        | Non-conclusive |
+| 27_57d2       | 4        | Non-conclusive |
+| 27_586a2      | 4        | Non-conclusive |
+| 27_593b9      | 1        | Non-conclusive |
+| 27_5a31       | 4        | Non-conclusive |
+| 27_5c0        | 2        | Non-conclusive |
+| 27_5c00       | 2        | Non-conclusive |
+| 27_5d975      | 2        | Non-conclusive |
+| 27_5e4072     | 2        | Non-conclusive |
+| 27_6          | 2        | Non-conclusive |
+| 27_60a5008    | 2        | Non-conclusive |
+| 27_6478f73    | 2        | Non-conclusive |
+| 27_67         | 2        | Non-conclusive |
+| 27_7          | 3        | Non-conclusive |
+| 27_7220f5     | 2        | Non-conclusive |
+| 27_73b2       | 2        | Non-conclusive |
+| 27_7508       | 4        | Non-conclusive |
+| 27_7f6        | 2        | Non-conclusive |
+| 27_7f9        | 2        | Non-conclusive |
+| 27_84c543     | 2        | Non-conclusive |
+| 27_8763       | 1        | Non-conclusive |
+| 27_88201c3    | 4        | Non-conclusive |
+| 27_8a51       | 2        | Non-conclusive |
+| 27_8f5        | 2        | Non-conclusive |
+| 27_9495       | 2        | Non-conclusive |
+| 27_94d97      | 4        | Non-conclusive |
+| 27ad01b0d6    | 4        | Non-conclusive |
+| 27c62d15      | 4        | Non-conclusive |
+| 27d5c307      | 1        | Non-conclusive |
+| 27d6f295      | 4        | Non-conclusive |
+| 27dc414       | 4        | Non-conclusive |
+| 27ddcc39      | 2        | Non-conclusive |
+| 27e45967      | 9        | Non-conclusive |
+| 27f03855      | 4        | Non-conclusive |
+| 28            | 203      | Supported      |
+| 28.1          | 6        | Supported      |
+| 28.1.0        | 5        | Supported      |
+| 280           | 2        | Supported      |
+| 2801d608      | 1        | Non-conclusive |
+| 2805_3f367    | 2        | Non-conclusive |
+| 2805_62       | 2        | Non-conclusive |
+| 280_1         | 2        | Non-conclusive |
+| 280_30e77     | 2        | Non-conclusive |
+| 280a1f94      | 4        | Non-conclusive |
+| 281           | 4        | Supported      |
+| 281%29        | 4        | Non-conclusive |
+| 281_2b5       | 2        | Non-conclusive |
+| 281_5b9       | 2        | Non-conclusive |
+| 281_675a0     | 2        | Non-conclusive |
+| 281_9b46      | 4        | Non-conclusive |
+| 281af5b       | 4        | Non-conclusive |
+| 281b8e0f      | 4        | Non-conclusive |
+| 281cd50dd9    | 13       | Non-conclusive |
+| 282           | 4        | Supported      |
+| 2820ce3b      | 4        | Non-conclusive |
+| 282_262       | 4        | Non-conclusive |
+| 282_8f0       | 2        | Non-conclusive |
+| 283           | 6        | Supported      |
+| 283_59c517    | 4        | Non-conclusive |
+| 283_64f8      | 2        | Non-conclusive |
+| 283_69        | 4        | Non-conclusive |
+| 284           | 4        | Supported      |
+| 2846          | 2        | Supported      |
+| 284b8fa899    | 4        | Non-conclusive |
+| 285           | 4        | Supported      |
+| 285_3c23      | 2        | Non-conclusive |
+| 285_5e87      | 2        | Non-conclusive |
+| 285_9         | 1        | Non-conclusive |
+| 285aadc0      | 4        | Non-conclusive |
+| 286           | 2        | Supported      |
+| 286_495a0     | 2        | Non-conclusive |
+| 286_5a7       | 2        | Non-conclusive |
+| 286_9519      | 4        | Non-conclusive |
+| 287           | 8        | Supported      |
+| 287_0d20      | 4        | Non-conclusive |
+| 287_1b83      | 2        | Non-conclusive |
+| 287_219b81    | 4        | Non-conclusive |
+| 287_3a51      | 2        | Non-conclusive |
+| 287_5         | 3        | Non-conclusive |
+| 287_50e05     | 2        | Non-conclusive |
+| 287_9007      | 2        | Non-conclusive |
+| 288           | 7        | Supported      |
+| 288_74        | 2        | Non-conclusive |
+| 288_92        | 4        | Non-conclusive |
+| 288_98        | 2        | Non-conclusive |
+| 289           | 6        | Supported      |
+| 289_2e3       | 4        | Non-conclusive |
+| 289_5a7       | 2        | Non-conclusive |
+| 289_9007      | 1        | Non-conclusive |
+| 28_0          | 2        | Non-conclusive |
+| 28_03         | 2        | Non-conclusive |
+| 28_03f83      | 1        | Non-conclusive |
+| 28_0798       | 4        | Non-conclusive |
+| 28_0850317    | 4        | Non-conclusive |
+| 28_08c3       | 2        | Non-conclusive |
+| 28_09d9737    | 2        | Non-conclusive |
+| 28_0f1        | 2        | Non-conclusive |
+| 28_11c2       | 2        | Non-conclusive |
+| 28_1772       | 2        | Non-conclusive |
+| 28_17b10      | 2        | Non-conclusive |
+| 28_1c52       | 2        | Non-conclusive |
+| 28_1d4        | 4        | Non-conclusive |
+| 28_1d86       | 2        | Non-conclusive |
+| 28_202        | 2        | Non-conclusive |
+| 28_28         | 2        | Non-conclusive |
+| 28_3          | 1        | Non-conclusive |
+| 28_31e3       | 2        | Non-conclusive |
+| 28_367        | 1        | Non-conclusive |
+| 28_3992f20    | 1        | Non-conclusive |
+| 28_3c86       | 4        | Non-conclusive |
+| 28_3e0148     | 2        | Non-conclusive |
+| 28_3e858      | 1        | Non-conclusive |
+| 28_43d9940    | 2        | Non-conclusive |
+| 28_49         | 2        | Non-conclusive |
+| 28_4b41       | 4        | Non-conclusive |
+| 28_4d55       | 2        | Non-conclusive |
+| 28_54d13      | 2        | Non-conclusive |
+| 28_5e2478     | 4        | Non-conclusive |
+| 28_619f6      | 1        | Non-conclusive |
+| 28_629690     | 2        | Non-conclusive |
+| 28_63d810     | 2        | Non-conclusive |
+| 28_690c15     | 4        | Non-conclusive |
+| 28_6c9934     | 2        | Non-conclusive |
+| 28_74         | 4        | Non-conclusive |
+| 28_7b73       | 1        | Non-conclusive |
+| 28_7e71       | 2        | Non-conclusive |
+| 28_8          | 2        | Non-conclusive |
+| 28_84676b2    | 4        | Non-conclusive |
+| 28_867d4      | 1        | Non-conclusive |
+| 28_8a14       | 2        | Non-conclusive |
+| 28_8f0        | 2        | Non-conclusive |
+| 28_8f91       | 1        | Non-conclusive |
+| 28_9          | 2        | Non-conclusive |
+| 28_923        | 4        | Non-conclusive |
+| 28_9285       | 4        | Non-conclusive |
+| 28_95         | 4        | Non-conclusive |
+| 28_958d09     | 2        | Non-conclusive |
+| 28_973892     | 2        | Non-conclusive |
+| 28_99d3084    | 4        | Non-conclusive |
+| 28_9a15       | 2        | Non-conclusive |
+| 28_9d45       | 4        | Non-conclusive |
+| 28a16908      | 4        | Non-conclusive |
+| 28b00eef      | 1        | Non-conclusive |
+| 28b34592      | 4        | Non-conclusive |
+| 28b3b1d4      | 4        | Non-conclusive |
+| 28b8ba4       | 4        | Non-conclusive |
+| 28ba0fb       | 4        | Non-conclusive |
+| 28bbef01      | 4        | Non-conclusive |
+| 28cfd9e1      | 4        | Non-conclusive |
+| 28d59033      | 4        | Non-conclusive |
+| 28f1e0e9      | 1        | Non-conclusive |
+| 29            | 197      | Supported      |
+| 29-11-22      | 8        | Non-conclusive |
+| 29-55-000     | 4        | Non-conclusive |
+| 290           | 5        | Supported      |
+| 290_3b8       | 2        | Non-conclusive |
+| 290_8f0       | 4        | Non-conclusive |
+| 291           | 6        | Supported      |
+| 291_04e5      | 2        | Non-conclusive |
+| 291_74        | 4        | Non-conclusive |
+| 291_89        | 2        | Non-conclusive |
+| 291_9c9       | 4        | Non-conclusive |
+| 292_6f4       | 2        | Non-conclusive |
+| 292a5ef8      | 4        | Non-conclusive |
+| 292e8b7d      | 1        | Non-conclusive |
+| 293           | 2        | Supported      |
+| 2934          | 4        | Supported      |
+| 293_2e94      | 2        | Non-conclusive |
+| 293a6         | 4        | Non-conclusive |
+| 293f7ebd      | 1        | Non-conclusive |
+| 294           | 8        | Supported      |
+| 2940_8b4      | 2        | Non-conclusive |
+| 2940b744      | 1        | Non-conclusive |
+| 2941_8b4      | 2        | Non-conclusive |
+| 2942b161      | 4        | Non-conclusive |
+| 2949_9c253    | 4        | Non-conclusive |
+| 294_23d8      | 2        | Non-conclusive |
+| 294_3         | 4        | Non-conclusive |
+| 294_7         | 2        | Non-conclusive |
+| 294_9007      | 2        | Non-conclusive |
+| 294_96c9      | 2        | Non-conclusive |
+| 294_98842     | 2        | Non-conclusive |
+| 295           | 6        | Supported      |
+| 2952f50       | 4        | Non-conclusive |
+| 2955_9c26     | 2        | Non-conclusive |
+| 2957_9c26     | 2        | Non-conclusive |
+| 295_51        | 1        | Non-conclusive |
+| 295_7d2       | 2        | Non-conclusive |
+| 295bcde5      | 4        | Non-conclusive |
+| 296           | 4        | Supported      |
+| 296_18        | 2        | Non-conclusive |
+| 296_1e6       | 2        | Non-conclusive |
+| 296_2e48      | 2        | Non-conclusive |
+| 296_38b62     | 2        | Non-conclusive |
+| 296_6         | 2        | Non-conclusive |
+| 296_62c7      | 2        | Non-conclusive |
+| 296_767778    | 4        | Non-conclusive |
+| 296_9e771     | 2        | Non-conclusive |
+| 297_8f25      | 4        | Non-conclusive |
+| 298           | 7        | Supported      |
+| 2989ed1a      | 2        | Non-conclusive |
+| 298_6f69      | 2        | Non-conclusive |
+| 298_92b0      | 2        | Non-conclusive |
+| 298ab3fa      | 4        | Non-conclusive |
+| 299           | 6        | Supported      |
+| 2992          | 4        | Supported      |
+| 2993_678      | 2        | Non-conclusive |
+| 2995b081      | 5        | Non-conclusive |
+| 299_13492     | 2        | Non-conclusive |
+| 299_2         | 2        | Non-conclusive |
+| 299_6b6605    | 2        | Non-conclusive |
+| 299_97a1      | 2        | Non-conclusive |
+| 29_0834e2     | 2        | Non-conclusive |
+| 29_1          | 2        | Non-conclusive |
+| 29_13         | 2        | Non-conclusive |
+| 29_1887       | 4        | Non-conclusive |
+| 29_188e39     | 2        | Non-conclusive |
+| 29_21e5949    | 2        | Non-conclusive |
+| 29_235d6      | 4        | Non-conclusive |
+| 29_272e1      | 4        | Non-conclusive |
+| 29_28c45      | 2        | Non-conclusive |
+| 29_28c9       | 2        | Non-conclusive |
+| 29_29665e6    | 2        | Non-conclusive |
+| 29_2b98616    | 1        | Non-conclusive |
+| 29_3          | 1        | Non-conclusive |
+| 29_3005       | 2        | Non-conclusive |
+| 29_31         | 4        | Non-conclusive |
+| 29_354        | 4        | Non-conclusive |
+| 29_3e35806    | 2        | Non-conclusive |
+| 29_3f0        | 2        | Non-conclusive |
+| 29_3f6        | 4        | Non-conclusive |
+| 29_44         | 2        | Non-conclusive |
+| 29_48         | 2        | Non-conclusive |
+| 29_485        | 2        | Non-conclusive |
+| 29_515        | 2        | Non-conclusive |
+| 29_5402f7     | 2        | Non-conclusive |
+| 29_5668b4     | 1        | Non-conclusive |
+| 29_5773       | 2        | Non-conclusive |
+| 29_578e5      | 2        | Non-conclusive |
+| 29_6          | 4        | Non-conclusive |
+| 29_60b291     | 1        | Non-conclusive |
+| 29_641        | 2        | Non-conclusive |
+| 29_65127d5    | 2        | Non-conclusive |
+| 29_6546323    | 1        | Non-conclusive |
+| 29_6f4043     | 2        | Non-conclusive |
+| 29_7          | 1        | Non-conclusive |
+| 29_711f5      | 2        | Non-conclusive |
+| 29_7206b80    | 1        | Non-conclusive |
+| 29_7403       | 2        | Non-conclusive |
+| 29_78312b3    | 2        | Non-conclusive |
+| 29_8090c4     | 1        | Non-conclusive |
+| 29_8091b52    | 2        | Non-conclusive |
+| 29_80b1261    | 2        | Non-conclusive |
+| 29_813b3      | 4        | Non-conclusive |
+| 29_820        | 4        | Non-conclusive |
+| 29_850        | 1        | Non-conclusive |
+| 29_8d744      | 2        | Non-conclusive |
+| 29_8f5        | 1        | Non-conclusive |
+| 29_9          | 4        | Non-conclusive |
+| 29_9e4        | 2        | Non-conclusive |
+| 29_9e6        | 2        | Non-conclusive |
+| 29aa13f9      | 658      | Non-conclusive |
+| 29bbc064      | 4        | Non-conclusive |
+| 29c55fb1      | 4        | Non-conclusive |
+| 29e34e29      | 4        | Non-conclusive |
+| 2@2           | 1337     | Non-conclusive |
+| 2@4.0         | 4        | Non-conclusive |
+| 2A3           | 2        | Non-conclusive |
+| 2C5           | 8        | Non-conclusive |
+| 2D508         | 4        | Non-conclusive |
+| 2F3.3         | 5        | Non-conclusive |
+| 2F4.0         | 4        | Non-conclusive |
+| 2F4.1         | 2        | Non-conclusive |
+| 2F4.5         | 4        | Non-conclusive |
+| 2F510         | 4        | Non-conclusive |
+| 2F8           | 5        | Non-conclusive |
+| 2G3           | 2        | Non-conclusive |
+| 2J0           | 1        | Non-conclusive |
+| 2J6b3         | 4        | Non-conclusive |
+| 2J9           | 1        | Non-conclusive |
+| 2L0           | 4        | Non-conclusive |
+| 2O2           | 4        | Non-conclusive |
+| 2O2P5         | 1        | Non-conclusive |
+| 2O3           | 8        | Non-conclusive |
+| 2O7           | 4        | Non-conclusive |
+| 2Q4           | 2        | Non-conclusive |
+| 2T6           | 4        | Non-conclusive |
+| 2V4           | 1        | Non-conclusive |
+| 2V7X2         | 4        | Non-conclusive |
+| 2Z4           | 4        | Non-conclusive |
+| 2_0           | 5        | Non-conclusive |
+| 2_00c3        | 2        | Non-conclusive |
+| 2_012d6       | 2        | Non-conclusive |
+| 2_093651      | 1        | Non-conclusive |
+| 2_0_4         | 4        | Non-conclusive |
+| 2_1           | 4        | Non-conclusive |
+| 2_168         | 8        | Non-conclusive |
+| 2_16_5        | 4        | Non-conclusive |
+| 2_16_6        | 12       | Non-conclusive |
+| 2_17a85861    | 2        | Non-conclusive |
+| 2_1869f2      | 4        | Non-conclusive |
+| 2_1_0         | 8        | Non-conclusive |
+| 2_1_1         | 1        | Non-conclusive |
+| 2_2           | 8        | Non-conclusive |
+| 2_2.11        | 4        | Non-conclusive |
+| 2_2_0         | 36       | Non-conclusive |
+| 2_2_1         | 4        | Non-conclusive |
+| 2_2_2         | 134      | Non-conclusive |
+| 2_3           | 6        | Non-conclusive |
+| 2_32          | 16       | Non-conclusive |
+| 2_3_1         | 4        | Non-conclusive |
+| 2_3_2         | 218      | Non-conclusive |
+| 2_3d00        | 1        | Non-conclusive |
+| 2_4.1         | 9        | Non-conclusive |
+| 2_425         | 1        | Non-conclusive |
+| 2_4382        | 4        | Non-conclusive |
+| 2_4f96        | 1        | Non-conclusive |
+| 2_5           | 2        | Non-conclusive |
+| 2_5d3         | 2        | Non-conclusive |
+| 2_5f9         | 1        | Non-conclusive |
+| 2_602         | 4        | Non-conclusive |
+| 2_6b248       | 3        | Non-conclusive |
+| 2_6c810       | 2        | Non-conclusive |
+| 2_7           | 4        | Non-conclusive |
+| 2_70815       | 1        | Non-conclusive |
+| 2_732         | 2        | Non-conclusive |
+| 2_8_317       | 4        | Non-conclusive |
+| 2_8b55        | 2        | Non-conclusive |
+| 2_8c336       | 4        | Non-conclusive |
+| 2a0           | 2        | Non-conclusive |
+| 2a001497      | 4        | Non-conclusive |
+| 2a091533eb    | 4        | Non-conclusive |
+| 2a1cf1ee      | 4        | Non-conclusive |
+| 2a1f98e9      | 4        | Non-conclusive |
+| 2a31dca112    | 5        | Non-conclusive |
+| 2a344ca0      | 4        | Non-conclusive |
+| 2a4de9a4      | 17       | Non-conclusive |
+| 2a5f5         | 4        | Non-conclusive |
+| 2a6d79d       | 4        | Non-conclusive |
+| 2a72d5b9      | 4        | Non-conclusive |
+| 2a7634dc      | 1        | Non-conclusive |
+| 2a8b8e7a      | 4        | Non-conclusive |
+| 2aae966f28    | 1        | Non-conclusive |
+| 2ab9318       | 4        | Non-conclusive |
+| 2ac10a61      | 4        | Non-conclusive |
+| 2ac5cc3f      | 8        | Non-conclusive |
+| 2ac5f564      | 4        | Non-conclusive |
+| 2ac8cd89      | 1        | Non-conclusive |
+| 2adb3167      | 4        | Non-conclusive |
+| 2adc6c0950    | 1        | Non-conclusive |
+| 2adc899       | 4        | Non-conclusive |
+| 2ae18b0f      | 4        | Non-conclusive |
+| 2aff5bb005    | 4        | Non-conclusive |
+| 2b03e90064    | 3        | Non-conclusive |
+| 2b086a2f      | 8        | Non-conclusive |
+| 2b147563      | 5        | Non-conclusive |
+| 2b166088f1    | 4        | Non-conclusive |
+| 2b216b3b      | 4        | Non-conclusive |
+| 2b230bf7      | 1        | Non-conclusive |
+| 2b23afa2      | 4        | Non-conclusive |
+| 2b312f8c      | 4        | Non-conclusive |
+| 2b3c9287      | 8        | Non-conclusive |
+| 2b3f7740      | 4        | Non-conclusive |
+| 2b461f9c      | 1        | Non-conclusive |
+| 2b4a74e1      | 4        | Non-conclusive |
+| 2b5           | 4        | Non-conclusive |
+| 2b53652f      | 8        | Non-conclusive |
+| 2b5ddc2d      | 8        | Non-conclusive |
+| 2b5e9581      | 1        | Non-conclusive |
+| 2b6e530d      | 4        | Non-conclusive |
+| 2b7d68df      | 4        | Non-conclusive |
+| 2b85debe      | 4        | Non-conclusive |
+| 2b8ec50f      | 4        | Non-conclusive |
+| 2b8fa917c4    | 2        | Non-conclusive |
+| 2b937d05      | 1        | Non-conclusive |
+| 2bb851d4      | 1        | Non-conclusive |
+| 2bbf797271    | 4        | Non-conclusive |
+| 2bd3d865      | 4        | Non-conclusive |
+| 2bd43792      | 4        | Non-conclusive |
+| 2be05cf       | 4        | Non-conclusive |
+| 2be2b47f      | 4        | Non-conclusive |
+| 2bee4426      | 4        | Non-conclusive |
+| 2bfb149f      | 4        | Non-conclusive |
+| 2c08b35       | 4        | Non-conclusive |
+| 2c0d5555      | 4        | Non-conclusive |
+| 2c0ea107      | 2        | Non-conclusive |
+| 2c18          | 4        | Non-conclusive |
+| 2c195275      | 1        | Non-conclusive |
+| 2c2c4de6      | 2        | Non-conclusive |
+| 2c3           | 4        | Non-conclusive |
+| 2c31bec18b    | 1        | Non-conclusive |
+| 2c3eb28373    | 4        | Non-conclusive |
+| 2c86ae57      | 1        | Non-conclusive |
+| 2c8bfb75      | 8        | Non-conclusive |
+| 2ca07d2c      | 4        | Non-conclusive |
+| 2cb4874149    | 4        | Non-conclusive |
+| 2ccdebe3      | 4        | Non-conclusive |
+| 2cd700d1      | 4        | Non-conclusive |
+| 2ce35e9       | 1        | Non-conclusive |
+| 2ce3e5c1      | 1        | Non-conclusive |
+| 2cf3fca5      | 4        | Non-conclusive |
+| 2d0f0fd1      | 1        | Non-conclusive |
+| 2d197609      | 4        | Non-conclusive |
+| 2d1f6e80      | 4        | Non-conclusive |
+| 2d26525e      | 4        | Non-conclusive |
+| 2d27          | 2        | Non-conclusive |
+| 2d319b8f      | 4        | Non-conclusive |
+| 2d3b65b       | 4        | Non-conclusive |
+| 2d3f8612      | 1        | Non-conclusive |
+| 2d4           | 5        | Non-conclusive |
+| 2d43cdba      | 2        | Non-conclusive |
+| 2d54a063      | 1        | Non-conclusive |
+| 2d6b9d3f      | 1        | Non-conclusive |
+| 2d7e9ad1      | 4        | Non-conclusive |
+| 2d7f0e6b      | 2        | Non-conclusive |
+| 2d7f1c67      | 1        | Non-conclusive |
+| 2d92          | 4        | Non-conclusive |
+| 2d930e3d      | 4        | Non-conclusive |
+| 2da32d4b      | 4        | Non-conclusive |
+| 2da78591      | 8        | Non-conclusive |
+| 2dade904ae    | 1        | Non-conclusive |
+| 2dc95aa       | 2        | Non-conclusive |
+| 2dcd8cc5      | 4        | Non-conclusive |
+| 2ded9592      | 1        | Non-conclusive |
+| 2e069824      | 4        | Non-conclusive |
+| 2e0f159cb4    | 4        | Non-conclusive |
+| 2e14755       | 4        | Non-conclusive |
+| 2e203afd      | 2        | Non-conclusive |
+| 2e29cdb7      | 1        | Non-conclusive |
+| 2e4314f9      | 4        | Non-conclusive |
+| 2e46          | 12       | Non-conclusive |
+| 2e4975f       | 4        | Non-conclusive |
+| 2e4cc8c2      | 4        | Non-conclusive |
+| 2e503575      | 4        | Non-conclusive |
+| 2e7e3c8       | 5        | Non-conclusive |
+| 2e852fad      | 2        | Non-conclusive |
+| 2e85af86      | 1        | Non-conclusive |
+| 2e89077f      | 1        | Non-conclusive |
+| 2e920258      | 13       | Non-conclusive |
+| 2e92a838      | 1        | Non-conclusive |
+| 2eb58180      | 4        | Non-conclusive |
+| 2ec285d4      | 1        | Non-conclusive |
+| 2ed37e26      | 4        | Non-conclusive |
+| 2ee6d30f      | 1        | Non-conclusive |
+| 2ee7d7ae      | 4        | Non-conclusive |
+| 2ee82707      | 4        | Non-conclusive |
+| 2ee95b0a      | 4        | Non-conclusive |
+| 2ee996b9      | 4        | Non-conclusive |
+| 2eeaf678      | 1        | Non-conclusive |
+| 2eed3462      | 4        | Non-conclusive |
+| 2ef70fa       | 4        | Non-conclusive |
+| 2f05cc09      | 1        | Non-conclusive |
+| 2f0e58fc      | 4        | Non-conclusive |
+| 2f0f25eb      | 4        | Non-conclusive |
+| 2f1           | 4        | Non-conclusive |
+| 2f12a478      | 4        | Non-conclusive |
+| 2f1ec7bd      | 4        | Non-conclusive |
+| 2f32e06d46    | 36       | Non-conclusive |
+| 2f34b630      | 4        | Non-conclusive |
+| 2f34b630ff    | 8        | Non-conclusive |
+| 2f4ba229      | 8        | Non-conclusive |
+| 2f54          | 1        | Non-conclusive |
+| 2f559bd5      | 4        | Non-conclusive |
+| 2f574f10      | 1        | Non-conclusive |
+| 2f5792de      | 4        | Non-conclusive |
+| 2f584412      | 4        | Non-conclusive |
+| 2f6           | 1        | Non-conclusive |
+| 2f75f036      | 1        | Non-conclusive |
+| 2f761d4       | 1        | Non-conclusive |
+| 2f79643f      | 2        | Non-conclusive |
+| 2f9           | 3        | Non-conclusive |
+| 2f942         | 5        | Non-conclusive |
+| 2fb27fee      | 1        | Non-conclusive |
+| 2fb2c084      | 1        | Non-conclusive |
+| 2fbcde07      | 12       | Non-conclusive |
+| 2fca5f441c    | 4        | Non-conclusive |
+| 2fe3e78d      | 4        | Non-conclusive |
+| 2fe68176      | 4        | Non-conclusive |
+| 2feaae20      | 4        | Non-conclusive |
+| 2ffa9d47      | 4        | Non-conclusive |
+| 2g77          | 1        | Non-conclusive |
+| 2g8           | 8        | Non-conclusive |
+| 2i2           | 4        | Non-conclusive |
+| 2i7           | 2        | Non-conclusive |
+| 2j4Q0         | 2        | Non-conclusive |
+| 2j7           | 32       | Non-conclusive |
+| 2l3           | 8        | Non-conclusive |
+| 2n48          | 4        | Non-conclusive |
+| 2o3_9         | 4        | Non-conclusive |
+| 2p0           | 8        | Non-conclusive |
+| 2r5           | 1        | Non-conclusive |
+| 2v18          | 8        | Non-conclusive |
+| 2w3           | 5        | Non-conclusive |
+| 2y6           | 1        | Non-conclusive |
+| 3             | 41107    | Unsupported    |
+| 3%202         | 4        | Non-conclusive |
+| 3-0-0         | 25       | Non-conclusive |
+| 3-0-1         | 12       | Non-conclusive |
+| 3-0-2         | 17       | Non-conclusive |
+| 3-0-3         | 9        | Non-conclusive |
+| 3-02          | 4        | Non-conclusive |
+| 3-0a5679      | 9        | Non-conclusive |
+| 3-1-1         | 80       | Non-conclusive |
+| 3-1.0         | 4        | Non-conclusive |
+| 3-1.6         | 13       | Non-conclusive |
+| 3-1.8         | 6        | Non-conclusive |
+| 3-1280        | 4        | Non-conclusive |
+| 3-2           | 53       | Non-conclusive |
+| 3-2-0         | 40       | Non-conclusive |
+| 3-2-1         | 4        | Non-conclusive |
+| 3-2-2         | 2        | Non-conclusive |
+| 3-2019        | 4        | Non-conclusive |
+| 3-2020        | 4        | Non-conclusive |
+| 3-215         | 4        | Non-conclusive |
+| 3-3-0         | 24       | Non-conclusive |
+| 3-3-1         | 69       | Non-conclusive |
+| 3-3-2         | 8        | Non-conclusive |
+| 3-3-4         | 68       | Non-conclusive |
+| 3-3-5         | 939      | Non-conclusive |
+| 3-3-6         | 171      | Non-conclusive |
+| 3-3-7         | 2749     | Non-conclusive |
+| 3-3.6         | 1        | Non-conclusive |
+| 3-3.7         | 5        | Non-conclusive |
+| 3-38a02       | 8        | Non-conclusive |
+| 3-4           | 1        | Non-conclusive |
+| 3-4-0         | 100      | Non-conclusive |
+| 3-4-1         | 645      | Non-conclusive |
+| 3-4195304     | 4        | Non-conclusive |
+| 3-43e5        | 29       | Non-conclusive |
+| 3-5           | 4        | Non-conclusive |
+| 3-5-1         | 4        | Non-conclusive |
+| 3-5-5         | 1        | Non-conclusive |
+| 3-51-9        | 28       | Non-conclusive |
+| 3-6           | 2        | Non-conclusive |
+| 3-6-6         | 4        | Non-conclusive |
+| 3-6667a2      | 4        | Non-conclusive |
+| 3-7           | 4        | Non-conclusive |
+| 3-7-1         | 17       | Non-conclusive |
+| 3-899         | 2        | Non-conclusive |
+| 3-97d1        | 1250     | Non-conclusive |
+| 3-98673       | 4        | Non-conclusive |
+| 3.0           | 435      | Unsupported    |
+| 3.0-1         | 1        | Non-conclusive |
+| 3.0.0         | 9450     | Unsupported    |
+| 3.0.0-rc.0    | 12       | Non-conclusive |
+| 3.0.0-rc.4    | 6        | Non-conclusive |
+| 3.0.1         | 3091     | Unsupported    |
+| 3.0.10        | 26       | Unsupported    |
+| 3.0.13        | 1        | Unsupported    |
+| 3.0.14        | 31       | Unsupported    |
+| 3.0.15        | 56       | Unsupported    |
+| 3.0.18        | 8        | Unsupported    |
+| 3.0.2         | 9766     | Unsupported    |
+| 3.0.21        | 4        | Unsupported    |
+| 3.0.25        | 16       | Unsupported    |
+| 3.0.3         | 9795     | Unsupported    |
+| 3.0.31        | 2        | Unsupported    |
+| 3.0.32        | 17       | Unsupported    |
+| 3.0.34        | 1        | Unsupported    |
+| 3.0.38        | 4        | Unsupported    |
+| 3.0.39        | 2        | Unsupported    |
+| 3.0.4         | 57       | Unsupported    |
+| 3.0.42        | 4        | Unsupported    |
+| 3.0.44        | 4        | Unsupported    |
+| 3.0.46        | 1        | Unsupported    |
+| 3.0.5         | 477      | Unsupported    |
+| 3.0.6         | 696      | Unsupported    |
+| 3.0.7         | 4        | Unsupported    |
+| 3.0.8         | 4        | Unsupported    |
+| 3.0.9         | 8        | Unsupported    |
+| 3.02          | 9        | Unsupported    |
+| 3.02.1        | 4        | Unsupported    |
+| 3.03          | 13       | Unsupported    |
+| 3.03029.1     | 11       | Unsupported    |
+| 3.039b55      | 4        | Non-conclusive |
+| 3.1           | 153      | Unsupported    |
+| 3.1-0         | 17       | Non-conclusive |
+| 3.1-2         | 8        | Non-conclusive |
+| 3.1-24        | 12       | Non-conclusive |
+| 3.1-4         | 6        | Non-conclusive |
+| 3.1.0         | 4320     | Unsupported    |
+| 3.1.1         | 47302    | Unsupported    |
+| 3.1.10        | 6        | Unsupported    |
+| 3.1.12        | 8        | Unsupported    |
+| 3.1.13        | 8        | Unsupported    |
+| 3.1.14        | 4        | Unsupported    |
+| 3.1.2         | 59       | Unsupported    |
+| 3.1.3         | 2668     | Unsupported    |
+| 3.1.4         | 37       | Unsupported    |
+| 3.1.5         | 247      | Unsupported    |
+| 3.1.6         | 10       | Unsupported    |
+| 3.1.7         | 191      | Unsupported    |
+| 3.1.8         | 55       | Unsupported    |
+| 3.10.0        | 16       | Unsupported    |
+| 3.100         | 2        | Unsupported    |
+| 3.11          | 4        | Unsupported    |
+| 3.11.2        | 4        | Unsupported    |
+| 3.12.0        | 8        | Unsupported    |
+| 3.129         | 4        | Unsupported    |
+| 3.147         | 4        | Unsupported    |
+| 3.15.0        | 5        | Unsupported    |
+| 3.16          | 4        | Unsupported    |
+| 3.164         | 4        | Unsupported    |
+| 3.17.2        | 4        | Unsupported    |
+| 3.1c6262      | 2        | Non-conclusive |
+| 3.2           | 396      | Unsupported    |
+| 3.2-0         | 4        | Non-conclusive |
+| 3.2-04185     | 4        | Non-conclusive |
+| 3.2-46        | 4        | Non-conclusive |
+| 3.2.0         | 413009   | Unsupported    |
+| 3.2.0.html    | 5        | Non-conclusive |
+| 3.2.1         | 1204     | Unsupported    |
+| 3.2.11        | 8        | Unsupported    |
+| 3.2.12        | 100      | Unsupported    |
+| 3.2.2         | 1462     | Unsupported    |
+| 3.2.3         | 22       | Unsupported    |
+| 3.2.4         | 17       | Unsupported    |
+| 3.2.5         | 2        | Unsupported    |
+| 3.2.53        | 4        | Unsupported    |
+| 3.2.6         | 13       | Unsupported    |
+| 3.2.7         | 16       | Unsupported    |
+| 3.2.8         | 4        | Unsupported    |
+| 3.21.1        | 4        | Unsupported    |
+| 3.235         | 4        | Unsupported    |
+| 3.25.4        | 1        | Unsupported    |
+| 3.27          | 1        | Unsupported    |
+| 3.276         | 4        | Unsupported    |
+| 3.293         | 4        | Unsupported    |
+| 3.3           | 219      | Unsupported    |
+| 3.3-2         | 14       | Non-conclusive |
+| 3.3.0         | 80529    | Unsupported    |
+| 3.3.1         | 217426   | Unsupported    |
+| 3.3.1.html    | 1        | Non-conclusive |
+| 3.3.2         | 267136   | Unsupported    |
+| 3.3.3         | 30       | Unsupported    |
+| 3.3.4         | 413486   | Unsupported    |
+| 3.3.5         | 1274888  | Unsupported    |
+| 3.3.5.html    | 4        | Non-conclusive |
+| 3.3.6         | 719360   | Unsupported    |
+| 3.3.65152     | 1        | Unsupported    |
+| 3.3.7         | 1773629  | Unsupported    |
+| 3.3.7.html    | 2        | Non-conclusive |
+| 3.3.8         | 5        | Unsupported    |
+| 3.31          | 2        | Unsupported    |
+| 3.32          | 1        | Unsupported    |
+| 3.34          | 5        | Unsupported    |
+| 3.37          | 2        | Unsupported    |
+| 3.3e95        | 5        | Non-conclusive |
+| 3.4           | 113      | Unsupported    |
+| 3.4-4919      | 1        | Non-conclusive |
+| 3.4.0         | 43497    | Unsupported    |
+| 3.4.0-dev     | 4        | Non-conclusive |
+| 3.4.1         | 820114   | Unsupported    |
+| 3.4.1.json    | 4        | Non-conclusive |
+| 3.4.12        | 2        | Unsupported    |
+| 3.4.2         | 17       | Unsupported    |
+| 3.4.3         | 10       | Unsupported    |
+| 3.4.4         | 8        | Unsupported    |
+| 3.4.5         | 33       | Unsupported    |
+| 3.4.6         | 12       | Unsupported    |
+| 3.4.7         | 18       | Unsupported    |
+| 3.4.8         | 4        | Unsupported    |
+| 3.478         | 4        | Unsupported    |
+| 3.5           | 58       | Unsupported    |
+| 3.5-2022      | 4        | Non-conclusive |
+| 3.5-24        | 10       | Non-conclusive |
+| 3.5-3         | 8        | Non-conclusive |
+| 3.5-768       | 8        | Non-conclusive |
+| 3.5.0         | 45       | Unsupported    |
+| 3.5.001       | 7        | Unsupported    |
+| 3.5.1         | 1293     | Unsupported    |
+| 3.5.13        | 4        | Unsupported    |
+| 3.5.2         | 7        | Unsupported    |
+| 3.5.5         | 166      | Unsupported    |
+| 3.5.7         | 12       | Unsupported    |
+| 3.533d9       | 4        | Non-conclusive |
+| 3.6.0         | 592      | Unsupported    |
+| 3.6.001       | 5        | Unsupported    |
+| 3.6.1         | 139      | Unsupported    |
+| 3.6.10        | 4        | Unsupported    |
+| 3.6.11        | 4        | Unsupported    |
+| 3.6.13        | 12       | Unsupported    |
+| 3.6.14        | 8        | Unsupported    |
+| 3.6.2         | 6        | Unsupported    |
+| 3.6.3         | 12       | Unsupported    |
+| 3.6.6         | 21       | Unsupported    |
+| 3.60.18       | 4        | Unsupported    |
+| 3.6c48        | 4        | Non-conclusive |
+| 3.7           | 16       | Unsupported    |
+| 3.7-1         | 656      | Non-conclusive |
+| 3.7-3         | 34       | Non-conclusive |
+| 3.7-641       | 4        | Non-conclusive |
+| 3.7.0         | 4        | Unsupported    |
+| 3.7.001       | 9        | Unsupported    |
+| 3.7.1         | 13       | Unsupported    |
+| 3.7.3         | 8        | Unsupported    |
+| 3.7.7         | 53       | Unsupported    |
+| 3.8           | 4        | Unsupported    |
+| 3.8.0         | 8        | Unsupported    |
+| 3.8.1         | 154      | Unsupported    |
+| 3.8.2         | 5        | Unsupported    |
+| 3.8.32        | 4        | Unsupported    |
+| 3.8.41        | 4        | Unsupported    |
+| 3.89          | 4        | Unsupported    |
+| 3.9           | 4        | Unsupported    |
+| 3.9.1         | 9        | Unsupported    |
+| 3.9.12        | 4        | Unsupported    |
+| 3.9.13        | 4        | Unsupported    |
+| 3.9.3         | 2        | Unsupported    |
+| 3.9.40        | 1        | Unsupported    |
+| 3.95          | 2        | Unsupported    |
+| 3/0002        | 1        | Non-conclusive |
+| 3/1           | 4        | Non-conclusive |
+| 3/3-3         | 4        | Non-conclusive |
+| 3/3.1         | 12       | Non-conclusive |
+| 3/3.3         | 17       | Non-conclusive |
+| 3/3.4         | 4        | Non-conclusive |
+| 3/3.5         | 4        | Non-conclusive |
+| 3/3/7         | 24       | Non-conclusive |
+| 3/6e22        | 4        | Non-conclusive |
+| 30            | 165      | Supported      |
+| 30-09-2020    | 8        | Non-conclusive |
+| 300           | 22       | Supported      |
+| 3002          | 2        | Supported      |
+| 3002ff85      | 4        | Non-conclusive |
+| 300_0         | 2        | Non-conclusive |
+| 300_147       | 4        | Non-conclusive |
+| 300_16300     | 4        | Non-conclusive |
+| 300_39d5      | 4        | Non-conclusive |
+| 300_4a747     | 2        | Non-conclusive |
+| 300_7         | 2        | Non-conclusive |
+| 301           | 9        | Supported      |
+| 301_3d41      | 2        | Non-conclusive |
+| 301_4d8       | 2        | Non-conclusive |
+| 301_7         | 2        | Non-conclusive |
+| 301_9         | 2        | Non-conclusive |
+| 301_9b7       | 1        | Non-conclusive |
+| 301_9c41      | 1        | Non-conclusive |
+| 302           | 45       | Supported      |
+| 302_1955      | 2        | Non-conclusive |
+| 302_1d97      | 2        | Non-conclusive |
+| 302_23a1      | 4        | Non-conclusive |
+| 302_55c02     | 2        | Non-conclusive |
+| 302_773e5     | 4        | Non-conclusive |
+| 302_9         | 2        | Non-conclusive |
+| 302_94956     | 1        | Non-conclusive |
+| 303           | 57       | Supported      |
+| 303_63e2      | 4        | Non-conclusive |
+| 303e2         | 4        | Non-conclusive |
+| 304_19f41     | 2        | Non-conclusive |
+| 304_613b14    | 2        | Non-conclusive |
+| 305           | 10       | Supported      |
+| 305_2d8       | 2        | Non-conclusive |
+| 306           | 4        | Supported      |
+| 306_2         | 2        | Non-conclusive |
+| 306_291078    | 4        | Non-conclusive |
+| 306_4a676     | 4        | Non-conclusive |
+| 306_763b70    | 2        | Non-conclusive |
+| 306_7d8       | 2        | Non-conclusive |
+| 306_96e61     | 4        | Non-conclusive |
+| 307           | 4        | Supported      |
+| 3077_6a1      | 2        | Non-conclusive |
+| 3078_704b4    | 4        | Non-conclusive |
+| 307_0         | 4        | Non-conclusive |
+| 307_12        | 2        | Non-conclusive |
+| 307_202       | 2        | Non-conclusive |
+| 307_71        | 4        | Non-conclusive |
+| 307_90933     | 4        | Non-conclusive |
+| 308           | 4        | Supported      |
+| 308_23b8      | 2        | Non-conclusive |
+| 308_840a9     | 2        | Non-conclusive |
+| 308aa33f      | 4        | Non-conclusive |
+| 308f82fe      | 4        | Non-conclusive |
+| 309_12        | 2        | Non-conclusive |
+| 309_155922    | 2        | Non-conclusive |
+| 309_3a99      | 2        | Non-conclusive |
+| 309_8         | 2        | Non-conclusive |
+| 309a1703      | 4        | Non-conclusive |
+| 30_0          | 2        | Non-conclusive |
+| 30_0810       | 4        | Non-conclusive |
+| 30_08_2021    | 1        | Non-conclusive |
+| 30_095        | 2        | Non-conclusive |
+| 30_0b4        | 4        | Non-conclusive |
+| 30_1          | 4        | Non-conclusive |
+| 30_12         | 4        | Non-conclusive |
+| 30_1327e12    | 1        | Non-conclusive |
+| 30_1a4        | 4        | Non-conclusive |
+| 30_1a8        | 4        | Non-conclusive |
+| 30_1c97       | 1        | Non-conclusive |
+| 30_2          | 4        | Non-conclusive |
+| 30_21         | 2        | Non-conclusive |
+| 30_22d8       | 2        | Non-conclusive |
+| 30_27         | 4        | Non-conclusive |
+| 30_30c28      | 2        | Non-conclusive |
+| 30_332        | 4        | Non-conclusive |
+| 30_341b1      | 2        | Non-conclusive |
+| 30_348        | 4        | Non-conclusive |
+| 30_38498b0    | 4        | Non-conclusive |
+| 30_385e7      | 2        | Non-conclusive |
+| 30_3e1        | 2        | Non-conclusive |
+| 30_3f3        | 2        | Non-conclusive |
+| 30_42         | 2        | Non-conclusive |
+| 30_4357f9     | 2        | Non-conclusive |
+| 30_4367d88    | 4        | Non-conclusive |
+| 30_45d253     | 4        | Non-conclusive |
+| 30_4d39156    | 1        | Non-conclusive |
+| 30_4e6        | 1        | Non-conclusive |
+| 30_506        | 2        | Non-conclusive |
+| 30_5337       | 2        | Non-conclusive |
+| 30_556f28     | 4        | Non-conclusive |
+| 30_59         | 2        | Non-conclusive |
+| 30_59d2       | 2        | Non-conclusive |
+| 30_59e77      | 2        | Non-conclusive |
+| 30_5b0        | 4        | Non-conclusive |
+| 30_5b3        | 4        | Non-conclusive |
+| 30_6          | 2        | Non-conclusive |
+| 30_678a4      | 2        | Non-conclusive |
+| 30_6859       | 2        | Non-conclusive |
+| 30_6b248      | 1        | Non-conclusive |
+| 30_6b63618    | 2        | Non-conclusive |
+| 30_6c35       | 2        | Non-conclusive |
+| 30_6c8        | 1        | Non-conclusive |
+| 30_7          | 4        | Non-conclusive |
+| 30_71b45      | 1        | Non-conclusive |
+| 30_71c3       | 2        | Non-conclusive |
+| 30_732        | 2        | Non-conclusive |
+| 30_7866e0     | 1        | Non-conclusive |
+| 30_7f83       | 2        | Non-conclusive |
+| 30_8          | 2        | Non-conclusive |
+| 30_822        | 2        | Non-conclusive |
+| 30_83         | 1        | Non-conclusive |
+| 30_85b6960    | 4        | Non-conclusive |
+| 30_87c506     | 2        | Non-conclusive |
+| 30_8827       | 4        | Non-conclusive |
+| 30_8a23       | 2        | Non-conclusive |
+| 30_9          | 2        | Non-conclusive |
+| 30_90b5384    | 1        | Non-conclusive |
+| 30_91e84      | 1        | Non-conclusive |
+| 30_994        | 1        | Non-conclusive |
+| 30_9a1958     | 4        | Non-conclusive |
+| 30aca98cf5    | 1        | Non-conclusive |
+| 30b2e9        | 4        | Non-conclusive |
+| 30be5187      | 4        | Non-conclusive |
+| 30bf8c6c      | 1        | Non-conclusive |
+| 30c8daf182    | 4        | Non-conclusive |
+| 30cc35d9      | 4        | Non-conclusive |
+| 30d7173a      | 1        | Non-conclusive |
+| 30d8f3a9      | 4        | Non-conclusive |
+| 30e28838      | 4        | Non-conclusive |
+| 30f4          | 8        | Non-conclusive |
+| 30fca84       | 4        | Non-conclusive |
+| 30fd1388      | 4        | Non-conclusive |
+| 30k23         | 2        | Non-conclusive |
+| 31            | 235      | Supported      |
+| 31-0j7        | 4        | Non-conclusive |
+| 31-17-892     | 9        | Non-conclusive |
+| 31-86-98      | 4        | Non-conclusive |
+| 310           | 254      | Supported      |
+| 310_20        | 1        | Non-conclusive |
+| 310_3         | 1        | Non-conclusive |
+| 310_4d640     | 2        | Non-conclusive |
+| 310_53c1      | 2        | Non-conclusive |
+| 310_78b7      | 4        | Non-conclusive |
+| 310b8573      | 4        | Non-conclusive |
+| 311           | 89       | Supported      |
+| 3115a01c      | 4        | Non-conclusive |
+| 311_6         | 2        | Non-conclusive |
+| 311_7         | 2        | Non-conclusive |
+| 311_825a5     | 2        | Non-conclusive |
+| 312           | 1        | Supported      |
+| 3122          | 2        | Supported      |
+| 312_12a0      | 2        | Non-conclusive |
+| 312_39a76     | 4        | Non-conclusive |
+| 3134          | 1        | Supported      |
+| 313_2e3       | 2        | Non-conclusive |
+| 313_41        | 4        | Non-conclusive |
+| 313_471       | 2        | Non-conclusive |
+| 314           | 8        | Supported      |
+| 314_8b25      | 2        | Non-conclusive |
+| 315           | 4        | Supported      |
+| 315e86e9      | 4        | Non-conclusive |
+| 316           | 4        | Supported      |
+| 316_613e3     | 2        | Non-conclusive |
+| 316_846       | 4        | Non-conclusive |
+| 316_9b4495    | 2        | Non-conclusive |
+| 3177          | 2        | Supported      |
+| 317_73720     | 2        | Non-conclusive |
+| 318           | 6        | Supported      |
+| 3184          | 1        | Supported      |
+| 318_2         | 4        | Non-conclusive |
+| 318_3         | 4        | Non-conclusive |
+| 318_619a59    | 4        | Non-conclusive |
+| 318_63        | 4        | Non-conclusive |
+| 318_7         | 2        | Non-conclusive |
+| 319           | 12       | Supported      |
+| 319_273       | 2        | Non-conclusive |
+| 319_51        | 2        | Non-conclusive |
+| 319_593275    | 2        | Non-conclusive |
+| 319_64b643    | 4        | Non-conclusive |
+| 319_83a50     | 4        | Non-conclusive |
+| 319_8a44      | 2        | Non-conclusive |
+| 319e3a14      | 4        | Non-conclusive |
+| 319fb7f2      | 8        | Non-conclusive |
+| 31O26         | 4        | Non-conclusive |
+| 31_001e7      | 2        | Non-conclusive |
+| 31_03         | 2        | Non-conclusive |
+| 31_043b1      | 2        | Non-conclusive |
+| 31_046        | 1        | Non-conclusive |
+| 31_0689c1     | 2        | Non-conclusive |
+| 31_08         | 6        | Non-conclusive |
+| 31_08d57      | 4        | Non-conclusive |
+| 31_0f4        | 2        | Non-conclusive |
+| 31_1          | 4        | Non-conclusive |
+| 31_17713e8    | 4        | Non-conclusive |
+| 31_2          | 4        | Non-conclusive |
+| 31_235        | 2        | Non-conclusive |
+| 31_2934b12    | 6        | Non-conclusive |
+| 31_2d51       | 4        | Non-conclusive |
+| 31_2e4976     | 1        | Non-conclusive |
+| 31_2f434      | 2        | Non-conclusive |
+| 31_3          | 5        | Non-conclusive |
+| 31_30a5       | 4        | Non-conclusive |
+| 31_30c28      | 4        | Non-conclusive |
+| 31_314f3      | 2        | Non-conclusive |
+| 31_3d29768    | 2        | Non-conclusive |
+| 31_4          | 1        | Non-conclusive |
+| 31_470a387    | 2        | Non-conclusive |
+| 31_47c83      | 2        | Non-conclusive |
+| 31_4b38873    | 6        | Non-conclusive |
+| 31_5622a5     | 2        | Non-conclusive |
+| 31_56c9101    | 1        | Non-conclusive |
+| 31_59         | 4        | Non-conclusive |
+| 31_5d5        | 1        | Non-conclusive |
+| 31_6          | 4        | Non-conclusive |
+| 31_64         | 4        | Non-conclusive |
+| 31_6419       | 2        | Non-conclusive |
+| 31_65577c7    | 2        | Non-conclusive |
+| 31_672        | 2        | Non-conclusive |
+| 31_6c457      | 2        | Non-conclusive |
+| 31_708b2      | 2        | Non-conclusive |
+| 31_73         | 2        | Non-conclusive |
+| 31_747d3      | 2        | Non-conclusive |
+| 31_7c56886    | 2        | Non-conclusive |
+| 31_8          | 4        | Non-conclusive |
+| 31_8908       | 2        | Non-conclusive |
+| 31_896b034    | 2        | Non-conclusive |
+| 31_8a595      | 2        | Non-conclusive |
+| 31_8d17       | 4        | Non-conclusive |
+| 31_8d58       | 4        | Non-conclusive |
+| 31_8d7        | 2        | Non-conclusive |
+| 31_9          | 4        | Non-conclusive |
+| 31_99a566     | 2        | Non-conclusive |
+| 31_9b7        | 2        | Non-conclusive |
+| 31_9c698      | 1        | Non-conclusive |
+| 31a1ebbb      | 4        | Non-conclusive |
+| 31a4          | 5        | Non-conclusive |
+| 31a44a45      | 1        | Non-conclusive |
+| 31a4e2f7      | 4        | Non-conclusive |
+| 31ad9ce36c    | 4        | Non-conclusive |
+| 31b252fa      | 1        | Non-conclusive |
+| 31bfc76c4b    | 4        | Non-conclusive |
+| 31c67         | 4        | Non-conclusive |
+| 31ecd969      | 4        | Non-conclusive |
+| 31f12df       | 4        | Non-conclusive |
+| 31f57438      | 4        | Non-conclusive |
+| 31fe6a05      | 4        | Non-conclusive |
+| 32            | 179      | Supported      |
+| 32-09-084     | 4        | Non-conclusive |
+| 320           | 59       | Supported      |
+| 320bdb48      | 4        | Non-conclusive |
+| 320d05d5      | 1        | Non-conclusive |
+| 321           | 8        | Supported      |
+| 3214b8f9      | 4        | Non-conclusive |
+| 321_0         | 4        | Non-conclusive |
+| 321_1         | 2        | Non-conclusive |
+| 321_42f6      | 4        | Non-conclusive |
+| 321_559d83    | 2        | Non-conclusive |
+| 322           | 7        | Supported      |
+| 322-9f0068    | 4        | Non-conclusive |
+| 322_2a865     | 1        | Non-conclusive |
+| 322_71582     | 2        | Non-conclusive |
+| 323           | 2        | Supported      |
+| 3230_5a8      | 2        | Non-conclusive |
+| 3230_7d423    | 2        | Non-conclusive |
+| 3236a483      | 1        | Non-conclusive |
+| 3239          | 4        | Supported      |
+| 323_4f6       | 2        | Non-conclusive |
+| 323_9         | 2        | Non-conclusive |
+| 324           | 10       | Supported      |
+| 3246          | 2        | Supported      |
+| 3246_58       | 2        | Non-conclusive |
+| 324_0         | 4        | Non-conclusive |
+| 324_1         | 2        | Non-conclusive |
+| 324_48c6      | 4        | Non-conclusive |
+| 324_55        | 1        | Non-conclusive |
+| 324_57868     | 2        | Non-conclusive |
+| 324_606       | 2        | Non-conclusive |
+| 324_89795     | 2        | Non-conclusive |
+| 324_9b3       | 2        | Non-conclusive |
+| 324_9b72      | 2        | Non-conclusive |
+| 324b673f      | 4        | Non-conclusive |
+| 3254_00b79    | 4        | Non-conclusive |
+| 3255          | 4        | Supported      |
+| 3258c6e0      | 4        | Non-conclusive |
+| 3258dc09      | 1        | Non-conclusive |
+| 3259_01       | 2        | Non-conclusive |
+| 325_03        | 4        | Non-conclusive |
+| 325_93a10     | 2        | Non-conclusive |
+| 325a465e      | 2        | Non-conclusive |
+| 325f17dd      | 4        | Non-conclusive |
+| 326           | 10       | Supported      |
+| 3261_01       | 2        | Non-conclusive |
+| 3261fbf8      | 32       | Non-conclusive |
+| 326_15        | 1        | Non-conclusive |
+| 326_2         | 2        | Non-conclusive |
+| 326_2b86      | 2        | Non-conclusive |
+| 326_4         | 1        | Non-conclusive |
+| 326_5d8       | 2        | Non-conclusive |
+| 326dbdfb      | 4        | Non-conclusive |
+| 3276_351      | 2        | Non-conclusive |
+| 3278_62       | 2        | Non-conclusive |
+| 327_353       | 2        | Non-conclusive |
+| 327_756a5     | 2        | Non-conclusive |
+| 328           | 7        | Supported      |
+| 3285fa1c      | 1        | Non-conclusive |
+| 328_67205     | 5        | Non-conclusive |
+| 329           | 4        | Supported      |
+| 329_802809    | 2        | Non-conclusive |
+| 329bbee       | 4        | Non-conclusive |
+| 329d64ca      | 4        | Non-conclusive |
+| 329f1453      | 4        | Non-conclusive |
+| 32_00         | 4        | Non-conclusive |
+| 32_00b43      | 2        | Non-conclusive |
+| 32_035f4      | 2        | Non-conclusive |
+| 32_04         | 4        | Non-conclusive |
+| 32_04d57      | 1        | Non-conclusive |
+| 32_1          | 2        | Non-conclusive |
+| 32_100b8      | 2        | Non-conclusive |
+| 32_10b972     | 2        | Non-conclusive |
+| 32_1178296    | 2        | Non-conclusive |
+| 32_155c229    | 2        | Non-conclusive |
+| 32_1594e8     | 2        | Non-conclusive |
+| 32_1c7        | 2        | Non-conclusive |
+| 32_2          | 2        | Non-conclusive |
+| 32_230b8      | 2        | Non-conclusive |
+| 32_230d999    | 2        | Non-conclusive |
+| 32_260        | 2        | Non-conclusive |
+| 32_272c7      | 4        | Non-conclusive |
+| 32_2934b12    | 2        | Non-conclusive |
+| 32_2a80156    | 2        | Non-conclusive |
+| 32_35         | 4        | Non-conclusive |
+| 32_35f1154    | 2        | Non-conclusive |
+| 32_38b814     | 4        | Non-conclusive |
+| 32_3b7        | 2        | Non-conclusive |
+| 32_3c7287     | 4        | Non-conclusive |
+| 32_3d21       | 1        | Non-conclusive |
+| 32_3e0724     | 2        | Non-conclusive |
+| 32_3e3        | 2        | Non-conclusive |
+| 32_3f37       | 4        | Non-conclusive |
+| 32_40         | 2        | Non-conclusive |
+| 32_404e886    | 2        | Non-conclusive |
+| 32_40a0       | 4        | Non-conclusive |
+| 32_43d4       | 2        | Non-conclusive |
+| 32_498a5      | 2        | Non-conclusive |
+| 32_49e8       | 1        | Non-conclusive |
+| 32_4b38873    | 2        | Non-conclusive |
+| 32_4b5677     | 2        | Non-conclusive |
+| 32_4f7465     | 2        | Non-conclusive |
+| 32_5          | 4        | Non-conclusive |
+| 32_50         | 2        | Non-conclusive |
+| 32_513d982    | 2        | Non-conclusive |
+| 32_53b54      | 2        | Non-conclusive |
+| 32_5b3        | 4        | Non-conclusive |
+| 32_5b3355     | 2        | Non-conclusive |
+| 32_5d830      | 1        | Non-conclusive |
+| 32_6          | 2        | Non-conclusive |
+| 32_6080a8     | 4        | Non-conclusive |
+| 32_61b4       | 2        | Non-conclusive |
+| 32_63         | 4        | Non-conclusive |
+| 32_638        | 2        | Non-conclusive |
+| 32_6a5        | 4        | Non-conclusive |
+| 32_6d388      | 2        | Non-conclusive |
+| 32_7          | 4        | Non-conclusive |
+| 32_732        | 2        | Non-conclusive |
+| 32_7347082    | 2        | Non-conclusive |
+| 32_75         | 1        | Non-conclusive |
+| 32_76         | 1        | Non-conclusive |
+| 32_7e19       | 2        | Non-conclusive |
+| 32_806a82     | 1        | Non-conclusive |
+| 32_8187       | 2        | Non-conclusive |
+| 32_824e19     | 2        | Non-conclusive |
+| 32_8d4        | 2        | Non-conclusive |
+| 32_8f5861     | 2        | Non-conclusive |
+| 32_8f73380    | 2        | Non-conclusive |
+| 32_9080       | 2        | Non-conclusive |
+| 32_955        | 2        | Non-conclusive |
+| 32_9c2        | 4        | Non-conclusive |
+| 32ac7bbd      | 4        | Non-conclusive |
+| 32b4          | 3        | Non-conclusive |
+| 32badc92      | 4        | Non-conclusive |
+| 32bf81c7      | 4        | Non-conclusive |
+| 32c0e16f      | 4        | Non-conclusive |
+| 32c2-0242     | 4        | Non-conclusive |
+| 32c3          | 8        | Non-conclusive |
+| 32cf6781      | 1        | Non-conclusive |
+| 32d0279f      | 4        | Non-conclusive |
+| 32d1b388      | 8        | Non-conclusive |
+| 32d83844      | 4        | Non-conclusive |
+| 32e49341      | 1        | Non-conclusive |
+| 32ee7333      | 4        | Non-conclusive |
+| 32f079eb      | 1        | Non-conclusive |
+| 32f4316f      | 8        | Non-conclusive |
+| 32fbc73c      | 4        | Non-conclusive |
+| 33            | 261      | Supported      |
+| 33.33.77      | 44       | Supported      |
+| 330           | 14       | Supported      |
+| 330_0e0       | 2        | Non-conclusive |
+| 330_7         | 1        | Non-conclusive |
+| 331           | 51       | Supported      |
+| 3310          | 4        | Supported      |
+| 3311          | 1        | Supported      |
+| 331_0         | 2        | Non-conclusive |
+| 331_201d43    | 2        | Non-conclusive |
+| 331_8d348     | 2        | Non-conclusive |
+| 331_9c9       | 4        | Non-conclusive |
+| 332           | 51       | Supported      |
+| 3321f5        | 2        | Non-conclusive |
+| 332_017118    | 8        | Non-conclusive |
+| 332_06e18     | 4        | Non-conclusive |
+| 332_24        | 1        | Non-conclusive |
+| 333           | 5        | Supported      |
+| 3338          | 2        | Supported      |
+| 334           | 113      | Supported      |
+| 3341          | 2        | Supported      |
+| 334_1         | 1        | Non-conclusive |
+| 334_64a671    | 2        | Non-conclusive |
+| 334_6c9       | 4        | Non-conclusive |
+| 334_702e83    | 2        | Non-conclusive |
+| 334_812240    | 2        | Non-conclusive |
+| 334_972       | 4        | Non-conclusive |
+| 334cfbc2      | 4        | Non-conclusive |
+| 334e1614      | 4        | Non-conclusive |
+| 335           | 103      | Supported      |
+| 3356ffcd      | 1        | Non-conclusive |
+| 3358d569      | 4        | Non-conclusive |
+| 335_474876    | 2        | Non-conclusive |
+| 335_56        | 4        | Non-conclusive |
+| 336           | 100      | Supported      |
+| 3369d5b1      | 8        | Non-conclusive |
+| 336e9887      | 8        | Non-conclusive |
+| 337           | 547      | Supported      |
+| 337@3.3       | 9        | Non-conclusive |
+| 337_6b017     | 4        | Non-conclusive |
+| 337ded3       | 1        | Non-conclusive |
+| 338           | 8        | Supported      |
+| 338_0e45      | 1        | Non-conclusive |
+| 338_126d61    | 2        | Non-conclusive |
+| 338_204745    | 4        | Non-conclusive |
+| 338_3542c8    | 4        | Non-conclusive |
+| 338_99e8      | 2        | Non-conclusive |
+| 339           | 6        | Supported      |
+| 3395ad78      | 1        | Non-conclusive |
+| 339_2         | 4        | Non-conclusive |
+| 339_24        | 2        | Non-conclusive |
+| 339_3         | 4        | Non-conclusive |
+| 339_5f4       | 2        | Non-conclusive |
+| 339_711d22    | 2        | Non-conclusive |
+| 339ed02       | 31       | Non-conclusive |
+| 33P7          | 2        | Non-conclusive |
+| 33_0          | 4        | Non-conclusive |
+| 33_072e934    | 2        | Non-conclusive |
+| 33_08419c7    | 2        | Non-conclusive |
+| 33_0a02       | 4        | Non-conclusive |
+| 33_0c1        | 2        | Non-conclusive |
+| 33_1          | 1        | Non-conclusive |
+| 33_15f1       | 4        | Non-conclusive |
+| 33_198e7      | 1        | Non-conclusive |
+| 33_1b50       | 2        | Non-conclusive |
+| 33_1c97       | 2        | Non-conclusive |
+| 33_1e2173     | 1        | Non-conclusive |
+| 33_208b503    | 2        | Non-conclusive |
+| 33_274f3      | 2        | Non-conclusive |
+| 33_27646      | 2        | Non-conclusive |
+| 33_2b901      | 4        | Non-conclusive |
+| 33_2c16096    | 2        | Non-conclusive |
+| 33_30c28      | 4        | Non-conclusive |
+| 33_35588      | 2        | Non-conclusive |
+| 33_37         | 4        | Non-conclusive |
+| 33_37307      | 2        | Non-conclusive |
+| 33_3b4        | 1        | Non-conclusive |
+| 33_4          | 2        | Non-conclusive |
+| 33_406        | 4        | Non-conclusive |
+| 33_4125722    | 2        | Non-conclusive |
+| 33_46         | 2        | Non-conclusive |
+| 33_4e9        | 4        | Non-conclusive |
+| 33_5          | 6        | Non-conclusive |
+| 33_5c6        | 2        | Non-conclusive |
+| 33_5e3        | 2        | Non-conclusive |
+| 33_60f7       | 2        | Non-conclusive |
+| 33_61b92      | 2        | Non-conclusive |
+| 33_654        | 2        | Non-conclusive |
+| 33_68         | 2        | Non-conclusive |
+| 33_698341     | 2        | Non-conclusive |
+| 33_732        | 2        | Non-conclusive |
+| 33_752        | 1        | Non-conclusive |
+| 33_76a2073    | 1        | Non-conclusive |
+| 33_8142       | 2        | Non-conclusive |
+| 33_8551       | 2        | Non-conclusive |
+| 33_85801      | 2        | Non-conclusive |
+| 33_86608      | 2        | Non-conclusive |
+| 33_87d20      | 2        | Non-conclusive |
+| 33_88c3       | 1        | Non-conclusive |
+| 33_990d68     | 2        | Non-conclusive |
+| 33_994        | 2        | Non-conclusive |
+| 33_99b219     | 2        | Non-conclusive |
+| 33_9c5        | 2        | Non-conclusive |
+| 33_9e3        | 4        | Non-conclusive |
+| 33_9e84       | 2        | Non-conclusive |
+| 33a6          | 4        | Non-conclusive |
+| 33a876a       | 4        | Non-conclusive |
+| 33f45         | 4        | Non-conclusive |
+| 33g3c5        | 4        | Non-conclusive |
+| 34            | 164      | Supported      |
+| 34-12-000     | 4        | Non-conclusive |
+| 34-44-000     | 10       | Non-conclusive |
+| 340           | 37       | Supported      |
+| 3407df2241    | 5        | Non-conclusive |
+| 340_3b2       | 2        | Non-conclusive |
+| 340_5a42      | 4        | Non-conclusive |
+| 340_72d59     | 4        | Non-conclusive |
+| 341           | 209      | Supported      |
+| 341_10c2      | 2        | Non-conclusive |
+| 341_2         | 2        | Non-conclusive |
+| 341_27632     | 2        | Non-conclusive |
+| 341_698a51    | 2        | Non-conclusive |
+| 341efdf5      | 5        | Non-conclusive |
+| 342           | 4        | Supported      |
+| 3428          | 8        | Supported      |
+| 342d0d41      | 4        | Non-conclusive |
+| 343           | 3        | Supported      |
+| 343ad6b5      | 4        | Non-conclusive |
+| 344           | 6        | Supported      |
+| 345           | 8        | Supported      |
+| 345_1284      | 4        | Non-conclusive |
+| 346           | 2        | Supported      |
+| 3462f3ee      | 2        | Non-conclusive |
+| 346_293       | 2        | Non-conclusive |
+| 346_3542c8    | 4        | Non-conclusive |
+| 346b79c7      | 4        | Non-conclusive |
+| 347_7         | 4        | Non-conclusive |
+| 347_75        | 1        | Non-conclusive |
+| 348           | 4        | Supported      |
+| 3480_3        | 2        | Non-conclusive |
+| 3485_3c3      | 2        | Non-conclusive |
+| 3485_6        | 2        | Non-conclusive |
+| 3489          | 4        | Supported      |
+| 349           | 6        | Supported      |
+| 3491_02b31    | 2        | Non-conclusive |
+| 3492d05       | 4        | Non-conclusive |
+| 349_05c85     | 4        | Non-conclusive |
+| 349_1e2       | 2        | Non-conclusive |
+| 349_6e5514    | 4        | Non-conclusive |
+| 34_0          | 2        | Non-conclusive |
+| 34_03261a4    | 1        | Non-conclusive |
+| 34_07487      | 2        | Non-conclusive |
+| 34_09c36      | 2        | Non-conclusive |
+| 34_0b9642     | 2        | Non-conclusive |
+| 34_11f90      | 2        | Non-conclusive |
+| 34_125a4      | 2        | Non-conclusive |
+| 34_1e599      | 2        | Non-conclusive |
+| 34_218e9      | 2        | Non-conclusive |
+| 34_27b1       | 4        | Non-conclusive |
+| 34_2934b12    | 4        | Non-conclusive |
+| 34_2a0        | 4        | Non-conclusive |
+| 34_2a82575    | 2        | Non-conclusive |
+| 34_2b623      | 1        | Non-conclusive |
+| 34_2c86952    | 2        | Non-conclusive |
+| 34_2c9        | 2        | Non-conclusive |
+| 34_3          | 2        | Non-conclusive |
+| 34_3d5        | 4        | Non-conclusive |
+| 34_3d9        | 2        | Non-conclusive |
+| 34_3e6        | 2        | Non-conclusive |
+| 34_3f31       | 4        | Non-conclusive |
+| 34_42d25      | 2        | Non-conclusive |
+| 34_44a674     | 1        | Non-conclusive |
+| 34_497        | 2        | Non-conclusive |
+| 34_4997a70    | 1        | Non-conclusive |
+| 34_4a4834     | 2        | Non-conclusive |
+| 34_4b38873    | 4        | Non-conclusive |
+| 34_50d2       | 2        | Non-conclusive |
+| 34_541        | 4        | Non-conclusive |
+| 34_58d6       | 2        | Non-conclusive |
+| 34_5e80224    | 2        | Non-conclusive |
+| 34_600        | 2        | Non-conclusive |
+| 34_6298916    | 4        | Non-conclusive |
+| 34_682a046    | 2        | Non-conclusive |
+| 34_736d370    | 2        | Non-conclusive |
+| 34_771        | 4        | Non-conclusive |
+| 34_7a9        | 2        | Non-conclusive |
+| 34_803e602    | 2        | Non-conclusive |
+| 34_82         | 4        | Non-conclusive |
+| 34_8e18       | 1        | Non-conclusive |
+| 34_8f72       | 2        | Non-conclusive |
+| 34_9          | 4        | Non-conclusive |
+| 34_94e9       | 4        | Non-conclusive |
+| 34_96         | 1        | Non-conclusive |
+| 34_96a7764    | 1        | Non-conclusive |
+| 34_97         | 2        | Non-conclusive |
+| 34_9a28       | 2        | Non-conclusive |
+| 34_9e7        | 2        | Non-conclusive |
+| 34a04ab9      | 4        | Non-conclusive |
+| 34a1e142      | 4        | Non-conclusive |
+| 34abea8a      | 4        | Non-conclusive |
+| 34ffa4b4      | 4        | Non-conclusive |
+| 35            | 99       | Supported      |
+| 35-07-000     | 4        | Non-conclusive |
+| 35-09-454     | 4        | Non-conclusive |
+| 35.1.3        | 4        | Supported      |
+| 350           | 6        | Supported      |
+| 3509_00       | 2        | Non-conclusive |
+| 350_053c86    | 2        | Non-conclusive |
+| 350_6e418     | 4        | Non-conclusive |
+| 350_940       | 1        | Non-conclusive |
+| 350c9ac       | 4        | Non-conclusive |
+| 351           | 8        | Supported      |
+| 351_815       | 1        | Non-conclusive |
+| 351b9c4       | 4        | Non-conclusive |
+| 352           | 4        | Supported      |
+| 3526bc06      | 4        | Non-conclusive |
+| 352bac12      | 4        | Non-conclusive |
+| 353           | 8        | Supported      |
+| 353_2a754     | 2        | Non-conclusive |
+| 353_38d0      | 4        | Non-conclusive |
+| 353bb8c4      | 4        | Non-conclusive |
+| 354           | 2        | Supported      |
+| 3541e912      | 8        | Non-conclusive |
+| 3549          | 2        | Supported      |
+| 354_01        | 2        | Non-conclusive |
+| 354_8c03      | 4        | Non-conclusive |
+| 354_966c6     | 2        | Non-conclusive |
+| 354c7b66      | 1        | Non-conclusive |
+| 355           | 12       | Supported      |
+| 3552_44       | 2        | Non-conclusive |
+| 3555_44       | 2        | Non-conclusive |
+| 3560_1        | 2        | Non-conclusive |
+| 3560_7525     | 2        | Non-conclusive |
+| 356_0c6       | 2        | Non-conclusive |
+| 357           | 6        | Supported      |
+| 357_8a25      | 4        | Non-conclusive |
+| 357e0076      | 4        | Non-conclusive |
+| 358           | 4        | Supported      |
+| 358d7249      | 4        | Non-conclusive |
+| 359_722       | 1        | Non-conclusive |
+| 359e6184      | 1        | Non-conclusive |
+| 35_0810       | 4        | Non-conclusive |
+| 35_093        | 4        | Non-conclusive |
+| 35_0d54       | 2        | Non-conclusive |
+| 35_0e5        | 4        | Non-conclusive |
+| 35_15220      | 2        | Non-conclusive |
+| 35_165        | 2        | Non-conclusive |
+| 35_16f2       | 2        | Non-conclusive |
+| 35_17379      | 1        | Non-conclusive |
+| 35_195181     | 8        | Non-conclusive |
+| 35_2173       | 2        | Non-conclusive |
+| 35_2981c2     | 1        | Non-conclusive |
+| 35_2b0        | 2        | Non-conclusive |
+| 35_32b6361    | 2        | Non-conclusive |
+| 35_351c8      | 4        | Non-conclusive |
+| 35_372d7      | 1        | Non-conclusive |
+| 35_387        | 2        | Non-conclusive |
+| 35_3f6        | 8        | Non-conclusive |
+| 35_417b92     | 4        | Non-conclusive |
+| 35_41e959     | 2        | Non-conclusive |
+| 35_45c32      | 2        | Non-conclusive |
+| 35_4702559    | 2        | Non-conclusive |
+| 35_4941106    | 1        | Non-conclusive |
+| 35_49b1       | 2        | Non-conclusive |
+| 35_4c9        | 1        | Non-conclusive |
+| 35_4f07       | 2        | Non-conclusive |
+| 35_5285       | 2        | Non-conclusive |
+| 35_52c7       | 5        | Non-conclusive |
+| 35_56506f4    | 2        | Non-conclusive |
+| 35_5d465      | 2        | Non-conclusive |
+| 35_5d606      | 2        | Non-conclusive |
+| 35_67         | 2        | Non-conclusive |
+| 35_6938310    | 1        | Non-conclusive |
+| 35_6b248      | 1        | Non-conclusive |
+| 35_72f6       | 2        | Non-conclusive |
+| 35_732        | 2        | Non-conclusive |
+| 35_7d38       | 2        | Non-conclusive |
+| 35_822f7      | 2        | Non-conclusive |
+| 35_85f5181    | 4        | Non-conclusive |
+| 35_98671a6    | 2        | Non-conclusive |
+| 35_996        | 2        | Non-conclusive |
+| 35_997b78     | 2        | Non-conclusive |
+| 35a29c7c      | 4        | Non-conclusive |
+| 35c34e9d      | 4        | Non-conclusive |
+| 35d2c8b5      | 4        | Non-conclusive |
+| 35e35077      | 4        | Non-conclusive |
+| 35fd5387      | 4        | Non-conclusive |
+| 36            | 49       | Supported      |
+| 36-07-000     | 4        | Non-conclusive |
+| 36-10-539     | 4        | Non-conclusive |
+| 36-12-000     | 4        | Non-conclusive |
+| 36-24-823     | 29       | Non-conclusive |
+| 360           | 8        | Supported      |
+| 3606          | 4        | Supported      |
+| 360_0f5       | 2        | Non-conclusive |
+| 360_678a4     | 1        | Non-conclusive |
+| 360_7f7       | 4        | Non-conclusive |
+| 361           | 13       | Supported      |
+| 3612          | 2        | Supported      |
+| 3615_39       | 4        | Non-conclusive |
+| 361_0c629     | 1        | Non-conclusive |
+| 361_5d4       | 2        | Non-conclusive |
+| 361_795       | 2        | Non-conclusive |
+| 361b9a56      | 4        | Non-conclusive |
+| 362-4         | 4        | Non-conclusive |
+| 3627c033      | 4        | Non-conclusive |
+| 362b8ac0      | 5        | Non-conclusive |
+| 363_1e7       | 4        | Non-conclusive |
+| 363a666fbe    | 4        | Non-conclusive |
+| 364           | 8        | Supported      |
+| 364_7b8       | 4        | Non-conclusive |
+| 3656          | 4        | Supported      |
+| 3658_5685     | 2        | Non-conclusive |
+| 365_0e24      | 4        | Non-conclusive |
+| 3661          | 16       | Supported      |
+| 366_74d4      | 4        | Non-conclusive |
+| 366cd54f      | 4        | Non-conclusive |
+| 367           | 6        | Supported      |
+| 3674_62b53    | 2        | Non-conclusive |
+| 367_789       | 4        | Non-conclusive |
+| 367_97b3      | 4        | Non-conclusive |
+| 3686_9f320    | 2        | Non-conclusive |
+| 368_9b714     | 2        | Non-conclusive |
+| 369           | 2        | Supported      |
+| 369_6c94      | 4        | Non-conclusive |
+| 369_87c9      | 4        | Non-conclusive |
+| 369_8e5       | 2        | Non-conclusive |
+| 369_983       | 1        | Non-conclusive |
+| 369_9c45      | 1        | Non-conclusive |
+| 369b049a      | 4        | Non-conclusive |
+| 36C1F01F      | 4        | Non-conclusive |
+| 36_0          | 1        | Non-conclusive |
+| 36_03261a4    | 2        | Non-conclusive |
+| 36_036        | 2        | Non-conclusive |
+| 36_04d457     | 2        | Non-conclusive |
+| 36_05701f8    | 2        | Non-conclusive |
+| 36_05b3       | 1        | Non-conclusive |
+| 36_09119b7    | 2        | Non-conclusive |
+| 36_1          | 2        | Non-conclusive |
+| 36_11f660     | 2        | Non-conclusive |
+| 36_1992       | 2        | Non-conclusive |
+| 36_1a513      | 2        | Non-conclusive |
+| 36_21         | 4        | Non-conclusive |
+| 36_29         | 2        | Non-conclusive |
+| 36_291        | 2        | Non-conclusive |
+| 36_2c19       | 4        | Non-conclusive |
+| 36_2c86952    | 2        | Non-conclusive |
+| 36_3f66       | 2        | Non-conclusive |
+| 36_4078       | 2        | Non-conclusive |
+| 36_4099       | 2        | Non-conclusive |
+| 36_47d67      | 4        | Non-conclusive |
+| 36_49         | 4        | Non-conclusive |
+| 36_4b22       | 4        | Non-conclusive |
+| 36_4c54       | 1        | Non-conclusive |
+| 36_4d05       | 1        | Non-conclusive |
+| 36_4d4        | 2        | Non-conclusive |
+| 36_5          | 2        | Non-conclusive |
+| 36_5525b0     | 1        | Non-conclusive |
+| 36_64c89      | 2        | Non-conclusive |
+| 36_67         | 4        | Non-conclusive |
+| 36_6c3        | 1        | Non-conclusive |
+| 36_6c8955     | 2        | Non-conclusive |
+| 36_6e263      | 4        | Non-conclusive |
+| 36_7275e24    | 2        | Non-conclusive |
+| 36_73476e1    | 2        | Non-conclusive |
+| 36_7777       | 2        | Non-conclusive |
+| 36_7a6        | 4        | Non-conclusive |
+| 36_8452       | 2        | Non-conclusive |
+| 36_8500f25    | 1        | Non-conclusive |
+| 36_855f2      | 4        | Non-conclusive |
+| 36_9          | 2        | Non-conclusive |
+| 36_9037       | 1        | Non-conclusive |
+| 36_9424b2     | 4        | Non-conclusive |
+| 36_99         | 1        | Non-conclusive |
+| 36_99f7       | 2        | Non-conclusive |
+| 36a17568      | 4        | Non-conclusive |
+| 36a39e42      | 4        | Non-conclusive |
+| 36b8baa3      | 8        | Non-conclusive |
+| 36bf2571      | 12       | Non-conclusive |
+| 36c40c5       | 4        | Non-conclusive |
+| 36c7a240      | 1        | Non-conclusive |
+| 36cb9074      | 4        | Non-conclusive |
+| 36cd615       | 4        | Non-conclusive |
+| 36d5e27f      | 1        | Non-conclusive |
+| 36dc874e      | 4        | Non-conclusive |
+| 36e0ef4c      | 4        | Non-conclusive |
+| 36e36bde      | 4        | Non-conclusive |
+| 36e55803      | 4        | Non-conclusive |
+| 36ee4de9      | 4        | Non-conclusive |
+| 36f4c92ee0    | 1        | Non-conclusive |
+| 37            | 77       | Supported      |
+| 37-22-886     | 4        | Non-conclusive |
+| 370_46b7      | 2        | Non-conclusive |
+| 370_5         | 2        | Non-conclusive |
+| 3711_238      | 2        | Non-conclusive |
+| 3712          | 2        | Supported      |
+| 371_2b021     | 2        | Non-conclusive |
+| 371_3e771     | 2        | Non-conclusive |
+| 371_6         | 4        | Non-conclusive |
+| 371_7         | 4        | Non-conclusive |
+| 371_8d8       | 2        | Non-conclusive |
+| 371bb0e4      | 1        | Non-conclusive |
+| 372           | 4        | Supported      |
+| 372_8702f1    | 2        | Non-conclusive |
+| 372dda22      | 1        | Non-conclusive |
+| 3739          | 8        | Supported      |
+| 3739bf4f      | 425887   | Non-conclusive |
+| 373_72        | 4        | Non-conclusive |
+| 374_677       | 2        | Non-conclusive |
+| 374_918767    | 2        | Non-conclusive |
+| 374_93        | 2        | Non-conclusive |
+| 375           | 6        | Supported      |
+| 375_508b8     | 2        | Non-conclusive |
+| 375a5db0      | 1        | Non-conclusive |
+| 376           | 3        | Supported      |
+| 3768fd41      | 1        | Non-conclusive |
+| 376_14a90     | 4        | Non-conclusive |
+| 376_734d9     | 4        | Non-conclusive |
+| 376eacf7      | 1        | Non-conclusive |
+| 377           | 3        | Supported      |
+| 377_50        | 2        | Non-conclusive |
+| 377_64f70     | 2        | Non-conclusive |
+| 379_1         | 2        | Non-conclusive |
+| 37_02a67      | 1        | Non-conclusive |
+| 37_03261a4    | 2        | Non-conclusive |
+| 37_066b2      | 2        | Non-conclusive |
+| 37_0b52       | 2        | Non-conclusive |
+| 37_11         | 1        | Non-conclusive |
+| 37_16f2       | 1        | Non-conclusive |
+| 37_1d19       | 2        | Non-conclusive |
+| 37_21029c7    | 4        | Non-conclusive |
+| 37_2236a26    | 1        | Non-conclusive |
+| 37_236f53     | 1        | Non-conclusive |
+| 37_2634c5     | 2        | Non-conclusive |
+| 37_2a870      | 2        | Non-conclusive |
+| 37_3020d5     | 2        | Non-conclusive |
+| 37_36d0       | 2        | Non-conclusive |
+| 37_3f9        | 2        | Non-conclusive |
+| 37_4          | 3        | Non-conclusive |
+| 37_44c1       | 2        | Non-conclusive |
+| 37_4537f35    | 2        | Non-conclusive |
+| 37_497c690    | 1        | Non-conclusive |
+| 37_4d4        | 2        | Non-conclusive |
+| 37_51e2       | 2        | Non-conclusive |
+| 37_5244a9     | 2        | Non-conclusive |
+| 37_528622     | 2        | Non-conclusive |
+| 37_572693     | 2        | Non-conclusive |
+| 37_5d30892    | 4        | Non-conclusive |
+| 37_60964      | 2        | Non-conclusive |
+| 37_663a77     | 4        | Non-conclusive |
+| 37_6f8        | 2        | Non-conclusive |
+| 37_72235      | 2        | Non-conclusive |
+| 37_72f6       | 4        | Non-conclusive |
+| 37_732        | 2        | Non-conclusive |
+| 37_7339b72    | 2        | Non-conclusive |
+| 37_74c82      | 2        | Non-conclusive |
+| 37_752c6      | 1        | Non-conclusive |
+| 37_8          | 6        | Non-conclusive |
+| 37_8075       | 4        | Non-conclusive |
+| 37_867c259    | 1        | Non-conclusive |
+| 37_91a8875    | 2        | Non-conclusive |
+| 37_92e5       | 1        | Non-conclusive |
+| 37_96         | 1        | Non-conclusive |
+| 37_9a625      | 2        | Non-conclusive |
+| 37_9b3        | 2        | Non-conclusive |
+| 37_9c7        | 2        | Non-conclusive |
+| 37_9c79       | 2        | Non-conclusive |
+| 37a951fcac    | 4        | Non-conclusive |
+| 37b34         | 4        | Non-conclusive |
+| 37b42c1f      | 4        | Non-conclusive |
+| 37d51672      | 4        | Non-conclusive |
+| 37d66637      | 4        | Non-conclusive |
+| 37db99f       | 3        | Non-conclusive |
+| 37e0a4d       | 5        | Non-conclusive |
+| 37e229cd      | 4        | Non-conclusive |
+| 37ef4e46      | 4        | Non-conclusive |
+| 37f809e       | 2        | Non-conclusive |
+| 38            | 53       | Supported      |
+| 380_440a1     | 4        | Non-conclusive |
+| 381           | 2        | Supported      |
+| 3813d8de      | 4        | Non-conclusive |
+| 3816_1d51     | 2        | Non-conclusive |
+| 3816_36f1     | 2        | Non-conclusive |
+| 3818_3540     | 4        | Non-conclusive |
+| 381_7d6659    | 2        | Non-conclusive |
+| 382           | 4        | Supported      |
+| 382e1         | 4        | Non-conclusive |
+| 383           | 4        | Supported      |
+| 383_835e84    | 2        | Non-conclusive |
+| 384           | 6        | Supported      |
+| 3844.35532    | 4        | Supported      |
+| 3853_97c3     | 4        | Non-conclusive |
+| 385_2         | 2        | Non-conclusive |
+| 385_79b64     | 2        | Non-conclusive |
+| 386           | 4        | Supported      |
+| 3860          | 10       | Supported      |
+| 386_13        | 1        | Non-conclusive |
+| 386_6         | 1        | Non-conclusive |
+| 386_9         | 2        | Non-conclusive |
+| 387           | 6        | Supported      |
+| 3882c1bb      | 5        | Non-conclusive |
+| 388_68f14     | 1        | Non-conclusive |
+| 388cc0e5      | 1        | Non-conclusive |
+| 389           | 4        | Supported      |
+| 389_3b3       | 2        | Non-conclusive |
+| 389_497       | 2        | Non-conclusive |
+| 389_54957     | 2        | Non-conclusive |
+| 389d9fdc      | 1        | Non-conclusive |
+| 38_0          | 2        | Non-conclusive |
+| 38_000        | 2        | Non-conclusive |
+| 38_022        | 2        | Non-conclusive |
+| 38_027c414    | 2        | Non-conclusive |
+| 38_04         | 2        | Non-conclusive |
+| 38_064        | 1        | Non-conclusive |
+| 38_068c3      | 1        | Non-conclusive |
+| 38_08d2       | 2        | Non-conclusive |
+| 38_0b5538     | 1        | Non-conclusive |
+| 38_0b9642     | 1        | Non-conclusive |
+| 38_1          | 4        | Non-conclusive |
+| 38_1b42       | 1        | Non-conclusive |
+| 38_255c02     | 2        | Non-conclusive |
+| 38_2c704      | 4        | Non-conclusive |
+| 38_2d9        | 2        | Non-conclusive |
+| 38_3          | 2        | Non-conclusive |
+| 38_30         | 2        | Non-conclusive |
+| 38_3459c3     | 2        | Non-conclusive |
+| 38_35         | 2        | Non-conclusive |
+| 38_352f759    | 4        | Non-conclusive |
+| 38_37b644     | 4        | Non-conclusive |
+| 38_4          | 4        | Non-conclusive |
+| 38_40f39      | 2        | Non-conclusive |
+| 38_4b9        | 1        | Non-conclusive |
+| 38_4c54       | 4        | Non-conclusive |
+| 38_5          | 4        | Non-conclusive |
+| 38_50         | 2        | Non-conclusive |
+| 38_572        | 2        | Non-conclusive |
+| 38_618a3      | 2        | Non-conclusive |
+| 38_6f49       | 4        | Non-conclusive |
+| 38_70080      | 4        | Non-conclusive |
+| 38_727657     | 2        | Non-conclusive |
+| 38_73a711     | 4        | Non-conclusive |
+| 38_800        | 2        | Non-conclusive |
+| 38_82         | 2        | Non-conclusive |
+| 38_86         | 2        | Non-conclusive |
+| 38_9          | 2        | Non-conclusive |
+| 38_9a1846     | 2        | Non-conclusive |
+| 38_9b3        | 2        | Non-conclusive |
+| 38_9d7862     | 2        | Non-conclusive |
+| 38b5          | 2        | Non-conclusive |
+| 38c35010      | 4        | Non-conclusive |
+| 38c521c1      | 4        | Non-conclusive |
+| 38ccc927      | 4        | Non-conclusive |
+| 38cdf652      | 1        | Non-conclusive |
+| 38d06e30      | 1        | Non-conclusive |
+| 39            | 57       | Supported      |
+| 390           | 11       | Supported      |
+| 3906_59       | 4        | Non-conclusive |
+| 390_22a4      | 2        | Non-conclusive |
+| 391           | 4        | Supported      |
+| 391cc41f      | 1        | Non-conclusive |
+| 392           | 2        | Supported      |
+| 3929fb3b      | 4        | Non-conclusive |
+| 392_0e5       | 2        | Non-conclusive |
+| 392_35a5      | 2        | Non-conclusive |
+| 3936          | 2        | Supported      |
+| 393_1e0       | 2        | Non-conclusive |
+| 393c2814      | 4        | Non-conclusive |
+| 394           | 2        | Supported      |
+| 3940          | 4        | Supported      |
+| 394_09d6      | 2        | Non-conclusive |
+| 394_92c596    | 2        | Non-conclusive |
+| 394bfe2f      | 1        | Non-conclusive |
+| 395_771       | 4        | Non-conclusive |
+| 396           | 4        | Supported      |
+| 3968_308      | 2        | Non-conclusive |
+| 396_60a9      | 4        | Non-conclusive |
+| 396e0         | 4        | Non-conclusive |
+| 3971faa2      | 8        | Non-conclusive |
+| 397_15        | 2        | Non-conclusive |
+| 3985d103      | 1        | Non-conclusive |
+| 398eaa57      | 4        | Non-conclusive |
+| 398f8d6e      | 4        | Non-conclusive |
+| 3991ab2a      | 3        | Non-conclusive |
+| 399_0         | 2        | Non-conclusive |
+| 399_4         | 2        | Non-conclusive |
+| 39V9          | 2        | Non-conclusive |
+| 39_0          | 4        | Non-conclusive |
+| 39_13379      | 2        | Non-conclusive |
+| 39_14e9       | 2        | Non-conclusive |
+| 39_17379      | 1        | Non-conclusive |
+| 39_1c8        | 2        | Non-conclusive |
+| 39_1e0        | 4        | Non-conclusive |
+| 39_1f6        | 2        | Non-conclusive |
+| 39_20         | 4        | Non-conclusive |
+| 39_293f4      | 2        | Non-conclusive |
+| 39_2c86952    | 2        | Non-conclusive |
+| 39_3107       | 2        | Non-conclusive |
+| 39_311        | 2        | Non-conclusive |
+| 39_34         | 4        | Non-conclusive |
+| 39_3912       | 2        | Non-conclusive |
+| 39_3c7084     | 4        | Non-conclusive |
+| 39_3d7168     | 2        | Non-conclusive |
+| 39_3e7        | 4        | Non-conclusive |
+| 39_4          | 6        | Non-conclusive |
+| 39_4101068    | 2        | Non-conclusive |
+| 39_45b1       | 2        | Non-conclusive |
+| 39_47a7       | 2        | Non-conclusive |
+| 39_495e1      | 2        | Non-conclusive |
+| 39_4f5623     | 2        | Non-conclusive |
+| 39_5          | 2        | Non-conclusive |
+| 39_552d84     | 4        | Non-conclusive |
+| 39_55e319     | 2        | Non-conclusive |
+| 39_562367     | 4        | Non-conclusive |
+| 39_5964548    | 1        | Non-conclusive |
+| 39_5d7478     | 1        | Non-conclusive |
+| 39_6          | 2        | Non-conclusive |
+| 39_642154     | 1        | Non-conclusive |
+| 39_659        | 4        | Non-conclusive |
+| 39_7          | 2        | Non-conclusive |
+| 39_702c499    | 2        | Non-conclusive |
+| 39_72         | 4        | Non-conclusive |
+| 39_723f70     | 1        | Non-conclusive |
+| 39_72a5       | 2        | Non-conclusive |
+| 39_7b7        | 2        | Non-conclusive |
+| 39_7e084      | 2        | Non-conclusive |
+| 39_81d982     | 2        | Non-conclusive |
+| 39_858f921    | 2        | Non-conclusive |
+| 39_87         | 2        | Non-conclusive |
+| 39_8b8        | 2        | Non-conclusive |
+| 39_8d7        | 2        | Non-conclusive |
+| 39_9242e7     | 2        | Non-conclusive |
+| 39_9a22552    | 2        | Non-conclusive |
+| 39_9c3        | 2        | Non-conclusive |
+| 39_9c71       | 2        | Non-conclusive |
+| 39_9d8        | 2        | Non-conclusive |
+| 39a3ac81      | 4        | Non-conclusive |
+| 39b2722b      | 1        | Non-conclusive |
+| 39c67ac2      | 197      | Non-conclusive |
+| 39c6f925      | 4        | Non-conclusive |
+| 39c733ec      | 4        | Non-conclusive |
+| 39cce904      | 4        | Non-conclusive |
+| 39e07ce7      | 1        | Non-conclusive |
+| 39ffedf5      | 4        | Non-conclusive |
+| 3@3.3         | 56       | Non-conclusive |
+| 3@5.0         | 4        | Non-conclusive |
+| 3@5.3         | 4        | Non-conclusive |
+| 3D3.3         | 4        | Non-conclusive |
+| 3D647         | 2        | Non-conclusive |
+| 3E0           | 4        | Non-conclusive |
+| 3E2           | 1        | Non-conclusive |
+| 3E49          | 20       | Non-conclusive |
+| 3K8           | 4        | Non-conclusive |
+| 3L5           | 2        | Non-conclusive |
+| 3M4           | 2        | Non-conclusive |
+| 3M8           | 4        | Non-conclusive |
+| 3N2           | 4        | Non-conclusive |
+| 3N4b3         | 4        | Non-conclusive |
+| 3Q5j8         | 2        | Non-conclusive |
+| 3R6           | 2        | Non-conclusive |
+| 3S3           | 4        | Non-conclusive |
+| 3S5           | 4        | Non-conclusive |
+| 3U9C7         | 6        | Non-conclusive |
+| 3V1H28        | 2        | Non-conclusive |
+| 3V7           | 4        | Non-conclusive |
+| 3X8f6         | 4        | Non-conclusive |
+| 3_0           | 123      | Non-conclusive |
+| 3_0103        | 4        | Non-conclusive |
+| 3_030d2       | 1        | Non-conclusive |
+| 3_05631e06    | 4        | Non-conclusive |
+| 3_0_0         | 13       | Non-conclusive |
+| 3_0_2         | 4        | Non-conclusive |
+| 3_0_3         | 45       | Non-conclusive |
+| 3_0b38        | 2        | Non-conclusive |
+| 3_1           | 16       | Non-conclusive |
+| 3_14          | 8        | Non-conclusive |
+| 3_140a6       | 2        | Non-conclusive |
+| 3_1_0         | 9        | Non-conclusive |
+| 3_1_1         | 1739     | Non-conclusive |
+| 3_1_3         | 4        | Non-conclusive |
+| 3_1_7         | 4        | Non-conclusive |
+| 3_1e36627     | 1        | Non-conclusive |
+| 3_2           | 4        | Non-conclusive |
+| 3_2013        | 4        | Non-conclusive |
+| 3_2042        | 4        | Non-conclusive |
+| 3_20c26       | 1        | Non-conclusive |
+| 3_22f5371     | 4        | Non-conclusive |
+| 3_2_0         | 99       | Non-conclusive |
+| 3_2_1         | 2        | Non-conclusive |
+| 3_2b876       | 2        | Non-conclusive |
+| 3_3           | 12       | Non-conclusive |
+| 3_3_0         | 8        | Non-conclusive |
+| 3_3_1         | 245      | Non-conclusive |
+| 3_3_2         | 65       | Non-conclusive |
+| 3_3_4         | 28       | Non-conclusive |
+| 3_3_5         | 168      | Non-conclusive |
+| 3_3_6         | 326      | Non-conclusive |
+| 3_3_7         | 273      | Non-conclusive |
+| 3_443         | 2        | Non-conclusive |
+| 3_4_1         | 112      | Non-conclusive |
+| 3_4d111       | 2        | Non-conclusive |
+| 3_5           | 2        | Non-conclusive |
+| 3_5_5         | 4        | Non-conclusive |
+| 3_5b3         | 2        | Non-conclusive |
+| 3_5b9807      | 1        | Non-conclusive |
+| 3_69d90       | 1        | Non-conclusive |
+| 3_6_6         | 55       | Non-conclusive |
+| 3_72288       | 4        | Non-conclusive |
+| 3_732         | 2        | Non-conclusive |
+| 3_7_7         | 4        | Non-conclusive |
+| 3_7b59615     | 2        | Non-conclusive |
+| 3_7b70        | 2        | Non-conclusive |
+| 3_7f12        | 2        | Non-conclusive |
+| 3_87c37       | 1        | Non-conclusive |
+| 3a05          | 9        | Non-conclusive |
+| 3a1134c7      | 4        | Non-conclusive |
+| 3a15a39c      | 2        | Non-conclusive |
+| 3a222295      | 4        | Non-conclusive |
+| 3a3f2307      | 4        | Non-conclusive |
+| 3a61          | 1        | Non-conclusive |
+| 3a66          | 5        | Non-conclusive |
+| 3a76cebe      | 4        | Non-conclusive |
+| 3a77ff06fc    | 1        | Non-conclusive |
+| 3a78bf83      | 4        | Non-conclusive |
+| 3a7F2         | 4        | Non-conclusive |
+| 3a82643c      | 4        | Non-conclusive |
+| 3a9           | 4        | Non-conclusive |
+| 3a92061       | 4        | Non-conclusive |
+| 3aa84259      | 55       | Non-conclusive |
+| 3ab3438f85    | 1        | Non-conclusive |
+| 3abc74d0      | 4        | Non-conclusive |
+| 3ad4ebd1      | 5        | Non-conclusive |
+| 3adcdb95      | 1        | Non-conclusive |
+| 3add68ef      | 4        | Non-conclusive |
+| 3b09bce       | 2        | Non-conclusive |
+| 3b164152      | 1        | Non-conclusive |
+| 3b2           | 4        | Non-conclusive |
+| 3b20eee7      | 1        | Non-conclusive |
+| 3b3321c5      | 1        | Non-conclusive |
+| 3b4a7af       | 4        | Non-conclusive |
+| 3b4bcb5f      | 4        | Non-conclusive |
+| 3b5           | 4        | Non-conclusive |
+| 3b57d0c7      | 4        | Non-conclusive |
+| 3b6f614b      | 1        | Non-conclusive |
+| 3b741bbe      | 4        | Non-conclusive |
+| 3b8668f       | 4        | Non-conclusive |
+| 3b87a9e8      | 1        | Non-conclusive |
+| 3b8abd7d      | 4        | Non-conclusive |
+| 3b99669d      | 1        | Non-conclusive |
+| 3bb91be1      | 3345     | Non-conclusive |
+| 3bbddfa7      | 1        | Non-conclusive |
+| 3bcb1715      | 2        | Non-conclusive |
+| 3c01a08d      | 4        | Non-conclusive |
+| 3c04b25713    | 2        | Non-conclusive |
+| 3c058770      | 1        | Non-conclusive |
+| 3c1b5759      | 4        | Non-conclusive |
+| 3c21          | 35       | Non-conclusive |
+| 3c38          | 4        | Non-conclusive |
+| 3c725e2e      | 4        | Non-conclusive |
+| 3c8ac4e1      | 1        | Non-conclusive |
+| 3c94          | 1        | Non-conclusive |
+| 3c978f0a54    | 4        | Non-conclusive |
+| 3c98da0       | 1        | Non-conclusive |
+| 3ca41b9d      | 1        | Non-conclusive |
+| 3cb11e99fa    | 4        | Non-conclusive |
+| 3cd0f41d      | 4        | Non-conclusive |
+| 3cdb87ce      | 4        | Non-conclusive |
+| 3cdc65ed      | 4        | Non-conclusive |
+| 3d048f01      | 4        | Non-conclusive |
+| 3d05fbb677    | 5        | Non-conclusive |
+| 3d096ef       | 4        | Non-conclusive |
+| 3d0abadd      | 4        | Non-conclusive |
+| 3d0b450       | 2        | Non-conclusive |
+| 3d0d0493      | 4        | Non-conclusive |
+| 3d1.0         | 1        | Non-conclusive |
+| 3d3           | 1        | Non-conclusive |
+| 3d36          | 4        | Non-conclusive |
+| 3d4d55c2      | 8        | Non-conclusive |
+| 3d54c5b       | 4        | Non-conclusive |
+| 3d700957      | 1        | Non-conclusive |
+| 3d7948a56b    | 4        | Non-conclusive |
+| 3d7ed21c      | 4        | Non-conclusive |
+| 3db0e66c      | 4        | Non-conclusive |
+| 3dc92af7      | 1        | Non-conclusive |
+| 3dd3ddd6      | 4        | Non-conclusive |
+| 3de2661d      | 1        | Non-conclusive |
+| 3de7ad37      | 8        | Non-conclusive |
+| 3de9e706      | 4        | Non-conclusive |
+| 3df18c79      | 4        | Non-conclusive |
+| 3dfbae8a      | 4        | Non-conclusive |
+| 3e03d90c      | 4        | Non-conclusive |
+| 3e2973b9      | 4        | Non-conclusive |
+| 3e2d4460      | 4        | Non-conclusive |
+| 3e2de6828b    | 4        | Non-conclusive |
+| 3e3c2886      | 4        | Non-conclusive |
+| 3e465f97      | 4        | Non-conclusive |
+| 3e5d0         | 24       | Non-conclusive |
+| 3e5eebc2      | 4        | Non-conclusive |
+| 3e5f0e54      | 4        | Non-conclusive |
+| 3e620def14    | 8        | Non-conclusive |
+| 3e62f22d      | 4        | Non-conclusive |
+| 3e6d5967      | 1        | Non-conclusive |
+| 3e6u7         | 4        | Non-conclusive |
+| 3e7           | 4        | Non-conclusive |
+| 3e8           | 12       | Non-conclusive |
+| 3e885f97      | 4        | Non-conclusive |
+| 3e89c104      | 1        | Non-conclusive |
+| 3e9225b       | 4        | Non-conclusive |
+| 3e977d24      | 4        | Non-conclusive |
+| 3ec4b743      | 6        | Non-conclusive |
+| 3ed20ffc      | 4        | Non-conclusive |
+| 3ed2cdf6      | 8        | Non-conclusive |
+| 3ee3ec05      | 8        | Non-conclusive |
+| 3f0           | 5        | Non-conclusive |
+| 3f019db7      | 1        | Non-conclusive |
+| 3f041535      | 4        | Non-conclusive |
+| 3f045d61      | 4        | Non-conclusive |
+| 3f1431        | 8        | Non-conclusive |
+| 3f23066f      | 1        | Non-conclusive |
+| 3f24f6a9      | 4        | Non-conclusive |
+| 3f419cea      | 4        | Non-conclusive |
+| 3f4855d2      | 4        | Non-conclusive |
+| 3f4a613b      | 1        | Non-conclusive |
+| 3f4f3fd4      | 4        | Non-conclusive |
+| 3f5f8eee      | 4        | Non-conclusive |
+| 3f765a47      | 4        | Non-conclusive |
+| 3f8d340c      | 2        | Non-conclusive |
+| 3f90          | 10       | Non-conclusive |
+| 3fa8a378      | 4        | Non-conclusive |
+| 3fb234b1      | 9        | Non-conclusive |
+| 3fb58867      | 46       | Non-conclusive |
+| 3fb5b908      | 4        | Non-conclusive |
+| 3fbd22b9      | 4        | Non-conclusive |
+| 3fc6e067      | 1        | Non-conclusive |
+| 3fd3e228      | 4        | Non-conclusive |
+| 3fd5032a5b    | 14       | Non-conclusive |
+| 3fdf2625f8    | 1        | Non-conclusive |
+| 3fe145d5      | 4        | Non-conclusive |
+| 3fe32ea3      | 4        | Non-conclusive |
+| 3fe9cb70      | 4        | Non-conclusive |
+| 3ff79b6b      | 1        | Non-conclusive |
+| 3h8H3         | 8        | Non-conclusive |
+| 3j560         | 4        | Non-conclusive |
+| 3m2           | 2        | Non-conclusive |
+| 3o1           | 4        | Non-conclusive |
+| 3o8v31        | 4        | Non-conclusive |
+| 3p1           | 4        | Non-conclusive |
+| 3u8           | 3        | Non-conclusive |
+| 3u80c5        | 8        | Non-conclusive |
+| 3v2           | 4        | Non-conclusive |
+| 3v2.8         | 325      | Non-conclusive |
+| 3v7z1         | 2        | Non-conclusive |
+| 3x2           | 4        | Non-conclusive |
+| 3x38c7        | 4        | Non-conclusive |
+| 4             | 18848    | Supported      |
+| 4-0           | 6        | Non-conclusive |
+| 4-0-0         | 77       | Non-conclusive |
+| 4-070f34      | 4        | Non-conclusive |
+| 4-1           | 8        | Non-conclusive |
+| 4-1-0         | 20       | Non-conclusive |
+| 4-1-1         | 55       | Non-conclusive |
+| 4-1-2022      | 4        | Non-conclusive |
+| 4-1-3         | 208      | Non-conclusive |
+| 4-1.0         | 8        | Non-conclusive |
+| 4-1.1         | 4        | Non-conclusive |
+| 4-1.10        | 5        | Non-conclusive |
+| 4-1.11        | 4        | Non-conclusive |
+| 4-1.12        | 8        | Non-conclusive |
+| 4-1140        | 1        | Non-conclusive |
+| 4-191         | 4        | Non-conclusive |
+| 4-2-1         | 32       | Non-conclusive |
+| 4-2-5         | 4        | Non-conclusive |
+| 4-2019        | 4        | Non-conclusive |
+| 4-2022        | 4        | Non-conclusive |
+| 4-205947      | 4        | Non-conclusive |
+| 4-261f9       | 4        | Non-conclusive |
+| 4-3           | 4        | Non-conclusive |
+| 4-3-0         | 14       | Non-conclusive |
+| 4-3-1         | 561      | Non-conclusive |
+| 4-3.9         | 24       | Non-conclusive |
+| 4-369b32      | 4        | Non-conclusive |
+| 4-4           | 4        | Non-conclusive |
+| 4-4-0         | 5        | Non-conclusive |
+| 4-4-1         | 110      | Non-conclusive |
+| 4-4.1         | 45       | Non-conclusive |
+| 4-4.6         | 8        | Non-conclusive |
+| 4-4d43612     | 8        | Non-conclusive |
+| 4-5           | 8        | Non-conclusive |
+| 4-5-0         | 40       | Non-conclusive |
+| 4-5-1         | 1        | Non-conclusive |
+| 4-5-2         | 109      | Non-conclusive |
+| 4-5-3         | 50       | Non-conclusive |
+| 4-5-5         | 1        | Non-conclusive |
+| 4-5.0         | 35       | Non-conclusive |
+| 4-50c879      | 6        | Non-conclusive |
+| 4-5a790       | 4        | Non-conclusive |
+| 4-6           | 17       | Non-conclusive |
+| 4-6-0         | 8        | Non-conclusive |
+| 4-6-1         | 36       | Non-conclusive |
+| 4-6-2         | 8        | Non-conclusive |
+| 4-8711d173    | 4        | Non-conclusive |
+| 4-8763        | 8        | Non-conclusive |
+| 4-892         | 1        | Non-conclusive |
+| 4-9436        | 5        | Non-conclusive |
+| 4.0           | 427      | Supported      |
+| 4.0-3         | 4        | Non-conclusive |
+| 4.0.0         | 637402   | Supported      |
+| 4.0.0-beta    | 76688    | Unsupported    |
+| 4.0.01        | 4        | Supported      |
+| 4.0.1         | 39       | Supported      |
+| 4.0.10        | 9        | Supported      |
+| 4.0.11        | 6        | Supported      |
+| 4.0.113       | 9        | Supported      |
+| 4.0.2         | 86       | Supported      |
+| 4.0.3         | 241      | Supported      |
+| 4.0.38        | 2        | Supported      |
+| 4.0.4         | 8        | Supported      |
+| 4.0.5         | 5        | Supported      |
+| 4.0.6         | 61       | Supported      |
+| 4.0.7         | 14       | Supported      |
+| 4.1           | 495      | Supported      |
+| 4.1-1         | 13       | Non-conclusive |
+| 4.1-2         | 24       | Non-conclusive |
+| 4.1.0         | 114763   | Supported      |
+| 4.1.1         | 166609   | Supported      |
+| 4.1.1.html    | 1        | Non-conclusive |
+| 4.1.10        | 4        | Supported      |
+| 4.1.13        | 4        | Supported      |
+| 4.1.15        | 1        | Supported      |
+| 4.1.2         | 26729    | Supported      |
+| 4.1.3         | 445933   | Supported      |
+| 4.1.3.html    | 4        | Non-conclusive |
+| 4.1.37        | 2        | Supported      |
+| 4.1.4         | 47       | Supported      |
+| 4.1.5         | 18       | Supported      |
+| 4.1.6         | 6        | Supported      |
+| 4.1.7         | 4        | Supported      |
+| 4.1.8         | 4        | Supported      |
+| 4.10.0        | 94       | Supported      |
+| 4.10.1        | 52       | Supported      |
+| 4.10.3        | 20       | Supported      |
+| 4.10.5        | 3        | Supported      |
+| 4.10.6        | 8        | Supported      |
+| 4.10.8        | 16       | Supported      |
+| 4.11.0        | 13       | Supported      |
+| 4.11.3        | 8        | Supported      |
+| 4.11.5        | 4        | Supported      |
+| 4.11.6        | 4        | Supported      |
+| 4.11.7        | 4        | Supported      |
+| 4.12.0        | 19       | Supported      |
+| 4.12.1        | 4        | Supported      |
+| 4.13.0        | 17       | Supported      |
+| 4.14.0        | 27       | Supported      |
+| 4.14.1        | 32       | Supported      |
+| 4.14.30       | 141      | Supported      |
+| 4.15.0        | 70       | Supported      |
+| 4.15.12       | 4        | Supported      |
+| 4.15.15       | 4        | Supported      |
+| 4.15.17       | 5        | Supported      |
+| 4.15.2        | 1        | Supported      |
+| 4.15.35       | 103      | Supported      |
+| 4.16.0        | 164      | Supported      |
+| 4.16.3        | 9        | Supported      |
+| 4.16.4        | 4        | Supported      |
+| 4.16.7        | 2        | Supported      |
+| 4.16.9        | 8        | Supported      |
+| 4.17.0        | 33       | Supported      |
+| 4.17.2        | 8        | Supported      |
+| 4.17.37       | 2595     | Supported      |
+| 4.17.4        | 1        | Supported      |
+| 4.17.42       | 375      | Supported      |
+| 4.17.43       | 474      | Supported      |
+| 4.17.44       | 63       | Supported      |
+| 4.17.45       | 134      | Supported      |
+| 4.17.46       | 8        | Supported      |
+| 4.17.47       | 7113     | Supported      |
+| 4.17.48       | 4        | Supported      |
+| 4.17.49       | 94       | Supported      |
+| 4.17.5        | 11       | Supported      |
+| 4.18.0        | 40       | Supported      |
+| 4.18.1        | 53       | Supported      |
+| 4.19.0        | 103      | Supported      |
+| 4.19.1        | 1028     | Supported      |
+| 4.19.2        | 29       | Supported      |
+| 4.2           | 40       | Supported      |
+| 4.2.0         | 191      | Supported      |
+| 4.2.1         | 162372   | Supported      |
+| 4.2.15        | 8        | Supported      |
+| 4.2.22        | 1        | Supported      |
+| 4.2.28        | 8        | Supported      |
+| 4.2.3         | 4        | Supported      |
+| 4.2.34        | 4        | Supported      |
+| 4.2.4         | 4        | Supported      |
+| 4.2.5         | 88       | Supported      |
+| 4.2.7         | 8        | Supported      |
+| 4.2.9         | 12       | Supported      |
+| 4.20.0        | 161      | Supported      |
+| 4.3           | 94       | Supported      |
+| 4.3.0         | 12467    | Supported      |
+| 4.3.1         | 924653   | Supported      |
+| 4.3.17        | 4        | Supported      |
+| 4.3.2         | 21       | Supported      |
+| 4.3.3         | 8        | Supported      |
+| 4.3.30        | 4        | Supported      |
+| 4.3.4         | 13       | Supported      |
+| 4.3.5         | 4        | Supported      |
+| 4.3.6         | 4        | Supported      |
+| 4.3.7         | 4        | Supported      |
+| 4.3.8         | 16       | Supported      |
+| 4.3.9         | 9        | Supported      |
+| 4.4           | 47       | Supported      |
+| 4.4.0         | 5414     | Supported      |
+| 4.4.1         | 437470   | Supported      |
+| 4.4.11        | 9        | Supported      |
+| 4.4.14        | 4        | Supported      |
+| 4.4.2         | 15       | Supported      |
+| 4.4.21        | 4        | Supported      |
+| 4.4.29        | 12       | Supported      |
+| 4.4.3         | 4        | Supported      |
+| 4.4.30        | 8        | Supported      |
+| 4.4.4         | 4        | Supported      |
+| 4.4.5         | 66       | Supported      |
+| 4.4.54        | 4        | Supported      |
+| 4.4.6         | 2        | Supported      |
+| 4.4.7         | 32       | Supported      |
+| 4.4.8         | 4        | Supported      |
+| 4.4.9         | 25       | Supported      |
+| 4.44b9        | 5        | Non-conclusive |
+| 4.5           | 191      | Supported      |
+| 4.5.0         | 242877   | Supported      |
+| 4.5.1         | 4169     | Supported      |
+| 4.5.10        | 28       | Supported      |
+| 4.5.106       | 2        | Supported      |
+| 4.5.11        | 53       | Supported      |
+| 4.5.110       | 5        | Supported      |
+| 4.5.12        | 4        | Supported      |
+| 4.5.13        | 44       | Supported      |
+| 4.5.14        | 20       | Supported      |
+| 4.5.15        | 24       | Supported      |
+| 4.5.16        | 30       | Supported      |
+| 4.5.17        | 1        | Supported      |
+| 4.5.2         | 150754   | Supported      |
+| 4.5.28        | 4        | Supported      |
+| 4.5.3         | 204088   | Supported      |
+| 4.5.4         | 14       | Supported      |
+| 4.5.6         | 16       | Supported      |
+| 4.5.7         | 48       | Supported      |
+| 4.5.8         | 4        | Supported      |
+| 4.5.9         | 16       | Supported      |
+| 4.6           | 1114     | Supported      |
+| 4.6.0         | 227071   | Supported      |
+| 4.6.0-3       | 29       | Non-conclusive |
+| 4.6.01        | 8        | Supported      |
+| 4.6.1         | 251213   | Supported      |
+| 4.6.10        | 1        | Supported      |
+| 4.6.2         | 72877    | Supported      |
+| 4.6.22        | 4        | Supported      |
+| 4.6.24        | 4        | Supported      |
+| 4.6.25        | 14       | Supported      |
+| 4.6.3         | 18       | Supported      |
+| 4.6.4         | 1        | Supported      |
+| 4.6.5         | 1        | Supported      |
+| 4.6.9         | 1        | Supported      |
+| 4.7           | 1        | Supported      |
+| 4.7.0         | 115      | Supported      |
+| 4.7.1         | 16       | Supported      |
+| 4.7.11        | 4        | Supported      |
+| 4.7.12        | 4        | Supported      |
+| 4.7.13        | 1        | Supported      |
+| 4.7.14        | 398      | Supported      |
+| 4.7.19        | 4        | Supported      |
+| 4.7.25        | 19       | Supported      |
+| 4.7.3         | 11       | Supported      |
+| 4.7.31        | 4        | Supported      |
+| 4.7.4         | 4        | Supported      |
+| 4.7.45        | 4        | Supported      |
+| 4.7.5         | 28       | Supported      |
+| 4.7.6         | 26       | Supported      |
+| 4.7.7         | 2        | Supported      |
+| 4.7.8         | 4        | Supported      |
+| 4.789308d3    | 2        | Non-conclusive |
+| 4.8           | 8        | Supported      |
+| 4.8.1         | 21       | Supported      |
+| 4.8.10        | 186      | Supported      |
+| 4.8.11        | 53       | Supported      |
+| 4.8.15        | 1        | Supported      |
+| 4.8.2         | 32       | Supported      |
+| 4.8.21        | 27       | Supported      |
+| 4.8.3         | 4        | Supported      |
+| 4.8.4         | 1        | Supported      |
+| 4.8.5         | 17       | Supported      |
+| 4.8.7         | 12       | Supported      |
+| 4.8.8         | 8        | Supported      |
+| 4.8.9         | 4        | Supported      |
+| 4.8e0         | 4        | Non-conclusive |
+| 4.9.0         | 4        | Supported      |
+| 4.9.1         | 12       | Supported      |
+| 4.9.10        | 10       | Supported      |
+| 4.9.12        | 2        | Supported      |
+| 4.9.13        | 8        | Supported      |
+| 4.9.15        | 4        | Supported      |
+| 4.9.16        | 2        | Supported      |
+| 4.9.17        | 1        | Supported      |
+| 4.9.170       | 4        | Supported      |
+| 4.9.18        | 6        | Supported      |
+| 4.9.2         | 4        | Supported      |
+| 4.9.20        | 4        | Supported      |
+| 4.9.21        | 2        | Supported      |
+| 4.9.22        | 115      | Supported      |
+| 4.9.3         | 23       | Supported      |
+| 4.9.34        | 1        | Supported      |
+| 4.9.4         | 37       | Supported      |
+| 4.9.5         | 25       | Supported      |
+| 4.9.6         | 15       | Supported      |
+| 4.9.7         | 7        | Supported      |
+| 4.9.8         | 15       | Supported      |
+| 4.9.9         | 3        | Supported      |
+| 4.956b17      | 4        | Non-conclusive |
+| 4/1.10        | 1        | Non-conclusive |
+| 4/2           | 8        | Non-conclusive |
+| 4/3.0         | 4        | Non-conclusive |
+| 4/4.0         | 27       | Non-conclusive |
+| 4/4.1         | 34       | Non-conclusive |
+| 4/4.3         | 18       | Non-conclusive |
+| 4/4.4         | 47       | Non-conclusive |
+| 4/4.5         | 14       | Non-conclusive |
+| 4/4.6         | 4        | Non-conclusive |
+| 4/5.0         | 665      | Non-conclusive |
+| 4/5.1         | 142      | Non-conclusive |
+| 4/5.38        | 21       | Non-conclusive |
+| 4/5.39        | 1463     | Non-conclusive |
+| 40            | 106      | Supported      |
+| 400           | 20       | Supported      |
+| 4000_3        | 4        | Non-conclusive |
+| 400_88027     | 2        | Non-conclusive |
+| 400dd385      | 4        | Non-conclusive |
+| 400df6e4      | 4        | Non-conclusive |
+| 400feefa      | 4        | Non-conclusive |
+| 401           | 12       | Supported      |
+| 401.13.14     | 1        | Supported      |
+| 401.19.1      | 4        | Supported      |
+| 401_439       | 2        | Non-conclusive |
+| 401_46943     | 2        | Non-conclusive |
+| 401_528986    | 2        | Non-conclusive |
+| 401_865d92    | 2        | Non-conclusive |
+| 401_8a5       | 4        | Non-conclusive |
+| 402           | 4        | Supported      |
+| 4021d110      | 1        | Non-conclusive |
+| 402_3e48      | 4        | Non-conclusive |
+| 402_41c130    | 2        | Non-conclusive |
+| 402_644f9     | 2        | Non-conclusive |
+| 402_82d70     | 2        | Non-conclusive |
+| 402cc3c2      | 4        | Non-conclusive |
+| 403           | 6        | Supported      |
+| 403.3.5       | 4        | Supported      |
+| 403.3.7       | 14       | Supported      |
+| 403.4.1       | 17       | Supported      |
+| 403_318       | 2        | Non-conclusive |
+| 403f7861      | 4        | Non-conclusive |
+| 404           | 4        | Supported      |
+| 404.0.0       | 3        | Supported      |
+| 404.0.1       | 1        | Supported      |
+| 404.1.3       | 2        | Supported      |
+| 404.3.1       | 2        | Supported      |
+| 404.4.1       | 8        | Supported      |
+| 404.5.0       | 12       | Supported      |
+| 404.5.3       | 57       | Supported      |
+| 404.6.0       | 28       | Supported      |
+| 404.6.1       | 5        | Supported      |
+| 404_1c269     | 2        | Non-conclusive |
+| 404_53721     | 4        | Non-conclusive |
+| 404a38bc      | 4        | Non-conclusive |
+| 405           | 6        | Supported      |
+| 405.0.0       | 35       | Supported      |
+| 405.0.1       | 14       | Supported      |
+| 405.0.2       | 384      | Supported      |
+| 405.1.0       | 5        | Supported      |
+| 405.1.3       | 35       | Supported      |
+| 405.2.0       | 13       | Supported      |
+| 405.2.2       | 16       | Supported      |
+| 405_4         | 2        | Non-conclusive |
+| 406           | 4        | Supported      |
+| 4063a953      | 1        | Non-conclusive |
+| 406b3665      | 28       | Non-conclusive |
+| 406c6ac7      | 4        | Non-conclusive |
+| 407           | 3        | Supported      |
+| 407a3652      | 4        | Non-conclusive |
+| 408           | 6        | Supported      |
+| 4084ec8d      | 4        | Non-conclusive |
+| 4084f46       | 4        | Non-conclusive |
+| 409_351       | 2        | Non-conclusive |
+| 409be2f       | 4        | Non-conclusive |
+| 40_0          | 3        | Non-conclusive |
+| 40_026f0      | 1        | Non-conclusive |
+| 40_0d198      | 2        | Non-conclusive |
+| 40_11c34      | 2        | Non-conclusive |
+| 40_11c4       | 1        | Non-conclusive |
+| 40_2302d4     | 4        | Non-conclusive |
+| 40_237c699    | 2        | Non-conclusive |
+| 40_2d388      | 2        | Non-conclusive |
+| 40_3          | 4        | Non-conclusive |
+| 40_320c1      | 2        | Non-conclusive |
+| 40_388a1      | 1        | Non-conclusive |
+| 40_46448      | 8        | Non-conclusive |
+| 40_4c388      | 2        | Non-conclusive |
+| 40_5          | 4        | Non-conclusive |
+| 40_511a9      | 2        | Non-conclusive |
+| 40_55a611     | 2        | Non-conclusive |
+| 40_5a81329    | 1        | Non-conclusive |
+| 40_5a91       | 2        | Non-conclusive |
+| 40_5e49739    | 2        | Non-conclusive |
+| 40_7          | 2        | Non-conclusive |
+| 40_72a7       | 1        | Non-conclusive |
+| 40_74         | 2        | Non-conclusive |
+| 40_7b25       | 4        | Non-conclusive |
+| 40_7f0666     | 4        | Non-conclusive |
+| 40_87         | 2        | Non-conclusive |
+| 40_8746a5     | 2        | Non-conclusive |
+| 40_8b5911     | 1        | Non-conclusive |
+| 40_8c14       | 4        | Non-conclusive |
+| 40a8051a      | 4        | Non-conclusive |
+| 40e31ff2      | 4        | Non-conclusive |
+| 40f39         | 4        | Non-conclusive |
+| 40fc1475a3    | 2        | Non-conclusive |
+| 40ffc848      | 4        | Non-conclusive |
+| 40g3h3        | 4        | Non-conclusive |
+| 41            | 92       | Supported      |
+| 41-22-262     | 4        | Non-conclusive |
+| 41-36-900     | 4        | Non-conclusive |
+| 41-40-892     | 4        | Non-conclusive |
+| 41.7.12       | 4        | Supported      |
+| 41.7.6        | 4        | Supported      |
+| 4102dba9      | 4        | Non-conclusive |
+| 4105d484      | 4        | Non-conclusive |
+| 410Q8         | 3        | Non-conclusive |
+| 410_66a2      | 1        | Non-conclusive |
+| 410aa202      | 6        | Non-conclusive |
+| 411           | 12       | Supported      |
+| 4114          | 2        | Supported      |
+| 4118          | 2        | Supported      |
+| 4119          | 2        | Supported      |
+| 411_32b148    | 4        | Non-conclusive |
+| 411_7         | 4        | Non-conclusive |
+| 412e9b46      | 134      | Non-conclusive |
+| 413           | 21       | Supported      |
+| 413_269       | 2        | Non-conclusive |
+| 415           | 4        | Supported      |
+| 415_27        | 4        | Non-conclusive |
+| 415acefe      | 4        | Non-conclusive |
+| 4162df0a      | 4        | Non-conclusive |
+| 416_3057      | 4        | Non-conclusive |
+| 416f9b8a      | 4        | Non-conclusive |
+| 417_10b6      | 2        | Non-conclusive |
+| 417_1a5       | 2        | Non-conclusive |
+| 417_2c8       | 2        | Non-conclusive |
+| 417_852b01    | 4        | Non-conclusive |
+| 418           | 8        | Supported      |
+| 4182f15c      | 1647     | Non-conclusive |
+| 4189          | 12       | Supported      |
+| 418_4a637     | 4        | Non-conclusive |
+| 419           | 2        | Supported      |
+| 41_0          | 2        | Non-conclusive |
+| 41_0760c67    | 2        | Non-conclusive |
+| 41_0774d8     | 2        | Non-conclusive |
+| 41_12         | 2        | Non-conclusive |
+| 41_123        | 4        | Non-conclusive |
+| 41_13c8159    | 4        | Non-conclusive |
+| 41_15e9773    | 2        | Non-conclusive |
+| 41_1b54       | 1        | Non-conclusive |
+| 41_1e0034     | 4        | Non-conclusive |
+| 41_2140a07    | 2        | Non-conclusive |
+| 41_22b95      | 2        | Non-conclusive |
+| 41_25b988     | 2        | Non-conclusive |
+| 41_28288      | 1        | Non-conclusive |
+| 41_2910e65    | 4        | Non-conclusive |
+| 41_2f1        | 2        | Non-conclusive |
+| 41_30c28      | 4        | Non-conclusive |
+| 41_31         | 2        | Non-conclusive |
+| 41_38344      | 2        | Non-conclusive |
+| 41_393a0      | 1        | Non-conclusive |
+| 41_4          | 4        | Non-conclusive |
+| 41_411a768    | 1        | Non-conclusive |
+| 41_43b9       | 2        | Non-conclusive |
+| 41_493        | 2        | Non-conclusive |
+| 41_4a05602    | 1        | Non-conclusive |
+| 41_6022d3     | 2        | Non-conclusive |
+| 41_6333c64    | 1        | Non-conclusive |
+| 41_634000     | 4        | Non-conclusive |
+| 41_679f19     | 2        | Non-conclusive |
+| 41_6b301      | 2        | Non-conclusive |
+| 41_6d390      | 2        | Non-conclusive |
+| 41_79399      | 2        | Non-conclusive |
+| 41_86         | 2        | Non-conclusive |
+| 41_88a83      | 2        | Non-conclusive |
+| 41_891d12     | 4        | Non-conclusive |
+| 41_8a1        | 1        | Non-conclusive |
+| 41_9          | 2        | Non-conclusive |
+| 41_96         | 8        | Non-conclusive |
+| 41_973892     | 4        | Non-conclusive |
+| 41a1e15f      | 8        | Non-conclusive |
+| 41a3          | 1        | Non-conclusive |
+| 41b2a0e2      | 4        | Non-conclusive |
+| 41b8929b      | 4        | Non-conclusive |
+| 41b8b973      | 4        | Non-conclusive |
+| 41c088e4      | 56       | Non-conclusive |
+| 41cc4e05      | 4        | Non-conclusive |
+| 41f2c0f9      | 4        | Non-conclusive |
+| 41f3e4bc      | 4        | Non-conclusive |
+| 42            | 42       | Supported      |
+| 420           | 8        | Supported      |
+| 4201d964      | 4        | Non-conclusive |
+| 420b949       | 4        | Non-conclusive |
+| 421           | 10       | Supported      |
+| 4214a7b0      | 1        | Non-conclusive |
+| 4216f854      | 1        | Non-conclusive |
+| 4218d60f      | 1        | Non-conclusive |
+| 421_8e59      | 2        | Non-conclusive |
+| 421d06bb      | 1        | Non-conclusive |
+| 421de559      | 4        | Non-conclusive |
+| 422           | 1        | Supported      |
+| 4227_422f1    | 1        | Non-conclusive |
+| 422_183f2     | 2        | Non-conclusive |
+| 423e9c4e00    | 1        | Non-conclusive |
+| 4242c75a38    | 4        | Non-conclusive |
+| 4244          | 4        | Supported      |
+| 4246          | 4        | Supported      |
+| 425           | 1        | Supported      |
+| 425e84b2      | 4        | Non-conclusive |
+| 426_8b1       | 4        | Non-conclusive |
+| 427           | 2        | Supported      |
+| 4281          | 1        | Supported      |
+| 428d6         | 5        | Non-conclusive |
+| 429_6f9       | 1        | Non-conclusive |
+| 42F74v9       | 1        | Non-conclusive |
+| 42T4          | 4        | Non-conclusive |
+| 42W4          | 4        | Non-conclusive |
+| 42_0          | 4        | Non-conclusive |
+| 42_111c59     | 2        | Non-conclusive |
+| 42_1897e94    | 2        | Non-conclusive |
+| 42_19         | 1        | Non-conclusive |
+| 42_1d1        | 2        | Non-conclusive |
+| 42_22a712     | 2        | Non-conclusive |
+| 42_22e4875    | 2        | Non-conclusive |
+| 42_236f53     | 2        | Non-conclusive |
+| 42_25         | 2        | Non-conclusive |
+| 42_255b39     | 2        | Non-conclusive |
+| 42_280        | 2        | Non-conclusive |
+| 42_2810c6     | 4        | Non-conclusive |
+| 42_287d468    | 2        | Non-conclusive |
+| 42_299d5      | 2        | Non-conclusive |
+| 42_3179       | 2        | Non-conclusive |
+| 42_33d0       | 2        | Non-conclusive |
+| 42_34         | 2        | Non-conclusive |
+| 42_36         | 2        | Non-conclusive |
+| 42_38d3       | 2        | Non-conclusive |
+| 42_3954a5     | 2        | Non-conclusive |
+| 42_3d5973     | 4        | Non-conclusive |
+| 42_3f00       | 2        | Non-conclusive |
+| 42_4          | 2        | Non-conclusive |
+| 42_400b36     | 2        | Non-conclusive |
+| 42_4c9        | 2        | Non-conclusive |
+| 42_4d95491    | 1        | Non-conclusive |
+| 42_509        | 2        | Non-conclusive |
+| 42_591b4      | 2        | Non-conclusive |
+| 42_5a4        | 4        | Non-conclusive |
+| 42_7          | 2        | Non-conclusive |
+| 42_70c4345    | 2        | Non-conclusive |
+| 42_714        | 2        | Non-conclusive |
+| 42_72d268     | 2        | Non-conclusive |
+| 42_732        | 2        | Non-conclusive |
+| 42_73594      | 4        | Non-conclusive |
+| 42_75b2       | 4        | Non-conclusive |
+| 42_7f1        | 2        | Non-conclusive |
+| 42_813b3      | 8        | Non-conclusive |
+| 42_852676     | 2        | Non-conclusive |
+| 42_864d8      | 2        | Non-conclusive |
+| 42_87238d1    | 2        | Non-conclusive |
+| 42_8f86       | 2        | Non-conclusive |
+| 42_905b2      | 2        | Non-conclusive |
+| 42_97633      | 4        | Non-conclusive |
+| 42a0fcde      | 1        | Non-conclusive |
+| 42a1d34e      | 4        | Non-conclusive |
+| 42a225fa      | 5        | Non-conclusive |
+| 42a7fb74      | 5        | Non-conclusive |
+| 42b1f25c      | 1        | Non-conclusive |
+| 42ccae4d      | 4        | Non-conclusive |
+| 42ce01eb      | 4        | Non-conclusive |
+| 42df37a2      | 5        | Non-conclusive |
+| 42e41f7d      | 1        | Non-conclusive |
+| 42eb8424      | 4        | Non-conclusive |
+| 42ed8b7b      | 1        | Non-conclusive |
+| 42f0          | 4        | Non-conclusive |
+| 42fbb351      | 4        | Non-conclusive |
+| 42fc0ac4      | 1        | Non-conclusive |
+| 42ffe309      | 4        | Non-conclusive |
+| 42p8          | 4        | Non-conclusive |
+| 43            | 49       | Supported      |
+| 430           | 2        | Supported      |
+| 430_7d6271    | 2        | Non-conclusive |
+| 431           | 39       | Supported      |
+| 431ccb5       | 4        | Non-conclusive |
+| 431e3790      | 4        | Non-conclusive |
+| 432f9         | 4        | Non-conclusive |
+| 434           | 8        | Supported      |
+| 434_466d1     | 2        | Non-conclusive |
+| 434_84812     | 2        | Non-conclusive |
+| 434be03e      | 2        | Non-conclusive |
+| 4354fd9d      | 4        | Non-conclusive |
+| 435_60d4      | 1        | Non-conclusive |
+| 435ea5a1      | 1        | Non-conclusive |
+| 435f7aed      | 4        | Non-conclusive |
+| 436           | 1        | Supported      |
+| 437bcce       | 4        | Non-conclusive |
+| 438           | 2        | Supported      |
+| 438_6d390     | 1        | Non-conclusive |
+| 4399f0a8      | 4        | Non-conclusive |
+| 439_2c5       | 2        | Non-conclusive |
+| 439_350       | 2        | Non-conclusive |
+| 43_1          | 2        | Non-conclusive |
+| 43_113529     | 2        | Non-conclusive |
+| 43_15428c2    | 2        | Non-conclusive |
+| 43_19         | 4        | Non-conclusive |
+| 43_19e6       | 2        | Non-conclusive |
+| 43_1c77       | 2        | Non-conclusive |
+| 43_1e93342    | 4        | Non-conclusive |
+| 43_210b595    | 1        | Non-conclusive |
+| 43_273140     | 2        | Non-conclusive |
+| 43_3          | 2        | Non-conclusive |
+| 43_30d33      | 3        | Non-conclusive |
+| 43_32e21      | 2        | Non-conclusive |
+| 43_331        | 2        | Non-conclusive |
+| 43_399        | 1        | Non-conclusive |
+| 43_3a4        | 2        | Non-conclusive |
+| 43_3f83       | 4        | Non-conclusive |
+| 43_4          | 2        | Non-conclusive |
+| 43_4494c4     | 2        | Non-conclusive |
+| 43_45b60      | 4        | Non-conclusive |
+| 43_46         | 2        | Non-conclusive |
+| 43_49772c7    | 2        | Non-conclusive |
+| 43_4e5        | 2        | Non-conclusive |
+| 43_5          | 2        | Non-conclusive |
+| 43_56c6       | 2        | Non-conclusive |
+| 43_5a55725    | 2        | Non-conclusive |
+| 43_5b49       | 2        | Non-conclusive |
+| 43_5e65986    | 1        | Non-conclusive |
+| 43_622        | 2        | Non-conclusive |
+| 43_695c67     | 2        | Non-conclusive |
+| 43_6a15       | 2        | Non-conclusive |
+| 43_6c177      | 2        | Non-conclusive |
+| 43_73a8       | 4        | Non-conclusive |
+| 43_75c35      | 4        | Non-conclusive |
+| 43_76         | 2        | Non-conclusive |
+| 43_7b977      | 2        | Non-conclusive |
+| 43_84768      | 2        | Non-conclusive |
+| 43_87b1417    | 2        | Non-conclusive |
+| 43_88e01      | 1        | Non-conclusive |
+| 43_97         | 2        | Non-conclusive |
+| 43_98         | 1        | Non-conclusive |
+| 43_9c81       | 2        | Non-conclusive |
+| 43_9e4        | 2        | Non-conclusive |
+| 43ac4d0       | 4        | Non-conclusive |
+| 43c1c43b      | 8        | Non-conclusive |
+| 43caffa4      | 1        | Non-conclusive |
+| 43e41468      | 12       | Non-conclusive |
+| 43ec7178      | 4        | Non-conclusive |
+| 44            | 58       | Supported      |
+| 44.5.3        | 8        | Supported      |
+| 44.72d951     | 1        | Non-conclusive |
+| 440_3c85      | 2        | Non-conclusive |
+| 441           | 35       | Supported      |
+| 4414ce4d      | 2        | Non-conclusive |
+| 441_0816      | 4        | Non-conclusive |
+| 441_58a852    | 2        | Non-conclusive |
+| 441a690472    | 10       | Non-conclusive |
+| 442           | 1        | Supported      |
+| 4423a19       | 2        | Non-conclusive |
+| 4427e7d8      | 4        | Non-conclusive |
+| 4428          | 2        | Supported      |
+| 442_4e7       | 4        | Non-conclusive |
+| 4432_29       | 2        | Non-conclusive |
+| 4435_29       | 2        | Non-conclusive |
+| 443_3         | 1        | Non-conclusive |
+| 443_65e7      | 4        | Non-conclusive |
+| 444           | 1        | Supported      |
+| 4440.43262    | 1        | Supported      |
+| 444_873       | 4        | Non-conclusive |
+| 446           | 4        | Supported      |
+| 4466d2f8      | 1        | Non-conclusive |
+| 446_6e909     | 4        | Non-conclusive |
+| 446be2c7      | 4        | Non-conclusive |
+| 447           | 10       | Supported      |
+| 449           | 4        | Supported      |
+| 449f38df      | 4        | Non-conclusive |
+| 44_0          | 6        | Non-conclusive |
+| 44_02a5       | 4        | Non-conclusive |
+| 44_06f4356    | 2        | Non-conclusive |
+| 44_075        | 4        | Non-conclusive |
+| 44_0810       | 4        | Non-conclusive |
+| 44_09980c5    | 2        | Non-conclusive |
+| 44_0d400      | 2        | Non-conclusive |
+| 44_139b25     | 1        | Non-conclusive |
+| 44_1d6        | 2        | Non-conclusive |
+| 44_1f37524    | 2        | Non-conclusive |
+| 44_2          | 4        | Non-conclusive |
+| 44_21         | 1        | Non-conclusive |
+| 44_2659c7     | 4        | Non-conclusive |
+| 44_35         | 2        | Non-conclusive |
+| 44_3640f9     | 4        | Non-conclusive |
+| 44_394        | 2        | Non-conclusive |
+| 44_39d12      | 2        | Non-conclusive |
+| 44_3c2        | 1        | Non-conclusive |
+| 44_41c7       | 2        | Non-conclusive |
+| 44_440        | 2        | Non-conclusive |
+| 44_44a4       | 2        | Non-conclusive |
+| 44_456a9      | 2        | Non-conclusive |
+| 44_490052     | 2        | Non-conclusive |
+| 44_4b697      | 2        | Non-conclusive |
+| 44_504d3      | 2        | Non-conclusive |
+| 44_64166      | 2        | Non-conclusive |
+| 44_6673       | 4        | Non-conclusive |
+| 44_668c153    | 4        | Non-conclusive |
+| 44_677        | 1        | Non-conclusive |
+| 44_7          | 4        | Non-conclusive |
+| 44_76a4134    | 4        | Non-conclusive |
+| 44_7e83       | 2        | Non-conclusive |
+| 44_7f23       | 1        | Non-conclusive |
+| 44_9          | 2        | Non-conclusive |
+| 44_9451       | 2        | Non-conclusive |
+| 44_96         | 5        | Non-conclusive |
+| 44_9a98       | 2        | Non-conclusive |
+| 44_9b9        | 4        | Non-conclusive |
+| 44a6cc50      | 4        | Non-conclusive |
+| 44b0f9        | 4        | Non-conclusive |
+| 44cce1e8      | 12       | Non-conclusive |
+| 44ce1f52      | 8        | Non-conclusive |
+| 44f51a7c      | 4        | Non-conclusive |
+| 44f5454       | 2        | Non-conclusive |
+| 44f7d94e      | 4        | Non-conclusive |
+| 44f87         | 2        | Non-conclusive |
+| 44f8d602      | 4        | Non-conclusive |
+| 44fc86f6      | 4        | Non-conclusive |
+| 45            | 103      | Supported      |
+| 450           | 34       | Supported      |
+| 4500b101      | 4        | Non-conclusive |
+| 450_80f9      | 2        | Non-conclusive |
+| 450_947e2     | 2        | Non-conclusive |
+| 451           | 1        | Supported      |
+| 4511          | 1        | Supported      |
+| 4512d7f8      | 4        | Non-conclusive |
+| 4519          | 2        | Supported      |
+| 451d6721      | 4        | Non-conclusive |
+| 452           | 3        | Supported      |
+| 4523          | 4        | Supported      |
+| 452_4e757     | 2        | Non-conclusive |
+| 453           | 9        | Supported      |
+| 4533          | 8        | Supported      |
+| 4535_95       | 2        | Non-conclusive |
+| 4548          | 2        | Supported      |
+| 455_438c10    | 4        | Non-conclusive |
+| 455_8c80      | 1        | Non-conclusive |
+| 456           | 8        | Supported      |
+| 4564          | 4        | Supported      |
+| 456_244       | 2        | Non-conclusive |
+| 456_39889     | 2        | Non-conclusive |
+| 456_5a9       | 2        | Non-conclusive |
+| 456_7a53      | 2        | Non-conclusive |
+| 456_8a6682    | 2        | Non-conclusive |
+| 4579          | 4        | Supported      |
+| 457_2f68      | 4        | Non-conclusive |
+| 457_5         | 1        | Non-conclusive |
+| 457cbdf6      | 4        | Non-conclusive |
+| 458           | 4        | Supported      |
+| 4584b401      | 8        | Non-conclusive |
+| 458_005       | 2        | Non-conclusive |
+| 458_0a49      | 2        | Non-conclusive |
+| 459e8bc8dc    | 4        | Non-conclusive |
+| 45;3.3        | 4        | Non-conclusive |
+| 45_0160       | 2        | Non-conclusive |
+| 45_10         | 1        | Non-conclusive |
+| 45_19d4       | 2        | Non-conclusive |
+| 45_1d8        | 2        | Non-conclusive |
+| 45_1f262      | 1        | Non-conclusive |
+| 45_20801d8    | 2        | Non-conclusive |
+| 45_221118     | 4        | Non-conclusive |
+| 45_26f9074    | 4        | Non-conclusive |
+| 45_2a2        | 4        | Non-conclusive |
+| 45_2f46016    | 4        | Non-conclusive |
+| 45_32b6361    | 1        | Non-conclusive |
+| 45_32c585     | 2        | Non-conclusive |
+| 45_33f1       | 2        | Non-conclusive |
+| 45_39         | 4        | Non-conclusive |
+| 45_391        | 4        | Non-conclusive |
+| 45_3b5        | 2        | Non-conclusive |
+| 45_3c0547     | 4        | Non-conclusive |
+| 45_3d8        | 4        | Non-conclusive |
+| 45_3d80       | 2        | Non-conclusive |
+| 45_400b44     | 2        | Non-conclusive |
+| 45_4e8        | 1        | Non-conclusive |
+| 45_4f2988     | 2        | Non-conclusive |
+| 45_5027c07    | 2        | Non-conclusive |
+| 45_51b08      | 2        | Non-conclusive |
+| 45_53         | 4        | Non-conclusive |
+| 45_53889      | 2        | Non-conclusive |
+| 45_5b65       | 2        | Non-conclusive |
+| 45_5c6        | 2        | Non-conclusive |
+| 45_5f98858    | 2        | Non-conclusive |
+| 45_61d18      | 2        | Non-conclusive |
+| 45_622c79     | 4        | Non-conclusive |
+| 45_63         | 2        | Non-conclusive |
+| 45_67a3       | 2        | Non-conclusive |
+| 45_68         | 2        | Non-conclusive |
+| 45_69e8       | 2        | Non-conclusive |
+| 45_6e3        | 2        | Non-conclusive |
+| 45_70688a7    | 2        | Non-conclusive |
+| 45_73e38      | 4        | Non-conclusive |
+| 45_7b36       | 1        | Non-conclusive |
+| 45_7c860      | 2        | Non-conclusive |
+| 45_8          | 2        | Non-conclusive |
+| 45_83606b0    | 2        | Non-conclusive |
+| 45_8a1        | 2        | Non-conclusive |
+| 45_8a8285     | 2        | Non-conclusive |
+| 45_8d7        | 4        | Non-conclusive |
+| 45_9          | 4        | Non-conclusive |
+| 45_906        | 4        | Non-conclusive |
+| 45_97d61      | 2        | Non-conclusive |
+| 45_98d7       | 2        | Non-conclusive |
+| 45aa4daf      | 4        | Non-conclusive |
+| 45aad4c8      | 1        | Non-conclusive |
+| 45b837d7      | 5        | Non-conclusive |
+| 45e0e7bc      | 4        | Non-conclusive |
+| 46            | 60       | Supported      |
+| 46-02-411     | 4        | Non-conclusive |
+| 460           | 20       | Supported      |
+| 4609a6ea      | 4        | Non-conclusive |
+| 460_5f917     | 2        | Non-conclusive |
+| 460_7         | 4        | Non-conclusive |
+| 460f2         | 4        | Non-conclusive |
+| 460facbf      | 2        | Non-conclusive |
+| 460fffc1      | 4        | Non-conclusive |
+| 461           | 33       | Supported      |
+| 4610_95e01    | 2        | Non-conclusive |
+| 4611_95e01    | 2        | Non-conclusive |
+| 4619c321      | 4        | Non-conclusive |
+| 462           | 8        | Supported      |
+| 4623ac32      | 1        | Non-conclusive |
+| 462_4f5374    | 4        | Non-conclusive |
+| 4638e978      | 4        | Non-conclusive |
+| 4647_4a38     | 2        | Non-conclusive |
+| 464_0         | 2        | Non-conclusive |
+| 465           | 2        | Supported      |
+| 467           | 12       | Supported      |
+| 467_26e9      | 2        | Non-conclusive |
+| 467f022b      | 1        | Non-conclusive |
+| 468           | 6        | Supported      |
+| 468_7b92      | 2        | Non-conclusive |
+| 468c156e      | 4        | Non-conclusive |
+| 4690a45cf0    | 21       | Non-conclusive |
+| 4698          | 16       | Supported      |
+| 469_36        | 1        | Non-conclusive |
+| 469_8         | 2        | Non-conclusive |
+| 469af8e9      | 4        | Non-conclusive |
+| 46_0          | 4        | Non-conclusive |
+| 46_0968       | 1        | Non-conclusive |
+| 46_0a1        | 2        | Non-conclusive |
+| 46_1          | 2        | Non-conclusive |
+| 46_142f59     | 2        | Non-conclusive |
+| 46_15         | 2        | Non-conclusive |
+| 46_1866366    | 4        | Non-conclusive |
+| 46_2d65780    | 2        | Non-conclusive |
+| 46_2d8        | 2        | Non-conclusive |
+| 46_3c2        | 4        | Non-conclusive |
+| 46_4a5        | 4        | Non-conclusive |
+| 46_4b3        | 1        | Non-conclusive |
+| 46_4f73       | 1        | Non-conclusive |
+| 46_56c80      | 4        | Non-conclusive |
+| 46_59c22      | 4        | Non-conclusive |
+| 46_5b96406    | 4        | Non-conclusive |
+| 46_6          | 4        | Non-conclusive |
+| 46_6119f5     | 4        | Non-conclusive |
+| 46_68571      | 2        | Non-conclusive |
+| 46_6b0        | 2        | Non-conclusive |
+| 46_7          | 4        | Non-conclusive |
+| 46_76a4134    | 4        | Non-conclusive |
+| 46_77d6       | 1        | Non-conclusive |
+| 46_78e3       | 2        | Non-conclusive |
+| 46_79749b3    | 2        | Non-conclusive |
+| 46_8          | 2        | Non-conclusive |
+| 46_82b5620    | 2        | Non-conclusive |
+| 46_84         | 2        | Non-conclusive |
+| 46_891a997    | 2        | Non-conclusive |
+| 46_8c6        | 2        | Non-conclusive |
+| 46_905f5      | 2        | Non-conclusive |
+| 46_93021      | 2        | Non-conclusive |
+| 46_96935a8    | 4        | Non-conclusive |
+| 46_9e1        | 2        | Non-conclusive |
+| 46a769ed      | 4        | Non-conclusive |
+| 46af6f19      | 4        | Non-conclusive |
+| 46b46ae       | 4        | Non-conclusive |
+| 46b549b       | 2        | Non-conclusive |
+| 46c1522d95    | 4        | Non-conclusive |
+| 46c7028f      | 6        | Non-conclusive |
+| 46cc6f6e      | 4        | Non-conclusive |
+| 46d00d52      | 4        | Non-conclusive |
+| 46df46df      | 1        | Non-conclusive |
+| 46fcc926      | 4        | Non-conclusive |
+| 47            | 41       | Supported      |
+| 471_9b1338    | 4        | Non-conclusive |
+| 471ee5d7      | 4        | Non-conclusive |
+| 471f660       | 4        | Non-conclusive |
+| 472_65b80     | 4        | Non-conclusive |
+| 472_7         | 2        | Non-conclusive |
+| 472_769       | 4        | Non-conclusive |
+| 473           | 1        | Supported      |
+| 4730_630      | 4        | Non-conclusive |
+| 473b5a24      | 8        | Non-conclusive |
+| 473e3f1d      | 4        | Non-conclusive |
+| 474           | 14       | Supported      |
+| 474_71        | 1        | Non-conclusive |
+| 4756d7e5      | 8        | Non-conclusive |
+| 476           | 2        | Supported      |
+| 476_4         | 2        | Non-conclusive |
+| 476aa527      | 1        | Non-conclusive |
+| 476fedf3      | 4        | Non-conclusive |
+| 4770e8c5      | 4        | Non-conclusive |
+| 4776a08e      | 4        | Non-conclusive |
+| 477aa023      | 4        | Non-conclusive |
+| 4781          | 2        | Supported      |
+| 479           | 4        | Supported      |
+| 4796ffa7      | 4        | Non-conclusive |
+| 479_76        | 4        | Non-conclusive |
+| 479_9b1       | 4        | Non-conclusive |
+| 479e07e3d8    | 1        | Non-conclusive |
+| 47_02251      | 2        | Non-conclusive |
+| 47_0a9        | 4        | Non-conclusive |
+| 47_135b2      | 4        | Non-conclusive |
+| 47_1406e23    | 2        | Non-conclusive |
+| 47_2          | 4        | Non-conclusive |
+| 47_23         | 2        | Non-conclusive |
+| 47_23227a6    | 2        | Non-conclusive |
+| 47_27         | 2        | Non-conclusive |
+| 47_2a2501     | 2        | Non-conclusive |
+| 47_2a8        | 2        | Non-conclusive |
+| 47_2c29       | 2        | Non-conclusive |
+| 47_2e7        | 2        | Non-conclusive |
+| 47_3          | 2        | Non-conclusive |
+| 47_3200e2     | 2        | Non-conclusive |
+| 47_333        | 4        | Non-conclusive |
+| 47_34c5       | 2        | Non-conclusive |
+| 47_37a24      | 2        | Non-conclusive |
+| 47_3f56       | 2        | Non-conclusive |
+| 47_44f1       | 2        | Non-conclusive |
+| 47_466        | 2        | Non-conclusive |
+| 47_47         | 1        | Non-conclusive |
+| 47_56c9101    | 2        | Non-conclusive |
+| 47_57         | 2        | Non-conclusive |
+| 47_5e1904     | 2        | Non-conclusive |
+| 47_68d72      | 2        | Non-conclusive |
+| 47_69         | 2        | Non-conclusive |
+| 47_6c287      | 2        | Non-conclusive |
+| 47_726f110    | 1        | Non-conclusive |
+| 47_8          | 1        | Non-conclusive |
+| 47_822f5      | 2        | Non-conclusive |
+| 47_87d26      | 4        | Non-conclusive |
+| 47_888c3      | 2        | Non-conclusive |
+| 47_8d0        | 2        | Non-conclusive |
+| 47_8f35       | 2        | Non-conclusive |
+| 47_912f5      | 4        | Non-conclusive |
+| 47_98090      | 2        | Non-conclusive |
+| 47_9d3002     | 2        | Non-conclusive |
+| 47b2811       | 4        | Non-conclusive |
+| 47c89         | 4        | Non-conclusive |
+| 47d09cd9      | 4        | Non-conclusive |
+| 47d967b       | 4        | Non-conclusive |
+| 47e96         | 4        | Non-conclusive |
+| 47eac594      | 4        | Non-conclusive |
+| 47f28fca      | 5        | Non-conclusive |
+| 47fec731      | 2        | Non-conclusive |
+| 48            | 21       | Supported      |
+| 48-42-000     | 8        | Non-conclusive |
+| 48-46-000     | 4        | Non-conclusive |
+| 480           | 5        | Supported      |
+| 4805          | 4        | Supported      |
+| 480_301       | 2        | Non-conclusive |
+| 4814ab1       | 4        | Non-conclusive |
+| 4818a3c4      | 12       | Non-conclusive |
+| 4819          | 4        | Supported      |
+| 481_678c22    | 4        | Non-conclusive |
+| 481db016      | 1        | Non-conclusive |
+| 4825n5n5      | 8        | Non-conclusive |
+| 4827          | 5        | Supported      |
+| 482_094       | 2        | Non-conclusive |
+| 482_545       | 2        | Non-conclusive |
+| 4835          | 2        | Supported      |
+| 4837          | 2        | Supported      |
+| 483_9f64      | 4        | Non-conclusive |
+| 4844          | 4        | Supported      |
+| 485           | 57       | Supported      |
+| 485_0d197     | 4        | Non-conclusive |
+| 485_86d3      | 2        | Non-conclusive |
+| 485_9a9       | 2        | Non-conclusive |
+| 485bae0       | 4        | Non-conclusive |
+| 486           | 6        | Supported      |
+| 4860          | 4        | Supported      |
+| 486_5635      | 4        | Non-conclusive |
+| 486_6         | 2        | Non-conclusive |
+| 486_6b1       | 2        | Non-conclusive |
+| 486_9d9       | 2        | Non-conclusive |
+| 487           | 4        | Supported      |
+| 4873          | 4        | Supported      |
+| 487_7         | 2        | Non-conclusive |
+| 488           | 5        | Supported      |
+| 4882b4ac      | 4        | Non-conclusive |
+| 488_4594      | 4        | Non-conclusive |
+| 489           | 4        | Supported      |
+| 4895_1b0      | 4        | Non-conclusive |
+| 489cc425      | 4        | Non-conclusive |
+| 48_048        | 2        | Non-conclusive |
+| 48_098365     | 2        | Non-conclusive |
+| 48_0a02       | 4        | Non-conclusive |
+| 48_1          | 6        | Non-conclusive |
+| 48_103e1      | 2        | Non-conclusive |
+| 48_104b5      | 2        | Non-conclusive |
+| 48_12e6       | 2        | Non-conclusive |
+| 48_1507b9     | 2        | Non-conclusive |
+| 48_1b0        | 4        | Non-conclusive |
+| 48_2          | 2        | Non-conclusive |
+| 48_23967      | 2        | Non-conclusive |
+| 48_27b40      | 2        | Non-conclusive |
+| 48_3          | 2        | Non-conclusive |
+| 48_368b3      | 2        | Non-conclusive |
+| 48_3980000    | 4        | Non-conclusive |
+| 48_41e251     | 2        | Non-conclusive |
+| 48_4c52       | 2        | Non-conclusive |
+| 48_5d59       | 2        | Non-conclusive |
+| 48_5d6970     | 2        | Non-conclusive |
+| 48_5f28       | 2        | Non-conclusive |
+| 48_6          | 2        | Non-conclusive |
+| 48_6217       | 4        | Non-conclusive |
+| 48_62d96      | 4        | Non-conclusive |
+| 48_637        | 2        | Non-conclusive |
+| 48_6676113    | 2        | Non-conclusive |
+| 48_6876       | 2        | Non-conclusive |
+| 48_7          | 1        | Non-conclusive |
+| 48_79         | 2        | Non-conclusive |
+| 48_7927       | 2        | Non-conclusive |
+| 48_7b082      | 4        | Non-conclusive |
+| 48_87f5064    | 2        | Non-conclusive |
+| 48_8a2        | 2        | Non-conclusive |
+| 48_8b4940     | 4        | Non-conclusive |
+| 48_94         | 2        | Non-conclusive |
+| 48_96         | 5        | Non-conclusive |
+| 48_996c292    | 2        | Non-conclusive |
+| 48bca2a0      | 4        | Non-conclusive |
+| 48bd80a8af    | 4        | Non-conclusive |
+| 48c4          | 1        | Non-conclusive |
+| 48d286f8      | 8        | Non-conclusive |
+| 48e2c4f0      | 4        | Non-conclusive |
+| 48e9ef32      | 4        | Non-conclusive |
+| 48f5          | 5        | Non-conclusive |
+| 48fbffce      | 4        | Non-conclusive |
+| 49            | 65       | Supported      |
+| 49-01a2       | 4        | Non-conclusive |
+| 49-34-000     | 4        | Non-conclusive |
+| 49-38-806     | 4        | Non-conclusive |
+| 490           | 1        | Supported      |
+| 491           | 2        | Supported      |
+| 491_297c6     | 2        | Non-conclusive |
+| 491_3d8       | 4        | Non-conclusive |
+| 491b2261      | 8        | Non-conclusive |
+| 491f29f       | 8        | Non-conclusive |
+| 492           | 2        | Supported      |
+| 4920_3d03     | 2        | Non-conclusive |
+| 4920_49f6     | 2        | Non-conclusive |
+| 492_14a432    | 2        | Non-conclusive |
+| 493_501d2     | 4        | Non-conclusive |
+| 493_8         | 2        | Non-conclusive |
+| 495           | 2        | Supported      |
+| 4956d2ba      | 4        | Non-conclusive |
+| 495_8731a5    | 1        | Non-conclusive |
+| 495_920e14    | 2        | Non-conclusive |
+| 4963          | 5        | Supported      |
+| 496c1191      | 4        | Non-conclusive |
+| 496f3712      | 4        | Non-conclusive |
+| 497           | 5        | Supported      |
+| 497_3e57      | 1        | Non-conclusive |
+| 497_7         | 1        | Non-conclusive |
+| 498           | 7        | Supported      |
+| 4980a456      | 4        | Non-conclusive |
+| 498aa9b       | 4        | Non-conclusive |
+| 498c8e3f      | 4        | Non-conclusive |
+| 499           | 2        | Supported      |
+| 4991ce74      | 4        | Non-conclusive |
+| 499_010c60    | 2        | Non-conclusive |
+| 499d0b6e      | 4        | Non-conclusive |
+| 49_0          | 4        | Non-conclusive |
+| 49_0b81       | 2        | Non-conclusive |
+| 49_1c1        | 4        | Non-conclusive |
+| 49_1c4156     | 2        | Non-conclusive |
+| 49_26         | 2        | Non-conclusive |
+| 49_2b4        | 2        | Non-conclusive |
+| 49_33         | 2        | Non-conclusive |
+| 49_3815       | 1        | Non-conclusive |
+| 49_3d591      | 1        | Non-conclusive |
+| 49_4e4        | 1        | Non-conclusive |
+| 49_5608f0     | 2        | Non-conclusive |
+| 49_6          | 4        | Non-conclusive |
+| 49_7a5        | 2        | Non-conclusive |
+| 49_7f1        | 2        | Non-conclusive |
+| 49_8219b6     | 1        | Non-conclusive |
+| 49_8526       | 2        | Non-conclusive |
+| 49_90a054     | 4        | Non-conclusive |
+| 49_91c6       | 2        | Non-conclusive |
+| 49_927d1      | 2        | Non-conclusive |
+| 49_95a0180    | 2        | Non-conclusive |
+| 49_96         | 4        | Non-conclusive |
+| 49_988        | 1        | Non-conclusive |
+| 49_988e018    | 2        | Non-conclusive |
+| 49_99b0       | 4        | Non-conclusive |
+| 49_9e8        | 2        | Non-conclusive |
+| 49a9d17       | 4        | Non-conclusive |
+| 49af8700      | 4        | Non-conclusive |
+| 49b1c661      | 4        | Non-conclusive |
+| 49b9f877      | 12       | Non-conclusive |
+| 49c3f1ee      | 4        | Non-conclusive |
+| 49cf1340      | 5        | Non-conclusive |
+| 49d684d6      | 2        | Non-conclusive |
+| 49d738c4      | 1        | Non-conclusive |
+| 49e1120e      | 6        | Non-conclusive |
+| 49e6e82b      | 2        | Non-conclusive |
+| 49eb5c69      | 4        | Non-conclusive |
+| 49f646a0      | 2        | Non-conclusive |
+| 49ff0b0c      | 1        | Non-conclusive |
+| 4@1.12        | 1        | Non-conclusive |
+| 4@3.0         | 10       | Non-conclusive |
+| 4@5           | 4        | Non-conclusive |
+| 4@5.3         | 4        | Non-conclusive |
+| 4@5.39        | 37       | Non-conclusive |
+| 4F437         | 1        | Non-conclusive |
+| 4F7           | 4        | Non-conclusive |
+| 4G7t3         | 18       | Non-conclusive |
+| 4H323         | 5        | Non-conclusive |
+| 4I35v6        | 2        | Non-conclusive |
+| 4I7           | 4        | Non-conclusive |
+| 4K8           | 4        | Non-conclusive |
+| 4L4           | 9        | Non-conclusive |
+| 4L6           | 4        | Non-conclusive |
+| 4M5T3         | 4        | Non-conclusive |
+| 4N8           | 4        | Non-conclusive |
+| 4Q2           | 1        | Non-conclusive |
+| 4Q3           | 4        | Non-conclusive |
+| 4T2           | 4        | Non-conclusive |
+| 4T7           | 4        | Non-conclusive |
+| 4U5           | 2        | Non-conclusive |
+| 4_0           | 12       | Non-conclusive |
+| 4_0_0         | 61       | Non-conclusive |
+| 4_0d198       | 2        | Non-conclusive |
+| 4_1           | 4        | Non-conclusive |
+| 4_11          | 2        | Non-conclusive |
+| 4_1136        | 14       | Non-conclusive |
+| 4_113c58      | 1        | Non-conclusive |
+| 4_118e7888    | 4        | Non-conclusive |
+| 4_13          | 4        | Non-conclusive |
+| 4_17_43       | 1        | Non-conclusive |
+| 4_17_47       | 9        | Non-conclusive |
+| 4_17_49       | 1        | Non-conclusive |
+| 4_187877a9    | 2        | Non-conclusive |
+| 4_1_0         | 52       | Non-conclusive |
+| 4_1_1         | 16       | Non-conclusive |
+| 4_1_2         | 8        | Non-conclusive |
+| 4_1_3         | 167      | Non-conclusive |
+| 4_2-2021      | 4        | Non-conclusive |
+| 4_2021        | 4        | Non-conclusive |
+| 4_21d13       | 2        | Non-conclusive |
+| 4_246201      | 2        | Non-conclusive |
+| 4_24f7        | 1        | Non-conclusive |
+| 4_2_1         | 25       | Non-conclusive |
+| 4_2a2654      | 1        | Non-conclusive |
+| 4_31          | 2        | Non-conclusive |
+| 4_3252d1      | 2        | Non-conclusive |
+| 4_354e597     | 1        | Non-conclusive |
+| 4_39649       | 16       | Non-conclusive |
+| 4_3_1         | 230      | Non-conclusive |
+| 4_4           | 2        | Non-conclusive |
+| 4_42019       | 4        | Non-conclusive |
+| 4_4_0         | 4        | Non-conclusive |
+| 4_4_1         | 164      | Non-conclusive |
+| 4_4e6916      | 2        | Non-conclusive |
+| 4_5           | 16       | Non-conclusive |
+| 4_517c9       | 2        | Non-conclusive |
+| 4_551939c0    | 1        | Non-conclusive |
+| 4_5_0         | 125      | Non-conclusive |
+| 4_5_2         | 49       | Non-conclusive |
+| 4_5_3         | 102      | Non-conclusive |
+| 4_5e761       | 2        | Non-conclusive |
+| 4_6           | 14       | Non-conclusive |
+| 4_604210d1    | 2        | Non-conclusive |
+| 4_6_0         | 48       | Non-conclusive |
+| 4_6_1         | 44       | Non-conclusive |
+| 4_6_2         | 12       | Non-conclusive |
+| 4_6b248       | 2        | Non-conclusive |
+| 4_6f576       | 1        | Non-conclusive |
+| 4_70567       | 2        | Non-conclusive |
+| 4_7339b72     | 4        | Non-conclusive |
+| 4_77          | 4        | Non-conclusive |
+| 4_7_0         | 4        | Non-conclusive |
+| 4_83148f7     | 4        | Non-conclusive |
+| 4_83a527      | 1        | Non-conclusive |
+| 4_86c1        | 4        | Non-conclusive |
+| 4_91084       | 2        | Non-conclusive |
+| 4_92320110    | 2        | Non-conclusive |
+| 4_95b7        | 4        | Non-conclusive |
+| 4_990         | 4        | Non-conclusive |
+| 4a010fbe      | 1        | Non-conclusive |
+| 4a122071      | 4        | Non-conclusive |
+| 4a134923d2    | 8        | Non-conclusive |
+| 4a152d72      | 1        | Non-conclusive |
+| 4a18          | 1        | Non-conclusive |
+| 4a1a015f      | 188      | Non-conclusive |
+| 4a21d0b       | 4        | Non-conclusive |
+| 4a25a3d4      | 4        | Non-conclusive |
+| 4a2a043c      | 1        | Non-conclusive |
+| 4a2fd08e      | 4        | Non-conclusive |
+| 4a3688ba      | 4        | Non-conclusive |
+| 4a4           | 908      | Non-conclusive |
+| 4a41          | 5        | Non-conclusive |
+| 4a5           | 1        | Non-conclusive |
+| 4a5b8535      | 8        | Non-conclusive |
+| 4a6           | 22       | Non-conclusive |
+| 4a66f7bc7a    | 1        | Non-conclusive |
+| 4a6be084      | 8        | Non-conclusive |
+| 4a71d9e       | 4        | Non-conclusive |
+| 4a7a9c5       | 4        | Non-conclusive |
+| 4a7de02       | 4        | Non-conclusive |
+| 4a7f124c      | 1        | Non-conclusive |
+| 4a8           | 4        | Non-conclusive |
+| 4a8350b       | 1        | Non-conclusive |
+| 4a8fccb6      | 4        | Non-conclusive |
+| 4aa00be8      | 1        | Non-conclusive |
+| 4aad138f      | 8        | Non-conclusive |
+| 4ab3bd2a      | 4        | Non-conclusive |
+| 4ab97bcbf2    | 4        | Non-conclusive |
+| 4abf82d9      | 8        | Non-conclusive |
+| 4ad0c500      | 4        | Non-conclusive |
+| 4afb291c      | 8        | Non-conclusive |
+| 4b0ccdce      | 3        | Non-conclusive |
+| 4b2           | 2        | Non-conclusive |
+| 4b21df01      | 1        | Non-conclusive |
+| 4b27b035      | 12       | Non-conclusive |
+| 4b2fca7a      | 1        | Non-conclusive |
+| 4b336baf0a    | 8        | Non-conclusive |
+| 4b45e13d      | 8        | Non-conclusive |
+| 4b4d6         | 8        | Non-conclusive |
+| 4b68          | 2        | Non-conclusive |
+| 4b6825b       | 4        | Non-conclusive |
+| 4b710fc       | 4        | Non-conclusive |
+| 4b7e4618      | 4        | Non-conclusive |
+| 4b8274ab      | 4        | Non-conclusive |
+| 4b827ed9      | 4        | Non-conclusive |
+| 4b88ba0b      | 4        | Non-conclusive |
+| 4b9ca198      | 1        | Non-conclusive |
+| 4ba3f4ea      | 4        | Non-conclusive |
+| 4ba6ddb       | 4        | Non-conclusive |
+| 4baa99dc      | 4        | Non-conclusive |
+| 4bac107f      | 4        | Non-conclusive |
+| 4bb419c8e9    | 4        | Non-conclusive |
+| 4bb5e4a1      | 1        | Non-conclusive |
+| 4bb96ab4      | 4        | Non-conclusive |
+| 4bc67db4      | 1        | Non-conclusive |
+| 4bdbcfccb5    | 1        | Non-conclusive |
+| 4be1cdb6ff    | 4        | Non-conclusive |
+| 4be209ae      | 8        | Non-conclusive |
+| 4be2bd14      | 4        | Non-conclusive |
+| 4becdc9104    | 4        | Non-conclusive |
+| 4bfa6965      | 4        | Non-conclusive |
+| 4c07b3eda4    | 2        | Non-conclusive |
+| 4c1           | 1        | Non-conclusive |
+| 4c1m0         | 4        | Non-conclusive |
+| 4c2ce230      | 1        | Non-conclusive |
+| 4c44ab2       | 4        | Non-conclusive |
+| 4c4e8111      | 4        | Non-conclusive |
+| 4c57598d      | 4        | Non-conclusive |
+| 4c576683      | 4        | Non-conclusive |
+| 4c636a67      | 4        | Non-conclusive |
+| 4c7           | 1        | Non-conclusive |
+| 4c781134      | 4        | Non-conclusive |
+| 4c92e61c      | 4        | Non-conclusive |
+| 4ca4bcb9      | 4        | Non-conclusive |
+| 4cbbfca3      | 4        | Non-conclusive |
+| 4cc93dde2f    | 4        | Non-conclusive |
+| 4cc9fa42      | 1        | Non-conclusive |
+| 4cce94041b    | 4        | Non-conclusive |
+| 4ccf5c94      | 2        | Non-conclusive |
+| 4cd0d196      | 1        | Non-conclusive |
+| 4cd2f50d      | 4        | Non-conclusive |
+| 4ce64639      | 4        | Non-conclusive |
+| 4ce885ad      | 1        | Non-conclusive |
+| 4ceae3b5      | 4        | Non-conclusive |
+| 4ceb8634      | 4        | Non-conclusive |
+| 4ceb8e93      | 1        | Non-conclusive |
+| 4cec409600    | 4        | Non-conclusive |
+| 4cf17b09      | 1        | Non-conclusive |
+| 4cff9fdc      | 1        | Non-conclusive |
+| 4d00f491      | 4        | Non-conclusive |
+| 4d035c28      | 4        | Non-conclusive |
+| 4d039c4b      | 4        | Non-conclusive |
+| 4d174e78      | 1        | Non-conclusive |
+| 4d197f6e      | 4        | Non-conclusive |
+| 4d1d6a1a      | 1        | Non-conclusive |
+| 4d2           | 4        | Non-conclusive |
+| 4d32f093      | 4        | Non-conclusive |
+| 4d331353      | 1        | Non-conclusive |
+| 4d3dde37      | 1        | Non-conclusive |
+| 4d472870      | 4        | Non-conclusive |
+| 4d540608      | 1        | Non-conclusive |
+| 4d5a8edb      | 4        | Non-conclusive |
+| 4d714a3       | 4        | Non-conclusive |
+| 4d72-7        | 4        | Non-conclusive |
+| 4d7ad55c      | 8        | Non-conclusive |
+| 4d88d70a      | 1        | Non-conclusive |
+| 4d93          | 4        | Non-conclusive |
+| 4d93c6c7      | 1        | Non-conclusive |
+| 4d949854      | 1        | Non-conclusive |
+| 4da14514      | 8        | Non-conclusive |
+| 4da177b4      | 4        | Non-conclusive |
+| 4da3f10b      | 1        | Non-conclusive |
+| 4db22fa4      | 4        | Non-conclusive |
+| 4dbe62d8      | 4        | Non-conclusive |
+| 4dc07064      | 4        | Non-conclusive |
+| 4dcd2d29      | 4        | Non-conclusive |
+| 4de18a14      | 1        | Non-conclusive |
+| 4df2817c      | 4        | Non-conclusive |
+| 4e009665      | 8        | Non-conclusive |
+| 4e01d0d8      | 1        | Non-conclusive |
+| 4e03301       | 4        | Non-conclusive |
+| 4e18214c      | 4        | Non-conclusive |
+| 4e20a99e      | 4        | Non-conclusive |
+| 4e20d102      | 1        | Non-conclusive |
+| 4e28dd51      | 4        | Non-conclusive |
+| 4e37e93       | 4        | Non-conclusive |
+| 4e60          | 8        | Non-conclusive |
+| 4e66b675      | 4        | Non-conclusive |
+| 4e6cc87a      | 3        | Non-conclusive |
+| 4e7           | 4        | Non-conclusive |
+| 4e771ad3      | 4        | Non-conclusive |
+| 4e79          | 1        | Non-conclusive |
+| 4e8e4da0      | 17       | Non-conclusive |
+| 4e943d78      | 5        | Non-conclusive |
+| 4e9a2ae       | 4        | Non-conclusive |
+| 4ea64b19      | 1        | Non-conclusive |
+| 4eb1f667      | 8        | Non-conclusive |
+| 4eb54fa0      | 4        | Non-conclusive |
+| 4ebea31b      | 4        | Non-conclusive |
+| 4ecbe26e      | 1        | Non-conclusive |
+| 4f04f88c      | 4        | Non-conclusive |
+| 4f0e8b8a      | 4        | Non-conclusive |
+| 4f167e56      | 7        | Non-conclusive |
+| 4f1a9225      | 4        | Non-conclusive |
+| 4f22163b      | 1        | Non-conclusive |
+| 4f39ce0e      | 4        | Non-conclusive |
+| 4f446007      | 4        | Non-conclusive |
+| 4f4b104       | 4        | Non-conclusive |
+| 4f4f4         | 4        | Non-conclusive |
+| 4f5feda337    | 4        | Non-conclusive |
+| 4f62ce3e      | 1        | Non-conclusive |
+| 4f64ce0b      | 1        | Non-conclusive |
+| 4f6ac711ca    | 4        | Non-conclusive |
+| 4f6d9ba277    | 4        | Non-conclusive |
+| 4f71623f      | 4        | Non-conclusive |
+| 4f79d4b6      | 4        | Non-conclusive |
+| 4f7f0026      | 2        | Non-conclusive |
+| 4f83d465      | 4        | Non-conclusive |
+| 4f877139      | 4        | Non-conclusive |
+| 4f8c26ea      | 4        | Non-conclusive |
+| 4f8f3bb6      | 4        | Non-conclusive |
+| 4f91b581      | 1        | Non-conclusive |
+| 4f9b52f8      | 4        | Non-conclusive |
+| 4fba64a4      | 1        | Non-conclusive |
+| 4fbf45dfc9    | 8        | Non-conclusive |
+| 4fc5111a      | 4        | Non-conclusive |
+| 4fc71305      | 8        | Non-conclusive |
+| 4g0Y3         | 2        | Non-conclusive |
+| 4h7           | 8        | Non-conclusive |
+| 4h9           | 4        | Non-conclusive |
+| 4i2811        | 2        | Non-conclusive |
+| 4k4           | 4        | Non-conclusive |
+| 4k6           | 4        | Non-conclusive |
+| 4l6           | 21       | Non-conclusive |
+| 4o2           | 4        | Non-conclusive |
+| 4p64          | 4        | Non-conclusive |
+| 4p7w6         | 8        | Non-conclusive |
+| 4q1           | 4        | Non-conclusive |
+| 4t0           | 4        | Non-conclusive |
+| 4t3           | 2        | Non-conclusive |
+| 4t6           | 2        | Non-conclusive |
+| 4t9           | 4        | Non-conclusive |
+| 4v0Z4         | 2        | Non-conclusive |
+| 4v1.10        | 5        | Non-conclusive |
+| 4v1.81        | 16       | Non-conclusive |
+| 4v8           | 4        | Non-conclusive |
+| 4w2           | 4        | Non-conclusive |
+| 4x2x1         | 4        | Non-conclusive |
+| 4x6422        | 16       | Non-conclusive |
+| 5             | 208719   | Supported      |
+| 5-0-0         | 4        | Non-conclusive |
+| 5-0-1         | 8        | Non-conclusive |
+| 5-0-2         | 62       | Non-conclusive |
+| 5-0.0         | 218      | Non-conclusive |
+| 5-0.3         | 90       | Non-conclusive |
+| 5-0d8         | 7        | Non-conclusive |
+| 5-1           | 16       | Non-conclusive |
+| 5-1-0         | 8        | Non-conclusive |
+| 5-1-1         | 1        | Non-conclusive |
+| 5-1-3         | 36       | Non-conclusive |
+| 5-1.10        | 9        | Non-conclusive |
+| 5-10-2019     | 6        | Non-conclusive |
+| 5-1e18        | 1        | Non-conclusive |
+| 5-2           | 16       | Non-conclusive |
+| 5-2-0         | 12       | Non-conclusive |
+| 5-2-2         | 18       | Non-conclusive |
+| 5-2-3         | 9        | Non-conclusive |
+| 5-3-42        | 171      | Non-conclusive |
+| 5-4.6         | 4        | Non-conclusive |
+| 5-4720c28     | 1        | Non-conclusive |
+| 5-9e3         | 12       | Non-conclusive |
+| 5.0           | 611      | Supported      |
+| 5.0-2020      | 4        | Non-conclusive |
+| 5.0.0         | 34311    | Supported      |
+| 5.0.1         | 20951    | Supported      |
+| 5.0.10        | 2        | Supported      |
+| 5.0.12        | 4        | Supported      |
+| 5.0.18        | 8        | Supported      |
+| 5.0.2         | 56125    | Supported      |
+| 5.0.3         | 15       | Supported      |
+| 5.0.312       | 2        | Supported      |
+| 5.0.4         | 1        | Supported      |
+| 5.0.53        | 4        | Supported      |
+| 5.0.6         | 34       | Supported      |
+| 5.0.64        | 4        | Supported      |
+| 5.0.8         | 20       | Supported      |
+| 5.0.9         | 26       | Supported      |
+| 5.02          | 13       | Supported      |
+| 5.1           | 411      | Supported      |
+| 5.1.0         | 10988    | Supported      |
+| 5.1.1         | 10032    | Supported      |
+| 5.1.12        | 1        | Supported      |
+| 5.1.13        | 12       | Supported      |
+| 5.1.15        | 58       | Supported      |
+| 5.1.2         | 1707     | Supported      |
+| 5.1.3         | 97005    | Supported      |
+| 5.1.4         | 6        | Supported      |
+| 5.1.5         | 13       | Supported      |
+| 5.1.6         | 12       | Supported      |
+| 5.1.7         | 4        | Supported      |
+| 5.1.8         | 1        | Supported      |
+| 5.1.9         | 11       | Supported      |
+| 5.11.2        | 32       | Supported      |
+| 5.13.0        | 1        | Supported      |
+| 5.13.1        | 26       | Supported      |
+| 5.14.0        | 24       | Supported      |
+| 5.14.1        | 3        | Supported      |
+| 5.15.1        | 8        | Supported      |
+| 5.15.2        | 7        | Supported      |
+| 5.15.3        | 5        | Supported      |
+| 5.15.4        | 8        | Supported      |
+| 5.16.2        | 4        | Supported      |
+| 5.2           | 397      | Supported      |
+| 5.2-1         | 17       | Non-conclusive |
+| 5.2.0         | 20218    | Supported      |
+| 5.2.1         | 5228     | Supported      |
+| 5.2.17        | 73       | Supported      |
+| 5.2.2         | 9734     | Supported      |
+| 5.2.3         | 5670     | Supported      |
+| 5.2.4         | 1        | Supported      |
+| 5.2.5         | 22       | Supported      |
+| 5.2.6         | 28       | Supported      |
+| 5.2.7         | 4        | Supported      |
+| 5.2.9         | 4        | Supported      |
+| 5.22          | 4        | Supported      |
+| 5.3           | 10       | Supported      |
+| 5.3.0         | 401      | Supported      |
+| 5.3.1         | 17       | Supported      |
+| 5.3.11        | 4        | Supported      |
+| 5.3.14        | 62       | Supported      |
+| 5.3.19        | 9        | Supported      |
+| 5.3.2         | 17       | Supported      |
+| 5.3.3         | 8        | Supported      |
+| 5.3.4         | 13       | Supported      |
+| 5.3.5         | 33       | Supported      |
+| 5.3.6         | 81       | Supported      |
+| 5.3.8         | 1        | Supported      |
+| 5.4           | 4        | Supported      |
+| 5.4.0         | 7        | Supported      |
+| 5.4.1         | 54       | Supported      |
+| 5.4.10        | 8        | Supported      |
+| 5.4.11        | 1        | Supported      |
+| 5.4.12        | 88       | Supported      |
+| 5.4.2         | 12       | Supported      |
+| 5.4.4         | 4        | Supported      |
+| 5.4.5         | 2        | Supported      |
+| 5.4.6         | 4        | Supported      |
+| 5.5           | 4        | Supported      |
+| 5.5.0         | 21       | Supported      |
+| 5.5.1         | 20       | Supported      |
+| 5.5.11        | 96       | Supported      |
+| 5.5.2         | 8        | Supported      |
+| 5.5.3         | 21       | Supported      |
+| 5.5.5         | 1        | Supported      |
+| 5.5.6         | 4        | Supported      |
+| 5.6           | 8        | Supported      |
+| 5.6.0         | 4        | Supported      |
+| 5.6.1         | 19       | Supported      |
+| 5.6.10        | 49       | Supported      |
+| 5.6.2         | 4        | Supported      |
+| 5.6.4         | 8        | Supported      |
+| 5.619.3494    | 3        | Supported      |
+| 5.666         | 4        | Supported      |
+| 5.7.0         | 163      | Supported      |
+| 5.7.1         | 9        | Supported      |
+| 5.7.2         | 20       | Supported      |
+| 5.7.4         | 6        | Supported      |
+| 5.7.5         | 4        | Supported      |
+| 5.7.6         | 5        | Supported      |
+| 5.7.8         | 89       | Supported      |
+| 5.70522201    | 28       | Supported      |
+| 5.747223c4    | 4        | Non-conclusive |
+| 5.8           | 2        | Supported      |
+| 5.8.1         | 224      | Supported      |
+| 5.8.2         | 22       | Supported      |
+| 5.8.3         | 3        | Supported      |
+| 5.8.5         | 4        | Supported      |
+| 5.8.6         | 168      | Supported      |
+| 5.9           | 5        | Supported      |
+| 5.9.0         | 1        | Supported      |
+| 5.9.1         | 4        | Supported      |
+| 5.9.2         | 8        | Supported      |
+| 5.9.3         | 23       | Supported      |
+| 5.9.5         | 134      | Supported      |
+| 5.985e549     | 4        | Non-conclusive |
+| 5/5.0         | 4        | Non-conclusive |
+| 5/5.1         | 12       | Non-conclusive |
+| 5/5.2         | 4        | Non-conclusive |
+| 50            | 73       | Supported      |
+| 50-04-800     | 4        | Non-conclusive |
+| 50-36-000     | 4        | Non-conclusive |
+| 500           | 51       | Supported      |
+| 5002          | 8        | Supported      |
+| 500_5         | 2        | Non-conclusive |
+| 500b2         | 4        | Non-conclusive |
+| 501           | 64       | Supported      |
+| 5010          | 44       | Supported      |
+| 5018          | 1        | Supported      |
+| 501_1c3       | 2        | Non-conclusive |
+| 501_4b8730    | 2        | Non-conclusive |
+| 502           | 114      | Supported      |
+| 5022c903      | 8        | Non-conclusive |
+| 502_3         | 2        | Non-conclusive |
+| 502_97        | 2        | Non-conclusive |
+| 502_9c9       | 2        | Non-conclusive |
+| 5035          | 4        | Supported      |
+| 504           | 2        | Supported      |
+| 5040dab2      | 4        | Non-conclusive |
+| 5045be4       | 1        | Non-conclusive |
+| 504_2626      | 2        | Non-conclusive |
+| 504_4c983     | 2        | Non-conclusive |
+| 504_64        | 2        | Non-conclusive |
+| 504_812c9     | 2        | Non-conclusive |
+| 5051ad25      | 4        | Non-conclusive |
+| 5055_3d320    | 2        | Non-conclusive |
+| 5056_0c073    | 2        | Non-conclusive |
+| 5056c93e      | 4        | Non-conclusive |
+| 505a012       | 4        | Non-conclusive |
+| 506           | 4        | Supported      |
+| 508           | 2        | Supported      |
+| 508_3a2       | 2        | Non-conclusive |
+| 508_6         | 2        | Non-conclusive |
+| 508_8c1       | 2        | Non-conclusive |
+| 5099_42       | 2        | Non-conclusive |
+| 50_02f43      | 4        | Non-conclusive |
+| 50_08c4       | 2        | Non-conclusive |
+| 50_0b7        | 2        | Non-conclusive |
+| 50_10b2       | 2        | Non-conclusive |
+| 50_16f2       | 2        | Non-conclusive |
+| 50_216b2      | 2        | Non-conclusive |
+| 50_2495f68    | 2        | Non-conclusive |
+| 50_26f4       | 2        | Non-conclusive |
+| 50_2934b12    | 2        | Non-conclusive |
+| 50_2b4        | 2        | Non-conclusive |
+| 50_2c47388    | 2        | Non-conclusive |
+| 50_2d0        | 2        | Non-conclusive |
+| 50_33         | 1        | Non-conclusive |
+| 50_3e5        | 2        | Non-conclusive |
+| 50_3f71       | 2        | Non-conclusive |
+| 50_4          | 2        | Non-conclusive |
+| 50_41249c6    | 2        | Non-conclusive |
+| 50_4307a55    | 2        | Non-conclusive |
+| 50_48f29      | 2        | Non-conclusive |
+| 50_4b38873    | 2        | Non-conclusive |
+| 50_4d882      | 1        | Non-conclusive |
+| 50_5          | 2        | Non-conclusive |
+| 50_5349       | 2        | Non-conclusive |
+| 50_56783      | 2        | Non-conclusive |
+| 50_56c13      | 2        | Non-conclusive |
+| 50_57051      | 4        | Non-conclusive |
+| 50_58a4       | 1        | Non-conclusive |
+| 50_5d92       | 2        | Non-conclusive |
+| 50_6          | 2        | Non-conclusive |
+| 50_7          | 2        | Non-conclusive |
+| 50_705b5      | 2        | Non-conclusive |
+| 50_72         | 1        | Non-conclusive |
+| 50_7481       | 4        | Non-conclusive |
+| 50_7795       | 4        | Non-conclusive |
+| 50_7b6        | 2        | Non-conclusive |
+| 50_9689       | 4        | Non-conclusive |
+| 50_9a18       | 2        | Non-conclusive |
+| 50_9f732      | 3        | Non-conclusive |
+| 50a07480      | 4        | Non-conclusive |
+| 50b16d16      | 4        | Non-conclusive |
+| 50c36093      | 4        | Non-conclusive |
+| 50cf4ea9d8    | 5        | Non-conclusive |
+| 50d09569      | 10       | Non-conclusive |
+| 50d0b606      | 1        | Non-conclusive |
+| 50d0fd82      | 4        | Non-conclusive |
+| 50d93072      | 4        | Non-conclusive |
+| 50da9f73      | 4        | Non-conclusive |
+| 50fa43c8      | 5        | Non-conclusive |
+| 51            | 185      | Supported      |
+| 510           | 50       | Supported      |
+| 5102_42       | 2        | Non-conclusive |
+| 511           | 12       | Supported      |
+| 5114          | 27       | Supported      |
+| 5115          | 20       | Supported      |
+| 5116          | 1        | Supported      |
+| 5117          | 9        | Supported      |
+| 5117c9bf      | 6        | Non-conclusive |
+| 5118          | 43       | Supported      |
+| 5119          | 59       | Supported      |
+| 511_272530    | 2        | Non-conclusive |
+| 511_96        | 4        | Non-conclusive |
+| 511b0e973c    | 4        | Non-conclusive |
+| 512           | 5        | Supported      |
+| 5120          | 85       | Supported      |
+| 5121f158      | 1        | Non-conclusive |
+| 512_449e63    | 4        | Non-conclusive |
+| 512f68d9      | 4        | Non-conclusive |
+| 513           | 229      | Supported      |
+| 5134ccbb      | 2        | Non-conclusive |
+| 513_0d426     | 4        | Non-conclusive |
+| 514           | 6        | Supported      |
+| 514_1d8       | 4        | Non-conclusive |
+| 515           | 4        | Supported      |
+| 5152          | 215      | Supported      |
+| 5156          | 12       | Supported      |
+| 515b0563      | 4        | Non-conclusive |
+| 515f2661      | 4        | Non-conclusive |
+| 516_3102      | 2        | Non-conclusive |
+| 516_7         | 4        | Non-conclusive |
+| 516b452d5a    | 4        | Non-conclusive |
+| 517           | 4        | Supported      |
+| 5172          | 1        | Supported      |
+| 517_0755e8    | 2        | Non-conclusive |
+| 517_63a897    | 2        | Non-conclusive |
+| 518           | 6        | Supported      |
+| 518_0         | 2        | Non-conclusive |
+| 518_0c862     | 2        | Non-conclusive |
+| 518_60f5      | 4        | Non-conclusive |
+| 518b872d      | 4        | Non-conclusive |
+| 518bc25a      | 4        | Non-conclusive |
+| 518e3c95      | 4        | Non-conclusive |
+| 519_03        | 4        | Non-conclusive |
+| 51_0351f7     | 1        | Non-conclusive |
+| 51_052        | 2        | Non-conclusive |
+| 51_09         | 2        | Non-conclusive |
+| 51_0d0        | 2        | Non-conclusive |
+| 51_1          | 4        | Non-conclusive |
+| 51_105        | 4        | Non-conclusive |
+| 51_16f44      | 4        | Non-conclusive |
+| 51_1c818      | 1        | Non-conclusive |
+| 51_1d474      | 1        | Non-conclusive |
+| 51_2          | 4        | Non-conclusive |
+| 51_20a0953    | 2        | Non-conclusive |
+| 51_21d31      | 2        | Non-conclusive |
+| 51_274e6      | 2        | Non-conclusive |
+| 51_28b7       | 4        | Non-conclusive |
+| 51_315        | 4        | Non-conclusive |
+| 51_35a6       | 4        | Non-conclusive |
+| 51_3679       | 2        | Non-conclusive |
+| 51_37411      | 2        | Non-conclusive |
+| 51_4739a0     | 4        | Non-conclusive |
+| 51_4b0005     | 4        | Non-conclusive |
+| 51_51b22      | 4        | Non-conclusive |
+| 51_53a6       | 4        | Non-conclusive |
+| 51_53c7566    | 2        | Non-conclusive |
+| 51_56         | 2        | Non-conclusive |
+| 51_578b11     | 2        | Non-conclusive |
+| 51_6          | 6        | Non-conclusive |
+| 51_61         | 2        | Non-conclusive |
+| 51_65b3       | 4        | Non-conclusive |
+| 51_7          | 2        | Non-conclusive |
+| 51_70f9762    | 2        | Non-conclusive |
+| 51_84         | 2        | Non-conclusive |
+| 51_87b0531    | 2        | Non-conclusive |
+| 51_88155      | 4        | Non-conclusive |
+| 51_8859d04    | 2        | Non-conclusive |
+| 51_8b3        | 4        | Non-conclusive |
+| 51_9          | 2        | Non-conclusive |
+| 51_90f52      | 4        | Non-conclusive |
+| 51a96b78      | 1        | Non-conclusive |
+| 51d60231      | 1        | Non-conclusive |
+| 51db1aa9      | 4        | Non-conclusive |
+| 51e14         | 1        | Non-conclusive |
+| 51eb7728      | 4        | Non-conclusive |
+| 51f449df53    | 4        | Non-conclusive |
+| 51fae50c      | 4        | Non-conclusive |
+| 52            | 132      | Supported      |
+| 52-18-445     | 4        | Non-conclusive |
+| 520           | 90       | Supported      |
+| 521           | 1        | Supported      |
+| 521_214       | 2        | Non-conclusive |
+| 521_5         | 2        | Non-conclusive |
+| 521d4f42      | 1        | Non-conclusive |
+| 522           | 42       | Supported      |
+| 5220b76       | 4        | Non-conclusive |
+| 522_44f2      | 1        | Non-conclusive |
+| 523           | 1        | Supported      |
+| 5230d8d       | 4        | Non-conclusive |
+| 5233          | 1        | Supported      |
+| 523_30c28     | 2        | Non-conclusive |
+| 523ea92f      | 4        | Non-conclusive |
+| 524           | 2        | Supported      |
+| 5243          | 1        | Supported      |
+| 525           | 5        | Supported      |
+| 525_54f75     | 4        | Non-conclusive |
+| 525_87a183    | 2        | Non-conclusive |
+| 526           | 2        | Supported      |
+| 527_3a1       | 2        | Non-conclusive |
+| 527aa4a3      | 9        | Non-conclusive |
+| 528_8         | 4        | Non-conclusive |
+| 529           | 4        | Supported      |
+| 5294f9c565    | 4        | Non-conclusive |
+| 52_1          | 2        | Non-conclusive |
+| 52_10         | 2        | Non-conclusive |
+| 52_17e9       | 2        | Non-conclusive |
+| 52_18f34      | 2        | Non-conclusive |
+| 52_2273a3     | 1        | Non-conclusive |
+| 52_249a864    | 1        | Non-conclusive |
+| 52_2552       | 2        | Non-conclusive |
+| 52_3          | 4        | Non-conclusive |
+| 52_30c28      | 2        | Non-conclusive |
+| 52_36e817     | 1        | Non-conclusive |
+| 52_3a14       | 2        | Non-conclusive |
+| 52_3d2        | 4        | Non-conclusive |
+| 52_46         | 4        | Non-conclusive |
+| 52_4b5121     | 2        | Non-conclusive |
+| 52_561f56     | 2        | Non-conclusive |
+| 52_5c2        | 2        | Non-conclusive |
+| 52_7          | 2        | Non-conclusive |
+| 52_7977b6     | 2        | Non-conclusive |
+| 52_7a6        | 4        | Non-conclusive |
+| 52_7a84       | 1        | Non-conclusive |
+| 52_7c2        | 2        | Non-conclusive |
+| 52_8          | 4        | Non-conclusive |
+| 52_86d2916    | 2        | Non-conclusive |
+| 52_8716       | 2        | Non-conclusive |
+| 52_874e5      | 2        | Non-conclusive |
+| 52_9          | 2        | Non-conclusive |
+| 52_97554c3    | 2        | Non-conclusive |
+| 52_99510      | 2        | Non-conclusive |
+| 52bfc5a       | 4        | Non-conclusive |
+| 52c9          | 1        | Non-conclusive |
+| 52e02311      | 4        | Non-conclusive |
+| 52fa6b48      | 4        | Non-conclusive |
+| 53            | 95       | Supported      |
+| 53-3a20149    | 4        | Non-conclusive |
+| 53-56-000     | 4        | Non-conclusive |
+| 530           | 2        | Supported      |
+| 530_438b24    | 2        | Non-conclusive |
+| 530a1         | 4        | Non-conclusive |
+| 530a58d8      | 4        | Non-conclusive |
+| 530ae7f       | 4        | Non-conclusive |
+| 530b927b      | 4        | Non-conclusive |
+| 531           | 8        | Supported      |
+| 5313b240      | 1        | Non-conclusive |
+| 531_9498f0    | 4        | Non-conclusive |
+| 532           | 8        | Supported      |
+| 532_0a02      | 4        | Non-conclusive |
+| 532a2f07      | 1        | Non-conclusive |
+| 533_6c915     | 2        | Non-conclusive |
+| 533_7         | 2        | Non-conclusive |
+| 533_8829c7    | 2        | Non-conclusive |
+| 534_19d03     | 4        | Non-conclusive |
+| 534a6f01      | 4        | Non-conclusive |
+| 535           | 4        | Supported      |
+| 535O33        | 2        | Non-conclusive |
+| 535_0e1       | 4        | Non-conclusive |
+| 535_9         | 2        | Non-conclusive |
+| 536           | 4        | Supported      |
+| 536_5e852     | 2        | Non-conclusive |
+| 536a1c98      | 4        | Non-conclusive |
+| 537           | 6        | Supported      |
+| 537-2         | 4        | Non-conclusive |
+| 5374dac2      | 4        | Non-conclusive |
+| 5376_45e5     | 2        | Non-conclusive |
+| 5376fbce      | 8        | Non-conclusive |
+| 5377_45e5     | 2        | Non-conclusive |
+| 537_298d96    | 2        | Non-conclusive |
+| 537_49393     | 2        | Non-conclusive |
+| 5382          | 4        | Supported      |
+| 539_1c9       | 4        | Non-conclusive |
+| 539a6e27      | 4        | Non-conclusive |
+| 539bec05      | 4        | Non-conclusive |
+| 53_03f29      | 1        | Non-conclusive |
+| 53_1          | 4        | Non-conclusive |
+| 53_11         | 4        | Non-conclusive |
+| 53_154638     | 1        | Non-conclusive |
+| 53_191        | 2        | Non-conclusive |
+| 53_1a10       | 2        | Non-conclusive |
+| 53_26f147     | 4        | Non-conclusive |
+| 53_3          | 4        | Non-conclusive |
+| 53_303        | 2        | Non-conclusive |
+| 53_30c28      | 2        | Non-conclusive |
+| 53_32         | 4        | Non-conclusive |
+| 53_3411c28    | 2        | Non-conclusive |
+| 53_4c54       | 1        | Non-conclusive |
+| 53_5123       | 2        | Non-conclusive |
+| 53_55d61      | 4        | Non-conclusive |
+| 53_5b3        | 1        | Non-conclusive |
+| 53_5e9        | 2        | Non-conclusive |
+| 53_6f43397    | 2        | Non-conclusive |
+| 53_71         | 1        | Non-conclusive |
+| 53_73c8112    | 2        | Non-conclusive |
+| 53_769f162    | 2        | Non-conclusive |
+| 53_7849e0     | 2        | Non-conclusive |
+| 53_7a822      | 1        | Non-conclusive |
+| 53_887a4      | 2        | Non-conclusive |
+| 53_8c5        | 2        | Non-conclusive |
+| 53_907a95     | 2        | Non-conclusive |
+| 53_951e9      | 1        | Non-conclusive |
+| 53_99167      | 2        | Non-conclusive |
+| 53a09e22      | 1        | Non-conclusive |
+| 53a59e1       | 4        | Non-conclusive |
+| 53bf7d8c      | 4        | Non-conclusive |
+| 53dad913      | 1        | Non-conclusive |
+| 53dc7b99      | 1        | Non-conclusive |
+| 53e15bab      | 4        | Non-conclusive |
+| 53edc594      | 1        | Non-conclusive |
+| 53f7f752      | 8        | Non-conclusive |
+| 54            | 30       | Supported      |
+| 54-38-626     | 4        | Non-conclusive |
+| 54-49-056     | 4        | Non-conclusive |
+| 540           | 4        | Supported      |
+| 541a2eaa      | 4        | Non-conclusive |
+| 542           | 5        | Supported      |
+| 5432          | 5        | Supported      |
+| 544           | 20       | Supported      |
+| 5445          | 2        | Supported      |
+| 5455e0a4      | 17       | Non-conclusive |
+| 545d7d41      | 1        | Non-conclusive |
+| 545e7a8a      | 10       | Non-conclusive |
+| 5467bec1      | 4        | Non-conclusive |
+| 5469a2af      | 1        | Non-conclusive |
+| 546_28843     | 2        | Non-conclusive |
+| 546_8f3       | 4        | Non-conclusive |
+| 547_28843     | 2        | Non-conclusive |
+| 5485_0594     | 2        | Non-conclusive |
+| 5485_5d9      | 2        | Non-conclusive |
+| 549           | 5        | Supported      |
+| 549c211a      | 4        | Non-conclusive |
+| 54_0d9        | 2        | Non-conclusive |
+| 54_11921e0    | 2        | Non-conclusive |
+| 54_18325a9    | 2        | Non-conclusive |
+| 54_1b824      | 1        | Non-conclusive |
+| 54_1d777      | 4        | Non-conclusive |
+| 54_20         | 2        | Non-conclusive |
+| 54_24b486     | 2        | Non-conclusive |
+| 54_3          | 2        | Non-conclusive |
+| 54_33         | 4        | Non-conclusive |
+| 54_349f536    | 2        | Non-conclusive |
+| 54_3654d5     | 1        | Non-conclusive |
+| 54_36e1       | 4        | Non-conclusive |
+| 54_3762102    | 2        | Non-conclusive |
+| 54_3d626      | 4        | Non-conclusive |
+| 54_3f31       | 1        | Non-conclusive |
+| 54_40         | 2        | Non-conclusive |
+| 54_4a14200    | 8        | Non-conclusive |
+| 54_5          | 1        | Non-conclusive |
+| 54_5028f7     | 2        | Non-conclusive |
+| 54_57e3       | 1        | Non-conclusive |
+| 54_589a867    | 2        | Non-conclusive |
+| 54_5a09       | 2        | Non-conclusive |
+| 54_61b8       | 1        | Non-conclusive |
+| 54_62519      | 2        | Non-conclusive |
+| 54_64839      | 2        | Non-conclusive |
+| 54_69483b2    | 2        | Non-conclusive |
+| 54_6b248      | 1        | Non-conclusive |
+| 54_721        | 4        | Non-conclusive |
+| 54_74         | 2        | Non-conclusive |
+| 54_75         | 2        | Non-conclusive |
+| 54_79e4       | 2        | Non-conclusive |
+| 54_8          | 2        | Non-conclusive |
+| 54_82         | 2        | Non-conclusive |
+| 54_845155     | 2        | Non-conclusive |
+| 54_9          | 4        | Non-conclusive |
+| 54_98a58      | 2        | Non-conclusive |
+| 54_9a7        | 4        | Non-conclusive |
+| 54_9d3        | 4        | Non-conclusive |
+| 54a7b6e4      | 1        | Non-conclusive |
+| 54c4377a      | 4        | Non-conclusive |
+| 54c6241a      | 4        | Non-conclusive |
+| 54cea2b       | 4        | Non-conclusive |
+| 54d1c5cd      | 4        | Non-conclusive |
+| 54ea1e3cb2    | 8        | Non-conclusive |
+| 54f64416      | 12       | Non-conclusive |
+| 54fe9ba       | 4        | Non-conclusive |
+| 55            | 63       | Supported      |
+| 55-34-813     | 4        | Non-conclusive |
+| 55-35-000     | 4        | Non-conclusive |
+| 550_2f4       | 2        | Non-conclusive |
+| 551c7641      | 4        | Non-conclusive |
+| 552           | 4        | Supported      |
+| 552_4b8       | 2        | Non-conclusive |
+| 553           | 2        | Supported      |
+| 5534_8a1      | 4        | Non-conclusive |
+| 553_3a54      | 2        | Non-conclusive |
+| 553f3         | 4        | Non-conclusive |
+| 554.23        | 5        | Supported      |
+| 5548          | 4        | Supported      |
+| 554_28f0      | 2        | Non-conclusive |
+| 5556          | 1        | Supported      |
+| 5558c2cf      | 21       | Non-conclusive |
+| 555_5         | 2        | Non-conclusive |
+| 5560          | 5        | Supported      |
+| 556_759a8     | 2        | Non-conclusive |
+| 557af2c6      | 4        | Non-conclusive |
+| 5582          | 1        | Supported      |
+| 558bc52       | 1        | Non-conclusive |
+| 558e190       | 2        | Non-conclusive |
+| 559           | 4        | Supported      |
+| 5590cd06      | 1        | Non-conclusive |
+| 5594a7be      | 8        | Non-conclusive |
+| 559_182c8     | 2        | Non-conclusive |
+| 55_02c22      | 2        | Non-conclusive |
+| 55_07         | 2        | Non-conclusive |
+| 55_20         | 2        | Non-conclusive |
+| 55_20f9       | 2        | Non-conclusive |
+| 55_248        | 2        | Non-conclusive |
+| 55_24e0       | 4        | Non-conclusive |
+| 55_2a05       | 2        | Non-conclusive |
+| 55_2b851      | 2        | Non-conclusive |
+| 55_2d5182     | 2        | Non-conclusive |
+| 55_30c28      | 4        | Non-conclusive |
+| 55_4          | 2        | Non-conclusive |
+| 55_44d048     | 2        | Non-conclusive |
+| 55_4d7        | 2        | Non-conclusive |
+| 55_56         | 2        | Non-conclusive |
+| 55_597        | 2        | Non-conclusive |
+| 55_68242d0    | 2        | Non-conclusive |
+| 55_6b979      | 2        | Non-conclusive |
+| 55_7          | 4        | Non-conclusive |
+| 55_706d18     | 4        | Non-conclusive |
+| 55_73         | 1        | Non-conclusive |
+| 55_7339b72    | 2        | Non-conclusive |
+| 55_8          | 2        | Non-conclusive |
+| 55_8791       | 2        | Non-conclusive |
+| 55_887        | 2        | Non-conclusive |
+| 55_88d73      | 4        | Non-conclusive |
+| 55_8d04       | 1        | Non-conclusive |
+| 55_9258       | 4        | Non-conclusive |
+| 55_9d3        | 2        | Non-conclusive |
+| 55a0          | 24       | Non-conclusive |
+| 55a991aae3    | 1        | Non-conclusive |
+| 55aaf332      | 4        | Non-conclusive |
+| 55ad5c6       | 4        | Non-conclusive |
+| 55c5e1ab      | 4        | Non-conclusive |
+| 55c69b1       | 4        | Non-conclusive |
+| 55f0a8d5      | 1        | Non-conclusive |
+| 56            | 49       | Supported      |
+| 56-20-681     | 4        | Non-conclusive |
+| 56-33-963     | 4        | Non-conclusive |
+| 560           | 19       | Supported      |
+| 561           | 4        | Supported      |
+| 561e5         | 8        | Non-conclusive |
+| 562           | 3        | Supported      |
+| 5620a1ba      | 4        | Non-conclusive |
+| 562a783e      | 4        | Non-conclusive |
+| 5630          | 4        | Supported      |
+| 5637c40f      | 2        | Non-conclusive |
+| 563_25d6      | 1        | Non-conclusive |
+| 563c60c7      | 4        | Non-conclusive |
+| 564           | 2        | Supported      |
+| 565_3c2       | 2        | Non-conclusive |
+| 565_5         | 2        | Non-conclusive |
+| 565_5e3       | 2        | Non-conclusive |
+| 566           | 2        | Supported      |
+| 5665-61f0     | 1        | Non-conclusive |
+| 5669_23a8     | 2        | Non-conclusive |
+| 5669_3        | 2        | Non-conclusive |
+| 566_23b23     | 2        | Non-conclusive |
+| 566_4f9       | 2        | Non-conclusive |
+| 566e8ace      | 1        | Non-conclusive |
+| 567           | 2        | Supported      |
+| 567_4f9       | 2        | Non-conclusive |
+| 567_7         | 2        | Non-conclusive |
+| 568_5f68      | 4        | Non-conclusive |
+| 568_648b41    | 4        | Non-conclusive |
+| 569           | 2        | Supported      |
+| 5697          | 6        | Supported      |
+| 569_08c44     | 2        | Non-conclusive |
+| 569_81        | 1        | Non-conclusive |
+| 56B124z6      | 4        | Non-conclusive |
+| 56_0          | 2        | Non-conclusive |
+| 56_0606e7     | 2        | Non-conclusive |
+| 56_1          | 2        | Non-conclusive |
+| 56_115        | 2        | Non-conclusive |
+| 56_211777     | 2        | Non-conclusive |
+| 56_389e489    | 2        | Non-conclusive |
+| 56_4          | 2        | Non-conclusive |
+| 56_403f040    | 1        | Non-conclusive |
+| 56_448a757    | 2        | Non-conclusive |
+| 56_486853     | 4        | Non-conclusive |
+| 56_51         | 2        | Non-conclusive |
+| 56_55e5       | 2        | Non-conclusive |
+| 56_6          | 4        | Non-conclusive |
+| 56_60f777     | 2        | Non-conclusive |
+| 56_641d8      | 1        | Non-conclusive |
+| 56_668        | 2        | Non-conclusive |
+| 56_6c49       | 4        | Non-conclusive |
+| 56_6c5        | 2        | Non-conclusive |
+| 56_7a75       | 1        | Non-conclusive |
+| 56_7e31       | 2        | Non-conclusive |
+| 56_8          | 1        | Non-conclusive |
+| 56_8d1        | 4        | Non-conclusive |
+| 56_8e1        | 2        | Non-conclusive |
+| 56_8f5        | 2        | Non-conclusive |
+| 56_93d8       | 1        | Non-conclusive |
+| 56_96         | 1        | Non-conclusive |
+| 56a0f041ae    | 8        | Non-conclusive |
+| 56b188d7      | 4        | Non-conclusive |
+| 56b34d6a      | 4        | Non-conclusive |
+| 56c3713e      | 4        | Non-conclusive |
+| 56c6f3d0      | 4        | Non-conclusive |
+| 56d22a6b      | 1        | Non-conclusive |
+| 56eadbe2      | 4        | Non-conclusive |
+| 56ee078c58    | 4        | Non-conclusive |
+| 57            | 47       | Supported      |
+| 570           | 2        | Supported      |
+| 5706a874      | 4        | Non-conclusive |
+| 570_39        | 2        | Non-conclusive |
+| 5711af6db8    | 8        | Non-conclusive |
+| 5718          | 1        | Supported      |
+| 572           | 2        | Supported      |
+| 5720a5ac      | 4        | Non-conclusive |
+| 572_2         | 2        | Non-conclusive |
+| 573           | 6        | Supported      |
+| 573_2f16      | 2        | Non-conclusive |
+| 573_54        | 2        | Non-conclusive |
+| 573_7c190     | 2        | Non-conclusive |
+| 574           | 5        | Supported      |
+| 575           | 4        | Supported      |
+| 5750          | 4        | Supported      |
+| 575f30e7c0    | 12       | Non-conclusive |
+| 576           | 12       | Supported      |
+| 576_0         | 4        | Non-conclusive |
+| 576_57368     | 2        | Non-conclusive |
+| 576_9b52      | 1        | Non-conclusive |
+| 576c42d2      | 4        | Non-conclusive |
+| 577_103       | 1        | Non-conclusive |
+| 57G2M5        | 4        | Non-conclusive |
+| 57_03         | 4        | Non-conclusive |
+| 57_03c4       | 2        | Non-conclusive |
+| 57_03e54      | 2        | Non-conclusive |
+| 57_0b111      | 2        | Non-conclusive |
+| 57_0c058      | 2        | Non-conclusive |
+| 57_1210f2     | 4        | Non-conclusive |
+| 57_14         | 2        | Non-conclusive |
+| 57_1883       | 4        | Non-conclusive |
+| 57_342a14     | 2        | Non-conclusive |
+| 57_3a533      | 4        | Non-conclusive |
+| 57_3e859      | 2        | Non-conclusive |
+| 57_5          | 4        | Non-conclusive |
+| 57_55         | 4        | Non-conclusive |
+| 57_56         | 4        | Non-conclusive |
+| 57_614        | 4        | Non-conclusive |
+| 57_62         | 2        | Non-conclusive |
+| 57_62860      | 2        | Non-conclusive |
+| 57_699145     | 2        | Non-conclusive |
+| 57_6c58989    | 1        | Non-conclusive |
+| 57_6d093      | 4        | Non-conclusive |
+| 57_73         | 2        | Non-conclusive |
+| 57_76f6       | 4        | Non-conclusive |
+| 57_7b8        | 4        | Non-conclusive |
+| 57_84c979     | 2        | Non-conclusive |
+| 57_8648c12    | 2        | Non-conclusive |
+| 57_9          | 2        | Non-conclusive |
+| 57_90a5       | 2        | Non-conclusive |
+| 57_91f559     | 4        | Non-conclusive |
+| 57_9b6        | 2        | Non-conclusive |
+| 57a18e8b      | 4        | Non-conclusive |
+| 57c18107      | 1        | Non-conclusive |
+| 57c2530       | 4        | Non-conclusive |
+| 57c611a4      | 12       | Non-conclusive |
+| 57dbebd2      | 4        | Non-conclusive |
+| 57dc347cc9    | 12       | Non-conclusive |
+| 57f33a8c      | 4        | Non-conclusive |
+| 58            | 23       | Supported      |
+| 580           | 6        | Supported      |
+| 580P12        | 8        | Non-conclusive |
+| 580_92e1      | 4        | Non-conclusive |
+| 580df272      | 4        | Non-conclusive |
+| 581           | 2        | Supported      |
+| 581_97424     | 2        | Non-conclusive |
+| 5827          | 4        | Supported      |
+| 582_7766      | 2        | Non-conclusive |
+| 582_7e1912    | 2        | Non-conclusive |
+| 583_365       | 4        | Non-conclusive |
+| 584_8         | 2        | Non-conclusive |
+| 5859          | 4        | Supported      |
+| 585_02        | 2        | Non-conclusive |
+| 585b66964f    | 4        | Non-conclusive |
+| 5869c3de      | 4        | Non-conclusive |
+| 5869c9        | 4        | Non-conclusive |
+| 5869c96       | 16       | Non-conclusive |
+| 5869c96c      | 5        | Non-conclusive |
+| 5869c96cc8    | 4        | Non-conclusive |
+| 586_5e121     | 2        | Non-conclusive |
+| 588_47d1      | 4        | Non-conclusive |
+| 589           | 8        | Supported      |
+| 589_40e57     | 4        | Non-conclusive |
+| 589_7386      | 1        | Non-conclusive |
+| 58_03a9       | 2        | Non-conclusive |
+| 58_04d72      | 4        | Non-conclusive |
+| 58_08c6       | 2        | Non-conclusive |
+| 58_13855      | 4        | Non-conclusive |
+| 58_1730f10    | 4        | Non-conclusive |
+| 58_1943       | 1        | Non-conclusive |
+| 58_23822      | 2        | Non-conclusive |
+| 58_27         | 2        | Non-conclusive |
+| 58_2b809      | 1        | Non-conclusive |
+| 58_2e1        | 1        | Non-conclusive |
+| 58_31212      | 4        | Non-conclusive |
+| 58_32c495     | 2        | Non-conclusive |
+| 58_369e93     | 2        | Non-conclusive |
+| 58_3c7        | 4        | Non-conclusive |
+| 58_4          | 2        | Non-conclusive |
+| 58_416        | 4        | Non-conclusive |
+| 58_4792b63    | 4        | Non-conclusive |
+| 58_50f029     | 2        | Non-conclusive |
+| 58_6          | 4        | Non-conclusive |
+| 58_62a0       | 1        | Non-conclusive |
+| 58_67b875     | 4        | Non-conclusive |
+| 58_7          | 1        | Non-conclusive |
+| 58_78b8       | 2        | Non-conclusive |
+| 58_8          | 1        | Non-conclusive |
+| 58_978        | 4        | Non-conclusive |
+| 58_980        | 1        | Non-conclusive |
+| 58_9b2478     | 4        | Non-conclusive |
+| 58a28         | 4        | Non-conclusive |
+| 58a49b3689    | 1        | Non-conclusive |
+| 58be3dc3      | 4        | Non-conclusive |
+| 58c59d6ba7    | 4        | Non-conclusive |
+| 58c74469      | 4        | Non-conclusive |
+| 58c9cbae      | 4        | Non-conclusive |
+| 58de8342      | 4        | Non-conclusive |
+| 58dee925      | 4        | Non-conclusive |
+| 58deef9b      | 1        | Non-conclusive |
+| 58edb1ed      | 4        | Non-conclusive |
+| 58f863f1      | 2        | Non-conclusive |
+| 59            | 48       | Supported      |
+| 59-09-756     | 4        | Non-conclusive |
+| 5905b3c1      | 4        | Non-conclusive |
+| 590_04651     | 4        | Non-conclusive |
+| 590_5d86      | 4        | Non-conclusive |
+| 590e3ceb      | 1        | Non-conclusive |
+| 591           | 3        | Supported      |
+| 591_9709d6    | 2        | Non-conclusive |
+| 591ba1da      | 4        | Non-conclusive |
+| 592           | 1        | Supported      |
+| 593           | 8        | Supported      |
+| 5936bb9e1e    | 4        | Non-conclusive |
+| 593E2268      | 4        | Non-conclusive |
+| 593_452e25    | 4        | Non-conclusive |
+| 593b8940      | 1        | Non-conclusive |
+| 5960_61f23    | 4        | Non-conclusive |
+| 596_3         | 4        | Non-conclusive |
+| 596_33411     | 4        | Non-conclusive |
+| 597           | 2        | Supported      |
+| 598           | 9        | Supported      |
+| 598_1         | 4        | Non-conclusive |
+| 598_2e6       | 2        | Non-conclusive |
+| 599           | 20       | Supported      |
+| 599_0         | 2        | Non-conclusive |
+| 599e5d37      | 1        | Non-conclusive |
+| 599f7d6f      | 4        | Non-conclusive |
+| 59E56945      | 4        | Non-conclusive |
+| 59_03         | 1        | Non-conclusive |
+| 59_08f3       | 2        | Non-conclusive |
+| 59_173f5      | 4        | Non-conclusive |
+| 59_17775f8    | 2        | Non-conclusive |
+| 59_1b68       | 2        | Non-conclusive |
+| 59_226560     | 2        | Non-conclusive |
+| 59_292e66     | 1        | Non-conclusive |
+| 59_4          | 2        | Non-conclusive |
+| 59_424b6      | 2        | Non-conclusive |
+| 59_44         | 4        | Non-conclusive |
+| 59_4a84986    | 1        | Non-conclusive |
+| 59_5f0        | 2        | Non-conclusive |
+| 59_7          | 2        | Non-conclusive |
+| 59_70a8       | 4        | Non-conclusive |
+| 59_75c8456    | 4        | Non-conclusive |
+| 59_8082e40    | 4        | Non-conclusive |
+| 59_81f2       | 1        | Non-conclusive |
+| 59_96         | 4        | Non-conclusive |
+| 59_9a4        | 4        | Non-conclusive |
+| 59_9a48181    | 2        | Non-conclusive |
+| 59a7f65       | 4        | Non-conclusive |
+| 59ad48f       | 2        | Non-conclusive |
+| 59adced665    | 4        | Non-conclusive |
+| 59b6d85       | 2        | Non-conclusive |
+| 59bae3bb      | 4        | Non-conclusive |
+| 59c0bcef      | 2        | Non-conclusive |
+| 59c81df6      | 1        | Non-conclusive |
+| 59ca5080      | 4        | Non-conclusive |
+| 59d661fe      | 1        | Non-conclusive |
+| 59d8c23f      | 4        | Non-conclusive |
+| 59dfb03e      | 4        | Non-conclusive |
+| 59e3ee74      | 4        | Non-conclusive |
+| 59e86         | 1        | Non-conclusive |
+| 59ffeb072c    | 1        | Non-conclusive |
+| 5@0.1         | 4        | Non-conclusive |
+| 5@1.1         | 6        | Non-conclusive |
+| 5B07          | 24       | Non-conclusive |
+| 5B1%5         | 10       | Non-conclusive |
+| 5B2%5         | 4        | Non-conclusive |
+| 5B7           | 3        | Non-conclusive |
+| 5C3           | 1        | Non-conclusive |
+| 5E4.6         | 4        | Non-conclusive |
+| 5F0EAAB4      | 4        | Non-conclusive |
+| 5F4           | 1        | Non-conclusive |
+| 5F63          | 9        | Non-conclusive |
+| 5I6           | 4        | Non-conclusive |
+| 5J3           | 4        | Non-conclusive |
+| 5K0           | 8        | Non-conclusive |
+| 5O5I0         | 12       | Non-conclusive |
+| 5R6Y3         | 1        | Non-conclusive |
+| 5R9           | 1        | Non-conclusive |
+| 5Y2           | 2        | Non-conclusive |
+| 5_001         | 2        | Non-conclusive |
+| 5_01922d01    | 2        | Non-conclusive |
+| 5_02          | 4        | Non-conclusive |
+| 5_0_0         | 1        | Non-conclusive |
+| 5_0_1         | 4        | Non-conclusive |
+| 5_0_2         | 30       | Non-conclusive |
+| 5_0a647       | 1        | Non-conclusive |
+| 5_1           | 34       | Non-conclusive |
+| 5_1490a4      | 2        | Non-conclusive |
+| 5_1527b1      | 2        | Non-conclusive |
+| 5_18139       | 2        | Non-conclusive |
+| 5_1_0         | 30       | Non-conclusive |
+| 5_1_1         | 8        | Non-conclusive |
+| 5_1_3         | 85       | Non-conclusive |
+| 5_1b01        | 1        | Non-conclusive |
+| 5_1c942       | 2        | Non-conclusive |
+| 5_2           | 18       | Non-conclusive |
+| 5_29          | 2        | Non-conclusive |
+| 5_2_0         | 330      | Non-conclusive |
+| 5_2_2         | 8        | Non-conclusive |
+| 5_2e793       | 2        | Non-conclusive |
+| 5_3           | 1        | Non-conclusive |
+| 5_3e3         | 1        | Non-conclusive |
+| 5_4           | 8        | Non-conclusive |
+| 5_4e8         | 4        | Non-conclusive |
+| 5_5           | 2        | Non-conclusive |
+| 5_507e6       | 2        | Non-conclusive |
+| 5_585d387     | 2        | Non-conclusive |
+| 5_5_11        | 4        | Non-conclusive |
+| 5_5a223       | 1        | Non-conclusive |
+| 5_5e35        | 2        | Non-conclusive |
+| 5_5f901       | 1        | Non-conclusive |
+| 5_6           | 4        | Non-conclusive |
+| 5_655         | 4        | Non-conclusive |
+| 5_65901d0     | 4        | Non-conclusive |
+| 5_68          | 2        | Non-conclusive |
+| 5_6_10        | 4        | Non-conclusive |
+| 5_72952a4     | 4        | Non-conclusive |
+| 5_7473453     | 4        | Non-conclusive |
+| 5_7731        | 1        | Non-conclusive |
+| 5_789b0       | 4        | Non-conclusive |
+| 5_7_1         | 1        | Non-conclusive |
+| 5_8c141223    | 1        | Non-conclusive |
+| 5a013383      | 4        | Non-conclusive |
+| 5a1           | 4        | Non-conclusive |
+| 5a208e41      | 4        | Non-conclusive |
+| 5a3f9a71      | 1        | Non-conclusive |
+| 5a4b4405d6    | 1        | Non-conclusive |
+| 5a521ce       | 8        | Non-conclusive |
+| 5a5b500d      | 4        | Non-conclusive |
+| 5a6282d1      | 4        | Non-conclusive |
+| 5a62ab5d      | 12       | Non-conclusive |
+| 5a63fcd9      | 4        | Non-conclusive |
+| 5a6e06c333    | 8        | Non-conclusive |
+| 5a73bcc5      | 4        | Non-conclusive |
+| 5a991bff      | 4        | Non-conclusive |
+| 5aa1f6a       | 5        | Non-conclusive |
+| 5aa3dd80      | 1        | Non-conclusive |
+| 5aa52a78      | 4        | Non-conclusive |
+| 5aa94cc9      | 4        | Non-conclusive |
+| 5aaa9303      | 1        | Non-conclusive |
+| 5ac2a578      | 4        | Non-conclusive |
+| 5ac5bca1      | 4        | Non-conclusive |
+| 5acc825a      | 4        | Non-conclusive |
+| 5ae4c068      | 8        | Non-conclusive |
+| 5b01258e      | 1        | Non-conclusive |
+| 5b0e8918      | 4        | Non-conclusive |
+| 5b1d42b8      | 1        | Non-conclusive |
+| 5b21          | 13       | Non-conclusive |
+| 5b26f52f      | 1        | Non-conclusive |
+| 5b2r9         | 28       | Non-conclusive |
+| 5b3           | 4        | Non-conclusive |
+| 5b31          | 11       | Non-conclusive |
+| 5b61ac10      | 8        | Non-conclusive |
+| 5b6a3196      | 4        | Non-conclusive |
+| 5b75          | 16       | Non-conclusive |
+| 5b788d5a      | 4        | Non-conclusive |
+| 5b8c98c9      | 1        | Non-conclusive |
+| 5b993ddc      | 1        | Non-conclusive |
+| 5b9944e4      | 8        | Non-conclusive |
+| 5b9f3fdf      | 5        | Non-conclusive |
+| 5ba37ad9      | 4        | Non-conclusive |
+| 5bafccae      | 4        | Non-conclusive |
+| 5bc7b6aa      | 4        | Non-conclusive |
+| 5bcce4da      | 4        | Non-conclusive |
+| 5bf112c5      | 2        | Non-conclusive |
+| 5bfa68f6      | 16       | Non-conclusive |
+| 5c0cad54      | 1        | Non-conclusive |
+| 5c10a7ba      | 4        | Non-conclusive |
+| 5c11b3e2      | 1        | Non-conclusive |
+| 5c17c195      | 1        | Non-conclusive |
+| 5c1cb6aa      | 4        | Non-conclusive |
+| 5c20d2e5      | 4        | Non-conclusive |
+| 5c355988      | 4        | Non-conclusive |
+| 5c3a3c84      | 4        | Non-conclusive |
+| 5c4.3         | 57       | Non-conclusive |
+| 5c5ac4ae      | 4        | Non-conclusive |
+| 5c5c689b      | 1        | Non-conclusive |
+| 5c72434d      | 4        | Non-conclusive |
+| 5c8237c5      | 4        | Non-conclusive |
+| 5c9cf3d7      | 4        | Non-conclusive |
+| 5ca74d8a      | 4        | Non-conclusive |
+| 5cc5374613    | 138      | Non-conclusive |
+| 5cc9a6ce      | 4        | Non-conclusive |
+| 5cd0c951      | 1        | Non-conclusive |
+| 5ced4eea      | 2        | Non-conclusive |
+| 5d1cfb04      | 4        | Non-conclusive |
+| 5d28851c      | 4        | Non-conclusive |
+| 5d3           | 2        | Non-conclusive |
+| 5d3506e0      | 4        | Non-conclusive |
+| 5d43fc7e      | 4        | Non-conclusive |
+| 5d44e774      | 4        | Non-conclusive |
+| 5d5357cb      | 16       | Non-conclusive |
+| 5d5357cb37    | 2        | Non-conclusive |
+| 5d679e9e      | 4        | Non-conclusive |
+| 5d711738      | 2        | Non-conclusive |
+| 5d7c9b36      | 36       | Non-conclusive |
+| 5d7e4719      | 1        | Non-conclusive |
+| 5d7u1         | 4        | Non-conclusive |
+| 5d81f977      | 4        | Non-conclusive |
+| 5d841ac1e5    | 4        | Non-conclusive |
+| 5daa9e50      | 1        | Non-conclusive |
+| 5db4c53a      | 5        | Non-conclusive |
+| 5dd9077d      | 1        | Non-conclusive |
+| 5de16aaf      | 4        | Non-conclusive |
+| 5e001f1a59    | 4        | Non-conclusive |
+| 5e06bd61      | 4        | Non-conclusive |
+| 5e15f6a6      | 8        | Non-conclusive |
+| 5e196804      | 4        | Non-conclusive |
+| 5e2177f4      | 2        | Non-conclusive |
+| 5e21a45f      | 4        | Non-conclusive |
+| 5e2596c2      | 24       | Non-conclusive |
+| 5e2c2b6       | 4        | Non-conclusive |
+| 5e2e8e36      | 4        | Non-conclusive |
+| 5e3519e6      | 4        | Non-conclusive |
+| 5e481f1a      | 4        | Non-conclusive |
+| 5e512fe9      | 1        | Non-conclusive |
+| 5e67dbff80    | 4        | Non-conclusive |
+| 5e69d4a8      | 4        | Non-conclusive |
+| 5e759566      | 4        | Non-conclusive |
+| 5e77f863      | 4        | Non-conclusive |
+| 5e8           | 8        | Non-conclusive |
+| 5e85          | 1        | Non-conclusive |
+| 5e85408d      | 4        | Non-conclusive |
+| 5e95ae9a      | 8        | Non-conclusive |
+| 5eb43222      | 1        | Non-conclusive |
+| 5ebeb66d      | 4        | Non-conclusive |
+| 5ec4348e      | 4        | Non-conclusive |
+| 5ed0c774      | 4        | Non-conclusive |
+| 5f13388a      | 4        | Non-conclusive |
+| 5f252acd      | 1        | Non-conclusive |
+| 5f28d8b3      | 1        | Non-conclusive |
+| 5f3b3e9       | 4        | Non-conclusive |
+| 5f3f5da9      | 4        | Non-conclusive |
+| 5f45619       | 4        | Non-conclusive |
+| 5f5b8458      | 10       | Non-conclusive |
+| 5f686835      | 4        | Non-conclusive |
+| 5f7805fc      | 1        | Non-conclusive |
+| 5f86ad9d      | 1        | Non-conclusive |
+| 5f9c1dfc      | 1        | Non-conclusive |
+| 5fb0da25      | 4        | Non-conclusive |
+| 5fb8716b      | 4        | Non-conclusive |
+| 5fb96bd5      | 2        | Non-conclusive |
+| 5fc7333c      | 4        | Non-conclusive |
+| 5fcd7f6345    | 4        | Non-conclusive |
+| 5fee8cb       | 8        | Non-conclusive |
+| 5h0S1         | 4        | Non-conclusive |
+| 5h2I9         | 2        | Non-conclusive |
+| 5n1           | 1        | Non-conclusive |
+| 5n9           | 4        | Non-conclusive |
+| 5o6o4         | 4        | Non-conclusive |
+| 5s4k2         | 4        | Non-conclusive |
+| 5t4           | 1        | Non-conclusive |
+| 5z14          | 1        | Non-conclusive |
+| 6             | 3163     | Supported      |
+| 6%9           | 4        | Non-conclusive |
+| 6-1396        | 6        | Non-conclusive |
+| 6-3-0         | 4        | Non-conclusive |
+| 6.0           | 14       | Supported      |
+| 6.0-1         | 21       | Non-conclusive |
+| 6.0-2         | 12       | Non-conclusive |
+| 6.0-3         | 4        | Non-conclusive |
+| 6.0.0         | 16       | Supported      |
+| 6.0.1         | 18       | Supported      |
+| 6.0.12        | 4        | Supported      |
+| 6.0.13        | 1        | Supported      |
+| 6.0.16        | 36       | Supported      |
+| 6.0.17        | 12       | Supported      |
+| 6.0.2         | 42       | Supported      |
+| 6.0.3         | 414      | Supported      |
+| 6.0.4         | 75       | Supported      |
+| 6.0.5         | 5        | Supported      |
+| 6.0.6         | 25       | Supported      |
+| 6.08.52       | 2        | Supported      |
+| 6.1           | 21       | Supported      |
+| 6.1.0         | 18       | Supported      |
+| 6.1.1         | 1234     | Supported      |
+| 6.1.2         | 4        | Supported      |
+| 6.1.3         | 8        | Supported      |
+| 6.1.33        | 1        | Supported      |
+| 6.1.37        | 2        | Supported      |
+| 6.1.4         | 32       | Supported      |
+| 6.1.41        | 4        | Supported      |
+| 6.1.5         | 18       | Supported      |
+| 6.1.6         | 5        | Supported      |
+| 6.1.8         | 4        | Supported      |
+| 6.10.0        | 17       | Supported      |
+| 6.10.2        | 4        | Supported      |
+| 6.12.1        | 4        | Supported      |
+| 6.2           | 2        | Supported      |
+| 6.2.0         | 24       | Supported      |
+| 6.2.1         | 99       | Supported      |
+| 6.2.2         | 5        | Supported      |
+| 6.2.3         | 10       | Supported      |
+| 6.2.4         | 18       | Supported      |
+| 6.2.6         | 4        | Supported      |
+| 6.2.8         | 4        | Supported      |
+| 6.2.9         | 4        | Supported      |
+| 6.3           | 8        | Supported      |
+| 6.3-917568    | 4        | Non-conclusive |
+| 6.3.0         | 4        | Supported      |
+| 6.3.2         | 4        | Supported      |
+| 6.3.3         | 8        | Supported      |
+| 6.3.6         | 4        | Supported      |
+| 6.4           | 4        | Supported      |
+| 6.4.0         | 16       | Supported      |
+| 6.4.1         | 12       | Supported      |
+| 6.4.2         | 15       | Supported      |
+| 6.5.0         | 4        | Supported      |
+| 6.5.1         | 5        | Supported      |
+| 6.5.11        | 8        | Supported      |
+| 6.5.2         | 4        | Supported      |
+| 6.5.3         | 12       | Supported      |
+| 6.5.4         | 37       | Supported      |
+| 6.57.2        | 1        | Supported      |
+| 6.6.0         | 11       | Supported      |
+| 6.6.1         | 21       | Supported      |
+| 6.6.6         | 4        | Supported      |
+| 6.83.0        | 4        | Supported      |
+| 6.9.0         | 13       | Supported      |
+| 60            | 24       | Supported      |
+| 600           | 2        | Supported      |
+| 600_460       | 2        | Non-conclusive |
+| 601           | 2        | Supported      |
+| 601_31        | 2        | Non-conclusive |
+| 602           | 2        | Supported      |
+| 6020fefe      | 1        | Non-conclusive |
+| 602_103f07    | 4        | Non-conclusive |
+| 603_4         | 1        | Non-conclusive |
+| 6044.66382    | 4        | Supported      |
+| 605           | 36       | Supported      |
+| 605ac746      | 4        | Non-conclusive |
+| 6065          | 4        | Supported      |
+| 606_7         | 4        | Non-conclusive |
+| 607           | 4        | Supported      |
+| 6079_61f23    | 4        | Non-conclusive |
+| 607_30b4      | 2        | Non-conclusive |
+| 607_5e5       | 2        | Non-conclusive |
+| 607_6b9       | 2        | Non-conclusive |
+| 609_6b9       | 2        | Non-conclusive |
+| 60L9          | 8        | Non-conclusive |
+| 60_05b6648    | 2        | Non-conclusive |
+| 60_07d3       | 2        | Non-conclusive |
+| 60_0c0        | 2        | Non-conclusive |
+| 60_1          | 1        | Non-conclusive |
+| 60_182e55     | 4        | Non-conclusive |
+| 60_2a5        | 2        | Non-conclusive |
+| 60_2b3746     | 2        | Non-conclusive |
+| 60_30836d7    | 2        | Non-conclusive |
+| 60_30c28      | 2        | Non-conclusive |
+| 60_3c0        | 2        | Non-conclusive |
+| 60_465e4      | 4        | Non-conclusive |
+| 60_4729       | 4        | Non-conclusive |
+| 60_5          | 6        | Non-conclusive |
+| 60_5036d9     | 1        | Non-conclusive |
+| 60_52         | 4        | Non-conclusive |
+| 60_5526c22    | 1        | Non-conclusive |
+| 60_5700f36    | 2        | Non-conclusive |
+| 60_5d8        | 1        | Non-conclusive |
+| 60_5f95       | 2        | Non-conclusive |
+| 60_6          | 2        | Non-conclusive |
+| 60_69         | 2        | Non-conclusive |
+| 60_6b248      | 2        | Non-conclusive |
+| 60_7          | 2        | Non-conclusive |
+| 60_72b627     | 2        | Non-conclusive |
+| 60_7339b72    | 2        | Non-conclusive |
+| 60_74         | 2        | Non-conclusive |
+| 60_7893       | 2        | Non-conclusive |
+| 60_7a9414     | 2        | Non-conclusive |
+| 60_7b5        | 2        | Non-conclusive |
+| 60_7d21       | 1        | Non-conclusive |
+| 60_83b67      | 2        | Non-conclusive |
+| 60_8526       | 1        | Non-conclusive |
+| 60_8b0        | 4        | Non-conclusive |
+| 60_8f52999    | 2        | Non-conclusive |
+| 60_92c0625    | 4        | Non-conclusive |
+| 60_9a78       | 2        | Non-conclusive |
+| 60_9e543      | 2        | Non-conclusive |
+| 60b92f82      | 4        | Non-conclusive |
+| 60bd049e      | 1        | Non-conclusive |
+| 60c17905      | 4        | Non-conclusive |
+| 60c63d52      | 4        | Non-conclusive |
+| 60cadd52      | 4        | Non-conclusive |
+| 60dc2b7e      | 8        | Non-conclusive |
+| 60e03e7a      | 4        | Non-conclusive |
+| 60f34141      | 1        | Non-conclusive |
+| 60fd0127      | 4        | Non-conclusive |
+| 61            | 29       | Supported      |
+| 610_3b59      | 4        | Non-conclusive |
+| 611           | 4        | Supported      |
+| 612b558a      | 5        | Non-conclusive |
+| 612e9ebd      | 1        | Non-conclusive |
+| 613d6521      | 8        | Non-conclusive |
+| 614           | 4        | Supported      |
+| 614_014b71    | 2        | Non-conclusive |
+| 614_876       | 4        | Non-conclusive |
+| 6150          | 1        | Supported      |
+| 6158b1a3      | 4        | Non-conclusive |
+| 615_279       | 2        | Non-conclusive |
+| 616           | 2        | Supported      |
+| 616D9CF3      | 4        | Non-conclusive |
+| 616_0         | 2        | Non-conclusive |
+| 616_02c5      | 2        | Non-conclusive |
+| 616_21a8      | 2        | Non-conclusive |
+| 616_6b68      | 2        | Non-conclusive |
+| 616e8a1       | 4        | Non-conclusive |
+| 617           | 5        | Supported      |
+| 6172cccdb4    | 4        | Non-conclusive |
+| 617_74        | 4        | Non-conclusive |
+| 618           | 2        | Supported      |
+| 618_220300    | 4        | Non-conclusive |
+| 619           | 1        | Supported      |
+| 6198          | 1        | Supported      |
+| 61_0          | 2        | Non-conclusive |
+| 61_011d27     | 2        | Non-conclusive |
+| 61_1          | 2        | Non-conclusive |
+| 61_1059b7     | 4        | Non-conclusive |
+| 61_16         | 2        | Non-conclusive |
+| 61_20c591     | 2        | Non-conclusive |
+| 61_2e5        | 2        | Non-conclusive |
+| 61_36308      | 2        | Non-conclusive |
+| 61_3789322    | 2        | Non-conclusive |
+| 61_44b00      | 2        | Non-conclusive |
+| 61_478b2      | 4        | Non-conclusive |
+| 61_4c448      | 4        | Non-conclusive |
+| 61_4f7        | 4        | Non-conclusive |
+| 61_539        | 4        | Non-conclusive |
+| 61_5d73       | 3        | Non-conclusive |
+| 61_5e816      | 2        | Non-conclusive |
+| 61_678b21     | 2        | Non-conclusive |
+| 61_68         | 2        | Non-conclusive |
+| 61_7          | 2        | Non-conclusive |
+| 61_71         | 2        | Non-conclusive |
+| 61_79205      | 2        | Non-conclusive |
+| 61_7a22       | 2        | Non-conclusive |
+| 61_7e37       | 2        | Non-conclusive |
+| 61_8          | 2        | Non-conclusive |
+| 61_828        | 2        | Non-conclusive |
+| 61_85d412     | 2        | Non-conclusive |
+| 61_87f19      | 2        | Non-conclusive |
+| 61_8f174      | 4        | Non-conclusive |
+| 61_949f506    | 4        | Non-conclusive |
+| 61a71ad1      | 1        | Non-conclusive |
+| 61adb474      | 4        | Non-conclusive |
+| 61b9a652      | 4        | Non-conclusive |
+| 61c02dac      | 4        | Non-conclusive |
+| 61c35dea      | 4        | Non-conclusive |
+| 61c499f6      | 12       | Non-conclusive |
+| 61cb2568      | 1        | Non-conclusive |
+| 61d6fa30      | 4        | Non-conclusive |
+| 61db7c65      | 8        | Non-conclusive |
+| 61ddf03f      | 4        | Non-conclusive |
+| 61f4f230      | 4        | Non-conclusive |
+| 61f5dcc       | 8        | Non-conclusive |
+| 62            | 33       | Supported      |
+| 620c3b03      | 1        | Non-conclusive |
+| 621           | 2        | Supported      |
+| 621ac879      | 1        | Non-conclusive |
+| 621da3a9      | 4        | Non-conclusive |
+| 622e80d4      | 4        | Non-conclusive |
+| 6236c6bd      | 4        | Non-conclusive |
+| 624ad552      | 1        | Non-conclusive |
+| 626_044       | 1        | Non-conclusive |
+| 626b6375      | 4        | Non-conclusive |
+| 626bd9cf      | 4        | Non-conclusive |
+| 626e6f77      | 4        | Non-conclusive |
+| 627_64        | 2        | Non-conclusive |
+| 628           | 1        | Supported      |
+| 628_64        | 2        | Non-conclusive |
+| 629           | 2        | Supported      |
+| 6291c66a      | 4        | Non-conclusive |
+| 629_1         | 1        | Non-conclusive |
+| 629bfd0e5d    | 1        | Non-conclusive |
+| 62_01d95      | 2        | Non-conclusive |
+| 62_136        | 2        | Non-conclusive |
+| 62_15         | 2        | Non-conclusive |
+| 62_1d4        | 2        | Non-conclusive |
+| 62_2093b3     | 4        | Non-conclusive |
+| 62_2677f53    | 2        | Non-conclusive |
+| 62_30c28      | 2        | Non-conclusive |
+| 62_37f911     | 4        | Non-conclusive |
+| 62_4250       | 4        | Non-conclusive |
+| 62_44b6       | 1        | Non-conclusive |
+| 62_4b186      | 2        | Non-conclusive |
+| 62_5          | 2        | Non-conclusive |
+| 62_5372f1     | 4        | Non-conclusive |
+| 62_548e25     | 4        | Non-conclusive |
+| 62_59         | 4        | Non-conclusive |
+| 62_600158     | 2        | Non-conclusive |
+| 62_618a3      | 1        | Non-conclusive |
+| 62_732        | 4        | Non-conclusive |
+| 62_773        | 4        | Non-conclusive |
+| 62_7a90       | 2        | Non-conclusive |
+| 62_8          | 1        | Non-conclusive |
+| 62_82b798     | 2        | Non-conclusive |
+| 62_88201c3    | 2        | Non-conclusive |
+| 62_9434254    | 2        | Non-conclusive |
+| 62_95         | 4        | Non-conclusive |
+| 62_9a9        | 2        | Non-conclusive |
+| 62_9d6055     | 2        | Non-conclusive |
+| 62a5089a      | 4        | Non-conclusive |
+| 62b43853      | 1        | Non-conclusive |
+| 62c33ec5      | 1        | Non-conclusive |
+| 62c85ad6      | 2        | Non-conclusive |
+| 62d0          | 2        | Non-conclusive |
+| 62db5b00      | 4        | Non-conclusive |
+| 62de2748      | 1        | Non-conclusive |
+| 62e59694      | 33       | Non-conclusive |
+| 62e8a9b0      | 2        | Non-conclusive |
+| 62f9a28d      | 4        | Non-conclusive |
+| 63            | 39       | Supported      |
+| 630_309       | 2        | Non-conclusive |
+| 630_5862      | 2        | Non-conclusive |
+| 631           | 9        | Supported      |
+| 6314aa44      | 4        | Non-conclusive |
+| 631_79        | 2        | Non-conclusive |
+| 631b5870      | 4        | Non-conclusive |
+| 631c35b0ba    | 4        | Non-conclusive |
+| 631ebaa8      | 1        | Non-conclusive |
+| 632           | 4        | Supported      |
+| 632_79        | 2        | Non-conclusive |
+| 632a8775      | 4        | Non-conclusive |
+| 632ea45c      | 4        | Non-conclusive |
+| 633           | 1        | Supported      |
+| 6339c5e9      | 4        | Non-conclusive |
+| 634           | 4        | Supported      |
+| 634_07e569    | 4        | Non-conclusive |
+| 634_58        | 4        | Non-conclusive |
+| 6357d6fe      | 4        | Non-conclusive |
+| 6358f888      | 4        | Non-conclusive |
+| 6369fcf3      | 4        | Non-conclusive |
+| 638           | 7        | Supported      |
+| 638eba44      | 4        | Non-conclusive |
+| 6395          | 4        | Supported      |
+| 639D3         | 4        | Non-conclusive |
+| 639_578c0     | 2        | Non-conclusive |
+| 639c490c      | 4        | Non-conclusive |
+| 63_1e4        | 2        | Non-conclusive |
+| 63_215928     | 2        | Non-conclusive |
+| 63_223        | 4        | Non-conclusive |
+| 63_23         | 2        | Non-conclusive |
+| 63_2412f4     | 2        | Non-conclusive |
+| 63_29273      | 2        | Non-conclusive |
+| 63_2a96       | 2        | Non-conclusive |
+| 63_2e339      | 4        | Non-conclusive |
+| 63_2f046      | 2        | Non-conclusive |
+| 63_31e34      | 2        | Non-conclusive |
+| 63_335a6      | 2        | Non-conclusive |
+| 63_3c6        | 4        | Non-conclusive |
+| 63_3d9        | 2        | Non-conclusive |
+| 63_4          | 2        | Non-conclusive |
+| 63_42057      | 4        | Non-conclusive |
+| 63_4b0        | 2        | Non-conclusive |
+| 63_4b95       | 2        | Non-conclusive |
+| 63_538053     | 2        | Non-conclusive |
+| 63_5461d8     | 2        | Non-conclusive |
+| 63_5a42       | 4        | Non-conclusive |
+| 63_5d70       | 4        | Non-conclusive |
+| 63_6          | 1        | Non-conclusive |
+| 63_60         | 2        | Non-conclusive |
+| 63_66b854     | 2        | Non-conclusive |
+| 63_7          | 2        | Non-conclusive |
+| 63_720035     | 4        | Non-conclusive |
+| 63_731        | 4        | Non-conclusive |
+| 63_73b98      | 2        | Non-conclusive |
+| 63_7400304    | 2        | Non-conclusive |
+| 63_7a18       | 2        | Non-conclusive |
+| 63_8184       | 4        | Non-conclusive |
+| 63_8548e5     | 2        | Non-conclusive |
+| 63_8b318      | 4        | Non-conclusive |
+| 63_8b377      | 2        | Non-conclusive |
+| 63_96         | 4        | Non-conclusive |
+| 63_970f2      | 2        | Non-conclusive |
+| 63_9a86       | 2        | Non-conclusive |
+| 63a1k4        | 4        | Non-conclusive |
+| 63a5b7f0      | 4        | Non-conclusive |
+| 63b08aac      | 4        | Non-conclusive |
+| 63b512a7      | 1        | Non-conclusive |
+| 63bdff42      | 20       | Non-conclusive |
+| 63bfaae9      | 4        | Non-conclusive |
+| 63c66f15      | 4        | Non-conclusive |
+| 63da8b04      | 4        | Non-conclusive |
+| 63e1463c      | 5        | Non-conclusive |
+| 63e7a44       | 4        | Non-conclusive |
+| 63fef6ea      | 1        | Non-conclusive |
+| 64            | 163      | Supported      |
+| 640_0c355     | 2        | Non-conclusive |
+| 640_11d21     | 2        | Non-conclusive |
+| 640_47592     | 4        | Non-conclusive |
+| 640_578c0     | 2        | Non-conclusive |
+| 641c3beb      | 4        | Non-conclusive |
+| 643           | 2        | Supported      |
+| 6430e2ee4d    | 1        | Non-conclusive |
+| 6431fe88      | 4        | Non-conclusive |
+| 6433dd2d      | 5        | Non-conclusive |
+| 6434          | 9        | Supported      |
+| 644           | 4        | Supported      |
+| 644f8b5       | 2        | Non-conclusive |
+| 6460e3cf      | 4        | Non-conclusive |
+| 646_0a1713    | 2        | Non-conclusive |
+| 646_2         | 4        | Non-conclusive |
+| 647           | 4        | Supported      |
+| 6477bce340    | 1        | Non-conclusive |
+| 647a2f24      | 1        | Non-conclusive |
+| 647fd4e5      | 4        | Non-conclusive |
+| 6480          | 2        | Supported      |
+| 6487          | 4        | Supported      |
+| 648a67d2      | 1        | Non-conclusive |
+| 648d5a2       | 4        | Non-conclusive |
+| 649_1e2       | 2        | Non-conclusive |
+| 649_719692    | 2        | Non-conclusive |
+| 649_8         | 2        | Non-conclusive |
+| 649d11e9      | 9        | Non-conclusive |
+| 64L5W43       | 4        | Non-conclusive |
+| 64_02a8465    | 2        | Non-conclusive |
+| 64_03         | 2        | Non-conclusive |
+| 64_0e87       | 1        | Non-conclusive |
+| 64_0e9        | 4        | Non-conclusive |
+| 64_13f2224    | 2        | Non-conclusive |
+| 64_2          | 4        | Non-conclusive |
+| 64_218d85     | 2        | Non-conclusive |
+| 64_2b2        | 1        | Non-conclusive |
+| 64_3          | 2        | Non-conclusive |
+| 64_30b86      | 2        | Non-conclusive |
+| 64_31d4       | 4        | Non-conclusive |
+| 64_4          | 4        | Non-conclusive |
+| 64_404        | 4        | Non-conclusive |
+| 64_4272       | 2        | Non-conclusive |
+| 64_432        | 1        | Non-conclusive |
+| 64_51811f2    | 4        | Non-conclusive |
+| 64_6          | 4        | Non-conclusive |
+| 64_715        | 4        | Non-conclusive |
+| 64_73         | 1        | Non-conclusive |
+| 64_738        | 2        | Non-conclusive |
+| 64_74c1428    | 2        | Non-conclusive |
+| 64_7f18       | 4        | Non-conclusive |
+| 64_9365742    | 4        | Non-conclusive |
+| 64_9655c6     | 2        | Non-conclusive |
+| 64a03814de    | 4        | Non-conclusive |
+| 64ae822       | 4        | Non-conclusive |
+| 64b4afb6      | 4        | Non-conclusive |
+| 64beb977      | 1        | Non-conclusive |
+| 64d1cfa9      | 8        | Non-conclusive |
+| 64e1ce0       | 4        | Non-conclusive |
+| 64ed5497      | 4        | Non-conclusive |
+| 64feb3a5      | 4        | Non-conclusive |
+| 64h2          | 4        | Non-conclusive |
+| 65            | 37       | Supported      |
+| 650_58516     | 2        | Non-conclusive |
+| 650be3f3      | 4        | Non-conclusive |
+| 650d2aa9      | 4        | Non-conclusive |
+| 653           | 4        | Supported      |
+| 6537f56b      | 1        | Non-conclusive |
+| 6541c771      | 1        | Non-conclusive |
+| 6548a6a7      | 4        | Non-conclusive |
+| 654_89        | 4        | Non-conclusive |
+| 655_282c2     | 2        | Non-conclusive |
+| 655_4         | 2        | Non-conclusive |
+| 655_6856      | 2        | Non-conclusive |
+| 655_99a7      | 2        | Non-conclusive |
+| 655cd8fa      | 4        | Non-conclusive |
+| 656           | 2        | Supported      |
+| 656_2e4       | 2        | Non-conclusive |
+| 656_3c80      | 2        | Non-conclusive |
+| 656_6d280     | 2        | Non-conclusive |
+| 656beb47      | 1        | Non-conclusive |
+| 657           | 2        | Supported      |
+| 658           | 5        | Supported      |
+| 659           | 4        | Supported      |
+| 659a5f1       | 2        | Non-conclusive |
+| 65L4          | 1        | Non-conclusive |
+| 65_022        | 4        | Non-conclusive |
+| 65_09e8355    | 4        | Non-conclusive |
+| 65_0f71       | 4        | Non-conclusive |
+| 65_13635      | 2        | Non-conclusive |
+| 65_1674       | 2        | Non-conclusive |
+| 65_183        | 2        | Non-conclusive |
+| 65_1947       | 2        | Non-conclusive |
+| 65_1c89       | 1        | Non-conclusive |
+| 65_3954       | 4        | Non-conclusive |
+| 65_3d9        | 2        | Non-conclusive |
+| 65_4b42       | 2        | Non-conclusive |
+| 65_5          | 2        | Non-conclusive |
+| 65_50a16      | 1        | Non-conclusive |
+| 65_6e03359    | 4        | Non-conclusive |
+| 65_73294d1    | 2        | Non-conclusive |
+| 65_7e112      | 2        | Non-conclusive |
+| 65_8539b04    | 2        | Non-conclusive |
+| 65_87e8506    | 1        | Non-conclusive |
+| 65_9          | 2        | Non-conclusive |
+| 65_950        | 1        | Non-conclusive |
+| 65_9863       | 2        | Non-conclusive |
+| 65_9e11       | 2        | Non-conclusive |
+| 65_9e39695    | 2        | Non-conclusive |
+| 65ab652       | 1        | Non-conclusive |
+| 65b3b95b      | 4        | Non-conclusive |
+| 65c5ecc7      | 4        | Non-conclusive |
+| 65ca4e6       | 4        | Non-conclusive |
+| 65d6f20a      | 1        | Non-conclusive |
+| 65d94f6f      | 8        | Non-conclusive |
+| 65e1edc5      | 12       | Non-conclusive |
+| 65e2df0e      | 4        | Non-conclusive |
+| 65e6e01e      | 4        | Non-conclusive |
+| 65eb124b      | 1        | Non-conclusive |
+| 65f2921       | 4        | Non-conclusive |
+| 65f3d9ba      | 1        | Non-conclusive |
+| 65fa99b       | 4        | Non-conclusive |
+| 66            | 27       | Supported      |
+| 660_488f2     | 4        | Non-conclusive |
+| 660_67d410    | 4        | Non-conclusive |
+| 661           | 2        | Supported      |
+| 6619          | 5        | Supported      |
+| 661_0138      | 2        | Non-conclusive |
+| 662           | 6        | Supported      |
+| 6626e9fc      | 4        | Non-conclusive |
+| 6637d810      | 1        | Non-conclusive |
+| 663_083       | 2        | Non-conclusive |
+| 663_36a085    | 2        | Non-conclusive |
+| 663_99d8      | 2        | Non-conclusive |
+| 663c1ca       | 8        | Non-conclusive |
+| 664           | 2        | Supported      |
+| 6642e65c      | 5        | Non-conclusive |
+| 664_1043a3    | 2        | Non-conclusive |
+| 664_5e2       | 1        | Non-conclusive |
+| 664d1c90      | 8        | Non-conclusive |
+| 665           | 5        | Supported      |
+| 6654          | 1        | Supported      |
+| 665_6         | 2        | Non-conclusive |
+| 665_89f9      | 2        | Non-conclusive |
+| 665ac2d0      | 5        | Non-conclusive |
+| 666           | 4        | Supported      |
+| 666_036274    | 2        | Non-conclusive |
+| 667a3f4d      | 1        | Non-conclusive |
+| 668_52f201    | 2        | Non-conclusive |
+| 6695a2c1      | 4        | Non-conclusive |
+| 669_7f1       | 4        | Non-conclusive |
+| 669_93        | 1        | Non-conclusive |
+| 66_06d1       | 1        | Non-conclusive |
+| 66_0a02       | 2        | Non-conclusive |
+| 66_0b11       | 1        | Non-conclusive |
+| 66_12f28      | 2        | Non-conclusive |
+| 66_1321849    | 2        | Non-conclusive |
+| 66_17c34      | 2        | Non-conclusive |
+| 66_1b83       | 2        | Non-conclusive |
+| 66_22         | 2        | Non-conclusive |
+| 66_37d99      | 2        | Non-conclusive |
+| 66_38f88      | 4        | Non-conclusive |
+| 66_465        | 2        | Non-conclusive |
+| 66_4c5        | 1        | Non-conclusive |
+| 66_54c55      | 4        | Non-conclusive |
+| 66_56b63      | 1        | Non-conclusive |
+| 66_57e4       | 2        | Non-conclusive |
+| 66_5a34       | 1        | Non-conclusive |
+| 66_6          | 2        | Non-conclusive |
+| 66_6625d4     | 2        | Non-conclusive |
+| 66_67         | 4        | Non-conclusive |
+| 66_70e1555    | 2        | Non-conclusive |
+| 66_7445       | 2        | Non-conclusive |
+| 66_7883b6     | 2        | Non-conclusive |
+| 66_797b17     | 2        | Non-conclusive |
+| 66_8          | 4        | Non-conclusive |
+| 66_85         | 2        | Non-conclusive |
+| 66_8a2        | 2        | Non-conclusive |
+| 66_8b59100    | 4        | Non-conclusive |
+| 66_95275      | 2        | Non-conclusive |
+| 66_96         | 4        | Non-conclusive |
+| 66a1e332      | 4        | Non-conclusive |
+| 66a5a365      | 1        | Non-conclusive |
+| 66a9599       | 4        | Non-conclusive |
+| 66ad436       | 4        | Non-conclusive |
+| 66af3d0b      | 4        | Non-conclusive |
+| 66b4          | 52       | Non-conclusive |
+| 66b7          | 12       | Non-conclusive |
+| 66b7b30b      | 4        | Non-conclusive |
+| 66c5fe38      | 4        | Non-conclusive |
+| 66d1e31a      | 4        | Non-conclusive |
+| 66d262bc      | 4        | Non-conclusive |
+| 66e21629      | 4        | Non-conclusive |
+| 66e3e870      | 4        | Non-conclusive |
+| 66f2          | 15       | Non-conclusive |
+| 66f266f2      | 4        | Non-conclusive |
+| 66y4A8        | 1        | Non-conclusive |
+| 67            | 29       | Supported      |
+| 670           | 4        | Supported      |
+| 6706ff34      | 4        | Non-conclusive |
+| 670_2f6557    | 2        | Non-conclusive |
+| 670_8b2       | 2        | Non-conclusive |
+| 670c059d      | 13       | Non-conclusive |
+| 671           | 3        | Supported      |
+| 6712          | 12       | Supported      |
+| 671_6668b2    | 2        | Non-conclusive |
+| 672_776       | 2        | Non-conclusive |
+| 672_85e1      | 1        | Non-conclusive |
+| 6739c3cf      | 1        | Non-conclusive |
+| 673e1b76      | 4        | Non-conclusive |
+| 674           | 2        | Supported      |
+| 6742          | 8        | Supported      |
+| 674_8b26      | 4        | Non-conclusive |
+| 674b1803      | 2        | Non-conclusive |
+| 675cac6c      | 8        | Non-conclusive |
+| 676           | 1        | Supported      |
+| 677           | 4        | Supported      |
+| 6778fed3      | 4        | Non-conclusive |
+| 6778fed3cf    | 4        | Non-conclusive |
+| 6779cfa9      | 4        | Non-conclusive |
+| 677_403       | 2        | Non-conclusive |
+| 677d32d3      | 1        | Non-conclusive |
+| 678_88e1      | 1        | Non-conclusive |
+| 6791bb99      | 4        | Non-conclusive |
+| 679_75        | 4        | Non-conclusive |
+| 67_040960     | 2        | Non-conclusive |
+| 67_0a1        | 2        | Non-conclusive |
+| 67_1261       | 2        | Non-conclusive |
+| 67_32         | 2        | Non-conclusive |
+| 67_3c0        | 1        | Non-conclusive |
+| 67_3e4        | 1        | Non-conclusive |
+| 67_4          | 2        | Non-conclusive |
+| 67_43c1085    | 2        | Non-conclusive |
+| 67_4a2        | 2        | Non-conclusive |
+| 67_5874       | 4        | Non-conclusive |
+| 67_6          | 3        | Non-conclusive |
+| 67_63a0408    | 4        | Non-conclusive |
+| 67_6a6        | 2        | Non-conclusive |
+| 67_6e9        | 1        | Non-conclusive |
+| 67_7          | 2        | Non-conclusive |
+| 67_79         | 1        | Non-conclusive |
+| 67_797b17     | 2        | Non-conclusive |
+| 67_8069f2     | 4        | Non-conclusive |
+| 67_9441c1     | 2        | Non-conclusive |
+| 67a7f4cd      | 4        | Non-conclusive |
+| 67b517c2      | 4        | Non-conclusive |
+| 67c0fb2d      | 4        | Non-conclusive |
+| 67c2900       | 2        | Non-conclusive |
+| 67d0          | 8        | Non-conclusive |
+| 67df840f      | 4        | Non-conclusive |
+| 67e50b06      | 4        | Non-conclusive |
+| 67e85         | 4        | Non-conclusive |
+| 67f016da      | 4        | Non-conclusive |
+| 67fbf09       | 4        | Non-conclusive |
+| 67fd070a      | 1        | Non-conclusive |
+| 68            | 21       | Supported      |
+| 6800e323      | 2        | Non-conclusive |
+| 6804fe05      | 4        | Non-conclusive |
+| 680_1708      | 2        | Non-conclusive |
+| 680_792c13    | 2        | Non-conclusive |
+| 681           | 8        | Supported      |
+| 681_47        | 2        | Non-conclusive |
+| 682_430c55    | 4        | Non-conclusive |
+| 682_4f6       | 4        | Non-conclusive |
+| 682e0917      | 4        | Non-conclusive |
+| 683_38        | 2        | Non-conclusive |
+| 683dd39       | 4        | Non-conclusive |
+| 683e44b8      | 1        | Non-conclusive |
+| 684           | 2        | Supported      |
+| 6844ca3a      | 4        | Non-conclusive |
+| 684_0664a9    | 2        | Non-conclusive |
+| 684_3f40      | 2        | Non-conclusive |
+| 684_961       | 2        | Non-conclusive |
+| 6861ec4a      | 1        | Non-conclusive |
+| 6868e0        | 4        | Non-conclusive |
+| 687cadf0      | 1        | Non-conclusive |
+| 688d9616      | 4        | Non-conclusive |
+| 6893a3d       | 4        | Non-conclusive |
+| 6895e8cd      | 4        | Non-conclusive |
+| 689_84d9      | 4        | Non-conclusive |
+| 68AA7B45      | 5        | Non-conclusive |
+| 68Y25G4       | 4        | Non-conclusive |
+| 68_0          | 1        | Non-conclusive |
+| 68_0c4        | 5        | Non-conclusive |
+| 68_14e4024    | 2        | Non-conclusive |
+| 68_18         | 2        | Non-conclusive |
+| 68_23e1       | 2        | Non-conclusive |
+| 68_28         | 2        | Non-conclusive |
+| 68_2b876      | 2        | Non-conclusive |
+| 68_30c28      | 2        | Non-conclusive |
+| 68_337d84     | 2        | Non-conclusive |
+| 68_398        | 2        | Non-conclusive |
+| 68_3a6        | 2        | Non-conclusive |
+| 68_4a1        | 1        | Non-conclusive |
+| 68_550        | 2        | Non-conclusive |
+| 68_56         | 2        | Non-conclusive |
+| 68_585d387    | 2        | Non-conclusive |
+| 68_5a22       | 2        | Non-conclusive |
+| 68_6          | 2        | Non-conclusive |
+| 68_601d7      | 2        | Non-conclusive |
+| 68_652        | 2        | Non-conclusive |
+| 68_661e340    | 2        | Non-conclusive |
+| 68_698e10     | 4        | Non-conclusive |
+| 68_6a03       | 2        | Non-conclusive |
+| 68_73         | 2        | Non-conclusive |
+| 68_79d7       | 4        | Non-conclusive |
+| 68_7b73       | 2        | Non-conclusive |
+| 68_7f12       | 2        | Non-conclusive |
+| 68_8          | 4        | Non-conclusive |
+| 68_82a4       | 2        | Non-conclusive |
+| 68_83         | 2        | Non-conclusive |
+| 68_84d138     | 2        | Non-conclusive |
+| 68_8f265      | 4        | Non-conclusive |
+| 68_9          | 6        | Non-conclusive |
+| 68_989        | 2        | Non-conclusive |
+| 68_9f6        | 2        | Non-conclusive |
+| 68a112a1      | 4        | Non-conclusive |
+| 68af063f      | 4        | Non-conclusive |
+| 68b3          | 161      | Non-conclusive |
+| 68b368b3      | 2        | Non-conclusive |
+| 68bdb46a58    | 1        | Non-conclusive |
+| 68c3d8        | 4        | Non-conclusive |
+| 68cbb420      | 1        | Non-conclusive |
+| 68d2c565e1    | 4        | Non-conclusive |
+| 68d8d592      | 4        | Non-conclusive |
+| 68d9          | 4        | Non-conclusive |
+| 68db165c      | 4        | Non-conclusive |
+| 68e8          | 5        | Non-conclusive |
+| 69            | 9        | Supported      |
+| 690           | 4        | Supported      |
+| 6905c3d6      | 4        | Non-conclusive |
+| 691           | 6        | Supported      |
+| 691_94        | 2        | Non-conclusive |
+| 691_9f50      | 4        | Non-conclusive |
+| 694_08c4      | 4        | Non-conclusive |
+| 694_767534    | 2        | Non-conclusive |
+| 695-875d5     | 16       | Non-conclusive |
+| 6959          | 15       | Supported      |
+| 696           | 4        | Supported      |
+| 6964          | 4        | Supported      |
+| 696a8fe0      | 4        | Non-conclusive |
+| 697           | 2        | Supported      |
+| 697_2b4       | 2        | Non-conclusive |
+| 698           | 2        | Supported      |
+| 698_0         | 1        | Non-conclusive |
+| 699           | 2        | Supported      |
+| 699_62c14     | 2        | Non-conclusive |
+| 699b7b3b      | 4        | Non-conclusive |
+| 699e9afe      | 4        | Non-conclusive |
+| 69I5S5        | 4        | Non-conclusive |
+| 69_0          | 2        | Non-conclusive |
+| 69_0235       | 4        | Non-conclusive |
+| 69_0c4430     | 4        | Non-conclusive |
+| 69_1672e8     | 4        | Non-conclusive |
+| 69_191c6      | 2        | Non-conclusive |
+| 69_22738b9    | 4        | Non-conclusive |
+| 69_25815      | 4        | Non-conclusive |
+| 69_3542c8     | 4        | Non-conclusive |
+| 69_37         | 2        | Non-conclusive |
+| 69_4a1        | 1        | Non-conclusive |
+| 69_4a7        | 2        | Non-conclusive |
+| 69_6a6        | 8        | Non-conclusive |
+| 69_6d2396     | 2        | Non-conclusive |
+| 69_7028666    | 2        | Non-conclusive |
+| 69_7b0        | 2        | Non-conclusive |
+| 69_8          | 2        | Non-conclusive |
+| 69_88a830     | 2        | Non-conclusive |
+| 69a14554      | 4        | Non-conclusive |
+| 69bd13d5      | 1        | Non-conclusive |
+| 69c8          | 5        | Non-conclusive |
+| 69ce1815      | 4        | Non-conclusive |
+| 69dad7db      | 4        | Non-conclusive |
+| 69e6874c      | 2        | Non-conclusive |
+| 69f80         | 4        | Non-conclusive |
+| 6D4           | 2        | Non-conclusive |
+| 6D78          | 4        | Non-conclusive |
+| 6D9           | 1        | Non-conclusive |
+| 6E867DF0      | 12       | Non-conclusive |
+| 6K69          | 1        | Non-conclusive |
+| 6L0           | 1        | Non-conclusive |
+| 6R87          | 1        | Non-conclusive |
+| 6R9O3         | 4        | Non-conclusive |
+| 6T4           | 2        | Non-conclusive |
+| 6V8u9         | 1        | Non-conclusive |
+| 6X2           | 2        | Non-conclusive |
+| 6Z26          | 1        | Non-conclusive |
+| 6_0354        | 2        | Non-conclusive |
+| 6_04e70       | 2        | Non-conclusive |
+| 6_1           | 1        | Non-conclusive |
+| 6_15Q8        | 6        | Non-conclusive |
+| 6_1_1         | 4        | Non-conclusive |
+| 6_205         | 2        | Non-conclusive |
+| 6_2554c4      | 1        | Non-conclusive |
+| 6_29d7        | 2        | Non-conclusive |
+| 6_30c28       | 2        | Non-conclusive |
+| 6_32b6361     | 4        | Non-conclusive |
+| 6_39f33       | 2        | Non-conclusive |
+| 6_4           | 1        | Non-conclusive |
+| 6_478934f0    | 2        | Non-conclusive |
+| 6_51a6        | 4        | Non-conclusive |
+| 6_527c96      | 5        | Non-conclusive |
+| 6_53e40       | 4        | Non-conclusive |
+| 6_5b3         | 1        | Non-conclusive |
+| 6_68          | 4        | Non-conclusive |
+| 6_699e1       | 2        | Non-conclusive |
+| 6_6a93        | 1        | Non-conclusive |
+| 6_727657      | 4        | Non-conclusive |
+| 6_75e1337     | 1        | Non-conclusive |
+| 6_77f88421    | 4        | Non-conclusive |
+| 6_8           | 2        | Non-conclusive |
+| 6_80e82839    | 2        | Non-conclusive |
+| 6_86654       | 2        | Non-conclusive |
+| 6_8a49386     | 2        | Non-conclusive |
+| 6_922f4311    | 2        | Non-conclusive |
+| 6_950         | 4        | Non-conclusive |
+| 6a044bcf      | 4        | Non-conclusive |
+| 6a0ffbb5      | 4        | Non-conclusive |
+| 6a1e2ee4      | 1        | Non-conclusive |
+| 6a45c207      | 4        | Non-conclusive |
+| 6a6505d6      | 4        | Non-conclusive |
+| 6a69d6c5      | 4        | Non-conclusive |
+| 6a6f8c55      | 4        | Non-conclusive |
+| 6a7e47d413    | 4        | Non-conclusive |
+| 6a8e4606      | 1        | Non-conclusive |
+| 6a9c10c4      | 4        | Non-conclusive |
+| 6a9f9a09      | 1        | Non-conclusive |
+| 6aabec8       | 4        | Non-conclusive |
+| 6ab1ef4       | 4        | Non-conclusive |
+| 6abcef0c      | 4        | Non-conclusive |
+| 6ac25530      | 1        | Non-conclusive |
+| 6ac5a32f      | 4        | Non-conclusive |
+| 6aca91bf      | 4        | Non-conclusive |
+| 6acd7e96      | 1        | Non-conclusive |
+| 6ae79ce7      | 4        | Non-conclusive |
+| 6aec6aec      | 1        | Non-conclusive |
+| 6af48bea      | 8        | Non-conclusive |
+| 6b012e4       | 4        | Non-conclusive |
+| 6b10          | 4        | Non-conclusive |
+| 6b165ecc      | 1        | Non-conclusive |
+| 6b21          | 1        | Non-conclusive |
+| 6b27          | 4        | Non-conclusive |
+| 6b2b428b      | 4        | Non-conclusive |
+| 6b352d8e      | 5        | Non-conclusive |
+| 6b3ee763      | 1        | Non-conclusive |
+| 6b707c5b      | 4        | Non-conclusive |
+| 6b72db72      | 4        | Non-conclusive |
+| 6b7ccd93      | 1        | Non-conclusive |
+| 6b83daf7      | 4        | Non-conclusive |
+| 6b8fa06f      | 1        | Non-conclusive |
+| 6b9511db      | 4        | Non-conclusive |
+| 6b97b3c0      | 1        | Non-conclusive |
+| 6b993123      | 1        | Non-conclusive |
+| 6b9acfcc      | 1        | Non-conclusive |
+| 6bb93c7e      | 4        | Non-conclusive |
+| 6bc59806      | 4        | Non-conclusive |
+| 6bd6f436      | 4        | Non-conclusive |
+| 6bd924d7      | 4        | Non-conclusive |
+| 6be542df      | 4        | Non-conclusive |
+| 6bea60c3      | 4        | Non-conclusive |
+| 6bf5045c54    | 4        | Non-conclusive |
+| 6bf68b39      | 4        | Non-conclusive |
+| 6bf98143      | 1        | Non-conclusive |
+| 6c0d7ca4      | 4        | Non-conclusive |
+| 6c1258b6      | 12       | Non-conclusive |
+| 6c17f08       | 4        | Non-conclusive |
+| 6c23a3ea      | 4        | Non-conclusive |
+| 6c42          | 4        | Non-conclusive |
+| 6c43cc20      | 1        | Non-conclusive |
+| 6c47e974      | 4        | Non-conclusive |
+| 6c48bd5e      | 4        | Non-conclusive |
+| 6c60aab8      | 4        | Non-conclusive |
+| 6c7ac7ee      | 4        | Non-conclusive |
+| 6c7f60b2      | 1        | Non-conclusive |
+| 6c8767ae      | 2        | Non-conclusive |
+| 6c88eb4       | 2        | Non-conclusive |
+| 6c9           | 1        | Non-conclusive |
+| 6c9365b80b    | 4        | Non-conclusive |
+| 6c94          | 2        | Non-conclusive |
+| 6c9ca20d      | 4        | Non-conclusive |
+| 6c9d5ae5      | 1        | Non-conclusive |
+| 6caa269       | 4        | Non-conclusive |
+| 6cb0a592      | 1        | Non-conclusive |
+| 6cb2ffe6      | 5        | Non-conclusive |
+| 6cb4f44f      | 1        | Non-conclusive |
+| 6d1f10f1      | 5        | Non-conclusive |
+| 6d1f97fb      | 4        | Non-conclusive |
+| 6d20b7bb      | 1        | Non-conclusive |
+| 6d223f9       | 4        | Non-conclusive |
+| 6d22763b      | 24       | Non-conclusive |
+| 6d2d06c642    | 2        | Non-conclusive |
+| 6d427287      | 4        | Non-conclusive |
+| 6d43131c      | 1        | Non-conclusive |
+| 6d479770      | 4        | Non-conclusive |
+| 6d521165      | 4        | Non-conclusive |
+| 6d58ebb7      | 1        | Non-conclusive |
+| 6d5f3a2f      | 4        | Non-conclusive |
+| 6d73f8ed      | 4        | Non-conclusive |
+| 6d7833a8      | 1        | Non-conclusive |
+| 6d9c6fda      | 4        | Non-conclusive |
+| 6da2a81       | 2        | Non-conclusive |
+| 6dcf351       | 4        | Non-conclusive |
+| 6dcf6dcf      | 1        | Non-conclusive |
+| 6dda55d5      | 1        | Non-conclusive |
+| 6de559b7      | 4        | Non-conclusive |
+| 6de86de8      | 8        | Non-conclusive |
+| 6df5ed2       | 4        | Non-conclusive |
+| 6df712e8      | 4        | Non-conclusive |
+| 6e0           | 8        | Non-conclusive |
+| 6e0e64b22e    | 4        | Non-conclusive |
+| 6e1           | 8        | Non-conclusive |
+| 6e103548      | 19       | Non-conclusive |
+| 6e152d5b      | 4        | Non-conclusive |
+| 6e1f423c14    | 4        | Non-conclusive |
+| 6e25          | 4        | Non-conclusive |
+| 6e2a8e55      | 1        | Non-conclusive |
+| 6e364acb      | 4        | Non-conclusive |
+| 6e43          | 2        | Non-conclusive |
+| 6e49bbe1      | 4        | Non-conclusive |
+| 6e576         | 4        | Non-conclusive |
+| 6e61edfe      | 1        | Non-conclusive |
+| 6e792573      | 4        | Non-conclusive |
+| 6e7f17fd      | 4        | Non-conclusive |
+| 6e966e79e3    | 4        | Non-conclusive |
+| 6e98ebe590    | 4        | Non-conclusive |
+| 6e9babf7      | 29       | Non-conclusive |
+| 6eaac2b3      | 4        | Non-conclusive |
+| 6ebbb20032    | 1        | Non-conclusive |
+| 6ebee696      | 4        | Non-conclusive |
+| 6ece3f2e      | 4        | Non-conclusive |
+| 6ece5aa1      | 4        | Non-conclusive |
+| 6ed5182b      | 4        | Non-conclusive |
+| 6eef5f2d      | 8        | Non-conclusive |
+| 6ef4c571      | 51       | Non-conclusive |
+| 6f015971      | 8        | Non-conclusive |
+| 6f0e0bd6      | 1        | Non-conclusive |
+| 6f3           | 4        | Non-conclusive |
+| 6f306e11      | 4        | Non-conclusive |
+| 6f700def      | 4        | Non-conclusive |
+| 6f749.4716    | 4        | Non-conclusive |
+| 6f8           | 4        | Non-conclusive |
+| 6f9c7304      | 4        | Non-conclusive |
+| 6fbfdbdd      | 4        | Non-conclusive |
+| 6fc0d729      | 4        | Non-conclusive |
+| 6fec017       | 1        | Non-conclusive |
+| 6ffeacc7      | 5        | Non-conclusive |
+| 6l9I8         | 2        | Non-conclusive |
+| 6m8           | 4        | Non-conclusive |
+| 6p0n6         | 1        | Non-conclusive |
+| 6p7           | 4        | Non-conclusive |
+| 6q5           | 1        | Non-conclusive |
+| 6v8           | 41       | Non-conclusive |
+| 6v90          | 6        | Non-conclusive |
+| 6y7           | 4        | Non-conclusive |
+| 6y7r1         | 2        | Non-conclusive |
+| 6z52          | 1        | Non-conclusive |
+| 7             | 28005    | Supported      |
+| 7-0859c2      | 4        | Non-conclusive |
+| 7-2w3         | 4        | Non-conclusive |
+| 7-53f62       | 8        | Non-conclusive |
+| 7-8b6515      | 4        | Non-conclusive |
+| 7-9           | 62       | Non-conclusive |
+| 7-96e7        | 6        | Non-conclusive |
+| 7-9857b7      | 4        | Non-conclusive |
+| 7.0.0         | 15       | Supported      |
+| 7.0.1         | 4        | Supported      |
+| 7.0.2         | 9        | Supported      |
+| 7.0.3         | 22       | Supported      |
+| 7.0.4         | 77       | Supported      |
+| 7.1           | 4        | Supported      |
+| 7.1.0         | 11       | Supported      |
+| 7.1.1         | 4        | Supported      |
+| 7.1.2         | 1        | Supported      |
+| 7.15.0        | 4        | Supported      |
+| 7.2.2         | 6        | Supported      |
+| 7.2.5         | 4        | Supported      |
+| 7.33          | 4        | Supported      |
+| 7.4.1         | 8        | Supported      |
+| 7.44c71       | 2        | Non-conclusive |
+| 7.5a3513      | 8        | Non-conclusive |
+| 7.61          | 10       | Supported      |
+| 7.72f9        | 8        | Non-conclusive |
+| 7.85312       | 6        | Supported      |
+| 7.9.1         | 8        | Supported      |
+| 7.9.2         | 1        | Supported      |
+| 7.9.3         | 4        | Supported      |
+| 7/1.0         | 12       | Non-conclusive |
+| 70            | 251      | Supported      |
+| 700           | 1        | Supported      |
+| 700_3d3       | 2        | Non-conclusive |
+| 700_5d15      | 2        | Non-conclusive |
+| 7012          | 4        | Supported      |
+| 701_5090      | 4        | Non-conclusive |
+| 7028a252      | 4        | Non-conclusive |
+| 702e5399      | 4        | Non-conclusive |
+| 703_96774     | 2        | Non-conclusive |
+| 703e53e0      | 8        | Non-conclusive |
+| 704f739a      | 4        | Non-conclusive |
+| 704l8         | 4        | Non-conclusive |
+| 705           | 2        | Supported      |
+| 7055          | 2        | Supported      |
+| 7055_7e5      | 2        | Non-conclusive |
+| 705_177       | 2        | Non-conclusive |
+| 706_26823     | 1        | Non-conclusive |
+| 707_8e28      | 2        | Non-conclusive |
+| 708           | 1        | Supported      |
+| 708ccf03      | 4        | Non-conclusive |
+| 70_001d52     | 2        | Non-conclusive |
+| 70_03         | 2        | Non-conclusive |
+| 70_0f3425     | 2        | Non-conclusive |
+| 70_16a81      | 4        | Non-conclusive |
+| 70_1a6        | 4        | Non-conclusive |
+| 70_26c4188    | 2        | Non-conclusive |
+| 70_338        | 2        | Non-conclusive |
+| 70_4          | 4        | Non-conclusive |
+| 70_435e04     | 2        | Non-conclusive |
+| 70_4a0        | 2        | Non-conclusive |
+| 70_50e7       | 1        | Non-conclusive |
+| 70_5d9004     | 4        | Non-conclusive |
+| 70_6          | 2        | Non-conclusive |
+| 70_61d52      | 2        | Non-conclusive |
+| 70_6290083    | 2        | Non-conclusive |
+| 70_77d0       | 2        | Non-conclusive |
+| 70_791b29     | 4        | Non-conclusive |
+| 70_82         | 2        | Non-conclusive |
+| 70_9001       | 2        | Non-conclusive |
+| 70_99c300     | 2        | Non-conclusive |
+| 70a7beb7      | 4        | Non-conclusive |
+| 70a8df25      | 4        | Non-conclusive |
+| 70d96e59      | 4        | Non-conclusive |
+| 70e3c428      | 4        | Non-conclusive |
+| 70f66ae9      | 4        | Non-conclusive |
+| 70fcfb49      | 4        | Non-conclusive |
+| 71            | 40       | Supported      |
+| 710_2d8658    | 2        | Non-conclusive |
+| 710afdc87b    | 13       | Non-conclusive |
+| 711_48        | 4        | Non-conclusive |
+| 711f4455      | 4        | Non-conclusive |
+| 7122f1bf      | 4        | Non-conclusive |
+| 712_884f52    | 2        | Non-conclusive |
+| 714           | 10       | Supported      |
+| 714_0e937     | 2        | Non-conclusive |
+| 714_2         | 2        | Non-conclusive |
+| 714_9         | 2        | Non-conclusive |
+| 715_9e2       | 4        | Non-conclusive |
+| 715_9f62      | 4        | Non-conclusive |
+| 716           | 1        | Supported      |
+| 7167c4c7      | 4        | Non-conclusive |
+| 7168c90f      | 8        | Non-conclusive |
+| 716_94        | 4        | Non-conclusive |
+| 717e01b1      | 4        | Non-conclusive |
+| 7184d3edc0    | 4        | Non-conclusive |
+| 718f4534      | 4        | Non-conclusive |
+| 719ee0d3      | 8        | Non-conclusive |
+| 71_0d1        | 4        | Non-conclusive |
+| 71_1020729    | 1        | Non-conclusive |
+| 71_14         | 2        | Non-conclusive |
+| 71_1993b57    | 2        | Non-conclusive |
+| 71_1b5        | 4        | Non-conclusive |
+| 71_1e41       | 2        | Non-conclusive |
+| 71_2          | 4        | Non-conclusive |
+| 71_2230       | 4        | Non-conclusive |
+| 71_24         | 2        | Non-conclusive |
+| 71_27         | 8        | Non-conclusive |
+| 71_2b1489     | 1        | Non-conclusive |
+| 71_2e4        | 4        | Non-conclusive |
+| 71_313d012    | 1        | Non-conclusive |
+| 71_3c7        | 2        | Non-conclusive |
+| 71_414c87     | 1        | Non-conclusive |
+| 71_43         | 4        | Non-conclusive |
+| 71_4474b1     | 2        | Non-conclusive |
+| 71_4738e03    | 2        | Non-conclusive |
+| 71_49c861     | 4        | Non-conclusive |
+| 71_5d63       | 2        | Non-conclusive |
+| 71_5e00       | 2        | Non-conclusive |
+| 71_7          | 2        | Non-conclusive |
+| 71_73b17      | 2        | Non-conclusive |
+| 71_75d1       | 4        | Non-conclusive |
+| 71_76c8       | 2        | Non-conclusive |
+| 71_7c4        | 4        | Non-conclusive |
+| 71_7c7857     | 4        | Non-conclusive |
+| 71_8          | 4        | Non-conclusive |
+| 71_885d3      | 2        | Non-conclusive |
+| 71_8a95       | 2        | Non-conclusive |
+| 71_9          | 1        | Non-conclusive |
+| 71_91b4       | 2        | Non-conclusive |
+| 71_959c79     | 2        | Non-conclusive |
+| 71_97f0       | 2        | Non-conclusive |
+| 71_9e46       | 4        | Non-conclusive |
+| 71b697ca      | 4        | Non-conclusive |
+| 71c8a5b2      | 4        | Non-conclusive |
+| 71de5d1b      | 4        | Non-conclusive |
+| 71dfd389      | 4        | Non-conclusive |
+| 71f36a34      | 5        | Non-conclusive |
+| 71fbeadc      | 8        | Non-conclusive |
+| 71fc5d57      | 8        | Non-conclusive |
+| 71g7          | 25       | Non-conclusive |
+| 72            | 31       | Supported      |
+| 720L0         | 4        | Non-conclusive |
+| 720e8ce788    | 4        | Non-conclusive |
+| 721           | 4        | Supported      |
+| 7210fae8      | 1        | Non-conclusive |
+| 721_2b2       | 2        | Non-conclusive |
+| 721_3d0       | 2        | Non-conclusive |
+| 723_3f55      | 4        | Non-conclusive |
+| 7240d160      | 2        | Non-conclusive |
+| 724fc7c0      | 1        | Non-conclusive |
+| 728_5         | 8        | Non-conclusive |
+| 729_4         | 8        | Non-conclusive |
+| 72_073e512    | 1        | Non-conclusive |
+| 72_17a6094    | 2        | Non-conclusive |
+| 72_1b72       | 2        | Non-conclusive |
+| 72_1e08       | 4        | Non-conclusive |
+| 72_2378       | 2        | Non-conclusive |
+| 72_27d9472    | 1        | Non-conclusive |
+| 72_3          | 2        | Non-conclusive |
+| 72_305b2      | 2        | Non-conclusive |
+| 72_3a52       | 2        | Non-conclusive |
+| 72_46         | 4        | Non-conclusive |
+| 72_4f8        | 1        | Non-conclusive |
+| 72_508b33     | 2        | Non-conclusive |
+| 72_6          | 4        | Non-conclusive |
+| 72_611e1      | 2        | Non-conclusive |
+| 72_67         | 2        | Non-conclusive |
+| 72_689e2      | 4        | Non-conclusive |
+| 72_698b9      | 2        | Non-conclusive |
+| 72_7          | 2        | Non-conclusive |
+| 72_72d836     | 2        | Non-conclusive |
+| 72_796        | 1        | Non-conclusive |
+| 72_824b0      | 2        | Non-conclusive |
+| 72_876b54     | 2        | Non-conclusive |
+| 72_944413     | 2        | Non-conclusive |
+| 72_9e3784     | 1        | Non-conclusive |
+| 72ab8af6      | 4        | Non-conclusive |
+| 72b862b2d4    | 8        | Non-conclusive |
+| 72bc0be5aa    | 330      | Non-conclusive |
+| 72be1ebd      | 1        | Non-conclusive |
+| 72d481f8      | 1        | Non-conclusive |
+| 72e9e84a      | 2        | Non-conclusive |
+| 72f041e6      | 8        | Non-conclusive |
+| 72f0ebde      | 1        | Non-conclusive |
+| 72f6b4c6      | 4        | Non-conclusive |
+| 72f77acc69    | 4        | Non-conclusive |
+| 73            | 48       | Supported      |
+| 730_5a822     | 2        | Non-conclusive |
+| 730f6506      | 4        | Non-conclusive |
+| 731           | 2        | Supported      |
+| 731_9f2       | 2        | Non-conclusive |
+| 733           | 2        | Supported      |
+| 7335e44       | 4        | Non-conclusive |
+| 7359FCDeD     | 4        | Non-conclusive |
+| 735_44e730    | 2        | Non-conclusive |
+| 735_61e3      | 2        | Non-conclusive |
+| 737           | 2        | Supported      |
+| 7373          | 4        | Supported      |
+| 737d3462      | 4        | Non-conclusive |
+| 7389          | 4        | Supported      |
+| 738a6b9e      | 2        | Non-conclusive |
+| 738aeb03      | 1        | Non-conclusive |
+| 738c2a86      | 1        | Non-conclusive |
+| 73_0011       | 2        | Non-conclusive |
+| 73_0e2        | 2        | Non-conclusive |
+| 73_18a4       | 2        | Non-conclusive |
+| 73_2          | 1        | Non-conclusive |
+| 73_271        | 4        | Non-conclusive |
+| 73_3          | 4        | Non-conclusive |
+| 73_320d5      | 2        | Non-conclusive |
+| 73_3f9159     | 4        | Non-conclusive |
+| 73_4d5397     | 4        | Non-conclusive |
+| 73_58c64      | 2        | Non-conclusive |
+| 73_592        | 1        | Non-conclusive |
+| 73_6f2        | 2        | Non-conclusive |
+| 73_8b59100    | 4        | Non-conclusive |
+| 73_96         | 2        | Non-conclusive |
+| 73a1          | 1        | Non-conclusive |
+| 73a8c626      | 4        | Non-conclusive |
+| 73b0fbe       | 12       | Non-conclusive |
+| 73c3ad0a      | 1        | Non-conclusive |
+| 73c40db1      | 4        | Non-conclusive |
+| 73c73         | 4        | Non-conclusive |
+| 73e5e5d8      | 4        | Non-conclusive |
+| 73e9734       | 4        | Non-conclusive |
+| 73fb88bb      | 8        | Non-conclusive |
+| 74            | 34       | Supported      |
+| 7404          | 17       | Supported      |
+| 7406a298      | 4        | Non-conclusive |
+| 740d3ed9      | 4        | Non-conclusive |
+| 7424b2fe      | 8        | Non-conclusive |
+| 742_75d2      | 16       | Non-conclusive |
+| 7433          | 37       | Supported      |
+| 743_4b464     | 2        | Non-conclusive |
+| 743_6         | 4        | Non-conclusive |
+| 743c0dd4      | 4        | Non-conclusive |
+| 7449fe00      | 4        | Non-conclusive |
+| 745           | 4        | Supported      |
+| 745_06e1      | 2        | Non-conclusive |
+| 745_08c875    | 2        | Non-conclusive |
+| 745_2f58      | 2        | Non-conclusive |
+| 745_3141f1    | 4        | Non-conclusive |
+| 745_80        | 2        | Non-conclusive |
+| 745_8c80      | 2        | Non-conclusive |
+| 745_97a1      | 2        | Non-conclusive |
+| 745c206       | 4        | Non-conclusive |
+| 745d22e7      | 4        | Non-conclusive |
+| 746b3f8       | 4        | Non-conclusive |
+| 746c3356      | 4        | Non-conclusive |
+| 746dc2c4      | 4        | Non-conclusive |
+| 747_7b8       | 2        | Non-conclusive |
+| 748           | 3        | Supported      |
+| 748_7b8       | 2        | Non-conclusive |
+| 748d0738      | 5        | Non-conclusive |
+| 74_0          | 4        | Non-conclusive |
+| 74_05c50      | 4        | Non-conclusive |
+| 74_093        | 4        | Non-conclusive |
+| 74_1          | 4        | Non-conclusive |
+| 74_127523     | 2        | Non-conclusive |
+| 74_14f9       | 4        | Non-conclusive |
+| 74_15f60      | 1        | Non-conclusive |
+| 74_2          | 1        | Non-conclusive |
+| 74_214        | 4        | Non-conclusive |
+| 74_294604     | 2        | Non-conclusive |
+| 74_45063      | 4        | Non-conclusive |
+| 74_62b6752    | 2        | Non-conclusive |
+| 74_7          | 4        | Non-conclusive |
+| 74_742d381    | 1        | Non-conclusive |
+| 74_78         | 2        | Non-conclusive |
+| 74_7a77       | 4        | Non-conclusive |
+| 74_90e2       | 1        | Non-conclusive |
+| 74_91d41      | 2        | Non-conclusive |
+| 74_94c5       | 2        | Non-conclusive |
+| 74a279b       | 4        | Non-conclusive |
+| 74a70391      | 4        | Non-conclusive |
+| 74ab8367      | 2        | Non-conclusive |
+| 74acd440      | 8        | Non-conclusive |
+| 74b9224b      | 8        | Non-conclusive |
+| 74d759f6      | 2        | Non-conclusive |
+| 74e1dc2       | 2        | Non-conclusive |
+| 74e431a4      | 4        | Non-conclusive |
+| 74e5          | 1        | Non-conclusive |
+| 74f73187      | 4        | Non-conclusive |
+| 74f7656e      | 4        | Non-conclusive |
+| 74ff40da      | 4        | Non-conclusive |
+| 75            | 45       | Supported      |
+| 750           | 4        | Supported      |
+| 7500d906      | 4        | Non-conclusive |
+| 7509C1        | 1        | Non-conclusive |
+| 750_55c59     | 2        | Non-conclusive |
+| 7518c5b9      | 4        | Non-conclusive |
+| 751_24e2      | 2        | Non-conclusive |
+| 751_35d694    | 8        | Non-conclusive |
+| 751_5e072     | 2        | Non-conclusive |
+| 751af75       | 4        | Non-conclusive |
+| 7529c317      | 1        | Non-conclusive |
+| 752_40        | 4        | Non-conclusive |
+| 7538b6bf      | 4        | Non-conclusive |
+| 754           | 1        | Supported      |
+| 754_5e08      | 1        | Non-conclusive |
+| 754b8fd6      | 1        | Non-conclusive |
+| 755_48        | 2        | Non-conclusive |
+| 756           | 2        | Supported      |
+| 756b2b29      | 4        | Non-conclusive |
+| 757           | 3        | Supported      |
+| 757_11        | 2        | Non-conclusive |
+| 758_20c3      | 2        | Non-conclusive |
+| 759           | 4        | Supported      |
+| 7591c224      | 4        | Non-conclusive |
+| 759_3f64      | 2        | Non-conclusive |
+| 759de8a8      | 4        | Non-conclusive |
+| 75_1          | 1        | Non-conclusive |
+| 75_16f2       | 2        | Non-conclusive |
+| 75_2          | 4        | Non-conclusive |
+| 75_33023e9    | 2        | Non-conclusive |
+| 75_3773719    | 2        | Non-conclusive |
+| 75_3874b25    | 2        | Non-conclusive |
+| 75_3f108      | 1        | Non-conclusive |
+| 75_41376c2    | 2        | Non-conclusive |
+| 75_41b22      | 2        | Non-conclusive |
+| 75_4e1        | 2        | Non-conclusive |
+| 75_4f4        | 1        | Non-conclusive |
+| 75_5d3        | 4        | Non-conclusive |
+| 75_61a93      | 4        | Non-conclusive |
+| 75_6c4        | 2        | Non-conclusive |
+| 75_7          | 2        | Non-conclusive |
+| 75_745f94     | 1        | Non-conclusive |
+| 75_74c5       | 4        | Non-conclusive |
+| 75_78e7       | 2        | Non-conclusive |
+| 75_7a94       | 1        | Non-conclusive |
+| 75_7e361      | 2        | Non-conclusive |
+| 75_8003929    | 2        | Non-conclusive |
+| 75_855        | 2        | Non-conclusive |
+| 75_9          | 2        | Non-conclusive |
+| 75_951        | 1        | Non-conclusive |
+| 75_95c30      | 2        | Non-conclusive |
+| 75a84652fd    | 4        | Non-conclusive |
+| 75b3e5e3      | 4        | Non-conclusive |
+| 75b58         | 1        | Non-conclusive |
+| 75b69632      | 4        | Non-conclusive |
+| 75c07f5f      | 4        | Non-conclusive |
+| 75c9540d      | 2        | Non-conclusive |
+| 75d40ae3      | 4        | Non-conclusive |
+| 75e6388e      | 16       | Non-conclusive |
+| 75e679b1      | 1        | Non-conclusive |
+| 75f76358      | 4        | Non-conclusive |
+| 76            | 17       | Supported      |
+| 760           | 2        | Supported      |
+| 7606decc      | 1        | Non-conclusive |
+| 760_71a71     | 2        | Non-conclusive |
+| 760_73        | 4        | Non-conclusive |
+| 761           | 4        | Supported      |
+| 761b7071      | 8        | Non-conclusive |
+| 762a99f3      | 44       | Non-conclusive |
+| 7638c028      | 1        | Non-conclusive |
+| 763_56        | 4        | Non-conclusive |
+| 763a26ac      | 4        | Non-conclusive |
+| 764_097a34    | 4        | Non-conclusive |
+| 765           | 2        | Supported      |
+| 7661          | 10       | Supported      |
+| 7661f5e       | 4        | Non-conclusive |
+| 767           | 12       | Supported      |
+| 7671a79c      | 4        | Non-conclusive |
+| 767_5         | 2        | Non-conclusive |
+| 767bce0       | 4        | Non-conclusive |
+| 767d464f      | 4        | Non-conclusive |
+| 768           | 6        | Supported      |
+| 769b5d0a      | 1        | Non-conclusive |
+| 76_04         | 2        | Non-conclusive |
+| 76_0e76711    | 4        | Non-conclusive |
+| 76_1f732      | 4        | Non-conclusive |
+| 76_2          | 2        | Non-conclusive |
+| 76_3          | 5        | Non-conclusive |
+| 76_43         | 1        | Non-conclusive |
+| 76_4562       | 1        | Non-conclusive |
+| 76_4c506      | 4        | Non-conclusive |
+| 76_58020      | 2        | Non-conclusive |
+| 76_5e69       | 2        | Non-conclusive |
+| 76_6c49       | 1        | Non-conclusive |
+| 76_6c92       | 1        | Non-conclusive |
+| 76_8e367      | 2        | Non-conclusive |
+| 76_9          | 8        | Non-conclusive |
+| 76_90         | 4        | Non-conclusive |
+| 76_9649239    | 2        | Non-conclusive |
+| 76_9f303      | 4        | Non-conclusive |
+| 76a139        | 4        | Non-conclusive |
+| 76ac16f8      | 4        | Non-conclusive |
+| 76b7e24       | 4        | Non-conclusive |
+| 76bb9caa      | 4        | Non-conclusive |
+| 76bc96e7      | 4        | Non-conclusive |
+| 76c97279      | 4        | Non-conclusive |
+| 76ce9d47      | 4        | Non-conclusive |
+| 76d1094e      | 4        | Non-conclusive |
+| 76d3-1        | 2        | Non-conclusive |
+| 76f3          | 8        | Non-conclusive |
+| 76f463ca      | 4        | Non-conclusive |
+| 76f9          | 1        | Non-conclusive |
+| 76f9d002      | 8        | Non-conclusive |
+| 77            | 9        | Supported      |
+| 772_9620      | 2        | Non-conclusive |
+| 773           | 1        | Supported      |
+| 773_026a96    | 1        | Non-conclusive |
+| 774           | 2        | Supported      |
+| 7742e1.47     | 4        | Non-conclusive |
+| 774_7b061     | 2        | Non-conclusive |
+| 774aae10      | 4        | Non-conclusive |
+| 7752          | 4        | Supported      |
+| 7754a13d      | 4        | Non-conclusive |
+| 775_02912     | 2        | Non-conclusive |
+| 775_4         | 2        | Non-conclusive |
+| 776_567       | 2        | Non-conclusive |
+| 776_71a71     | 2        | Non-conclusive |
+| 776b63a6      | 4        | Non-conclusive |
+| 776c83ef      | 4        | Non-conclusive |
+| 777           | 1        | Supported      |
+| 777d6066      | 2        | Non-conclusive |
+| 778ff889      | 1        | Non-conclusive |
+| 779d4b2c      | 9        | Non-conclusive |
+| 77_11e0       | 2        | Non-conclusive |
+| 77_14c1       | 2        | Non-conclusive |
+| 77_18c63      | 1        | Non-conclusive |
+| 77_23a10      | 2        | Non-conclusive |
+| 77_3          | 6        | Non-conclusive |
+| 77_3c2        | 4        | Non-conclusive |
+| 77_3d4        | 2        | Non-conclusive |
+| 77_3f436      | 2        | Non-conclusive |
+| 77_413e70     | 1        | Non-conclusive |
+| 77_58516      | 4        | Non-conclusive |
+| 77_585d387    | 2        | Non-conclusive |
+| 77_6          | 4        | Non-conclusive |
+| 77_63e4       | 2        | Non-conclusive |
+| 77_732        | 4        | Non-conclusive |
+| 77_83d54      | 2        | Non-conclusive |
+| 77_8b67       | 2        | Non-conclusive |
+| 77_9191595    | 2        | Non-conclusive |
+| 77_929f1      | 2        | Non-conclusive |
+| 77_9c16       | 2        | Non-conclusive |
+| 77a568a1      | 4        | Non-conclusive |
+| 77a872f248    | 4        | Non-conclusive |
+| 77c4c7d       | 4        | Non-conclusive |
+| 77c816eb      | 5        | Non-conclusive |
+| 77d0720e      | 1        | Non-conclusive |
+| 77e1          | 2        | Non-conclusive |
+| 77e6          | 4        | Non-conclusive |
+| 77f6ca64      | 4        | Non-conclusive |
+| 77f7a3d4      | 1        | Non-conclusive |
+| 77fc38e4      | 4        | Non-conclusive |
+| 77fc3e80      | 4        | Non-conclusive |
+| 78            | 10       | Supported      |
+| 78.0.0        | 4        | Supported      |
+| 7807b792      | 4        | Non-conclusive |
+| 7808f2a       | 4        | Non-conclusive |
+| 782           | 2        | Supported      |
+| 7822ecaa      | 4        | Non-conclusive |
+| 782de8e9      | 4        | Non-conclusive |
+| 784           | 2        | Supported      |
+| 784_245f40    | 2        | Non-conclusive |
+| 7851c29c      | 5        | Non-conclusive |
+| 785_124b5     | 2        | Non-conclusive |
+| 786_5         | 2        | Non-conclusive |
+| 786_8417      | 2        | Non-conclusive |
+| 787           | 2        | Supported      |
+| 7878c172      | 4        | Non-conclusive |
+| 787_165d0     | 2        | Non-conclusive |
+| 787d08b4      | 4        | Non-conclusive |
+| 787f4dd8      | 5        | Non-conclusive |
+| 7888          | 4        | Supported      |
+| 788_6794      | 4        | Non-conclusive |
+| 78_14624a1    | 4        | Non-conclusive |
+| 78_14a6861    | 2        | Non-conclusive |
+| 78_1c98       | 4        | Non-conclusive |
+| 78_25f911     | 2        | Non-conclusive |
+| 78_3          | 1        | Non-conclusive |
+| 78_392d3      | 1        | Non-conclusive |
+| 78_3e5840     | 2        | Non-conclusive |
+| 78_7f68       | 2        | Non-conclusive |
+| 78_8          | 4        | Non-conclusive |
+| 78_9f2        | 2        | Non-conclusive |
+| 78a24f6b      | 4        | Non-conclusive |
+| 78a2731d      | 4        | Non-conclusive |
+| 78c02f58      | 4        | Non-conclusive |
+| 78ceed44      | 8        | Non-conclusive |
+| 78d7ea21      | 4        | Non-conclusive |
+| 78e7f91c      | 13       | Non-conclusive |
+| 78fe5d76bf    | 36       | Non-conclusive |
+| 79            | 18       | Supported      |
+| 7913ce87      | 4        | Non-conclusive |
+| 791_7         | 2        | Non-conclusive |
+| 791_7f374     | 2        | Non-conclusive |
+| 792c046b      | 4        | Non-conclusive |
+| 794           | 4        | Supported      |
+| 7952b62b3f    | 8        | Non-conclusive |
+| 796_6         | 2        | Non-conclusive |
+| 796_94968     | 2        | Non-conclusive |
+| 796_99        | 2        | Non-conclusive |
+| 796c8e7b      | 4        | Non-conclusive |
+| 796d082e81    | 10       | Non-conclusive |
+| 796ebd23      | 8        | Non-conclusive |
+| 7974bbd0      | 4        | Non-conclusive |
+| 7984          | 12       | Supported      |
+| 798f30c1      | 1        | Non-conclusive |
+| 799           | 4        | Supported      |
+| 79D1n1        | 8        | Non-conclusive |
+| 79_03b81      | 2        | Non-conclusive |
+| 79_07d4       | 1        | Non-conclusive |
+| 79_1          | 4        | Non-conclusive |
+| 79_101b125    | 2        | Non-conclusive |
+| 79_157e69     | 2        | Non-conclusive |
+| 79_16f7       | 4        | Non-conclusive |
+| 79_2          | 2        | Non-conclusive |
+| 79_2100e98    | 4        | Non-conclusive |
+| 79_210e4      | 1        | Non-conclusive |
+| 79_220a66     | 4        | Non-conclusive |
+| 79_265        | 2        | Non-conclusive |
+| 79_273d54     | 2        | Non-conclusive |
+| 79_3          | 1        | Non-conclusive |
+| 79_30e853     | 2        | Non-conclusive |
+| 79_3542c8     | 4        | Non-conclusive |
+| 79_3c98       | 2        | Non-conclusive |
+| 79_4          | 6        | Non-conclusive |
+| 79_41a76      | 4        | Non-conclusive |
+| 79_4c920      | 2        | Non-conclusive |
+| 79_55237      | 2        | Non-conclusive |
+| 79_58d193     | 2        | Non-conclusive |
+| 79_6          | 1        | Non-conclusive |
+| 79_6306b2     | 2        | Non-conclusive |
+| 79_73         | 1        | Non-conclusive |
+| 79_8047f29    | 2        | Non-conclusive |
+| 79_8e431      | 2        | Non-conclusive |
+| 79_93f2862    | 2        | Non-conclusive |
+| 79a5b96a      | 1        | Non-conclusive |
+| 79a7097b      | 4        | Non-conclusive |
+| 79ae02d3      | 2        | Non-conclusive |
+| 79b41553f8    | 4        | Non-conclusive |
+| 79b88e1c      | 4        | Non-conclusive |
+| 79de7d1a      | 4        | Non-conclusive |
+| 7C0           | 8        | Non-conclusive |
+| 7F4           | 4        | Non-conclusive |
+| 7F8           | 4        | Non-conclusive |
+| 7H03          | 4        | Non-conclusive |
+| 7I7           | 2        | Non-conclusive |
+| 7K53          | 4        | Non-conclusive |
+| 7K9N6         | 4        | Non-conclusive |
+| 7L2           | 4        | Non-conclusive |
+| 7N4           | 8        | Non-conclusive |
+| 7N6           | 4        | Non-conclusive |
+| 7P5           | 4        | Non-conclusive |
+| 7R7           | 16       | Non-conclusive |
+| 7T6           | 1        | Non-conclusive |
+| 7V9           | 12       | Non-conclusive |
+| 7X1           | 2        | Non-conclusive |
+| 7Z4E9         | 4        | Non-conclusive |
+| 7_0           | 2        | Non-conclusive |
+| 7_030d40      | 2        | Non-conclusive |
+| 7_09          | 2        | Non-conclusive |
+| 7_156b5816    | 4        | Non-conclusive |
+| 7_16e2        | 2        | Non-conclusive |
+| 7_1f1         | 1        | Non-conclusive |
+| 7_2           | 2        | Non-conclusive |
+| 7_23          | 1        | Non-conclusive |
+| 7_2482        | 1        | Non-conclusive |
+| 7_2c1         | 4        | Non-conclusive |
+| 7_2c86952     | 4        | Non-conclusive |
+| 7_2e43        | 4        | Non-conclusive |
+| 7_2e95        | 4        | Non-conclusive |
+| 7_32869f5     | 1        | Non-conclusive |
+| 7_380b5       | 2        | Non-conclusive |
+| 7_3815b94     | 1        | Non-conclusive |
+| 7_4           | 2        | Non-conclusive |
+| 7_40743       | 2        | Non-conclusive |
+| 7_438c03      | 2        | Non-conclusive |
+| 7_443a23      | 2        | Non-conclusive |
+| 7_46f11       | 4        | Non-conclusive |
+| 7_528d738     | 4        | Non-conclusive |
+| 7_58516       | 1        | Non-conclusive |
+| 7_5d30892     | 5        | Non-conclusive |
+| 7_69d1        | 2        | Non-conclusive |
+| 7_71121b7     | 4        | Non-conclusive |
+| 7_798f4       | 2        | Non-conclusive |
+| 7_7c0         | 2        | Non-conclusive |
+| 7_8           | 4        | Non-conclusive |
+| 7_89          | 1        | Non-conclusive |
+| 7_9           | 4        | Non-conclusive |
+| 7_903e84      | 2        | Non-conclusive |
+| 7_922f4311    | 1        | Non-conclusive |
+| 7_94b740      | 2        | Non-conclusive |
+| 7_972f30      | 4        | Non-conclusive |
+| 7_97f2        | 1        | Non-conclusive |
+| 7a038902      | 4        | Non-conclusive |
+| 7a0q1         | 4        | Non-conclusive |
+| 7a111f7e      | 8        | Non-conclusive |
+| 7a194b4f      | 1        | Non-conclusive |
+| 7a3113ac      | 4        | Non-conclusive |
+| 7a3cc334      | 1        | Non-conclusive |
+| 7a40eb0       | 4        | Non-conclusive |
+| 7a577ccd      | 1        | Non-conclusive |
+| 7a5a31dc      | 10       | Non-conclusive |
+| 7a5c5a36      | 8        | Non-conclusive |
+| 7a5e7962      | 4        | Non-conclusive |
+| 7a74ae71      | 4        | Non-conclusive |
+| 7a74e58c      | 4        | Non-conclusive |
+| 7a7fccb4      | 4        | Non-conclusive |
+| 7a9           | 4        | Non-conclusive |
+| 7a9807d0      | 4        | Non-conclusive |
+| 7aa9ced8      | 4        | Non-conclusive |
+| 7ab26554      | 5        | Non-conclusive |
+| 7ac86a59      | 1        | Non-conclusive |
+| 7ae4fcce      | 4        | Non-conclusive |
+| 7afaefcb      | 8        | Non-conclusive |
+| 7b00d4ca      | 4        | Non-conclusive |
+| 7b0849.439    | 1        | Non-conclusive |
+| 7b2fba4a      | 1        | Non-conclusive |
+| 7b3a626e      | 4        | Non-conclusive |
+| 7b3a807       | 8        | Non-conclusive |
+| 7b3b4e3b      | 8        | Non-conclusive |
+| 7b4           | 4        | Non-conclusive |
+| 7b4ed9a0e5    | 4        | Non-conclusive |
+| 7b50dd87      | 4        | Non-conclusive |
+| 7b5a3230      | 1        | Non-conclusive |
+| 7b7           | 1        | Non-conclusive |
+| 7b752423      | 2        | Non-conclusive |
+| 7b76          | 1        | Non-conclusive |
+| 7b8ed443      | 4        | Non-conclusive |
+| 7b8f69f63b    | 1        | Non-conclusive |
+| 7b931bba      | 4        | Non-conclusive |
+| 7ba04131      | 4        | Non-conclusive |
+| 7bbac411      | 4        | Non-conclusive |
+| 7bd1a433      | 4        | Non-conclusive |
+| 7bd37ccf      | 4        | Non-conclusive |
+| 7bd583ea      | 4        | Non-conclusive |
+| 7be4694a      | 4        | Non-conclusive |
+| 7befb77b15    | 8        | Non-conclusive |
+| 7bfc16ee      | 1        | Non-conclusive |
+| 7bff35a       | 2        | Non-conclusive |
+| 7c0915dc      | 4        | Non-conclusive |
+| 7c0ca4f6      | 5        | Non-conclusive |
+| 7c0d197b      | 4        | Non-conclusive |
+| 7c1           | 1        | Non-conclusive |
+| 7c175b7a      | 4        | Non-conclusive |
+| 7c17d333      | 8        | Non-conclusive |
+| 7c187dd7      | 4        | Non-conclusive |
+| 7c1df53d      | 2        | Non-conclusive |
+| 7c2261d7      | 4        | Non-conclusive |
+| 7c3           | 1        | Non-conclusive |
+| 7c378e5e      | 4        | Non-conclusive |
+| 7c3f8a24      | 8        | Non-conclusive |
+| 7c45b766      | 8        | Non-conclusive |
+| 7c56accc      | 2        | Non-conclusive |
+| 7c69108       | 4        | Non-conclusive |
+| 7c7152b87a    | 12       | Non-conclusive |
+| 7c7878e       | 4        | Non-conclusive |
+| 7c827b04      | 1        | Non-conclusive |
+| 7c9bf9fda9    | 1        | Non-conclusive |
+| 7c9f1fc4      | 4        | Non-conclusive |
+| 7ca9a76       | 4        | Non-conclusive |
+| 7cb69f12      | 1        | Non-conclusive |
+| 7cbc635f      | 4        | Non-conclusive |
+| 7cc40c199d    | 12       | Non-conclusive |
+| 7cca4b01      | 1        | Non-conclusive |
+| 7cd2016a      | 4        | Non-conclusive |
+| 7cdc6eba      | 1        | Non-conclusive |
+| 7cfceca8      | 4        | Non-conclusive |
+| 7d0           | 4        | Non-conclusive |
+| 7d0t9         | 4        | Non-conclusive |
+| 7d11f4ce      | 4        | Non-conclusive |
+| 7d1fedbd      | 1        | Non-conclusive |
+| 7d234f5b      | 1        | Non-conclusive |
+| 7d2a069       | 4        | Non-conclusive |
+| 7d2f6e26      | 4        | Non-conclusive |
+| 7d3a62bc      | 1        | Non-conclusive |
+| 7d3aff4a      | 4        | Non-conclusive |
+| 7d539eea      | 4        | Non-conclusive |
+| 7d70c5c0      | 4        | Non-conclusive |
+| 7d72bc4b      | 4        | Non-conclusive |
+| 7d80e175      | 4        | Non-conclusive |
+| 7d93e2        | 4        | Non-conclusive |
+| 7d9ee333      | 4        | Non-conclusive |
+| 7dacad3c      | 4        | Non-conclusive |
+| 7dbc9ace      | 1        | Non-conclusive |
+| 7de7afca      | 4        | Non-conclusive |
+| 7e0           | 1        | Non-conclusive |
+| 7e01ad2767    | 24       | Non-conclusive |
+| 7e06          | 5        | Non-conclusive |
+| 7e0caab       | 4        | Non-conclusive |
+| 7e1a5ac5      | 4        | Non-conclusive |
+| 7e2           | 4        | Non-conclusive |
+| 7e21c041      | 4        | Non-conclusive |
+| 7e2a5edac1    | 5        | Non-conclusive |
+| 7e2eed7       | 4        | Non-conclusive |
+| 7e3           | 1        | Non-conclusive |
+| 7e4080b6      | 1        | Non-conclusive |
+| 7e52c539      | 1        | Non-conclusive |
+| 7e52f00b      | 4        | Non-conclusive |
+| 7e6b04d       | 1        | Non-conclusive |
+| 7e6c08b3      | 5        | Non-conclusive |
+| 7e72cc76      | 310      | Non-conclusive |
+| 7e7d7c839d    | 1        | Non-conclusive |
+| 7e8           | 4        | Non-conclusive |
+| 7e851963      | 4        | Non-conclusive |
+| 7e8cef07      | 4        | Non-conclusive |
+| 7e912910      | 5        | Non-conclusive |
+| 7e960ab6      | 1        | Non-conclusive |
+| 7e986e9c      | 4        | Non-conclusive |
+| 7eba8d4b      | 4        | Non-conclusive |
+| 7ec84291      | 1        | Non-conclusive |
+| 7ecdd591      | 4        | Non-conclusive |
+| 7ef8f5b3      | 1        | Non-conclusive |
+| 7ef9904c      | 4        | Non-conclusive |
+| 7ef9ba41      | 4        | Non-conclusive |
+| 7efa4914      | 1        | Non-conclusive |
+| 7f0           | 8        | Non-conclusive |
+| 7f054a78      | 1        | Non-conclusive |
+| 7f19f53b      | 4        | Non-conclusive |
+| 7f1d9d0f      | 4        | Non-conclusive |
+| 7f2ce0d3      | 4        | Non-conclusive |
+| 7f3570a7      | 4        | Non-conclusive |
+| 7f3bdd59      | 4        | Non-conclusive |
+| 7f4130b4      | 1        | Non-conclusive |
+| 7f415d9e      | 4        | Non-conclusive |
+| 7f5a877c      | 4        | Non-conclusive |
+| 7f6007        | 4        | Non-conclusive |
+| 7f649a7a      | 1        | Non-conclusive |
+| 7f698b8       | 4        | Non-conclusive |
+| 7f87cd606     | 5        | Non-conclusive |
+| 7f903f3c      | 4        | Non-conclusive |
+| 7f95b2c442    | 4        | Non-conclusive |
+| 7fa14bfc      | 4        | Non-conclusive |
+| 7fad6613      | 8        | Non-conclusive |
+| 7faff5e1      | 4        | Non-conclusive |
+| 7fb437c1      | 1        | Non-conclusive |
+| 7fcc1ab0      | 1        | Non-conclusive |
+| 7fe226b7      | 4        | Non-conclusive |
+| 7ff6784       | 2        | Non-conclusive |
+| 7ff88727      | 4        | Non-conclusive |
+| 7ff91b54f     | 4        | Non-conclusive |
+| 7h88777b9     | 4        | Non-conclusive |
+| 7j8           | 8        | Non-conclusive |
+| 7m9           | 4        | Non-conclusive |
+| 7o257         | 1        | Non-conclusive |
+| 7o62s3        | 1        | Non-conclusive |
+| 7p9           | 1        | Non-conclusive |
+| 7t4           | 1        | Non-conclusive |
+| 7w3u3         | 4        | Non-conclusive |
+| 7y4j6         | 4        | Non-conclusive |
+| 7y6           | 2        | Non-conclusive |
+| 8             | 1300     | Supported      |
+| 8%27%27       | 6        | Non-conclusive |
+| 8.0           | 8        | Supported      |
+| 8.0.0         | 5        | Supported      |
+| 8.0.1         | 3        | Supported      |
+| 8.1.0         | 1        | Supported      |
+| 8.1.1         | 5        | Supported      |
+| 8.11.26       | 1        | Supported      |
+| 8.2-2         | 4        | Non-conclusive |
+| 8.2.0         | 4        | Supported      |
+| 8.2.4         | 4        | Supported      |
+| 8.3           | 1        | Supported      |
+| 8.3.0         | 4        | Supported      |
+| 8.4.0         | 13       | Supported      |
+| 8.4.2         | 5        | Supported      |
+| 8.4.3         | 2        | Supported      |
+| 8.5.1         | 4        | Supported      |
+| 8.6.14        | 4        | Supported      |
+| 8.7.6         | 4        | Supported      |
+| 8.8.1         | 4        | Supported      |
+| 8.8412211     | 9        | Supported      |
+| 8.9.13        | 4        | Supported      |
+| 8.9.2         | 4        | Supported      |
+| 80            | 58       | Supported      |
+| 800           | 13       | Supported      |
+| 8002_0        | 2        | Non-conclusive |
+| 8002_98       | 2        | Non-conclusive |
+| 8004c1a2      | 4        | Non-conclusive |
+| 8006          | 1        | Supported      |
+| 800c6f56      | 4        | Non-conclusive |
+| 802           | 4        | Supported      |
+| 802d3ef       | 4        | Non-conclusive |
+| 8031fde0      | 1        | Non-conclusive |
+| 803_5         | 4        | Non-conclusive |
+| 804           | 2        | Supported      |
+| 8040f0df      | 4        | Non-conclusive |
+| 805b76ac      | 5        | Non-conclusive |
+| 806bb390      | 4        | Non-conclusive |
+| 808b1c035     | 26       | Non-conclusive |
+| 809a5c2       | 8        | Non-conclusive |
+| 80J6k3        | 4        | Non-conclusive |
+| 80Q8          | 1        | Non-conclusive |
+| 80_0          | 6        | Non-conclusive |
+| 80_02674e7    | 1        | Non-conclusive |
+| 80_055        | 4        | Non-conclusive |
+| 80_05744      | 2        | Non-conclusive |
+| 80_08         | 1        | Non-conclusive |
+| 80_0c8        | 2        | Non-conclusive |
+| 80_10c68      | 4        | Non-conclusive |
+| 80_1165e23    | 2        | Non-conclusive |
+| 80_13         | 2        | Non-conclusive |
+| 80_2395b6     | 4        | Non-conclusive |
+| 80_27656f2    | 2        | Non-conclusive |
+| 80_3890093    | 4        | Non-conclusive |
+| 80_3e34       | 2        | Non-conclusive |
+| 80_490        | 2        | Non-conclusive |
+| 80_4a44333    | 1        | Non-conclusive |
+| 80_553        | 2        | Non-conclusive |
+| 80_62         | 4        | Non-conclusive |
+| 80_714f8      | 2        | Non-conclusive |
+| 80_8e3        | 2        | Non-conclusive |
+| 80_9          | 2        | Non-conclusive |
+| 80_985a52     | 1        | Non-conclusive |
+| 80_9f6        | 2        | Non-conclusive |
+| 80a2412a      | 1        | Non-conclusive |
+| 80ac584e      | 4        | Non-conclusive |
+| 80be0799      | 4        | Non-conclusive |
+| 80d704ac      | 4        | Non-conclusive |
+| 80de8cfa      | 4        | Non-conclusive |
+| 80e09         | 4        | Non-conclusive |
+| 80e10aa3      | 1        | Non-conclusive |
+| 80f6fdc814    | 4        | Non-conclusive |
+| 80fabb6c      | 8        | Non-conclusive |
+| 80fe435998    | 1        | Non-conclusive |
+| 81            | 32       | Supported      |
+| 811           | 4        | Supported      |
+| 811a0824      | 4        | Non-conclusive |
+| 812a5d12      | 4        | Non-conclusive |
+| 812ab0bc      | 4        | Non-conclusive |
+| 812cbdd4      | 4        | Non-conclusive |
+| 813           | 4        | Supported      |
+| 8136          | 4        | Supported      |
+| 813_4         | 4        | Non-conclusive |
+| 813e09df      | 4        | Non-conclusive |
+| 8142c0aa      | 1        | Non-conclusive |
+| 814c45d4      | 4        | Non-conclusive |
+| 8152_71       | 2        | Non-conclusive |
+| 8154_71       | 2        | Non-conclusive |
+| 815_11        | 2        | Non-conclusive |
+| 815_25        | 2        | Non-conclusive |
+| 815_34        | 2        | Non-conclusive |
+| 8167_2c41     | 4        | Non-conclusive |
+| 817_809f9     | 2        | Non-conclusive |
+| 818e6e7b      | 8        | Non-conclusive |
+| 819           | 2        | Supported      |
+| 8190          | 1        | Supported      |
+| 81_0178127    | 4        | Non-conclusive |
+| 81_03427b9    | 4        | Non-conclusive |
+| 81_1490d21    | 2        | Non-conclusive |
+| 81_16         | 2        | Non-conclusive |
+| 81_18b3       | 2        | Non-conclusive |
+| 81_2f94291    | 2        | Non-conclusive |
+| 81_33b31      | 4        | Non-conclusive |
+| 81_33d10      | 1        | Non-conclusive |
+| 81_5          | 2        | Non-conclusive |
+| 81_573        | 4        | Non-conclusive |
+| 81_65b0       | 2        | Non-conclusive |
+| 81_6e2        | 2        | Non-conclusive |
+| 81_7f68       | 2        | Non-conclusive |
+| 81_800        | 2        | Non-conclusive |
+| 81_82f45      | 4        | Non-conclusive |
+| 81_8c1        | 2        | Non-conclusive |
+| 81_9          | 2        | Non-conclusive |
+| 81_912        | 4        | Non-conclusive |
+| 81a0          | 5        | Non-conclusive |
+| 81a1e22e      | 4        | Non-conclusive |
+| 81a3afd7      | 4        | Non-conclusive |
+| 81aed340      | 8        | Non-conclusive |
+| 81b6-0        | 4        | Non-conclusive |
+| 81d30968      | 8        | Non-conclusive |
+| 81dec51a79    | 4        | Non-conclusive |
+| 81e2          | 4        | Non-conclusive |
+| 81fba872      | 8        | Non-conclusive |
+| 82            | 34       | Supported      |
+| 820           | 8        | Supported      |
+| 821           | 2        | Supported      |
+| 8218a520      | 8        | Non-conclusive |
+| 8220e8dfe8    | 4        | Non-conclusive |
+| 8221          | 4        | Supported      |
+| 8236f96       | 4        | Non-conclusive |
+| 8246D88F      | 8        | Non-conclusive |
+| 824feef2      | 5        | Non-conclusive |
+| 825a2         | 2        | Non-conclusive |
+| 825fc6a       | 4        | Non-conclusive |
+| 826           | 2        | Supported      |
+| 826e42ba      | 2        | Non-conclusive |
+| 827dd90f      | 1        | Non-conclusive |
+| 827fad94      | 4        | Non-conclusive |
+| 8285          | 1        | Supported      |
+| 829           | 4        | Supported      |
+| 8295ecb6      | 1        | Non-conclusive |
+| 8299          | 4        | Supported      |
+| 829_6         | 2        | Non-conclusive |
+| 82_1e934      | 2        | Non-conclusive |
+| 82_2          | 1        | Non-conclusive |
+| 82_227        | 4        | Non-conclusive |
+| 82_2b2        | 2        | Non-conclusive |
+| 82_3208       | 1        | Non-conclusive |
+| 82_3494b2     | 4        | Non-conclusive |
+| 82_56f88      | 4        | Non-conclusive |
+| 82_573        | 2        | Non-conclusive |
+| 82_5c66       | 4        | Non-conclusive |
+| 82_621a6      | 4        | Non-conclusive |
+| 82_62c944     | 2        | Non-conclusive |
+| 82_634e6      | 1        | Non-conclusive |
+| 82_6b248      | 2        | Non-conclusive |
+| 82_8          | 2        | Non-conclusive |
+| 82_9789       | 2        | Non-conclusive |
+| 82_9e00568    | 2        | Non-conclusive |
+| 82aa801       | 8        | Non-conclusive |
+| 82c0312f      | 4        | Non-conclusive |
+| 82c15         | 4        | Non-conclusive |
+| 82c63142      | 4        | Non-conclusive |
+| 82c908        | 8        | Non-conclusive |
+| 82dca975      | 5        | Non-conclusive |
+| 82e79e25      | 4        | Non-conclusive |
+| 82e994d2      | 1        | Non-conclusive |
+| 82f01c98      | 4        | Non-conclusive |
+| 82f60c0a      | 1        | Non-conclusive |
+| 83            | 50       | Supported      |
+| 830           | 4        | Supported      |
+| 8301a6f7      | 4        | Non-conclusive |
+| 831_824c6     | 8        | Non-conclusive |
+| 8348c883      | 4        | Non-conclusive |
+| 8351_2c46     | 2        | Non-conclusive |
+| 8354          | 2        | Supported      |
+| 8375          | 1        | Supported      |
+| 837_48        | 4        | Non-conclusive |
+| 837d295c      | 4        | Non-conclusive |
+| 838           | 1        | Supported      |
+| 8382eaa       | 4        | Non-conclusive |
+| 8394f95a85    | 4        | Non-conclusive |
+| 8398a7c4      | 4        | Non-conclusive |
+| 83_00         | 2        | Non-conclusive |
+| 83_08a187     | 2        | Non-conclusive |
+| 83_0a8        | 2        | Non-conclusive |
+| 83_0a84       | 4        | Non-conclusive |
+| 83_1          | 4        | Non-conclusive |
+| 83_11d85      | 4        | Non-conclusive |
+| 83_3085d6     | 4        | Non-conclusive |
+| 83_32         | 2        | Non-conclusive |
+| 83_32b6361    | 2        | Non-conclusive |
+| 83_397        | 2        | Non-conclusive |
+| 83_4          | 1        | Non-conclusive |
+| 83_4a4        | 2        | Non-conclusive |
+| 83_50f7       | 2        | Non-conclusive |
+| 83_6          | 4        | Non-conclusive |
+| 83_632c6      | 3        | Non-conclusive |
+| 83_65021      | 4        | Non-conclusive |
+| 83_676        | 4        | Non-conclusive |
+| 83_7a7        | 2        | Non-conclusive |
+| 83_801        | 1        | Non-conclusive |
+| 83_855e67     | 2        | Non-conclusive |
+| 83_8c7        | 2        | Non-conclusive |
+| 83_9b6397     | 8        | Non-conclusive |
+| 83_9c9        | 4        | Non-conclusive |
+| 83add32b      | 4        | Non-conclusive |
+| 83af2d1c      | 4        | Non-conclusive |
+| 83b6          | 4        | Non-conclusive |
+| 83c0410b      | 1        | Non-conclusive |
+| 83c1          | 4        | Non-conclusive |
+| 83c74641      | 4        | Non-conclusive |
+| 83d5a1b       | 13       | Non-conclusive |
+| 83d983e10e    | 5        | Non-conclusive |
+| 83e876d6      | 1        | Non-conclusive |
+| 83e9597       | 4        | Non-conclusive |
+| 83ff14f9      | 17       | Non-conclusive |
+| 84            | 40       | Supported      |
+| 840           | 2        | Supported      |
+| 840_6656      | 2        | Non-conclusive |
+| 840d6a9f      | 4        | Non-conclusive |
+| 841           | 4        | Supported      |
+| 841a04306e    | 1        | Non-conclusive |
+| 841f538e      | 4        | Non-conclusive |
+| 8420c341      | 1        | Non-conclusive |
+| 844_4373      | 4        | Non-conclusive |
+| 844b7420      | 2        | Non-conclusive |
+| 844d5893      | 4        | Non-conclusive |
+| 8455f9f1      | 4        | Non-conclusive |
+| 845b66b5      | 8        | Non-conclusive |
+| 845d956d      | 4        | Non-conclusive |
+| 846           | 4        | Supported      |
+| 846_4e5       | 2        | Non-conclusive |
+| 846_8         | 2        | Non-conclusive |
+| 846_95884     | 2        | Non-conclusive |
+| 846_978375    | 2        | Non-conclusive |
+| 846db4fa      | 4        | Non-conclusive |
+| 8479_5e62     | 2        | Non-conclusive |
+| 849_389       | 2        | Non-conclusive |
+| 849_6a3       | 2        | Non-conclusive |
+| 84_12         | 4        | Non-conclusive |
+| 84_1995       | 2        | Non-conclusive |
+| 84_2546       | 2        | Non-conclusive |
+| 84_38541      | 2        | Non-conclusive |
+| 84_501f346    | 4        | Non-conclusive |
+| 84_62d2       | 2        | Non-conclusive |
+| 84_787e28     | 4        | Non-conclusive |
+| 84_7c79       | 1        | Non-conclusive |
+| 84_9211f5     | 4        | Non-conclusive |
+| 84_967        | 2        | Non-conclusive |
+| 84a0          | 4        | Non-conclusive |
+| 84b213ff      | 1        | Non-conclusive |
+| 84b31363      | 4        | Non-conclusive |
+| 84cc1908      | 4        | Non-conclusive |
+| 84cc5d41      | 4        | Non-conclusive |
+| 84e4d0bf      | 503039   | Non-conclusive |
+| 84e5          | 2        | Non-conclusive |
+| 84e62db2      | 4        | Non-conclusive |
+| 84ea85fb      | 4        | Non-conclusive |
+| 84f6d259      | 4        | Non-conclusive |
+| 84f979ec      | 4        | Non-conclusive |
+| 84f9d646      | 4        | Non-conclusive |
+| 85            | 41       | Supported      |
+| 8502b0e4      | 1        | Non-conclusive |
+| 850f6196      | 1        | Non-conclusive |
+| 8512a3c8ea    | 2        | Non-conclusive |
+| 8525          | 2        | Supported      |
+| 8529b4e0      | 4        | Non-conclusive |
+| 852_0a3       | 4        | Non-conclusive |
+| 852e21ac      | 4        | Non-conclusive |
+| 8531          | 16       | Supported      |
+| 854_70c6      | 4        | Non-conclusive |
+| 854ecb65      | 4        | Non-conclusive |
+| 855           | 8        | Supported      |
+| 855f3ebc      | 4        | Non-conclusive |
+| 857_92        | 4        | Non-conclusive |
+| 857d2271      | 1        | Non-conclusive |
+| 859a7c99      | 4        | Non-conclusive |
+| 859cbf9d      | 5        | Non-conclusive |
+| 859e5ed3      | 1        | Non-conclusive |
+| 859f9a12      | 1        | Non-conclusive |
+| 85_15e6       | 2        | Non-conclusive |
+| 85_2          | 2        | Non-conclusive |
+| 85_232        | 4        | Non-conclusive |
+| 85_2c73087    | 2        | Non-conclusive |
+| 85_371f3      | 2        | Non-conclusive |
+| 85_39c63      | 2        | Non-conclusive |
+| 85_4          | 2        | Non-conclusive |
+| 85_43b3       | 2        | Non-conclusive |
+| 85_4498b0     | 1        | Non-conclusive |
+| 85_5          | 4        | Non-conclusive |
+| 85_6532       | 2        | Non-conclusive |
+| 85_6d300      | 4        | Non-conclusive |
+| 85_6e7356     | 4        | Non-conclusive |
+| 85_7816       | 4        | Non-conclusive |
+| 85_7c299      | 2        | Non-conclusive |
+| 85_8257a60    | 2        | Non-conclusive |
+| 85_8d5        | 2        | Non-conclusive |
+| 85_9          | 4        | Non-conclusive |
+| 85_9255e9     | 2        | Non-conclusive |
+| 85_9473a0     | 1        | Non-conclusive |
+| 85_99e439     | 2        | Non-conclusive |
+| 85b7775834    | 60       | Non-conclusive |
+| 85bea09c      | 1        | Non-conclusive |
+| 85c710dd      | 1        | Non-conclusive |
+| 85d3f835      | 4        | Non-conclusive |
+| 85d6fe5       | 4        | Non-conclusive |
+| 85e3          | 4        | Non-conclusive |
+| 85e40bd1      | 4        | Non-conclusive |
+| 85e991b4      | 4        | Non-conclusive |
+| 85f644d5      | 4        | Non-conclusive |
+| 85fd4756      | 4        | Non-conclusive |
+| 86            | 32       | Supported      |
+| 86-9          | 4        | Non-conclusive |
+| 860c503e      | 8        | Non-conclusive |
+| 860e2d07      | 5        | Non-conclusive |
+| 8626ef4d      | 4        | Non-conclusive |
+| 8627adac      | 4        | Non-conclusive |
+| 863           | 6        | Supported      |
+| 8630cf6013    | 20       | Non-conclusive |
+| 8636fe4a      | 1        | Non-conclusive |
+| 863_62d52     | 2        | Non-conclusive |
+| 8643c081      | 4        | Non-conclusive |
+| 864_9         | 4        | Non-conclusive |
+| 865           | 4        | Supported      |
+| 865_49a0      | 2        | Non-conclusive |
+| 865b473       | 4        | Non-conclusive |
+| 866_49a0      | 2        | Non-conclusive |
+| 866dd33b      | 1        | Non-conclusive |
+| 8686          | 4        | Supported      |
+| 868b8         | 1        | Non-conclusive |
+| 8695c707      | 4        | Non-conclusive |
+| 869b4d01      | 4        | Non-conclusive |
+| 86P1          | 5        | Non-conclusive |
+| 86_018e1      | 2        | Non-conclusive |
+| 86_10d4       | 2        | Non-conclusive |
+| 86_12         | 4        | Non-conclusive |
+| 86_18d1478    | 2        | Non-conclusive |
+| 86_2946604    | 2        | Non-conclusive |
+| 86_45         | 2        | Non-conclusive |
+| 86_6925b27    | 4        | Non-conclusive |
+| 86_6b3949     | 2        | Non-conclusive |
+| 86_6d1086     | 2        | Non-conclusive |
+| 86_7          | 2        | Non-conclusive |
+| 86_7790685    | 2        | Non-conclusive |
+| 86_7a6        | 1        | Non-conclusive |
+| 86_7c3        | 2        | Non-conclusive |
+| 86_8          | 2        | Non-conclusive |
+| 86_9a966      | 2        | Non-conclusive |
+| 86a35d7       | 4        | Non-conclusive |
+| 86abafd3      | 4        | Non-conclusive |
+| 86b9a9ef      | 4        | Non-conclusive |
+| 86b9df1e      | 4        | Non-conclusive |
+| 86bd6972      | 4        | Non-conclusive |
+| 86dec403      | 4        | Non-conclusive |
+| 86df8dc0      | 4        | Non-conclusive |
+| 86e64         | 4        | Non-conclusive |
+| 86f0d18       | 4        | Non-conclusive |
+| 86f598c7      | 8        | Non-conclusive |
+| 86f6210d      | 4        | Non-conclusive |
+| 87            | 52       | Supported      |
+| 87.5          | 8        | Supported      |
+| 870           | 5        | Supported      |
+| 8700ec73bd    | 4        | Non-conclusive |
+| 870_81b917    | 2        | Non-conclusive |
+| 871           | 4        | Supported      |
+| 872           | 4        | Supported      |
+| 8727f374      | 4        | Non-conclusive |
+| 873           | 2        | Supported      |
+| 8731          | 4        | Supported      |
+| 873_3f515     | 2        | Non-conclusive |
+| 873_6842      | 2        | Non-conclusive |
+| 873_9e8       | 2        | Non-conclusive |
+| 873a4604      | 4        | Non-conclusive |
+| 8747_83c50    | 4        | Non-conclusive |
+| 874a4c95      | 1        | Non-conclusive |
+| 875           | 13       | Supported      |
+| 8764a1ee      | 8        | Non-conclusive |
+| 876_5         | 4        | Non-conclusive |
+| 877_02d6      | 4        | Non-conclusive |
+| 877_46a0      | 4        | Non-conclusive |
+| 878_1         | 2        | Non-conclusive |
+| 87_0          | 4        | Non-conclusive |
+| 87_1151       | 2        | Non-conclusive |
+| 87_203a9      | 2        | Non-conclusive |
+| 87_2b6        | 2        | Non-conclusive |
+| 87_2c9        | 1        | Non-conclusive |
+| 87_3a505      | 4        | Non-conclusive |
+| 87_3e7        | 2        | Non-conclusive |
+| 87_3e97       | 2        | Non-conclusive |
+| 87_68c50      | 2        | Non-conclusive |
+| 87_6a03       | 2        | Non-conclusive |
+| 87_73e5       | 2        | Non-conclusive |
+| 87_7c076      | 4        | Non-conclusive |
+| 87_804a7      | 2        | Non-conclusive |
+| 87_89a1229    | 2        | Non-conclusive |
+| 87_8b2        | 2        | Non-conclusive |
+| 87a3          | 1        | Non-conclusive |
+| 87b8a1d2      | 1        | Non-conclusive |
+| 87b91fb5      | 4        | Non-conclusive |
+| 87bb78ed      | 4        | Non-conclusive |
+| 87c0ec67      | 4        | Non-conclusive |
+| 87c76d05      | 4        | Non-conclusive |
+| 87e15d80      | 1        | Non-conclusive |
+| 87e6d73d      | 1        | Non-conclusive |
+| 87e8          | 1        | Non-conclusive |
+| 87f1          | 4        | Non-conclusive |
+| 88            | 18       | Supported      |
+| 880           | 4        | Supported      |
+| 880ccc3f      | 4        | Non-conclusive |
+| 881           | 1        | Supported      |
+| 881d40.8      | 4        | Non-conclusive |
+| 882a2fc0      | 1        | Non-conclusive |
+| 8831aa095c    | 4        | Non-conclusive |
+| 8854f7dc      | 1        | Non-conclusive |
+| 8857          | 1        | Supported      |
+| 886a402c      | 4        | Non-conclusive |
+| 887_6         | 2        | Non-conclusive |
+| 887aedb8      | 4        | Non-conclusive |
+| 887d58f1      | 4        | Non-conclusive |
+| 888e79eb      | 1        | Non-conclusive |
+| 88_02         | 1        | Non-conclusive |
+| 88_046117     | 1        | Non-conclusive |
+| 88_1          | 2        | Non-conclusive |
+| 88_1f262      | 2        | Non-conclusive |
+| 88_2          | 4        | Non-conclusive |
+| 88_236f53     | 2        | Non-conclusive |
+| 88_397        | 2        | Non-conclusive |
+| 88_54f3       | 4        | Non-conclusive |
+| 88_5b3        | 4        | Non-conclusive |
+| 88_5f59       | 2        | Non-conclusive |
+| 88_661a77     | 2        | Non-conclusive |
+| 88_6a00       | 2        | Non-conclusive |
+| 88_7          | 4        | Non-conclusive |
+| 88_7689a7     | 2        | Non-conclusive |
+| 88_7b91       | 2        | Non-conclusive |
+| 88_7e9        | 2        | Non-conclusive |
+| 88_8          | 4        | Non-conclusive |
+| 88_8693d5     | 2        | Non-conclusive |
+| 88_8a1709     | 4        | Non-conclusive |
+| 88_8c659      | 1        | Non-conclusive |
+| 88_90c03      | 2        | Non-conclusive |
+| 88_95276      | 1        | Non-conclusive |
+| 88_97         | 2        | Non-conclusive |
+| 88bd3baa      | 2        | Non-conclusive |
+| 88c87e5832    | 4        | Non-conclusive |
+| 88cc2eee      | 4        | Non-conclusive |
+| 88d02f3a      | 4        | Non-conclusive |
+| 88eb877       | 4        | Non-conclusive |
+| 88eeed05      | 5        | Non-conclusive |
+| 89            | 114      | Supported      |
+| 8902b0        | 4        | Non-conclusive |
+| 892_8f50      | 2        | Non-conclusive |
+| 893b348e      | 4        | Non-conclusive |
+| 894           | 1        | Supported      |
+| 894d6         | 4        | Non-conclusive |
+| 894d6197      | 8        | Non-conclusive |
+| 894d79839f    | 4        | Non-conclusive |
+| 895           | 3        | Supported      |
+| 895_0f28      | 2        | Non-conclusive |
+| 895_89d47     | 2        | Non-conclusive |
+| 895db7a945    | 5        | Non-conclusive |
+| 895fb337      | 4        | Non-conclusive |
+| 896_2a66      | 1        | Non-conclusive |
+| 896_76f46     | 4        | Non-conclusive |
+| 897_32c6      | 4        | Non-conclusive |
+| 898           | 1        | Supported      |
+| 898ff2e       | 4        | Non-conclusive |
+| 8992c11e      | 4        | Non-conclusive |
+| 899_2b375     | 1        | Non-conclusive |
+| 89_0c7        | 1        | Non-conclusive |
+| 89_0c86       | 4        | Non-conclusive |
+| 89_1e41       | 2        | Non-conclusive |
+| 89_25c4467    | 4        | Non-conclusive |
+| 89_31a96      | 4        | Non-conclusive |
+| 89_4190a1     | 4        | Non-conclusive |
+| 89_41c33      | 2        | Non-conclusive |
+| 89_4687247    | 1        | Non-conclusive |
+| 89_4a26       | 2        | Non-conclusive |
+| 89_61663      | 2        | Non-conclusive |
+| 89_67         | 4        | Non-conclusive |
+| 89_8529       | 2        | Non-conclusive |
+| 89_88c6       | 2        | Non-conclusive |
+| 89_88e53      | 4        | Non-conclusive |
+| 89c2a47f      | 4        | Non-conclusive |
+| 89c503f5      | 4        | Non-conclusive |
+| 89c906        | 4        | Non-conclusive |
+| 89dbc915      | 4        | Non-conclusive |
+| 89e08166      | 1        | Non-conclusive |
+| 89e16973      | 8        | Non-conclusive |
+| 89e48d37      | 1        | Non-conclusive |
+| 8A97          | 1        | Non-conclusive |
+| 8G2           | 4        | Non-conclusive |
+| 8J09G7        | 4        | Non-conclusive |
+| 8J7           | 1        | Non-conclusive |
+| 8M7d9         | 2        | Non-conclusive |
+| 8O0           | 2        | Non-conclusive |
+| 8Q0           | 3        | Non-conclusive |
+| 8S1           | 1        | Non-conclusive |
+| 8T8F55        | 1        | Non-conclusive |
+| 8U278         | 2        | Non-conclusive |
+| 8W831         | 2        | Non-conclusive |
+| 8X6           | 8        | Non-conclusive |
+| 8_0           | 4        | Non-conclusive |
+| 8_02          | 2        | Non-conclusive |
+| 8_03720e79    | 2        | Non-conclusive |
+| 8_098d4       | 2        | Non-conclusive |
+| 8_0a02        | 2        | Non-conclusive |
+| 8_11          | 4        | Non-conclusive |
+| 8_159a818     | 2        | Non-conclusive |
+| 8_179d624     | 2        | Non-conclusive |
+| 8_17a48       | 4        | Non-conclusive |
+| 8_1d9         | 1        | Non-conclusive |
+| 8_270506e3    | 4        | Non-conclusive |
+| 8_36255b03    | 4        | Non-conclusive |
+| 8_37079       | 2        | Non-conclusive |
+| 8_39846e02    | 4        | Non-conclusive |
+| 8_3c7         | 1        | Non-conclusive |
+| 8_3e0         | 2        | Non-conclusive |
+| 8_46f6        | 1        | Non-conclusive |
+| 8_484         | 2        | Non-conclusive |
+| 8_4c0         | 2        | Non-conclusive |
+| 8_505c2102    | 2        | Non-conclusive |
+| 8_59807       | 2        | Non-conclusive |
+| 8_5d30892     | 4        | Non-conclusive |
+| 8_600158      | 2        | Non-conclusive |
+| 8_678a4       | 2        | Non-conclusive |
+| 8_699         | 1        | Non-conclusive |
+| 8_69f0810     | 1        | Non-conclusive |
+| 8_7           | 12       | Non-conclusive |
+| 8_718955b4    | 4        | Non-conclusive |
+| 8_7473453     | 4        | Non-conclusive |
+| 8_767b3       | 4        | Non-conclusive |
+| 8_781         | 2        | Non-conclusive |
+| 8_7894704     | 4        | Non-conclusive |
+| 8_7b0         | 2        | Non-conclusive |
+| 8_7b72        | 2        | Non-conclusive |
+| 8_7d4509      | 2        | Non-conclusive |
+| 8_7e6838      | 2        | Non-conclusive |
+| 8_83f34       | 4        | Non-conclusive |
+| 8_88a23       | 1        | Non-conclusive |
+| 8_88b11       | 1        | Non-conclusive |
+| 8_8a9         | 2        | Non-conclusive |
+| 8_9           | 4        | Non-conclusive |
+| 8_91          | 2        | Non-conclusive |
+| 8_922f4311    | 4        | Non-conclusive |
+| 8_940f4       | 2        | Non-conclusive |
+| 8_9564117     | 4        | Non-conclusive |
+| 8_959c79      | 1        | Non-conclusive |
+| 8a03          | 1        | Non-conclusive |
+| 8a09a750f5    | 4        | Non-conclusive |
+| 8a10d930      | 4        | Non-conclusive |
+| 8a131234      | 4        | Non-conclusive |
+| 8a1373af      | 4        | Non-conclusive |
+| 8a146da1      | 1        | Non-conclusive |
+| 8a221bec      | 1        | Non-conclusive |
+| 8a2bde8c      | 1        | Non-conclusive |
+| 8a31914e      | 4        | Non-conclusive |
+| 8a33e0        | 1        | Non-conclusive |
+| 8a3fc429      | 4        | Non-conclusive |
+| 8a48f22a      | 1        | Non-conclusive |
+| 8a54          | 41       | Non-conclusive |
+| 8a548a54      | 4        | Non-conclusive |
+| 8a559e9e      | 4        | Non-conclusive |
+| 8a5d561       | 4        | Non-conclusive |
+| 8a65a578      | 4        | Non-conclusive |
+| 8a7442ca      | 1        | Non-conclusive |
+| 8a7442ca6b    | 4        | Non-conclusive |
+| 8a818974      | 4        | Non-conclusive |
+| 8a965         | 4        | Non-conclusive |
+| 8a9edfa9      | 1        | Non-conclusive |
+| 8aa262c1      | 4        | Non-conclusive |
+| 8abbd133      | 4        | Non-conclusive |
+| 8ac3b879      | 4        | Non-conclusive |
+| 8acb453286    | 4        | Non-conclusive |
+| 8ae12670      | 1        | Non-conclusive |
+| 8af13325      | 8        | Non-conclusive |
+| 8af52059      | 2        | Non-conclusive |
+| 8af85060      | 4        | Non-conclusive |
+| 8afa9701      | 2        | Non-conclusive |
+| 8afb54a5      | 1        | Non-conclusive |
+| 8b069cfc      | 1        | Non-conclusive |
+| 8b09e801      | 4        | Non-conclusive |
+| 8b12250b      | 4        | Non-conclusive |
+| 8b1801d0      | 4        | Non-conclusive |
+| 8b2a3cfb20    | 4        | Non-conclusive |
+| 8b4534c6      | 4        | Non-conclusive |
+| 8b468b23      | 4        | Non-conclusive |
+| 8b4a48b0      | 4        | Non-conclusive |
+| 8b56032       | 4        | Non-conclusive |
+| 8b588013      | 1        | Non-conclusive |
+| 8b5ea23411    | 4        | Non-conclusive |
+| 8b6           | 4        | Non-conclusive |
+| 8b62a9cd      | 4        | Non-conclusive |
+| 8b6c2900      | 4        | Non-conclusive |
+| 8b9a873b      | 4        | Non-conclusive |
+| 8bb0e89d      | 4        | Non-conclusive |
+| 8bcc81b0      | 1        | Non-conclusive |
+| 8bd170a7af    | 4        | Non-conclusive |
+| 8bd5696b19    | 10       | Non-conclusive |
+| 8bdda282      | 1        | Non-conclusive |
+| 8be40f98      | 5        | Non-conclusive |
+| 8be849e1b1    | 4        | Non-conclusive |
+| 8bfc611c      | 4        | Non-conclusive |
+| 8bfccd21      | 4        | Non-conclusive |
+| 8c0453ff      | 4        | Non-conclusive |
+| 8c090f1f      | 1        | Non-conclusive |
+| 8c1           | 4        | Non-conclusive |
+| 8c10e912      | 8        | Non-conclusive |
+| 8c16          | 4        | Non-conclusive |
+| 8c191c26      | 8        | Non-conclusive |
+| 8c1bfca8      | 4        | Non-conclusive |
+| 8c357183      | 4        | Non-conclusive |
+| 8c37bee6      | 4        | Non-conclusive |
+| 8c3ce651      | 4        | Non-conclusive |
+| 8c4           | 4        | Non-conclusive |
+| 8c519b4d      | 1        | Non-conclusive |
+| 8c62806       | 4        | Non-conclusive |
+| 8c62c0f2      | 8        | Non-conclusive |
+| 8c659cdd      | 4        | Non-conclusive |
+| 8c6d068       | 4        | Non-conclusive |
+| 8c70aff3      | 4        | Non-conclusive |
+| 8c74          | 4        | Non-conclusive |
+| 8c85-0242     | 4        | Non-conclusive |
+| 8c9f8856      | 4        | Non-conclusive |
+| 8cad8537      | 1        | Non-conclusive |
+| 8caf0246      | 4        | Non-conclusive |
+| 8cb9623f      | 4        | Non-conclusive |
+| 8cc6596d      | 4        | Non-conclusive |
+| 8cd9db25      | 4        | Non-conclusive |
+| 8ce4012f      | 8        | Non-conclusive |
+| 8cf4186c      | 6        | Non-conclusive |
+| 8d02          | 1        | Non-conclusive |
+| 8d09b9d9      | 4        | Non-conclusive |
+| 8d0a88a433    | 8        | Non-conclusive |
+| 8d2c7c4d      | 4        | Non-conclusive |
+| 8d4d4b85      | 4        | Non-conclusive |
+| 8d5           | 4        | Non-conclusive |
+| 8d53196f30    | 4        | Non-conclusive |
+| 8d679524      | 1        | Non-conclusive |
+| 8d993a55      | 4        | Non-conclusive |
+| 8d9a36eb9c    | 80       | Non-conclusive |
+| 8d9d7879      | 4        | Non-conclusive |
+| 8db0668c      | 4        | Non-conclusive |
+| 8dc39e0d      | 1        | Non-conclusive |
+| 8dcb3512      | 4        | Non-conclusive |
+| 8dcdb7ea      | 4        | Non-conclusive |
+| 8dd7b31       | 4        | Non-conclusive |
+| 8de85909      | 4        | Non-conclusive |
+| 8df007ae      | 4        | Non-conclusive |
+| 8df291b4      | 1        | Non-conclusive |
+| 8df4f0d6      | 4        | Non-conclusive |
+| 8dfb9d56      | 4        | Non-conclusive |
+| 8e00          | 1        | Non-conclusive |
+| 8e0293f9      | 4        | Non-conclusive |
+| 8e5           | 1        | Non-conclusive |
+| 8e50928       | 4        | Non-conclusive |
+| 8e63          | 1        | Non-conclusive |
+| 8e6b29b       | 1        | Non-conclusive |
+| 8e7780ba      | 1        | Non-conclusive |
+| 8e791e13      | 4        | Non-conclusive |
+| 8e7e2b54      | 1        | Non-conclusive |
+| 8e83          | 20       | Non-conclusive |
+| 8e838e83      | 1        | Non-conclusive |
+| 8e90          | 4        | Non-conclusive |
+| 8e981a5c      | 4        | Non-conclusive |
+| 8eae68dd      | 1        | Non-conclusive |
+| 8eb462fb      | 4        | Non-conclusive |
+| 8ec2276b      | 1        | Non-conclusive |
+| 8ec7e8f7      | 1        | Non-conclusive |
+| 8ec89de6      | 8        | Non-conclusive |
+| 8ecac70a      | 4        | Non-conclusive |
+| 8ed73d68ad    | 4        | Non-conclusive |
+| 8ee2d0eb      | 4        | Non-conclusive |
+| 8eee570b      | 4        | Non-conclusive |
+| 8efce2b       | 4        | Non-conclusive |
+| 8eff4914      | 4        | Non-conclusive |
+| 8f0           | 2        | Non-conclusive |
+| 8f00          | 4        | Non-conclusive |
+| 8f04607c      | 1        | Non-conclusive |
+| 8f066e7c      | 4        | Non-conclusive |
+| 8f132a0b      | 4        | Non-conclusive |
+| 8f14          | 4        | Non-conclusive |
+| 8f14e335      | 1        | Non-conclusive |
+| 8f16cdc7d3    | 4        | Non-conclusive |
+| 8f21ee4a      | 1        | Non-conclusive |
+| 8f26_1        | 4        | Non-conclusive |
+| 8f341f82      | 4        | Non-conclusive |
+| 8f43          | 2        | Non-conclusive |
+| 8f5b6f9       | 4        | Non-conclusive |
+| 8f605de3      | 4        | Non-conclusive |
+| 8f73d519      | 4        | Non-conclusive |
+| 8f76          | 1        | Non-conclusive |
+| 8f78c8b       | 4        | Non-conclusive |
+| 8f7f4368      | 1        | Non-conclusive |
+| 8f801372      | 1        | Non-conclusive |
+| 8f82          | 4        | Non-conclusive |
+| 8f84c11a      | 1        | Non-conclusive |
+| 8f88f692      | 4        | Non-conclusive |
+| 8fab37f9      | 4        | Non-conclusive |
+| 8fbe4824      | 1        | Non-conclusive |
+| 8fd8e471      | 4        | Non-conclusive |
+| 8fe040b0      | 4        | Non-conclusive |
+| 8i9           | 2        | Non-conclusive |
+| 8k90K6        | 2        | Non-conclusive |
+| 8l1           | 4        | Non-conclusive |
+| 8l2           | 1        | Non-conclusive |
+| 8o4           | 2        | Non-conclusive |
+| 8q77          | 4        | Non-conclusive |
+| 8s5M9         | 1        | Non-conclusive |
+| 8w7I2         | 4        | Non-conclusive |
+| 9             | 3726     | Supported      |
+| 9%96          | 70       | Non-conclusive |
+| 9%964933      | 1        | Non-conclusive |
+| 9%967e7       | 1        | Non-conclusive |
+| 9%96q4        | 4        | Non-conclusive |
+| 9-1           | 2        | Non-conclusive |
+| 9-12          | 4        | Non-conclusive |
+| 9-19          | 4        | Non-conclusive |
+| 9-2022        | 4        | Non-conclusive |
+| 9.0.0         | 58       | Supported      |
+| 9.072         | 2        | Supported      |
+| 9.1.3         | 5        | Supported      |
+| 9.1.6         | 4        | Supported      |
+| 9.10.0        | 8        | Supported      |
+| 9.15.155      | 4        | Supported      |
+| 9.2.0         | 62       | Supported      |
+| 9.2.2         | 4        | Supported      |
+| 9.3.0         | 5        | Supported      |
+| 9.3.2         | 5        | Supported      |
+| 9.3.5         | 4        | Supported      |
+| 9.4.0         | 4        | Supported      |
+| 9.4.1         | 43       | Supported      |
+| 9.4.2         | 4        | Supported      |
+| 9.4.8         | 8        | Supported      |
+| 9.4.9         | 4        | Supported      |
+| 9.4.92        | 4        | Supported      |
+| 9.4B74        | 4        | Non-conclusive |
+| 9.5.0         | 4        | Supported      |
+| 9.5.3         | 4        | Supported      |
+| 9.5.4         | 5        | Supported      |
+| 9.7.0         | 8        | Supported      |
+| 9.7.1         | 12       | Supported      |
+| 9.7.11        | 4        | Supported      |
+| 9.7.2         | 87       | Supported      |
+| 9.7.3         | 8        | Supported      |
+| 9.716         | 4        | Supported      |
+| 9.718         | 1        | Supported      |
+| 9.72          | 4        | Supported      |
+| 9.8.0         | 44       | Supported      |
+| 9.8.1         | 36       | Supported      |
+| 9.9           | 4        | Supported      |
+| 9.9.0         | 46       | Supported      |
+| 9.9.9         | 5        | Supported      |
+| 90            | 35       | Supported      |
+| 900           | 4        | Supported      |
+| 901           | 2        | Supported      |
+| 9016a0f5      | 4        | Non-conclusive |
+| 901_7         | 2        | Non-conclusive |
+| 901dc2f0      | 8        | Non-conclusive |
+| 9027          | 1        | Supported      |
+| 9030adc8      | 5        | Non-conclusive |
+| 9031          | 4        | Supported      |
+| 9032f8fe      | 4        | Non-conclusive |
+| 903_0         | 2        | Non-conclusive |
+| 903_3b2236    | 2        | Non-conclusive |
+| 9041ef17      | 4        | Non-conclusive |
+| 904abcfe69    | 6        | Non-conclusive |
+| 9062          | 9        | Supported      |
+| 906_827       | 2        | Non-conclusive |
+| 906ad001      | 4        | Non-conclusive |
+| 907-51c509    | 1        | Non-conclusive |
+| 9078d942      | 4        | Non-conclusive |
+| 907_2         | 2        | Non-conclusive |
+| 907_9b52      | 2        | Non-conclusive |
+| 9084e5df      | 4        | Non-conclusive |
+| 909           | 4        | Supported      |
+| 9094d24       | 2        | Non-conclusive |
+| 90_1          | 4        | Non-conclusive |
+| 90_162282     | 2        | Non-conclusive |
+| 90_179b5      | 2        | Non-conclusive |
+| 90_19801      | 2        | Non-conclusive |
+| 90_1f1        | 2        | Non-conclusive |
+| 90_2e9        | 4        | Non-conclusive |
+| 90_3526d78    | 4        | Non-conclusive |
+| 90_4c9        | 1        | Non-conclusive |
+| 90_56         | 2        | Non-conclusive |
+| 90_5b9        | 2        | Non-conclusive |
+| 90_75e7       | 2        | Non-conclusive |
+| 90_8614       | 2        | Non-conclusive |
+| 90_907a383    | 1        | Non-conclusive |
+| 90b963f6      | 1        | Non-conclusive |
+| 90c06a6e      | 1        | Non-conclusive |
+| 90c23409      | 4        | Non-conclusive |
+| 90c7          | 4        | Non-conclusive |
+| 90d4e51       | 4        | Non-conclusive |
+| 90d8ab1ef0    | 1        | Non-conclusive |
+| 90ef2831      | 4        | Non-conclusive |
+| 90f6          | 4        | Non-conclusive |
+| 90f9          | 4        | Non-conclusive |
+| 90f9ee10      | 4        | Non-conclusive |
+| 91            | 33       | Supported      |
+| 910           | 17       | Supported      |
+| 910cf4ab      | 4        | Non-conclusive |
+| 910f24fe05    | 4        | Non-conclusive |
+| 912_72f322    | 2        | Non-conclusive |
+| 912aa27e      | 1        | Non-conclusive |
+| 912d4e39      | 4        | Non-conclusive |
+| 913_321e42    | 2        | Non-conclusive |
+| 913n3         | 4        | Non-conclusive |
+| 914           | 4        | Supported      |
+| 9149b1eb      | 4        | Non-conclusive |
+| 9154_08       | 1        | Non-conclusive |
+| 915_70        | 1        | Non-conclusive |
+| 916c3421      | 4        | Non-conclusive |
+| 917_3e57      | 2        | Non-conclusive |
+| 917b8c6       | 4        | Non-conclusive |
+| 9195b3ef      | 1        | Non-conclusive |
+| 91_114b2      | 1        | Non-conclusive |
+| 91_16         | 1        | Non-conclusive |
+| 91_1e4003     | 1        | Non-conclusive |
+| 91_3036e1     | 4        | Non-conclusive |
+| 91_353c8      | 1        | Non-conclusive |
+| 91_394800     | 1        | Non-conclusive |
+| 91_4          | 2        | Non-conclusive |
+| 91_42c8267    | 2        | Non-conclusive |
+| 91_582a74     | 2        | Non-conclusive |
+| 91_5f2        | 1        | Non-conclusive |
+| 91_5f224      | 4        | Non-conclusive |
+| 91_747009     | 4        | Non-conclusive |
+| 91_82d4       | 2        | Non-conclusive |
+| 91_8699       | 2        | Non-conclusive |
+| 91_8e56595    | 4        | Non-conclusive |
+| 91_90923      | 1        | Non-conclusive |
+| 91_98c9       | 2        | Non-conclusive |
+| 91a77de2      | 4        | Non-conclusive |
+| 91c991ca      | 4        | Non-conclusive |
+| 91cbd040      | 4        | Non-conclusive |
+| 91d5          | 5        | Non-conclusive |
+| 91e48b35      | 4        | Non-conclusive |
+| 91e80b65      | 8        | Non-conclusive |
+| 91f3          | 4        | Non-conclusive |
+| 91f7161a      | 4        | Non-conclusive |
+| 91f9e6df      | 4        | Non-conclusive |
+| 92            | 11       | Supported      |
+| 920c142e      | 4        | Non-conclusive |
+| 921           | 2        | Supported      |
+| 9217          | 4        | Supported      |
+| 921_3         | 2        | Non-conclusive |
+| 921e90eb      | 4        | Non-conclusive |
+| 922a0846      | 18       | Non-conclusive |
+| 923           | 4        | Supported      |
+| 923dcdb3ca    | 3        | Non-conclusive |
+| 923dfdb6      | 4        | Non-conclusive |
+| 923e0575      | 4        | Non-conclusive |
+| 923e609b      | 4        | Non-conclusive |
+| 9240          | 4        | Supported      |
+| 9241ccf1      | 4        | Non-conclusive |
+| 925           | 2        | Supported      |
+| 9257bcb4aa    | 4        | Non-conclusive |
+| 926           | 2        | Supported      |
+| 926cd297      | 4        | Non-conclusive |
+| 927           | 2        | Supported      |
+| 928b1575      | 1        | Non-conclusive |
+| 928c2b91c8    | 80       | Non-conclusive |
+| 929           | 4        | Supported      |
+| 929Z05        | 4        | Non-conclusive |
+| 929fff1c      | 1        | Non-conclusive |
+| 92G3          | 4        | Non-conclusive |
+| 92_034c7      | 2        | Non-conclusive |
+| 92_080f56     | 2        | Non-conclusive |
+| 92_1          | 2        | Non-conclusive |
+| 92_1a89       | 2        | Non-conclusive |
+| 92_1e8        | 2        | Non-conclusive |
+| 92_2d4        | 1        | Non-conclusive |
+| 92_3          | 1        | Non-conclusive |
+| 92_3b5957     | 4        | Non-conclusive |
+| 92_3d442      | 2        | Non-conclusive |
+| 92_3f5        | 2        | Non-conclusive |
+| 92_4655c5     | 1        | Non-conclusive |
+| 92_5          | 2        | Non-conclusive |
+| 92_5171e9     | 4        | Non-conclusive |
+| 92_5327e82    | 2        | Non-conclusive |
+| 92_5d513      | 1        | Non-conclusive |
+| 92_66b5       | 2        | Non-conclusive |
+| 92_73         | 2        | Non-conclusive |
+| 92_7a9        | 4        | Non-conclusive |
+| 92_87519      | 4        | Non-conclusive |
+| 92a9d849      | 4        | Non-conclusive |
+| 92b6f2db      | 4        | Non-conclusive |
+| 92bf6f3c      | 1        | Non-conclusive |
+| 92bfb2417c    | 4        | Non-conclusive |
+| 92c091bc      | 8        | Non-conclusive |
+| 92c816ec      | 1        | Non-conclusive |
+| 92d8cd81      | 1        | Non-conclusive |
+| 92ed7bb3      | 8        | Non-conclusive |
+| 92efbb9b      | 1        | Non-conclusive |
+| 93            | 18       | Supported      |
+| 9306d26       | 4        | Non-conclusive |
+| 930a7a11      | 1        | Non-conclusive |
+| 930e6494      | 1        | Non-conclusive |
+| 9310b3a1b6    | 1        | Non-conclusive |
+| 932a92        | 4        | Non-conclusive |
+| 9331d3a9      | 4        | Non-conclusive |
+| 933_01        | 2        | Non-conclusive |
+| 935_74        | 4        | Non-conclusive |
+| 935a11        | 4        | Non-conclusive |
+| 936           | 16       | Supported      |
+| 936_5b5       | 2        | Non-conclusive |
+| 9383a706      | 1        | Non-conclusive |
+| 938ca672      | 36       | Non-conclusive |
+| 939           | 2        | Supported      |
+| 9390_00       | 2        | Non-conclusive |
+| 9391c78e      | 1        | Non-conclusive |
+| 939_8a00      | 2        | Non-conclusive |
+| 93_00         | 2        | Non-conclusive |
+| 93_04         | 4        | Non-conclusive |
+| 93_16         | 4        | Non-conclusive |
+| 93_32b6361    | 2        | Non-conclusive |
+| 93_4          | 2        | Non-conclusive |
+| 93_4c506      | 4        | Non-conclusive |
+| 93_5c214      | 4        | Non-conclusive |
+| 93_9          | 2        | Non-conclusive |
+| 93_9d56       | 2        | Non-conclusive |
+| 93_9f30       | 2        | Non-conclusive |
+| 93a5          | 1        | Non-conclusive |
+| 93c01023      | 8        | Non-conclusive |
+| 93c36bda      | 1        | Non-conclusive |
+| 93c36bdb      | 4        | Non-conclusive |
+| 93d9e17a      | 4        | Non-conclusive |
+| 93df0608      | 4        | Non-conclusive |
+| 93dfdaf0      | 4        | Non-conclusive |
+| 93e5fcbe21    | 5        | Non-conclusive |
+| 93e6a850      | 2        | Non-conclusive |
+| 93ea7f2f      | 4        | Non-conclusive |
+| 93ed90db      | 2        | Non-conclusive |
+| 93f35d8a      | 4        | Non-conclusive |
+| 93fb585d      | 4        | Non-conclusive |
+| 94            | 28       | Supported      |
+| 940           | 17       | Supported      |
+| 9404cea525    | 4        | Non-conclusive |
+| 9406          | 2        | Supported      |
+| 941dd33d      | 1        | Non-conclusive |
+| 941def0e      | 4        | Non-conclusive |
+| 9427          | 2        | Supported      |
+| 9429          | 2        | Supported      |
+| 943f7270      | 4        | Non-conclusive |
+| 946           | 1        | Supported      |
+| 946-6689      | 4        | Non-conclusive |
+| 9466ab3       | 4        | Non-conclusive |
+| 946ea997      | 4        | Non-conclusive |
+| 947           | 4        | Supported      |
+| 9470b8bc      | 4        | Non-conclusive |
+| 9483db2a      | 1        | Non-conclusive |
+| 949_1c056     | 2        | Non-conclusive |
+| 949_87a90     | 2        | Non-conclusive |
+| 94U67         | 4        | Non-conclusive |
+| 94_015        | 4        | Non-conclusive |
+| 94_01a5       | 2        | Non-conclusive |
+| 94_1          | 4        | Non-conclusive |
+| 94_1b27       | 4        | Non-conclusive |
+| 94_2          | 2        | Non-conclusive |
+| 94_312d504    | 1        | Non-conclusive |
+| 94_3c0        | 2        | Non-conclusive |
+| 94_463b72     | 1        | Non-conclusive |
+| 94_4f4        | 2        | Non-conclusive |
+| 94_5          | 2        | Non-conclusive |
+| 94_62         | 1        | Non-conclusive |
+| 94_66352      | 4        | Non-conclusive |
+| 94_69c531     | 2        | Non-conclusive |
+| 94_6a4        | 2        | Non-conclusive |
+| 94_7          | 4        | Non-conclusive |
+| 94_80260      | 2        | Non-conclusive |
+| 94_820b6      | 4        | Non-conclusive |
+| 94_8261       | 2        | Non-conclusive |
+| 94_85         | 2        | Non-conclusive |
+| 94b30745      | 1        | Non-conclusive |
+| 94d42708      | 4        | Non-conclusive |
+| 94d9a220      | 8        | Non-conclusive |
+| 94f44de       | 2        | Non-conclusive |
+| 94fadc5       | 4        | Non-conclusive |
+| 94fbb7a       | 4        | Non-conclusive |
+| 95            | 31       | Supported      |
+| 950           | 21       | Supported      |
+| 950_70_10     | 8        | Non-conclusive |
+| 950b6bef      | 4        | Non-conclusive |
+| 950c4896      | 4        | Non-conclusive |
+| 9513be4e      | 4        | Non-conclusive |
+| 951Q0         | 11       | Non-conclusive |
+| 952_05e2      | 2        | Non-conclusive |
+| 952_5441a8    | 2        | Non-conclusive |
+| 952d7007      | 4        | Non-conclusive |
+| 953b4351      | 6        | Non-conclusive |
+| 953be06a      | 4        | Non-conclusive |
+| 955dd8e       | 4        | Non-conclusive |
+| 958           | 6        | Supported      |
+| 958f455       | 4        | Non-conclusive |
+| 959c3622      | 5        | Non-conclusive |
+| 95_01         | 4        | Non-conclusive |
+| 95_036        | 4        | Non-conclusive |
+| 95_04d4896    | 4        | Non-conclusive |
+| 95_11a222     | 2        | Non-conclusive |
+| 95_2a6        | 2        | Non-conclusive |
+| 95_3          | 4        | Non-conclusive |
+| 95_3e86       | 2        | Non-conclusive |
+| 95_499f158    | 4        | Non-conclusive |
+| 95_63a6       | 4        | Non-conclusive |
+| 95_67b4       | 2        | Non-conclusive |
+| 95_6a6        | 4        | Non-conclusive |
+| 95_6c1        | 2        | Non-conclusive |
+| 95_6c6191     | 4        | Non-conclusive |
+| 95_707f12     | 2        | Non-conclusive |
+| 95_819        | 4        | Non-conclusive |
+| 95_98820      | 4        | Non-conclusive |
+| 95ad6927      | 1        | Non-conclusive |
+| 95b8          | 14       | Non-conclusive |
+| 95be7136      | 8        | Non-conclusive |
+| 95cd372a      | 8        | Non-conclusive |
+| 95d9          | 6        | Non-conclusive |
+| 95ee7e8a      | 4        | Non-conclusive |
+| 96            | 38       | Supported      |
+| 960           | 24       | Supported      |
+| 960-12        | 4        | Non-conclusive |
+| 960-20        | 8        | Non-conclusive |
+| 9607ecb       | 4        | Non-conclusive |
+| 960_1b0       | 4        | Non-conclusive |
+| 961_5a4       | 4        | Non-conclusive |
+| 962c3651      | 8        | Non-conclusive |
+| 962f6f7e      | 4        | Non-conclusive |
+| 9630bb40      | 12       | Non-conclusive |
+| 963e150867    | 4        | Non-conclusive |
+| 964           | 2        | Supported      |
+| 967           | 4        | Supported      |
+| 967_9         | 1        | Non-conclusive |
+| 9689e44d      | 8        | Non-conclusive |
+| 968_85f6      | 4        | Non-conclusive |
+| 9698          | 1        | Supported      |
+| 96_1          | 4        | Non-conclusive |
+| 96_156        | 4        | Non-conclusive |
+| 96_2          | 4        | Non-conclusive |
+| 96_226        | 1        | Non-conclusive |
+| 96_329a5      | 4        | Non-conclusive |
+| 96_3a743      | 2        | Non-conclusive |
+| 96_498d536    | 2        | Non-conclusive |
+| 96_58516      | 2        | Non-conclusive |
+| 96_66b0       | 2        | Non-conclusive |
+| 96_680        | 2        | Non-conclusive |
+| 96_77         | 2        | Non-conclusive |
+| 96_7c848      | 2        | Non-conclusive |
+| 96_8132e99    | 2        | Non-conclusive |
+| 96_852        | 2        | Non-conclusive |
+| 96_864c23     | 2        | Non-conclusive |
+| 96_9          | 2        | Non-conclusive |
+| 96_96         | 4        | Non-conclusive |
+| 96_9970       | 2        | Non-conclusive |
+| 96_9f655      | 4        | Non-conclusive |
+| 96bcc1d0      | 4        | Non-conclusive |
+| 96fce8443a    | 16       | Non-conclusive |
+| 96ffd224      | 4        | Non-conclusive |
+| 97            | 29       | Supported      |
+| 970-30        | 21       | Non-conclusive |
+| 970da81       | 8        | Non-conclusive |
+| 9712          | 5        | Supported      |
+| 971a073d      | 1        | Non-conclusive |
+| 971b06e8      | 4        | Non-conclusive |
+| 971b68de      | 4        | Non-conclusive |
+| 971ce513      | 4        | Non-conclusive |
+| 972           | 2        | Supported      |
+| 9728a5b7      | 4        | Non-conclusive |
+| 972_0         | 4        | Non-conclusive |
+| 972_230397    | 4        | Non-conclusive |
+| 9738          | 1        | Supported      |
+| 9739          | 20       | Supported      |
+| 973_6f611     | 2        | Non-conclusive |
+| 975           | 4        | Supported      |
+| 976_236e8     | 4        | Non-conclusive |
+| 976_8c80      | 1        | Non-conclusive |
+| 977b9         | 2        | Non-conclusive |
+| 978fcde       | 4        | Non-conclusive |
+| 979           | 7        | Supported      |
+| 97_0f4        | 1        | Non-conclusive |
+| 97_1a8        | 2        | Non-conclusive |
+| 97_1d2        | 2        | Non-conclusive |
+| 97_25a6       | 1        | Non-conclusive |
+| 97_3          | 2        | Non-conclusive |
+| 97_3c0        | 2        | Non-conclusive |
+| 97_3d488      | 2        | Non-conclusive |
+| 97_48         | 4        | Non-conclusive |
+| 97_5306f75    | 4        | Non-conclusive |
+| 97_57         | 2        | Non-conclusive |
+| 97_5e18313    | 2        | Non-conclusive |
+| 97_6405       | 2        | Non-conclusive |
+| 97_72f6       | 2        | Non-conclusive |
+| 97_781        | 2        | Non-conclusive |
+| 97_7a0        | 4        | Non-conclusive |
+| 97_8c886      | 4        | Non-conclusive |
+| 97_8f3        | 2        | Non-conclusive |
+| 97a25         | 4        | Non-conclusive |
+| 97c4549f      | 4        | Non-conclusive |
+| 97c7c450      | 2        | Non-conclusive |
+| 97c8-9        | 4        | Non-conclusive |
+| 97c8d00       | 4        | Non-conclusive |
+| 97cccec5      | 7        | Non-conclusive |
+| 97dfbc0       | 4        | Non-conclusive |
+| 97e26291      | 1        | Non-conclusive |
+| 97ef8e8f      | 4        | Non-conclusive |
+| 97ff9dc4      | 4        | Non-conclusive |
+| 98            | 4        | Supported      |
+| 980           | 25       | Supported      |
+| 9801bba822    | 4        | Non-conclusive |
+| 980fd1f1      | 3        | Non-conclusive |
+| 981           | 2        | Supported      |
+| 9818de07      | 1        | Non-conclusive |
+| 982           | 1        | Supported      |
+| 982_36        | 1        | Non-conclusive |
+| 982b7ee9      | 4        | Non-conclusive |
+| 983_18        | 4        | Non-conclusive |
+| 983ea0c6      | 1        | Non-conclusive |
+| 986_252       | 2        | Non-conclusive |
+| 986_426d1     | 4        | Non-conclusive |
+| 986c2901      | 4        | Non-conclusive |
+| 987c1cd       | 2        | Non-conclusive |
+| 988           | 4        | Supported      |
+| 988_73985     | 2        | Non-conclusive |
+| 988c6737      | 8        | Non-conclusive |
+| 989_8c80      | 1        | Non-conclusive |
+| 98A3          | 4        | Non-conclusive |
+| 98_0b97       | 2        | Non-conclusive |
+| 98_26d5       | 1        | Non-conclusive |
+| 98_299b815    | 4        | Non-conclusive |
+| 98_483f2      | 4        | Non-conclusive |
+| 98_4f1        | 2        | Non-conclusive |
+| 98_4f5        | 2        | Non-conclusive |
+| 98_5          | 1        | Non-conclusive |
+| 98_543b75     | 2        | Non-conclusive |
+| 98_5b0        | 2        | Non-conclusive |
+| 98_6          | 2        | Non-conclusive |
+| 98_7276a2     | 2        | Non-conclusive |
+| 98_761f4      | 2        | Non-conclusive |
+| 98_83         | 2        | Non-conclusive |
+| 98_8b00       | 2        | Non-conclusive |
+| 98_9c37       | 2        | Non-conclusive |
+| 98_9c64       | 4        | Non-conclusive |
+| 98a72ab1      | 4        | Non-conclusive |
+| 98c418a5      | 1        | Non-conclusive |
+| 98c57c81      | 4        | Non-conclusive |
+| 98d42385      | 4        | Non-conclusive |
+| 98d9f965e5    | 4        | Non-conclusive |
+| 98e2519a      | 4        | Non-conclusive |
+| 98e4t5        | 4        | Non-conclusive |
+| 98ebb3a0      | 4        | Non-conclusive |
+| 98f3a8be      | 4        | Non-conclusive |
+| 98f4          | 4        | Non-conclusive |
+| 98f566ea      | 4        | Non-conclusive |
+| 99            | 32       | Supported      |
+| 99.4.5        | 4        | Supported      |
+| 99.99.9       | 2        | Supported      |
+| 990           | 1        | Supported      |
+| 9910a2c       | 4        | Non-conclusive |
+| 9911f1c       | 1        | Non-conclusive |
+| 991_24        | 4        | Non-conclusive |
+| 991e2d6d      | 4        | Non-conclusive |
+| 992           | 13       | Supported      |
+| 992c6         | 12       | Non-conclusive |
+| 993.5f8441    | 1        | Non-conclusive |
+| 9938fd79      | 4        | Non-conclusive |
+| 994           | 1        | Supported      |
+| 994_40049     | 2        | Non-conclusive |
+| 994_5         | 2        | Non-conclusive |
+| 994c7692f6    | 2        | Non-conclusive |
+| 995_31b24     | 2        | Non-conclusive |
+| 995dbca706    | 1        | Non-conclusive |
+| 996_42f0      | 2        | Non-conclusive |
+| 996_672e23    | 2        | Non-conclusive |
+| 996_6a84      | 2        | Non-conclusive |
+| 9973e068      | 1        | Non-conclusive |
+| 998_6a84      | 2        | Non-conclusive |
+| 99_04a5       | 2        | Non-conclusive |
+| 99_18f6181    | 2        | Non-conclusive |
+| 99_1d096      | 4        | Non-conclusive |
+| 99_2          | 2        | Non-conclusive |
+| 99_206d81     | 2        | Non-conclusive |
+| 99_384        | 2        | Non-conclusive |
+| 99_408        | 4        | Non-conclusive |
+| 99_4083a68    | 4        | Non-conclusive |
+| 99_5466e6     | 2        | Non-conclusive |
+| 99_6          | 2        | Non-conclusive |
+| 99_6c660      | 2        | Non-conclusive |
+| 99_70c335     | 4        | Non-conclusive |
+| 99_7f3        | 2        | Non-conclusive |
+| 99_91933      | 2        | Non-conclusive |
+| 99_9a59       | 2        | Non-conclusive |
+| 99_9d28       | 2        | Non-conclusive |
+| 99a764e1      | 4        | Non-conclusive |
+| 99ae4eec      | 4        | Non-conclusive |
+| 99bc994a      | 13       | Non-conclusive |
+| 99ca9e49      | 2        | Non-conclusive |
+| 99cd3ac6      | 4        | Non-conclusive |
+| 99cd99bc      | 4        | Non-conclusive |
+| 99d6e97b      | 4        | Non-conclusive |
+| 99f79cae      | 1        | Non-conclusive |
+| 99fcd2f4      | 1        | Non-conclusive |
+| 9C438         | 6        | Non-conclusive |
+| 9F2A7         | 8        | Non-conclusive |
+| 9H3           | 4        | Non-conclusive |
+| 9H7           | 57       | Non-conclusive |
+| 9K4           | 4        | Non-conclusive |
+| 9M6           | 5        | Non-conclusive |
+| 9M8           | 4        | Non-conclusive |
+| 9N5E6         | 12       | Non-conclusive |
+| 9R38          | 2        | Non-conclusive |
+| 9S0           | 4        | Non-conclusive |
+| 9S80          | 4        | Non-conclusive |
+| 9T3           | 2        | Non-conclusive |
+| 9T6g95        | 2        | Non-conclusive |
+| 9V6           | 4        | Non-conclusive |
+| 9W2U0         | 4        | Non-conclusive |
+| 9W8           | 4        | Non-conclusive |
+| 9X6J3         | 4        | Non-conclusive |
+| 9Y3           | 7        | Non-conclusive |
+| 9Y9           | 4        | Non-conclusive |
+| 9Z615         | 4        | Non-conclusive |
+| 9_03c975      | 2        | Non-conclusive |
+| 9_0665        | 2        | Non-conclusive |
+| 9_0a44        | 1        | Non-conclusive |
+| 9_0d8         | 4        | Non-conclusive |
+| 9_0e746       | 2        | Non-conclusive |
+| 9_1           | 2        | Non-conclusive |
+| 9_118         | 2        | Non-conclusive |
+| 9_11a222      | 2        | Non-conclusive |
+| 9_11b6203     | 4        | Non-conclusive |
+| 9_1873c6      | 2        | Non-conclusive |
+| 9_1a6001      | 2        | Non-conclusive |
+| 9_2021        | 36       | Non-conclusive |
+| 9_22c89       | 2        | Non-conclusive |
+| 9_278c5       | 4        | Non-conclusive |
+| 9_2a6         | 2        | Non-conclusive |
+| 9_2f0         | 4        | Non-conclusive |
+| 9_32b6361     | 2        | Non-conclusive |
+| 9_33          | 2        | Non-conclusive |
+| 9_4           | 1        | Non-conclusive |
+| 9_408d881     | 2        | Non-conclusive |
+| 9_47b92       | 1        | Non-conclusive |
+| 9_497         | 2        | Non-conclusive |
+| 9_4a1         | 4        | Non-conclusive |
+| 9_4a4         | 2        | Non-conclusive |
+| 9_5           | 1        | Non-conclusive |
+| 9_50c2        | 2        | Non-conclusive |
+| 9_510d076     | 4        | Non-conclusive |
+| 9_521f1889    | 4        | Non-conclusive |
+| 9_5271        | 2        | Non-conclusive |
+| 9_56a3        | 4        | Non-conclusive |
+| 9_5e0         | 2        | Non-conclusive |
+| 9_5e35        | 8        | Non-conclusive |
+| 9_6150d9      | 2        | Non-conclusive |
+| 9_678a4       | 2        | Non-conclusive |
+| 9_6b16        | 1        | Non-conclusive |
+| 9_7039        | 2        | Non-conclusive |
+| 9_72e2        | 2        | Non-conclusive |
+| 9_74e73       | 2        | Non-conclusive |
+| 9_83747280    | 2        | Non-conclusive |
+| 9_852c4       | 2        | Non-conclusive |
+| 9_8d76        | 2        | Non-conclusive |
+| 9_9           | 2        | Non-conclusive |
+| 9_900b58      | 4        | Non-conclusive |
+| 9_90a7991     | 2        | Non-conclusive |
+| 9a07969       | 4        | Non-conclusive |
+| 9a11          | 4        | Non-conclusive |
+| 9a14c978      | 8        | Non-conclusive |
+| 9a1502d7      | 1        | Non-conclusive |
+| 9a1af092      | 1        | Non-conclusive |
+| 9a3           | 2        | Non-conclusive |
+| 9a3d02fa9b    | 12       | Non-conclusive |
+| 9a3fe644      | 1        | Non-conclusive |
+| 9a547b06      | 4        | Non-conclusive |
+| 9a5cf834      | 4        | Non-conclusive |
+| 9a5d58bb      | 4        | Non-conclusive |
+| 9a73514       | 1        | Non-conclusive |
+| 9a73bf5fe2    | 4        | Non-conclusive |
+| 9a74cd84      | 4        | Non-conclusive |
+| 9a78a2ac      | 4        | Non-conclusive |
+| 9a7b96a444    | 4        | Non-conclusive |
+| 9a83f026      | 1        | Non-conclusive |
+| 9a9           | 4        | Non-conclusive |
+| 9aa66094      | 4        | Non-conclusive |
+| 9aa6e411      | 20       | Non-conclusive |
+| 9ab07740      | 4        | Non-conclusive |
+| 9aba6f76      | 5        | Non-conclusive |
+| 9abf4d7c      | 8        | Non-conclusive |
+| 9ac88d72      | 4        | Non-conclusive |
+| 9ace395a      | 4        | Non-conclusive |
+| 9ad13ef4      | 8        | Non-conclusive |
+| 9ae40b63      | 2        | Non-conclusive |
+| 9aeee8ac      | 4        | Non-conclusive |
+| 9af030ba      | 4        | Non-conclusive |
+| 9b09652       | 4        | Non-conclusive |
+| 9b0b2031      | 4        | Non-conclusive |
+| 9b0dde8a      | 4        | Non-conclusive |
+| 9b192736      | 4        | Non-conclusive |
+| 9b1ddb8d      | 4        | Non-conclusive |
+| 9b2           | 2        | Non-conclusive |
+| 9b22ed2a      | 4        | Non-conclusive |
+| 9b32          | 4        | Non-conclusive |
+| 9b3c38        | 1        | Non-conclusive |
+| 9b40410f      | 4        | Non-conclusive |
+| 9b437594      | 4        | Non-conclusive |
+| 9b5779ed25    | 4        | Non-conclusive |
+| 9b57ed7       | 4        | Non-conclusive |
+| 9b5b3254      | 1        | Non-conclusive |
+| 9b5db392      | 4        | Non-conclusive |
+| 9b6d71b2      | 8        | Non-conclusive |
+| 9b70          | 5        | Non-conclusive |
+| 9b71          | 4        | Non-conclusive |
+| 9b7cfc02      | 5        | Non-conclusive |
+| 9b8           | 64       | Non-conclusive |
+| 9b80ee77      | 2        | Non-conclusive |
+| 9b81247       | 4        | Non-conclusive |
+| 9b85f79f      | 4        | Non-conclusive |
+| 9b972         | 4        | Non-conclusive |
+| 9b978deb      | 4        | Non-conclusive |
+| 9b9a28a0      | 4        | Non-conclusive |
+| 9b9ab398      | 4        | Non-conclusive |
+| 9ba2fb66      | 4        | Non-conclusive |
+| 9ba3a4be      | 1        | Non-conclusive |
+| 9bacfd0c      | 4        | Non-conclusive |
+| 9bb0b2dc      | 35       | Non-conclusive |
+| 9bbbdb4b      | 4        | Non-conclusive |
+| 9bc2021       | 8        | Non-conclusive |
+| 9bc30d3e      | 1        | Non-conclusive |
+| 9bc649e9      | 1        | Non-conclusive |
+| 9bca242e      | 4        | Non-conclusive |
+| 9bd7caaf      | 4        | Non-conclusive |
+| 9bdaafbd      | 4        | Non-conclusive |
+| 9bf16ea80e    | 4        | Non-conclusive |
+| 9bf956665b    | 1        | Non-conclusive |
+| 9c024853      | 4        | Non-conclusive |
+| 9c0c71e       | 4        | Non-conclusive |
+| 9c20          | 4        | Non-conclusive |
+| 9c25e30a      | 1        | Non-conclusive |
+| 9c293a92      | 4        | Non-conclusive |
+| 9c3c1be4ef    | 1        | Non-conclusive |
+| 9c594e5b      | 4        | Non-conclusive |
+| 9c5aba94      | 4        | Non-conclusive |
+| 9c70dfa6      | 5        | Non-conclusive |
+| 9c732-40      | 2        | Non-conclusive |
+| 9c7a228f      | 1        | Non-conclusive |
+| 9c8f8a2770    | 7        | Non-conclusive |
+| 9ca4e46a      | 10       | Non-conclusive |
+| 9caf595c      | 4        | Non-conclusive |
+| 9cb389e770    | 4        | Non-conclusive |
+| 9cbf14d6      | 1        | Non-conclusive |
+| 9cc4f782      | 8        | Non-conclusive |
+| 9ccb2e36      | 4        | Non-conclusive |
+| 9cebb08e      | 8        | Non-conclusive |
+| 9cfa3edf      | 1        | Non-conclusive |
+| 9d0           | 1        | Non-conclusive |
+| 9d06abfc      | 4        | Non-conclusive |
+| 9d0l1         | 6        | Non-conclusive |
+| 9d1           | 4        | Non-conclusive |
+| 9d11c142      | 4        | Non-conclusive |
+| 9d1b5bd3      | 4        | Non-conclusive |
+| 9d21103       | 4        | Non-conclusive |
+| 9d3           | 4        | Non-conclusive |
+| 9d37dab2      | 4        | Non-conclusive |
+| 9d406888      | 4        | Non-conclusive |
+| 9d4bd53a      | 4        | Non-conclusive |
+| 9d4c4f9b      | 4        | Non-conclusive |
+| 9d50c84b      | 4        | Non-conclusive |
+| 9d52          | 9        | Non-conclusive |
+| 9d534c0bfd    | 4        | Non-conclusive |
+| 9d5ebe8e      | 4        | Non-conclusive |
+| 9d694a47      | 1        | Non-conclusive |
+| 9d6d8e76      | 4        | Non-conclusive |
+| 9d6da8f       | 4        | Non-conclusive |
+| 9d7           | 6        | Non-conclusive |
+| 9d7658da      | 4        | Non-conclusive |
+| 9d9a0847      | 2        | Non-conclusive |
+| 9db5e5e4      | 8        | Non-conclusive |
+| 9dba7876      | 4        | Non-conclusive |
+| 9df1a849      | 4        | Non-conclusive |
+| 9dff5f97      | 4        | Non-conclusive |
+| 9e0459f7      | 1        | Non-conclusive |
+| 9e07477402    | 4        | Non-conclusive |
+| 9e0ea27b      | 4        | Non-conclusive |
+| 9e1           | 4        | Non-conclusive |
+| 9e16c98       | 8        | Non-conclusive |
+| 9e177afb      | 4        | Non-conclusive |
+| 9e3           | 3        | Non-conclusive |
+| 9e32889       | 4        | Non-conclusive |
+| 9e3861b       | 1        | Non-conclusive |
+| 9e4           | 5        | Non-conclusive |
+| 9e46846       | 4        | Non-conclusive |
+| 9e4bfb2f      | 4        | Non-conclusive |
+| 9e56e792      | 4        | Non-conclusive |
+| 9e85e9b1      | 1        | Non-conclusive |
+| 9e969044      | 4        | Non-conclusive |
+| 9e9e9cc0      | 1        | Non-conclusive |
+| 9ea6cc9       | 4        | Non-conclusive |
+| 9ea80de3      | 4        | Non-conclusive |
+| 9ebb8440      | 4        | Non-conclusive |
+| 9ecfe063      | 4        | Non-conclusive |
+| 9edc56c9      | 1        | Non-conclusive |
+| 9edc636       | 8        | Non-conclusive |
+| 9eee1d3c      | 4        | Non-conclusive |
+| 9ef5be1d      | 4        | Non-conclusive |
+| 9f018b71      | 4        | Non-conclusive |
+| 9f03a79b      | 8        | Non-conclusive |
+| 9f19af58      | 4        | Non-conclusive |
+| 9f1a9175      | 4        | Non-conclusive |
+| 9f21b20e      | 8        | Non-conclusive |
+| 9f3           | 1        | Non-conclusive |
+| 9f31          | 18       | Non-conclusive |
+| 9f3752cb      | 4        | Non-conclusive |
+| 9f3f99f8      | 1        | Non-conclusive |
+| 9f400300      | 4        | Non-conclusive |
+| 9f4db09704    | 1        | Non-conclusive |
+| 9f579ed0      | 1        | Non-conclusive |
+| 9f670f2e      | 4        | Non-conclusive |
+| 9f74a718      | 4        | Non-conclusive |
+| 9f78c370      | 4        | Non-conclusive |
+| 9f9aa52a      | 4        | Non-conclusive |
+| 9fc4233c      | 4        | Non-conclusive |
+| 9fc8e22d      | 4        | Non-conclusive |
+| 9fde10a4      | 1        | Non-conclusive |
+| 9fe0e051      | 4        | Non-conclusive |
+| 9fe4b8f1      | 1        | Non-conclusive |
+| 9fecd0c4      | 1        | Non-conclusive |
+| 9fefb48       | 4        | Non-conclusive |
+| 9ff7def1      | 6        | Non-conclusive |
+| 9ff89e9c      | 4        | Non-conclusive |
+| 9g94          | 4        | Non-conclusive |
+| 9h6P5         | 4        | Non-conclusive |
+| 9k2           | 8        | Non-conclusive |
+| 9k7           | 1        | Non-conclusive |
+| 9n7h9         | 2        | Non-conclusive |
+| 9n9           | 4        | Non-conclusive |
+| 9r4P4         | 45       | Non-conclusive |
+| 9s2           | 1        | Non-conclusive |
+| 9s9           | 4        | Non-conclusive |
+| 9x1           | 2        | Non-conclusive |
+| 9z3           | 1        | Non-conclusive |
+| B0840507      | 4        | Non-conclusive |
+| B6A33305      | 19       | Non-conclusive |
+| C030062       | 1        | Non-conclusive |
+| C36A9B0B      | 2        | Non-conclusive |
+| D8be2da       | 4        | Non-conclusive |
+| Feedbac       | 5        | Non-conclusive |
+| KX            | 102      | Non-conclusive |
+| NN            | 8        | Non-conclusive |
+| X.X.X         | 14       | Non-conclusive |
+| \1            | 311304   | Non-conclusive |
+| a.b.c         | 13       | Non-conclusive |
+| a0060a61      | 4        | Non-conclusive |
+| a01c54fc      | 4        | Non-conclusive |
+| a02f92a499    | 8        | Non-conclusive |
+| a035597       | 4        | Non-conclusive |
+| a0394563      | 4        | Non-conclusive |
+| a03f9bb       | 4        | Non-conclusive |
+| a0430d03      | 4        | Non-conclusive |
+| a05a363a      | 4        | Non-conclusive |
+| a076d05399    | 4        | Non-conclusive |
+| a077445a      | 5        | Non-conclusive |
+| a07bf49d      | 5        | Non-conclusive |
+| a07d09cf      | 4        | Non-conclusive |
+| a0805bca      | 4        | Non-conclusive |
+| a0805bca91    | 5        | Non-conclusive |
+| a0a709f3      | 4        | Non-conclusive |
+| a0ac592       | 4        | Non-conclusive |
+| a0c6c5be      | 8        | Non-conclusive |
+| a0efa33       | 4        | Non-conclusive |
+| a0fc6efa      | 12       | Non-conclusive |
+| a110dd53      | 4        | Non-conclusive |
+| a11c3c80b3    | 2        | Non-conclusive |
+| a13997c4      | 4        | Non-conclusive |
+| a139f053      | 4        | Non-conclusive |
+| a13a0c8a      | 4        | Non-conclusive |
+| a1447193      | 1        | Non-conclusive |
+| a14c8510      | 4        | Non-conclusive |
+| a14e4f70      | 4        | Non-conclusive |
+| a15c2ac       | 2        | Non-conclusive |
+| a15c2ac3      | 4        | Non-conclusive |
+| a15c2ac323    | 4        | Non-conclusive |
+| a15e2a01      | 4        | Non-conclusive |
+| a1600fb5      | 4        | Non-conclusive |
+| a17480ad      | 4        | Non-conclusive |
+| a17688f       | 2        | Non-conclusive |
+| a17a38dd      | 1        | Non-conclusive |
+| a1a5fdf2      | 7        | Non-conclusive |
+| a1ae07fc42    | 1        | Non-conclusive |
+| a1b4e08c      | 4        | Non-conclusive |
+| a1c4dd50      | 4        | Non-conclusive |
+| a1c5df23      | 4        | Non-conclusive |
+| a1cb4851dd    | 4        | Non-conclusive |
+| a1d1c52d      | 4        | Non-conclusive |
+| a1d5ade3      | 1        | Non-conclusive |
+| a1ef62e2      | 4        | Non-conclusive |
+| a1efc498      | 3        | Non-conclusive |
+| a1f39a99      | 4        | Non-conclusive |
+| a1f3b147      | 4        | Non-conclusive |
+| a201f779      | 1        | Non-conclusive |
+| a2097b0e      | 1        | Non-conclusive |
+| a21b00d393    | 4        | Non-conclusive |
+| a21f190d      | 1        | Non-conclusive |
+| a225785525    | 2        | Non-conclusive |
+| a229bab9      | 4        | Non-conclusive |
+| a23ab68c      | 4        | Non-conclusive |
+| a247276       | 4        | Non-conclusive |
+| a24dd2fe97    | 4        | Non-conclusive |
+| a252fb35      | 4        | Non-conclusive |
+| a279dac751    | 12       | Non-conclusive |
+| a2819872      | 4        | Non-conclusive |
+| a28588a7      | 1        | Non-conclusive |
+| a294be1b      | 4        | Non-conclusive |
+| a298ad4475    | 4        | Non-conclusive |
+| a298d371      | 4        | Non-conclusive |
+| a29b5f7f      | 4        | Non-conclusive |
+| a2a0305a      | 2        | Non-conclusive |
+| a2a4846f      | 1        | Non-conclusive |
+| a2b3a21c      | 4        | Non-conclusive |
+| a2c86260      | 4        | Non-conclusive |
+| a2cff679      | 4        | Non-conclusive |
+| a2dad292      | 8        | Non-conclusive |
+| a2e4f722      | 4        | Non-conclusive |
+| a2ea82af      | 4        | Non-conclusive |
+| a2fdfe6c      | 4        | Non-conclusive |
+| a30d4056      | 4        | Non-conclusive |
+| a30f1908b4    | 2        | Non-conclusive |
+| a312a95b      | 4        | Non-conclusive |
+| a312b5d9      | 4        | Non-conclusive |
+| a31d6a3786    | 48       | Non-conclusive |
+| a32e0d4e      | 4        | Non-conclusive |
+| a33709e5      | 4        | Non-conclusive |
+| a33c0c97      | 1        | Non-conclusive |
+| a342afaa      | 2        | Non-conclusive |
+| a34ae879      | 4        | Non-conclusive |
+| a354a5f2      | 8        | Non-conclusive |
+| a3562749      | 1        | Non-conclusive |
+| a35b413f      | 4        | Non-conclusive |
+| a35ed908      | 4        | Non-conclusive |
+| a3690ff0      | 4        | Non-conclusive |
+| a36ebadf      | 4        | Non-conclusive |
+| a375bb47      | 5        | Non-conclusive |
+| a37862f2      | 4        | Non-conclusive |
+| a3790305      | 1        | Non-conclusive |
+| a38816be      | 4        | Non-conclusive |
+| a3a46b7c      | 8        | Non-conclusive |
+| a3aac525      | 4        | Non-conclusive |
+| a3b9c325      | 4        | Non-conclusive |
+| a3ba11b8      | 4        | Non-conclusive |
+| a3c06471      | 4        | Non-conclusive |
+| a3cc813c      | 1        | Non-conclusive |
+| a3f10549      | 4        | Non-conclusive |
+| a402f2c9be    | 6        | Non-conclusive |
+| a43b4f07      | 4        | Non-conclusive |
+| a454220fc0    | 5        | Non-conclusive |
+| a458ce65      | 4        | Non-conclusive |
+| a4754535      | 4        | Non-conclusive |
+| a482af10      | 32       | Non-conclusive |
+| a48d2849      | 4        | Non-conclusive |
+| a492df23      | 4        | Non-conclusive |
+| a4947842      | 4        | Non-conclusive |
+| a4967575      | 4        | Non-conclusive |
+| a4bc8581      | 5        | Non-conclusive |
+| a4e36de0c7    | 1        | Non-conclusive |
+| a4e52900      | 4        | Non-conclusive |
+| a50e8262      | 4        | Non-conclusive |
+| a50f0a4f      | 4        | Non-conclusive |
+| a50f8d6e      | 4        | Non-conclusive |
+| a50f994a      | 2        | Non-conclusive |
+| a51baf76      | 4        | Non-conclusive |
+| a5285a2c      | 4        | Non-conclusive |
+| a5290058      | 4        | Non-conclusive |
+| a52ce61e2b    | 1        | Non-conclusive |
+| a53025e3      | 4        | Non-conclusive |
+| a531ba4       | 4        | Non-conclusive |
+| a536db1e      | 6        | Non-conclusive |
+| a53738e7      | 4        | Non-conclusive |
+| a544e728      | 21       | Non-conclusive |
+| a5486e49      | 4        | Non-conclusive |
+| a54cd397      | 24       | Non-conclusive |
+| a5539e4207    | 4        | Non-conclusive |
+| a5545b84      | 1        | Non-conclusive |
+| a5550d5e      | 4        | Non-conclusive |
+| a56a8cab      | 4        | Non-conclusive |
+| a5732259      | 4        | Non-conclusive |
+| a575061a      | 4        | Non-conclusive |
+| a57a906b      | 4        | Non-conclusive |
+| a582b4e4      | 1        | Non-conclusive |
+| a5859dd123    | 1        | Non-conclusive |
+| a587830a      | 1        | Non-conclusive |
+| a5aa7a9a      | 4        | Non-conclusive |
+| a5ac53f       | 1        | Non-conclusive |
+| a5aedc22      | 1        | Non-conclusive |
+| a5b612dc      | 5        | Non-conclusive |
+| a5bf1c7b      | 4        | Non-conclusive |
+| a5bf2b42      | 4        | Non-conclusive |
+| a5ca1e42      | 4        | Non-conclusive |
+| a5d46696      | 1        | Non-conclusive |
+| a5d47c91      | 4        | Non-conclusive |
+| a5d824a5      | 5        | Non-conclusive |
+| a5e423e3      | 1        | Non-conclusive |
+| a5f4060b      | 1        | Non-conclusive |
+| a6044802      | 4        | Non-conclusive |
+| a612494822    | 4        | Non-conclusive |
+| a61802a6      | 4        | Non-conclusive |
+| a62122c7      | 4        | Non-conclusive |
+| a628c1f       | 4        | Non-conclusive |
+| a63b87e4      | 1        | Non-conclusive |
+| a64a1524      | 4        | Non-conclusive |
+| a6609b8b      | 4        | Non-conclusive |
+| a67b941c      | 4        | Non-conclusive |
+| a68e923       | 4        | Non-conclusive |
+| a692ee95      | 1        | Non-conclusive |
+| a6a23dad      | 4        | Non-conclusive |
+| a6ab9331      | 4        | Non-conclusive |
+| a6b4a1cc      | 1        | Non-conclusive |
+| a6c51259      | 4        | Non-conclusive |
+| a6cf5f54      | 4        | Non-conclusive |
+| a700b13a      | 4        | Non-conclusive |
+| a70897ef      | 4        | Non-conclusive |
+| a710e95e      | 4        | Non-conclusive |
+| a71757ef      | 5        | Non-conclusive |
+| a717b8eb25    | 4        | Non-conclusive |
+| a7225484      | 1        | Non-conclusive |
+| a726b1d3      | 4        | Non-conclusive |
+| a7326a6e      | 4        | Non-conclusive |
+| a733c7d4      | 4        | Non-conclusive |
+| a744b00c      | 4        | Non-conclusive |
+| a747e719      | 1        | Non-conclusive |
+| a752275b      | 1        | Non-conclusive |
+| a766fa47      | 4        | Non-conclusive |
+| a7846628      | 4        | Non-conclusive |
+| a78b485d      | 4        | Non-conclusive |
+| a793c4d       | 4        | Non-conclusive |
+| a794c94b      | 4        | Non-conclusive |
+| a7baac00      | 8        | Non-conclusive |
+| a7c35c9a      | 2        | Non-conclusive |
+| a7d0ce13      | 4        | Non-conclusive |
+| a7e1745b      | 4        | Non-conclusive |
+| a7e565c9      | 4        | Non-conclusive |
+| a7e79a7f      | 4        | Non-conclusive |
+| a7ea49b2e0    | 4        | Non-conclusive |
+| a7f258d8      | 2        | Non-conclusive |
+| a7f511472     | 28       | Non-conclusive |
+| a7f82f55      | 4        | Non-conclusive |
+| a8003d30      | 1        | Non-conclusive |
+| a803010b      | 4        | Non-conclusive |
+| a807acee      | 4        | Non-conclusive |
+| a80fb655      | 4        | Non-conclusive |
+| a814cc0a      | 4        | Non-conclusive |
+| a82a1c46      | 4        | Non-conclusive |
+| a834b1b8      | 4        | Non-conclusive |
+| a83da34c      | 1        | Non-conclusive |
+| a83dbb77      | 4        | Non-conclusive |
+| a84df5cc      | 4        | Non-conclusive |
+| a861c361      | 4        | Non-conclusive |
+| a8764c33      | 8        | Non-conclusive |
+| a88618d7      | 4        | Non-conclusive |
+| a88f771e      | 4        | Non-conclusive |
+| a894dc2173    | 4        | Non-conclusive |
+| a8a3b45e      | 4        | Non-conclusive |
+| a8a4d50a      | 4        | Non-conclusive |
+| a8abc04       | 4        | Non-conclusive |
+| a8b371a0      | 1        | Non-conclusive |
+| a8b405ee      | 2        | Non-conclusive |
+| a8b9333338    | 4        | Non-conclusive |
+| a8c37cca      | 4        | Non-conclusive |
+| a8c91d11      | 4        | Non-conclusive |
+| a8c96614      | 4        | Non-conclusive |
+| a8cdb771      | 8        | Non-conclusive |
+| a8ed49e       | 4        | Non-conclusive |
+| a8f01c9d      | 4        | Non-conclusive |
+| a8f31dffd4    | 4        | Non-conclusive |
+| a8f75bc5      | 4        | Non-conclusive |
+| a9093b6d      | 4        | Non-conclusive |
+| a90e661a      | 1        | Non-conclusive |
+| a90e8a5c      | 1        | Non-conclusive |
+| a9255136      | 4        | Non-conclusive |
+| a927626       | 4        | Non-conclusive |
+| a928609       | 4        | Non-conclusive |
+| a929b8e4      | 8        | Non-conclusive |
+| a93251c3      | 1        | Non-conclusive |
+| a9480183      | 4        | Non-conclusive |
+| a94984ef      | 4        | Non-conclusive |
+| a9601f26      | 4        | Non-conclusive |
+| a96531f6      | 4        | Non-conclusive |
+| a9739da1      | 4        | Non-conclusive |
+| a97f993a      | 24       | Non-conclusive |
+| a985bad9      | 8        | Non-conclusive |
+| a99f5a9a      | 4        | Non-conclusive |
+| a9a1ebe4      | 1        | Non-conclusive |
+| a9ad8b7e      | 4        | Non-conclusive |
+| a9b7b264      | 4        | Non-conclusive |
+| a9f8e111      | 4        | Non-conclusive |
+| aa26f455      | 4        | Non-conclusive |
+| aa2ad62413    | 1        | Non-conclusive |
+| aa31c0f6      | 1        | Non-conclusive |
+| aa3ffd9d      | 1        | Non-conclusive |
+| aa494f53      | 4        | Non-conclusive |
+| aa588e43      | 2        | Non-conclusive |
+| aa7efdf6      | 4        | Non-conclusive |
+| aa9dcb70      | 1        | Non-conclusive |
+| aa9fabb1      | 1        | Non-conclusive |
+| aaa           | 1        | Non-conclusive |
+| aaa86121      | 1        | Non-conclusive |
+| aaad50c       | 4        | Non-conclusive |
+| aabf68c8      | 1        | Non-conclusive |
+| aabf8596      | 4        | Non-conclusive |
+| aad4cd7b      | 4        | Non-conclusive |
+| aad5042a      | 4        | Non-conclusive |
+| aad695eb      | 4        | Non-conclusive |
+| aad78292      | 8        | Non-conclusive |
+| aadd7bbe      | 1        | Non-conclusive |
+| aae90b87      | 1        | Non-conclusive |
+| aaf4bb87      | 4        | Non-conclusive |
+| aaf8ccb3      | 4        | Non-conclusive |
+| ab06c71ec2    | 4        | Non-conclusive |
+| ab11459b      | 4        | Non-conclusive |
+| ab1ac8d6      | 4        | Non-conclusive |
+| ab220908      | 4        | Non-conclusive |
+| ab244797      | 1        | Non-conclusive |
+| ab270311      | 4        | Non-conclusive |
+| ab32ce29      | 4        | Non-conclusive |
+| ab3302ec      | 8        | Non-conclusive |
+| ab475596      | 4        | Non-conclusive |
+| ab4b7ddc      | 1        | Non-conclusive |
+| ab68d94b      | 1        | Non-conclusive |
+| ab6b02ef      | 4        | Non-conclusive |
+| ab765ed6      | 4        | Non-conclusive |
+| ab805d1c      | 1        | Non-conclusive |
+| ab9fb9fe      | 4        | Non-conclusive |
+| aba083e7      | 2        | Non-conclusive |
+| abb8ab51      | 2        | Non-conclusive |
+| abbbdb2e      | 4        | Non-conclusive |
+| abbda527      | 1        | Non-conclusive |
+| abbedca       | 18       | Non-conclusive |
+| abc57af       | 1        | Non-conclusive |
+| abe91756d1    | 4        | Non-conclusive |
+| abf3e4eb      | 1        | Non-conclusive |
+| ac026871      | 1        | Non-conclusive |
+| ac0447da      | 1        | Non-conclusive |
+| ac0ab576      | 8        | Non-conclusive |
+| ac0b0502      | 1        | Non-conclusive |
+| ac13f413      | 4        | Non-conclusive |
+| ac193fb9      | 2        | Non-conclusive |
+| ac203fd4      | 1        | Non-conclusive |
+| ac25446f      | 8        | Non-conclusive |
+| ac4db4d       | 4        | Non-conclusive |
+| ac509727      | 2        | Non-conclusive |
+| ac5b19d4      | 4        | Non-conclusive |
+| ac5b1c9c      | 4        | Non-conclusive |
+| ac611b94      | 1        | Non-conclusive |
+| ac7e621a      | 1        | Non-conclusive |
+| ac7ecb00      | 4        | Non-conclusive |
+| ac84e5a4      | 4        | Non-conclusive |
+| ac99e1fa      | 1        | Non-conclusive |
+| acb51dc9      | 2        | Non-conclusive |
+| acd9033a      | 4        | Non-conclusive |
+| ace43c1d      | 1        | Non-conclusive |
+| ace756e9      | 4        | Non-conclusive |
+| ad05e89caf    | 4        | Non-conclusive |
+| ad08cee228    | 4        | Non-conclusive |
+| ad0eff9d      | 4        | Non-conclusive |
+| ad1791fe      | 2        | Non-conclusive |
+| ad389284      | 213      | Non-conclusive |
+| ad3e4542      | 1        | Non-conclusive |
+| ad46baab      | 4        | Non-conclusive |
+| ad76005c      | 8        | Non-conclusive |
+| ad8e703b      | 1        | Non-conclusive |
+| ad94e5ee      | 1        | Non-conclusive |
+| ada6fcc1      | 4        | Non-conclusive |
+| adad686b      | 4        | Non-conclusive |
+| adba2e48      | 2        | Non-conclusive |
+| add2d977      | 1        | Non-conclusive |
+| add33c93d2    | 4        | Non-conclusive |
+| add9eec4      | 4        | Non-conclusive |
+| ade2517c      | 1        | Non-conclusive |
+| ade4a3f1      | 1        | Non-conclusive |
+| ade7d3f       | 27       | Non-conclusive |
+| adf2c547      | 4        | Non-conclusive |
+| adfef3e1      | 4        | Non-conclusive |
+| ae08cb5d      | 4        | Non-conclusive |
+| ae0fe67e      | 4        | Non-conclusive |
+| ae24144f      | 4        | Non-conclusive |
+| ae4d1e25      | 4        | Non-conclusive |
+| ae4d61cc      | 4        | Non-conclusive |
+| ae4dec4c      | 4        | Non-conclusive |
+| ae518746      | 4        | Non-conclusive |
+| ae53987b      | 8        | Non-conclusive |
+| ae588166      | 1        | Non-conclusive |
+| ae5acee0      | 4        | Non-conclusive |
+| ae5baf70      | 1        | Non-conclusive |
+| ae5da74       | 4        | Non-conclusive |
+| ae6230c2      | 4        | Non-conclusive |
+| ae85c54       | 1        | Non-conclusive |
+| ae95ae95      | 1        | Non-conclusive |
+| aea0d53c      | 1        | Non-conclusive |
+| aeadaead      | 13       | Non-conclusive |
+| aed596a3      | 4        | Non-conclusive |
+| aed5ed0f      | 1        | Non-conclusive |
+| aed6652d      | 8        | Non-conclusive |
+| aedd5f79      | 4        | Non-conclusive |
+| aedebe8b      | 4        | Non-conclusive |
+| aee7fd97      | 4        | Non-conclusive |
+| aeed133a      | 4        | Non-conclusive |
+| aef38fa7      | 4        | Non-conclusive |
+| af12cce2      | 4        | Non-conclusive |
+| af213b66      | 4        | Non-conclusive |
+| af428a00      | 4        | Non-conclusive |
+| af45e874      | 4        | Non-conclusive |
+| af6b48e2      | 1        | Non-conclusive |
+| af700234      | 2        | Non-conclusive |
+| af752c13      | 5        | Non-conclusive |
+| af777647      | 4        | Non-conclusive |
+| af7c2e13      | 4        | Non-conclusive |
+| af80c556      | 4        | Non-conclusive |
+| af854ed       | 4        | Non-conclusive |
+| afbe274       | 6        | Non-conclusive |
+| afd31051      | 4        | Non-conclusive |
+| aff6bbbb      | 4        | Non-conclusive |
+| affc220d      | 4        | Non-conclusive |
+| b0025d80      | 4        | Non-conclusive |
+| b00407a9      | 4        | Non-conclusive |
+| b00d19ce      | 4        | Non-conclusive |
+| b0116099      | 4        | Non-conclusive |
+| b0243c79      | 4        | Non-conclusive |
+| b0246df675    | 4        | Non-conclusive |
+| b0316e76      | 4        | Non-conclusive |
+| b036fdeb      | 4        | Non-conclusive |
+| b03a073       | 2        | Non-conclusive |
+| b03ab94d      | 44       | Non-conclusive |
+| b03b32b       | 4        | Non-conclusive |
+| b04a6885      | 4        | Non-conclusive |
+| b04a8384      | 9        | Non-conclusive |
+| b06380889c    | 14       | Non-conclusive |
+| b07ee465      | 4        | Non-conclusive |
+| b0827a43      | 8        | Non-conclusive |
+| b0a37616      | 4        | Non-conclusive |
+| b0baa3d7      | 4        | Non-conclusive |
+| b0c04ca6      | 4        | Non-conclusive |
+| b0c820f5      | 1        | Non-conclusive |
+| b0d09862      | 4        | Non-conclusive |
+| b0d486a9      | 4        | Non-conclusive |
+| b0d6ad4e      | 4        | Non-conclusive |
+| b0d7a83c      | 4        | Non-conclusive |
+| b0e5203eaf    | 1        | Non-conclusive |
+| b0f2646b0a    | 4        | Non-conclusive |
+| b10adc67      | 4        | Non-conclusive |
+| b1204245      | 4        | Non-conclusive |
+| b1221874      | 2        | Non-conclusive |
+| b15900689a    | 4        | Non-conclusive |
+| b163e569      | 1        | Non-conclusive |
+| b16fd822      | 4        | Non-conclusive |
+| b170280322    | 12       | Non-conclusive |
+| b174764a      | 13       | Non-conclusive |
+| b17831a       | 1        | Non-conclusive |
+| b17f10d1      | 8        | Non-conclusive |
+| b1861d54      | 8        | Non-conclusive |
+| b18cad33      | 8        | Non-conclusive |
+| b18f665e      | 4        | Non-conclusive |
+| b1a15d68      | 4        | Non-conclusive |
+| b1a3b702      | 4        | Non-conclusive |
+| b1a5253924    | 8        | Non-conclusive |
+| b1accdc6      | 4        | Non-conclusive |
+| b1c4c91d      | 1        | Non-conclusive |
+| b1d29014      | 4        | Non-conclusive |
+| b1eef832      | 4        | Non-conclusive |
+| b1f46565      | 8        | Non-conclusive |
+| b1fc4836      | 8        | Non-conclusive |
+| b20084a4      | 4        | Non-conclusive |
+| b20161c5      | 1        | Non-conclusive |
+| b216e1da      | 2        | Non-conclusive |
+| b22cc7c6      | 8        | Non-conclusive |
+| b22d6829      | 8        | Non-conclusive |
+| b23a71b2      | 4        | Non-conclusive |
+| b241344fd9    | 81       | Non-conclusive |
+| b244f55140    | 1        | Non-conclusive |
+| b261b3b2      | 4        | Non-conclusive |
+| b263adba      | 4        | Non-conclusive |
+| b2697cf6      | 4        | Non-conclusive |
+| b27413cd      | 8        | Non-conclusive |
+| b2904cad      | 1        | Non-conclusive |
+| b291a93f      | 4        | Non-conclusive |
+| b2b0ef8c      | 4        | Non-conclusive |
+| b2b24f09      | 4        | Non-conclusive |
+| b2bad246      | 4        | Non-conclusive |
+| b2d716aec5    | 22       | Non-conclusive |
+| b2d9e0b7      | 1        | Non-conclusive |
+| b2ee1779      | 4        | Non-conclusive |
+| b2f6a571      | 4        | Non-conclusive |
+| b2f6bf8b      | 4        | Non-conclusive |
+| b2f75a36      | 1        | Non-conclusive |
+| b2ff4ae       | 4        | Non-conclusive |
+| b301cecf      | 4        | Non-conclusive |
+| b3183932      | 2        | Non-conclusive |
+| b320130c      | 12       | Non-conclusive |
+| b345ac2d      | 1        | Non-conclusive |
+| b34ccaad      | 4        | Non-conclusive |
+| b36c0f76      | 4        | Non-conclusive |
+| b3877e85      | 4        | Non-conclusive |
+| b39ef508      | 4        | Non-conclusive |
+| b3aa08bb      | 5        | Non-conclusive |
+| b3aa20f       | 4        | Non-conclusive |
+| b3c52b3c      | 1        | Non-conclusive |
+| b3cff13b      | 4        | Non-conclusive |
+| b3dc7283      | 1        | Non-conclusive |
+| b3e6e75       | 4        | Non-conclusive |
+| b3f09018      | 1        | Non-conclusive |
+| b3f988e4      | 4        | Non-conclusive |
+| b3fdab76      | 8        | Non-conclusive |
+| b3ffdb5       | 4        | Non-conclusive |
+| b4084b63      | 4        | Non-conclusive |
+| b41f91a5      | 1        | Non-conclusive |
+| b434e88b      | 4        | Non-conclusive |
+| b4379bf9      | 4        | Non-conclusive |
+| b44279b4      | 1        | Non-conclusive |
+| b44c59a8      | 8        | Non-conclusive |
+| b45a27f2      | 4        | Non-conclusive |
+| b468c11b      | 1        | Non-conclusive |
+| b48a6314      | 1        | Non-conclusive |
+| b495c3f       | 1        | Non-conclusive |
+| b4998639      | 4        | Non-conclusive |
+| b4b98227      | 4        | Non-conclusive |
+| b4bae9c9      | 4        | Non-conclusive |
+| b4f008d8      | 8        | Non-conclusive |
+| b5036213      | 4        | Non-conclusive |
+| b512ada5      | 1        | Non-conclusive |
+| b52193a831    | 1        | Non-conclusive |
+| b523b523      | 1        | Non-conclusive |
+| b52a60b4      | 143      | Non-conclusive |
+| b5320f5c      | 13       | Non-conclusive |
+| b5537f11      | 4        | Non-conclusive |
+| b565b4d6      | 4        | Non-conclusive |
+| b5869d7f      | 1        | Non-conclusive |
+| b597f88       | 2        | Non-conclusive |
+| b5a14b8d      | 4        | Non-conclusive |
+| b5a4a8db      | 4        | Non-conclusive |
+| b5cb64a5      | 4        | Non-conclusive |
+| b5d088b4      | 1        | Non-conclusive |
+| b5d31e73      | 4        | Non-conclusive |
+| b5f12fe1      | 4        | Non-conclusive |
+| b601ca6a01    | 4        | Non-conclusive |
+| b60389d2      | 8        | Non-conclusive |
+| b60afd4d      | 5        | Non-conclusive |
+| b614c7bc      | 4        | Non-conclusive |
+| b6180b9b      | 4        | Non-conclusive |
+| b618fdf1      | 8        | Non-conclusive |
+| b6190569      | 4        | Non-conclusive |
+| b623a667fe    | 4        | Non-conclusive |
+| b6252d6a      | 1        | Non-conclusive |
+| b62c3d0e      | 1        | Non-conclusive |
+| b634f574      | 4        | Non-conclusive |
+| b63da23       | 4        | Non-conclusive |
+| b646fd30      | 4        | Non-conclusive |
+| b64b665f      | 1        | Non-conclusive |
+| b6516da2      | 4        | Non-conclusive |
+| b687a884      | 4        | Non-conclusive |
+| b68eaa01      | 4        | Non-conclusive |
+| b6945aa       | 4        | Non-conclusive |
+| b6a583b       | 4        | Non-conclusive |
+| b6b10ecc68    | 4        | Non-conclusive |
+| b6b7f5c1      | 4        | Non-conclusive |
+| b6c0d99a      | 4        | Non-conclusive |
+| b6c43de5      | 4        | Non-conclusive |
+| b6c55ff3      | 1        | Non-conclusive |
+| b6c58aaaf3    | 4        | Non-conclusive |
+| b6c79710      | 4        | Non-conclusive |
+| b6cf7c1       | 2        | Non-conclusive |
+| b6dc4e15      | 1        | Non-conclusive |
+| b6e4896f      | 4        | Non-conclusive |
+| b6ed5963      | 4        | Non-conclusive |
+| b6f593c5      | 1        | Non-conclusive |
+| b6f657b5      | 4        | Non-conclusive |
+| b702d5de      | 4        | Non-conclusive |
+| b70e7c82      | 1        | Non-conclusive |
+| b7181ddd      | 2        | Non-conclusive |
+| b71b79c0      | 1        | Non-conclusive |
+| b71c1f2555    | 16       | Non-conclusive |
+| b732147a      | 4        | Non-conclusive |
+| b73aec7fbb    | 4        | Non-conclusive |
+| b73ce7ed      | 4        | Non-conclusive |
+| b7558e26      | 1        | Non-conclusive |
+| b75958845c    | 8        | Non-conclusive |
+| b76228ab19    | 1        | Non-conclusive |
+| b762fab9      | 4        | Non-conclusive |
+| b763ea9c      | 4        | Non-conclusive |
+| b767d54d      | 1        | Non-conclusive |
+| b787f26b      | 4        | Non-conclusive |
+| b78ed21d      | 4        | Non-conclusive |
+| b793dad5      | 6        | Non-conclusive |
+| b797601c      | 4        | Non-conclusive |
+| b79a4196      | 4        | Non-conclusive |
+| b7a5ecc2      | 4        | Non-conclusive |
+| b7c037f2      | 1        | Non-conclusive |
+| b7c3c72e      | 4        | Non-conclusive |
+| b7d81ea2c4    | 12       | Non-conclusive |
+| b7dbc685      | 7        | Non-conclusive |
+| b7e04952      | 4        | Non-conclusive |
+| b7f19062      | 4        | Non-conclusive |
+| b8093a91      | 2        | Non-conclusive |
+| b8193f90      | 5        | Non-conclusive |
+| b819d857      | 4        | Non-conclusive |
+| b821d08e      | 4        | Non-conclusive |
+| b82cb706      | 5        | Non-conclusive |
+| b85b0c1c      | 4        | Non-conclusive |
+| b870ff21      | 8        | Non-conclusive |
+| b876e831      | 1        | Non-conclusive |
+| b87d563b      | 4        | Non-conclusive |
+| b88446bf      | 2863     | Non-conclusive |
+| b88c3415      | 5        | Non-conclusive |
+| b8b5dfdb      | 1        | Non-conclusive |
+| b8bf221e      | 5        | Non-conclusive |
+| b8c4152c      | 4        | Non-conclusive |
+| b8c9260e      | 4        | Non-conclusive |
+| b8d2e516      | 2        | Non-conclusive |
+| b8d8175f4c    | 2        | Non-conclusive |
+| b8daebf       | 4        | Non-conclusive |
+| b8e35b65      | 1        | Non-conclusive |
+| b8e4ceb1      | 4        | Non-conclusive |
+| b8ef60d2      | 2        | Non-conclusive |
+| b8ff263ddf    | 33       | Non-conclusive |
+| b90353de      | 4        | Non-conclusive |
+| b9273943      | 1        | Non-conclusive |
+| b928c960      | 4        | Non-conclusive |
+| b935103       | 4        | Non-conclusive |
+| b93dced5      | 4        | Non-conclusive |
+| b93ddd52      | 4        | Non-conclusive |
+| b93e3682      | 4        | Non-conclusive |
+| b940f7bf      | 4        | Non-conclusive |
+| b94c8617      | 1        | Non-conclusive |
+| b9599d6f46    | 11       | Non-conclusive |
+| b9640c09      | 4        | Non-conclusive |
+| b9662ba7ae    | 4        | Non-conclusive |
+| b96a19e6      | 8        | Non-conclusive |
+| b9af02b486    | 4        | Non-conclusive |
+| b9c36b49      | 4        | Non-conclusive |
+| b9cc6c68      | 4        | Non-conclusive |
+| b9ceb11a      | 4        | Non-conclusive |
+| b9f20e5d      | 2        | Non-conclusive |
+| b9f446ad      | 4        | Non-conclusive |
+| bEFAeC5       | 8        | Non-conclusive |
+| ba1bf3fe      | 4        | Non-conclusive |
+| ba32ee8fa5    | 2        | Non-conclusive |
+| ba4a2706      | 2        | Non-conclusive |
+| ba4dbfb6      | 5        | Non-conclusive |
+| ba6ee930      | 4        | Non-conclusive |
+| ba702fb570    | 9        | Non-conclusive |
+| ba76265       | 1        | Non-conclusive |
+| ba90be3       | 7        | Non-conclusive |
+| ba9527c       | 8        | Non-conclusive |
+| ba97cdbd      | 8        | Non-conclusive |
+| ba9ba939      | 1        | Non-conclusive |
+| bab1642e      | 1        | Non-conclusive |
+| bab445f5      | 4        | Non-conclusive |
+| bab67376      | 4        | Non-conclusive |
+| bac632d7      | 4        | Non-conclusive |
+| bacce076      | 4        | Non-conclusive |
+| bacf0e09      | 4        | Non-conclusive |
+| badf1413      | 1        | Non-conclusive |
+| baef8e95      | 4        | Non-conclusive |
+| batterX       | 4        | Non-conclusive |
+| bb12fc2d      | 4        | Non-conclusive |
+| bb1533a2      | 4        | Non-conclusive |
+| bb161006      | 1        | Non-conclusive |
+| bb384f771b    | 8        | Non-conclusive |
+| bb3e5362      | 4        | Non-conclusive |
+| bb433a5e      | 8        | Non-conclusive |
+| bb44af79      | 4        | Non-conclusive |
+| bb49bb49      | 6        | Non-conclusive |
+| bb59a348      | 4        | Non-conclusive |
+| bb70a2ef      | 8        | Non-conclusive |
+| bb830a78      | 4        | Non-conclusive |
+| bb9f89b7      | 16       | Non-conclusive |
+| bba51f1b      | 4        | Non-conclusive |
+| bba6e784      | 4        | Non-conclusive |
+| bbb2f7e1      | 2        | Non-conclusive |
+| bbb3265b      | 5        | Non-conclusive |
+| bbb565be      | 4        | Non-conclusive |
+| bbb9f605c1    | 1        | Non-conclusive |
+| bbbd3db4      | 1        | Non-conclusive |
+| bbc53359      | 1        | Non-conclusive |
+| bbc6f838      | 4        | Non-conclusive |
+| bbc74b1a      | 4        | Non-conclusive |
+| bbccb4bb      | 4        | Non-conclusive |
+| bbd7313e      | 4        | Non-conclusive |
+| bbe52f65      | 1        | Non-conclusive |
+| bbedda8f      | 1        | Non-conclusive |
+| bbfd10a2      | 4        | Non-conclusive |
+| bc0236d0      | 4        | Non-conclusive |
+| bc0795a4      | 4        | Non-conclusive |
+| bc0a7bbe      | 4        | Non-conclusive |
+| bc105f9a      | 1        | Non-conclusive |
+| bc12d7d8      | 4        | Non-conclusive |
+| bc216d3b93    | 13       | Non-conclusive |
+| bc2cabcd      | 1        | Non-conclusive |
+| bc3df9b3      | 4        | Non-conclusive |
+| bc4c36a5      | 4        | Non-conclusive |
+| bc69bb6c      | 8        | Non-conclusive |
+| bc702b00      | 8        | Non-conclusive |
+| bc8f3c389d    | 4        | Non-conclusive |
+| bc978eeb      | 4        | Non-conclusive |
+| bcb2887e      | 4        | Non-conclusive |
+| bcbf9ef3f5    | 1        | Non-conclusive |
+| bcde76b6      | 1        | Non-conclusive |
+| bcde9013      | 1        | Non-conclusive |
+| bce83b8c      | 8        | Non-conclusive |
+| bcf77825      | 4        | Non-conclusive |
+| bd0cfc8c      | 1        | Non-conclusive |
+| bd2fb6c8      | 4        | Non-conclusive |
+| bd449f9789    | 4        | Non-conclusive |
+| bd4ba9a       | 2        | Non-conclusive |
+| bd4fae90bb    | 1        | Non-conclusive |
+| bd6d5fd8      | 4        | Non-conclusive |
+| bd6ef96f      | 1        | Non-conclusive |
+| bd6fbb71      | 5        | Non-conclusive |
+| bd81903       | 4        | Non-conclusive |
+| bd9050b5      | 4        | Non-conclusive |
+| bdc0d21a      | 4        | Non-conclusive |
+| bdc4bc5c      | 4        | Non-conclusive |
+| bdcfae38      | 4        | Non-conclusive |
+| bdd72c23      | 1        | Non-conclusive |
+| bdd7a82d3b    | 4        | Non-conclusive |
+| bdeab09c      | 4        | Non-conclusive |
+| bdf0f6d7      | 1        | Non-conclusive |
+| be07cfad      | 4        | Non-conclusive |
+| be0e20b2      | 2        | Non-conclusive |
+| be131828      | 1        | Non-conclusive |
+| be19d9b1      | 4        | Non-conclusive |
+| be1ad81f      | 4        | Non-conclusive |
+| be1cf3df      | 4        | Non-conclusive |
+| be24fe9b9f    | 4        | Non-conclusive |
+| be30bbd2      | 4        | Non-conclusive |
+| be3fb927      | 4        | Non-conclusive |
+| be4897fd      | 4        | Non-conclusive |
+| be6e78d8      | 4        | Non-conclusive |
+| be6fe872      | 4        | Non-conclusive |
+| be767114      | 1        | Non-conclusive |
+| be84f536      | 1        | Non-conclusive |
+| be94905b6b    | 5        | Non-conclusive |
+| bec8f694      | 4        | Non-conclusive |
+| bed8c13c      | 4        | Non-conclusive |
+| bedd3d13      | 4        | Non-conclusive |
+| bef4111       | 4        | Non-conclusive |
+| bef5f2b1      | 4        | Non-conclusive |
+| bf0b7e6d      | 1        | Non-conclusive |
+| bf2e0325      | 4        | Non-conclusive |
+| bf478e44      | 1        | Non-conclusive |
+| bf4a638d      | 4        | Non-conclusive |
+| bf55143b      | 4        | Non-conclusive |
+| bf582cb9      | 1        | Non-conclusive |
+| bf5d79e129    | 4        | Non-conclusive |
+| bf7b381c      | 4        | Non-conclusive |
+| bf7ff5f       | 4        | Non-conclusive |
+| bf8353cb      | 4        | Non-conclusive |
+| bf8bef37      | 2        | Non-conclusive |
+| bf9d59ce      | 4        | Non-conclusive |
+| bfa186ef9e    | 8        | Non-conclusive |
+| bfa3573       | 2        | Non-conclusive |
+| bfba8667      | 5        | Non-conclusive |
+| bfbc69ef      | 4        | Non-conclusive |
+| bfbdbddfe1    | 4        | Non-conclusive |
+| bfe0e0c2      | 4        | Non-conclusive |
+| bfe472f4      | 1        | Non-conclusive |
+| bfeedbac      | 12       | Non-conclusive |
+| bffd0cb3      | 4        | Non-conclusive |
+| bootstrap     | 4        | Non-conclusive |
+| c0017fa3      | 8        | Non-conclusive |
+| c013f2e5      | 4        | Non-conclusive |
+| c01e269a      | 4        | Non-conclusive |
+| c0286b57      | 4        | Non-conclusive |
+| c02f7cb1      | 4        | Non-conclusive |
+| c0366bf4      | 8        | Non-conclusive |
+| c0646139      | 4        | Non-conclusive |
+| c06aa92a      | 20       | Non-conclusive |
+| c0748e4c      | 1        | Non-conclusive |
+| c08d1204      | 1        | Non-conclusive |
+| c099f3d4      | 1        | Non-conclusive |
+| c0a54c43      | 4        | Non-conclusive |
+| c0adeb13      | 4        | Non-conclusive |
+| c0cf0424      | 1        | Non-conclusive |
+| c0d4e1fc6b    | 1        | Non-conclusive |
+| c0d74e4c      | 1        | Non-conclusive |
+| c0ed2f2       | 4        | Non-conclusive |
+| c0f09d33      | 4        | Non-conclusive |
+| c0f63b50      | 12       | Non-conclusive |
+| c0fe4a7d      | 4        | Non-conclusive |
+| c0ff25cc      | 4        | Non-conclusive |
+| c1005ac       | 1        | Non-conclusive |
+| c109ca11      | 4        | Non-conclusive |
+| c10ac978      | 4        | Non-conclusive |
+| c11a5d2b      | 4        | Non-conclusive |
+| c11fb0ee      | 4        | Non-conclusive |
+| c1308e37      | 4        | Non-conclusive |
+| c13a3601      | 4        | Non-conclusive |
+| c13d77aa0b    | 1        | Non-conclusive |
+| c1408d79      | 4        | Non-conclusive |
+| c14d5e52b1    | 27       | Non-conclusive |
+| c15b4737      | 1        | Non-conclusive |
+| c161568067    | 4        | Non-conclusive |
+| c198f91       | 4        | Non-conclusive |
+| c198fe18      | 4        | Non-conclusive |
+| c1999a95      | 4        | Non-conclusive |
+| c19fd3fe      | 1        | Non-conclusive |
+| c1b59829      | 4        | Non-conclusive |
+| c1bc46b1      | 1        | Non-conclusive |
+| c1c34faa      | 1        | Non-conclusive |
+| c1c3e7f0      | 4        | Non-conclusive |
+| c1c67bff      | 4        | Non-conclusive |
+| c1c9e3f7      | 27       | Non-conclusive |
+| c1cd0dd8      | 10       | Non-conclusive |
+| c1d3fe53      | 4        | Non-conclusive |
+| c1e05c7d      | 4        | Non-conclusive |
+| c1eff7b7      | 4        | Non-conclusive |
+| c1f09c79      | 9        | Non-conclusive |
+| c1f3256b      | 1        | Non-conclusive |
+| c1fca595      | 1        | Non-conclusive |
+| c1fff5eb      | 1        | Non-conclusive |
+| c20bfc15      | 1        | Non-conclusive |
+| c24eeb14      | 1        | Non-conclusive |
+| c254f65d      | 4        | Non-conclusive |
+| c267888       | 8        | Non-conclusive |
+| c2747405      | 4        | Non-conclusive |
+| c277067d      | 4        | Non-conclusive |
+| c281c15b18    | 2        | Non-conclusive |
+| c2a18fde      | 1        | Non-conclusive |
+| c2a710ac      | 4        | Non-conclusive |
+| c2b17699      | 4        | Non-conclusive |
+| c2c423bd      | 4        | Non-conclusive |
+| c2c8047ed5    | 1        | Non-conclusive |
+| c2d5e896      | 4        | Non-conclusive |
+| c2e1e1f       | 4        | Non-conclusive |
+| c2e5221c33    | 8        | Non-conclusive |
+| c2e5237f      | 4        | Non-conclusive |
+| c2e66e6d      | 4        | Non-conclusive |
+| c2ec2d06      | 4        | Non-conclusive |
+| c301115       | 190      | Non-conclusive |
+| c30c9078      | 4        | Non-conclusive |
+| c31dda77      | 4        | Non-conclusive |
+| c31ec854      | 1        | Non-conclusive |
+| c327b73       | 4        | Non-conclusive |
+| c330ddbf      | 4        | Non-conclusive |
+| c33357e1      | 8        | Non-conclusive |
+| c339fb19      | 1        | Non-conclusive |
+| c33b98f3      | 4        | Non-conclusive |
+| c33cb0d6      | 4        | Non-conclusive |
+| c34e62fa      | 1        | Non-conclusive |
+| c36e5a79      | 4        | Non-conclusive |
+| c381ff97      | 2        | Non-conclusive |
+| c384202b      | 4        | Non-conclusive |
+| c38c7d98      | 4        | Non-conclusive |
+| c396b0c4      | 4        | Non-conclusive |
+| c3c695b       | 4        | Non-conclusive |
+| c3ff0826      | 4        | Non-conclusive |
+| c406d0b6      | 1        | Non-conclusive |
+| c40e0c5f      | 8        | Non-conclusive |
+| c40e8be2      | 4        | Non-conclusive |
+| c419d02       | 4        | Non-conclusive |
+| c41f429daf    | 1        | Non-conclusive |
+| c421cf5f      | 4        | Non-conclusive |
+| c4254f8e      | 4        | Non-conclusive |
+| c45b4382      | 1        | Non-conclusive |
+| c4628a80      | 2        | Non-conclusive |
+| c47cc4d1      | 1        | Non-conclusive |
+| c47e8392      | 5        | Non-conclusive |
+| c4a79a61      | 1        | Non-conclusive |
+| c4b4b740      | 4        | Non-conclusive |
+| c4b9ea48      | 8        | Non-conclusive |
+| c4d1d25b      | 4        | Non-conclusive |
+| c4d4ef7a      | 4        | Non-conclusive |
+| c4dce8a8      | 4        | Non-conclusive |
+| c4de12b407    | 1        | Non-conclusive |
+| c4e4d753      | 4        | Non-conclusive |
+| c4e4eed0      | 8        | Non-conclusive |
+| c4e6832d      | 4        | Non-conclusive |
+| c4ebafd4      | 4        | Non-conclusive |
+| c51f32ad      | 4        | Non-conclusive |
+| c51faad8      | 1        | Non-conclusive |
+| c521a12c      | 1        | Non-conclusive |
+| c52e5a26      | 1        | Non-conclusive |
+| c5376229      | 4        | Non-conclusive |
+| c55a781       | 4        | Non-conclusive |
+| c5625153      | 8        | Non-conclusive |
+| c5653b6f      | 4        | Non-conclusive |
+| c569a880      | 4        | Non-conclusive |
+| c56df808      | 1        | Non-conclusive |
+| c58baee3      | 4        | Non-conclusive |
+| c58db093      | 4        | Non-conclusive |
+| c5a1f284      | 4        | Non-conclusive |
+| c5a752e200    | 4        | Non-conclusive |
+| c5aacf72      | 1        | Non-conclusive |
+| c5b5b2fa19    | 5        | Non-conclusive |
+| c5b9dc59      | 4        | Non-conclusive |
+| c5becc13      | 4        | Non-conclusive |
+| c5c6d52e      | 4        | Non-conclusive |
+| c5d45e1c      | 4        | Non-conclusive |
+| c5d701e       | 4        | Non-conclusive |
+| c5e4a71       | 2        | Non-conclusive |
+| c5ef83b1      | 9        | Non-conclusive |
+| c5f682fe5d    | 4        | Non-conclusive |
+| c5fda9a4      | 1        | Non-conclusive |
+| c62b26daa9    | 4        | Non-conclusive |
+| c62e1bd1      | 2        | Non-conclusive |
+| c633c28a      | 4        | Non-conclusive |
+| c6413194      | 5        | Non-conclusive |
+| c651c40       | 8        | Non-conclusive |
+| c6535698      | 4        | Non-conclusive |
+| c65cbc57      | 4        | Non-conclusive |
+| c65ff9f5      | 4        | Non-conclusive |
+| c66a78cf      | 4        | Non-conclusive |
+| c6ab463       | 4        | Non-conclusive |
+| c6c5e954      | 4        | Non-conclusive |
+| c6e7bf73      | 4        | Non-conclusive |
+| c6f87654      | 4        | Non-conclusive |
+| c6fed610      | 4        | Non-conclusive |
+| c70d7bee      | 4        | Non-conclusive |
+| c71bc63c3d    | 4        | Non-conclusive |
+| c7238561      | 5        | Non-conclusive |
+| c73b3286      | 4        | Non-conclusive |
+| c7426493      | 4        | Non-conclusive |
+| c74a6171      | 4        | Non-conclusive |
+| c74e4afa      | 4        | Non-conclusive |
+| c7513e51      | 4        | Non-conclusive |
+| c76a6e9c81    | 1        | Non-conclusive |
+| c76bc17e      | 1        | Non-conclusive |
+| c7722d8f      | 1        | Non-conclusive |
+| c784ec47      | 1        | Non-conclusive |
+| c7874e71      | 4        | Non-conclusive |
+| c79dfe61      | 1        | Non-conclusive |
+| c7aced59      | 8        | Non-conclusive |
+| c7af15b       | 19       | Non-conclusive |
+| c7b06d6c      | 2        | Non-conclusive |
+| c7b3039d      | 8        | Non-conclusive |
+| c7c53c42      | 4        | Non-conclusive |
+| c7d7b73a      | 1        | Non-conclusive |
+| c7da9aa4      | 1        | Non-conclusive |
+| c7e7ac31      | 1        | Non-conclusive |
+| c7eaec6       | 4        | Non-conclusive |
+| c7f8f395      | 5        | Non-conclusive |
+| c7fcd36e      | 4        | Non-conclusive |
+| c808716c      | 4        | Non-conclusive |
+| c80b127e      | 4        | Non-conclusive |
+| c821685a      | 4        | Non-conclusive |
+| c82d840c      | 1        | Non-conclusive |
+| c83db98e      | 4        | Non-conclusive |
+| c871c47       | 4        | Non-conclusive |
+| c8811feb      | 1        | Non-conclusive |
+| c88737c       | 4        | Non-conclusive |
+| c89180ff      | 4        | Non-conclusive |
+| c89db0d7      | 4        | Non-conclusive |
+| c89ddabbff    | 4        | Non-conclusive |
+| c8b3e511      | 4        | Non-conclusive |
+| c8b7ff76      | 1        | Non-conclusive |
+| c8c31426      | 4        | Non-conclusive |
+| c8c95a80      | 4        | Non-conclusive |
+| c8cd54b97a    | 5        | Non-conclusive |
+| c8cf0e45      | 8        | Non-conclusive |
+| c8d8521bdb    | 1        | Non-conclusive |
+| c8dae10590    | 1        | Non-conclusive |
+| c8f0e7f       | 4        | Non-conclusive |
+| c8f9c8f9      | 2        | Non-conclusive |
+| c903b86       | 1        | Non-conclusive |
+| c90e9068      | 4        | Non-conclusive |
+| c914f0ed      | 4        | Non-conclusive |
+| c924beae      | 1        | Non-conclusive |
+| c9270e10      | 1        | Non-conclusive |
+| c92ff15d      | 1        | Non-conclusive |
+| c934e71d      | 4        | Non-conclusive |
+| c94661e6      | 4        | Non-conclusive |
+| c9489f77      | 1        | Non-conclusive |
+| c95653c1      | 1        | Non-conclusive |
+| c97da97e1e    | 4        | Non-conclusive |
+| c9aa655       | 4        | Non-conclusive |
+| c9aca6a9      | 3        | Non-conclusive |
+| c9d6ade1      | 1        | Non-conclusive |
+| c9e35ed9      | 1        | Non-conclusive |
+| c9eb643f      | 4        | Non-conclusive |
+| c9ebed35      | 1        | Non-conclusive |
+| ca04294       | 2        | Non-conclusive |
+| ca194ddd      | 8        | Non-conclusive |
+| ca37eba8      | 4        | Non-conclusive |
+| ca381322      | 2        | Non-conclusive |
+| ca3bb35e      | 4        | Non-conclusive |
+| ca402ac5      | 4        | Non-conclusive |
+| ca4f70a       | 4        | Non-conclusive |
+| ca712e86      | 1        | Non-conclusive |
+| ca75f8fe      | 1        | Non-conclusive |
+| ca8a58e       | 4        | Non-conclusive |
+| ca9263bf      | 4        | Non-conclusive |
+| caa93b688e    | 33       | Non-conclusive |
+| caafefcb      | 4        | Non-conclusive |
+| cabf11cc      | 6        | Non-conclusive |
+| cac799a7      | 4        | Non-conclusive |
+| cad4a89f      | 4        | Non-conclusive |
+| cae36c1f      | 4        | Non-conclusive |
+| cb462cf8      | 8        | Non-conclusive |
+| cb51f2b       | 4        | Non-conclusive |
+| cb5bc29       | 4        | Non-conclusive |
+| cb5f498f      | 8        | Non-conclusive |
+| cb84108f      | 4        | Non-conclusive |
+| cb96deeb      | 4        | Non-conclusive |
+| cba6895b      | 4        | Non-conclusive |
+| cbbd410a      | 4        | Non-conclusive |
+| cbc87674      | 4        | Non-conclusive |
+| cbd53443      | 4        | Non-conclusive |
+| cbd863e8      | 1        | Non-conclusive |
+| cbde0e4       | 4        | Non-conclusive |
+| cbea2a3a      | 4        | Non-conclusive |
+| cbedb5d       | 4        | Non-conclusive |
+| cbffb360      | 4        | Non-conclusive |
+| cc0d07d5      | 1        | Non-conclusive |
+| cc172c15      | 1        | Non-conclusive |
+| cc173f7       | 1        | Non-conclusive |
+| cc1dc985      | 4        | Non-conclusive |
+| cc3c49a0      | 1        | Non-conclusive |
+| cc542c48      | 4        | Non-conclusive |
+| cc5e7d6d      | 4        | Non-conclusive |
+| cc6dbf62      | 4        | Non-conclusive |
+| cc6f837b      | 4        | Non-conclusive |
+| cc77f359      | 1        | Non-conclusive |
+| cc897bd44     | 30       | Non-conclusive |
+| cc98e5a8      | 4        | Non-conclusive |
+| cc9d913a      | 1        | Non-conclusive |
+| cca0caac      | 4        | Non-conclusive |
+| ccac307c      | 1        | Non-conclusive |
+| ccb185ea      | 4        | Non-conclusive |
+| ccbd444a      | 1        | Non-conclusive |
+| ccc07dfd      | 4        | Non-conclusive |
+| cccbad0a      | 4        | Non-conclusive |
+| ccd32d60e7    | 1        | Non-conclusive |
+| ccd5ad21      | 1        | Non-conclusive |
+| ccd79f04      | 4        | Non-conclusive |
+| ccdcc71f      | 4        | Non-conclusive |
+| cce6da1b      | 4        | Non-conclusive |
+| cd014c3c      | 4        | Non-conclusive |
+| cd06597c      | 4        | Non-conclusive |
+| cd093e88      | 4        | Non-conclusive |
+| cd1e3dc9      | 4        | Non-conclusive |
+| cd27bcc       | 1        | Non-conclusive |
+| cd3e483       | 4        | Non-conclusive |
+| cd495a21      | 4        | Non-conclusive |
+| cd4bc75f      | 4        | Non-conclusive |
+| cd5d13f       | 4        | Non-conclusive |
+| cd5e52b4      | 4        | Non-conclusive |
+| cd5f38ed      | 4        | Non-conclusive |
+| cd8d5a37      | 4        | Non-conclusive |
+| cd9a0788      | 4        | Non-conclusive |
+| cd9d3102      | 4        | Non-conclusive |
+| cd9e277b      | 8        | Non-conclusive |
+| cda3cc7c      | 3        | Non-conclusive |
+| cda72e5c      | 4        | Non-conclusive |
+| cdb37c2       | 5        | Non-conclusive |
+| cdb7aca4      | 4        | Non-conclusive |
+| cdbbd1cf      | 1        | Non-conclusive |
+| cdc54dcb      | 4        | Non-conclusive |
+| cdcf2ecd      | 4        | Non-conclusive |
+| cdddca6f      | 4        | Non-conclusive |
+| cdf58fca      | 4        | Non-conclusive |
+| ce012a18      | 1        | Non-conclusive |
+| ce0457b2      | 1        | Non-conclusive |
+| ce18fabd      | 4        | Non-conclusive |
+| ce215625      | 4        | Non-conclusive |
+| ce27e2c0      | 4        | Non-conclusive |
+| ce2b9cdc      | 1        | Non-conclusive |
+| ce32cc72      | 4        | Non-conclusive |
+| ce3378fa      | 1        | Non-conclusive |
+| ce38b6ba      | 4        | Non-conclusive |
+| ce3b1ff2      | 1        | Non-conclusive |
+| ce5441b       | 4        | Non-conclusive |
+| ce57a272      | 4        | Non-conclusive |
+| ce5a28ca      | 2        | Non-conclusive |
+| ce5b807       | 4        | Non-conclusive |
+| ce652861      | 4        | Non-conclusive |
+| ce71fec0      | 4        | Non-conclusive |
+| ce7c147d      | 4        | Non-conclusive |
+| ce7cd5cd      | 2        | Non-conclusive |
+| ce89b1ef09    | 4        | Non-conclusive |
+| ce8f7a09      | 4        | Non-conclusive |
+| ce9d23ea      | 4        | Non-conclusive |
+| ceb502c7      | 5        | Non-conclusive |
+| ceb9f540      | 4        | Non-conclusive |
+| cedabfc1      | 4        | Non-conclusive |
+| cedfbb8       | 4        | Non-conclusive |
+| cee5831c      | 4        | Non-conclusive |
+| ceece1f7      | 1        | Non-conclusive |
+| cf00b0e6      | 4        | Non-conclusive |
+| cf0a5e3ee7    | 1        | Non-conclusive |
+| cf0e474e      | 8        | Non-conclusive |
+| cf13ce08      | 4        | Non-conclusive |
+| cf1b4bb1      | 4        | Non-conclusive |
+| cf2efc2d      | 1        | Non-conclusive |
+| cf38617b      | 4        | Non-conclusive |
+| cf4601bc      | 1        | Non-conclusive |
+| cf46355f      | 4        | Non-conclusive |
+| cf6bea75      | 4        | Non-conclusive |
+| cf6bfcaa      | 4        | Non-conclusive |
+| cf7343b8      | 1        | Non-conclusive |
+| cf910cbc      | 8        | Non-conclusive |
+| cf967418      | 94       | Non-conclusive |
+| cfa7714e      | 4        | Non-conclusive |
+| cfabeeab      | 1        | Non-conclusive |
+| cfafa0df      | 4        | Non-conclusive |
+| cfb6a39d      | 4        | Non-conclusive |
+| cfbb9a9231    | 8        | Non-conclusive |
+| cfbe4de83c    | 2        | Non-conclusive |
+| cfd10e69      | 4        | Non-conclusive |
+| cfda7460      | 1        | Non-conclusive |
+| cfdbea99e0    | 4        | Non-conclusive |
+| cfe91b9f      | 4        | Non-conclusive |
+| cfe9b8e       | 4        | Non-conclusive |
+| cfec620a      | 4        | Non-conclusive |
+| cff673d5      | 8        | Non-conclusive |
+| cffd9822      | 4        | Non-conclusive |
+| d00ce38Cc     | 1        | Non-conclusive |
+| d03920bab3    | 6        | Non-conclusive |
+| d04fb27a      | 4        | Non-conclusive |
+| d069e423      | 4        | Non-conclusive |
+| d073c6c3      | 4        | Non-conclusive |
+| d081ac6a      | 1        | Non-conclusive |
+| d0821f7b      | 1        | Non-conclusive |
+| d08d5be1      | 6        | Non-conclusive |
+| d09e0696      | 1        | Non-conclusive |
+| d0a6bd2a      | 4        | Non-conclusive |
+| d0adeedb68    | 1        | Non-conclusive |
+| d0b98114b6    | 4        | Non-conclusive |
+| d0b9bf12      | 4        | Non-conclusive |
+| d0bd9744      | 4        | Non-conclusive |
+| d0be76d4fc    | 16       | Non-conclusive |
+| d0d57089      | 1        | Non-conclusive |
+| d0eb1cba      | 1        | Non-conclusive |
+| d0ec504221    | 4        | Non-conclusive |
+| d1076863      | 4        | Non-conclusive |
+| d12ab3a6      | 12       | Non-conclusive |
+| d13e7c0e      | 1        | Non-conclusive |
+| d1524188      | 13       | Non-conclusive |
+| d15cd987      | 4        | Non-conclusive |
+| d15f80d7cb    | 4        | Non-conclusive |
+| d16fb40f      | 4        | Non-conclusive |
+| d17daaa5      | 6        | Non-conclusive |
+| d18aa4bb      | 4        | Non-conclusive |
+| d19bbbb4      | 4        | Non-conclusive |
+| d1a01067      | 4        | Non-conclusive |
+| d1a4b0e4      | 4        | Non-conclusive |
+| d1b9245f      | 1        | Non-conclusive |
+| d1c1928cd1    | 5        | Non-conclusive |
+| d1d2bb03      | 4        | Non-conclusive |
+| d1d4fe1c47    | 14       | Non-conclusive |
+| d1e3d952      | 130      | Non-conclusive |
+| d1e3d953      | 4        | Non-conclusive |
+| d1e4b227      | 4        | Non-conclusive |
+| d1e67395      | 4        | Non-conclusive |
+| d1e8803       | 1        | Non-conclusive |
+| d1f3ccf0      | 1        | Non-conclusive |
+| d1f6bf3       | 4        | Non-conclusive |
+| d1f6cc08      | 4        | Non-conclusive |
+| d1f9e703      | 1        | Non-conclusive |
+| d20279cb      | 4        | Non-conclusive |
+| d20a3e09      | 4        | Non-conclusive |
+| d20fe1b4      | 4        | Non-conclusive |
+| d217654e      | 4        | Non-conclusive |
+| d22f8fe       | 4        | Non-conclusive |
+| d237ad77      | 4        | Non-conclusive |
+| d251dc01      | 8        | Non-conclusive |
+| d2588461      | 4        | Non-conclusive |
+| d2680d36      | 1        | Non-conclusive |
+| d26a4841      | 1        | Non-conclusive |
+| d26b491       | 4        | Non-conclusive |
+| d27264b7      | 4        | Non-conclusive |
+| d28b1c4d      | 1        | Non-conclusive |
+| d29656f5      | 8        | Non-conclusive |
+| d2997a40      | 1        | Non-conclusive |
+| d29e0f15      | 8        | Non-conclusive |
+| d2ae706d      | 4        | Non-conclusive |
+| d2b476c3      | 4        | Non-conclusive |
+| d2b8ebf5      | 4        | Non-conclusive |
+| d2be02e5      | 8        | Non-conclusive |
+| d2cf43e9      | 1        | Non-conclusive |
+| d2db7855c5    | 4        | Non-conclusive |
+| d2df03371b    | 2        | Non-conclusive |
+| d2f671f       | 4        | Non-conclusive |
+| d2ff9145      | 4        | Non-conclusive |
+| d300c912      | 4        | Non-conclusive |
+| d30dbd4c      | 4        | Non-conclusive |
+| d30fe99a      | 1        | Non-conclusive |
+| d3155fe1      | 4        | Non-conclusive |
+| d3194e73      | 4        | Non-conclusive |
+| d31cd3b133    | 58       | Non-conclusive |
+| d31efce8      | 8        | Non-conclusive |
+| d335adf       | 4        | Non-conclusive |
+| d3455b0       | 1        | Non-conclusive |
+| d3489064      | 4        | Non-conclusive |
+| d34b2f03      | 2        | Non-conclusive |
+| d3574346      | 4        | Non-conclusive |
+| d357d2471     | 4        | Non-conclusive |
+| d3637b89      | 20       | Non-conclusive |
+| d379442979    | 1        | Non-conclusive |
+| d38ca7ca      | 4        | Non-conclusive |
+| d3925976c1    | 4        | Non-conclusive |
+| d3a760e5      | 3        | Non-conclusive |
+| d3d315bb      | 1        | Non-conclusive |
+| d3d5d404      | 4        | Non-conclusive |
+| d3edb8bc      | 1        | Non-conclusive |
+| d3f67f1b      | 1        | Non-conclusive |
+| d41d8c4d62    | 1        | Non-conclusive |
+| d41d8cd9      | 1        | Non-conclusive |
+| d41d8cd98f    | 6        | Non-conclusive |
+| d41ecc20      | 1        | Non-conclusive |
+| d4201db       | 13       | Non-conclusive |
+| d4251d71      | 4        | Non-conclusive |
+| d42c1ce0      | 1        | Non-conclusive |
+| d42c858       | 1        | Non-conclusive |
+| d432e42228    | 30       | Non-conclusive |
+| d4461f62      | 4        | Non-conclusive |
+| d447f869      | 4        | Non-conclusive |
+| d451f9f0      | 4        | Non-conclusive |
+| d48e5e04      | 4        | Non-conclusive |
+| d49a1098      | 1        | Non-conclusive |
+| d49dde29      | 4        | Non-conclusive |
+| d4a2f509      | 4        | Non-conclusive |
+| d4b3a4469f    | 4        | Non-conclusive |
+| d4b7aec783    | 4        | Non-conclusive |
+| d4c49268      | 4        | Non-conclusive |
+| d4cc3783      | 4        | Non-conclusive |
+| d4d6507d      | 4        | Non-conclusive |
+| d4e377c       | 1        | Non-conclusive |
+| d4f64cc5      | 1        | Non-conclusive |
+| d4ff2abf      | 1        | Non-conclusive |
+| d506213a      | 4        | Non-conclusive |
+| d5121e7d      | 4        | Non-conclusive |
+| d51525152     | 5        | Non-conclusive |
+| d52F3aB       | 20       | Non-conclusive |
+| d531d65f      | 1        | Non-conclusive |
+| d5368088e6    | 8        | Non-conclusive |
+| d53f32f7      | 4        | Non-conclusive |
+| d548615       | 4        | Non-conclusive |
+| d54d35d8      | 5        | Non-conclusive |
+| d553beac      | 1        | Non-conclusive |
+| d579885       | 1        | Non-conclusive |
+| d5907c46      | 4        | Non-conclusive |
+| d5a1e226      | 5        | Non-conclusive |
+| d5b6253b      | 4        | Non-conclusive |
+| d5c086c5      | 4        | Non-conclusive |
+| d5c19cac      | 1        | Non-conclusive |
+| d5c5bafa      | 4        | Non-conclusive |
+| d5c87dcc      | 1        | Non-conclusive |
+| d5e1b10       | 4        | Non-conclusive |
+| d5e59dfc      | 1        | Non-conclusive |
+| d5fc527e      | 1        | Non-conclusive |
+| d6077c28      | 5        | Non-conclusive |
+| d6142e29      | 1        | Non-conclusive |
+| d61d70a8      | 26       | Non-conclusive |
+| d61dcd03      | 4        | Non-conclusive |
+| d631be3f      | 1        | Non-conclusive |
+| d63b77c6      | 4        | Non-conclusive |
+| d63f41f0      | 16       | Non-conclusive |
+| d65b5570      | 4        | Non-conclusive |
+| d66b5222      | 4        | Non-conclusive |
+| d678cbe6      | 4        | Non-conclusive |
+| d69eba49      | 4        | Non-conclusive |
+| d6b903902d    | 1        | Non-conclusive |
+| d6c6b41c      | 4        | Non-conclusive |
+| d6d80947      | 2        | Non-conclusive |
+| d6dcdb4d      | 4        | Non-conclusive |
+| d6f30913      | 1        | Non-conclusive |
+| d70c7006      | 4        | Non-conclusive |
+| d71b8306      | 4        | Non-conclusive |
+| d71e8a01      | 4        | Non-conclusive |
+| d73f3bef83    | 2        | Non-conclusive |
+| d75af72d      | 4        | Non-conclusive |
+| d75c0b85      | 4        | Non-conclusive |
+| d7627d78      | 4        | Non-conclusive |
+| d774d858      | 4        | Non-conclusive |
+| d7779f9       | 4        | Non-conclusive |
+| d77b82a       | 4        | Non-conclusive |
+| d7805230      | 1        | Non-conclusive |
+| d7807361      | 4        | Non-conclusive |
+| d781f535      | 1        | Non-conclusive |
+| d7891d82      | 4        | Non-conclusive |
+| d79076c1      | 4        | Non-conclusive |
+| d7934b9       | 4        | Non-conclusive |
+| d7a8c57       | 4        | Non-conclusive |
+| d7b415f6f7    | 1        | Non-conclusive |
+| d7b8a5b3      | 4        | Non-conclusive |
+| d7baca84      | 4        | Non-conclusive |
+| d7bce744      | 4        | Non-conclusive |
+| d7c052c6      | 4        | Non-conclusive |
+| d7df2c7bbe    | 8        | Non-conclusive |
+| d7e8ec01a6    | 4        | Non-conclusive |
+| d7e9dc45      | 8        | Non-conclusive |
+| d80abad4      | 4        | Non-conclusive |
+| d8140852      | 4        | Non-conclusive |
+| d81c75f2      | 4        | Non-conclusive |
+| d82cdb71      | 4        | Non-conclusive |
+| d84f3c928     | 120      | Non-conclusive |
+| d857c2d2      | 5        | Non-conclusive |
+| d85d3aec      | 4        | Non-conclusive |
+| d860beb5      | 4        | Non-conclusive |
+| d868f38b      | 12       | Non-conclusive |
+| d879ebec      | 1        | Non-conclusive |
+| d88368d8      | 4        | Non-conclusive |
+| d8856539      | 4        | Non-conclusive |
+| d8926d34      | 4        | Non-conclusive |
+| d89dc0c       | 4        | Non-conclusive |
+| d8a4960e      | 1        | Non-conclusive |
+| d8c1906e5e    | 4        | Non-conclusive |
+| d8cf7c50      | 4        | Non-conclusive |
+| d8d14a66      | 4        | Non-conclusive |
+| d8d1e8f1      | 4        | Non-conclusive |
+| d8dcc7b       | 4        | Non-conclusive |
+| d8dd05c7      | 4        | Non-conclusive |
+| d9088e57      | 4        | Non-conclusive |
+| d913e586      | 4        | Non-conclusive |
+| d917e98       | 4        | Non-conclusive |
+| d928b261      | 4        | Non-conclusive |
+| d9377099      | 2        | Non-conclusive |
+| d943a5e       | 4        | Non-conclusive |
+| d943ad29      | 4        | Non-conclusive |
+| d94d791e      | 4        | Non-conclusive |
+| d95ec413      | 4        | Non-conclusive |
+| d96d302       | 4        | Non-conclusive |
+| d96f86cb      | 4        | Non-conclusive |
+| d980cb87      | 1        | Non-conclusive |
+| d991c842      | 4        | Non-conclusive |
+| d9a134ae68    | 8        | Non-conclusive |
+| d9a9d4fe      | 1        | Non-conclusive |
+| d9d522b2      | 1        | Non-conclusive |
+| d9db2110      | 4        | Non-conclusive |
+| d9f00528      | 1        | Non-conclusive |
+| d9fcd855      | 4        | Non-conclusive |
+| da0498432     | 4        | Non-conclusive |
+| da071416a5    | 1        | Non-conclusive |
+| da1f82f2      | 10       | Non-conclusive |
+| da2f9f13      | 4        | Non-conclusive |
+| da354f4c      | 4        | Non-conclusive |
+| da44cbdf      | 4        | Non-conclusive |
+| da587a9f      | 1        | Non-conclusive |
+| da60631       | 1        | Non-conclusive |
+| da71962d      | 4        | Non-conclusive |
+| da748568      | 2        | Non-conclusive |
+| daa18efc      | 4        | Non-conclusive |
+| dab2e570      | 4        | Non-conclusive |
+| dabab4b794    | 1        | Non-conclusive |
+| dac45d64      | 4        | Non-conclusive |
+| dac7db86      | 8        | Non-conclusive |
+| dad14a50      | 4        | Non-conclusive |
+| dadb02ab      | 1        | Non-conclusive |
+| dadf1bf9      | 1        | Non-conclusive |
+| dadf917f      | 4        | Non-conclusive |
+| dae74110      | 4        | Non-conclusive |
+| dafdaaf       | 1        | Non-conclusive |
+| db05b000      | 4        | Non-conclusive |
+| db1870e9      | 4        | Non-conclusive |
+| db1f35c       | 4        | Non-conclusive |
+| db28fd29      | 4        | Non-conclusive |
+| db314f48      | 4        | Non-conclusive |
+| db34e6e1      | 4        | Non-conclusive |
+| db41101       | 4        | Non-conclusive |
+| db472d05      | 1        | Non-conclusive |
+| db4bf955      | 4        | Non-conclusive |
+| db4ca96       | 4        | Non-conclusive |
+| db501e89ad    | 23       | Non-conclusive |
+| db5035ac      | 4        | Non-conclusive |
+| db545a77      | 1        | Non-conclusive |
+| db5c7510      | 4        | Non-conclusive |
+| db6169b9      | 4        | Non-conclusive |
+| db6bf035      | 4        | Non-conclusive |
+| db780f7       | 8        | Non-conclusive |
+| db78791b      | 4        | Non-conclusive |
+| db8ecc6       | 4        | Non-conclusive |
+| db922cbba2    | 4        | Non-conclusive |
+| db981545      | 4        | Non-conclusive |
+| dba51925      | 4        | Non-conclusive |
+| dba6c8e4      | 4        | Non-conclusive |
+| dbad1600      | 4        | Non-conclusive |
+| dbc61871      | 4        | Non-conclusive |
+| dbd127a0      | 1        | Non-conclusive |
+| dbd71fca      | 2        | Non-conclusive |
+| dbe1c3b3      | 4        | Non-conclusive |
+| dbe34182      | 4        | Non-conclusive |
+| dbf714b0      | 4        | Non-conclusive |
+| dc008a11      | 4        | Non-conclusive |
+| dc05e15a      | 1        | Non-conclusive |
+| dc0dd7e7      | 4        | Non-conclusive |
+| dc13d70a      | 4        | Non-conclusive |
+| dc34e98924    | 4        | Non-conclusive |
+| dc368044      | 1        | Non-conclusive |
+| dc3ee081      | 4        | Non-conclusive |
+| dc4b10f       | 5        | Non-conclusive |
+| dc5e4c1c      | 4        | Non-conclusive |
+| dc649599      | 4        | Non-conclusive |
+| dc66f392      | 4        | Non-conclusive |
+| dc6d5cf5      | 4        | Non-conclusive |
+| dc9279f6      | 1        | Non-conclusive |
+| dc9687b6      | 1        | Non-conclusive |
+| dc98c43726    | 10       | Non-conclusive |
+| dc99eea7      | 4        | Non-conclusive |
+| dca1aeb2      | 4        | Non-conclusive |
+| dcbf0e3207    | 1        | Non-conclusive |
+| dcc634c4f0    | 5        | Non-conclusive |
+| dcf3b7ae      | 1        | Non-conclusive |
+| dcf667b6      | 4        | Non-conclusive |
+| dd053962      | 1        | Non-conclusive |
+| dd065e1e      | 4        | Non-conclusive |
+| dd107565      | 1        | Non-conclusive |
+| dd158c0bdd    | 4        | Non-conclusive |
+| dd3eed7672    | 4        | Non-conclusive |
+| dd4fa04e      | 2        | Non-conclusive |
+| dd5ec1ad      | 4        | Non-conclusive |
+| dd789af2      | 4        | Non-conclusive |
+| dd7e331f      | 4        | Non-conclusive |
+| dd910356      | 4        | Non-conclusive |
+| dd9c67ba      | 4        | Non-conclusive |
+| ddae03b5      | 4        | Non-conclusive |
+| ddb6ccb4      | 4        | Non-conclusive |
+| ddbac89c      | 1        | Non-conclusive |
+| ddbf96b       | 4        | Non-conclusive |
+| ddd89895      | 8        | Non-conclusive |
+| dddd1b3f      | 1        | Non-conclusive |
+| ddecda89      | 4        | Non-conclusive |
+| dded284       | 4        | Non-conclusive |
+| ddfe1630      | 4        | Non-conclusive |
+| de07c4a5      | 4        | Non-conclusive |
+| de1021d0e4    | 4        | Non-conclusive |
+| de1bbe72      | 1        | Non-conclusive |
+| de2154df      | 4        | Non-conclusive |
+| de2af3fe      | 4        | Non-conclusive |
+| de31b711      | 1        | Non-conclusive |
+| de34ea7       | 2        | Non-conclusive |
+| de44f1d       | 4        | Non-conclusive |
+| de598d3d      | 2        | Non-conclusive |
+| de5e08f8      | 13545    | Non-conclusive |
+| de5fb22dd0    | 1        | Non-conclusive |
+| de6b0a94      | 4        | Non-conclusive |
+| de6ca374      | 4        | Non-conclusive |
+| de6d9562      | 1        | Non-conclusive |
+| de7b99a3      | 4        | Non-conclusive |
+| de7e336       | 4        | Non-conclusive |
+| de8f0410      | 1        | Non-conclusive |
+| deabb495      | 1        | Non-conclusive |
+| deb31014      | 4        | Non-conclusive |
+| deca2d2       | 4        | Non-conclusive |
+| deda0b89      | 4        | Non-conclusive |
+| deed340c      | 4        | Non-conclusive |
+| def129f       | 1        | Non-conclusive |
+| def4fba       | 4        | Non-conclusive |
+| def714de      | 8        | Non-conclusive |
+| defe4832      | 5        | Non-conclusive |
+| df0353a48b    | 4        | Non-conclusive |
+| df07e913      | 1        | Non-conclusive |
+| df102f62      | 4        | Non-conclusive |
+| df2059c       | 5        | Non-conclusive |
+| df27d318      | 1        | Non-conclusive |
+| df2d782b      | 4        | Non-conclusive |
+| df407465c9    | 4        | Non-conclusive |
+| df4ca27d      | 4        | Non-conclusive |
+| df4f346b      | 2        | Non-conclusive |
+| df538e9b      | 1        | Non-conclusive |
+| df5dab96      | 4        | Non-conclusive |
+| df64be42      | 5        | Non-conclusive |
+| df6dd0c8      | 1        | Non-conclusive |
+| df7981c3      | 1        | Non-conclusive |
+| df85241c      | 21       | Non-conclusive |
+| df88c045      | 1        | Non-conclusive |
+| df8d35fb      | 4        | Non-conclusive |
+| dfb953a1      | 4        | Non-conclusive |
+| dfb9543e      | 4        | Non-conclusive |
+| dfc29e23      | 4        | Non-conclusive |
+| dfc5377919    | 4        | Non-conclusive |
+| dfc8e137      | 2        | Non-conclusive |
+| dfd77637      | 1        | Non-conclusive |
+| dfd84ae0      | 4        | Non-conclusive |
+| dfdc4652      | 1        | Non-conclusive |
+| dfdf284b      | 4        | Non-conclusive |
+| dfe07bd       | 1        | Non-conclusive |
+| dfe69d3c      | 4        | Non-conclusive |
+| dff0a48b      | 4        | Non-conclusive |
+| e010522       | 4        | Non-conclusive |
+| e01f0986      | 4        | Non-conclusive |
+| e020922       | 4        | Non-conclusive |
+| e021fdc1      | 3        | Non-conclusive |
+| e0220208      | 4        | Non-conclusive |
+| e02a14457b    | 4        | Non-conclusive |
+| e072df6cf2    | 4        | Non-conclusive |
+| e07f7201      | 4        | Non-conclusive |
+| e08e3401      | 4        | Non-conclusive |
+| e094b2b8      | 4        | Non-conclusive |
+| e0bc1e4e      | 8        | Non-conclusive |
+| e0d08cc3      | 2        | Non-conclusive |
+| e0d71a1       | 4        | Non-conclusive |
+| e0f481b7      | 4        | Non-conclusive |
+| e0f57f91      | 4        | Non-conclusive |
+| e10b5bde      | 4        | Non-conclusive |
+| e10e74a6      | 4        | Non-conclusive |
+| e115b4dc      | 4        | Non-conclusive |
+| e11f095e      | 1        | Non-conclusive |
+| e12acf54      | 4        | Non-conclusive |
+| e12c6c13      | 4        | Non-conclusive |
+| e133078       | 4        | Non-conclusive |
+| e147a7cb3d    | 1        | Non-conclusive |
+| e15e3faa      | 8        | Non-conclusive |
+| e16022021     | 2        | Non-conclusive |
+| e167d20b      | 8        | Non-conclusive |
+| e16f99fe      | 4        | Non-conclusive |
+| e178983       | 4        | Non-conclusive |
+| e18beaf1      | 4        | Non-conclusive |
+| e19bd4f6      | 4        | Non-conclusive |
+| e1a4e982      | 4        | Non-conclusive |
+| e1afa939      | 9        | Non-conclusive |
+| e1bcb7f3      | 4        | Non-conclusive |
+| e1c7f23e      | 6        | Non-conclusive |
+| e1d98d4768    | 1        | Non-conclusive |
+| e1e31f16      | 4        | Non-conclusive |
+| e1ff7aba      | 8        | Non-conclusive |
+| e20151215     | 4        | Non-conclusive |
+| e20210804     | 1        | Non-conclusive |
+| e221d4a9      | 2        | Non-conclusive |
+| e22d8907      | 4        | Non-conclusive |
+| e2413d65      | 4        | Non-conclusive |
+| e24f4bca      | 8        | Non-conclusive |
+| e252fe49      | 4        | Non-conclusive |
+| e2709618      | 4        | Non-conclusive |
+| e285826b      | 4        | Non-conclusive |
+| e28ca8c0      | 4        | Non-conclusive |
+| e290818       | 1        | Non-conclusive |
+| e29161f8      | 4        | Non-conclusive |
+| e293afc       | 8        | Non-conclusive |
+| e298c47c00    | 18       | Non-conclusive |
+| e2bf3357c     | 5        | Non-conclusive |
+| e2c628dd      | 1        | Non-conclusive |
+| e2c8cc4c      | 12       | Non-conclusive |
+| e2d9b2a5      | 1        | Non-conclusive |
+| e2e430ab      | 1        | Non-conclusive |
+| e2ec1978      | 8        | Non-conclusive |
+| e3115f59      | 2        | Non-conclusive |
+| e3123894      | 8        | Non-conclusive |
+| e326d649      | 4        | Non-conclusive |
+| e331e0b3      | 4        | Non-conclusive |
+| e33641b302    | 4        | Non-conclusive |
+| e33ce2ea      | 4        | Non-conclusive |
+| e354f21d      | 142      | Non-conclusive |
+| e36be65a      | 1        | Non-conclusive |
+| e36fc4fd      | 1        | Non-conclusive |
+| e37b89c0      | 4        | Non-conclusive |
+| e37c51b0      | 2        | Non-conclusive |
+| e37faa4       | 2        | Non-conclusive |
+| e3a99286      | 4        | Non-conclusive |
+| e3b8385d      | 12       | Non-conclusive |
+| e3b8485c      | 4        | Non-conclusive |
+| e3ba116       | 1        | Non-conclusive |
+| e3bf89e0      | 4        | Non-conclusive |
+| e3cb09d2      | 4        | Non-conclusive |
+| e3f8a54f      | 1        | Non-conclusive |
+| e408ee7e      | 4        | Non-conclusive |
+| e40a35e0      | 1        | Non-conclusive |
+| e4111935      | 4        | Non-conclusive |
+| e4126669      | 1        | Non-conclusive |
+| e419b021      | 1        | Non-conclusive |
+| e4286a10      | 4        | Non-conclusive |
+| e42a3c01      | 4        | Non-conclusive |
+| e42ccb97      | 1        | Non-conclusive |
+| e43a925f      | 1        | Non-conclusive |
+| e4437d11      | 4        | Non-conclusive |
+| e44f73dd      | 4        | Non-conclusive |
+| e4503ef8      | 4        | Non-conclusive |
+| e4566c3       | 12       | Non-conclusive |
+| e45bf105      | 1        | Non-conclusive |
+| e485e485      | 1        | Non-conclusive |
+| e495f4c6      | 1        | Non-conclusive |
+| e49af445      | 4        | Non-conclusive |
+| e49e1ab       | 4        | Non-conclusive |
+| e4a5d1b       | 4        | Non-conclusive |
+| e4cf5020      | 4        | Non-conclusive |
+| e4dc26c8      | 1        | Non-conclusive |
+| e4f23ba855    | 1        | Non-conclusive |
+| e50bcda1d5    | 1        | Non-conclusive |
+| e51259d6      | 6        | Non-conclusive |
+| e51864e6      | 16       | Non-conclusive |
+| e52ad61       | 4        | Non-conclusive |
+| e52c11a9      | 8        | Non-conclusive |
+| e5328754      | 4        | Non-conclusive |
+| e5578d41      | 4        | Non-conclusive |
+| e5644d47      | 4        | Non-conclusive |
+| e5653063      | 1        | Non-conclusive |
+| e56e85a3      | 4        | Non-conclusive |
+| e57186d5      | 4        | Non-conclusive |
+| e57e9fba      | 1        | Non-conclusive |
+| e58ca872      | 4        | Non-conclusive |
+| e590fef9      | 4        | Non-conclusive |
+| e598e922      | 8        | Non-conclusive |
+| e5a94587      | 4        | Non-conclusive |
+| e5b16cf0      | 4        | Non-conclusive |
+| e5bb2e06      | 1        | Non-conclusive |
+| e5ce3f56      | 4        | Non-conclusive |
+| e5d18c87      | 4        | Non-conclusive |
+| e5d89e54      | 5        | Non-conclusive |
+| e5e112ea      | 4        | Non-conclusive |
+| e5e8f3c0      | 4        | Non-conclusive |
+| e5f4b08f      | 4        | Non-conclusive |
+| e5f858a5      | 4        | Non-conclusive |
+| e623a784      | 1        | Non-conclusive |
+| e6433049      | 1        | Non-conclusive |
+| e6462bd       | 4        | Non-conclusive |
+| e647cc8e      | 4        | Non-conclusive |
+| e659b91c      | 1        | Non-conclusive |
+| e662fa9e      | 4        | Non-conclusive |
+| e664a5a0      | 1        | Non-conclusive |
+| e676288e      | 4        | Non-conclusive |
+| e6781890      | 1        | Non-conclusive |
+| e69fdca2      | 4        | Non-conclusive |
+| e6b8fbb       | 4        | Non-conclusive |
+| e6bdc566      | 4        | Non-conclusive |
+| e6ca169f      | 2        | Non-conclusive |
+| e6de9a54      | 4        | Non-conclusive |
+| e6dfb51b      | 1        | Non-conclusive |
+| e6e35456      | 1        | Non-conclusive |
+| e6e58ad7      | 4        | Non-conclusive |
+| e6f56c2d      | 2        | Non-conclusive |
+| e6fbd8c0      | 1        | Non-conclusive |
+| e6ff7ac2      | 4        | Non-conclusive |
+| e7036db2      | 4        | Non-conclusive |
+| e70c74a7      | 4        | Non-conclusive |
+| e712fe98      | 5        | Non-conclusive |
+| e71698a7      | 4        | Non-conclusive |
+| e7282b1f      | 1        | Non-conclusive |
+| e72c4deb      | 1        | Non-conclusive |
+| e72e9b5614    | 8        | Non-conclusive |
+| e731dc4c      | 4        | Non-conclusive |
+| e7500c51      | 4        | Non-conclusive |
+| e750b928      | 4        | Non-conclusive |
+| e750f50a      | 1        | Non-conclusive |
+| e75d59d5      | 4        | Non-conclusive |
+| e75f0cd0      | 4        | Non-conclusive |
+| e76082ea      | 4        | Non-conclusive |
+| e7691b20      | 1        | Non-conclusive |
+| e78b88cf      | 4        | Non-conclusive |
+| e7920afc      | 1        | Non-conclusive |
+| e799cd0c      | 4        | Non-conclusive |
+| e7d55cfe      | 5        | Non-conclusive |
+| e7d6d226      | 4        | Non-conclusive |
+| e7dfcae3a0    | 1        | Non-conclusive |
+| e7e80682      | 4        | Non-conclusive |
+| e7eabdaa      | 1        | Non-conclusive |
+| e7f0e7f0      | 5        | Non-conclusive |
+| e7fcca71      | 8        | Non-conclusive |
+| e80b0d32      | 4        | Non-conclusive |
+| e80e59780f    | 1        | Non-conclusive |
+| e84cc3b0      | 4        | Non-conclusive |
+| e85a995f      | 4        | Non-conclusive |
+| e860ed6c      | 8        | Non-conclusive |
+| e86cbc69      | 1        | Non-conclusive |
+| e870e870      | 1        | Non-conclusive |
+| e8841049      | 6        | Non-conclusive |
+| e884c864      | 4        | Non-conclusive |
+| e886c893      | 4        | Non-conclusive |
+| e8893dd7      | 1        | Non-conclusive |
+| e88b4b4       | 2        | Non-conclusive |
+| e8974f31      | 12       | Non-conclusive |
+| e89ca4da      | 4        | Non-conclusive |
+| e89cc1b7      | 4        | Non-conclusive |
+| e89cf6b4      | 1        | Non-conclusive |
+| e89d34ab      | 4        | Non-conclusive |
+| e8a7fa0       | 4        | Non-conclusive |
+| e8aeada98b    | 1        | Non-conclusive |
+| e8cb60da      | 1        | Non-conclusive |
+| e8db2364      | 1        | Non-conclusive |
+| e8e28ecdb0    | 4        | Non-conclusive |
+| e8f4386       | 3        | Non-conclusive |
+| e9133475      | 4        | Non-conclusive |
+| e92301c5      | 1        | Non-conclusive |
+| e923b67c      | 4        | Non-conclusive |
+| e92bff2       | 4        | Non-conclusive |
+| e92d2acf      | 4        | Non-conclusive |
+| e93e21a8      | 16       | Non-conclusive |
+| e941e8c5      | 8        | Non-conclusive |
+| e942c56       | 1        | Non-conclusive |
+| e948fcae      | 1        | Non-conclusive |
+| e9492ff       | 4        | Non-conclusive |
+| e94e80f1      | 2        | Non-conclusive |
+| e9582212      | 4        | Non-conclusive |
+| e9587bcc      | 2        | Non-conclusive |
+| e969e0d2      | 4        | Non-conclusive |
+| e96c6857      | 4        | Non-conclusive |
+| e9754dc6      | 1        | Non-conclusive |
+| e98920f1      | 4        | Non-conclusive |
+| e9961b71      | 4        | Non-conclusive |
+| e99c54b2      | 4        | Non-conclusive |
+| e9a51b28      | 4        | Non-conclusive |
+| e9aba4c8      | 1        | Non-conclusive |
+| e9be93964a    | 4        | Non-conclusive |
+| e9d1bc04      | 4        | Non-conclusive |
+| e9d33dbe      | 4        | Non-conclusive |
+| e9e15816      | 1        | Non-conclusive |
+| e9f452e6      | 4        | Non-conclusive |
+| ea0573a52     | 14       | Non-conclusive |
+| ea0971b9      | 4        | Non-conclusive |
+| ea0c6969be    | 4        | Non-conclusive |
+| ea2dfbf1      | 4        | Non-conclusive |
+| ea2fc2bc      | 1        | Non-conclusive |
+| ea2fd4d2      | 4        | Non-conclusive |
+| ea48de06      | 1        | Non-conclusive |
+| ea4aa64f2a    | 1        | Non-conclusive |
+| ea4b340f      | 1        | Non-conclusive |
+| ea565231      | 4        | Non-conclusive |
+| ea5999a1      | 4        | Non-conclusive |
+| ea5cfb4d53    | 1        | Non-conclusive |
+| ea68ffc4      | 4        | Non-conclusive |
+| ea900a0a      | 4        | Non-conclusive |
+| ea9fb414      | 4        | Non-conclusive |
+| eaa55a57      | 4        | Non-conclusive |
+| eab37f9       | 4        | Non-conclusive |
+| eab8fc36      | 1        | Non-conclusive |
+| eaba96ec      | 4        | Non-conclusive |
+| eabac6357a    | 5        | Non-conclusive |
+| eabd03c3      | 1        | Non-conclusive |
+| eac01ac2      | 4        | Non-conclusive |
+| ead1b32a      | 4        | Non-conclusive |
+| ead68b3       | 4        | Non-conclusive |
+| eadc9b39      | 4        | Non-conclusive |
+| eade84a3      | 4        | Non-conclusive |
+| eae86db1ff    | 4        | Non-conclusive |
+| eaf2cfec      | 4        | Non-conclusive |
+| eaf6036e      | 2        | Non-conclusive |
+| eaf9e69b      | 1        | Non-conclusive |
+| eafc2ce8      | 4        | Non-conclusive |
+| eafde9d9      | 4        | Non-conclusive |
+| eb0bf4d7      | 1        | Non-conclusive |
+| eb25f22d      | 2        | Non-conclusive |
+| eb350be6      | 4        | Non-conclusive |
+| eb3b4ab6      | 4        | Non-conclusive |
+| eb3fd0c       | 2        | Non-conclusive |
+| eb474e62      | 4        | Non-conclusive |
+| eb543201      | 4        | Non-conclusive |
+| eb5e1b38      | 1        | Non-conclusive |
+| eb5ee462      | 9        | Non-conclusive |
+| ebbaa88f      | 4        | Non-conclusive |
+| ebbfd9dc      | 4        | Non-conclusive |
+| ebc0a19       | 4        | Non-conclusive |
+| ebc5099       | 74       | Non-conclusive |
+| ebd581c8      | 4        | Non-conclusive |
+| ec0e91027     | 1        | Non-conclusive |
+| ec249c12      | 4        | Non-conclusive |
+| ec2d27ea      | 185      | Non-conclusive |
+| ec32a756      | 4        | Non-conclusive |
+| ec3bb52       | 4        | Non-conclusive |
+| ec3bb52a00    | 9        | Non-conclusive |
+| ec43a5f0      | 4        | Non-conclusive |
+| ec5720bb      | 1        | Non-conclusive |
+| ec676e3f      | 4        | Non-conclusive |
+| ec6d97e3      | 4        | Non-conclusive |
+| ec6e9510      | 4        | Non-conclusive |
+| ec704a04      | 4        | Non-conclusive |
+| ec729d193b    | 1        | Non-conclusive |
+| ec83e374      | 4        | Non-conclusive |
+| ec92e86986    | 4        | Non-conclusive |
+| ec984f22      | 4        | Non-conclusive |
+| eca8430e      | 1        | Non-conclusive |
+| eca93a7       | 2        | Non-conclusive |
+| ecaab3a6      | 2        | Non-conclusive |
+| ecc7a952      | 1        | Non-conclusive |
+| eccd819       | 4        | Non-conclusive |
+| ecd51029      | 4        | Non-conclusive |
+| ece892c0      | 1        | Non-conclusive |
+| ecec4c9d      | 4        | Non-conclusive |
+| ecf1455a      | 4        | Non-conclusive |
+| ed010117      | 13       | Non-conclusive |
+| ed14e5132b    | 4        | Non-conclusive |
+| ed3a7bb3      | 16       | Non-conclusive |
+| ed585add      | 4        | Non-conclusive |
+| ed69cf59ee    | 1        | Non-conclusive |
+| ed6d004a      | 4        | Non-conclusive |
+| ed77c661ed    | 4        | Non-conclusive |
+| ed7a5c47      | 4        | Non-conclusive |
+| ed80ccfd      | 4        | Non-conclusive |
+| ed84c282      | 1        | Non-conclusive |
+| ed865b761     | 1108     | Non-conclusive |
+| ed88e295      | 4        | Non-conclusive |
+| eda4e537      | 4        | Non-conclusive |
+| eda5dae0      | 1        | Non-conclusive |
+| edad6e02      | 4        | Non-conclusive |
+| edb454bc      | 4        | Non-conclusive |
+| edd344f       | 4        | Non-conclusive |
+| edea30d6      | 4        | Non-conclusive |
+| edf951ef      | 4        | Non-conclusive |
+| ee0364c1      | 1        | Non-conclusive |
+| ee097721      | 4        | Non-conclusive |
+| ee0acdbf      | 4        | Non-conclusive |
+| ee11376e      | 12       | Non-conclusive |
+| ee12002f      | 4        | Non-conclusive |
+| ee28efa1      | 4        | Non-conclusive |
+| ee366c893e    | 4        | Non-conclusive |
+| ee3b607a      | 1        | Non-conclusive |
+| ee502d6d      | 4        | Non-conclusive |
+| ee6c1e60      | 1        | Non-conclusive |
+| ee8be9c9      | 1        | Non-conclusive |
+| ee92690a3e    | 4        | Non-conclusive |
+| ee929a2f      | 4        | Non-conclusive |
+| ee948ba9      | 4        | Non-conclusive |
+| ee961aca      | 4        | Non-conclusive |
+| ee97f71       | 4        | Non-conclusive |
+| ee9db73       | 4        | Non-conclusive |
+| eea62237      | 4        | Non-conclusive |
+| eea7297c7b    | 4        | Non-conclusive |
+| eeb212c7      | 8        | Non-conclusive |
+| eebf865b      | 4        | Non-conclusive |
+| eec034ea      | 4        | Non-conclusive |
+| eed66f57      | 1        | Non-conclusive |
+| eedd3f4       | 2        | Non-conclusive |
+| eedec4ef      | 4        | Non-conclusive |
+| eee7cece      | 4        | Non-conclusive |
+| eef44f39      | 4        | Non-conclusive |
+| eefe1715      | 4        | Non-conclusive |
+| ef09ae1b      | 4        | Non-conclusive |
+| ef0c9151      | 4        | Non-conclusive |
+| ef1a738e      | 8        | Non-conclusive |
+| ef216ce9      | 4        | Non-conclusive |
+| ef2cb52a      | 4        | Non-conclusive |
+| ef35b7965d    | 4        | Non-conclusive |
+| ef463d2d      | 4        | Non-conclusive |
+| ef4c8683      | 1        | Non-conclusive |
+| ef4dba6c      | 4        | Non-conclusive |
+| ef575053      | 4        | Non-conclusive |
+| ef7804b7ce    | 28       | Non-conclusive |
+| ef7f52b4      | 4        | Non-conclusive |
+| ef80e66f93    | 4        | Non-conclusive |
+| ef8d05a0      | 4        | Non-conclusive |
+| ef9582fc      | 4        | Non-conclusive |
+| efa6422f      | 4        | Non-conclusive |
+| efb61b64      | 4        | Non-conclusive |
+| efbda71d75    | 1        | Non-conclusive |
+| efda86c5      | 4        | Non-conclusive |
+| efeb11ec      | 1        | Non-conclusive |
+| f0043286      | 4        | Non-conclusive |
+| f0093bbc      | 4        | Non-conclusive |
+| f0144fdf      | 4        | Non-conclusive |
+| f0199cf1      | 5        | Non-conclusive |
+| f02286eb2b    | 4        | Non-conclusive |
+| f038b6ee      | 24       | Non-conclusive |
+| f0406973      | 4        | Non-conclusive |
+| f04900c5      | 4        | Non-conclusive |
+| f04a2994      | 4        | Non-conclusive |
+| f05b3c56      | 1        | Non-conclusive |
+| f074db0b      | 8        | Non-conclusive |
+| f0798f7b      | 4        | Non-conclusive |
+| f07dbdfa      | 8        | Non-conclusive |
+| f0978aeb      | 4        | Non-conclusive |
+| f09e8163      | 1        | Non-conclusive |
+| f0ae9958      | 4        | Non-conclusive |
+| f0bfa294      | 4        | Non-conclusive |
+| f0c5b76f      | 4        | Non-conclusive |
+| f0d1ef3       | 2        | Non-conclusive |
+| f0d85881      | 4        | Non-conclusive |
+| f0dacd86      | 1        | Non-conclusive |
+| f0dc1df5      | 2        | Non-conclusive |
+| f0dd280a      | 8        | Non-conclusive |
+| f0ffb848      | 4        | Non-conclusive |
+| f10742f8      | 1        | Non-conclusive |
+| f1084436      | 8        | Non-conclusive |
+| f1088e4       | 4        | Non-conclusive |
+| f10b3cc0      | 4        | Non-conclusive |
+| f1202a06      | 4        | Non-conclusive |
+| f12807fc      | 4        | Non-conclusive |
+| f1303a8a      | 37       | Non-conclusive |
+| f155191a      | 1        | Non-conclusive |
+| f15a38b0      | 4        | Non-conclusive |
+| f170997f      | 4        | Non-conclusive |
+| f1763870      | 4        | Non-conclusive |
+| f179c6d795    | 1        | Non-conclusive |
+| f180d6e3      | 1        | Non-conclusive |
+| f18c8137      | 1        | Non-conclusive |
+| f18ea1d6b6    | 18       | Non-conclusive |
+| f194c0aa      | 4        | Non-conclusive |
+| f1c856ae      | 4        | Non-conclusive |
+| f1c99aa3      | 4        | Non-conclusive |
+| f1cf8bb       | 4        | Non-conclusive |
+| f1d48809      | 1        | Non-conclusive |
+| f1dd04ab      | 4        | Non-conclusive |
+| f1ed02c3be    | 4        | Non-conclusive |
+| f20902bdff    | 4        | Non-conclusive |
+| f20eaed7      | 4        | Non-conclusive |
+| f214e417      | 4        | Non-conclusive |
+| f21ec5a       | 4        | Non-conclusive |
+| f220fce4      | 4        | Non-conclusive |
+| f226b757      | 8        | Non-conclusive |
+| f2282d30      | 2        | Non-conclusive |
+| f240274f      | 8        | Non-conclusive |
+| f25c047       | 4        | Non-conclusive |
+| f2857941      | 1        | Non-conclusive |
+| f28a9a35      | 1        | Non-conclusive |
+| f2b185fe      | 4        | Non-conclusive |
+| f2c15574      | 1        | Non-conclusive |
+| f2d46b9666    | 4        | Non-conclusive |
+| f2e893bd      | 2        | Non-conclusive |
+| f2f14dc4      | 4        | Non-conclusive |
+| f3018352      | 4        | Non-conclusive |
+| f306fca4      | 2        | Non-conclusive |
+| f32382b6      | 4        | Non-conclusive |
+| f33fdbe6      | 4        | Non-conclusive |
+| f340b105      | 1        | Non-conclusive |
+| f348e78ca     | 16       | Non-conclusive |
+| f36a6f88      | 4        | Non-conclusive |
+| f3749da9      | 4        | Non-conclusive |
+| f37ae46d      | 4        | Non-conclusive |
+| f380a700      | 4        | Non-conclusive |
+| f38195e2      | 4        | Non-conclusive |
+| f3823f09      | 4        | Non-conclusive |
+| f395ed80      | 4        | Non-conclusive |
+| f3aa440d84    | 4        | Non-conclusive |
+| f3bc3fb1      | 1        | Non-conclusive |
+| f3bd2e0c      | 1        | Non-conclusive |
+| f3c682d5      | 2        | Non-conclusive |
+| f3c6a0a5      | 5        | Non-conclusive |
+| f3ca696f      | 5        | Non-conclusive |
+| f3cfc523      | 11932    | Non-conclusive |
+| f3dc2680      | 8        | Non-conclusive |
+| f3e620ad      | 4        | Non-conclusive |
+| f3e71d57      | 4        | Non-conclusive |
+| f3e8ce16      | 4        | Non-conclusive |
+| f4024356      | 4        | Non-conclusive |
+| f40ba352      | 4        | Non-conclusive |
+| f4665f66      | 4        | Non-conclusive |
+| f4738e931e    | 28       | Non-conclusive |
+| f47c2fa8      | 5        | Non-conclusive |
+| f482dc43      | 8        | Non-conclusive |
+| f497e732a9    | 2        | Non-conclusive |
+| f4a095fa      | 8        | Non-conclusive |
+| f4aa908       | 4        | Non-conclusive |
+| f4b97176      | 4        | Non-conclusive |
+| f4bdee42      | 4        | Non-conclusive |
+| f4c298d       | 4        | Non-conclusive |
+| f4d41287      | 4        | Non-conclusive |
+| f4d83e52      | 4        | Non-conclusive |
+| f4d92fc3      | 4        | Non-conclusive |
+| f4e242f9      | 4        | Non-conclusive |
+| f51946f2      | 1        | Non-conclusive |
+| f5244b1f80    | 1        | Non-conclusive |
+| f525bc52      | 4        | Non-conclusive |
+| f5278ef6      | 4        | Non-conclusive |
+| f5422c3e      | 4        | Non-conclusive |
+| f550ef78      | 15       | Non-conclusive |
+| f5525ce       | 14       | Non-conclusive |
+| f55f7e9c      | 4        | Non-conclusive |
+| f569b28b      | 4        | Non-conclusive |
+| f56e485c      | 1        | Non-conclusive |
+| f5736c8a      | 12       | Non-conclusive |
+| f580fe04      | 4        | Non-conclusive |
+| f5899fea0b    | 43       | Non-conclusive |
+| f59785fc      | 1        | Non-conclusive |
+| f59dbea3      | 4        | Non-conclusive |
+| f5a7be7f      | 5        | Non-conclusive |
+| f5ccd8cf      | 4        | Non-conclusive |
+| f5cfbc52      | 4        | Non-conclusive |
+| f5d7717       | 8        | Non-conclusive |
+| f5d951cc      | 4        | Non-conclusive |
+| f5e60e23      | 1        | Non-conclusive |
+| f6124296      | 4        | Non-conclusive |
+| f6171c77      | 162515   | Non-conclusive |
+| f61a5235      | 4        | Non-conclusive |
+| f6351504      | 4        | Non-conclusive |
+| f63cecfa      | 1        | Non-conclusive |
+| f63f69f2      | 4        | Non-conclusive |
+| f6413c85      | 751      | Non-conclusive |
+| f64163d9      | 4        | Non-conclusive |
+| f654a4e5      | 4        | Non-conclusive |
+| f65d310e      | 4        | Non-conclusive |
+| f663a51c      | 4        | Non-conclusive |
+| f663b120      | 8        | Non-conclusive |
+| f675e354      | 4        | Non-conclusive |
+| f69ee707      | 4        | Non-conclusive |
+| f6a6add416    | 8        | Non-conclusive |
+| f6b12cb6      | 4        | Non-conclusive |
+| f6b4d5b2      | 1        | Non-conclusive |
+| f6b5f2aab1    | 1        | Non-conclusive |
+| f6bc7f26      | 9        | Non-conclusive |
+| f6bcd6b5      | 4        | Non-conclusive |
+| f6c149f       | 4        | Non-conclusive |
+| f6d9c45d      | 4        | Non-conclusive |
+| f6e5150a1e    | 1        | Non-conclusive |
+| f6e63d77      | 4        | Non-conclusive |
+| f6ed07d225    | 1        | Non-conclusive |
+| f6f75b3a      | 1        | Non-conclusive |
+| f7002176      | 1        | Non-conclusive |
+| f700f700      | 3        | Non-conclusive |
+| f701360d      | 1        | Non-conclusive |
+| f71dc895      | 4        | Non-conclusive |
+| f72f407e      | 2        | Non-conclusive |
+| f734b0c6      | 1        | Non-conclusive |
+| f745fa08      | 4        | Non-conclusive |
+| f7471c5e      | 4        | Non-conclusive |
+| f74ccfd1      | 1        | Non-conclusive |
+| f7505a1522    | 4        | Non-conclusive |
+| f7536796      | 4        | Non-conclusive |
+| f758504f      | 8        | Non-conclusive |
+| f75af4bf      | 4        | Non-conclusive |
+| f764a758      | 2        | Non-conclusive |
+| f7772128      | 4        | Non-conclusive |
+| f78a83f4      | 4        | Non-conclusive |
+| f79402c4      | 4        | Non-conclusive |
+| f797e619      | 1        | Non-conclusive |
+| f79de59       | 2        | Non-conclusive |
+| f79ec5de      | 4        | Non-conclusive |
+| f7a44e21      | 4        | Non-conclusive |
+| f7aa0727      | 4        | Non-conclusive |
+| f7b98de987    | 1        | Non-conclusive |
+| f7cdfb5       | 2        | Non-conclusive |
+| f7ce85f2      | 4        | Non-conclusive |
+| f7d1871a      | 4        | Non-conclusive |
+| f7d517dc74    | 4        | Non-conclusive |
+| f7dae802      | 4        | Non-conclusive |
+| f7dbf29a      | 4        | Non-conclusive |
+| f7e8314       | 2        | Non-conclusive |
+| f7f2b76b      | 4        | Non-conclusive |
+| f7f9d23a      | 1        | Non-conclusive |
+| f812d64       | 1        | Non-conclusive |
+| f816913a74    | 5        | Non-conclusive |
+| f81b7c2       | 4        | Non-conclusive |
+| f82c8142      | 4        | Non-conclusive |
+| f8313f2c      | 5        | Non-conclusive |
+| f83b8308      | 4        | Non-conclusive |
+| f847a093      | 4        | Non-conclusive |
+| f84e714a      | 4        | Non-conclusive |
+| f85da3e0      | 4        | Non-conclusive |
+| f86ebe91      | 4        | Non-conclusive |
+| f878b5e9      | 4        | Non-conclusive |
+| f87d207d      | 4        | Non-conclusive |
+| f881e69f      | 2        | Non-conclusive |
+| f885cd84      | 1        | Non-conclusive |
+| f892997ce5    | 1        | Non-conclusive |
+| f897298a      | 4        | Non-conclusive |
+| f8bdab09      | 4        | Non-conclusive |
+| f8bde09f      | 4        | Non-conclusive |
+| f8c55a11      | 4        | Non-conclusive |
+| f8d832de      | 4        | Non-conclusive |
+| f8d9c8cb      | 2        | Non-conclusive |
+| f8f952781     | 1        | Non-conclusive |
+| f8fa9afd      | 8        | Non-conclusive |
+| f9084668      | 1        | Non-conclusive |
+| f91d7122      | 1        | Non-conclusive |
+| f91e3783      | 1        | Non-conclusive |
+| f94e783e      | 4        | Non-conclusive |
+| f956d7ba      | 4        | Non-conclusive |
+| f95a1a89      | 4        | Non-conclusive |
+| f966e8b       | 4        | Non-conclusive |
+| f96a72531d    | 4        | Non-conclusive |
+| f96f201253    | 20       | Non-conclusive |
+| f974963c      | 4        | Non-conclusive |
+| f97ad52       | 4        | Non-conclusive |
+| f97b613       | 4        | Non-conclusive |
+| f98216aa      | 4        | Non-conclusive |
+| f985950c      | 1        | Non-conclusive |
+| f98c8029      | 8        | Non-conclusive |
+| f98cdb9d      | 4        | Non-conclusive |
+| f99df96       | 4        | Non-conclusive |
+| f99ecf3d      | 4        | Non-conclusive |
+| f9a92927      | 1        | Non-conclusive |
+| f9be8886b0    | 4        | Non-conclusive |
+| f9c944b6      | 4        | Non-conclusive |
+| f9d618db      | 1        | Non-conclusive |
+| f9e342ba      | 4        | Non-conclusive |
+| f9ef7135      | 4        | Non-conclusive |
+| fa03eb66      | 4        | Non-conclusive |
+| fa0a3b93      | 4        | Non-conclusive |
+| fa11902f9c    | 4        | Non-conclusive |
+| fa2ba883      | 4        | Non-conclusive |
+| fa44152f      | 8        | Non-conclusive |
+| fa52080c3a    | 1        | Non-conclusive |
+| fa8070fe      | 8        | Non-conclusive |
+| fa8816cb      | 6        | Non-conclusive |
+| fa8cf3f1      | 5        | Non-conclusive |
+| fa93c22d      | 4        | Non-conclusive |
+| faa39020      | 8        | Non-conclusive |
+| faa845f1      | 4        | Non-conclusive |
+| faaa10e566    | 4        | Non-conclusive |
+| faafba8a      | 4        | Non-conclusive |
+| fabb350c      | 4        | Non-conclusive |
+| fabec1f       | 4        | Non-conclusive |
+| fac1d812      | 4        | Non-conclusive |
+| fac2ebd6      | 9        | Non-conclusive |
+| fac88fdacb    | 4        | Non-conclusive |
+| fad3a670      | 1        | Non-conclusive |
+| fade782b      | 4        | Non-conclusive |
+| fae2c216      | 2        | Non-conclusive |
+| faecba6e      | 1        | Non-conclusive |
+| faef136       | 4        | Non-conclusive |
+| faff8994      | 4        | Non-conclusive |
+| false         | 9        | Non-conclusive |
+| fb052fa5a5    | 4        | Non-conclusive |
+| fb0bc69c      | 4        | Non-conclusive |
+| fb0c086       | 4        | Non-conclusive |
+| fb350fdd      | 4        | Non-conclusive |
+| fb3939eb      | 4        | Non-conclusive |
+| fb3e2913      | 4        | Non-conclusive |
+| fb4f80ac      | 5        | Non-conclusive |
+| fb53ab89      | 4        | Non-conclusive |
+| fb593ccc      | 8        | Non-conclusive |
+| fb5d94a8      | 4        | Non-conclusive |
+| fb5e3ed0      | 4        | Non-conclusive |
+| fb5f7c96      | 4        | Non-conclusive |
+| fb613417cd    | 4        | Non-conclusive |
+| fb781fdc      | 1        | Non-conclusive |
+| fb8c3ff0      | 4        | Non-conclusive |
+| fb9d4af4      | 6        | Non-conclusive |
+| fba3ce6818    | 4        | Non-conclusive |
+| fba5b295      | 8        | Non-conclusive |
+| fbba6ab2      | 5        | Non-conclusive |
+| fbbaa843      | 1        | Non-conclusive |
+| fbe049eb      | 4        | Non-conclusive |
+| fbe7919       | 2        | Non-conclusive |
+| fbed460e      | 1        | Non-conclusive |
+| fc15bb6       | 4        | Non-conclusive |
+| fc19ee94      | 4        | Non-conclusive |
+| fc24c6eb      | 1        | Non-conclusive |
+| fc2c4b8e      | 1        | Non-conclusive |
+| fc44cd717e    | 4        | Non-conclusive |
+| fc5395eb      | 4        | Non-conclusive |
+| fc668bb9      | 4        | Non-conclusive |
+| fc6d4cb754    | 4        | Non-conclusive |
+| fc823189      | 4        | Non-conclusive |
+| fca92971      | 1        | Non-conclusive |
+| fcc395df      | 4        | Non-conclusive |
+| fcc4d97c      | 68       | Non-conclusive |
+| fcd4cd4       | 4        | Non-conclusive |
+| fce829f8      | 1        | Non-conclusive |
+| fcef12bf      | 4        | Non-conclusive |
+| fcfa054       | 8        | Non-conclusive |
+| fd03e0d       | 1        | Non-conclusive |
+| fd1a69e9      | 4        | Non-conclusive |
+| fd2363f7      | 1        | Non-conclusive |
+| fd481437      | 4        | Non-conclusive |
+| fd492a4c      | 4        | Non-conclusive |
+| fd65026e46    | 21       | Non-conclusive |
+| fd7bd9d       | 4        | Non-conclusive |
+| fd7e0a3       | 4        | Non-conclusive |
+| fd80a33e      | 4        | Non-conclusive |
+| fd824866      | 1        | Non-conclusive |
+| fd98c466      | 8        | Non-conclusive |
+| fd99979546    | 4        | Non-conclusive |
+| fd9d9376      | 4        | Non-conclusive |
+| fd9ee735      | 4        | Non-conclusive |
+| fda4b429      | 37       | Non-conclusive |
+| fdaaa208      | 4        | Non-conclusive |
+| fdb7cff5      | 4        | Non-conclusive |
+| fdd037da      | 4        | Non-conclusive |
+| fde18128      | 4        | Non-conclusive |
+| fdf85b88      | 4        | Non-conclusive |
+| fdfaea6b      | 4        | Non-conclusive |
+| fdfcb7a5      | 4        | Non-conclusive |
+| fe011ca4      | 4        | Non-conclusive |
+| fe0241a6      | 4        | Non-conclusive |
+| fe104e2ab9    | 4        | Non-conclusive |
+| fe16aa7d1f    | 1        | Non-conclusive |
+| fe18988d      | 1        | Non-conclusive |
+| fe2c76fa      | 4        | Non-conclusive |
+| fe420c27      | 4        | Non-conclusive |
+| fe4813ac      | 4        | Non-conclusive |
+| fe505ac1      | 4        | Non-conclusive |
+| fe513a71      | 4        | Non-conclusive |
+| fe52c37a      | 4        | Non-conclusive |
+| fe53f4b1      | 4        | Non-conclusive |
+| fe6b42a       | 4        | Non-conclusive |
+| fe795292      | 4        | Non-conclusive |
+| fe7abd14      | 4        | Non-conclusive |
+| fe7b00dc      | 4        | Non-conclusive |
+| fe7ca1ce      | 4        | Non-conclusive |
+| fe808509      | 4        | Non-conclusive |
+| fe995ac5      | 4        | Non-conclusive |
+| fe9a6448      | 8        | Non-conclusive |
+| fec98dd       | 4        | Non-conclusive |
+| fecd94d0      | 4        | Non-conclusive |
+| fee24c99      | 4        | Non-conclusive |
+| feedBac       | 4        | Non-conclusive |
+| feedb70e      | 4        | Non-conclusive |
+| feedbac       | 118      | Non-conclusive |
+| fef63cb       | 1        | Non-conclusive |
+| fef979aa      | 4        | Non-conclusive |
+| fefee0e9      | 2        | Non-conclusive |
+| ff0eccb3      | 1        | Non-conclusive |
+| ff12d550      | 2        | Non-conclusive |
+| ff1316c8      | 4        | Non-conclusive |
+| ff1507b4      | 1        | Non-conclusive |
+| ff4cddd4      | 1        | Non-conclusive |
+| ff58aa4a      | 4        | Non-conclusive |
+| ff7a43dc      | 4        | Non-conclusive |
+| ff818a32      | 4        | Non-conclusive |
+| ff892968      | 4        | Non-conclusive |
+| ff8d8fab      | 4        | Non-conclusive |
+| ff8dae66      | 4        | Non-conclusive |
+| ffa19805      | 1        | Non-conclusive |
+| ffa3545f      | 4        | Non-conclusive |
+| ffa6e6fe1a    | 4        | Non-conclusive |
+| ffaa9a80      | 8        | Non-conclusive |
+| ffba087e      | 4        | Non-conclusive |
+| ffc67274      | 4        | Non-conclusive |
+| ffcc63c3      | 4        | Non-conclusive |
+| ffda5cf3      | 1        | Non-conclusive |
+| fff84f1b      | 1        | Non-conclusive |
+| geheim        | 3        | Non-conclusive |
+| hotmann.de    | 4        | Non-conclusive |
+| latest        | 10       | Non-conclusive |
+| m.m.m         | 1        | Non-conclusive |
+| t.t.s         | 4        | Non-conclusive |
+| undefined     | 4        | Non-conclusive |
+| x.0.0         | 8        | Non-conclusive |
+| x.x.x         | 241      | Non-conclusive |
 
-## FancyBox
+## Apache
 
-|    version     | count | is_supported |
-| -------------- | ----- | ------------ |
-| 2.1            |    40 | null         | 
-| 3.0            |     2 | null         | 
-| 3.1            |     3 | null         | 
-| 3.2            |     4 | null         | 
-| 3.3            |     1 | null         | 
-| 3.5            |     9 | null         | 
-
+| info          | count    | is_supported   |
+|---------------|----------|----------------|
+|               | 11847148 | Not-versioned  |
+| 0.0.1         | 4        | Unsupported    |
+| 1.2.0         | 4        | Unsupported    |
+| 1.2.2         | 4        | Unsupported    |
+| 1.2.4         | 12       | Unsupported    |
+| 1.2.5         | 28       | Unsupported    |
+| 1.2.6         | 87       | Unsupported    |
+| 1.3           | 15       | Unsupported    |
+| 1.3.1         | 4        | Unsupported    |
+| 1.3.11        | 8        | Unsupported    |
+| 1.3.12        | 68       | Unsupported    |
+| 1.3.14        | 25       | Unsupported    |
+| 1.3.19        | 61       | Unsupported    |
+| 1.3.20        | 171      | Unsupported    |
+| 1.3.22        | 66       | Unsupported    |
+| 1.3.23        | 157      | Unsupported    |
+| 1.3.24        | 5        | Unsupported    |
+| 1.3.26        | 173      | Unsupported    |
+| 1.3.27        | 452      | Unsupported    |
+| 1.3.28        | 64       | Unsupported    |
+| 1.3.29        | 518      | Unsupported    |
+| 1.3.3         | 4        | Unsupported    |
+| 1.3.31        | 1600     | Unsupported    |
+| 1.3.32        | 1        | Unsupported    |
+| 1.3.33        | 1621     | Unsupported    |
+| 1.3.34        | 1026     | Unsupported    |
+| 1.3.35        | 14       | Unsupported    |
+| 1.3.36        | 45       | Unsupported    |
+| 1.3.37        | 859      | Unsupported    |
+| 1.3.39        | 286      | Unsupported    |
+| 1.3.4         | 9        | Unsupported    |
+| 1.3.41        | 2473     | Unsupported    |
+| 1.3.42        | 5157     | Unsupported    |
+| 1.3.6         | 23       | Unsupported    |
+| 1.3.9         | 32       | Unsupported    |
+| 1.4.0         | 44       | Unsupported    |
+| 1.6.0         | 24       | Unsupported    |
+| 2             | 599370   | Supported      |
+| 2.            | 57       | Supported      |
+| 2.0           | 85       | Supported      |
+| 2.0.0         | 4        | Supported      |
+| 2.0.12        | 2        | Supported      |
+| 2.0.2         | 1        | Supported      |
+| 2.0.32        | 11       | Supported      |
+| 2.0.34        | 12       | Supported      |
+| 2.0.37        | 10       | Supported      |
+| 2.0.40        | 131      | Supported      |
+| 2.0.42        | 10       | Supported      |
+| 2.0.43        | 6        | Supported      |
+| 2.0.44        | 4        | Supported      |
+| 2.0.45        | 16       | Supported      |
+| 2.0.46        | 253      | Supported      |
+| 2.0.47        | 106      | Supported      |
+| 2.0.48        | 23       | Supported      |
+| 2.0.49        | 173      | Supported      |
+| 2.0.50        | 80       | Supported      |
+| 2.0.51        | 483      | Supported      |
+| 2.0.52        | 3414     | Supported      |
+| 2.0.53        | 176      | Supported      |
+| 2.0.54        | 545      | Supported      |
+| 2.0.55        | 291      | Supported      |
+| 2.0.58        | 80       | Supported      |
+| 2.0.59        | 1533     | Supported      |
+| 2.0.61        | 68       | Supported      |
+| 2.0.63        | 899      | Supported      |
+| 2.0.64        | 1690     | Supported      |
+| 2.0.65        | 361      | Supported      |
+| 2.1.02        | 5        | Supported      |
+| 2.1.06        | 7        | Supported      |
+| 2.1.09        | 24       | Supported      |
+| 2.1.21        | 8        | Supported      |
+| 2.1.31        | 5        | Supported      |
+| 2.1.33        | 5        | Supported      |
+| 2.1.4         | 1        | Supported      |
+| 2.18          | 7        | Supported      |
+| 2.2           | 2108     | Supported      |
+| 2.2.          | 8        | Supported      |
+| 2.2.0         | 481      | Supported      |
+| 2.2.02        | 5        | Supported      |
+| 2.2.10        | 710      | Supported      |
+| 2.2.11        | 3349     | Supported      |
+| 2.2.12        | 859      | Supported      |
+| 2.2.13        | 602      | Supported      |
+| 2.2.14        | 5907     | Supported      |
+| 2.2.15        | 114854   | Supported      |
+| 2.2.159       | 4        | Supported      |
+| 2.2.16        | 9708     | Supported      |
+| 2.2.17        | 4408     | Supported      |
+| 2.2.18        | 220      | Supported      |
+| 2.2.19        | 948      | Supported      |
+| 2.2.2         | 228      | Supported      |
+| 2.2.20        | 2090     | Supported      |
+| 2.2.21        | 2282     | Supported      |
+| 2.2.22        | 66479    | Supported      |
+| 2.2.23        | 2884     | Supported      |
+| 2.2.24        | 2302     | Supported      |
+| 2.2.25        | 2527     | Supported      |
+| 2.2.26        | 1912     | Supported      |
+| 2.2.27        | 2998     | Supported      |
+| 2.2.29        | 5972     | Supported      |
+| 2.2.3         | 18711    | Supported      |
+| 2.2.30        | 8        | Supported      |
+| 2.2.31        | 9520     | Supported      |
+| 2.2.32        | 1843     | Supported      |
+| 2.2.34        | 19822    | Supported      |
+| 2.2.35        | 37       | Supported      |
+| 2.2.39        | 12       | Supported      |
+| 2.2.4         | 1068     | Supported      |
+| 2.2.41        | 4        | Supported      |
+| 2.2.6         | 989      | Supported      |
+| 2.2.8         | 2806     | Supported      |
+| 2.2.9         | 3731     | Supported      |
+| 2.23          | 4        | Supported      |
+| 2.4           | 37308    | Supported      |
+| 2.4.0         | 5        | Supported      |
+| 2.4.1         | 118      | Supported      |
+| 2.4.10        | 86205    | Supported      |
+| 2.4.11        | 21       | Supported      |
+| 2.4.12        | 3401     | Supported      |
+| 2.4.13        | 13       | Supported      |
+| 2.4.15        | 14       | Supported      |
+| 2.4.16        | 3395     | Supported      |
+| 2.4.17        | 3284     | Supported      |
+| 2.4.18        | 130237   | Supported      |
+| 2.4.19        | 6        | Supported      |
+| 2.4.2         | 445      | Supported      |
+| 2.4.20        | 1741     | Supported      |
+| 2.4.23        | 8178     | Supported      |
+| 2.4.25        | 121882   | Supported      |
+| 2.4.26        | 1562     | Supported      |
+| 2.4.27        | 8871     | Supported      |
+| 2.4.28        | 759      | Supported      |
+| 2.4.29        | 250947   | Supported      |
+| 2.4.3         | 1915     | Supported      |
+| 2.4.32        | 195      | Supported      |
+| 2.4.33        | 8498     | Supported      |
+| 2.4.34        | 15454    | Supported      |
+| 2.4.35        | 3075     | Supported      |
+| 2.4.37        | 84316    | Supported      |
+| 2.4.38        | 177829   | Supported      |
+| 2.4.39        | 21047    | Supported      |
+| 2.4.4         | 1358     | Supported      |
+| 2.4.40        | 11       | Supported      |
+| 2.4.41        | 273591   | Supported      |
+| 2.4.42        | 12       | Supported      |
+| 2.4.43        | 14701    | Supported      |
+| 2.4.46        | 64277    | Supported      |
+| 2.4.47        | 1051     | Supported      |
+| 2.4.48        | 31766    | Supported      |
+| 2.4.49        | 6495     | Supported      |
+| 2.4.5         | 18       | Supported      |
+| 2.4.50        | 368      | Supported      |
+| 2.4.51        | 32413    | Supported      |
+| 2.4.52        | 74137    | Supported      |
+| 2.4.53        | 47966    | Supported      |
+| 2.4.53:2.4.53 | 4        | Non-conclusive |
+| 2.4.54        | 437249   | Supported      |
+| 2.4.59        | 12       | Supported      |
+| 2.4.6         | 396380   | Supported      |
+| 2.4.69        | 8        | Supported      |
+| 2.4.7         | 59925    | Supported      |
+| 2.4.71        | 4        | Supported      |
+| 2.4.74        | 19       | Supported      |
+| 2.4.9         | 3352     | Supported      |
+| 2.5           | 5        | Supported      |
+| 2.5.1         | 28       | Supported      |
+| 2.6.0         | 1        | Supported      |
+| 3.4.10        | 4        | Supported      |
+| 5.5.5         | 5        | Supported      |
+| 6.6.6         | 767      | Supported      |
+| 7.0           | 4        | Supported      |
+| 7.0.41        | 5        | Supported      |
+| :             | 1        | Non-conclusive |
+| \1            | 27       | Non-conclusive |
+| undefined     | 4        | Non-conclusive |
