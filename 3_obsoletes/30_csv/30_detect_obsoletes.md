@@ -152,7 +152,6 @@ ORDER BY num_sites DESC;
 | 9877869   | jQuery Migrate     | 0         | 0           | 9489456        | 388413        |
 | 9442075   | Yoast SEO          | 0         | 0           | 7748643        | 1693432       |
 | 8889330   | Bootstrap          | 2564492   | 3520976     | 862641         | 1941221       |
-| 8777789   | Google Workspace   | 0         | 0           | 0              | 8777789       |
 | 8232254   | Apache HTTP Server | 1300662   | 171636      | 325379         | 6434577       |
 
 # Interesting technologies
