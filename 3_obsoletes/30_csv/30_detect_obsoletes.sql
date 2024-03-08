@@ -73,7 +73,7 @@ LANGUAGE js AS r"""
 			return 'Supported';
 		}
 		if (operator === '>') {
-			return currentVersions.length > operands.length ? 'Supported' : Unsupported;
+			return currentVersions.length > operands.length ? 'Supported' : 'Unsupported';
 		}
 		if (operator === '=' && currentVersions.length === operands.length) {
 			return 'Supported';
