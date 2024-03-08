@@ -38,19 +38,19 @@ LANGUAGE js AS r"""
 			operator = '=';
 			operand = versionCheck;
 		}
-		arrOperand = operand.split('.');
-		arrCurrentVersion = currentVersion.split('.');
-		for (let j = 0; j < arrOperand.length; j++) {
-			if (j >= arrCurrentVersion.length) {
+		operands = operand.split('.');
+		currentVersions = currentVersion.split('.');
+		for (let j = 0; j < operands.length; j++) {
+			if (j >= currentVersions.length) {
 				return 'Non-conclusive';
 			}
-			if (!(/^\d+$/.test(arrOperand[j])) || !(/^\d+$/.test(arrCurrentVersion[j]))) {
-				// return 'FAIL: Error while checking current version ' + currentVersion + ' vs supported version ' + versionCheck + ' (non integer version: ' + arrOperand[j] + ' or ' + arrCurrentVersion[j] + ')';
+			if (!(/^\d+$/.test(operands[j])) || !(/^\d+$/.test(currentVersions[j]))) {
+				// return 'FAIL: Error while checking current version ' + currentVersion + ' vs supported version ' + versionCheck + ' (non integer version: ' + operands[j] + ' or ' + currentVersions[j] + ')';
 				return 'Non-conclusive';
 			}
 			switch (operator) {
 			case '=':
-				if (arrOperand[j] === arrCurrentVersion[j]) {
+				if (operands[j] === currentVersions[j]) {
 					// void, pass
 				} else {
 					return 'Unsupported';
@@ -58,11 +58,9 @@ LANGUAGE js AS r"""
 				break;
 			case '>':
 			case '>=':
-				if (operator === '>' && parseInt(arrCurrentVersion[j]) > parseInt(arrOperand[j])) {
+				if (parseInt(currentVersions[j]) > parseInt(operands[j])) {
 					return 'Supported';
-				} else if (operator === '>=' && parseInt(arrCurrentVersion[j]) >= parseInt(arrOperand[j])) {
-					return 'Supported';
-        } else if (parseInt(arrCurrentVersion[j]) === parseInt(arrOperand[j])) {
+        } else if (parseInt(currentVersions[j]) === parseInt(operands[j])) {
 					// void, check next version component
 				} else {
 					return 'Unsupported';
@@ -70,13 +68,14 @@ LANGUAGE js AS r"""
 				break;
 			}
 		}
+		// End of loop, we need to decide
 		if (operator === '>=') {
 			return 'Supported';
 		}
-		if (operator === '>' && arrCurrentVersion.length > arrOperand.length) {
-			return 'Supported';
+		if (operator === '>') {
+			return currentVersions.length > operands.length ? 'Supported' : Unsupported;
 		}
-		if (operator === '=' && arrCurrentVersion.let === arrOperand.length) {
+		if (operator === '=' && currentVersions.length === operands.length) {
 			return 'Supported';
 		}
 		return 'Unsupported';
